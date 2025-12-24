@@ -1,104 +1,168 @@
 "use client";
-import React from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
+import Playground from './Playground.jsx';
 import GlowButton from './GlowButton.jsx';
+import TooltipCard from './TooltipCard';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const Hero = ({ onOpenModal }) => {
+  const [activeTooltip, setActiveTooltip] = useState(null);
+  const [headingFontSize, setHeadingFontSize] = useState(72);
+  const playgroundRef = useRef(null);
+  const playgroundHeadingRef = useRef(null);
   const { t } = useLanguage();
   const fullText = t(
     "hero.headline",
     "AI-SOC 1: Cybersecurity is neither expensive nor complicated anymore"
   );
+  const playgroundHeading = t("hero.playgroundHeading", "60 seconds tour");
 
-  const featureItems = [
-    {
-      key: "web-attack-protection",
-      label: t("hero.bullets.web", "Real time web attack protection"),
-      description: t(
-        "hero.features.webSummary",
-        "Stop volumetric, zero-day and business logic attacks at the edge before they reach production."
+  const tooltipContent = {
+    "web-attack-protection": {
+      title: t("hero.tooltips.web.title", "Web Attack Protection"),
+      content: t(
+        "hero.tooltips.web.content",
+        "System can protect against ALL types of web attacks, such as DDoS, SQLi, and others, except business logic vulnerabilities"
       ),
-      halo: "radial-gradient(circle at 10% 0%, rgba(20, 241, 149, 0.55), transparent 60%)",
     },
-    {
-      key: "email-attack-protection",
-      label: t("hero.bullets.email", "Email attacks protection"),
-      description: t(
-        "hero.features.emailSummary",
-        "Trace email flows, detonate payloads in isolated sandboxes and lock compromised inboxes automatically."
+    "email-attack-protection": {
+      title: t("hero.tooltips.email.title", "Email Attack Protection"),
+      content: t(
+        "hero.tooltips.email.content",
+        "System can protect against ALL types of email attacks, such as phishing, malware attachment, dangerous links, etc."
       ),
-      halo: "radial-gradient(circle at 90% 0%, rgba(111, 0, 255, 0.55), transparent 60%)",
     },
-  ];
+  };
+
+  const adjustPlaygroundHeadingSize = useCallback(() => {
+    const headingEl = playgroundHeadingRef.current;
+    const containerEl = playgroundRef.current;
+    if (!headingEl || !containerEl) return;
+
+    const containerWidth = containerEl.getBoundingClientRect().width;
+    if (!containerWidth) return;
+
+    const targetWidth = Math.max(containerWidth, 0);
+
+    const MAX_FONT_SIZE = 320;
+    const MIN_FONT_SIZE = 24;
+
+    let low = MIN_FONT_SIZE;
+    let high = MAX_FONT_SIZE;
+    let best = MIN_FONT_SIZE;
+
+    headingEl.style.whiteSpace = "nowrap";
+
+    for (let i = 0; i < 25; i += 1) {
+      const mid = (low + high) / 2;
+      headingEl.style.fontSize = `${mid}px`;
+      const width = headingEl.scrollWidth;
+      if (width <= targetWidth) {
+        best = mid;
+        low = mid;
+      } else {
+        high = mid;
+      }
+    }
+
+    headingEl.style.fontSize = `${best}px`;
+    setHeadingFontSize((prev) => (prev !== best ? best : prev));
+  }, []);
+
+  useEffect(() => {
+    adjustPlaygroundHeadingSize();
+
+    let handleResize;
+    if (typeof window !== "undefined") {
+      handleResize = () => adjustPlaygroundHeadingSize();
+      window.addEventListener("resize", handleResize);
+    }
+
+    return () => {
+      if (handleResize) {
+        window.removeEventListener("resize", handleResize);
+      }
+    };
+  }, [adjustPlaygroundHeadingSize, playgroundHeading]);
+
+  useEffect(() => {
+    if (typeof ResizeObserver === "undefined") return;
+
+    const observer = new ResizeObserver(() => adjustPlaygroundHeadingSize());
+
+    if (playgroundRef.current) {
+      observer.observe(playgroundRef.current);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [adjustPlaygroundHeadingSize]);
 
   return (
-    <section className="relative overflow-hidden px-4 py-4 sm:px-6 lg:px-8 lg:py-8">
-      <div className="container mx-auto max-w-5xl text-white space-y-12">
-        <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-6 py-2 text-xs font-semibold tracking-[0.45em] text-white/70 uppercase">
-          AI-SOC
-          <span className="h-2 w-2 rounded-full bg-green-400 animate-pulse"></span>
-        </div>
-
-        <div className="space-y-6">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent">
-            {fullText}
-          </h1>
-          <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:gap-10">
-            <p className="flex-1 text-xl sm:text-2xl font-semibold text-gray-200 leading-relaxed">
-              {t(
-                "hero.subheading",
-                "The all in one, AI-based cybersecurity system that combines:"
-              )}
-            </p>
-            <div className="flex flex-col gap-3">
-              <GlowButton
-                variant="glow"
-                onClick={onOpenModal}
-                className="w-full sm:w-auto"
-                innerClassName="w-full sm:w-auto justify-center"
-              >
-                {t("hero.buttons.connect", "Connect in 4 minutes")}
-              </GlowButton>
-              <p className="text-sm text-white/70 max-w-xs">
-                {t(
-                  "hero.ctaNote",
-                  "Connect directly with the engineers securing banks, satellites and nation-state targets."
-                )}
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="grid gap-6 sm:grid-cols-2">
-          {featureItems.map((item) => (
-            <div
-              key={item.key}
-              className="relative overflow-hidden rounded-[32px] border border-white/12 bg-black/30 px-6 py-7 backdrop-blur-2xl shadow-[0_25px_65px_rgba(1,7,18,0.65)]"
-            >
+    <div className="container mx-auto flex flex-col lg:flex-row items-start gap-14 px-4 py-10 sm:px-6 lg:px-8">
+      <div className="w-full lg:w-1/2 text-white lg:mt-0">
+        <h1 className="text-3xl sm:text-4xl font-bold mb-6 sm:mb-8 leading-tight">
+          {fullText}
+        </h1>
+        <p className="font-bold mb-4 text-base sm:text-lg">
+          {t(
+            "hero.subheading",
+            "The all in one, AI-based cybersecurity system that combines:"
+          )}
+        </p>
+        <div className="space-y-4 mb-8">
+          {[
+            {
+              key: "web-attack-protection",
+              label: t("hero.bullets.web", "Real time web attack protection"),
+            },
+            {
+              key: "email-attack-protection",
+              label: t("hero.bullets.email", "Email attacks protection"),
+            },
+          ].map((item) => (
+            <div key={item.key} className="flex items-start sm:items-center gap-2 text-sm sm:text-base">
+              <svg className="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5 sm:mt-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
+              <span className="leading-snug">{item.label}</span>
               <div
-                className="absolute inset-0 opacity-80"
-                style={{ background: item.halo }}
-              ></div>
-              <div className="relative flex flex-col gap-4">
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3">
-                    <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/20 bg-black/40 text-white">
-                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                      </svg>
-                    </span>
-                    <p className="text-xl font-semibold text-white">{item.label}</p>
-                  </div>
-                  <p className="text-base text-white/75 leading-relaxed">
-                    {item.description}
-                  </p>
-                </div>
+                className="relative hidden sm:flex items-start flex-shrink-0"
+                onMouseEnter={() => setActiveTooltip(item.key)}
+                onMouseLeave={() => setActiveTooltip(null)}
+              >
+                <svg className="h-4 w-4 text-gray-400 cursor-help" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                {activeTooltip === item.key && (
+                  <TooltipCard className="z-[9999] w-72 sm:w-80 max-w-[calc(100vw-3rem)] rounded-lg border border-white/20 bg-black p-4 text-white shadow-2xl">
+                    <h4 className="mb-2 font-bold text-white">{tooltipContent[item.key].title}</h4>
+                    <p className="text-sm text-gray-200">{tooltipContent[item.key].content}</p>
+                  </TooltipCard>
+                )}
               </div>
             </div>
           ))}
         </div>
+        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full sm:w-auto">
+          <GlowButton onClick={onOpenModal} className="w-full sm:w-auto">
+            {t("hero.buttons.connect", "Connect in 4 minutes")}
+          </GlowButton>
+        </div>
       </div>
-    </section>
+      <div className="w-full lg:w-1/2 mt-6 sm:mt-8 lg:-mt-8 relative flex justify-center lg:justify-end pt-0">
+        {/* Playground heading sized to match the card below */}
+        <div className="relative z-10 w-full max-w-2xl">
+          <h2
+            ref={playgroundHeadingRef}
+            className="block w-full font-bold text-white text-center leading-none whitespace-nowrap mt-0 mb-3"
+            style={{ fontSize: `${headingFontSize}px` }}
+          >
+            {playgroundHeading}
+          </h2>
+          <Playground ref={playgroundRef} />
+        </div>
+      </div>
+    </div>
   );
 };
 

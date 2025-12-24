@@ -35,7 +35,7 @@ const Modal = ({ isOpen, onClose }) => {
             <div className="text-2xl font-bold text-center leading-relaxed">
               {t(
                 "modal.message",
-                "Under active development, planned release date - January 10"
+                "Under active development, planned release date - November 10"
               )}
             </div>
           </motion.div>
