@@ -15,6 +15,7 @@ export default function LayoutWrapper({ children }) {
   const [isLoading, setIsLoading] = useState(false);
   const isPolicyPage = pathname.startsWith('/policies');
   const isAffiliatePage = pathname.startsWith('/affiliate');
+  const isDeveloperServicesPage = pathname.startsWith('/developer-services');
 
   // Handle page navigation loading
   useEffect(() => {
@@ -57,12 +58,12 @@ export default function LayoutWrapper({ children }) {
   return (
     <LanguageProvider>
       <LoadingSpinner isLoading={isLoading} />
-      {!isPolicyPage && !isAffiliatePage && <ParallaxGlobe />}
+      {!isPolicyPage && !isAffiliatePage && !isDeveloperServicesPage && <ParallaxGlobe />}
       <div className={!isPolicyPage ? "default-content-wrapper pt-20" : "default-content-wrapper"}>
         {children}
       </div>
       <div className={isPolicyPage ? "bg-black" : "relative w-full"}>
-        {!isPolicyPage && !isAffiliatePage && (
+        {!isPolicyPage && !isAffiliatePage && !isDeveloperServicesPage && (
           <div className="absolute inset-0 -z-10 layout-background">
             <img
               src="/moonrise.webp"
@@ -71,7 +72,7 @@ export default function LayoutWrapper({ children }) {
             />
           </div>
         )}
-        {pathname === '/' ? <RootFooter /> : !isAffiliatePage && <Footer />}
+        {pathname === '/' ? <RootFooter /> : !isAffiliatePage && !isDeveloperServicesPage && <Footer />}
       </div>
       <CookieConsent />
     </LanguageProvider>

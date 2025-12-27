@@ -62,6 +62,11 @@ const AffiliateHeader = ({ onOpenModal }) => {
       label: t("header.nav.instructions", "Instructions"),
       opensModal: true,
     },
+    {
+      key: "developer-services",
+      label: t("header.nav.developerServices", "Developer Services"),
+      href: "/developer-services",
+    },
   ];
 
   return (
