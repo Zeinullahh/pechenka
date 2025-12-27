@@ -19,7 +19,7 @@ const ParallaxGlobe = () => {
   return (
     <div className="parallax-globe fixed -top-12 left-0 w-full -z-10 pointer-events-none">
       <img
-        src="/globe_edge_optimized.svg"
+        // src="/globe_edge_optimized.svg"
         alt=""
         className="w-full h-auto scale-y-60 md:scale-y-85 lg:scale-y-100 globe-glow"
         style={{
