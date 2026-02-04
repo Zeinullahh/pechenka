@@ -12,7 +12,13 @@ const Supreme2D = () => {
           height: 140px;
           transform-style: preserve-3d;
           /* The angle: Isometric view matching the reference picture */
-          transform: rotateX(25deg) rotateY(-40deg);
+          /* transform: rotateX(25deg) rotateY(-40deg); REMOVED static transform */
+          animation: spin-flip-2d 20s linear infinite;
+        }
+
+        @keyframes spin-flip-2d {
+          0% { transform: rotateX(25deg) rotateY(0deg); }
+          100% { transform: rotateX(25deg) rotateY(360deg); }
         }
 
         .face {
@@ -36,15 +42,6 @@ const Supreme2D = () => {
         .left   { transform: rotateY(-90deg) translateZ(70px); }
         .top    { transform: rotateX(90deg) translateZ(70px); background: rgba(255, 255, 255, 0.06); } 
         .bottom { transform: rotateX(-90deg) translateZ(70px); }
-
-        /* Edges highlight for crisper look */
-        .face::after {
-          content: "";
-          position: absolute;
-          inset: 0;
-          border: 1px solid rgba(255, 255, 255, 0.05);
-          border-radius: 20px;
-        }
 
         /* Inner Glowing Cube */
         .core-wrapper {
@@ -77,11 +74,12 @@ const Supreme2D = () => {
        .cf-top    { transform: rotateX(90deg) translateZ(35px); background: rgba(167, 139, 250, 0.6); }
        .cf-bottom { transform: rotateX(-90deg) translateZ(35px); }
 
-       /* Core Glow Animation */
+       /* Core Glow Animation -- REMOVED per user request
        @keyframes breathe-core-glow {
            0%, 100% { opacity: 0.3; transform: scale(1.5); }
            50% { opacity: 0.6; transform: scale(1.8); }
        }
+       */
        
        @keyframes float-inner {
            0%, 100% { transform: translateY(-4px); }
@@ -100,9 +98,9 @@ const Supreme2D = () => {
             <div className="core-face cf-top"></div>
             <div className="core-face cf-bottom"></div>
             
-            {/* Inner light source / Volumetric glow */}
-            <div className="absolute inset-0 bg-purple-600 blur-[30px] rounded-full animate-pulse" 
-                 style={{ transform: 'scale(1.5)', zIndex: -1 }}></div>
+            {/* Inner light source / Volumetric glow - REMOVED */}
+            {/* <div className="absolute inset-0 bg-purple-600 blur-[30px] rounded-full animate-pulse" 
+                 style={{ transform: 'scale(1.5)', zIndex: -1 }}></div> */}
         </div>
 
         {/* Outer Glass Cube - Rendered AFTER so it wraps the inner one (transparency order matters somewhat in CSS 3D typically, but we'll see)
@@ -113,9 +111,6 @@ const Supreme2D = () => {
             <div className="flex flex-col items-center justify-center transform translate-z-[1px]">
               <span className="font-mono text-3xl font-bold text-white tracking-widest drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]">./SLNC</span>
               <span className="text-[10px] tracking-[0.4em] text-purple-100 mt-2 font-semibold uppercase opacity-80">Supreme</span>
-              {/* Decorative decorative lines */}
-              <div className="absolute top-4 right-4 w-2 h-2 border-t border-r border-white/40"></div>
-              <div className="absolute bottom-4 left-4 w-2 h-2 border-b border-l border-white/40"></div>
            </div>
         </div>
         <div className="face back"></div>

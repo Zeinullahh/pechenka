@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
+import { Link, usePathname } from "@/i18n/navigation"; // Updated import
 import { motion, AnimatePresence } from "framer-motion";
 import clsx from "clsx";
 import GlowButton from "./GlowButton";
@@ -11,7 +11,6 @@ import PolicyLanguageSelector from "./PolicyLanguageSelector";
 import ComingSoonModal from "./ComingSoonModal";
 import CountrySelectModal from "./CountrySelectModal";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { usePathname } from "next/navigation";
 
 const SCROLL_THRESHOLD = 10;
 const DESKTOP_WIDTH = 1130;
@@ -20,6 +19,7 @@ const Header = ({ onOpenModal, policyLang, onPolicyLangChange, onSithubGet, hide
   const pathname = usePathname();
   const isMainPage = pathname === "/";
   const isSithubPage = pathname === "/sithub" || pathname === "/sithub/";
+  const isSupremePage = pathname === "/supreme" || pathname === "/supreme/";
   const isPolicyPage = pathname?.startsWith("/policies");
   const isSlncEnvPolicyPage = pathname?.startsWith("/policies/slnc_env");
   const [isCondensed, setIsCondensed] = useState(false);
@@ -106,7 +106,6 @@ const Header = ({ onOpenModal, policyLang, onPolicyLangChange, onSithubGet, hide
   const instructionsItems = [
     { key: "instructions-ai-soc", label: t("header.nav.instructionsAiSoc", "AI-SOC"), href: "/instructions/ai-soc" },
     { key: "instructions-supreme", label: t("header.nav.instructionsSupreme", "Supreme") },
-    { key: "instructions-sithub", label: t("header.nav.instructionsSithub", "Sithub") },
   ];
 
   const navItems = [
@@ -231,10 +230,12 @@ const Header = ({ onOpenModal, policyLang, onPolicyLangChange, onSithubGet, hide
                   );
                 })}
                 <div className="pt-4 flex flex-col gap-4 w-full items-center">
-                  {isSlncEnvPolicyPage && policyLang && onPolicyLangChange ? (
-                    <PolicyLanguageSelector currentLang={policyLang} onLanguageChange={onPolicyLangChange} align="left" />
-                  ) : (
-                    <LanguageSelector align="left" />
+                  {!isPolicyPage && (
+                    isSlncEnvPolicyPage && policyLang && onPolicyLangChange ? (
+                      <PolicyLanguageSelector currentLang={policyLang} onLanguageChange={onPolicyLangChange} align="left" />
+                    ) : (
+                      <LanguageSelector align="left" />
+                    )
                   )}
                   {!hideCta && isMainPage && (
                     <GlowButton
@@ -249,7 +250,9 @@ const Header = ({ onOpenModal, policyLang, onPolicyLangChange, onSithubGet, hide
                   {!hideCta && !isMainPage && !isPolicyPage && (
                     <GlowButton
                       onClick={() => {
-                        if (isSithubPage) {
+                        if (isSupremePage) {
+                          window.location.href = "https://supreme.silence.codes";
+                        } else if (isSithubPage) {
                           if (onSithubGet) {
                             onSithubGet();
                           } else {
@@ -261,7 +264,7 @@ const Header = ({ onOpenModal, policyLang, onPolicyLangChange, onSithubGet, hide
                         setIsMobileMenuOpen(false);
                       }}
                     >
-                      {isSithubPage ? t("header.cta.get", "Get") : t("header.cta.requestDemo", "Request Demo")}
+                      {isSithubPage || isSupremePage ? t("header.cta.get", "Get") : t("header.cta.requestDemo", "Request Demo")}
                     </GlowButton>
                   )}
                 </div>
@@ -427,10 +430,12 @@ const Header = ({ onOpenModal, policyLang, onPolicyLangChange, onSithubGet, hide
                       : undefined
                   }
                 >
-                  {isSlncEnvPolicyPage && policyLang && onPolicyLangChange ? (
-                    <PolicyLanguageSelector currentLang={policyLang} onLanguageChange={onPolicyLangChange} align={isDesktop ? "right" : "center"} />
-                  ) : (
-                    <LanguageSelector align={isDesktop ? "right" : "center"} />
+                  {!isPolicyPage && (
+                    isSlncEnvPolicyPage && policyLang && onPolicyLangChange ? (
+                      <PolicyLanguageSelector currentLang={policyLang} onLanguageChange={onPolicyLangChange} align={isDesktop ? "right" : "center"} />
+                    ) : (
+                      <LanguageSelector align={isDesktop ? "right" : "center"} />
+                    )
                   )}
                 </div>
                 {isDesktop && isMainPage && !hideCta && (
@@ -452,8 +457,18 @@ const Header = ({ onOpenModal, policyLang, onPolicyLangChange, onSithubGet, hide
                     {t("header.cta.get", "Get")}
                   </GlowButton>
                 )}
+                {/* Get button for /supreme - desktop only */}
+                {isDesktop && isSupremePage && !hideCta && (
+                  <GlowButton
+                    onClick={() => {
+                      window.location.href = "https://supreme.silence.codes";
+                    }}
+                  >
+                    {t("header.cta.get", "Get")}
+                  </GlowButton>
+                )}
                 {/* Request Demo button for other non-main, non-policy, non-sithub pages - desktop only */}
-                {isDesktop && !isMainPage && !isPolicyPage && !isSithubPage && !hideCta && (
+                {isDesktop && !isMainPage && !isPolicyPage && !isSithubPage && !isSupremePage && !hideCta && (
                   <GlowButton onClick={onOpenModal}>
                     {t("header.cta.requestDemo", "Request Demo")}
                   </GlowButton>

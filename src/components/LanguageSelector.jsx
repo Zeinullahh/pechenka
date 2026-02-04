@@ -4,9 +4,12 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import clsx from "clsx";
 import { AVAILABLE_LANGUAGES, useLanguage } from "@/contexts/LanguageContext";
 import * as Flags from "country-flag-icons/react/3x2";
+import { useRouter, usePathname } from "@/i18n/navigation";
 
 const LanguageSelector = ({ align = "right", onlyEnglish = false }) => {
   const { language, setLanguage, t } = useLanguage();
+  const router = useRouter();
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const containerRef = useRef(null);
@@ -44,6 +47,8 @@ const LanguageSelector = ({ align = "right", onlyEnglish = false }) => {
     setSearchTerm("");
     setLanguage(code);
     setIsOpen(false);
+    // Navigate to the same page but with new locale
+    router.replace(pathname, { locale: code });
   };
 
   const normalizedQuery = searchTerm.trim();

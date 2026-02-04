@@ -203,8 +203,8 @@ const SithubTermsOfService = () => {
               
               <p className="mb-4"><strong>Available Plans:</strong></p>
               <ul className="list-disc list-inside mb-4 space-y-2">
-                <li><strong>Monthly Plan:</strong> $480/month (USD) or 240,000₸ (KZT)</li>
-                <li><strong>Annual Plan:</strong> $336/month billed annually at $4,032/year (USD) or 168,000₸/month billed at 2,016,000₸/year (KZT)</li>
+                <li><strong>Monthly Plan:</strong> $480/month (USD)</li>
+                <li><strong>Annual Plan:</strong> $336/month billed annually at $4,032/year (USD)</li>
               </ul>
               <p className="mb-4">The monthly plan provides flexibility; the annual plan offers 30% savings.</p>
               

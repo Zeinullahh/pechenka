@@ -2,10 +2,7 @@
 
 import React, { useState } from "react";
 import TooltipCard from "./TooltipCard";
-import CurrencySelector from "./CurrencySelector";
 import { useLanguage } from "@/contexts/LanguageContext";
-
-const USD_TO_KZT = 500;
 
 // Microsoft 365 Pricing Data
 const PRICING_DATA = {
@@ -150,7 +147,6 @@ const Pricing = ({ onOpenModal }) => {
   const { t } = useLanguage();
   const [activeTooltip, setActiveTooltip] = useState(null);
   const [activeCardIndex, setActiveCardIndex] = useState(null);
-  const [currency, setCurrency] = useState("USD");
   const [segment, setSegment] = useState("business"); // "business" or "enterprise"
   const [billing, setBilling] = useState("yearly"); // "yearly" or "monthly"
 
@@ -213,12 +209,7 @@ const Pricing = ({ onOpenModal }) => {
       price = priceData.yearly;
     }
 
-    if (currency === "USD") {
-      return `$${price.toFixed(2)}${priceData.unit}`;
-    } else {
-      const kztPrice = price * USD_TO_KZT;
-      return `${kztPrice.toLocaleString()}₸${priceData.unit}`;
-    }
+    return `$${price.toFixed(2)}${priceData.unit}`;
   };
 
   const getActivePlans = () => {
@@ -292,11 +283,11 @@ const Pricing = ({ onOpenModal }) => {
               </div>
             )}
 
-            {/* Currency Selector */}
-            <CurrencySelector
+            {/* Currency Selector (Hidden) */}
+            {/* <CurrencySelector
               currency={currency}
               onCurrencyChange={setCurrency}
-            />
+            /> */}
           </div>
         </div>
 

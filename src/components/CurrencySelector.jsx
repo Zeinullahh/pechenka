@@ -6,15 +6,9 @@ import * as Flags from "country-flag-icons/react/3x2";
 
 const CURRENCIES = [
   { code: "USD", symbol: "$", label: "USD", flagCode: "US" },
-  { code: "KZT", symbol: "₸", label: "KZT", flagCode: "KZ" },
 ];
 
-const USD_TO_KZT = 500;
-
 export const convertPrice = (priceInUSD, currency) => {
-  if (currency === "KZT") {
-    return Math.round(priceInUSD * USD_TO_KZT);
-  }
   return priceInUSD;
 };
 

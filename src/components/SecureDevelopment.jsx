@@ -34,15 +34,6 @@ export default function SecureDevelopmentPage() {
             yearlyFuture: "$5,225",
             discount: "30%",
             suffix: "" 
-        },
-        KZT: { 
-            monthly: "240,000",
-            monthlyFuture: "315,000",
-            yearly: "168,000",
-            yearlyTotal: "2,016,000",
-            yearlyFuture: "2,612,500",
-            discount: "30%",
-            suffix: " ₸" 
         }
     };
 
@@ -52,6 +43,7 @@ export default function SecureDevelopmentPage() {
             attack: t("secureDevelopment.timeline.stuxnet.attack", "Stuxnet"), 
             target: t("secureDevelopment.timeline.stuxnet.target", "Natanz enrichment facility"), 
             impact: t("secureDevelopment.timeline.stuxnet.impact", "Destroyed ~1,000 centrifuges"), 
+            severityKey: "Critical",
             severity: t("secureDevelopment.timeline.stuxnet.severity", "Critical") 
         },
         { 
@@ -59,6 +51,7 @@ export default function SecureDevelopmentPage() {
             attack: t("secureDevelopment.timeline.blackEnergy.attack", "BlackEnergy"), 
             target: t("secureDevelopment.timeline.blackEnergy.target", "Ukraine power grid"), 
             impact: t("secureDevelopment.timeline.blackEnergy.impact", "230k customers lost power"), 
+            severityKey: "High",
             severity: t("secureDevelopment.timeline.blackEnergy.severity", "High") 
         },
         { 
@@ -66,6 +59,7 @@ export default function SecureDevelopmentPage() {
             attack: t("secureDevelopment.timeline.triton.attack", "TRITON"), 
             target: t("secureDevelopment.timeline.triton.target", "Saudi petrochemical plant"), 
             impact: t("secureDevelopment.timeline.triton.impact", "Safety systems disabled"), 
+            severityKey: "Critical",
             severity: t("secureDevelopment.timeline.triton.severity", "Critical") 
         },
         { 
@@ -73,6 +67,7 @@ export default function SecureDevelopmentPage() {
             attack: t("secureDevelopment.timeline.colonialPipeline.attack", "Colonial Pipeline"), 
             target: t("secureDevelopment.timeline.colonialPipeline.target", "US fuel pipeline"), 
             impact: t("secureDevelopment.timeline.colonialPipeline.impact", "6-day fuel paralysis"), 
+            severityKey: "High",
             severity: t("secureDevelopment.timeline.colonialPipeline.severity", "High") 
         },
         { 
@@ -80,6 +75,7 @@ export default function SecureDevelopmentPage() {
             attack: t("secureDevelopment.timeline.pdvsa.attack", "PDVSA"), 
             target: t("secureDevelopment.timeline.pdvsa.target", "Venezuela refining"), 
             impact: t("secureDevelopment.timeline.pdvsa.impact", "Refinery operations disrupted"), 
+            severityKey: "Medium",
             severity: t("secureDevelopment.timeline.pdvsa.severity", "Medium") 
         },
     ];
@@ -152,7 +148,7 @@ export default function SecureDevelopmentPage() {
                             <p className="mt-2 text-sm text-slate-400">{tag}</p>
                         </div>
                         <p className="text-xs font-medium uppercase tracking-wider text-slate-500">
-                            Stays on-prem. No egress.
+                            {t("secureDevelopment.components.onPremNotice", "Stays on-prem. No egress.")}
                         </p>
                     </div>
                 </div>
@@ -237,8 +233,8 @@ export default function SecureDevelopmentPage() {
                     </div>
 
                     <div className="max-w-4xl mx-auto">
-                        {/* Currency Switcher */}
-                        <div className="flex items-center justify-center gap-4 mb-8">
+                        {/* Currency Switcher (Hidden) */}
+                        {/* <div className="flex items-center justify-center gap-4 mb-8">
                             <div className="flex items-center rounded-full border border-white/10 bg-white/5 p-1">
                                 <button
                                     onClick={() => setCurrency("USD")}
@@ -250,18 +246,8 @@ export default function SecureDevelopmentPage() {
                                 >
                                     USD
                                 </button>
-                                <button
-                                    onClick={() => setCurrency("KZT")}
-                                    className={`px-4 py-2 text-sm font-semibold rounded-full transition-all ${
-                                        currency === "KZT" 
-                                            ? "bg-white/10 text-white" 
-                                            : "text-slate-400 hover:text-white"
-                                    }`}
-                                >
-                                    KZT
-                                </button>
                             </div>
-                        </div>
+                        </div> */}
 
                         {/* Limited Time Offer Banner */}
                         <div className="mb-8 rounded-xl border border-amber-500/30 bg-gradient-to-r from-amber-500/10 via-orange-500/10 to-amber-500/10 p-4 text-center">
@@ -483,7 +469,7 @@ export default function SecureDevelopmentPage() {
 
                     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
                         {impactTimeline.map((item) => {
-                            const tone = severityStyles[item.severity] || severityStyles.Medium;
+                            const tone = severityStyles[item.severityKey] || severityStyles.Medium;
                             return (
                                 <motion.div
                                     key={item.attack}
@@ -641,7 +627,7 @@ export default function SecureDevelopmentPage() {
                                         <div className="p-4 space-y-1">
                                             <div className="flex items-center gap-2 text-[11px] uppercase tracking-[0.2em] text-slate-400">
                                                 <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
-                                                Frame {idx + 1}
+                                                {t("secureDevelopment.analyzer.visualizer.frame", "Frame {index}", { index: idx + 1 })}
                                             </div>
                                             <h4 className="text-lg font-semibold text-white">{t(shot.titleKey, shot.title)}</h4>
                                             <p className="text-sm text-slate-300 leading-relaxed">{t(shot.descKey, shot.desc)}</p>
@@ -720,8 +706,11 @@ export default function SecureDevelopmentPage() {
             <ComingSoonModal
                 isOpen={isAdminModalOpen}
                 onClose={closeAdminModal}
-                title="Admin panel"
-                message="The admin panel is under development right now, it will be available in 3.5 hours."
+                title={t("secureDevelopment.comingSoon.title", "Admin panel")}
+                message={t(
+                    "secureDevelopment.comingSoon.message",
+                    "The admin panel is under development right now, it will be available by the end of the next week."
+                )}
             />
 
             <AnimatePresence>

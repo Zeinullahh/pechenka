@@ -23,13 +23,19 @@
       "systems": "Systems",
       "systemsAiSoc": "AI-SOC",
       "systemsSlncEnv": "SLNC-env",
-      "services": "Services"
+      "services": "Services",
+      "systemsSithub": "Sithub",
+      "systemsSupreme": "Supreme",
+      "instructionsAiSoc": "AI-SOC",
+      "instructionsSupreme": "Supreme",
+      "instructionsSithub": "Sithub"
     },
     "login": "로그인",
     "cta": {
       "contact": "Contact",
       "download": "Download",
-      "requestDemo": "Request Demo"
+      "requestDemo": "Request Demo",
+      "get": "Get"
     }
   },
   "affiliate": {
@@ -169,7 +175,22 @@
           "body1": "Silence AI may update these affiliate terms to reflect changes in the program or applicable law. Updated versions take effect upon publication on this page.",
           "body2": "Questions about the affiliate program can be sent to info@silenceai.net."
         }
+      },
+      "gitServer": {
+        "title": "Serveur de dépôts Git",
+        "tag": "Gestion de versions auto-hébergée"
+      },
+      "analyzer": {
+        "title": "Analyseur de sécurité",
+        "tag": "Moteur local d’analyse de code"
+      },
+      "vulnDb": {
+        "title": "Base de vulnérabilités",
+        "tag": "Correctifs de sécurité téléchargés"
       }
+    },
+    "balanceRewards": {
+      "lampTitle": "Nagrody salda"
     }
   },
   "hero": {
@@ -501,7 +522,8 @@
         "title": "취약점 데이터베이스",
         "tag": "다운로드된 보안 패치"
       },
-      "staysOnPrem": "온프레미스에 유지. 외부 유출 없음."
+      "staysOnPrem": "온프레미스에 유지. 외부 유출 없음.",
+      "onPremNotice": "Stays on-prem. No egress."
     },
     "timeline": {
       "title": "격리되고 확인된 코드가 중요한 이유",
@@ -598,7 +620,8 @@
             "title": "인라인 차이",
             "description": "보안 컨텍스트와 함께 제안된 패치를 인라인으로 검토합니다."
           }
-        }
+        },
+        "frame": "SLNC-env Analyzer"
       }
     },
     "industries": {
@@ -624,6 +647,30 @@
         "title": "정부",
         "description": "부처, 국방, 핵심 기관"
       }
+    },
+    "pricing": {
+      "subtitle": "Proste, przejrzyste ceny",
+      "title": "Wybierz plan",
+      "limitedOffer": "Oferta ograniczona czasowo",
+      "priceIncreaseNotice": "Zablokuj obecne ceny! Po 6 miesiącach ceny wzrosną o 30%",
+      "monthlyPlan": "Miesięczny",
+      "monthlyDesc": "Elastyczne rozliczenie",
+      "yearlyPlan": "Roczny",
+      "yearlyDesc": "Najlepsza wartość",
+      "month": "miesiąc",
+      "billedAnnually": "Rozliczane rocznie za",
+      "doubleSavings": "2x OSZCZĘDNOŚCI",
+      "getStarted": "Zacznij",
+      "features": {
+        "fullAccess": "Pełny dostęp do platformy",
+        "support": "Priorytetowe wsparcie",
+        "cancelAnytime": "Możliwość rezygnacji w każdej chwili",
+        "priceLock": "Cena zablokowana na 12 miesięcy"
+      }
+    },
+    "comingSoon": {
+      "title": "Coming Soon",
+      "message": "This feature is currently under development."
     }
   },
   "pricingCta": {
@@ -724,7 +771,9 @@
     "close": "닫기"
   },
   "policySidebar": {
-    "tableOfContents": "Table of Contents"
+    "tableOfContents": "Table of Contents",
+    "close": "Close",
+    "topics": "Topics"
   },
   "whyChooseUs": {
     "badge": "결과 중심의 엔지니어링",
@@ -944,6 +993,11 @@
         "title": "Sithub",
         "desc": "내장 보안 스캐닝이 있는 자체 호스팅 GitHub 대안. 모든 저장소와 코드 분석이 네트워크 내부에 유지됩니다.",
         "badge": "구독"
+      },
+      "supreme": {
+        "title": "Supreme",
+        "desc": "Lokalny skaner podatności kodu dla VSCode. Analizuj kod bez wysyłania go na zewnętrzne serwery.",
+        "badge": "Rozszerzenie"
       }
     },
     "services": {
@@ -1932,6 +1986,138 @@
           ]
         }
       ]
+    },
+    "pricingMicrosoft": {
+      "business": "Business",
+      "enterprise": "Enterprise",
+      "withoutTeams": "Plans without Teams",
+      "withTeams": "With Teams",
+      "yearly": "Yearly",
+      "monthly": "Monthly",
+      "planHighlights": "Plan highlights",
+      "userMonth": "user/month",
+      "paidYearly": "paid yearly",
+      "paidMonthly": "paid monthly",
+      "plans": {
+        "businessPremium": {
+          "title": "Microsoft 365 Business Premium (no Teams)"
+        },
+        "businessStandard": {
+          "title": "Microsoft 365 Business Standard (no Teams)"
+        },
+        "businessBasic": {
+          "title": "Microsoft 365 Business Basic (no Teams)"
+        },
+        "enterpriseE3": {
+          "title": "Microsoft 365 E3"
+        },
+        "enterpriseE5": {
+          "title": "Microsoft 365 E5"
+        }
+      },
+      "features": {
+        "secureAccess300": "Secure access for up to 300 users",
+        "customDomainEmail": "Custom company email on your own domain (you@yourcompany.com)",
+        "adminConsole": "Admin console with domain-wide email management and bulk operations",
+        "aiThreatDetection": "AI-powered threat detection with automatic email categorization",
+        "securityPipeline": "Multi-layered email security pipeline (SPF, DKIM, DMARC, spam, malware, phishing)",
+        "securityFolders": "Email sorting into security folders (Secure, Spam, Dangerous Links, Malware, Phishing, Spoofed)",
+        "linkScannerAv": "Advanced link scanner and antivirus protection for attachments",
+        "emailFlowVisualization": "Email flow visualization across the domain/organization with comprehensive filters",
+        "bulkManageDelete": "Ability to manage and delete emails across all users in the domain",
+        "customFoldersRules": "Custom folders with auto-filtering rules (sender, domain, subject)",
+        "storage10gb": "10 GB secure mailbox storage per user",
+        "storage5tb": "5 TB secure mailbox storage per user",
+        "storage10tb": "10 TB secure mailbox storage per user",
+        "multiAccountSupport": "Multi-account support (Gmail/Outlook integration)",
+        "support247": "24/7 email and web support",
+        "fullTextSearch": "Email search with full-text capabilities",
+        "aiAssistedCategorization": "AI-assisted email categorization into security folders",
+        "basicFiltering": "Custom folders with basic filtering rules",
+        "prioritySupport": "Priority support with faster response times",
+        "dedicatedAM": "Dedicated account management",
+        "unlimitedUsers": "Supports unlimited users"
+      }
+    }
+  },
+  "supreme": {
+    "title": "Supreme",
+    "hero": {
+      "badge": "Supreme · VSCode Extension",
+      "title": "Local Code Vulnerability Scanner",
+      "description": "Scan your code locally without exposing it to external servers. Fast, comprehensive vulnerability detection right in your editor."
+    },
+    "video": {
+      "title": "Installation & Usage tutorial (60 seconds)",
+      "cardTitle": "How to Use Supreme",
+      "cardSubtitle": "Installation & Setup Guide"
+    },
+    "pricing": {
+      "title": "Simple Pricing",
+      "subtitle": "Choose the plan that works best for you",
+      "monthly": {
+        "title": "Monthly",
+        "description": "Flexible, cancel anytime"
+      },
+      "month": "month",
+      "subscribe": "Subscribe Now",
+      "saveBadge": "Save 30%",
+      "yearly": {
+        "title": "Yearly",
+        "description": "Best value"
+      },
+      "year": "year",
+      "perMonthApprox": "~{value} per month"
+    },
+    "languages": {
+      "title": "Supported Languages",
+      "subtitle": "Comprehensive security scanning for all major programming languages"
+    },
+    "features": {
+      "title": "Powerful Features",
+      "subtitle": "Everything you need for secure code development",
+      "items": [
+        "Code analyzer runs locally, the code is not being exposed to external servers",
+        "Finds vulnerable packages vulnerabilities within the project",
+        "Finds Misconfigurations, and Secrets",
+        "Can scan for CI/CD misconfigurations and vulnerabilities"
+      ]
+    },
+    "screenshots": [
+      {
+        "title": "Very straightforward interface"
+      },
+      {
+        "title": "Well structured security reports"
+      },
+      {
+        "title": "History of scans"
+      }
+    ],
+    "lightbox": {
+      "close": "Close",
+      "alt": "Screenshot"
+    }
+  },
+  "andManyMore": "Et bien plus encore...",
+  "badRequest": {
+    "title": "Błędne żądanie",
+    "cta": "Wróć na stronę główną",
+    "description": "The page you are looking for could not be found or the request was invalid."
+  },
+  "countrySelect": {
+    "title": "Wybierz kraj",
+    "subtitle": "Wybierz lokalizację, aby kontynuować",
+    "searchPlaceholder": "Szukaj kraju...",
+    "noResults": "Nie znaleziono krajów",
+    "continue": "Kontynuuj",
+    "comingSoon": {
+      "title": "Już prawie gotowe!",
+      "message": "Panel administracyjny do zarządzania subskrypcją będzie gotowy za",
+      "hours": "godziny",
+      "notification": "Powiadomimy Cię, gdy będzie dostępny!",
+      "back": "Wstecz",
+      "gotIt": "Rozumiem!"
     }
   }
 }

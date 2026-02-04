@@ -1,6 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { Link as LocalizedLink } from '@/i18n/navigation';
+import Link from 'next/link';
 
 const Footer = () => {
   const { t } = useLanguage();
@@ -44,43 +46,43 @@ const Footer = () => {
                 {/* AI-SOC 1 */}
                 <div className="text-gray-500 text-xs uppercase tracking-wider font-semibold text-center sm:text-right">AI-SOC 1:</div>
                 <div className="flex flex-wrap justify-center sm:justify-end gap-3 sm:contents">
-                  <a href="/policies/terms_of_use" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
+                  <Link href="/policies/terms_of_use" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
                     {t("footer.links.termsUse", "Terms of Use")}
-                  </a>
-                  <a href="/policies/terms_of_service" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
+                  </Link>
+                  <Link href="/policies/terms_of_service" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
                     {t("footer.links.termsService", "Terms of Service")}
-                  </a>
-                  <a href="/policies/privacy" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
+                  </Link>
+                  <Link href="/policies/privacy" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
                     {t("footer.links.privacy", "Privacy Policy")}
-                  </a>
+                  </Link>
                 </div>
 
                 {/* SITHUB */}
                 <div className="text-gray-500 text-xs uppercase tracking-wider font-semibold text-center sm:text-right mt-2 sm:mt-0">Sithub:</div>
                 <div className="flex flex-wrap justify-center sm:justify-end gap-3 sm:contents">
-                  <a href="/policies/sithub/terms_of_use" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
+                  <Link href="/policies/sithub/terms_of_use" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
                     {t("footer.links.termsUse", "Terms of Use")}
-                  </a>
-                  <a href="/policies/sithub/terms_of_service" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
+                  </Link>
+                  <Link href="/policies/sithub/terms_of_service" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
                     {t("footer.links.termsService", "Terms of Service")}
-                  </a>
-                  <a href="/policies/sithub/privacy" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
+                  </Link>
+                  <Link href="/policies/sithub/privacy" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
                     {t("footer.links.privacy", "Privacy Policy")}
-                  </a>
+                  </Link>
                 </div>
 
                 {/* SUPREME */}
                 <div className="text-gray-500 text-xs uppercase tracking-wider font-semibold text-center sm:text-right mt-2 sm:mt-0">Supreme:</div>
                 <div className="flex flex-wrap justify-center sm:justify-end gap-3 sm:contents">
-                  <a href="/policies/supreme/terms_of_use" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
+                  <Link href="/policies/supreme/terms_of_use" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
                     {t("footer.links.termsUse", "Terms of Use")}
-                  </a>
-                  <a href="/policies/supreme/terms_of_service" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
+                  </Link>
+                  <Link href="/policies/supreme/terms_of_service" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
                     {t("footer.links.termsService", "Terms of Service")}
-                  </a>
-                  <a href="/policies/supreme/privacy" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
+                  </Link>
+                  <Link href="/policies/supreme/privacy" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
                     {t("footer.links.privacy", "Privacy Policy")}
-                  </a>
+                  </Link>
                 </div>
              </div>
           </div>

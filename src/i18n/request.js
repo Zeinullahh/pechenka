@@ -1,13 +1,17 @@
 import {getRequestConfig} from 'next-intl/server';
-
 import {LOCALES} from '@/locales';
-import {defaultLocale} from './locales.mjs';
+import {supportedLocales} from './locales.mjs';
 
-// For static export, always use the default locale at build time.
-// Client-side language switching is handled by LanguageContext.
-export default getRequestConfig(async () => {
+export default getRequestConfig(async ({locale}) => {
+  let resolvedLocale = locale;
+
+  // Validate that the incoming `locale` parameter is valid
+  if (!resolvedLocale || !supportedLocales.includes(resolvedLocale)) {
+    resolvedLocale = 'en';
+  }
+
   return {
-    locale: defaultLocale,
-    messages: LOCALES[defaultLocale] ?? {}
+    locale: resolvedLocale,
+    messages: LOCALES[resolvedLocale] ?? LOCALES['en']
   };
 });

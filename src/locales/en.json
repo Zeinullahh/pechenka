@@ -17,6 +17,11 @@
         "title": "Sithub",
         "desc": "Self-hosted GitHub alternative with built-in security scanning. All repositories and code analysis stay within your network.",
         "badge": "Subscription"
+      },
+      "supreme": {
+        "title": "Supreme",
+        "desc": "Local code vulnerability scanner for VSCode. Analyze code without sending it to external servers.",
+        "badge": "Extension"
       }
     },
     "services": {
@@ -1043,6 +1048,995 @@
           ]
         }
       ]
+    }
+  },
+  "supreme": {
+    "title": "Supreme",
+    "hero": {
+      "badge": "Supreme · VSCode Extension",
+      "title": "Local Code Vulnerability Scanner",
+      "description": "Scan your code locally without exposing it to external servers. Fast, comprehensive vulnerability detection right in your editor."
+    },
+    "video": {
+      "title": "Installation & Usage tutorial (60 seconds)",
+      "cardTitle": "How to Use Supreme",
+      "cardSubtitle": "Installation & Setup Guide"
+    },
+    "pricing": {
+      "title": "Simple Pricing",
+      "subtitle": "Choose the plan that works best for you",
+      "monthly": {
+        "title": "Monthly",
+        "description": "Flexible, cancel anytime"
+      },
+      "month": "month",
+      "subscribe": "Subscribe Now",
+      "saveBadge": "Save 30%",
+      "yearly": {
+        "title": "Yearly",
+        "description": "Best value"
+      },
+      "year": "year",
+      "perMonthApprox": "~{value} per month"
+    },
+    "languages": {
+      "title": "Supported Languages",
+      "subtitle": "Comprehensive security scanning for all major programming languages"
+    },
+    "features": {
+      "title": "Powerful Features",
+      "subtitle": "Everything you need for secure code development",
+      "items": [
+        "Code analyzer runs locally, the code is not being exposed to external servers",
+        "Finds vulnerable packages vulnerabilities within the project",
+        "Finds Misconfigurations, and Secrets",
+        "Can scan for CI/CD misconfigurations and vulnerabilities"
+      ]
+    },
+    "screenshots": [
+      {
+        "title": "Very straightforward interface"
+      },
+      {
+        "title": "Well structured security reports"
+      },
+      {
+        "title": "History of scans"
+      }
+    ],
+    "lightbox": {
+      "close": "Close",
+      "alt": "Screenshot"
+    }
+  },
+  "languageSelector": {
+    "triggerLabel": "Select language",
+    "menuLabel": "Choose language",
+    "searchLabel": "Search languages",
+    "searchPlaceholder": "Search by name or native script",
+    "searchResults": "Search results",
+    "noMatches": "No languages match your search.",
+    "popular": "Most popular",
+    "allLanguages": "All languages"
+  },
+  "header": {
+    "andManyMore": "And many more...",
+    "nav": {
+      "main": "Main",
+      "mail": "Mail",
+      "affiliate": "Affiliate program",
+      "instructions": "Instructions",
+      "product": "AI-SOC",
+      "secureDevelopment": "SLNC-env",
+      "developerServices": "Developer Services",
+      "home": "Home",
+      "systems": "Systems",
+      "systemsAiSoc": "AI-SOC",
+      "systemsSithub": "Sithub",
+      "systemsSupreme": "Supreme",
+      "systemsSlncEnv": "SLNC-env",
+      "services": "Services",
+      "instructionsAiSoc": "AI-SOC",
+      "instructionsSupreme": "Supreme",
+      "instructionsSithub": "Sithub"
+    },
+    "login": "Request Demo",
+    "cta": {
+      "contact": "Contact",
+      "download": "Download",
+      "requestDemo": "Request Demo",
+      "get": "Get"
+    }
+  },
+  "footer": {
+    "copyright": "© 2024 Silence AI. All rights reserved.",
+    "contactLabel": "Contact",
+    "contactValue": "team@silence.codes",
+    "addressLabel": "Address",
+    "addressValue": "Astana, Kazakhstan",
+    "links": {
+      "cookies": "Cookie Policy",
+      "termsUse": "Terms of Use",
+      "termsService": "Terms of Service",
+      "privacy": "Privacy Policy",
+      "affiliateTerms": "Affiliate Terms of Service"
+    }
+  },
+  "policySidebar": {
+    "tableOfContents": "Table of Contents",
+    "close": "Close",
+    "topics": "Topics"
+  },
+  "andManyMore": "Et bien plus encore...",
+  "affiliate": {
+    "hero": {
+      "tagline": "Join the Silence AI Partner Program",
+      "title": "Turn your invitations into revenue.",
+      "cta": "Join the partner program",
+      "earnings": "$2,940.00",
+      "growth": "+18% compared to last month",
+      "snapshot": {
+        "label": "Live snapshot",
+        "caption": "Performance updates every 60 seconds and confirmed payments sync instantly."
+      },
+      "graph": {
+        "label": "Revenue trend",
+        "title": "Referral revenue growth",
+        "window": "Last 30 days",
+        "label0": "Week 1",
+        "label1": "Week 2",
+        "label2": "Week 3",
+        "label3": "Week 4",
+        "label4": "Week 5",
+        "label5": "Week 6",
+        "label6": "Today"
+      },
+      "metric": {
+        "conversion": "Activations",
+        "conversionChange": "24 new teams this month",
+        "pending": "Pending rewards",
+        "pendingChange": "Withdrawals processed within 2 business days"
+      }
+    },
+    "howItWorks": {
+      "title": "How it works",
+      "create": {
+        "title": "Create your link",
+        "description": "Generate a unique referral link or promo code in your Silence AI dashboard."
+      },
+      "share": {
+        "title": "Share",
+        "description": "Invite teams via email, LinkedIn, or your communities. Track performance in real time."
+      },
+      "earn": {
+        "title": "Earn",
+        "description": "Receive your commission as soon as referred customers activate Silence AI protection."
+      }
+    },
+    "commission": {
+      "heading": "Balance rewards",
+      "highlight": {
+        "label": "Why partners love it"
+      },
+      "reward": {
+        "title": "10% reward on every balance top-up",
+        "description": "When an invited team tops up their Silence AI wallet, 10% of the net amount is paid to you instantly."
+      },
+      "settlement": {
+        "title": "Real-time ledger settlement",
+        "description": "Rewards are credited to your partner balance within one minute after the transaction, with no manual approval queue."
+      },
+      "withdrawal": {
+        "title": "Withdrawals processed within 2 business days",
+        "description": "Withdrawal requests are automatically verified and arrive in your bank account within two business days."
+      },
+      "sample": {
+        "label": "Top-up examples",
+        "caption": "Partner earnings grow with each top-up — no tier resets or product association required.",
+        "topup": "$250 top-up → $25 reward",
+        "topupHigher": "$1,000 top-up → $100 reward"
+      },
+      "note": "Commission is calculated on the net amount after processing fees are deducted."
+    },
+    "faq": {
+      "title": "Questions & answers",
+      "payments": {
+        "question": "How do I receive my payments?",
+        "answer": "Add your VISA or Mastercard number in your profile. Payments can be withdrawn directly to the card on file."
+      },
+      "discounts": {
+        "question": "Do referred customers get discounts?",
+        "answer": "No. Referred customers do not receive any discount on their purchases; only the partner earns a commission on successful referrals."
+      },
+      "statistics": {
+        "question": "When will I see my referral statistics?",
+        "answer": "As soon as a user signs up with your promo code or referral link, their email address and associated reward appear in your dashboard."
+      }
+    },
+    "termsAff": {
+      "label": "Affiliate Program",
+      "title": "Affiliate Terms of Service",
+      "gitServer": {
+        "title": "Git Repository Server",
+        "tag": "Self-hosted version control"
+      },
+      "analyzer": {
+        "title": "Security Analyzer",
+        "tag": "Local code scanning engine"
+      },
+      "vulnDb": {
+        "title": "Vulnerability Database",
+        "tag": "Security patches downloaded"
+      },
+      "notice": "This policy is available only in English",
+      "intro": "These terms describe how rewards are issued and paid to partners participating in the Silence AI affiliate program.",
+      "meta": {
+        "effective": "Effective date: 10 November 2024",
+        "lastUpdated": "Last updated: 10 November 2024"
+      },
+      "sections": {
+        "overview": {
+          "title": "1. Program Overview",
+          "body1": "1.1 Agreement Scope: These Affiliate Terms of Service (\"Terms\") govern your participation in the Silence AI affiliate program operated by Silence AI LLC (\"Silence AI,\" \"we,\" \"us,\" or \"our\"). These Terms apply to you, the individual or entity enrolling as an affiliate partner (\"you\" or \"your\"), and, where applicable, your employer, principal, or organization if you act on their behalf.",
+          "body2": "1.2 Program Summary: Under this program, qualified partners earn commission-based rewards when referred customers purchase or top up the AI-SOC 1 product. Participation in the affiliate program also requires compliance with the general Silence AI Terms of Service."
+        },
+        "eligibility": {
+          "title": "2. Partner Eligibility",
+          "item1": "You must maintain an active Silence AI affiliate account with accurate business and payment details.",
+          "item2": "Referrals must complete registration through your issued link or promo code.",
+          "item3": "Accounts found to be fraudulent, self-referred, or in breach of applicable law are not eligible for rewards."
+        },
+        "commission": {
+          "title": "3. Commission Structure",
+          "body1": "You earn a 10% reward on every balance top-up completed by an account registered through your invitation.",
+          "body2": "Commission is calculated from the net top-up amount after payment processing fees are deducted."
+        },
+        "rewardPosting": {
+          "title": "4. Reward Posting",
+          "body1": "Rewards post to your partner balance within one minute after the transaction successfully clears. There is no manual approval queue.",
+          "body2": "Notifications appear in your affiliate dashboard alongside the customer identifier and top-up amount."
+        },
+        "withdrawals": {
+          "title": "5. Withdrawals",
+          "body1": "Withdrawal requests are processed within two business days and paid out using the settlement method on file.",
+          "body2": "Minimum withdrawal thresholds and supported payout networks are published inside the affiliate dashboard."
+        },
+        "productScope": {
+          "title": "6. Product Scope",
+          "body1": "Rewards are only provided for the AI-SOC 1 product. Other Silence AI services are excluded from the affiliate program unless explicitly stated otherwise in writing.",
+          "body2": "If additional products become eligible, Silence AI will publish an updated list inside these terms."
+        },
+        "compliance": {
+          "title": "7. Partner Conduct & Compliance",
+          "item1": "Partners must represent Silence AI accurately and avoid misleading claims about features or pricing.",
+          "item2": "Marketing communications must comply with applicable anti-spam, privacy, and advertising regulations.",
+          "item3": "Silence AI may suspend or terminate accounts that violate these obligations or harm the brand."
+        },
+        "changes": {
+          "title": "8. Changes & Contact",
+          "body1": "Silence AI may update these affiliate terms to reflect changes in the program or applicable law. Updated versions take effect upon publication on this page.",
+          "body2": "Questions about the affiliate program can be sent to info@silenceai.net."
+        }
+      }
+    },
+    "balanceRewards": {
+      "lampTitle": "Balance rewards"
+    }
+  },
+  "hero": {
+    "headline": "AI-SOC 1: cybersecurity is no longer costly or complex",
+    "subheading": "A unified AI cybersecurity platform that combines:",
+    "playgroundHeading": "AI-powered Security Operations Center",
+    "bullets": {
+      "web": "Real-time protection against web attacks",
+      "email": "Protection against email attacks",
+      "vulnerability": "Vulnerability detection"
+    },
+    "buttons": {
+      "connect": "Connect in 4 minutes",
+      "tour": "Watch the 90-second demo"
+    },
+    "tooltips": {
+      "web": {
+        "title": "Web attack protection",
+        "content": "The system protects against ALL types of web attacks (DDoS, SQLi, etc.), except business logic vulnerabilities."
+      },
+      "email": {
+        "title": "Email attack protection",
+        "content": "The system protects against ALL types of email attacks: phishing, malicious attachments, dangerous links, etc."
+      },
+      "vulnerability": {
+        "title": "Vulnerability detection",
+        "content": "The system identifies flaws in application code and via dynamic interaction with your website/API, including through the intelligence engine."
+      }
+    }
+  },
+  "playground": {
+    "options": {
+      "globeShield": "Web security and traffic management",
+      "emailSecurity": "Email security and visualization"
+    }
+  },
+  "cookie": {
+    "title": "Technical cookie notice",
+    "description": "This site uses only first-party technical cookies to remember your language preferences and avoid showing this notice repeatedly. No third-party or tracking cookies are used.",
+    "more": "Learn more in our",
+    "link": "Cookie Policy",
+    "ok": "OK"
+  },
+  "pricing": {
+    "title": "Pricing",
+    "subtitle": "Mobile-friendly plans designed to scale with your product.",
+    "percentMaintenance": "{percent}% annual maintenance",
+    "planEstimate": "${value}",
+    "tooltips": {
+      "cmcGlobal": {
+        "title": "CMC with Global Traffic Monitoring",
+        "content": "The Central Management Console (CMC) integrates seamlessly with other security systems and is available under the same domain and interface as Global Shield and Security Tester, allowing you to manage network security at scale. From here, you can blacklist countries, close ports, and perform other operations."
+      },
+      "countryBlacklisting": {
+        "title": "Country Blacklisting",
+        "content": "Block all traffic from a specific country"
+      },
+      "portManagement": {
+        "title": "Port Management",
+        "content": "Close unused ports to reduce attack surface. For example, disable port 22 when SSH access is not needed. To minimize the risk of system compromise."
+      },
+      "cmcEmail": {
+        "title": "CMC with Advanced Email Flow Visualizer",
+        "content": "The Central Management Console (CMC) integrates seamlessly with other security systems and is available under the same domain and interface as Global Shield and Security Tester. In this console, you can monitor email flows and review emails from all corporate users you have added."
+      },
+      "dynamicVulnerability": {
+        "title": "Dynamic Vulnerability Search",
+        "content": "Detects vulnerabilities by interacting with your website, including the vulnerability search method via the intelligence system."
+      },
+      "codeAnalyzer": {
+        "title": "Code Analyzer",
+        "content": "Identifies security issues directly in your codebase via a VS Code plugin, helping you fix problems before deployment."
+      },
+      "intelligenceReport": {
+        "title": "Intelligence Report",
+        "content": "Generates detailed information about your target, including open ports, running services, subdomains, and other sensitive information that may require action."
+      },
+      "fullVulnerability": {
+        "title": "FULL Vulnerability Check",
+        "content": "A FULL vulnerability check includes both dynamic vulnerability analysis and source code vulnerability analysis."
+      }
+    },
+    "plans": {
+      "globalShield": {
+        "title": "Web Security and Traffic Management",
+        "price": "$0.06/GB",
+        "description": "No limits\nNo additional fees",
+        "button": "Secure web app and APIs",
+        "features": {
+          "webProtection": "Protection against all types of web attacks, except business logic vulnerability exploitation",
+          "ddosProtection": "Real-time DDoS protection",
+          "cmc": "CMC with global traffic monitoring system",
+          "country": "Country blacklisting feature",
+          "port": "Port closing feature"
+        }
+      },
+      "emailProtector": {
+        "title": "Email Security and Visualization",
+        "price": "$10/month/account",
+        "description": "Up to 10 emails per day\nAdditional emails: $0.035 each",
+        "button": "Secure Email",
+        "features": {
+          "cmcEmail": "CMC with the most advanced email flow visualizer",
+          "visibility": "Full visibility of sent and received emails from all email accounts, in the CMC, with automatic threat categorization",
+          "webClient": "Secure WebMail client",
+          "phishing": "Phishing protection",
+          "malware": "Malicious attachment scanning",
+          "links": "Dangerous link detection",
+          "spam": "Anti-spam filtering",
+          "fakeSender": "Spoofed sender protection"
+        }
+      },
+      "securityTester": {
+        "title": "Vulnerability Search",
+        "price": "$25/month",
+        "description": "Up to 50 FULL vulnerability checks per month\nAdditional FULL checks: $0.5 each",
+        "button": "Start testing",
+        "features": {
+          "dynamic": "Dynamic vulnerability search",
+          "codeAnalyzer": "Code Analyzer",
+          "reports": "Easy-to-understand security assessment reports",
+          "intelligence": "Intelligence Report"
+        }
+      }
+    },
+    "perYear": "per year (est.)",
+    "calculator": {
+      "subtitle": "Slide to see annual maintenance cost"
+    }
+  },
+  "solution": {
+    "sectionTitle": "Our Solution",
+    "sectionSubtitle": "Operational in 4 minutes and usable by any IT professional, no cybersecurity expertise required. We offer advanced visualization and affordable pricing.",
+    "cards": {
+      "globalShield": {
+        "title": "Global Shield - CIA-level traffic monitoring",
+        "description": "Our interactive 3D globe provides impressive traffic visualization: requests per second, active users, and byte volume.",
+        "bullets": {
+          "one": "Simple setup: provide your IP and domain.",
+          "two": "Receive an agent IP to add to your DNS.",
+          "three": "Port closing for zero exposure surface."
+        }
+      },
+      "emailProtector": {
+        "title": "Email Protector - world's first AI email protection",
+        "description": "The first commercial AI-based email protection system. Our vector view makes it easy to track flows over time and detect threats.",
+        "bullets": {
+          "one": "Detects spoofing, spam, phishing, and malware.",
+          "two": "Admin can add email accounts to protect.",
+          "three": "Most advanced commercial email flow visualizer."
+        }
+      },
+      "securityTester": {
+        "title": "Security Tester - next-gen vulnerability testing",
+        "description": "Our system provides a One-Time-Token (OTT) for comprehensive audits. Connect via our browser or the VS Code extension.",
+        "bullets": {
+          "one": "Define the scope and target in the CMC.",
+          "two": "Paste the OTT and start the check.",
+          "three": "Intelligence-driven risk insights."
+        }
+      }
+    },
+    "cmc": {
+      "title": "Central Management Console (CMC)",
+      "description": "All three components are controlled through a unified console offering centralized visualization, easy configuration and monitoring, and comprehensive security reports."
+    }
+  },
+  "insights": {
+    "items": [
+      {
+        "title": "39 seconds",
+        "description": "A hacker attack occurs every 39 seconds"
+      },
+      {
+        "title": "20M DDoS attacks",
+        "description": "20.5 million DDoS attacks in Q1 2025 alone"
+      },
+      {
+        "title": "Every day",
+        "description": "30,000 websites are hacked every day"
+      }
+    ]
+  },
+  "floatingText": {
+    "headline": "Understand how hackers think",
+    "description": "Follow us for daily analysis of attack techniques and real threats"
+  },
+  "modal": {
+    "title": "Under development",
+    "body": "The system is expected to launch on October 10"
+  },
+  "lamp": {
+    "title": "The reality of cyberattacks"
+  },
+  "stickySolution": {
+    "webSecurity": {
+      "title": "Web security system: site/API connected in 2 minutes",
+      "description": "Protection against web attacks (DDoS, SQLi, etc.). Ability to close ports; for example, disable port 22 when not in use."
+    },
+    "ciaMonitoring": {
+      "title": "CIA-level traffic monitoring",
+      "description": "The interactive 3D globe displays traffic by requests, users, and volume, with variation history."
+    },
+    "userGrowth": {
+      "title": "Useful user growth data",
+      "description": "View the history of user count evolution"
+    },
+    "aiEmailProtection": {
+      "title": "First AI email protection: secure network in 2 minutes",
+      "description": "The CMC provides admins with full visibility of all sent/received emails, with automatic categorization (spoofing, spam, phishing, dangerous links, malware)."
+    },
+    "emailVisualization": {
+      "title": "Sent and received email visualization",
+      "description": "CMC with the most advanced commercial email flow visualizer"
+    },
+    "secureWebmail": {
+      "title": "Secure webmail client",
+      "description": "For accounts added by admin, a highly secure web client that detects and classifies spoofing, spam, phishing, and malware."
+    }
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "We searched everywhere but could not find this page.",
+    "cta": "Back to home"
+  },
+  "heroSection": {
+    "badge": "Production-ready AI & Software",
+    "title": "Custom AI and Software Development",
+    "description": "We build production-ready AI agents and custom software.",
+    "country": "Kazakhstan",
+    "market": "global market",
+    "startProject": "Start a project",
+    "liveDemo": "Live Demo — AI Agent",
+    "live": "Live",
+    "aiAgent": "AI Agent v2.1",
+    "processing": "Processing requests...",
+    "active": "Active",
+    "userMessage": "Analyze customer data trends",
+    "aiResponse": "Analysis in progress",
+    "tasks": {
+      "dataCollection": "Data collection",
+      "aiAnalysis": "AI analysis",
+      "reportGeneration": "Report generation"
+    },
+    "stats": {
+      "tasks": "Tasks",
+      "success": "Success",
+      "speed": "Speed"
+    }
+  },
+  "secureDevelopment": {
+    "hero": {
+      "badge": "SLNC-env · Secure Development Environment",
+      "title": "Build systems with secure and private code",
+      "description": "Private development environment for enterprises, where code never leaves your corporate network. While providing the latest AI-powered technology",
+      "requestSystem": "Request system"
+    },
+    "components": {
+      "title": "Everything stays inside",
+      "subtitle": "Three components, one sealed loop",
+      "description": "Code, prompts, and builds never leave your network. SLNC-env keeps AI assistance, reviews, and delivery private for cloud providers, government teams, and industrial facilities.",
+      "sithub": {
+        "title": "Sithub Server",
+        "tag": "Local version control"
+      },
+      "llm": {
+        "title": "LLM Server (Qwen-Code)",
+        "tag": "On-site intelligence"
+      },
+      "ide": {
+        "title": "IDE with local Copilot",
+        "tag": "Cursor-level experience"
+      },
+      "staysOnPrem": "Stays on-prem. No egress.",
+      "gitServer": {
+        "title": "Git Repository Server",
+        "tag": "Self-hosted"
+      },
+      "analyzer": {
+        "title": "Security Analyzer",
+        "tag": "Local scanning"
+      },
+      "vulnDb": {
+        "title": "Vulnerability Database",
+        "tag": "Synced daily"
+      },
+      "onPremNotice": "Stays on-prem. No egress."
+    },
+    "timeline": {
+      "title": "Why isolated and verified code matters",
+      "subtitle": "Recent wake-up calls",
+      "incident": {
+        "title": "Critical incident — code leaked",
+        "heading": "DeepSeek leak exposed source code and prompts to the open internet",
+        "description": "Keep inference and analysis on-site. No external model egress. Audit trails by default.",
+        "seePlan": "See containment plan"
+      },
+      "stuxnet": {
+        "attack": "Stuxnet",
+        "target": "Natanz enrichment facility",
+        "impact": "Destroyed ~1,000 centrifuges",
+        "severity": "Critical",
+        "year": "2010"
+      },
+      "blackEnergy": {
+        "attack": "BlackEnergy",
+        "target": "Ukrainian power grid",
+        "impact": "230,000 customers without power",
+        "severity": "High",
+        "year": "2015"
+      },
+      "triton": {
+        "attack": "TRITON",
+        "target": "Saudi petrochemical plant",
+        "impact": "Safety systems disabled",
+        "severity": "Critical",
+        "year": "2017"
+      },
+      "colonialPipeline": {
+        "attack": "Colonial Pipeline",
+        "target": "US fuel pipeline",
+        "impact": "Fuel paralysis for 6 days",
+        "severity": "High",
+        "year": "2021"
+      },
+      "pdvsa": {
+        "attack": "PDVSA",
+        "target": "Venezuelan refining",
+        "impact": "Refinery operations disrupted",
+        "severity": "Medium",
+        "year": "2025"
+      }
+    },
+    "analyzer": {
+      "title": "Analyzer that outperforms CodeQL",
+      "subtitle": "Live assurance",
+      "features": {
+        "quality": {
+          "title": "Automatic code quality",
+          "description": "Structure, style, and best practice checks tailored for security-critical code"
+        },
+        "vulnerability": {
+          "title": "Vulnerability scans",
+          "description": "SQLi, XSS, authentication bypass, and insecure dependencies detected instantly"
+        },
+        "secrets": {
+          "title": "Secrets guard",
+          "description": "Keys, tokens, and credentials blocked at commit time"
+        },
+        "config": {
+          "title": "Configuration hardening",
+          "description": "Docker/K8s, IAM, and network policies analyzed for privilege escalation"
+        }
+      },
+      "beyondCodeQL": {
+        "title": "Detects what static queries miss",
+        "subtitle": "Beyond CodeQL",
+        "description": "Finds misconfigurations and vulnerable packages faster than CodeQL and offers fixes, not just alerts.",
+        "points": {
+          "packages": "Knows package graphs and flags risky dependencies in seconds.",
+          "config": "Detects configuration drift and privilege escalation — beyond static rules.",
+          "patches": "Every finding comes with a suggested patch and an assignee."
+        }
+      },
+      "visualizer": {
+        "title": "Code analyzer in action",
+        "subtitle": "Visualizer",
+        "description": "Clean screenshots of recent scans, beautifully rendered in the on-site console.",
+        "privateWorkspace": "Private workspace only",
+        "andManyMore": "And many more...",
+        "shots": {
+          "scanOverview": {
+            "title": "Scan overview",
+            "description": "See issues grouped by severity before code leaves your network."
+          },
+          "misconfigurations": {
+            "title": "Misconfiguration detection",
+            "description": "Our AI-powered code analyzer detects even misconfigurations in code."
+          },
+          "inlineDiffs": {
+            "title": "Inline diffs",
+            "description": "Review suggested fixes inline with security context."
+          }
+        },
+        "frame": "SLNC-env Analyzer"
+      }
+    },
+    "industries": {
+      "title": "Built for regulated and high-impact industries",
+      "subtitle": "Where we deploy",
+      "oilGas": {
+        "title": "Oil and Gas",
+        "description": "Drilling, refining, pipeline control"
+      },
+      "energy": {
+        "title": "Energy",
+        "description": "Grid, distribution, and EMS"
+      },
+      "nuclear": {
+        "title": "Nuclear",
+        "description": "Reactor controls and safety"
+      },
+      "manufacturing": {
+        "title": "Manufacturing",
+        "description": "ICS, OT, and robotics"
+      },
+      "government": {
+        "title": "Government",
+        "description": "Ministries, defense, critical agencies"
+      }
+    },
+    "pricing": {
+      "subtitle": "Simple, transparent pricing",
+      "title": "Choose a plan",
+      "limitedOffer": "Limited time offer",
+      "priceIncreaseNotice": "Lock in current prices! After 6 months, prices will increase by 30%",
+      "monthlyPlan": "Monthly",
+      "monthlyDesc": "Flexible billing",
+      "yearlyPlan": "Annual",
+      "yearlyDesc": "Best value",
+      "month": "month",
+      "billedAnnually": "Billed annually for",
+      "doubleSavings": "2x SAVINGS",
+      "getStarted": "Get started",
+      "features": {
+        "fullAccess": "Full platform access",
+        "support": "Priority support",
+        "cancelAnytime": "Cancel anytime",
+        "priceLock": "Price locked for 12 months"
+      }
+    },
+    "comingSoon": {
+      "title": "Coming Soon",
+      "message": "This feature is currently under development."
+    },
+    "requestSystem": "Request system"
+  },
+  "pricingCta": {
+    "requestSystem": "Request system"
+  },
+  "contactForm": {
+    "title": "Contact Us",
+    "success": "Thanks! Your message has been sent. We will contact you shortly.",
+    "errorRequired": "Please fill in your name, email and a short message.",
+    "errorSend": "Unable to send message. Please try again later.",
+    "placeholders": {
+      "name": "Your name",
+      "email": "Email",
+      "type": "Project Type (optional)",
+      "budget": "Budget (optional)",
+      "message": "Tell us about your project..."
+    },
+    "submit": {
+      "idle": "Send Message",
+      "loading": "Sending…"
+    }
+  },
+  "consulting": {
+    "title": "Consulting Questionnaire",
+    "searchPlaceholder": "Search questions...",
+    "noResults": "No questions found.",
+    "questions": [
+      {
+        "question": "What is your company's core value proposition beyond competitive pricing?",
+        "answer": "Security is our primary differentiator. We position ourselves as a company that builds highly secure systems with enterprise-grade security practices embedded throughout the development lifecycle."
+      },
+      {
+        "question": "How long has your company been in business, and what is your track record?",
+        "answer": "We have successfully delivered major projects including: NAK (Nur Astana Kurylys) - AI-powered team management platform, and Chic Flowers - Complete digital platform for a major flower retail company."
+      },
+      {
+        "question": "What differentiates your technical capabilities and service quality from EPAM and other competitors?",
+        "answer": "Our key differentiator is our security-first development approach. We integrate security practices from project inception through deployment and maintenance."
+      },
+      {
+        "question": "How do you maintain quality while offering competitive pricing?",
+        "answer": "We offer services at 15% below market rates while maintaining exceptional quality through optimized operations, strategic talent sourcing, and efficient project management methodologies."
+      },
+      {
+        "question": "What specific software development services do you provide?",
+        "answer": "End-to-end software development: custom applications, AI-powered solutions, cybersecurity product development (Silence AI-SOC), system integration, cloud migration, and DevOps. We also offer dedicated product development and staff augmentation."
+      },
+      {
+        "question": "Which industries and domains do you specialize in?",
+        "answer": "Construction, retail, fintech, cybersecurity, and digital platforms — including AI-driven team management, e-commerce, and enterprise security solutions."
+      },
+      {
+        "question": "What technology stacks and platforms does your team have expertise in?",
+        "answer": "GO, Swift, Flutter, cloud platforms (AWS/Azure/GCP), Docker/Kubernetes, FastAPI, JavaScript, and AI/ML frameworks. We build proprietary security tools like Silence AI-SOC."
+      },
+      {
+        "question": "Do you offer end-to-end product development or specific services only?",
+        "answer": "We offer both: MVPs, full-cycle product delivery, staff augmentation, and cybersecurity integration."
+      },
+      {
+        "question": "Can you provide both staff augmentation and dedicated team models?",
+        "answer": "Yes, we provide flexible engagement models: staff augmentation, dedicated teams, and project-based outsourcing."
+      },
+      {
+        "question": "Do you offer consulting, architecture, and advisory services beyond development?",
+        "answer": "Yes: cybersecurity consulting, system architecture design, technology advisory, and security compliance assessments using Silence AI-SOC."
+      }
+    ]
+  },
+  "requestDemoModal": {
+    "title": "Request a Demo",
+    "fields": {},
+    "submit": "Submit",
+    "successTitle": "Request Sent!",
+    "successBody": "We will contact you shortly to schedule the demo."
+  },
+  "requestSystemModal": {
+    "title": "Request the System",
+    "fields": {},
+    "submit": "Download",
+    "successTitle": "Request Sent!",
+    "successBody": "Thank you. System download instructions will be sent to your email."
+  },
+  "whyChooseUs": {
+    "badge": "Results-driven Engineering",
+    "title": "Why Choose Us",
+    "subtitle": "Trusted by teams from",
+    "subtitleHighlight": "billion-dollar organizations",
+    "subtitleTail": "— and delivered at startup speed.",
+    "learnMore": "Learn More",
+    "features": {
+      "fast": {
+        "title": "Fast Delivery with Enterprise Quality",
+        "description": "Fast, iterative delivery cycles meeting enterprise reliability and compliance standards.",
+        "pill": "Speed + Quality"
+      },
+      "ai": {
+        "title": "AI-focused Product Engineering",
+        "description": "From prototypes to production AI agents — we design, train, and deploy models that solve real business problems.",
+        "pill": "AI Engineering"
+      },
+      "local": {
+        "title": "Local Expertise, Global Reach",
+        "description": "Deep knowledge of the Kazakhstan market and regulations combined with international best practices.",
+        "pill": "Local + Global"
+      }
+    },
+    "logos": {
+      "kmg": "KazMunayGas",
+      "nak": "Nur Astana Kurylis"
+    }
+  },
+  "servicesBlock": {
+    "badge": "What We Offer",
+    "title": "Our Services",
+    "description": "Premium UI, solid engineering, and fast delivery — everything you need to launch a product that looks and works like a major brand.",
+    "learnMore": "Learn More",
+    "learnMoreAria": "Learn more about the service",
+    "services": {
+      "aiAgents": {
+        "title": "AI Agents",
+        "description": "Custom conversational and autonomous agents for support, operations, and analytics.",
+        "tag": "Automation"
+      },
+      "customSoftware": {
+        "title": "Custom Software",
+        "description": "End-to-end web and desktop applications tailored to your workflows.",
+        "tag": "Development"
+      },
+      "cybersecurity": {
+        "title": "Cybersecurity",
+        "description": "Audits, pentests, and continuous monitoring.",
+        "tag": "Protection"
+      },
+      "backend": {
+        "title": "Backend / DevOps",
+        "description": "Scalable APIs, CI/CD pipelines, and cloud infrastructure.",
+        "tag": "Scale"
+      },
+      "mobile": {
+        "title": "Mobile Apps",
+        "description": "Cross-platform applications with native performance and polished UX.",
+        "tag": "Shipping"
+      }
+    }
+  },
+  "caseStudies": {
+    "badge": "Proven Impact",
+    "title": "Case Studies",
+    "subtitle": "We do not deliver features. We deliver results.",
+    "caseStudy": "Case Study",
+    "problem": "Problem:",
+    "solution": "Solution:",
+    "liveImpact": "Live Impact",
+    "before": "Before",
+    "after": "After",
+    "buildCta": "Build something like this →",
+    "items": {
+      "nak": {
+        "title": "NAK — AI-Powered Team Management",
+        "problem": "Manual resource allocation",
+        "solution": "AI planning agent",
+        "result": "+32% productivity",
+        "metricLabel": "Team performance index"
+      },
+      "chic": {
+        "title": "Chic Flowers — eCommerce",
+        "problem": "Low online conversions",
+        "solution": "Personalized recommendation engine + UX refresh",
+        "result": "+45% online sales",
+        "metricLabel": "Conversion growth"
+      },
+      "silence": {
+        "title": "Silence AI-SOC",
+        "problem": "High false alarm rate",
+        "solution": "AI detection and automated response",
+        "result": "-68% false positives",
+        "metricLabel": "False alarm volume"
+      }
+    }
+  },
+  "howWeWork": {
+    "title": "How We Work",
+    "subtitle": "Ultra-fast delivery pipeline — optimized for velocity.",
+    "steps": {
+      "discovery": {
+        "title": "Discovery",
+        "desc": "Requirements, stakeholders, success metrics."
+      },
+      "design": {
+        "title": "Design",
+        "desc": "UX, architecture, prototype."
+      },
+      "poc": {
+        "title": "Proof of Concept",
+        "desc": "Quick validation with measurable KPIs."
+      },
+      "build": {
+        "title": "Development",
+        "desc": "Iterative sprints, automated testing."
+      },
+      "deploy": {
+        "title": "Deployment",
+        "desc": "CI/CD, monitoring, security hardening."
+      },
+      "support": {
+        "title": "Support & Scaling",
+        "desc": "Maintenance, roadmap, continuous improvement."
+      }
+    }
+  },
+  "technologyStack": {
+    "title": "Stack technologique",
+    "subtitle": "A carefully selected production stack, built for speed, scalability, and beautiful user experiences.",
+    "categories": []
+  },
+  "backToTop": {
+    "label": "Haut de page"
+  },
+  "pricingCustom": {
+    "title": "Transparent Pricing",
+    "subtitle": "Mobile-friendly plans designed to scale with your product.",
+    "perYear": "per year (estimated)",
+    "percentMaintenance": "{percent}% annual maintenance",
+    "planEstimate": "${value}",
+    "plans": {
+      "basic": {
+        "name": "Basic",
+        "features": {
+          "fix": "Critical fixes (48h SLA)",
+          "updates": "Monthly updates",
+          "audit": "Quarterly security audits",
+          "manager": "Dedicated manager"
+        }
+      },
+      "pro": {
+        "name": "Pro",
+        "badge": "Most Popular",
+        "features": {
+          "fix": "Critical fixes (24h SLA)",
+          "updates": "10h monthly updates",
+          "audit": "Monthly security audits",
+          "manager": "Dedicated manager"
+        }
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "badge": "Best Value",
+        "features": {
+          "fix": "Critical fixes (4h SLA)",
+          "updates": "Unlimited updates + roadmap",
+          "audit": "Weekly audits + backups",
+          "manager": "Dedicated manager"
+        }
+      }
+    },
+    "calculator": {
+      "title": "Project Cost Calculator",
+      "subtitle": "Drag to see your annual maintenance",
+      "projectCost": "Project Cost:",
+      "projectValue": "${value}"
+    }
+  },
+  "badRequest": {
+    "title": "Bad Request",
+    "cta": "Return to Homepage",
+    "description": "The page you are looking for could not be found or the request was invalid."
+  },
+  "countrySelect": {
+    "title": "Select Country",
+    "subtitle": "Choose your location to continue",
+    "searchPlaceholder": "Search country...",
+    "noResults": "No countries found",
+    "continue": "Continue",
+    "comingSoon": {
+      "title": "Almost Ready!",
+      "message": "The admin panel for subscription management will be ready in",
+      "hours": "hours",
+      "notification": "We will notify you when it is available!",
+      "back": "Back",
+      "gotIt": "Got it!"
     }
   }
 }

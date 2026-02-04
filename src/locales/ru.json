@@ -1,691 +1,1090 @@
 {
-  "languageSelector": {
-    "triggerLabel": "Выбрать язык",
-    "menuLabel": "Выберите язык",
-    "searchLabel": "Поиск языков",
-    "searchPlaceholder": "Искать по названию или на родном языке",
-    "searchResults": "Результаты поиска",
-    "noMatches": "Нет языков, соответствующих запросу.",
-    "popular": "Популярные",
-    "allLanguages": "Все языки"
+  "home": {
+    "hero": {
+      "title": "Кибербезопасность больше не",
+      "titleHighlight": "сложная или дорогая",
+      "subtitle": "Создавайте безопасно. Развёртывайте уверенно."
+    },
+    "systems": {
+      "title": "Системы",
+      "cta": "Подробнее",
+      "aiSoc": {
+        "title": "AI-SOC",
+        "desc": "Управляемая система обнаружения и реагирования на угрозы, работающая на базе ИИ. Используется для предотвращения веб‑ и почтовых атак",
+        "badge": "Подписка"
+      },
+      "sithub": {
+        "title": "Sithub",
+        "desc": "Самостоятельно размещаемая альтернатива GitHub со встроенным сканированием безопасности. Все репозитории и анализ кода остаются внутри вашей сети.",
+        "badge": "Подписка"
+      },
+      "supreme": {
+        "title": "Supreme",
+        "desc": "Локальный сканер уязвимостей кода для VSCode. Анализируйте код на уязвимости, не отправляя его на внешние серверы.",
+        "badge": "Расширение"
+      }
+    },
+    "services": {
+      "title": "Разработка на заказ",
+      "subtitle": "ИИ‑агенты, интеграции и полный цикл разработки с безопасностью с первого дня.",
+      "cta": "Посмотреть услуги",
+      "cardsTitle": {
+        "agents": "Агенты",
+        "integrations": "Интеграции",
+        "delivery": "Поставка"
+      },
+      "cards": {
+        "agents": "Промышленные ИИ‑агенты с guardrails, RAG и безопасными коннекторами.",
+        "integrations": "Вендор‑нейтральные интеграции с вашим стеком, IAM и управлением данными.",
+        "delivery": "Полный цикл поставки с SLO по надежности, наблюдаемостью и обзорами безопасности."
+      }
+    },
+    "resources": {
+      "title": "Избранные статьи",
+      "subtitle": "Silence AI — одна из немногих частных компаний с разведывательными возможностями уровня государства.",
+      "viewAll": "Смотреть все статьи"
+    }
   },
   "header": {
     "nav": {
-      "main": "Главная",
-      "mail": "Почта",
-      "affiliate": "Партнёрская программа",
+      "home": "Главная",
+      "services": "Услуги",
+      "affiliate": "Партнерская программа",
+      "systems": "Системы",
       "instructions": "Инструкции",
+      "systemsAiSoc": "AI-SOC",
+      "systemsSithub": "Sithub",
+      "systemsSupreme": "Supreme",
+      "instructionsAiSoc": "AI-SOC",
+      "instructionsSupreme": "Supreme",
+      "main": "Main",
+      "mail": "Mail",
       "product": "AI-SOC",
       "secureDevelopment": "SLNC-env",
-      "developerServices": "Разработка",
-      "home": "Главная",
-      "systems": "Системы",
-      "systemsAiSoc": "AI-SOC",
+      "developerServices": "Developer Services",
       "systemsSlncEnv": "SLNC-env",
-      "services": "Услуги"
+      "instructionsSithub": "Sithub"
     },
-    "login": "Запросить демо",
     "cta": {
-      "requestSystemModal": {
-        "title": "Запросить систему",
-        "name": "Имя",
-        "email": "Корпоративный email",
-        "company": "Компания",
-        "placeholders": {
-          "name": "Иван Иванов",
-          "email": "ivan@company.com",
-          "company": "Acme Corp"
-        },
-        "submit": "Скачать",
-        "successTitle": "Запрос отправлен!",
-        "successBody": "Инструкции по загрузке системы будут отправлены на ваш email.",
-        "close": "Закрыть"
+      "contact": "Контакты",
+      "requestDemo": "Запросить демо",
+      "get": "Получить",
+      "download": "Download"
+    },
+    "andManyMore": "And many more...",
+    "login": "Request Demo"
+  },
+  "footer": {
+    "copyright": "© {year} Silence AI. Все права защищены.",
+    "contactLabel": "Контакт:",
+    "contactValue": "info@silenceai.net",
+    "addressLabel": "Адрес:",
+    "addressValue": "Алматы, Казахстан",
+    "links": {
+      "cookies": "Политика использования cookies",
+      "termsUse": "Условия использования",
+      "termsService": "Условия обслуживания",
+      "privacy": "Политика конфиденциальности",
+      "affiliateTerms": "Affiliate Terms of Service"
+    }
+  },
+  "cookie": {
+    "title": "Мы используем cookies",
+    "description": "Мы используем cookies, чтобы улучшить ваш опыт и анализировать трафик.",
+    "more": "Нажимая «Принять», вы соглашаетесь на использование cookies.",
+    "link": "Подробнее",
+    "ok": "Принять"
+  },
+  "hero": {
+    "headline": "AI‑SOC 1: кибербезопасность больше не дорогая и сложная",
+    "playgroundHeading": "ИИ‑центр операций безопасности",
+    "tooltips": {
+      "web": {
+        "title": "Защита от веб‑атак",
+        "content": "Система защищает от всех типов веб‑атак, таких как DDoS, SQLi и т.д., кроме уязвимостей бизнес‑логики."
       },
-      "policySidebar": {
-        "tableOfContents": "Оглавление"
+      "email": {
+        "title": "Защита от почтовых атак",
+        "content": "Система защищает от всех типов почтовых атак: фишинг, вредоносные вложения, опасные ссылки и т.д."
       },
-      "solution": {
-        "sectionTitle": "Наше решение",
-        "sectionSubtitle": "Готово за 4 минуты и подходит любому IT-специалисту без экспертизы в кибербезопасности. Мы обеспечиваем продвинутую визуализацию и доступную стоимость.",
-        "cards": {
-          "globalShield": {
-            "title": "Global Shield — мониторинг трафика уровня ЦРУ",
-            "description": "Наш интерактивный 3D-глобус наглядно показывает веб-трафик: запросы в секунду, активных пользователей и объём в байтах.",
-            "bullets": {
-              "one": "Простая настройка: укажите IP и домен.",
-              "two": "Получите IP агента и добавьте его в DNS.",
-              "three": "Закрытие портов для устранения экспозиции."
-            }
-          },
-          "emailProtector": {
-            "title": "Email Protector — первая AI-защита почты",
-            "description": "Самая продвинутая визуализация почтовых потоков и полный обзор всех входящих и исходящих писем.",
-            "bullets": {
-              "one": "Обнаруживает spoofing, спам, фишинг и malware.",
-              "two": "Администратор подключает нужные корпоративные аккаунты за считаные минуты.",
-              "three": "Векторная визуализация помогает отслеживать письма и аномалии во времени."
-            }
-          },
-          "securityTester": {
-            "title": "Security Tester — тестирование уязвимостей нового поколения",
-            "description": "Система выдаёт одноразовый токен (OTT) для полного аудита. Подключайтесь через браузер или расширение VS Code.",
-            "bullets": {
-              "one": "Определите область проверки и цель в CMC.",
-              "two": "Вставьте OTT и начните проверку.",
-              "three": "Получайте интеллектуальные инсайты о рисках."
-            }
-          }
-        },
-        "cmc": {
-          "title": "Централизованная консоль управления (CMC)",
-          "description": "Все три компонента управляются через единую консоль с централизованной визуализацией, удобной настройкой, мониторингом и подробными отчётами по безопасности."
+      "vulnerability": {
+        "title": "Détection des vulnérabilités",
+        "content": "Le système identifie les failles dans le code de l'application et via une interaction dynamique avec votre site web/API, y compris grâce au moteur d'intelligence"
+      }
+    },
+    "subheading": "Единая AI‑платформа кибербезопасности, которая объединяет:",
+    "bullets": {
+      "web": "Защита от веб‑атак в реальном времени",
+      "email": "Защита от почтовых атак",
+      "vulnerability": "Détection des vulnérabilités"
+    },
+    "buttons": {
+      "connect": "Подключить за 4 минуты",
+      "tour": "Voir la démo de 90 s"
+    }
+  },
+  "solution": {
+    "sectionTitle": "Наше решение",
+    "sectionSubtitle": "Готово за 4 минуты и подходит любому ИТ‑специалисту — навыки кибербезопасности не требуются. Мы предлагаем продвинутую визуализацию и доступную стоимость.",
+    "cards": {
+      "globalShield": {
+        "title": "Global Shield - supervision du trafic de niveau CIA",
+        "description": "Notre globe 3D interactif offre une visualisation impressionnante du trafic : requêtes par seconde, utilisateurs actifs et volume en octets.",
+        "bullets": {
+          "one": "Configuration simple : indiquez votre IP et votre domaine.",
+          "two": "Recevez une IP d'agent à ajouter à votre DNS.",
+          "three": "Fermeture des ports pour une surface d'exposition nulle."
         }
       },
-      "insights": {
-        "items": [
-          {
-            "title": "39 секунд",
-            "description": "Атака хакеров происходит каждые 39 секунд"
-          },
-          {
-            "title": "20 млн DDoS-атак",
-            "description": "20,5 млн DDoS-атак только за 1 квартал 2025 года"
-          },
-          {
-            "title": "Каждый день",
-            "description": "30 000 сайтов взламываются ежедневно"
-          }
-        ]
-      },
-      "floatingText": {
-        "headline": "Узнайте, как мыслят хакеры",
-        "description": "Подписывайтесь на наши ежедневные исследования реальных атак и киберугроз"
-      },
-      "modal": {
-        "title": "Активная разработка",
-        "body": "Запуск системы запланирован на 10 октября"
-      },
-      "lamp": {
-        "title": "Реальность кибератак"
-      },
-      "stickySolution": {
-        "webSecurity": {
-          "title": "Система веб-безопасности: сайт/API подключаются за 2 минуты",
-          "description": "Защита от веб-атак, таких как DDoS и SQLi. Возможность закрывать порты; хорошая практика — отключать порт 22, когда он не используется."
-        },
-        "ciaMonitoring": {
-          "title": "Мониторинг трафика уровня ЦРУ",
-          "description": "Интерактивный 3D-глобус показывает трафик по количеству запросов, пользователям и объёму с историей изменений."
-        },
-        "userGrowth": {
-          "title": "Полезные инсайты о росте пользователей",
-          "description": "Просматривайте историю изменений количества пользователей"
-        },
-        "aiEmailProtection": {
-          "title": "Первая AI-защита почты: сеть подключается за 2 минуты",
-          "description": "CMC предоставляет администраторам полный обзор всех отправленных и полученных писем с автоматической категоризацией угроз (spoofing, спам, фишинг, опасные ссылки, malware)."
-        },
-        "emailVisualization": {
-          "title": "Визуализация почтовых потоков",
-          "description": "CMC с самым продвинутым коммерческим визуализатором почты"
-        },
-        "secureWebmail": {
-          "title": "Защищённый веб-клиент",
-          "description": "Для аккаунтов, добавленных администратором, доступен защищённый веб-клиент, который выявляет spoofing, спам, фишинг и malware."
+      "emailProtector": {
+        "title": "Email Protector - première protection e-mail IA au monde",
+        "description": "Le premier système commercial de protection e-mail basé sur l'IA. Notre vue vectorielle facilite le suivi des flux au fil du temps et la détection des menaces.",
+        "bullets": {
+          "one": "Détecte spoofing, spam, phishing et malware.",
+          "two": "L'admin peut ajouter des comptes e-mail à protéger.",
+          "three": "Visualiseur de flux e-mail commercial le plus avancé."
         }
       },
-      "footer": {
-        "contactLabel": "Контакт:",
-        "contactValue": "info@silenceai.net",
-        "addressLabel": "Адрес:",
-        "addressValue": "Media City Free Zone, Al Messaned, Sharjah, ОАЭ",
-        "links": {
-          "termsUse": "Условия использования",
-          "termsService": "Условия обслуживания",
-          "affiliateTerms": "Партнёрские условия",
-          "privacy": "Политика конфиденциальности",
-          "cookies": "Политика cookie"
-        },
-        "copyright": "© {year} Silence AI. Все права защищены."
-      },
-      "secureDevelopment": {
-        "hero": {
-          "badge": "SLNC-env · Среда безопасной разработки",
-          "title": "Создавайте системы с безопасным и приватным кодом",
-          "description": "Частная среда разработки для предприятий, где код никогда не покидает вашу корпоративную сеть. При этом предлагает новейшие технологии на основе ИИ",
-          "requestSystem": "Запросить систему"
-        },
-        "components": {
-          "title": "Всё остаётся внутри",
-          "subtitle": "Три компонента, один замкнутый цикл",
-          "description": "Код, промпты и сборки никогда не покидают вашу сеть. SLNC-env сохраняет помощь ИИ, проверки и доставку приватными для облачных провайдеров, государственных команд и промышленных предприятий.",
-          "sithub": {
-            "title": "Сервер Sithub",
-            "tag": "Локальный контроль версий"
-          },
-          "llm": {
-            "title": "Сервер LLM (Qwen-Code)",
-            "tag": "Локальный интеллект"
-          },
-          "ide": {
-            "title": "IDE с локальным Copilot",
-            "tag": "Опыт уровня Cursor"
-          },
-          "gitServer": {
-            "title": "Сервер Git-репозиториев",
-            "tag": "Самостоятельный контроль версий"
-          },
-          "analyzer": {
-            "title": "Анализатор безопасности",
-            "tag": "Локальный движок сканирования кода"
-          },
-          "vulnDb": {
-            "title": "База данных уязвимостей",
-            "tag": "Загруженные патчи безопасности"
-          },
-          "staysOnPrem": "Остаётся локально. Без исходящего трафика."
-        },
-        "timeline": {
-          "title": "Почему важен изолированный и проверенный код",
-          "subtitle": "Недавние тревожные сигналы",
-          "incident": {
-            "title": "Критический инцидент — утечка кода",
-            "heading": "Утечка DeepSeek выложила исходный код и промпты в открытый интернет",
-            "description": "Держите вывод и сканирование локально. Без исходящего трафика внешних моделей. Трассы аудита по умолчанию.",
-            "seePlan": "Посмотреть план сдерживания"
-          },
-          "stuxnet": {
-            "year": "2010",
-            "attack": "Stuxnet",
-            "target": "Завод по обогащению в Натанзе",
-            "impact": "Уничтожено ~1,000 центрифуг",
-            "severity": "Критическая"
-          },
-          "blackEnergy": {
-            "year": "2015",
-            "attack": "BlackEnergy",
-            "target": "Энергосеть Украины",
-            "impact": "230 тыс. потребителей остались без света",
-            "severity": "Высокая"
-          },
-          "triton": {
-            "year": "2017",
-            "attack": "TRITON",
-            "target": "Нефтехимический завод в Саудовской Аравии",
-            "impact": "Системы безопасности отключены",
-            "severity": "Критическая"
-          },
-          "colonialPipeline": {
-            "year": "2021",
-            "attack": "Colonial Pipeline",
-            "target": "Топливный трубопровод США",
-            "impact": "6 дней паралича поставок топлива",
-            "severity": "Высокая"
-          },
-          "pdvsa": {
-            "year": "2025",
-            "attack": "PDVSA",
-            "target": "НПЗ Венесуэлы",
-            "impact": "Нарушение работы НПЗ",
-            "severity": "Средняя"
-          }
-        },
-        "analyzer": {
-          "title": "Анализатор, превосходящий CodeQL",
-          "subtitle": "Гарантия в реальном времени",
-          "features": {
-            "quality": {
-              "title": "Автоматическое качество кода",
-              "description": "Проверки структуры, стиля и лучших практик, настроенные для критически важного кода"
-            },
-            "vulnerability": {
-              "title": "Сканирование уязвимостей",
-              "description": "SQLi, XSS, обход аутентификации и небезопасные зависимости обнаруживаются мгновенно"
-            },
-            "secrets": {
-              "title": "Защита секретов",
-              "description": "Ключи, токены и учетные данные блокируются при коммите"
-            },
-            "config": {
-              "title": "Усиление конфигурации",
-              "description": "Docker/K8s, IAM и сетевые политики проверяются на эскалацию привилегий"
-            }
-          },
-          "beyondCodeQL": {
-            "title": "Находит то, что пропускают статические запросы",
-            "subtitle": "За пределами CodeQL",
-            "description": "Находит ошибки конфигурации и уязвимые пакеты быстрее, чем CodeQL, и предлагает исправления, а не только предупреждения.",
-            "points": {
-              "packages": "Знает графы пакетов и помечает рискованные зависимости за секунды.",
-              "config": "Обнаруживает дрейф конфигурации и эскалацию привилегий — за пределами статических правил.",
-              "patches": "Каждая находка сопровождается предлагаемым патчем и ответственным."
-            }
-          },
-          "visualizer": {
-            "title": "Анализатор кода в действии",
-            "subtitle": "Визуализатор",
-            "description": "Четкие снимки недавних сканирований, красиво отображаемые в локальной консоли.",
-            "privateWorkspace": "Только приватное рабочее пространство",
-            "andManyMore": "И многое другое...",
-            "shots": {
-              "scanOverview": {
-                "title": "Обзор сканирования",
-                "description": "Просмотр проблем, сгруппированных по серьезности, до того как код покинет вашу сеть."
-              },
-              "misconfigurations": {
-                "title": "Обнаружение ошибок конфигурации",
-                "description": "Наш анализатор кода на основе ИИ находит даже ошибки конфигурации в коде."
-              },
-              "inlineDiffs": {
-                "title": "Обнаружение уязвимых пакетов",
-                "description": "Обнаруживайте уязвимые версии пакетов вместе с версией, в которой уязвимость исправлена."
-              }
-            }
-          }
-        },
-        "industries": {
-          "title": "Создано для регулируемых и высокоэффективных секторов",
-          "subtitle": "Где мы развертываем",
-          "oilGas": {
-            "title": "Нефть и Газ",
-            "description": "Бурение, переработка, управление трубопроводами"
-          },
-          "energy": {
-            "title": "Энергетика",
-            "description": "Сети, распределение и EMS"
-          },
-          "nuclear": {
-            "title": "Ядерная энергетика",
-            "description": "Управление реакторами и безопасность"
-          },
-          "manufacturing": {
-            "title": "Производство",
-            "description": "ICS, OT и робототехника"
-          },
-          "government": {
-            "title": "Правительство",
-            "description": "Министерства, оборона, критические агентства"
-          }
-        },
-        "pricing": {
-          "subtitle": "Простое и прозрачное ценообразование",
-          "title": "Выберите план",
-          "limitedOffer": "Ограниченное по времени предложение",
-          "priceIncreaseNotice": "Закрепите текущие цены! Через 6 месяцев цены вырастут на 30%.",
-          "monthlyPlan": "Ежемесячный план",
-          "monthlyDesc": "Гибкая помесячная оплата",
-          "month": "месяц",
-          "features": {
-            "fullAccess": "Полный доступ к платформе",
-            "support": "Приоритетная поддержка",
-            "cancelAnytime": "Отмена в любое время",
-            "priceLock": "Цена зафиксирована на 12 месяцев"
-          },
-          "getStarted": "Начать",
-          "doubleSavings": "2x ЭКОНОМИЯ",
-          "yearlyPlan": "Годовой план",
-          "yearlyDesc": "Экономьте 33% при годовой оплате",
-          "billedAnnually": "Оплата ежегодно"
+      "securityTester": {
+        "title": "Security Tester - tests de vulnérabilités nouvelle génération",
+        "description": "Notre système fournit un One-Time-Token (OTT) pour des audits complets. Connectez-vous via notre navigateur ou l'extension VS Code.",
+        "bullets": {
+          "one": "Définissez le périmètre et la cible dans la CMC.",
+          "two": "Collez l'OTT et lancez le contrôle.",
+          "three": "Informations sur les risques pilotées par l'intelligence."
         }
+      }
+    },
+    "cmc": {
+      "title": "Console de gestion centralisée (CMC)",
+      "description": "Les trois composants sont pilotés via une console unifiée offrant visualisation centralisée, configuration et suivi aisés et rapports de sécurité complets."
+    }
+  },
+  "stickySolution": {
+    "webSecurity": {
+      "title": "Система веб‑безопасности: сайт/API подключаются за 2 минуты",
+      "description": "Защита от веб‑атак, таких как DDoS и SQLi. Возможность закрывать порты; хорошая практика — отключать порт 22, когда он не нужен."
+    },
+    "ciaMonitoring": {
+      "title": "Мониторинг трафика уровня ЦРУ",
+      "description": "Интерактивный 3D‑глобус показывает трафик по числу запросов, пользователям и объёму с историей изменений."
+    },
+    "userGrowth": {
+      "title": "Полезные инсайты по росту пользователей",
+      "description": "Просматривайте историю изменений количества пользователей"
+    },
+    "aiEmailProtection": {
+      "title": "Первая AI‑защита почты: сеть подключается за 2 минуты",
+      "description": "CMC предоставляет администраторам полный обзор всех отправленных и полученных писем с автоматической классификацией угроз (спуфинг, спам, фишинг, опасные ссылки, вредоносные файлы)."
+    },
+    "emailVisualization": {
+      "title": "Визуализация почтовых потоков",
+      "description": "CMC с самым продвинутым коммерческим визуализатором почты"
+    },
+    "secureWebmail": {
+      "title": "Безопасный веб‑клиент",
+      "description": "Для аккаунтов, добавленных администратором, доступен безопасный веб‑клиент, который выявляет спуфинг, спам, фишинг и вредоносные файлы."
+    }
+  },
+  "insights": {
+    "items": {
+      "0": {
+        "title": "39 секунд",
+        "description": "Хакерская атака происходит каждые 39 секунд"
       },
-      "notFound": {
-        "title": "Страница не найдена",
-        "description": "Мы искали везде, но не смогли найти эту страницу.",
-        "cta": "Вернуться на главную"
+      "1": {
+        "title": "20 миллионов DDoS‑атак",
+        "description": "Только за Q1 2025 произошло 20,5 млн DDoS‑атак"
       },
-      "heroSection": {
-        "badge": "Готовый к продакшену AI и ПО",
-        "title": "Кастомная разработка AI и ПО",
-        "description": "Мы создаем готовых к работе AI-агентов и кастомное программное обеспечение.",
-        "country": "Казахстан",
-        "market": "мировой рынок",
-        "startProject": "Начать проект",
-        "liveDemo": "Живое демо — AI Агент",
-        "live": "Live",
-        "aiAgent": "AI Агент v2.1",
-        "processing": "Обработка запросов...",
-        "active": "Активен",
-        "userMessage": "Проанализировать тренды данных клиентов",
-        "aiResponse": "Анализирую",
-        "tasks": {
-          "dataCollection": "Сбор данных",
-          "aiAnalysis": "AI Анализ",
-          "reportGeneration": "Генерация отчета"
-        },
-        "stats": {
-          "tasks": "Задачи",
-          "success": "Успех",
-          "speed": "Скорость"
-        }
-      },
-      "whyChooseUs": {
-        "badge": "Разработка, ориентированная на результат",
-        "title": "Почему выбирают нас",
-        "subtitle": "Нам доверяют команды из",
-        "subtitleHighlight": "организаций с миллиардными оборотами",
-        "subtitleTail": "— и доставляем со скоростью стартапов.",
-        "learnMore": "Узнать больше",
-        "logos": {
-          "kmg": "KazMunayGas",
-          "nak": "Nur Astana Kurylys"
-        },
-        "features": {
-          "fast": {
-            "title": "Быстрая доставка с качеством Enterprise",
-            "description": "Быстрые, итеративные циклы доставки, соответствующие надежности и требованиям корпоративного уровня.",
-            "pill": "Скорость + Качество"
-          },
-          "ai": {
-            "title": "AI-first разработка продуктов",
-            "description": "От прототипов до AI-агентов в продакшене — мы проектируем, обучаем и внедряем модели, которые решают реальные бизнес-задачи.",
-            "pill": "AI Инжиниринг"
-          },
-          "local": {
-            "title": "Локальная экспертиза, глобальный охват",
-            "description": "Глубокое знание рынка Казахстана и законодательства в сочетании с лучшими международными практиками.",
-            "pill": "KZ + Global"
-          }
-        }
-      },
-      "servicesBlock": {
-        "badge": "Что мы предлагаем",
-        "title": "Наши услуги",
-        "description": "Премиальный UI, сильная инженерия и быстрая доставка — всё, что нужно для запуска продукта, который выглядит и работает как топ-бренд.",
-        "learnMore": "Узнать больше",
-        "learnMoreAria": "Узнать больше об этой услуге",
-        "services": {
-          "aiAgents": {
-            "title": "AI Агенты",
-            "description": "Кастомные разговорные и автономные агенты для поддержки, операций и аналитики.",
-            "tag": "Автоматизация"
-          },
-          "customSoftware": {
-            "title": "Кастомное ПО",
-            "description": "Веб и десктоп приложения полного цикла, адаптированные под ваши процессы.",
-            "tag": "Разработка"
-          },
-          "cybersecurity": {
-            "title": "Кибербезопасность",
-            "description": "Аудиты, пентесты и непрерывный мониторинг.",
-            "tag": "Защита"
-          },
-          "backend": {
-            "title": "Backend / DevOps",
-            "description": "Масштабируемые API, CI/CD пайплайны и облачная инфраструктура.",
-            "tag": "Масштабирование"
-          },
-          "mobile": {
-            "title": "Мобильная разработка",
-            "description": "Кроссплатформенные приложения с нативной производительностью и отточенным UX.",
-            "tag": "Релиз"
-          }
-        }
-      },
-      "caseStudies": {
-        "badge": "Доказанное влияние",
-        "title": "Кейсы",
-        "subtitle": "Мы не просто выпускаем фичи. Мы доставляем результаты.",
-        "problem": "Проблема:",
-        "solution": "Решение:",
-        "liveImpact": "Живой результат",
-        "before": "До",
-        "after": "После",
-        "buildCta": "Создать что-то похожее →",
-        "caseStudy": "Кейс",
-        "items": {
-          "nak": {
-            "title": "NAK — AI управления командой",
-            "problem": "Ручное распределение ресурсов",
-            "solution": "Агент планирования на AI",
-            "result": "+32% к продуктивности",
-            "metricLabel": "Индекс выработки команды"
-          },
-          "chic": {
-            "title": "Chic Flowers — e‑commerce",
-            "problem": "Низкая онлайн-конверсия",
-            "solution": "Персонализированные рекомендации + обновление UX",
-            "result": "+45% к онлайн-продажам",
-            "metricLabel": "Рост конверсии"
-          },
-          "silence": {
-            "title": "Silence AI-SOC",
-            "problem": "Высокий шум оповещений",
-            "solution": "AI детекция и авто-реагирование",
-            "result": "−68% ложных срабатываний",
-            "metricLabel": "Объем ложных тревог"
-          }
-        }
-      },
-      "howWeWork": {
-        "title": "Как мы работаем",
-        "subtitle": "Сверхбыстрый пайплайн доставки — оптимизирован для скорости.",
-        "steps": {
-          "discovery": {
-            "title": "Исследование",
-            "desc": "Требования, стейкхолдеры, метрики успеха."
-          },
-          "design": {
-            "title": "Дизайн",
-            "desc": "UX, архитектура, прототип."
-          },
-          "poc": {
-            "title": "PoC",
-            "desc": "Быстрая валидация с измеримыми KPI."
-          },
-          "build": {
-            "title": "Разработка",
-            "desc": "Итеративные спринты, автотесты."
-          },
-          "deploy": {
-            "title": "Деплой",
-            "desc": "CI/CD, мониторинг, усиление безопасности."
-          },
-          "support": {
-            "title": "Поддержка и развитие",
-            "desc": "Обслуживание, roadmap, непрерывное улучшение."
-          }
-        }
-      },
-      "technologyStack": {
-        "title": "Технологический стек",
-        "subtitle": "Тщательно подобранный стек уровня production, спроектированный для скорости, масштабируемости и прекрасного пользовательского опыта."
-      },
-      "backToTop": {
-        "label": "Наверх"
-      },
-      "pricing": {
-        "title": "Цены",
-        "tooltips": {
-          "cmcGlobal": {
-            "title": "CMC с глобальным мониторингом трафика",
-            "content": "Централизованная консоль (CMC) бесшовно интегрируется с другими системами безопасности и использует тот же домен и интерфейс, что Global Shield и Security Tester. Здесь вы можете блокировать страны, закрывать порты и управлять безопасностью в масштабе."
-          },
-          "countryBlacklisting": {
-            "title": "Блокировка по стране",
-            "content": "Блокируйте весь трафик, исходящий из выбранной страны."
-          },
-          "portManagement": {
-            "title": "Управление портами",
-            "content": "Закрывайте неиспользуемые порты, чтобы уменьшить поверхность атаки (например, отключите 22-й порт, если SSH не нужен)."
-          },
-          "cmcEmail": {
-            "title": "CMC с продвинутой визуализацией почты",
-            "content": "CMC интегрирована с остальными системами безопасности и позволяет мониторить почтовые потоки и просматривать письма всех добавленных корпоративных пользователей."
-          },
-          "dynamicVulnerability": {
-            "title": "Динамический поиск уязвимостей",
-            "content": "Находит уязвимости при взаимодействии с вашим сайтом, включая поиск через интеллект-систему."
-          },
-          "codeAnalyzer": {
-            "title": "Анализатор кода",
-            "content": "Находит проблемы безопасности прямо в кодовой базе через плагин VS Code, помогая устранить их до релиза."
-          },
-          "intelligenceReport": {
-            "title": "Отчёт разведки",
-            "content": "Даёт детальные сведения о цели: открытые порты, сервисы, поддомены и другую чувствительную информацию, требующую действий."
-          },
-          "fullVulnerability": {
-            "title": "Полная проверка уязвимостей",
-            "content": "Полная проверка включает динамическое сканирование и анализ кодовой базы."
-          }
-        },
-        "plans": {
-          "globalShield": {
-            "title": "Веб-безопасность и управление трафиком",
-            "price": "$0.06/GB",
-            "description": "Без ограничений\nБез доплат",
-            "button": "Защитить веб-приложения и API",
-            "features": {
-              "webProtection": "Защита от всех типов веб-атак, кроме эксплуатации логики бизнеса",
-              "ddosProtection": "Защита от DDoS в реальном времени",
-              "cmc": "CMC с глобальным мониторингом трафика",
-              "country": "Блокировка по странам",
-              "port": "Закрытие портов"
-            }
-          },
-          "emailProtector": {
-            "title": "Безопасность и визуализация почты",
-            "price": "$10/месяц/аккаунт",
-            "description": "До 10 писем в день\nДополнительно: $0.035 за письмо",
-            "button": "Защитить почту",
-            "features": {
-              "cmcEmail": "CMC с продвинутым визуализатором почтовых потоков",
-              "visibility": "Полная видимость входящих и исходящих писем всех аккаунтов в CMC с автокатегоризацией угроз",
-              "webClient": "Защищённый веб-клиент",
-              "phishing": "Защита от фишинга",
-              "malware": "Проверка вредоносных вложений",
-              "links": "Обнаружение опасных ссылок",
-              "spam": "Фильтрация спама",
-              "fakeSender": "Защита от поддельных отправителей"
-            }
-          },
-          "securityTester": {
-            "title": "Поиск уязвимостей",
-            "price": "$25/месяц",
-            "description": "До 50 ПОЛНЫХ проверок в месяц\nДополнительные проверки: $0.5 каждая",
-            "button": "Начать тестирование",
-            "features": {
-              "dynamic": "Динамический поиск уязвимостей",
-              "codeAnalyzer": "Анализатор кода",
-              "reports": "Понятные отчёты о безопасности",
-              "intelligence": "Отчёт разведки"
-            }
-          }
-        },
-        "subtitle": "Мобильные тарифы, которые растут вместе с вашим продуктом.",
-        "percentMaintenance": "{percent}% ежегодного сопровождения",
-        "planEstimate": "${value}",
-        "perYear": "в год (оценка)"
+      "2": {
+        "title": "Каждый день",
+        "description": "Ежедневно взламывают 30 000 сайтов"
       }
     }
   },
+  "floatingText": {
+    "headline": "Узнайте, как мыслят хакеры",
+    "description": "Следите за нашими ежедневными исследованиями реальных атак и киберугроз"
+  },
+  "lamp": {
+    "title": "Реальность кибератак"
+  },
+  "pricing": {
+    "title": "Цены",
+    "subtitle": "Планы, готовые к росту вашего продукта.",
+    "percentMaintenance": "{percent}% годовой поддержки",
+    "calculator": {
+      "subtitle": "Передвигайте, чтобы увидеть ежегодную поддержку"
+    },
+    "tooltips": {
+      "cmcGlobal": {
+        "title": "CMC с глобальным мониторингом трафика",
+        "content": "Централизованная консоль управления (CMC) бесшовно интегрируется с другими системами безопасности и использует тот же домен и интерфейс, что и Global Shield и Security Tester. Здесь можно блокировать страны, закрывать порты и управлять безопасностью на масштабе."
+      },
+      "countryBlacklisting": {
+        "title": "Блокировка стран",
+        "content": "Блокируйте весь трафик, исходящий из выбранной страны."
+      },
+      "portManagement": {
+        "title": "Управление портами",
+        "content": "Закрывайте неиспользуемые порты, чтобы уменьшить поверхность атаки (например, отключайте порт 22, если SSH не нужен)."
+      },
+      "cmcEmail": {
+        "title": "CMC с продвинутой визуализацией почты",
+        "content": "CMC интегрирована с другими системами безопасности и позволяет мониторить почтовые потоки и просматривать письма всех добавленных корпоративных пользователей."
+      },
+      "dynamicVulnerability": {
+        "title": "Recherche dynamique de vulnérabilités",
+        "content": "Détecte les vulnérabilités en interagissant avec votre site web, y compris la méthode de recherche de vulnérabilités via le système d'intelligence."
+      },
+      "codeAnalyzer": {
+        "title": "Analyseur de code",
+        "content": "Identifie les problèmes de sécurité directement dans votre base de code via un plugin VS Code, vous aidant à résoudre les problèmes avant le déploiement."
+      },
+      "intelligenceReport": {
+        "title": "Rapport de renseignement",
+        "content": "Génère des informations détaillées sur votre cible, y compris les ports ouverts, les services en cours d'exécution, les sous-domaines et d'autres informations sensibles pouvant nécessiter une action."
+      },
+      "fullVulnerability": {
+        "title": "Vérification COMPLÈTE de vulnérabilités",
+        "content": "Une vérification COMPLÈTE de vulnérabilités comprend à la fois une analyse dynamique des vulnérabilités et une analyse des vulnérabilités du code source."
+      }
+    },
+    "planEstimate": "${value}",
+    "plans": {
+      "globalShield": {
+        "title": "Sécurité Web et Gestion du Trafic",
+        "price": "$0.06/Go",
+        "description": "Aucune limite\nPas de frais supplémentaires",
+        "button": "Sécuriser l'application web et les API",
+        "features": {
+          "webProtection": "Protection contre tous les types d'attaques web, sauf l'exploitation de vulnérabilités de logique métier",
+          "ddosProtection": "Protection DDoS en temps réel",
+          "cmc": "CMC avec système de surveillance globale du trafic",
+          "country": "Fonctionnalité de liste noire de pays",
+          "port": "Fonctionnalité de fermeture de ports"
+        }
+      },
+      "emailProtector": {
+        "title": "Sécurité des E-mails et Visualisation",
+        "price": "$10/mois/compte",
+        "description": "Jusqu'à 10 e-mails par jour\nE-mails supplémentaires: $0.035 chaque e-mail",
+        "button": "Sécuriser l'E-mail",
+        "features": {
+          "cmcEmail": "CMC avec le visualiseur de flux d'e-mails le plus avancé",
+          "visibility": "Visibilité complète des e-mails envoyés et reçus de tous les comptes e-mail, dans la CMC, avec catégorisation automatique des menaces",
+          "webClient": "Client WebMail sécurisé",
+          "phishing": "Protection contre le phishing",
+          "malware": "Analyse des pièces jointes malveillantes",
+          "links": "Détection de liens dangereux",
+          "spam": "Filtrage anti-spam",
+          "fakeSender": "Protection contre les expéditeurs falsifiés"
+        }
+      },
+      "securityTester": {
+        "title": "Recherche de Vulnérabilités",
+        "price": "$25/mois",
+        "description": "Jusqu'à 50 vérifications COMPLÈTES de vulnérabilités par mois\nVérifications COMPLÈTES supplémentaires: $0.5 chacune",
+        "button": "Commencer les tests",
+        "features": {
+          "dynamic": "Recherche dynamique de vulnérabilités",
+          "codeAnalyzer": "Analyseur de code",
+          "reports": "Rapports d'évaluation de sécurité faciles à comprendre",
+          "intelligence": "Rapport de renseignement"
+        }
+      }
+    },
+    "perYear": "par an (est.)"
+  },
+  "pricingCustom": {
+    "title": "Прозрачные цены",
+    "perYear": "в год (оценочно)",
+    "plans": {
+      "basic": {
+        "name": "Базовый",
+        "features": {
+          "fix": "Критические исправления (SLA 48ч)",
+          "updates": "Ежемесячные обновления",
+          "audit": "Квартальные аудиты безопасности",
+          "manager": "Выделенный менеджер"
+        }
+      },
+      "pro": {
+        "name": "Про",
+        "badge": "Самый популярный",
+        "features": {
+          "fix": "Критические исправления (SLA 24ч)",
+          "updates": "10 ч обновлений в месяц",
+          "audit": "Ежемесячные аудиты безопасности",
+          "manager": "Выделенный менеджер"
+        }
+      },
+      "enterprise": {
+        "name": "Корпоративный",
+        "badge": "Лучшая ценность",
+        "features": {
+          "fix": "Критические исправления (SLA 4ч)",
+          "updates": "Безлимитные обновления + roadmap",
+          "audit": "Еженедельные аудиты + бэкапы",
+          "manager": "Выделенный менеджер"
+        }
+      }
+    },
+    "calculator": {
+      "title": "Калькулятор стоимости проекта",
+      "projectCost": "Стоимость проекта:",
+      "subtitle": "Faites glisser pour voir votre maintenance annuelle",
+      "projectValue": "${value}"
+    },
+    "subtitle": "Plans adaptés aux mobiles conçus pour évoluer avec votre produit.",
+    "percentMaintenance": "{percent}% maintenance annuelle",
+    "planEstimate": "${value}"
+  },
+  "requestDemoModal": {
+    "successTitle": "Спасибо!",
+    "successBody": "Мы скоро свяжемся с вами, чтобы назначить демо.",
+    "close": "Закрыть",
+    "title": "Запросить демо",
+    "name": "Имя",
+    "email": "Email",
+    "company": "Компания",
+    "submit": "Отправить запрос",
+    "placeholders": {
+      "name": "Ваше имя",
+      "email": "you@email.com",
+      "company": "Ваша компания"
+    }
+  },
+  "affiliate": {
+    "hero": {
+      "tagline": "Присоединяйтесь к партнёрской программе Silence AI",
+      "title": "Превращайте приглашения в доход.",
+      "cta": "Вступить в партнёрскую программу",
+      "snapshot": {
+        "label": "Снимок в реальном времени",
+        "caption": "Обновления каждые 60 секунд, подтверждённые выплаты синхронизируются мгновенно."
+      },
+      "earnings": "$2,940.00",
+      "growth": "+18% к прошлому месяцу",
+      "metric": {
+        "conversion": "Активации",
+        "conversionChange": "24 новых команды в этом месяце",
+        "pending": "Ожидаемые выплаты",
+        "pendingChange": "Выплаты обрабатываются в течение 2 рабочих дней"
+      },
+      "graph": {
+        "label": "Тренд дохода",
+        "title": "Рост реферальной выручки",
+        "window": "Последние 30 дней",
+        "label0": "Неделя 1",
+        "label1": "Неделя 2",
+        "label2": "Неделя 3",
+        "label3": "Неделя 4",
+        "label4": "Неделя 5",
+        "label5": "Неделя 6",
+        "label6": "Сегодня"
+      }
+    },
+    "howItWorks": {
+      "title": "Как это работает",
+      "create": {
+        "title": "Создайте свою ссылку",
+        "description": "Сгенерируйте уникальную реферальную ссылку или промокод в панели Silence AI."
+      },
+      "share": {
+        "title": "Поделитесь",
+        "description": "Приглашайте команды через email, LinkedIn и сообщества. Отслеживайте эффективность в реальном времени."
+      },
+      "earn": {
+        "title": "Зарабатывайте",
+        "description": "Получайте комиссию сразу после активации защиты Silence AI у ваших клиентов."
+      }
+    },
+    "balanceRewards": {
+      "lampTitle": "Вознаграждения по балансу"
+    },
+    "commission": {
+      "highlight": {
+        "label": "Почему партнёрам это нравится"
+      },
+      "reward": {
+        "title": "10% вознаграждение за каждое пополнение баланса",
+        "description": "Когда приглашённая команда пополняет кошелёк Silence AI, 10% чистой суммы мгновенно начисляются вам."
+      },
+      "settlement": {
+        "title": "Мгновенное зачисление в реестр",
+        "description": "Вознаграждение поступает на партнёрский баланс в течение минуты после завершения транзакции — без ручного одобрения."
+      },
+      "withdrawal": {
+        "title": "Выплаты за 2 рабочих дня",
+        "description": "Заявки на вывод обрабатываются автоматически и поступают на ваш счёт в течение двух рабочих дней."
+      },
+      "sample": {
+        "label": "Примеры пополнений",
+        "caption": "Партнёрские доходы растут с каждым пополнением — без сброса уровней и без привязки к продуктам.",
+        "topup": "$250 пополнение → $25 вознаграждение",
+        "topupHigher": "$1,000 пополнение → $100 вознаграждение"
+      },
+      "note": "Комиссия рассчитывается от чистой суммы пополнения после комиссии платёжной системы.",
+      "heading": "Récompenses de solde"
+    },
+    "faq": {
+      "title": "Вопросы и ответы",
+      "payments": {
+        "question": "Как я получаю выплаты?",
+        "answer": "Добавьте номер своей карты VISA или Mastercard в профиле. Выплаты можно выводить прямо на указанную карту."
+      },
+      "discounts": {
+        "question": "Получают ли приглашённые клиенты скидки?",
+        "answer": "Нет. Приглашённые клиенты не получают скидок. Комиссию получает только партнёр."
+      },
+      "statistics": {
+        "question": "Когда я увижу статистику по рефералам?",
+        "answer": "Как только пользователь зарегистрируется по вашему промокоду или ссылке, его email появится в панели вместе с соответствующим вознаграждением."
+      }
+    },
+    "termsAff": {
+      "label": "Affiliate Program",
+      "title": "Affiliate Terms of Service",
+      "gitServer": {
+        "title": "Serveur de dépôts Git",
+        "tag": "Gestion de versions auto-hébergée"
+      },
+      "analyzer": {
+        "title": "Analyseur de sécurité",
+        "tag": "Moteur local d’analyse de code"
+      },
+      "vulnDb": {
+        "title": "Base de vulnérabilités",
+        "tag": "Correctifs de sécurité téléchargés"
+      },
+      "notice": "This policy is available only in English",
+      "intro": "These terms describe how rewards are issued and paid to partners participating in the Silence AI affiliate program.",
+      "meta": {
+        "effective": "Effective date: 10 November 2024",
+        "lastUpdated": "Last updated: 10 November 2024"
+      },
+      "sections": {
+        "overview": {
+          "title": "1. Program Overview",
+          "body1": "1.1 Agreement Scope: These Affiliate Terms of Service (\"Terms\") govern your participation in the Silence AI affiliate program operated by Silence AI LLC (\"Silence AI,\" \"we,\" \"us,\" or \"our\"). These Terms apply to you, the individual or entity enrolling as an affiliate partner (\"you\" or \"your\"), and, where applicable, your employer, principal, or organization if you act on their behalf.",
+          "body2": "1.2 Program Summary: Under this program, qualified partners earn commission-based rewards when referred customers purchase or top up the AI-SOC 1 product. Participation in the affiliate program also requires compliance with the general Silence AI Terms of Service."
+        },
+        "eligibility": {
+          "title": "2. Partner Eligibility",
+          "item1": "You must maintain an active Silence AI affiliate account with accurate business and payment details.",
+          "item2": "Referrals must complete registration through your issued link or promo code.",
+          "item3": "Accounts found to be fraudulent, self-referred, or in breach of applicable law are not eligible for rewards."
+        },
+        "commission": {
+          "title": "3. Commission Structure",
+          "body1": "You earn a 10% reward on every balance top-up completed by an account registered through your invitation.",
+          "body2": "Commission is calculated from the net top-up amount after payment processing fees are deducted."
+        },
+        "rewardPosting": {
+          "title": "4. Reward Posting",
+          "body1": "Rewards post to your partner balance within one minute after the transaction successfully clears. There is no manual approval queue.",
+          "body2": "Notifications appear in your affiliate dashboard alongside the customer identifier and top-up amount."
+        },
+        "withdrawals": {
+          "title": "5. Withdrawals",
+          "body1": "Withdrawal requests are processed within two business days and paid out using the settlement method on file.",
+          "body2": "Minimum withdrawal thresholds and supported payout networks are published inside the affiliate dashboard."
+        },
+        "productScope": {
+          "title": "6. Product Scope",
+          "body1": "Rewards are only provided for the AI-SOC 1 product. Other Silence AI services are excluded from the affiliate program unless explicitly stated otherwise in writing.",
+          "body2": "If additional products become eligible, Silence AI will publish an updated list inside these terms."
+        },
+        "compliance": {
+          "title": "7. Partner Conduct & Compliance",
+          "item1": "Partners must represent Silence AI accurately and avoid misleading claims about features or pricing.",
+          "item2": "Marketing communications must comply with applicable anti-spam, privacy, and advertising regulations.",
+          "item3": "Silence AI may suspend or terminate accounts that violate these obligations or harm the brand."
+        },
+        "changes": {
+          "title": "8. Changes & Contact",
+          "body1": "Silence AI may update these affiliate terms to reflect changes in the program or applicable law. Updated versions take effect upon publication on this page.",
+          "body2": "Questions about the affiliate program can be sent to info@silenceai.net."
+        }
+      }
+    }
+  },
+  "heroSection": {
+    "badge": "Готовые к продакшену AI и софт",
+    "title": "Индивидуальная разработка AI и ПО",
+    "description": "Мы создаём продакшен‑готовых AI‑агентов и кастомное ПО. Работаем из {country} для {market}.",
+    "country": "Казахстан",
+    "market": "мирового рынка",
+    "startProject": "Начать проект",
+    "liveDemo": "Демо в реальном времени — AI‑агент",
+    "live": "Онлайн",
+    "aiAgent": "AI‑агент v2.1",
+    "processing": "Обработка запросов...",
+    "active": "Активен",
+    "userMessage": "Проанализируй тренды по данным клиентов",
+    "aiResponse": "Анализирую",
+    "tasks": {
+      "dataCollection": "Сбор данных",
+      "aiAnalysis": "AI‑анализ",
+      "reportGeneration": "Формирование отчёта"
+    },
+    "stats": {
+      "tasks": "Задачи",
+      "success": "Успех",
+      "speed": "Скорость"
+    }
+  },
+  "whyChooseUs": {
+    "badge": "Инженерия, ориентированная на результат",
+    "title": "Почему выбирают нас",
+    "subtitle": "Нам доверяют команды из",
+    "subtitleHighlight": "организаций с миллиардными оборотами",
+    "subtitleTail": "— и мы поставляем со скоростью стартапа.",
+    "learnMore": "Подробнее",
+    "features": {
+      "fast": {
+        "title": "Быстрая поставка с корпоративным качеством",
+        "description": "Быстрые итерации, соответствующие корпоративной надежности и требованиям комплаенса.",
+        "pill": "Скорость + качество"
+      },
+      "ai": {
+        "title": "Инженерия продукта с упором на AI",
+        "description": "От прототипов до продакшн‑агентов — мы проектируем, обучаем и внедряем модели, решающие реальные бизнес‑задачи.",
+        "pill": "AI‑инженерия"
+      },
+      "local": {
+        "title": "Локальная экспертиза, глобальный масштаб",
+        "description": "Глубокое знание рынка и регулирования Казахстана в сочетании с международными практиками.",
+        "pill": "KZ + глобально"
+      }
+    },
+    "logos": {
+      "kmg": "КазМунайГаз",
+      "nak": "Нур Астана Курылыс"
+    }
+  },
+  "servicesBlock": {
+    "badge": "Что мы предлагаем",
+    "title": "Наши услуги",
+    "description": "Премиальный UI, сильная инженерия и быстрый релиз — всё, что нужно для продукта уровня топ‑бренда.",
+    "learnMore": "Подробнее",
+    "learnMoreAria": "Подробнее об услуге",
+    "services": {
+      "aiAgents": {
+        "title": "AI‑агенты",
+        "description": "Индивидуальные диалоговые и автономные агенты для поддержки, операционных задач и аналитики.",
+        "tag": "Автоматизация"
+      },
+      "customSoftware": {
+        "title": "Кастомное ПО",
+        "description": "Полный цикл веб‑ и десктоп‑приложений под ваши процессы.",
+        "tag": "Разработка"
+      },
+      "cybersecurity": {
+        "title": "Кибербезопасность",
+        "description": "Аудиты, пентесты и непрерывный мониторинг.",
+        "tag": "Защита"
+      },
+      "backend": {
+        "title": "Backend / DevOps",
+        "description": "Масштабируемые API, CI/CD‑пайплайны и облачная инфраструктура.",
+        "tag": "Масштаб"
+      },
+      "mobile": {
+        "title": "Мобильные приложения",
+        "description": "Кроссплатформенные приложения с нативной производительностью и отточенным UX.",
+        "tag": "Релиз"
+      }
+    }
+  },
+  "caseStudies": {
+    "badge": "Подтверждённый эффект",
+    "title": "Кейсы",
+    "subtitle": "Мы не просто поставляем фичи. Мы поставляем результат.",
+    "caseStudy": "Кейс",
+    "problem": "Проблема:",
+    "solution": "Решение:",
+    "liveImpact": "Живой эффект",
+    "before": "До",
+    "after": "После",
+    "buildCta": "Сделать похожее →",
+    "items": {
+      "nak": {
+        "title": "NAK — AI‑управление командами",
+        "problem": "Ручное распределение ресурсов",
+        "solution": "AI‑агент планирования",
+        "result": "+32% продуктивности",
+        "metricLabel": "Индекс производительности команды"
+      },
+      "chic": {
+        "title": "Chic Flowers — eCommerce",
+        "problem": "Низкие онлайн‑конверсии",
+        "solution": "Персонализированный рекомендационный движок + обновление UX",
+        "result": "+45% онлайн‑продаж",
+        "metricLabel": "Рост конверсии"
+      },
+      "silence": {
+        "title": "Silence AI‑SOC",
+        "problem": "Высокий уровень ложных тревог",
+        "solution": "AI‑детектирование и автоматический ответ",
+        "result": "−68% ложных срабатываний",
+        "metricLabel": "Объём ложных тревог"
+      }
+    }
+  },
+  "howWeWork": {
+    "title": "Как мы работаем",
+    "steps": {
+      "discovery": {
+        "title": "Исследование",
+        "desc": "Требования, стейкхолдеры, метрики успеха."
+      },
+      "design": {
+        "title": "Дизайн",
+        "desc": "UX, архитектура, прототип."
+      },
+      "poc": {
+        "title": "Proof of Concept",
+        "desc": "Быстрая проверка с измеримыми KPI."
+      },
+      "build": {
+        "title": "Разработка",
+        "desc": "Итеративные спринты, автоматические тесты."
+      },
+      "deploy": {
+        "title": "Запуск",
+        "desc": "CI/CD, мониторинг, усиление безопасности."
+      },
+      "support": {
+        "title": "Поддержка и масштабирование",
+        "desc": "Поддержка, roadmap, непрерывное улучшение."
+      }
+    },
+    "subtitle": "Pipeline de livraison ultra-rapide — optimisé pour la vélocité."
+  },
+  "technologyStack": {
+    "title": "Технологический стек",
+    "subtitle": "Une stack de production soigneusement sélectionnée, conçue pour la vitesse, l'évolutivité et de belles expériences utilisateur."
+  },
+  "secureDevelopment": {
+    "hero": {
+      "badge": "Sithub · Самостоятельно размещаемая платформа разработки",
+      "title": "GitHub на вашем сервере. Код не покидает вашу сеть.",
+      "description": "Самостоятельно размещаемая альтернатива GitHub со встроенным сканированием безопасности. Вся функциональность остаётся внутри вашей инфраструктуры — репозитории, анализатор кода и отчёты об уязвимостях работают локально.",
+      "requestSystem": "Demander le système"
+    },
+    "pricing": {
+      "subtitle": "Простое и прозрачное ценообразование",
+      "title": "Выберите план",
+      "limitedOffer": "Ограниченное предложение",
+      "priceIncreaseNotice": "Зафиксируйте текущие цены! Через 6 месяцев цены вырастут на 30%",
+      "monthlyPlan": "Ежемесячно",
+      "monthlyDesc": "Гибкая оплата",
+      "month": "месяц",
+      "yearlyPlan": "Годовой",
+      "yearlyDesc": "Лучшая цена",
+      "billedAnnually": "Оплата раз в год на",
+      "doubleSavings": "2× ЭКОНОМИЯ",
+      "getStarted": "Начать",
+      "features": {
+        "fullAccess": "Полный доступ к платформе",
+        "support": "Приоритетная поддержка",
+        "cancelAnytime": "Отмена в любой момент",
+        "priceLock": "Цена фиксируется на 12 месяцев"
+      }
+    },
+    "components": {
+      "subtitle": "Три ключевых компонента, полностью изолированы",
+      "title": "Всё работает на вашей инфраструктуре",
+      "description": "Ваш код, репозитории и анализ безопасности никогда не покидают вашу сеть. Sithub обеспечивает полную функциональность GitHub со встроенным сканированием кода — всё размещается на ваших серверах. Базы уязвимостей скачиваются у нас, но код остаётся приватным.",
+      "gitServer": {
+        "title": "Сервер Git‑репозиториев",
+        "tag": "Самостоятельно размещаемый контроль версий"
+      },
+      "analyzer": {
+        "title": "Анализатор безопасности",
+        "tag": "Локальный движок сканирования кода"
+      },
+      "vulnDb": {
+        "title": "База уязвимостей",
+        "tag": "Скачиваемые патчи безопасности"
+      },
+      "onPremNotice": "Остаётся on‑prem. Без внешнего трафика.",
+      "sithub": {
+        "title": "Serveur Sithub",
+        "tag": "Contrôle de version local"
+      },
+      "llm": {
+        "title": "Serveur LLM (Qwen-Code)",
+        "tag": "Intelligence sur site"
+      },
+      "ide": {
+        "title": "IDE avec Copilot local",
+        "tag": "Expérience de niveau Cursor"
+      },
+      "staysOnPrem": "Reste sur site. Pas de sortie."
+    },
+    "timeline": {
+      "subtitle": "Недавние тревожные сигналы",
+      "title": "Почему важен изолированный и проверенный код",
+      "incident": {
+        "title": "Критический инцидент — утечка кода",
+        "heading": "Взлом DeepSeek вынес исходники и промпты в открытый интернет",
+        "description": "Храните инференс и сканирование on‑prem. Без внешнего egress. Аудит‑трейлы по умолчанию.",
+        "seePlan": "Посмотреть план защиты"
+      },
+      "stuxnet": {
+        "attack": "Stuxnet",
+        "target": "Обогатительный комплекс в Натанзе",
+        "impact": "Уничтожено ~1 000 центрифуг",
+        "severity": "Критический",
+        "year": "2010"
+      },
+      "blackEnergy": {
+        "attack": "BlackEnergy",
+        "target": "Энергосистема Украины",
+        "impact": "230 тыс. клиентов остались без электричества",
+        "severity": "Высокий",
+        "year": "2015"
+      },
+      "triton": {
+        "attack": "TRITON",
+        "target": "Саудовский нефтехимический завод",
+        "impact": "Отключены системы безопасности",
+        "severity": "Критический",
+        "year": "2017"
+      },
+      "colonialPipeline": {
+        "attack": "Colonial Pipeline",
+        "target": "Топливопровод США",
+        "impact": "Паралич поставок топлива на 6 дней",
+        "severity": "Высокий",
+        "year": "2021"
+      },
+      "pdvsa": {
+        "attack": "PDVSA",
+        "target": "Нефтепереработка Венесуэлы",
+        "impact": "Нарушены операции НПЗ",
+        "severity": "Средний",
+        "year": "2025"
+      }
+    },
+    "analyzer": {
+      "subtitle": "Живое подтверждение",
+      "title": "Анализатор, который превосходит CodeQL",
+      "features": {
+        "quality": {
+          "title": "Автоматический контроль качества",
+          "description": "Проверки структуры, стиля и best‑practice, настроенные под критичный код"
+        },
+        "vulnerability": {
+          "title": "Поиск уязвимостей",
+          "description": "SQLi, XSS, обход аутентификации и небезопасные зависимости выявляются мгновенно"
+        },
+        "secrets": {
+          "title": "Защита секретов",
+          "description": "Ключи, токены и учётные данные блокируются на этапе коммита"
+        },
+        "config": {
+          "title": "Укрепление конфигураций",
+          "description": "Docker/K8s, IAM и сетевые политики сканируются на рост привилегий"
+        }
+      },
+      "beyondCodeQL": {
+        "subtitle": "Сверх CodeQL",
+        "title": "Находит то, что пропускают статические запросы",
+        "description": "Быстрее CodeQL находит misconfig и уязвимые пакеты и предлагает исправления, а не только алерты.",
+        "points": {
+          "packages": "Понимает граф зависимостей и отмечает рискованные пакеты за секунды.",
+          "config": "Выявляет дрейф конфигураций и рост привилегий — за пределами статических правил.",
+          "patches": "Каждое обнаружение сопровождается предложенным патчем и владельцем."
+        }
+      },
+      "visualizer": {
+        "subtitle": "Визуализатор",
+        "title": "Анализатор кода в действии",
+        "description": "Чёткие снимки последних сканов, красиво отображённые в on‑prem консоли.",
+        "privateWorkspace": "Только приватное рабочее пространство",
+        "frame": "Кадр {index}",
+        "shots": {
+          "scanOverview": {
+            "title": "Обзор сканирования",
+            "description": "Просматривайте проблемы по уровням серьёзности до выхода кода за пределы сети."
+          },
+          "misconfigurations": {
+            "title": "Обнаружение неправильных конфигураций",
+            "description": "Наш AI‑анализатор кода находит misconfig прямо в коде."
+          },
+          "inlineDiffs": {
+            "title": "Обнаружение уязвимых пакетов",
+            "description": "Определяет уязвимые версии пакетов и показывает версию, в которой уязвимость устранена."
+          }
+        },
+        "andManyMore": "И многое другое..."
+      }
+    },
+    "industries": {
+      "subtitle": "Где мы внедряем",
+      "title": "Создано для регулируемых отраслей с высоким риском",
+      "oilGas": {
+        "title": "Нефть и газ",
+        "description": "Бурение, переработка, управление трубопроводами"
+      },
+      "energy": {
+        "title": "Энергетика",
+        "description": "Сеть, распределение и EMS"
+      },
+      "nuclear": {
+        "title": "Атомная энергетика",
+        "description": "Управление реакторами и безопасность"
+      },
+      "manufacturing": {
+        "title": "Промышленность",
+        "description": "ICS, OT и робототехника"
+      },
+      "government": {
+        "title": "Государство",
+        "description": "Министерства, оборона, критические агентства"
+      }
+    },
+    "comingSoon": {
+      "title": "Админ‑панель",
+      "message": "Админ‑панель сейчас в разработке и будет доступна к концу следующей недели."
+    }
+  },
+  "supreme": {
+    "hero": {
+      "badge": "Supreme · расширение VSCode",
+      "title": "Локальный сканер уязвимостей кода",
+      "description": "Сканируйте код локально, не отправляя его на внешние серверы. Быстрое и комплексное обнаружение уязвимостей прямо в вашем редакторе."
+    },
+    "video": {
+      "title": "Руководство по установке и использованию (60 секунд)",
+      "cardTitle": "Как пользоваться Supreme",
+      "cardSubtitle": "Руководство по установке и настройке"
+    },
+    "pricing": {
+      "title": "Простая цена",
+      "subtitle": "Выберите план, который подходит вам лучше всего",
+      "monthly": {
+        "title": "Ежемесячно",
+        "description": "Гибко, отмена в любой момент"
+      },
+      "yearly": {
+        "title": "Годовой",
+        "description": "Лучшая цена"
+      },
+      "month": "месяц",
+      "year": "год",
+      "saveBadge": "Сэкономьте 30%",
+      "subscribe": "Оформить подписку",
+      "perMonthApprox": "~{value} в месяц"
+    },
+    "languages": {
+      "title": "Поддерживаемые языки",
+      "subtitle": "Комплексное сканирование безопасности для всех основных языков программирования"
+    },
+    "features": {
+      "title": "Мощные возможности",
+      "subtitle": "Всё, что нужно для безопасной разработки кода",
+      "items": {
+        "0": "Анализатор кода работает локально, код не передаётся на внешние серверы",
+        "1": "Находит уязвимые пакеты в проекте",
+        "2": "Находит неправильные конфигурации и секреты",
+        "3": "Сканирует CI/CD на неправильные конфигурации и уязвимости"
+      }
+    },
+    "screenshots": {
+      "0": {
+        "title": "Очень понятный интерфейс"
+      },
+      "1": {
+        "title": "Хорошо структурированные отчёты по безопасности"
+      },
+      "2": {
+        "title": "История сканирований"
+      }
+    },
+    "lightbox": {
+      "close": "Закрыть предпросмотр",
+      "alt": "Скриншот"
+    },
+    "title": "Supreme"
+  },
+  "languageSelector": {
+    "triggerLabel": "Select language",
+    "menuLabel": "Choose language",
+    "searchLabel": "Search languages",
+    "searchPlaceholder": "Search by name or native script",
+    "searchResults": "Search results",
+    "noMatches": "No languages match your search.",
+    "popular": "Most popular",
+    "allLanguages": "All languages"
+  },
   "documentation": {
     "tabs": {
-      "web": "Веб-безопасность",
-      "email": "Почтовая безопасность"
+      "web": "Web Security",
+      "email": "Email Security"
     },
     "system": {
-      "sections": "Разделы",
-      "topics": "Темы",
-      "tableOfContents": "Оглавление",
-      "close": "Закрыть"
+      "sections": "Sections",
+      "topics": "Topics",
+      "tableOfContents": "Table of contents",
+      "close": "Close"
     },
     "webSecurity": {
       "placeholder": {
-        "badge": "Веб-безопасность",
-        "title": "Документация скоро появится",
-        "description": "Мы готовим подробное руководство по настройке и защите веб-приложений. Загляните позже — материалы появятся в ближайшее время."
+        "badge": "Web Security",
+        "title": "Documentation is coming soon",
+        "description": "We are preparing a detailed guide for configuring and protecting web applications. Check back soon — the materials will appear shortly."
+      }
+    },
+    "pricingMicrosoft": {
+      "business": "Business",
+      "enterprise": "Enterprise",
+      "withoutTeams": "Plans without Teams",
+      "withTeams": "With Teams",
+      "yearly": "Yearly",
+      "monthly": "Monthly",
+      "planHighlights": "Plan highlights",
+      "userMonth": "user/month",
+      "paidYearly": "paid yearly",
+      "paidMonthly": "paid monthly",
+      "plans": {
+        "businessPremium": {
+          "title": "Microsoft 365 Business Premium (no Teams)"
+        },
+        "businessStandard": {
+          "title": "Microsoft 365 Business Standard (no Teams)"
+        },
+        "businessBasic": {
+          "title": "Microsoft 365 Business Basic (no Teams)"
+        },
+        "enterpriseE3": {
+          "title": "Microsoft 365 E3"
+        },
+        "enterpriseE5": {
+          "title": "Microsoft 365 E5"
+        }
+      },
+      "features": {
+        "secureAccess300": "Secure access for up to 300 users",
+        "customDomainEmail": "Custom company email on your own domain (you@yourcompany.com)",
+        "adminConsole": "Admin console with domain-wide email management and bulk operations",
+        "aiThreatDetection": "AI-powered threat detection with automatic email categorization",
+        "securityPipeline": "Multi-layered email security pipeline (SPF, DKIM, DMARC, spam, malware, phishing)",
+        "securityFolders": "Email sorting into security folders (Secure, Spam, Dangerous Links, Malware, Phishing, Spoofed)",
+        "linkScannerAv": "Advanced link scanner and antivirus protection for attachments",
+        "emailFlowVisualization": "Email flow visualization across the domain/organization with comprehensive filters",
+        "bulkManageDelete": "Ability to manage and delete emails across all users in the domain",
+        "customFoldersRules": "Custom folders with auto-filtering rules (sender, domain, subject)",
+        "storage10gb": "10 GB secure mailbox storage per user",
+        "storage5tb": "5 TB secure mailbox storage per user",
+        "storage10tb": "10 TB secure mailbox storage per user",
+        "multiAccountSupport": "Multi-account support (Gmail/Outlook integration)",
+        "support247": "24/7 email and web support",
+        "fullTextSearch": "Email search with full-text capabilities",
+        "aiAssistedCategorization": "AI-assisted email categorization into security folders",
+        "basicFiltering": "Custom folders with basic filtering rules",
+        "prioritySupport": "Priority support with faster response times",
+        "dedicatedAM": "Dedicated account management",
+        "unlimitedUsers": "Supports unlimited users"
       }
     },
     "emailSecurity": {
-      "title": "Система почтовой безопасности",
-      "subtitle": "Документация | Версия 1.0",
-      "description": "Как настроить и эксплуатировать корпоративную платформу почтовой безопасности.",
+      "title": "Email Security System",
+      "subtitle": "Documentation | Version 1.0",
+      "description": "How to configure and operate the corporate email security platform.",
       "chapters": [
         {
           "id": "getting-started",
-          "title": "Начало работы и пошаговые инструкции",
-          "label": "Начало работы и пошаговые инструкции",
-          "description": "Первые шаги, а также работа с доменами и настройкой DNS в CMC Admin Panel.",
+          "title": "Getting started",
+          "label": "Getting started",
+          "description": "Initial onboarding steps plus domain and DNS configuration in the CMC Admin Panel.",
           "sections": [
             {
               "id": "admin-setup",
-              "title": "Для администратора",
+              "title": "For administrators",
               "body": [
                 {
                   "type": "paragraph",
-                  "content": "Чтобы начать работу с системой:"
+                  "content": "To onboard the system:"
                 },
                 {
                   "type": "orderedList",
                   "items": [
-                    "Войдите в CMC Admin Panel через admin.silenceai.net используя Google или Microsoft OAuth.",
-                    "Добавьте домен вашей компании.",
-                    "Подтвердите владение доменом через DNS.",
-                    "Настройте записи безопасности (SPF, DKIM, DMARC).",
-                    "Создайте email-аккаунты для сотрудников."
+                    "Sign in to the CMC Admin Panel at admin.silenceai.net using Google or Microsoft OAuth.",
+                    "Register your company domain.",
+                    "Verify domain ownership through DNS.",
+                    "Configure security records (SPF, DKIM, DMARC).",
+                    "Create email accounts for employees."
                   ]
                 },
                 {
                   "type": "paragraph",
-                  "content": "После настройки пользователи смогут входить в webmail-клиент и отправлять защищенные письма."
+                  "content": "After configuration, users can access the webmail client and send protected messages."
                 }
               ]
             },
             {
               "id": "user-onboarding",
-              "title": "Для пользователя",
+              "title": "For end users",
               "body": [
                 {
                   "type": "paragraph",
-                  "content": "Чтобы начать работать с почтой:"
+                  "content": "To start working with email:"
                 },
                 {
                   "type": "orderedList",
                   "items": [
-                    "Получите учетные данные от администратора.",
-                    "Войдите на mail.silenceai.net через email/пароль или OAuth.",
-                    "Отправьте первое письмо через кнопку \"Compose\".",
-                    "Ознакомьтесь с системными папками, куда автоматически попадают письма по категориям безопасности."
+                    "Get your credentials from the administrator.",
+                    "Sign in to mail.silenceai.net with email/password or OAuth.",
+                    "Send your first message using the \"Compose\" button.",
+                    "Review the system folders that automatically categorize messages by security level."
                   ]
                 },
                 {
                   "type": "paragraph",
-                  "content": "Входящие письма автоматически проверяются на угрозы и распределяются по папкам."
+                  "content": "Incoming mail is automatically scanned for threats and routed into folders."
                 }
               ]
             },
             {
               "id": "add-domain",
-              "title": "Добавить домен",
+              "title": "Add a domain",
               "body": [
+                {
+                  "type": "paragraph",
+                  "content": "Domain management starts in the CMC Admin Panel."
+                },
                 {
                   "type": "orderedList",
                   "items": [
-                    "Откройте CMC Admin Panel.",
-                    "Нажмите \"Add Domain\".",
-                    "Введите доменное имя без www (например, company.com).",
-                    "Нажмите \"Add\"."
+                    "Open the CMC Admin Panel.",
+                    "Click \"Add Domain\".",
+                    "Enter the domain name without www (for example, company.com).",
+                    "Click \"Add\"."
                   ]
                 },
                 {
                   "type": "paragraph",
-                  "content": "Система сгенерирует verification token для подтверждения владения доменом."
+                  "content": "The system issues a verification token to confirm domain ownership."
                 }
               ]
             },
             {
               "id": "verify-domain",
-              "title": "Подтвердить владение доменом",
+              "title": "Verify domain ownership",
               "body": [
                 {
                   "type": "paragraph",
-                  "content": "После добавления домена необходимо подтвердить, что вы владелец."
+                  "content": "After adding a domain, prove that you own it."
                 },
                 {
                   "type": "orderedList",
                   "items": [
-                    "Скопируйте TXT-запись из CMC:"
+                    "Copy the TXT record from the CMC:"
                   ]
                 },
                 {
@@ -695,31 +1094,31 @@
                 {
                   "type": "orderedList",
                   "items": [
-                    "Добавьте эту запись в DNS-настройки вашего домена.",
-                    "Дождитесь автоматической проверки (каждые 5 минут) или нажмите \"Check Now\"."
+                    "Add the record to your domain's DNS settings.",
+                    "Wait for the automatic check (every 5 minutes) or click \"Check Now\"."
                   ]
                 },
                 {
                   "type": "paragraph",
-                  "content": "Верификация может занять до 48 часов. После успешной проверки статус домена изменится на verified."
+                  "content": "Verification can take up to 48 hours. After success, the domain status becomes verified."
                 }
               ]
             },
             {
               "id": "configure-spf",
-              "title": "Настроить SPF-запись",
+              "title": "Configure the SPF record",
               "body": [
                 {
                   "type": "paragraph",
-                  "content": "SPF определяет, какие серверы могут отправлять почту от вашего домена."
+                  "content": "SPF defines which servers may send email on behalf of your domain."
                 },
                 {
                   "type": "orderedList",
                   "items": [
-                    "В CMC откройте \"DNS Configuration\" → \"SPF\".",
-                    "Нажмите \"Check Current SPF\", чтобы увидеть текущие записи.",
-                    "Нажмите \"Generate SPF Record\".",
-                    "Скопируйте предложенную запись:"
+                    "In the CMC open \"DNS Configuration\" → \"SPF\".",
+                    "Click \"Check Current SPF\" to review existing records.",
+                    "Click \"Generate SPF Record\".",
+                    "Copy the suggested record:"
                   ]
                 },
                 {
@@ -729,30 +1128,30 @@
                 {
                   "type": "orderedList",
                   "items": [
-                    "Добавьте запись в DNS."
+                    "Add the record to DNS."
                   ]
                 },
                 {
                   "type": "paragraph",
-                  "content": "Если у вас уже есть SPF-запись (например, для Gmail), добавьте наш include перед финальным квалификатором -all."
+                  "content": "If an SPF record already exists (for example, for Gmail), place our include before the final -all qualifier."
                 }
               ]
             },
             {
               "id": "configure-dkim",
-              "title": "Настроить DKIM-ключи",
+              "title": "Generate DKIM keys",
               "body": [
                 {
                   "type": "paragraph",
-                  "content": "DKIM добавляет криптографическую подпись к вашим письмам."
+                  "content": "DKIM adds a cryptographic signature to your mail."
                 },
                 {
                   "type": "orderedList",
                   "items": [
-                    "В CMC откройте \"DNS Configuration\" → \"DKIM\".",
-                    "Нажмите \"Generate DKIM Keys\".",
-                    "Система создаст пару ключей (приватный хранится на сервере, публичный для DNS).",
-                    "Скопируйте DNS-запись:"
+                    "In the CMC open \"DNS Configuration\" → \"DKIM\".",
+                    "Click \"Generate DKIM Keys\".",
+                    "The system creates a key pair (the private key stays on the server, the public key is for DNS).",
+                    "Copy the DNS record:"
                   ]
                 },
                 {
@@ -762,39 +1161,39 @@
                 {
                   "type": "orderedList",
                   "items": [
-                    "Добавьте запись в DNS.",
-                    "Проверьте статус через \"Verify DKIM\"."
+                    "Add the record to DNS.",
+                    "Run \"Verify DKIM\" to confirm."
                   ]
                 }
               ]
             },
             {
               "id": "configure-dmarc",
-              "title": "Настроить DMARC-политику",
+              "title": "Set up DMARC policy",
               "body": [
                 {
                   "type": "paragraph",
-                  "content": "DMARC определяет действия с письмами, не прошедшими SPF или DKIM проверку."
+                  "content": "DMARC defines what to do with messages that fail SPF or DKIM checks."
                 },
                 {
                   "type": "orderedList",
                   "items": [
-                    "В CMC откройте \"DNS Configuration\" → \"DMARC\".",
-                    "Выберите политику:"
+                    "In the CMC open \"DNS Configuration\" → \"DMARC\".",
+                    "Select a policy:"
                   ]
                 },
                 {
                   "type": "list",
                   "items": [
-                    "quarantine — отправить в спам (рекомендуется)",
-                    "reject — отклонить письмо"
+                    "quarantine — move to spam (recommended)",
+                    "reject — drop the message"
                   ]
                 },
                 {
                   "type": "orderedList",
                   "items": [
-                    "Нажмите \"Generate DMARC Record\".",
-                    "Скопируйте запись:"
+                    "Click \"Generate DMARC Record\".",
+                    "Copy the record:"
                   ]
                 },
                 {
@@ -804,12 +1203,12 @@
                 {
                   "type": "orderedList",
                   "items": [
-                    "Добавьте запись в DNS."
+                    "Add the record to DNS."
                   ]
                 },
                 {
                   "type": "paragraph",
-                  "content": "Начните с политики quarantine, проверьте отчеты за 1-2 недели, затем можете перейти на reject."
+                  "content": "Start with quarantine, monitor reports for 1-2 weeks, then switch to reject if desired."
                 }
               ]
             }
@@ -817,104 +1216,104 @@
         },
         {
           "id": "user-management",
-          "title": "Управление пользователями",
-          "label": "Управление пользователями",
-          "description": "Создание и обслуживание почтовых аккаунтов.",
+          "title": "User management",
+          "label": "User management",
+          "description": "Creating and maintaining mail accounts.",
           "sections": [
             {
               "id": "create-account",
-              "title": "Создать email-аккаунт",
+              "title": "Create an email account",
               "body": [
                 {
                   "type": "orderedList",
                   "items": [
-                    "Откройте раздел \"Email Accounts\" в CMC.",
-                    "Нажмите \"Create Account\".",
-                    "Заполните:"
+                    "Open the \"Email Accounts\" section in the CMC.",
+                    "Click \"Create Account\".",
+                    "Fill out the fields:"
                   ]
                 },
                 {
                   "type": "list",
                   "items": [
                     "Email: john.doe@company.com",
-                    "Имя и фамилия",
-                    "Пароль (минимум 8 символов, uppercase, lowercase, цифра, спецсимвол)",
-                    "Storage quota: выберите размер хранилища"
+                    "First and last name",
+                    "Password (minimum 8 characters, uppercase, lowercase, digit, special character)",
+                    "Storage quota: pick a mailbox size"
                   ]
                 },
                 {
                   "type": "orderedList",
                   "items": [
-                    "Нажмите \"Create\"."
+                    "Click \"Create\"."
                   ]
                 },
                 {
                   "type": "paragraph",
-                  "content": "Пользователь сразу сможет войти в webmail."
+                  "content": "The user can sign in to webmail immediately."
                 }
               ]
             },
             {
               "id": "suspend-activate",
-              "title": "Приостановить или активировать аккаунт",
+              "title": "Suspend or reactivate an account",
               "body": [
                 {
                   "type": "orderedList",
                   "items": [
-                    "Найдите пользователя в \"Email Accounts\".",
-                    "В меню Actions выберите:"
+                    "Find the user in \"Email Accounts\".",
+                    "In the Actions menu choose:"
                   ]
                 },
                 {
                   "type": "list",
                   "items": [
-                    "\"Suspend\" — приостановить (пользователь не сможет войти)",
-                    "\"Activate\" — восстановить доступ"
+                    "Suspend — pause access (the user cannot sign in)",
+                    "Activate — restore access"
                   ]
                 },
                 {
                   "type": "orderedList",
                   "items": [
-                    "Подтвердите действие."
+                    "Confirm the action."
                   ]
                 }
               ]
             },
             {
               "id": "change-quota",
-              "title": "Изменить квоту хранилища",
+              "title": "Change storage quota",
               "body": [
                 {
                   "type": "orderedList",
                   "items": [
-                    "Найдите пользователя в списке.",
-                    "В меню Actions выберите \"Edit Quota\".",
-                    "Выберите новый размер хранилища.",
-                    "Сохраните изменения."
+                    "Find the user in the list.",
+                    "Choose \"Edit Quota\" in the Actions menu.",
+                    "Select a new storage size.",
+                    "Save changes."
                   ]
                 },
                 {
                   "type": "paragraph",
-                  "content": "Изменения применяются немедленно."
+                  "content": "Changes take effect immediately."
                 }
               ]
             },
             {
               "id": "delete-account",
-              "title": "Удалить аккаунт",
+              "title": "Delete an account",
               "body": [
                 {
                   "type": "orderedList",
                   "items": [
-                    "Найдите пользователя в списке.",
-                    "В меню Actions выберите \"Delete\".",
-                    "Подтвердите удаление."
+                    "Find the user in the list.",
+                    "Choose \"Delete\" in the Actions menu.",
+                    "Confirm the deletion."
                   ]
                 },
                 {
                   "type": "callout",
                   "intent": "warning",
-                  "content": "Внимание: Все данные пользователя будут удалены безвозвратно."
+                  "content": "Warning: All user data will be removed permanently."
                 }
               ]
             }
@@ -922,94 +1321,94 @@
         },
         {
           "id": "mail-operations",
-          "title": "Работа с почтой",
-          "label": "Работа с почтой",
-          "description": "Действия, выполняемые в webmail.",
+          "title": "Mail operations",
+          "label": "Mail operations",
+          "description": "Everyday actions in the webmail client.",
           "sections": [
             {
               "id": "send-letter",
-              "title": "Отправить письмо",
+              "title": "Send a message",
               "body": [
                 {
                   "type": "orderedList",
                   "items": [
-                    "В webmail нажмите \"Compose\".",
-                    "Заполните:"
+                    "In webmail click \"Compose\".",
+                    "Fill in:"
                   ]
                 },
                 {
                   "type": "list",
                   "items": [
-                    "To: адрес получателя",
-                    "Subject: тема письма",
-                    "Body: текст (доступно форматирование)"
+                    "To: recipient address",
+                    "Subject: email subject",
+                    "Body: message text (rich formatting available)"
                   ]
                 },
                 {
                   "type": "orderedList",
                   "items": [
-                    "При необходимости прикрепите файлы (до 25 МБ на файл).",
-                    "Нажмите \"Send\"."
+                    "Attach files if needed (up to 25 MB per file).",
+                    "Click \"Send\"."
                   ]
                 },
                 {
                   "type": "paragraph",
-                  "content": "Письмо автоматически подписывается DKIM и отправляется."
+                  "content": "Messages are automatically signed with DKIM and delivered."
                 }
               ]
             },
             {
               "id": "custom-folder",
-              "title": "Создать custom folder с правилами",
+              "title": "Create a custom folder with rules",
               "body": [
                 {
                   "type": "paragraph",
-                  "content": "Custom folders автоматически сортируют письма по заданным критериям."
+                  "content": "Custom folders automatically sort messages by the rules you define."
                 },
                 {
                   "type": "orderedList",
                   "items": [
-                    "В боковом меню нажмите \"Create Folder\".",
-                    "Введите название папки (например, \"Clients\").",
-                    "Нажмите \"Add Rules\".",
-                    "Настройте правило:"
+                    "In the sidebar click \"Create Folder\".",
+                    "Enter a folder name (for example, \"Clients\").",
+                    "Click \"Add Rules\".",
+                    "Configure the rule:"
                   ]
                 },
                 {
                   "type": "list",
                   "items": [
-                    "Фильтр: Sender Domain",
-                    "Условие: Contains",
-                    "Значение: client.com"
+                    "Filter by: Sender Domain",
+                    "Match mode: Contains",
+                    "Value: client.com"
                   ]
                 },
                 {
                   "type": "orderedList",
                   "items": [
-                    "Включите \"Apply to existing emails\", если нужно обработать текущие письма.",
-                    "Нажмите \"Create\"."
+                    "Enable \"Apply to existing emails\" if you want to reprocess current messages.",
+                    "Click \"Create\"."
                   ]
                 },
                 {
                   "type": "paragraph",
-                  "content": "Все новые письма от *@client.com будут автоматически попадать в папку \"Clients\"."
+                  "content": "All new mail from *@client.com will go to the \"Clients\" folder automatically."
                 }
               ]
             },
             {
               "id": "add-whitelist",
-              "title": "Добавить отправителя в Whitelist",
+              "title": "Add a sender to the whitelist",
               "body": [
                 {
                   "type": "paragraph",
-                  "content": "Если письмо попало в SPAM по ошибке:"
+                  "content": "If a message was flagged as spam by mistake:"
                 },
                 {
                   "type": "orderedList",
                   "items": [
-                    "Откройте письмо в папке SPAM.",
-                    "Нажмите \"Not Spam\" → \"Add to Whitelist\".",
-                    "Выберите:"
+                    "Open the email in the SPAM folder.",
+                    "Click \"Not Spam\" → \"Add to Whitelist\".",
+                    "Choose:"
                   ]
                 },
                 {
@@ -1022,72 +1421,72 @@
                 {
                   "type": "orderedList",
                   "items": [
-                    "Подтвердите действие."
+                    "Confirm the action."
                   ]
                 },
                 {
                   "type": "paragraph",
-                  "content": "Все будущие письма от этого отправителя не будут попадать в спам."
+                  "content": "Future messages from this sender will no longer be sent to spam."
                 }
               ]
             },
             {
               "id": "email-signature",
-              "title": "Настроить email-подпись",
+              "title": "Set up an email signature",
               "body": [
                 {
                   "type": "orderedList",
                   "items": [
-                    "Откройте Settings → \"Email Signature\".",
-                    "Включите \"Enable signature\".",
-                    "Введите текст подписи в редакторе.",
-                    "Нажмите \"Save\"."
+                    "Open Settings → \"Email Signature\".",
+                    "Enable \"Enable signature\".",
+                    "Enter the signature text in the editor.",
+                    "Click \"Save\"."
                   ]
                 },
                 {
                   "type": "paragraph",
-                  "content": "Подпись будет автоматически добавляться ко всем исходящим письмам."
+                  "content": "The signature is added to every outgoing message automatically."
                 }
               ]
             },
             {
               "id": "vacation-responder",
-              "title": "Настроить автоответчик",
+              "title": "Configure an auto-reply",
               "body": [
                 {
                   "type": "orderedList",
                   "items": [
-                    "Откройте Settings → \"Vacation Responder\".",
-                    "Включите \"Enable vacation responder\".",
-                    "Укажите даты начала и окончания.",
-                    "Введите текст автоответа.",
-                    "Отметьте \"Reply once per sender\", чтобы отправлять ответ каждому отправителю только один раз.",
-                    "Нажмите \"Save\"."
+                    "Open Settings → \"Vacation Responder\".",
+                    "Enable \"Enable vacation responder\".",
+                    "Set the start and end dates.",
+                    "Enter the auto-reply text.",
+                    "Check \"Reply once per sender\" to send a single response to each sender.",
+                    "Click \"Save\"."
                   ]
                 },
                 {
                   "type": "paragraph",
-                  "content": "Автоответчик будет работать в выбранные даты и отключится автоматически."
+                  "content": "The auto-responder runs during the selected dates and shuts off automatically."
                 }
               ]
             },
             {
               "id": "forwarding",
-              "title": "Настроить переадресацию",
+              "title": "Configure forwarding",
               "body": [
                 {
                   "type": "orderedList",
                   "items": [
-                    "Откройте Settings → \"Email Forwarding\".",
-                    "Нажмите \"Add Forwarding Address\".",
-                    "Введите email для пересылки.",
-                    "Отметьте \"Keep copy in inbox\", если хотите сохранять копию у себя.",
-                    "Нажмите \"Save\"."
+                    "Open Settings → \"Email Forwarding\".",
+                    "Click \"Add Forwarding Address\".",
+                    "Enter the forwarding email.",
+                    "Enable \"Keep copy in inbox\" if you want to retain a copy.",
+                    "Click \"Save\"."
                   ]
                 },
                 {
                   "type": "paragraph",
-                  "content": "Все входящие письма будут автоматически пересылаться на указанный адрес."
+                  "content": "All incoming email will be forwarded to the selected address."
                 }
               ]
             }
@@ -1095,63 +1494,63 @@
         },
         {
           "id": "domain-administration",
-          "title": "Администрирование домена",
-          "label": "Администрирование домена",
-          "description": "Аналитика и массовые операции для домена.",
+          "title": "Domain administration",
+          "label": "Domain administration",
+          "description": "Analytics and bulk mail operations for the domain.",
           "sections": [
             {
               "id": "view-activity",
-              "title": "Просмотреть email-активность домена",
+              "title": "Review domain mail activity",
               "body": [
                 {
                   "type": "paragraph",
-                  "content": "Администраторы могут видеть все письма всех пользователей домена."
+                  "content": "Administrators can view every message for every user in the domain."
                 },
                 {
                   "type": "orderedList",
                   "items": [
-                    "Откройте CMC → \"Email Activity\".",
-                    "Используйте фильтры:"
+                    "Open CMC → \"Email Activity\".",
+                    "Use the filters:"
                   ]
                 },
                 {
                   "type": "list",
                   "items": [
-                    "По пользователю",
-                    "По папке (Secure, Spam, Phishing)",
-                    "По дате",
-                    "По типу угрозы"
+                    "By user",
+                    "By folder (Secure, Spam, Phishing)",
+                    "By date",
+                    "By threat type"
                   ]
                 },
                 {
                   "type": "orderedList",
                   "items": [
-                    "Для поиска используйте строку поиска по теме или отправителю."
+                    "Use the search bar for subject or sender lookups."
                   ]
                 }
               ]
             },
             {
               "id": "bulk-delete",
-              "title": "Удалить письма у всех пользователей",
+              "title": "Delete messages for all users",
               "body": [
                 {
                   "type": "paragraph",
-                  "content": "Если обнаружено вредоносное письмо, отправленное всем сотрудникам:"
+                  "content": "If a malicious message was sent to everyone:"
                 },
                 {
                   "type": "orderedList",
                   "items": [
-                    "Откройте \"Email Activity\".",
-                    "Найдите письмо через фильтры или поиск.",
-                    "Отметьте письма для удаления.",
-                    "Нажмите \"Delete Selected\".",
-                    "Подтвердите массовое удаление."
+                    "Open \"Email Activity\".",
+                    "Locate the message via filters or search.",
+                    "Select the messages to remove.",
+                    "Click \"Delete Selected\".",
+                    "Confirm the bulk deletion."
                   ]
                 },
                 {
                   "type": "paragraph",
-                  "content": "Письма будут удалены у всех пользователей домена."
+                  "content": "The message is removed from every user mailbox."
                 }
               ]
             }
@@ -1159,102 +1558,102 @@
         },
         {
           "id": "concepts",
-          "title": "Концепции",
-          "label": "Концепции",
-          "description": "Основные понятия платформы и потоки безопасности.",
+          "title": "Concepts",
+          "label": "Concepts",
+          "description": "Key platform concepts and security flows.",
           "sections": [
             {
               "id": "system-overview",
-              "title": "Обзор системы",
+              "title": "System overview",
               "body": [
                 {
                   "type": "paragraph",
-                  "content": "Email Security System — платформа для защиты корпоративной почты от киберугроз."
+                  "content": "Email Security System is a platform that protects corporate email from cyber threats."
                 },
                 {
                   "type": "list",
-                  "title": "Компоненты:",
+                  "title": "Components:",
                   "items": [
-                    "CMC Admin Panel — панель администратора для управления доменами, пользователями и DNS-настройками.",
-                    "Webmail Client — почтовый клиент для сотрудников с автоматической защитой от угроз.",
-                    "Infrastructure Services — SMTP-сервер и система безопасности для обработки писем."
+                    "CMC Admin Panel — administrator console for domains, users, and DNS settings.",
+                    "Webmail Client — employee mailbox with automatic threat protection.",
+                    "Infrastructure Services — SMTP server and security pipeline for message processing."
                   ]
                 }
               ]
             },
             {
               "id": "security-stack",
-              "title": "Система защиты",
+              "title": "Security pipeline",
               "body": [
                 {
                   "type": "paragraph",
-                  "content": "Каждое входящее письмо проходит проверку через пять уровней защиты:"
+                  "content": "Every inbound message passes through six layers of protection:"
                 },
                 {
                   "type": "orderedList",
                   "items": [
-                    "Layer 0: Phishing Domain Check — проверка домена отправителя по базе известных фишинговых доменов.",
-                    "Layer 1: Spoof Detection — проверка SPF, DKIM и DMARC записей для определения подлинности отправителя.",
-                    "Layer 2: Spam Detection — анализ письма через RSPAMD на наличие спам-признаков.",
-                    "Layer 3: Link Scanner — сканирование ссылок в письме через URLScan.io на наличие вредоносных URL.",
-                    "Layer 4: Antivirus — проверка вложений антивирусом Bitdefender.",
-                    "Layer 5: AI Phishing Detection — анализ содержания письма через AI на признаки фишинга."
+                    "Layer 0: Phishing Domain Check — evaluate sender domains against known phishing databases.",
+                    "Layer 1: Spoof Detection — validate SPF, DKIM, and DMARC alignment.",
+                    "Layer 2: Spam Detection — analyse content with RSPAMD for spam traits.",
+                    "Layer 3: Link Scanner — scan URLs with URLScan.io for malicious links.",
+                    "Layer 4: Antivirus — inspect attachments with Bitdefender.",
+                    "Layer 5: AI Phishing Detection — analyse message content with AI for phishing signals."
                   ]
                 },
                 {
                   "type": "paragraph",
-                  "content": "Если угроза обнаружена, обработка останавливается, а письмо попадает в соответствующую папку."
+                  "content": "If a threat is detected, processing stops and the message is placed in the corresponding folder."
                 }
               ]
             },
             {
               "id": "system-folders",
-              "title": "Папки системы",
+              "title": "System folders",
               "body": [
                 {
                   "type": "paragraph",
-                  "content": "Письма автоматически распределяются по папкам в зависимости от результатов проверки:"
+                  "content": "Messages are routed to folders based on the inspection results:"
                 },
                 {
                   "type": "list",
                   "items": [
-                    "Unfiltered — новые письма до обработки (временная папка).",
-                    "Secure — безопасные письма, прошедшие все проверки.",
-                    "Possibly Spoofed — письма с подозрительной аутентификацией отправителя.",
-                    "SPAM — спам-письма.",
-                    "Dangerous Links — письма с вредоносными ссылками.",
-                    "Malware — письма с вирусами во вложениях.",
-                    "Possibly Phishing — письма с признаками фишинга.",
-                    "Sent — отправленные письма."
+                    "Unfiltered — new mail before processing (temporary).",
+                    "Secure — messages that passed all checks.",
+                    "Possibly Spoofed — sender authenticity is suspicious.",
+                    "SPAM — spam messages.",
+                    "Dangerous Links — messages containing malicious URLs.",
+                    "Malware — messages with infected attachments.",
+                    "Possibly Phishing — phishing indicators detected.",
+                    "Sent — sent mail."
                   ]
                 },
                 {
                   "type": "paragraph",
-                  "content": "Одно письмо может находиться в нескольких папках одновременно (например, SPAM и Possibly Spoofed)."
+                  "content": "A single message may appear in multiple folders (for example, SPAM and Possibly Spoofed)."
                 }
               ]
             },
             {
               "id": "custom-folders",
-              "title": "Пользовательские папки",
+              "title": "Custom folders",
               "body": [
                 {
                   "type": "paragraph",
-                  "content": "Пользователи могут создавать собственные папки с автоматическими правилами."
+                  "content": "Users can create custom folders with automatic filtering rules."
                 },
                 {
                   "type": "list",
-                  "title": "Правила фильтрации:",
+                  "title": "Filtering rules:",
                   "items": [
-                    "По домену отправителя",
-                    "По адресу отправителя",
-                    "По теме письма",
-                    "По имени отправителя"
+                    "By sender domain",
+                    "By sender email",
+                    "By subject",
+                    "By sender name"
                   ]
                 },
                 {
                   "type": "list",
-                  "title": "Режимы совпадения:",
+                  "title": "Match modes:",
                   "items": [
                     "Contains",
                     "Equals",
@@ -1264,7 +1663,7 @@
                 },
                 {
                   "type": "paragraph",
-                  "content": "Правила можно применить к уже полученным письмам (retroactive filtering)."
+                  "content": "Rules can be applied to existing mail (retroactive filtering)."
                 }
               ]
             },
@@ -1274,11 +1673,11 @@
               "body": [
                 {
                   "type": "paragraph",
-                  "content": "SPF — DNS-запись, определяющая серверы, которым разрешено отправлять почту от имени домена."
+                  "content": "SPF is a DNS record that defines servers allowed to send mail for the domain."
                 },
                 {
                   "type": "paragraph",
-                  "content": "Формат:"
+                  "content": "Format:"
                 },
                 {
                   "type": "code",
@@ -1286,17 +1685,17 @@
                 },
                 {
                   "type": "list",
-                  "title": "Механизмы:",
+                  "title": "Mechanisms:",
                   "items": [
-                    "include:domain — разрешить серверы указанного домена",
-                    "ip4:x.x.x.x — разрешить конкретный IP-адрес",
-                    "-all — запретить все остальные",
-                    "~all — помечать остальные как подозрительные"
+                    "include:domain — allow servers from the referenced domain",
+                    "ip4:x.x.x.x — allow a specific IP address",
+                    "-all — reject everything else",
+                    "~all — mark everything else as suspicious"
                   ]
                 },
                 {
                   "type": "paragraph",
-                  "content": "Проверка SPF: Получатель проверяет, что IP-адрес отправителя разрешен в SPF-записи домена. Если проверка не пройдена, письмо помечается как подозрительное."
+                  "content": "SPF check: the recipient verifies that the sender IP is authorised in the domain's SPF record. If the check fails, the message is flagged as suspicious."
                 }
               ]
             },
@@ -1306,30 +1705,30 @@
               "body": [
                 {
                   "type": "paragraph",
-                  "content": "DKIM добавляет криптографическую подпись к письмам, подтверждающую, что письмо отправлено владельцем домена и не изменено при передаче."
+                  "content": "DKIM adds a cryptographic signature to confirm the message was sent by the domain owner and was not altered in transit."
                 },
                 {
                   "type": "paragraph",
-                  "content": "Как работает:"
+                  "content": "How it works:"
                 },
                 {
                   "type": "list",
                   "items": [
-                    "При отправке письма сервер подписывает его приватным ключом и добавляет DKIM-Signature заголовок.",
-                    "Получатель извлекает публичный ключ из DNS и проверяет подпись."
+                    "When sending, the server signs the message with a private key and adds a DKIM-Signature header.",
+                    "The recipient fetches the public key from DNS and verifies the signature."
                   ]
                 },
                 {
                   "type": "paragraph",
-                  "content": "DNS-запись:"
+                  "content": "DNS record:"
                 },
                 {
                   "type": "code",
-                  "content": "selector._domainkey.domain.com TXT \"v=DKIM1; k=rsa; p=публичный_ключ\""
+                  "content": "selector._domainkey.domain.com TXT \"v=DKIM1; k=rsa; p=public_key\""
                 },
                 {
                   "type": "paragraph",
-                  "content": "Приватный ключ хранится на сервере в зашифрованном виде и никогда не передается клиентам."
+                  "content": "The private key is stored on the server in encrypted form and never shared with clients."
                 }
               ]
             },
@@ -1339,11 +1738,11 @@
               "body": [
                 {
                   "type": "paragraph",
-                  "content": "DMARC определяет политику обработки писем, не прошедших SPF или DKIM проверку."
+                  "content": "DMARC defines the policy for messages that fail SPF or DKIM."
                 },
                 {
                   "type": "paragraph",
-                  "content": "Формат:"
+                  "content": "Format:"
                 },
                 {
                   "type": "code",
@@ -1351,39 +1750,39 @@
                 },
                 {
                   "type": "list",
-                  "title": "Параметры:",
+                  "title": "Parameters:",
                   "items": [
-                    "p=quarantine — отправлять в спам",
-                    "p=reject — отклонять письмо",
-                    "p=none — только мониторинг",
-                    "rua= — адрес для агрегированных отчетов"
+                    "p=quarantine — deliver to spam",
+                    "p=reject — reject the message",
+                    "p=none — monitor only",
+                    "rua= — address for aggregate reports"
                   ]
                 },
                 {
                   "type": "paragraph",
-                  "content": "Проверка DMARC: Получатель проверяет, что письмо прошло SPF или DKIM и домены совпадают (alignment). Если проверка не пройдена, применяется указанная политика."
+                  "content": "DMARC check: the recipient confirms the message passes SPF or DKIM with aligned domains. If not, the configured policy applies."
                 }
               ]
             },
             {
               "id": "attachments",
-              "title": "Вложения и антивирус",
+              "title": "Attachments and antivirus",
               "body": [
                 {
                   "type": "list",
-                  "title": "Ограничения:",
+                  "title": "Restrictions:",
                   "items": [
-                    "Максимальный размер файла: 25 МБ",
-                    "Поддерживаются все типы файлов"
+                    "Maximum file size: 25 MB",
+                    "All file types are supported"
                   ]
                 },
                 {
                   "type": "paragraph",
-                  "content": "Проверка вложений: Все вложения сканируются антивирусом Bitdefender при получении письма. Если обнаружен вирус, письмо помещается в папку Malware, и вложение блокируется для скачивания."
+                  "content": "Attachment scanning: every file is scanned by Bitdefender. If malware is detected, the message moves to the Malware folder and the attachment is blocked."
                 },
                 {
                   "type": "paragraph",
-                  "content": "Хранение: Вложения хранятся на сервере в отдельной директории для каждого письма. Зараженные файлы перемещаются в карантин."
+                  "content": "Storage: attachments are kept per message on the server. Infected files are moved to quarantine."
                 }
               ]
             }
@@ -1391,88 +1790,88 @@
         },
         {
           "id": "access-control",
-          "title": "Управление доступом",
-          "label": "Управление доступом",
-          "description": "Роли пользователей и защита доступа.",
+          "title": "Access control",
+          "label": "Access control",
+          "description": "User roles and access protection.",
           "sections": [
             {
               "id": "user-roles",
-              "title": "Роли пользователей",
+              "title": "User roles",
               "body": [
                 {
                   "type": "list",
-                  "title": "Администратор",
+                  "title": "Admin",
                   "items": [
-                    "Полный доступ к CMC Admin Panel",
-                    "Управление доменами и DNS",
-                    "Создание и управление пользователями",
-                    "Просмотр всей почты домена",
-                    "Массовые операции с письмами"
+                    "Full access to the CMC Admin Panel",
+                    "Domain and DNS management",
+                    "Create and manage users",
+                    "View all domain mail",
+                    "Perform bulk mail operations"
                   ]
                 },
                 {
                   "type": "list",
                   "title": "Subordinate",
                   "items": [
-                    "Ограниченный доступ к CMC",
-                    "Просмотр списка пользователей",
-                    "Доступ только к своим письмам"
+                    "Limited CMC access",
+                    "View the user list",
+                    "Access only their own mail"
                   ]
                 },
                 {
                   "type": "list",
-                  "title": "Пользователь",
+                  "title": "User",
                   "items": [
-                    "Доступ к веб-клиенту",
-                    "Работа со своими письмами",
-                    "Настройка личных параметров"
+                    "Access to the webmail client",
+                    "Work with their own mail",
+                    "Configure personal settings"
                   ]
                 }
               ]
             },
             {
               "id": "role-assignment",
-              "title": "Назначение ролей",
+              "title": "Role assignment",
               "body": [
                 {
                   "type": "paragraph",
-                  "content": "Auto-admin: Первый пользователь, вошедший через OAuth, автоматически получает роль Admin."
+                  "content": "Auto-admin: the first user who signs in via OAuth automatically becomes an Admin."
                 },
                 {
                   "type": "paragraph",
-                  "content": "Создание Subordinate: Admin может создать subordinate-пользователей через CMC в разделе \"User Management\"."
+                  "content": "Creating Subordinate users: Admins add subordinate accounts in the CMC under \"User Management\"."
                 },
                 {
                   "type": "paragraph",
-                  "content": "Создание User: Admin создает email-аккаунты в разделе \"Email Accounts\". Пользователи получают роль User."
+                  "content": "Creating User accounts: Admins create mailboxes under \"Email Accounts\"; the accounts receive the User role."
                 }
               ]
             },
             {
               "id": "authentication",
-              "title": "Аутентификация",
+              "title": "Authentication",
               "body": [
                 {
                   "type": "list",
                   "items": [
-                    "OAuth 2.0: Вход через Google или Microsoft с использованием протокола OAuth 2.0 и PKCE для безопасности.",
-                    "Email/Password: Вход по email и паролю для аккаунтов, созданных администратором в CMC.",
-                    "JWT-токены: После входа выдается JWT-токен со сроком действия 7 дней. Токен хранится в httpOnly cookie.",
-                    "Обновление токенов: Access token обновляется автоматически через refresh token. При истечении refresh token требуется повторный вход."
+                    "OAuth 2.0: Google or Microsoft sign-in with PKCE for security.",
+                    "Email/password: credentials issued by the administrator in the CMC.",
+                    "JWT tokens: access tokens last 7 days and are stored in httpOnly cookies.",
+                    "Token refresh: access tokens renew automatically via refresh tokens; once the refresh token expires, sign-in is required again."
                   ]
                 }
               ]
             },
             {
               "id": "access-protection",
-              "title": "Защита доступа",
+              "title": "Access protection",
               "body": [
                 {
                   "type": "list",
                   "items": [
-                    "Rate Limiting: Ограничение попыток входа: максимум 5 попыток за 15 минут с одного IP-адреса.",
-                    "Session Management: Активные сессии хранятся в базе данных с валидацией при каждом запросе.",
-                    "Audit Logging: Все действия администраторов и критичные операции пользователей записываются в журнал аудита."
+                    "Rate limiting: maximum 5 sign-in attempts per 15 minutes from a single IP.",
+                    "Session management: active sessions stored in the database and validated on each request.",
+                    "Audit logging: critical administrator and user actions are recorded."
                   ]
                 }
               ]
@@ -1481,44 +1880,44 @@
         },
         {
           "id": "quotas-limits",
-          "title": "Квоты и лимиты",
-          "label": "Квоты и лимиты",
-          "description": "Лимиты по хранению, отправке и пользователям.",
+          "title": "Quotas and limits",
+          "label": "Quotas and limits",
+          "description": "Storage, sending, and user quotas.",
           "sections": [
             {
               "id": "storage-quota",
-              "title": "Квота хранилища",
+              "title": "Storage quota",
               "body": [
                 {
                   "type": "paragraph",
-                  "content": "Каждому пользователю выделяется определенный объем для хранения писем и вложений. При достижении 100% квоты пользователь не сможет отправлять и получать письма."
+                  "content": "Each user gets a mailbox quota. At 100% usage the user cannot send or receive mail."
                 }
               ]
             },
             {
               "id": "sending-limits",
-              "title": "Лимиты на отправку",
+              "title": "Sending limits",
               "body": [
                 {
                   "type": "list",
                   "items": [
-                    "Business Basic: 500 писем на пользователя в сутки",
-                    "Business Standard: 1000 писем в сутки",
-                    "Business Premium: 2000 писем в сутки",
-                    "Enterprise: 10000 писем в сутки"
+                    "Business Basic: 500 messages per user per day",
+                    "Business Standard: 1000 messages per day",
+                    "Business Premium: 2000 messages per day",
+                    "Enterprise: 10000 messages per day"
                   ]
                 }
               ]
             },
             {
               "id": "user-limit",
-              "title": "Лимит пользователей",
+              "title": "User limit",
               "body": [
                 {
                   "type": "list",
                   "items": [
-                    "Business планы: до 300 пользователей",
-                    "Enterprise планы: без ограничений"
+                    "Business plans: up to 300 users",
+                    "Enterprise plans: unlimited users"
                   ]
                 }
               ]
@@ -1528,56 +1927,130 @@
       ]
     }
   },
-  "pricingMicrosoft": {
-    "business": "Бизнес",
-    "enterprise": "Энтерпрайз",
-    "withoutTeams": "Планы без Teams",
-    "withTeams": "С Teams",
-    "yearly": "Годовая оплата",
-    "monthly": "Ежемесячная оплата",
-    "planHighlights": "Ключевые возможности",
-    "userMonth": "польз./мес.",
-    "paidYearly": "оплата за год",
-    "paidMonthly": "оплата помесячно",
-    "plans": {
-      "businessPremium": {
-        "title": "Microsoft 365 Business Premium (no Teams)"
-      },
-      "businessStandard": {
-        "title": "Microsoft 365 Business Standard (no Teams)"
-      },
-      "businessBasic": {
-        "title": "Microsoft 365 Business Basic (no Teams)"
-      },
-      "enterpriseE3": {
-        "title": "Microsoft 365 E3"
-      },
-      "enterpriseE5": {
-        "title": "Microsoft 365 E5"
-      }
+  "policySidebar": {
+    "tableOfContents": "Table of Contents",
+    "close": "Close",
+    "topics": "Topics"
+  },
+  "andManyMore": "Et bien plus encore...",
+  "playground": {
+    "options": {
+      "globeShield": "Sécurité web et gestion du trafic",
+      "emailSecurity": "Sécurité des e-mails et visualisation"
+    }
+  },
+  "modal": {
+    "title": "En cours de développement",
+    "body": "Le système devrait être lancé le 10 octobre"
+  },
+  "notFound": {
+    "title": "Page non trouvée",
+    "description": "Nous avons cherché partout mais n'avons pas trouvé cette page.",
+    "cta": "Retour à l'accueil"
+  },
+  "pricingCta": {
+    "requestSystem": "Demander le système"
+  },
+  "contactForm": {
+    "title": "Contact Us",
+    "success": "Thanks! Your message has been sent. We will contact you shortly.",
+    "errorRequired": "Please fill in your name, email and a short message.",
+    "errorSend": "Unable to send message. Please try again later.",
+    "placeholders": {
+      "name": "Your name",
+      "email": "Email",
+      "type": "Project Type (optional)",
+      "budget": "Budget (optional)",
+      "message": "Tell us about your project..."
     },
-    "features": {
-      "secureAccess300": "Безопасный доступ до 300 пользователей",
-      "customDomainEmail": "Корпоративная почта на вашем домене (you@yourcompany.com)",
-      "adminConsole": "Админ-консоль для управления доменом, почтой и массовыми операциями",
-      "aiThreatDetection": "AI-детект угроз с автоматической категоризацией писем",
-      "securityPipeline": "Многоуровневая защита (SPF, DKIM, DMARC, спам, malware, phishing)",
-      "securityFolders": "Сортировка по папкам безопасности (Secure, Spam, Dangerous Links, Malware, Phishing, Spoofed)",
-      "linkScannerAv": "Сканер ссылок и антивирусная проверка вложений",
-      "emailFlowVisualization": "Визуализация почтового потока по домену/организации с фильтрами",
-      "bulkManageDelete": "Управление и удаление писем для всех пользователей домена",
-      "customFoldersRules": "Пользовательские папки с авто-правилами (отправитель, домен, тема)",
-      "storage10gb": "10 ГБ защищённого хранилища на пользователя",
-      "storage5tb": "5 ТБ защищённого хранилища на пользователя",
-      "storage10tb": "10 ТБ защищённого хранилища на пользователя",
-      "multiAccountSupport": "Поддержка нескольких аккаунтов (интеграции Gmail/Outlook)",
-      "support247": "Поддержка 24/7 по почте и веб-каналам",
-      "fullTextSearch": "Полнотекстовый поиск по почте",
-      "aiAssistedCategorization": "AI-помощник по сортировке писем в папки безопасности",
-      "basicFiltering": "Пользовательские папки с базовыми правилами фильтрации",
-      "prioritySupport": "Приоритетная поддержка с более быстрыми ответами",
-      "dedicatedAM": "Выделенный аккаунт-менеджер",
-      "unlimitedUsers": "Без лимита пользователей"
+    "submit": {
+      "idle": "Send Message",
+      "loading": "Sending…"
+    }
+  },
+  "consulting": {
+    "title": "Consulting Questionnaire",
+    "searchPlaceholder": "Search questions...",
+    "noResults": "No questions found.",
+    "questions": [
+      {
+        "question": "What is your company's core value proposition beyond competitive pricing?",
+        "answer": "Security is our primary differentiator. We position ourselves as a company that builds highly secure systems with enterprise-grade security practices embedded throughout the development lifecycle."
+      },
+      {
+        "question": "How long has your company been in business, and what is your track record?",
+        "answer": "We have successfully delivered major projects including: NAK (Nur Astana Kurylys) - AI-powered team management platform, and Chic Flowers - Complete digital platform for a major flower retail company."
+      },
+      {
+        "question": "What differentiates your technical capabilities and service quality from EPAM and other competitors?",
+        "answer": "Our key differentiator is our security-first development approach. We integrate security practices from project inception through deployment and maintenance."
+      },
+      {
+        "question": "How do you maintain quality while offering competitive pricing?",
+        "answer": "We offer services at 15% below market rates while maintaining exceptional quality through optimized operations, strategic talent sourcing, and efficient project management methodologies."
+      },
+      {
+        "question": "What specific software development services do you provide?",
+        "answer": "End-to-end software development: custom applications, AI-powered solutions, cybersecurity product development (Silence AI-SOC), system integration, cloud migration, and DevOps. We also offer dedicated product development and staff augmentation."
+      },
+      {
+        "question": "Which industries and domains do you specialize in?",
+        "answer": "Construction, retail, fintech, cybersecurity, and digital platforms — including AI-driven team management, e-commerce, and enterprise security solutions."
+      },
+      {
+        "question": "What technology stacks and platforms does your team have expertise in?",
+        "answer": "GO, Swift, Flutter, cloud platforms (AWS/Azure/GCP), Docker/Kubernetes, FastAPI, JavaScript, and AI/ML frameworks. We build proprietary security tools like Silence AI-SOC."
+      },
+      {
+        "question": "Do you offer end-to-end product development or specific services only?",
+        "answer": "We offer both: MVPs, full-cycle product delivery, staff augmentation, and cybersecurity integration."
+      },
+      {
+        "question": "Can you provide both staff augmentation and dedicated team models?",
+        "answer": "Yes, we provide flexible engagement models: staff augmentation, dedicated teams, and project-based outsourcing."
+      },
+      {
+        "question": "Do you offer consulting, architecture, and advisory services beyond development?",
+        "answer": "Yes: cybersecurity consulting, system architecture design, technology advisory, and security compliance assessments using Silence AI-SOC."
+      }
+    ]
+  },
+  "requestSystemModal": {
+    "title": "Demander le système",
+    "name": "Nom",
+    "email": "E-mail professionnel",
+    "company": "Nom de l'entreprise",
+    "placeholders": {
+      "name": "Jean Dupont",
+      "email": "jean@entreprise.com",
+      "company": "Acme SAS"
+    },
+    "submit": "Télécharger",
+    "successTitle": "Demande envoyée !",
+    "successBody": "Merci. Les instructions de téléchargement du système seront envoyées à votre e-mail.",
+    "close": "Fermer"
+  },
+  "backToTop": {
+    "label": "Haut de page"
+  },
+  "badRequest": {
+    "title": "Błędne żądanie",
+    "cta": "Wróć na stronę główną",
+    "description": "The page you are looking for could not be found or the request was invalid."
+  },
+  "countrySelect": {
+    "title": "Wybierz kraj",
+    "subtitle": "Wybierz lokalizację, aby kontynuować",
+    "searchPlaceholder": "Szukaj kraju...",
+    "noResults": "Nie znaleziono krajów",
+    "continue": "Kontynuuj",
+    "comingSoon": {
+      "title": "Już prawie gotowe!",
+      "message": "Panel administracyjny do zarządzania subskrypcją będzie gotowy za",
+      "hours": "godziny",
+      "notification": "Powiadomimy Cię, gdy będzie dostępny!",
+      "back": "Wstecz",
+      "gotIt": "Rozumiem!"
     }
   }
 }

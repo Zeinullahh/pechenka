@@ -5,7 +5,6 @@ French (Français) - FR
 German (Deutsch) - DE
 Russian (Русский) - RU
 Dutch (Nederlands) - NL
-Norwegian (Norsk) - NO
 Estonian (Eesti) - ET
 Icelandic (Íslenska) - IS
 Turkish (Türkçe) - TR

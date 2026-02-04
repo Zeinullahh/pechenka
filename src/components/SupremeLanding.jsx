@@ -12,6 +12,22 @@ import GlowButton from "@/components/GlowButton";
 import { FloatingText } from "@/components/FloatingText";
 import Spotlights from "@/components/Spotlights";
 import SupremeBackground from "@/components/SupremeBackground";
+import Supreme2D from "@/components/Supreme2D";
+import { 
+  SiRuby, 
+  SiPython, 
+  SiPhp, 
+  SiNodedotjs, 
+  SiDotnet,
+  SiGo, 
+  SiRust, 
+  SiCplusplus, 
+  SiElixir, 
+  SiDart, 
+  SiSwift, 
+  SiJulia 
+} from "react-icons/si";
+import { FaJava } from "react-icons/fa";
 
 export default function SupremeLanding() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -30,47 +46,67 @@ export default function SupremeLanding() {
       yearly: "$150",
       suffix: "",
     },
-    KZT: {
-      monthly: "9,000",
-      yearly: "75,000",
-      suffix: " ₸",
-    },
   };
 
   const features = [
-    "Code analyzer runs locally, the code is not being exposed to external servers",
-    "Finds vulnerable packages vulnerabilities within the project of any programming language",
-    "Finds Misconfigurations, and Secrets",
-    "Can scan for CI/CD misconfigurations and vulnerabilities",
+    t(
+      "supreme.features.items.0",
+      "Code analyzer runs locally, the code is not being exposed to external servers"
+    ),
+    t(
+      "supreme.features.items.1",
+      "Finds vulnerable packages vulnerabilities within the project"
+    ),
+    t("supreme.features.items.2", "Finds Misconfigurations, and Secrets"),
+    t(
+      "supreme.features.items.3",
+      "Can scan for CI/CD misconfigurations and vulnerabilities"
+    ),
+  ];
+
+  const languages = [
+    { name: "Ruby", icon: SiRuby, color: "#CC342D" },
+    { name: "Python", icon: SiPython, color: "#3776AB" },
+    { name: "PHP", icon: SiPhp, color: "#777BB4" },
+    { name: "Node.js (JavaScript)", icon: SiNodedotjs, color: "#339933" },
+    { name: ".NET", icon: SiDotnet, color: "#512BD4" },
+    { name: "Java", icon: FaJava, color: "#007396" },
+    { name: "Go", icon: SiGo, color: "#00ADD8" },
+    { name: "Rust", icon: SiRust, color: "#DEA584" },
+    { name: "C / C++", icon: SiCplusplus, color: "#00599C" },
+    { name: "Elixir", icon: SiElixir, color: "#A374FF" }, 
+    { name: "Dart", icon: SiDart, color: "#0175C2" },
+    { name: "Swift", icon: SiSwift, color: "#F05138" },
+    { name: "Julia", icon: SiJulia, color: "#9558B2" },
   ];
 
   const screenshots = [
     {
-      title: "Very straightforward interface",
+      title: t("supreme.screenshots.0.title", "Very straightforward interface"),
       image: "/supreme_dashboard.jpeg",
       contains: [
         "Interactive dashboard",
         "Security score display",
-        "Real-time scan status"
-      ]
+        "Real-time scan status",
+      ],
     },
     {
-      title: "Well structured security reports",
+      title: t("supreme.screenshots.1.title", "Well structured security reports"),
       image: "/supreme_report.jpeg",
       contains: [
         "Detailed vulnerability analysis",
         "Code snippets with issues",
-        "Severity levels & explanations"
-      ]
+        "Severity levels & explanations",
+      ],
     },
     {
-      title: "History of scans",
+      title: t("supreme.screenshots.2.title", "History of scans"),
       image: "/supreme_scanning.jpeg",
       contains: [
         "Scan timeline view",
         "Progress tracking",
-        "Historical comparisons"
-      ]
+        "Historical comparisons",
+      ],
     },
   ];
 
@@ -141,7 +177,7 @@ export default function SupremeLanding() {
 
       <main className="relative z-10 pb-24">
         {/* Hero Section */}
-        <section className="relative px-4 sm:px-6 lg:px-8 pt-16 pb-20 overflow-hidden">
+        <section className="relative px-4 sm:px-6 lg:px-8 pt-10 pb-12 overflow-hidden">
           {/* Animated Background Spotlights component */}
           <div className="absolute inset-0 z-0">
              <Spotlights />
@@ -161,16 +197,16 @@ export default function SupremeLanding() {
           {/* Abstract Background Animation */}
           <SupremeBackground />
 
-          <div className="relative z-10 max-w-6xl mx-auto">
+          <div className="relative z-10 max-w-7xl mx-auto">
             <div className="flex flex-col lg:flex-row lg:items-center lg:gap-12 gap-8">
               {/* Left content */}
-              <div className="flex-1 space-y-6">
+              <div className="flex-[2] space-y-6">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.15em] text-slate-200"
                 >
-                  Supreme · VSCode Extension
+                  {t("supreme.hero.badge", "Supreme · VSCode Extension")}
                 </motion.div>
 
                 <motion.h1
@@ -179,7 +215,7 @@ export default function SupremeLanding() {
                   transition={{ delay: 0.1 }}
                   className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight"
                 >
-                  Local Code Vulnerability Scanner
+                  {t("supreme.hero.title", "Local Code Vulnerability Scanner")}
                 </motion.h1>
 
                 <motion.p
@@ -188,7 +224,10 @@ export default function SupremeLanding() {
                   transition={{ delay: 0.2 }}
                   className="text-lg text-slate-300 max-w-xl"
                 >
-                  Scan your code locally without exposing it to external servers. Fast, comprehensive vulnerability detection right in your editor.
+                  {t(
+                    "supreme.hero.description",
+                    "Scan your code locally without exposing it to external servers. Fast, comprehensive vulnerability detection right in your editor."
+                  )}
                 </motion.p>
 
                 <motion.div
@@ -197,60 +236,93 @@ export default function SupremeLanding() {
                   transition={{ delay: 0.3 }}
                   className="flex flex-wrap gap-3 pt-4"
                 >
-                  <GlowButton onClick={openModal} variant="primary" size="lg">
-                    Get Started
+                  <GlowButton
+                    onClick={() => (window.location.href = "https://supreme.silence.codes")}
+                    variant="primary"
+                    size="lg"
+                  >
+                    {t("header.cta.get", "Get")}
                   </GlowButton>
                 </motion.div>
               </div>
 
-              {/* Right 16:9 Video Card */}
+              {/* Right Box 3D Animation */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.4 }}
-                className="flex-1 w-full group"
-                whileHover={{ scale: 1.02 }}
+                className="flex-1 w-full h-[400px] flex items-center justify-center relative"
               >
-                <div className="relative aspect-video bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-white/10 rounded-2xl overflow-hidden shadow-2xl backdrop-blur-sm group-hover:border-purple-500/40 group-hover:shadow-2xl group-hover:shadow-purple-500/20 transition-all duration-300">
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(168,85,247,0.15),transparent_70%)] group-hover:bg-[radial-gradient(circle_at_center,rgba(168,85,247,0.25),transparent_70%)] transition-all duration-300" />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center">
-                      <motion.div
-                        animate={{ scale: [1, 1.1, 1] }}
-                        transition={{ duration: 2, repeat: Infinity }}
-                        className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-purple-500/20 border border-purple-500/40 mb-4"
-                      >
-                        <svg
-                          className="w-10 h-10 text-purple-400"
-                          fill="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path d="M8 5v14l11-7z" />
-                        </svg>
-                      </motion.div>
-                      <p className="text-slate-300 font-semibold text-lg">How to Use Supreme</p>
-                      <p className="text-slate-500 text-sm mt-1">Installation & Setup Guide</p>
-                    </div>
+                  <div className="relative w-full h-full flex items-center justify-center scale-[1.6]">
+                    <Supreme2D />
                   </div>
-                </div>
               </motion.div>
             </div>
           </div>
+        </section>
+
+        {/* Video / How to Use Guide Section */}
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+          <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="w-full max-w-4xl mx-auto"
+            >
+              <h3 className="text-2xl md:text-3xl font-bold text-white text-center mb-8">
+                {t(
+                  "supreme.video.title",
+                  "Installation & Usage tutorial (60 seconds)"
+                )}
+              </h3>
+              <div className="relative aspect-video bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-white/10 rounded-2xl overflow-hidden shadow-2xl backdrop-blur-sm group hover:border-purple-500/40 hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-300">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(168,85,247,0.15),transparent_70%)] group-hover:bg-[radial-gradient(circle_at_center,rgba(168,85,247,0.25),transparent_70%)] transition-all duration-300" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-center">
+                    <motion.div
+                      animate={{ scale: [1, 1.1, 1] }}
+                      transition={{ duration: 2, repeat: Infinity }}
+                      className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-purple-500/20 border border-purple-500/40 mb-4"
+                    >
+                      <svg
+                        className="w-10 h-10 text-purple-400"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </motion.div>
+                    <p className="text-slate-300 font-semibold text-lg">
+                      {t("supreme.video.cardTitle", "How to Use Supreme")}
+                    </p>
+                    <p className="text-slate-500 text-sm mt-1">
+                      {t(
+                        "supreme.video.cardSubtitle",
+                        "Installation & Setup Guide"
+                      )}
+                    </p>
+                  </div>
+                </div>
+              </div>
+          </motion.div>
         </section>
 
         {/* Pricing Section */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 space-y-12">
           <div className="text-center space-y-4">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">
-              Simple Pricing
+              {t("supreme.pricing.title", "Simple Pricing")}
             </h2>
             <p className="text-slate-400 max-w-2xl mx-auto text-lg">
-              Choose the plan that works best for you
+              {t(
+                "supreme.pricing.subtitle",
+                "Choose the plan that works best for you"
+              )}
             </p>
           </div>
 
-          {/* Currency Selector */}
-          <div className="flex justify-center gap-2">
+          {/* Currency Selector (Hidden as only USD is available) */}
+          {/* <div className="flex justify-center gap-2">
             <button
               onClick={() => setCurrency("USD")}
               className={`px-6 py-2 rounded-full font-medium transition-all ${
@@ -261,17 +333,7 @@ export default function SupremeLanding() {
             >
               USD
             </button>
-            <button
-              onClick={() => setCurrency("KZT")}
-              className={`px-6 py-2 rounded-full font-medium transition-all ${
-                currency === "KZT"
-                  ? "bg-purple-600 text-white"
-                  : "bg-slate-800/60 text-slate-300 hover:bg-slate-700/60"
-              }`}
-            >
-              KZT
-            </button>
-          </div>
+          </div> */}
 
           {/* Pricing Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-8 max-w-3xl mx-auto">
@@ -328,9 +390,14 @@ export default function SupremeLanding() {
                   <div className="relative z-10 space-y-3 sm:space-y-6 flex-1 flex flex-col">
                     <div>
                       <h3 className="text-lg sm:text-3xl font-bold text-white mb-1 sm:mb-2">
-                        Monthly
+                        {t("supreme.pricing.monthly.title", "Monthly")}
                       </h3>
-                      <p className="text-sm sm:text-base text-slate-400">Flexible, cancel anytime</p>
+                      <p className="text-sm sm:text-base text-slate-400">
+                        {t(
+                          "supreme.pricing.monthly.description",
+                          "Flexible, cancel anytime"
+                        )}
+                      </p>
                     </div>
 
                     <div className="pt-2 sm:pt-4">
@@ -338,15 +405,21 @@ export default function SupremeLanding() {
                         <span className="text-3xl sm:text-6xl font-bold text-white">
                           {pricing[currency].monthly}
                         </span>
-                        <span className="text-xs sm:text-base text-slate-400">/month</span>
+                        <span className="text-xs sm:text-base text-slate-400">
+                          /{t("supreme.pricing.month", "month")}
+                        </span>
                       </div>
                     </div>
 
                     <div className="flex-1" />
 
                     <div className="flex justify-center">
-                      <GlowButton onClick={openModal} variant="primary" innerClassName="px-6 py-2 sm:px-7 sm:py-3 text-sm sm:text-base">
-                        Subscribe Now
+                      <GlowButton
+                        onClick={openModal}
+                        variant="primary"
+                        innerClassName="px-6 py-2 sm:px-7 sm:py-3 text-sm sm:text-base"
+                      >
+                        {t("supreme.pricing.subscribe", "Subscribe Now")}
                       </GlowButton>
                     </div>
                   </div>
@@ -369,7 +442,7 @@ export default function SupremeLanding() {
                 transition={{ duration: 3, repeat: Infinity }}
                 className="absolute -top-4 left-8 z-20 px-4 py-1.5 bg-gradient-to-r from-purple-600 to-purple-500 rounded-full text-xs font-bold text-white shadow-lg"
               >
-                Save 30%
+                {t("supreme.pricing.saveBadge", "Save 30%")}
               </motion.div>
 
               {/* Glow backdrop */}
@@ -417,9 +490,11 @@ export default function SupremeLanding() {
                   <div className="relative z-10 space-y-3 sm:space-y-6 flex-1 flex flex-col">
                     <div>
                       <h3 className="text-lg sm:text-3xl font-bold text-white mb-1 sm:mb-2">
-                        Yearly
+                        {t("supreme.pricing.yearly.title", "Yearly")}
                       </h3>
-                      <p className="text-sm sm:text-base text-slate-400">Best value</p>
+                      <p className="text-sm sm:text-base text-slate-400">
+                        {t("supreme.pricing.yearly.description", "Best value")}
+                      </p>
                     </div>
 
                     <div className="pt-2 sm:pt-4">
@@ -427,16 +502,33 @@ export default function SupremeLanding() {
                         <span className="text-3xl sm:text-6xl font-bold text-white">
                           {pricing[currency].yearly}
                         </span>
-                        <span className="text-xs sm:text-base text-slate-400">/year</span>
+                        <span className="text-xs sm:text-base text-slate-400">
+                          /{t("supreme.pricing.year", "year")}
+                        </span>
                       </div>
-                      <p className="text-xs sm:text-sm text-slate-500">~{Math.round(parseInt(pricing[currency].yearly.replace(/[^0-9]/g, '')) / 12)} per month</p>
+                      <p className="text-xs sm:text-sm text-slate-500">
+                        {t(
+                          "supreme.pricing.perMonthApprox",
+                          "~{value} per month",
+                          {
+                            value: Math.round(
+                              parseInt(pricing[currency].yearly.replace(/[^0-9]/g, "")) /
+                                12
+                            ),
+                          }
+                        )}
+                      </p>
                     </div>
 
                     <div className="flex-1" />
 
                     <div className="flex justify-center">
-                      <GlowButton onClick={openModal} variant="primary" innerClassName="px-6 py-2 sm:px-7 sm:py-3 text-sm sm:text-base">
-                        Subscribe Now
+                      <GlowButton
+                        onClick={openModal}
+                        variant="primary"
+                        innerClassName="px-6 py-2 sm:px-7 sm:py-3 text-sm sm:text-base"
+                      >
+                        {t("supreme.pricing.subscribe", "Subscribe Now")}
                       </GlowButton>
                     </div>
                   </div>
@@ -446,14 +538,49 @@ export default function SupremeLanding() {
           </div>
         </section>
 
+        {/* Supported Languages Section */}
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-0 space-y-12">
+          <div className="text-center space-y-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">
+              {t("supreme.languages.title", "Supported Languages")}
+            </h2>
+            <p className="text-slate-400 max-w-2xl mx-auto text-lg">
+              {t(
+                "supreme.languages.subtitle",
+                "Comprehensive security scanning for all major programming languages"
+              )}
+            </p>
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-3 sm:gap-4 max-w-4xl mx-auto">
+            {languages.map((lang, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.05 }}
+                whileHover={{ scale: 1.05, y: -2 }}
+                className="px-5 py-2.5 sm:px-6 sm:py-3 rounded-xl bg-slate-900/60 border border-white/10 text-slate-300 font-medium hover:bg-purple-500/10 hover:border-purple-500/50 hover:text-white hover:shadow-[0_0_15px_rgba(168,85,247,0.3)] transition-all duration-300 cursor-default backdrop-blur-sm flex items-center gap-2.5"
+              >
+                <lang.icon className="w-5 h-5 transition-colors" style={{ color: lang.color }} />
+                {lang.name}
+              </motion.div>
+            ))}
+          </div>
+        </section>
+
         {/* Features Section */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-0 space-y-12">
           <div className="text-center space-y-4">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">
-              Powerful Features
+              {t("supreme.features.title", "Powerful Features")}
             </h2>
             <p className="text-slate-400 max-w-2xl mx-auto text-lg">
-              Everything you need for secure code development
+              {t(
+                "supreme.features.subtitle",
+                "Everything you need for secure code development"
+              )}
             </p>
           </div>
 
@@ -474,7 +601,7 @@ export default function SupremeLanding() {
                   }}
                 />
                 
-                <div className="relative flex items-start gap-4 p-6 bg-slate-900/40 border border-white/5 rounded-xl hover:border-purple-500/60 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-purple-500/20">
+                <div className="relative h-full flex items-start gap-4 p-6 bg-slate-900/40 border border-white/5 rounded-xl hover:border-purple-500/60 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-purple-500/20">
                   <div className="flex-shrink-0 w-6 h-6 rounded-full bg-purple-500/20 border border-purple-500/40 flex items-center justify-center mt-0.5 group-hover:bg-purple-500/40 group-hover:border-purple-500/80 transition-all duration-300">
                     <svg
                       className="w-4 h-4 text-purple-400"
@@ -555,14 +682,17 @@ export default function SupremeLanding() {
               setLightboxOpen(false);
             }}
             className="absolute top-6 right-6 text-slate-200 bg-black/40 rounded-full p-2"
-            aria-label="Close preview"
+            aria-label={t("supreme.lightbox.close", "Close preview")}
           >
             ✕
           </button>
 
           <img
             src={`/components/supreme/supreme-scan-${lightboxIndex + 1}.png`}
-            alt={screenshots[lightboxIndex]?.title || "Screenshot"}
+            alt={
+              screenshots[lightboxIndex]?.title ||
+              t("supreme.lightbox.alt", "Screenshot")
+            }
             className="max-h-[90vh] max-w-[90vw] rounded-lg shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           />

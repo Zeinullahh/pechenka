@@ -188,6 +188,9 @@
           "body2": "关于联盟计划的问题可发送至 info@silenceai.net。"
         }
       }
+    },
+    "balanceRewards": {
+      "lampTitle": "Nagrody salda"
     }
   },
   "hero": {
@@ -313,7 +316,10 @@
     "subtitle": "移动优先的计划，随您的产品扩展。",
     "percentMaintenance": "{percent}% 年度维护费用",
     "planEstimate": "${value}",
-    "perYear": "每年 (估算)"
+    "perYear": "每年 (估算)",
+    "calculator": {
+      "subtitle": "Przesuń suwak, aby zobaczyć roczny koszt utrzymania"
+    }
   },
   "solution": {
     "sectionTitle": "我们的解决方案",
@@ -472,7 +478,20 @@
         "title": "带本地 Copilot 的 IDE",
         "tag": "Cursor 级体验"
       },
-      "staysOnPrem": "保持本地。无外流。"
+      "staysOnPrem": "保持本地。无外流。",
+      "gitServer": {
+        "title": "Git Repository Server",
+        "tag": "Self-hosted"
+      },
+      "analyzer": {
+        "title": "Security Analyzer",
+        "tag": "Local scanning"
+      },
+      "vulnDb": {
+        "title": "Vulnerability Database",
+        "tag": "Synced daily"
+      },
+      "onPremNotice": "Stays on-prem. No egress."
     },
     "timeline": {
       "title": "为什么隔离和检查的代码很重要",
@@ -569,7 +588,8 @@
             "title": "行内差异",
             "description": "在安全上下文中行内查看并审阅建议补丁。"
           }
-        }
+        },
+        "frame": "SLNC-env Analyzer"
       }
     },
     "industries": {
@@ -595,6 +615,30 @@
         "title": "政府",
         "description": "政府部门、国防与关键机构"
       }
+    },
+    "pricing": {
+      "subtitle": "Proste, przejrzyste ceny",
+      "title": "Wybierz plan",
+      "limitedOffer": "Oferta ograniczona czasowo",
+      "priceIncreaseNotice": "Zablokuj obecne ceny! Po 6 miesiącach ceny wzrosną o 30%",
+      "monthlyPlan": "Miesięczny",
+      "monthlyDesc": "Elastyczne rozliczenie",
+      "yearlyPlan": "Roczny",
+      "yearlyDesc": "Najlepsza wartość",
+      "month": "miesiąc",
+      "billedAnnually": "Rozliczane rocznie za",
+      "doubleSavings": "2x OSZCZĘDNOŚCI",
+      "getStarted": "Zacznij",
+      "features": {
+        "fullAccess": "Pełny dostęp do platformy",
+        "support": "Priorytetowe wsparcie",
+        "cancelAnytime": "Możliwość rezygnacji w każdej chwili",
+        "priceLock": "Cena zablokowana na 12 miesięcy"
+      }
+    },
+    "comingSoon": {
+      "title": "Coming Soon",
+      "message": "This feature is currently under development."
     }
   },
   "pricingCta": {
@@ -695,7 +739,9 @@
     "close": "关闭"
   },
   "policySidebar": {
-    "tableOfContents": "目录"
+    "tableOfContents": "目录",
+    "close": "Close",
+    "topics": "Topics"
   },
   "whyChooseUs": {
     "badge": "结果导向的工程",
@@ -915,6 +961,11 @@
         "title": "Sithub",
         "desc": "带内置安全扫描的自托管 GitHub 替代方案。所有仓库与代码分析都保留在你的网络内。",
         "badge": "订阅"
+      },
+      "supreme": {
+        "title": "Supreme",
+        "desc": "Lokalny skaner podatności kodu dla VSCode. Analizuj kod bez wysyłania go na zewnętrzne serwery.",
+        "badge": "Rozszerzenie"
       }
     },
     "services": {
@@ -1895,6 +1946,138 @@
           ]
         }
       ]
+    },
+    "pricingMicrosoft": {
+      "business": "Business",
+      "enterprise": "Enterprise",
+      "withoutTeams": "Plans without Teams",
+      "withTeams": "With Teams",
+      "yearly": "Yearly",
+      "monthly": "Monthly",
+      "planHighlights": "Plan highlights",
+      "userMonth": "user/month",
+      "paidYearly": "paid yearly",
+      "paidMonthly": "paid monthly",
+      "plans": {
+        "businessPremium": {
+          "title": "Microsoft 365 Business Premium (no Teams)"
+        },
+        "businessStandard": {
+          "title": "Microsoft 365 Business Standard (no Teams)"
+        },
+        "businessBasic": {
+          "title": "Microsoft 365 Business Basic (no Teams)"
+        },
+        "enterpriseE3": {
+          "title": "Microsoft 365 E3"
+        },
+        "enterpriseE5": {
+          "title": "Microsoft 365 E5"
+        }
+      },
+      "features": {
+        "secureAccess300": "Secure access for up to 300 users",
+        "customDomainEmail": "Custom company email on your own domain (you@yourcompany.com)",
+        "adminConsole": "Admin console with domain-wide email management and bulk operations",
+        "aiThreatDetection": "AI-powered threat detection with automatic email categorization",
+        "securityPipeline": "Multi-layered email security pipeline (SPF, DKIM, DMARC, spam, malware, phishing)",
+        "securityFolders": "Email sorting into security folders (Secure, Spam, Dangerous Links, Malware, Phishing, Spoofed)",
+        "linkScannerAv": "Advanced link scanner and antivirus protection for attachments",
+        "emailFlowVisualization": "Email flow visualization across the domain/organization with comprehensive filters",
+        "bulkManageDelete": "Ability to manage and delete emails across all users in the domain",
+        "customFoldersRules": "Custom folders with auto-filtering rules (sender, domain, subject)",
+        "storage10gb": "10 GB secure mailbox storage per user",
+        "storage5tb": "5 TB secure mailbox storage per user",
+        "storage10tb": "10 TB secure mailbox storage per user",
+        "multiAccountSupport": "Multi-account support (Gmail/Outlook integration)",
+        "support247": "24/7 email and web support",
+        "fullTextSearch": "Email search with full-text capabilities",
+        "aiAssistedCategorization": "AI-assisted email categorization into security folders",
+        "basicFiltering": "Custom folders with basic filtering rules",
+        "prioritySupport": "Priority support with faster response times",
+        "dedicatedAM": "Dedicated account management",
+        "unlimitedUsers": "Supports unlimited users"
+      }
+    }
+  },
+  "supreme": {
+    "title": "Supreme",
+    "hero": {
+      "badge": "Supreme · VSCode Extension",
+      "title": "Local Code Vulnerability Scanner",
+      "description": "Scan your code locally without exposing it to external servers. Fast, comprehensive vulnerability detection right in your editor."
+    },
+    "video": {
+      "title": "Installation & Usage tutorial (60 seconds)",
+      "cardTitle": "How to Use Supreme",
+      "cardSubtitle": "Installation & Setup Guide"
+    },
+    "pricing": {
+      "title": "Simple Pricing",
+      "subtitle": "Choose the plan that works best for you",
+      "monthly": {
+        "title": "Monthly",
+        "description": "Flexible, cancel anytime"
+      },
+      "month": "month",
+      "subscribe": "Subscribe Now",
+      "saveBadge": "Save 30%",
+      "yearly": {
+        "title": "Yearly",
+        "description": "Best value"
+      },
+      "year": "year",
+      "perMonthApprox": "~{value} per month"
+    },
+    "languages": {
+      "title": "Supported Languages",
+      "subtitle": "Comprehensive security scanning for all major programming languages"
+    },
+    "features": {
+      "title": "Powerful Features",
+      "subtitle": "Everything you need for secure code development",
+      "items": [
+        "Code analyzer runs locally, the code is not being exposed to external servers",
+        "Finds vulnerable packages vulnerabilities within the project",
+        "Finds Misconfigurations, and Secrets",
+        "Can scan for CI/CD misconfigurations and vulnerabilities"
+      ]
+    },
+    "screenshots": [
+      {
+        "title": "Very straightforward interface"
+      },
+      {
+        "title": "Well structured security reports"
+      },
+      {
+        "title": "History of scans"
+      }
+    ],
+    "lightbox": {
+      "close": "Close",
+      "alt": "Screenshot"
+    }
+  },
+  "andManyMore": "Et bien plus encore...",
+  "badRequest": {
+    "title": "Błędne żądanie",
+    "cta": "Wróć na stronę główną",
+    "description": "The page you are looking for could not be found or the request was invalid."
+  },
+  "countrySelect": {
+    "title": "Wybierz kraj",
+    "subtitle": "Wybierz lokalizację, aby kontynuować",
+    "searchPlaceholder": "Szukaj kraju...",
+    "noResults": "Nie znaleziono krajów",
+    "continue": "Kontynuuj",
+    "comingSoon": {
+      "title": "Już prawie gotowe!",
+      "message": "Panel administracyjny do zarządzania subskrypcją będzie gotowy za",
+      "hours": "godziny",
+      "notification": "Powiadomimy Cię, gdy będzie dostępny!",
+      "back": "Wstecz",
+      "gotIt": "Rozumiem!"
     }
   }
 }

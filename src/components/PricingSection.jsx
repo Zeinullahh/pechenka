@@ -1,25 +1,18 @@
 import React, { useMemo, useState } from "react";
 import EdgeGlowCard from "./EdgeGlowCard";
-import CurrencySelector from "./CurrencySelector";
 import { useLanguage } from "@/contexts/LanguageContext";
-
-const USD_TO_KZT = 500;
 
 const PricingSection = () => {
   const { t } = useLanguage();
   const [projectCost, setProjectCost] = useState(25000);
-  const [currency, setCurrency] = useState("USD");
+  const [currency] = useState("USD");
 
   const formatCurrencyValue = (value) => {
-    if (currency === "USD") {
-      return `$${value.toLocaleString()}`;
-    }
-    const kztValue = value * USD_TO_KZT;
-    return `${kztValue.toLocaleString()} ₸`;
+    return `$${value.toLocaleString()}`;
   };
 
   const getSliderMax = () => {
-    return currency === "USD" ? 100000 : 100000;
+    return 100000;
   };
 
   const getSliderStep = () => {
@@ -83,10 +76,10 @@ const PricingSection = () => {
         </p>
       </div>
 
-      {/* Currency Selector */}
-      <div className="flex justify-center">
+      {/* Currency Selector (Hidden) */}
+      {/* <div className="flex justify-center">
         <CurrencySelector currency={currency} onCurrencyChange={setCurrency} />
-      </div>
+      </div> */}
 
       {/* Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
