@@ -1088,20 +1088,20 @@
   },
   "documentation": {
     "tabs": {
-      "web": "Web Security",
-      "email": "Email Security"
+      "web": "Veföryggi",
+      "email": "Tölvupóstöryggi"
     },
     "system": {
-      "sections": "Sections",
-      "topics": "Topics",
-      "tableOfContents": "Table of contents",
-      "close": "Close"
+      "sections": "Kaflar",
+      "topics": "Efni",
+      "tableOfContents": "Efnisyfirlit",
+      "close": "Loka"
     },
     "webSecurity": {
       "placeholder": {
-        "badge": "Web Security",
-        "title": "Documentation is coming soon",
-        "description": "We are preparing a detailed guide for configuring and protecting web applications. Check back soon — the materials will appear shortly."
+        "badge": "Veföryggi",
+        "title": "Skjöl eru væntanleg",
+        "description": "Við erum að undirbúa nákvæma leiðbeiningu um stillingu og verndun vefumsókna. Kíktu aftur fljótlega — efnið mun birtast innan skamms."
       }
     },
     "emailSecurity": {

@@ -997,20 +997,20 @@
   },
   "documentation": {
     "tabs": {
-      "web": "Web Security",
-      "email": "Email Security"
+      "web": "Bảo mật web",
+      "email": "Bảo mật email"
     },
     "system": {
-      "sections": "Sections",
-      "topics": "Topics",
-      "tableOfContents": "Table of contents",
-      "close": "Close"
+      "sections": "Phần",
+      "topics": "Chủ đề",
+      "tableOfContents": "Mục lục",
+      "close": "Đóng"
     },
     "webSecurity": {
       "placeholder": {
-        "badge": "Web Security",
-        "title": "Documentation is coming soon",
-        "description": "We are preparing a detailed guide for configuring and protecting web applications. Check back soon — the materials will appear shortly."
+        "badge": "Bảo mật web",
+        "title": "Tài liệu sắp ra mắt",
+        "description": "Chúng tôi đang chuẩn bị hướng dẫn chi tiết về cách cấu hình và bảo vệ ứng dụng web. Hãy quay lại sau — tài liệu sẽ xuất hiện trong thời gian ngắn."
       }
     },
     "emailSecurity": {

@@ -17,11 +17,19 @@ import {
     Settings,
     Sparkles,
     Lock,
-    Database
+    Database,
+    KeyRound,
+    BadgeCheck,
+    CornerUpRight,
+    PenLine,
+    Clock,
+    Paperclip,
+    FolderKanban,
+    CreditCard
 } from "lucide-react";
 
 const calloutClassMap = {
-    info: "border border-cyan-500/20 bg-cyan-500/5 text-cyan-200 shadow-[0_0_30px_-5px_rgba(34,211,238,0.15)]",
+    info: "border border-purple-500/20 bg-purple-500/5 text-purple-200 shadow-[0_0_30px_-5px_rgba(168,85,247,0.15)]",
     warning: "border border-amber-500/20 bg-amber-500/5 text-amber-200 shadow-[0_0_30px_-5px_rgba(245,158,11,0.15)]",
     success: "border border-emerald-500/20 bg-emerald-500/5 text-emerald-200 shadow-[0_0_30px_-5px_rgba(16,185,129,0.15)]",
 };
@@ -50,11 +58,11 @@ const themeStyles = {
     },
     domain: {
         icon: Globe,
-        text: "text-blue-400",
-        bg: "bg-blue-500/10",
-        border: "border-blue-500/20",
-        glow: "shadow-blue-500/20",
-        decoration: "from-blue-500/40"
+        text: "text-violet-400",
+        bg: "bg-violet-500/10",
+        border: "border-violet-500/20",
+        glow: "shadow-violet-500/20",
+        decoration: "from-violet-500/40"
     },
     user: {
         icon: User,
@@ -66,20 +74,39 @@ const themeStyles = {
     },
     default: {
         icon: ShieldCheck,
-        text: "text-cyan-400",
-        bg: "bg-cyan-500/10",
-        border: "border-cyan-500/20",
-        glow: "shadow-cyan-500/20",
-        decoration: "from-cyan-500/40"
+        text: "text-purple-400",
+        bg: "bg-purple-500/10",
+        border: "border-purple-500/20",
+        glow: "shadow-purple-500/20",
+        decoration: "from-purple-500/40"
     }
+};
+
+const getIconForSection = (title, fallbackIcon) => {
+    const t = (title || "").toLowerCase();
+
+    if (/dns|record/.test(t)) return Database;
+    if (/spf/.test(t)) return ShieldCheck;
+    if (/dkim/.test(t)) return KeyRound;
+    if (/dmarc/.test(t)) return BadgeCheck;
+    if (/authentication|oauth|login/.test(t)) return Lock;
+    if (/users|account|quota/.test(t)) return User;
+    if (/forwarding/.test(t)) return CornerUpRight;
+    if (/signature/.test(t)) return PenLine;
+    if (/auto-reply|vacation/.test(t)) return Clock;
+    if (/attachments|antivirus/.test(t)) return Paperclip;
+    if (/folders|rules/.test(t)) return FolderKanban;
+    if (/payment|billing/.test(t)) return CreditCard;
+
+    return fallbackIcon;
 };
 
 const BackgroundAmbience = () => (
     <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden h-full w-full bg-[#020617]">
-        {/* Top-left cyan glow */}
-        <div className="absolute -top-[10%] -left-[10%] w-[500px] h-[500px] bg-cyan-500/10 blur-[120px] rounded-full" />
-        {/* Bottom-right blue glow */}
-        <div className="absolute -bottom-[10%] -right-[10%] w-[500px] h-[500px] bg-blue-600/10 blur-[120px] rounded-full" />
+        {/* Top-left purple glow */}
+        <div className="absolute -top-[10%] -left-[10%] w-[500px] h-[500px] bg-purple-500/10 blur-[120px] rounded-full" />
+        {/* Bottom-right violet glow */}
+        <div className="absolute -bottom-[10%] -right-[10%] w-[500px] h-[500px] bg-violet-600/10 blur-[120px] rounded-full" />
         {/* Mid-top purple glow */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[300px] h-[300px] bg-purple-500/10 blur-[100px] rounded-full" />
     </div>
@@ -143,7 +170,7 @@ const renderBodyBlock = (block, blockIndex) => {
                 <ul className="space-y-2">
                     {block.items.map((item, idx) => (
                         <li key={idx} className="flex items-start gap-3 text-slate-300 leading-relaxed">
-                            <span className="mt-2 h-1.5 w-1.5 rounded-full bg-cyan-400/60 shrink-0" />
+                            <span className="mt-2 h-1.5 w-1.5 rounded-full bg-purple-400/60 shrink-0" />
                             <span>{item}</span>
                         </li>
                     ))}
@@ -158,7 +185,7 @@ const renderBodyBlock = (block, blockIndex) => {
                 <ol className="space-y-2 counter-reset-list">
                     {block.items.map((item, idx) => (
                         <li key={idx} className="flex items-start gap-3 text-slate-300 leading-relaxed group">
-                            <span className="flex h-5 w-5 items-center justify-center rounded border border-white/10 bg-white/5 text-xs font-medium text-slate-400 shrink-0 mt-1 group-hover:border-cyan-500/30 group-hover:text-cyan-400 transition-colors">
+                            <span className="flex h-5 w-5 items-center justify-center rounded border border-white/10 bg-white/5 text-xs font-medium text-slate-400 shrink-0 mt-1 group-hover:border-purple-500/30 group-hover:text-purple-400 transition-colors">
                                 {idx + 1}
                             </span>
                             <span>{item}</span>
@@ -179,7 +206,7 @@ const renderBodyBlock = (block, blockIndex) => {
                     <span className="ml-2 font-mono text-xs text-slate-500">Terminal</span>
                 </div>
                 <div className="overflow-x-auto p-4">
-                    <pre className="font-mono text-sm text-cyan-50">
+                    <pre className="font-mono text-sm text-purple-50">
                         <code>{block.content}</code>
                     </pre>
                 </div>
@@ -304,36 +331,44 @@ const EmailSecurityDocumentation = () => {
     }, [currentSections]);
 
     return (
-        <div className="relative min-h-screen w-full text-slate-200 selection:bg-cyan-500/30 selection:text-cyan-50">
+        <div className="relative min-h-screen w-full text-slate-200 selection:bg-purple-500/30 selection:text-purple-50">
             <BackgroundAmbience />
 
             <div className="relative z-10 w-full flex flex-col items-center">
                 {/* HERO SECTION */}
-                <div className="w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
+                <div className="w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 py-8 lg:py-12 relative">
+                    {/* Background Glows for Hero */}
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4/5 h-4/5 z-0 pointer-events-none">
+                        <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-purple-600/30 blur-[120px] rounded-full mix-blend-screen" />
+                        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-violet-600/30 blur-[120px] rounded-full mix-blend-screen" />
+                    </div>
+
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="relative w-full overflow-hidden rounded-2xl border border-cyan-500/10 bg-[#030712]/60 shadow-[0_0_40px_-10px_rgba(6,182,212,0.15)] backdrop-blur-2xl"
+                        className="relative z-10 w-full rounded-2xl p-[1px] bg-gradient-to-br from-purple-500/40 via-violet-500/10 to-purple-500/40 shadow-[0_0_50px_-10px_rgba(168,85,247,0.25)]"
                     >
-                        {/* Grid & Overlay */}
-                        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
-                        <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/3 w-64 h-64 bg-cyan-500/20 blur-[80px] rounded-full pointer-events-none" />
+                        <div className="relative w-full overflow-hidden rounded-2xl bg-[#030712]/80 backdrop-blur-2xl">
+                            {/* Grid & Overlay */}
+                            <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
+                            <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/3 w-64 h-64 bg-purple-500/20 blur-[80px] rounded-full pointer-events-none" />
 
-                        <div className="relative p-8 md:p-12 lg:p-16 text-center">
-                            <div className="flex justify-center mb-6">
-                                <div className="inline-flex items-center gap-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-cyan-200">
-                                    <ShieldCheck className="w-4 h-4" />
-                                    <span>{heroSubtitle}</span>
+                            <div className="relative p-8 md:p-12 lg:p-16 text-center">
+                                <div className="flex justify-center mb-6">
+                                    <div className="inline-flex items-center gap-2 rounded-full border border-purple-500/30 bg-purple-500/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-purple-200">
+                                        <ShieldCheck className="w-4 h-4" />
+                                        <span>{heroSubtitle}</span>
+                                    </div>
                                 </div>
+                                <h1 className="mb-6 text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
+                                    <span className="bg-gradient-to-r from-white via-purple-100 to-violet-200 bg-clip-text text-transparent">
+                                        {heroTitle}
+                                    </span>
+                                </h1>
+                                <p className="mx-auto max-w-2xl text-lg text-slate-300/80 font-light leading-relaxed">
+                                    {heroDescription}
+                                </p>
                             </div>
-                            <h1 className="mb-6 text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
-                                <span className="bg-gradient-to-r from-white via-cyan-100 to-blue-200 bg-clip-text text-transparent">
-                                    {heroTitle}
-                                </span>
-                            </h1>
-                            <p className="mx-auto max-w-2xl text-lg text-slate-300/80 font-light leading-relaxed">
-                                {heroDescription}
-                            </p>
                         </div>
                     </motion.div>
                 </div>
@@ -379,16 +414,16 @@ const EmailSecurityDocumentation = () => {
                                                 className={cn(
                                                     "relative w-full rounded-xl p-4 text-left transition-all duration-300 group overflow-hidden",
                                                     isActive
-                                                        ? "border border-cyan-500/30 bg-gradient-to-r from-cyan-950/40 to-[#020617] shadow-[0_0_20px_rgba(34,211,238,0.1)]"
+                                                        ? "border border-purple-500/30 bg-gradient-to-r from-purple-950/40 to-[#020617] shadow-[0_0_20px_rgba(168,85,247,0.1)]"
                                                         : "border border-transparent bg-white/[0.02] hover:bg-white/[0.05] hover:border-white/10"
                                                 )}
                                             >
                                                 {isActive && (
-                                                    <div className="absolute left-0 top-1/2 -translate-y-1/2 h-1/2 w-1 rounded-r-full bg-cyan-500 shadow-[0_0_10px_rgba(34,211,238,0.5)]" />
+                                                    <div className="absolute left-0 top-1/2 -translate-y-1/2 h-1/2 w-1 rounded-r-full bg-purple-500 shadow-[0_0_10px_rgba(168,85,247,0.5)]" />
                                                 )}
                                                 <div className={cn(
                                                     "text-sm font-semibold transition-colors mb-1",
-                                                    isActive ? "text-cyan-100" : "text-slate-400 group-hover:text-slate-200"
+                                                    isActive ? "text-purple-100" : "text-slate-400 group-hover:text-slate-200"
                                                 )}>
                                                     {chapter.title}
                                                 </div>
@@ -422,10 +457,17 @@ const EmailSecurityDocumentation = () => {
                                 {/* Connector Line (XL only) */}
                                 <div className="absolute left-[19px] top-6 bottom-6 w-px bg-gradient-to-b from-white/10 via-white/5 to-transparent hidden xl:block" />
 
-                                {currentSections.map((section) => {
+                                {currentSections.map((section, index) => {
                                     const themeKey = getTheme(section.title);
-                                    const theme = themeStyles[themeKey];
-                                    const Icon = theme.icon;
+                                    const Icon = getIconForSection(section.title, themeStyles[themeKey].icon);
+
+                                    const isPurple = index % 2 === 0;
+                                    const theme = {
+                                        text: isPurple ? "text-purple-400" : "text-emerald-400",
+                                        bg: isPurple ? "bg-purple-500/10" : "bg-emerald-500/10",
+                                        border: isPurple ? "border-purple-500/20" : "border-emerald-500/20",
+                                        glow: isPurple ? "shadow-purple-500/20" : "shadow-emerald-500/20"
+                                    };
 
                                     return (
                                         <motion.section
@@ -526,7 +568,7 @@ const EmailSecurityDocumentation = () => {
                                 className={cn(
                                     "w-full p-4 rounded-xl text-left border transition-all",
                                     activeChapter === c.id
-                                        ? "bg-cyan-500/10 border-cyan-500/30 text-cyan-200"
+                                        ? "bg-purple-500/10 border-purple-500/30 text-purple-200"
                                         : "bg-white/5 border-transparent text-slate-400 hover:bg-white/10"
                                 )}
                             >
@@ -550,13 +592,13 @@ const EmailSecurityDocumentation = () => {
                                 className={cn(
                                     "w-full py-3 px-4 rounded-lg text-left text-sm transition-all flex items-center gap-2",
                                     activeSection === s.id
-                                        ? "bg-cyan-500/10 text-cyan-200 font-medium"
+                                        ? "bg-purple-500/10 text-purple-200 font-medium"
                                         : "text-slate-400 hover:bg-white/5 hover:text-slate-200"
                                 )}
                             >
                                 <div className={cn(
                                     "w-1.5 h-1.5 rounded-full",
-                                    activeSection === s.id ? "bg-cyan-400" : "bg-slate-600"
+                                    activeSection === s.id ? "bg-purple-400" : "bg-slate-600"
                                 )} />
                                 {s.title}
                             </button>
