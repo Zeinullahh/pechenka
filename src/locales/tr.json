@@ -997,20 +997,20 @@
   },
   "documentation": {
     "tabs": {
-      "web": "Web Security",
-      "email": "Email Security"
+      "web": "Web Güvenliği",
+      "email": "E-posta Güvenliği"
     },
     "system": {
-      "sections": "Sections",
-      "topics": "Topics",
-      "tableOfContents": "Table of contents",
-      "close": "Close"
+      "sections": "Bölümler",
+      "topics": "Konu başlıkları",
+      "tableOfContents": "İçindekiler",
+      "close": "Kapat"
     },
     "webSecurity": {
       "placeholder": {
-        "badge": "Web Security",
-        "title": "Documentation is coming soon",
-        "description": "We are preparing a detailed guide for configuring and protecting web applications. Check back soon — the materials will appear shortly."
+        "badge": "Web Güvenliği",
+        "title": "Dokümantasyon yakında geliyor",
+        "description": "Web uygulamalarını yapılandırma ve koruma konusunda ayrıntılı bir rehber hazırlıyoruz. Yakında tekrar kontrol edin — materyaller kısa süre içinde yayınlanacak."
       }
     },
     "emailSecurity": {
