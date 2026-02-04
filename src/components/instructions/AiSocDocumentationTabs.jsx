@@ -5,11 +5,13 @@ import { motion } from "framer-motion";
 import EmailSecurityDocumentation from "@/components/instructions/EmailSecurityDocumentation";
 import { Card } from "@/components/ui/card";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useMessages } from "next-intl";
 
 export default function AiSocDocumentationTabs() {
     const { t } = useLanguage();
-    const tabLabels = t("documentation.tabs", {});
-    const placeholderCopy = t("documentation.webSecurity.placeholder", {});
+    const messages = useMessages();
+    const tabLabels = messages?.documentation?.tabs ?? {};
+    const placeholderCopy = messages?.documentation?.webSecurity?.placeholder ?? {};
     const tabs = useMemo(
         () => [
             { id: "web", label: tabLabels?.web ?? "Web Security" },

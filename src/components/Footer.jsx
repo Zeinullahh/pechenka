@@ -7,10 +7,7 @@ import Link from 'next/link';
 const Footer = () => {
   const { t } = useLanguage();
   const year = new Date().getFullYear();
-  const copyright = t("footer.copyright", `© ${year} Silence AI. All rights reserved.`).replace(
-    "{year}",
-    year
-  );
+  const copyright = t("footer.copyright", `© ${year} Silence AI. All rights reserved.`, { year });
 
   return (
     <footer className="bg-transparent text-white pt-52 pb-20 sm:pt-72 sm:pb-24 lg:pb-12 lg:pt-60">

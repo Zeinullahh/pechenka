@@ -4,6 +4,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useMessages } from "next-intl";
 import {
     ShieldCheck,
     Menu,
@@ -203,8 +204,9 @@ const renderBodyBlock = (block, blockIndex) => {
 
 const EmailSecurityDocumentation = () => {
     const { t } = useLanguage();
-    const doc = t("documentation.emailSecurity", {});
-    const labels = t("documentation.system", {});
+    const messages = useMessages();
+    const doc = messages?.documentation?.emailSecurity ?? {};
+    const labels = messages?.documentation?.system ?? {};
 
     const chapters = useMemo(() => doc?.chapters ?? [], [doc]);
     const heroTitle = doc?.title ?? "System Documentation";
