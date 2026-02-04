@@ -2003,60 +2003,60 @@
   "supreme": {
     "title": "Supreme",
     "hero": {
-      "badge": "Supreme · VSCode Extension",
-      "title": "Local Code Vulnerability Scanner",
-      "description": "Scan your code locally without exposing it to external servers. Fast, comprehensive vulnerability detection right in your editor."
+      "badge": "Supreme · Tiện ích mở rộng VSCode",
+      "title": "Trình quét lỗ hổng mã cục bộ",
+      "description": "Quét mã cục bộ mà không gửi lên máy chủ bên ngoài. Phát hiện lỗ hổng nhanh chóng, toàn diện ngay trong trình soạn thảo."
     },
     "video": {
-      "title": "Installation & Usage tutorial (60 seconds)",
-      "cardTitle": "How to Use Supreme",
-      "cardSubtitle": "Installation & Setup Guide"
+      "title": "Hướng dẫn cài đặt & sử dụng (5 phút)",
+      "cardTitle": "Cách dùng Supreme",
+      "cardSubtitle": "Hướng dẫn cài đặt & thiết lập"
     },
     "pricing": {
-      "title": "Simple Pricing",
-      "subtitle": "Choose the plan that works best for you",
+      "title": "Giá đơn giản",
+      "subtitle": "Chọn gói phù hợp nhất cho bạn",
       "monthly": {
-        "title": "Monthly",
-        "description": "Flexible, cancel anytime"
+        "title": "Hàng tháng",
+        "description": "Linh hoạt, có thể hủy bất kỳ lúc nào"
       },
-      "month": "month",
-      "subscribe": "Subscribe Now",
-      "saveBadge": "Save 30%",
+      "month": "tháng",
+      "subscribe": "Đăng ký ngay",
+      "saveBadge": "Tiết kiệm 30%",
       "yearly": {
-        "title": "Yearly",
-        "description": "Best value"
+        "title": "Hàng năm",
+        "description": "Giá trị tốt nhất"
       },
-      "year": "year",
-      "perMonthApprox": "~{value} per month"
+      "year": "năm",
+      "perMonthApprox": "~{value} mỗi tháng"
     },
     "languages": {
-      "title": "Supported Languages",
-      "subtitle": "Comprehensive security scanning for all major programming languages"
+      "title": "Ngôn ngữ được hỗ trợ",
+      "subtitle": "Quét bảo mật toàn diện cho tất cả các ngôn ngữ lập trình chính"
     },
     "features": {
-      "title": "Powerful Features",
-      "subtitle": "Everything you need for secure code development",
+      "title": "Tính năng mạnh mẽ",
+      "subtitle": "Mọi thứ bạn cần để phát triển mã an toàn",
       "items": [
-        "Code analyzer runs locally, the code is not being exposed to external servers",
-        "Finds vulnerable packages vulnerabilities within the project",
-        "Finds Misconfigurations, and Secrets",
-        "Can scan for CI/CD misconfigurations and vulnerabilities"
+        "Trình phân tích mã chạy cục bộ, mã không bị gửi tới máy chủ bên ngoài",
+        "Phát hiện các gói dễ tổn thương trong dự án",
+        "Phát hiện cấu hình sai và bí mật",
+        "Có thể quét cấu hình sai và lỗ hổng CI/CD"
       ]
     },
     "screenshots": [
       {
-        "title": "Very straightforward interface"
+        "title": "Giao diện rất trực quan"
       },
       {
-        "title": "Well structured security reports"
+        "title": "Báo cáo bảo mật có cấu trúc rõ ràng"
       },
       {
-        "title": "History of scans"
+        "title": "Lịch sử quét"
       }
     ],
     "lightbox": {
-      "close": "Close",
-      "alt": "Screenshot"
+      "close": "Đóng",
+      "alt": "Ảnh chụp màn hình"
     }
   },
   "andManyMore": "Et bien plus encore...",

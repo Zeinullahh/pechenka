@@ -2003,60 +2003,60 @@
   "supreme": {
     "title": "Supreme",
     "hero": {
-      "badge": "Supreme · VSCode Extension",
-      "title": "Local Code Vulnerability Scanner",
-      "description": "Scan your code locally without exposing it to external servers. Fast, comprehensive vulnerability detection right in your editor."
+      "badge": "Supreme · VSCode Eklentisi",
+      "title": "Yerel Kod Güvenlik Açığı Tarayıcısı",
+      "description": "Kodu harici sunuculara göndermeden yerel olarak tarayın. Editörünüzde hızlı ve kapsamlı güvenlik açığı tespiti."
     },
     "video": {
-      "title": "Installation & Usage tutorial (60 seconds)",
-      "cardTitle": "How to Use Supreme",
-      "cardSubtitle": "Installation & Setup Guide"
+      "title": "Kurulum ve kullanım eğitimi (5 dakika)",
+      "cardTitle": "Supreme Nasıl Kullanılır",
+      "cardSubtitle": "Kurulum ve Yapılandırma Rehberi"
     },
     "pricing": {
-      "title": "Simple Pricing",
-      "subtitle": "Choose the plan that works best for you",
+      "title": "Basit Fiyatlandırma",
+      "subtitle": "Size en uygun planı seçin",
       "monthly": {
-        "title": "Monthly",
-        "description": "Flexible, cancel anytime"
+        "title": "Aylık",
+        "description": "Esnek, istediğiniz zaman iptal"
       },
-      "month": "month",
-      "subscribe": "Subscribe Now",
-      "saveBadge": "Save 30%",
+      "month": "ay",
+      "subscribe": "Şimdi abone ol",
+      "saveBadge": "%30 tasarruf",
       "yearly": {
-        "title": "Yearly",
-        "description": "Best value"
+        "title": "Yıllık",
+        "description": "En iyi değer"
       },
-      "year": "year",
-      "perMonthApprox": "~{value} per month"
+      "year": "yıl",
+      "perMonthApprox": "Ayda ~{value}"
     },
     "languages": {
-      "title": "Supported Languages",
-      "subtitle": "Comprehensive security scanning for all major programming languages"
+      "title": "Desteklenen Diller",
+      "subtitle": "Tüm başlıca programlama dilleri için kapsamlı güvenlik taraması"
     },
     "features": {
-      "title": "Powerful Features",
-      "subtitle": "Everything you need for secure code development",
+      "title": "Güçlü Özellikler",
+      "subtitle": "Güvenli kod geliştirme için ihtiyacınız olan her şey",
       "items": [
-        "Code analyzer runs locally, the code is not being exposed to external servers",
-        "Finds vulnerable packages vulnerabilities within the project",
-        "Finds Misconfigurations, and Secrets",
-        "Can scan for CI/CD misconfigurations and vulnerabilities"
+        "Kod analizörü yerel olarak çalışır, kod harici sunuculara gönderilmez",
+        "Projede savunmasız paketleri bulur",
+        "Yanlış yapılandırmaları ve gizli anahtarları bulur",
+        "CI/CD yanlış yapılandırmalarını ve güvenlik açıklarını tarayabilir"
       ]
     },
     "screenshots": [
       {
-        "title": "Very straightforward interface"
+        "title": "Çok anlaşılır arayüz"
       },
       {
-        "title": "Well structured security reports"
+        "title": "İyi yapılandırılmış güvenlik raporları"
       },
       {
-        "title": "History of scans"
+        "title": "Tarama geçmişi"
       }
     ],
     "lightbox": {
-      "close": "Close",
-      "alt": "Screenshot"
+      "close": "Kapat",
+      "alt": "Ekran görüntüsü"
     }
   },
   "andManyMore": "Et bien plus encore...",

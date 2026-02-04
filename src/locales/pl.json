@@ -1910,60 +1910,60 @@
   "supreme": {
     "title": "Supreme",
     "hero": {
-      "badge": "Supreme · VSCode Extension",
-      "title": "Local Code Vulnerability Scanner",
-      "description": "Scan your code locally without exposing it to external servers. Fast, comprehensive vulnerability detection right in your editor."
+      "badge": "Supreme · Rozszerzenie VSCode",
+      "title": "Lokalny skaner podatności kodu",
+      "description": "Skanuj kod lokalnie bez wysyłania go na zewnętrzne serwery. Szybkie, kompleksowe wykrywanie podatności bezpośrednio w edytorze."
     },
     "video": {
-      "title": "Installation & Usage tutorial (60 seconds)",
-      "cardTitle": "How to Use Supreme",
-      "cardSubtitle": "Installation & Setup Guide"
+      "title": "Instrukcja instalacji i użytkowania (5 minut)",
+      "cardTitle": "Jak używać Supreme",
+      "cardSubtitle": "Instrukcja instalacji i konfiguracji"
     },
     "pricing": {
-      "title": "Simple Pricing",
-      "subtitle": "Choose the plan that works best for you",
+      "title": "Proste ceny",
+      "subtitle": "Wybierz plan najlepszy dla Ciebie",
       "monthly": {
-        "title": "Monthly",
-        "description": "Flexible, cancel anytime"
+        "title": "Miesięczny",
+        "description": "Elastycznie, anuluj w dowolnym momencie"
       },
-      "month": "month",
-      "subscribe": "Subscribe Now",
-      "saveBadge": "Save 30%",
+      "month": "miesiąc",
+      "subscribe": "Subskrybuj teraz",
+      "saveBadge": "Oszczędź 30%",
       "yearly": {
-        "title": "Yearly",
-        "description": "Best value"
+        "title": "Roczny",
+        "description": "Najlepsza wartość"
       },
-      "year": "year",
-      "perMonthApprox": "~{value} per month"
+      "year": "rok",
+      "perMonthApprox": "~{value} miesięcznie"
     },
     "languages": {
-      "title": "Supported Languages",
-      "subtitle": "Comprehensive security scanning for all major programming languages"
+      "title": "Obsługiwane języki",
+      "subtitle": "Kompleksowe skanowanie bezpieczeństwa dla wszystkich głównych języków programowania"
     },
     "features": {
-      "title": "Powerful Features",
-      "subtitle": "Everything you need for secure code development",
+      "title": "Potężne funkcje",
+      "subtitle": "Wszystko, czego potrzebujesz do bezpiecznego tworzenia kodu",
       "items": [
-        "Code analyzer runs locally, the code is not being exposed to external servers",
-        "Finds vulnerable packages vulnerabilities within the project",
-        "Finds Misconfigurations, and Secrets",
-        "Can scan for CI/CD misconfigurations and vulnerabilities"
+        "Analizator kodu działa lokalnie, kod nie jest wysyłany na zewnętrzne serwery",
+        "Wykrywa podatne pakiety w projekcie",
+        "Wykrywa błędne konfiguracje i sekrety",
+        "Może skanować błędne konfiguracje i podatności CI/CD"
       ]
     },
     "screenshots": [
       {
-        "title": "Very straightforward interface"
+        "title": "Bardzo przejrzysty interfejs"
       },
       {
-        "title": "Well structured security reports"
+        "title": "Dobrze uporządkowane raporty bezpieczeństwa"
       },
       {
-        "title": "History of scans"
+        "title": "Historia skanów"
       }
     ],
     "lightbox": {
-      "close": "Close",
-      "alt": "Screenshot"
+      "close": "Zamknij",
+      "alt": "Zrzut ekranu"
     }
   },
   "andManyMore": "Et bien plus encore...",

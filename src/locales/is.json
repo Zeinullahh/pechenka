@@ -32,69 +32,69 @@
     },
     "login": "Biðja um sýnikennslu",
     "cta": {
-      "contact": "Contact",
+      "contact": "Hafa samband",
       "download": "Sækja",
-      "requestDemo": "Biðja um sýnikennslu",
-      "get": "Get"
+      "requestDemo": "Biðja um kynningu",
+      "get": "Fá"
     }
   },
   "supreme": {
     "title": "Supreme",
     "hero": {
-      "badge": "Supreme · VSCode Extension",
-      "title": "Local Code Vulnerability Scanner",
-      "description": "Scan your code locally without exposing it to external servers. Fast, comprehensive vulnerability detection right in your editor."
+      "badge": "Supreme · VSCode-viðbót",
+      "title": "Staðbundinn veikleikaskanni fyrir kóða",
+      "description": "Skannaðu kóðann þinn staðbundið án þess að senda hann á ytri netþjóna. Hröð og ítarleg veikleikagreining beint í ritlinum."
     },
     "video": {
-      "title": "Installation & Usage tutorial (60 seconds)",
-      "cardTitle": "How to Use Supreme",
-      "cardSubtitle": "Installation & Setup Guide"
+      "title": "Uppsetning og notkun (5 mínútur)",
+      "cardTitle": "Hvernig á að nota Supreme",
+      "cardSubtitle": "Uppsetningar- og leiðbeiningar"
     },
     "pricing": {
-      "title": "Simple Pricing",
-      "subtitle": "Choose the plan that works best for you",
+      "title": "Einföld verðskrá",
+      "subtitle": "Veldu áætlunina sem hentar þér best",
       "monthly": {
-        "title": "Monthly",
-        "description": "Flexible, cancel anytime"
+        "title": "Mánaðarlegt",
+        "description": "Sveigjanlegt, hægt að hætta hvenær sem er"
       },
-      "month": "mánaða",
-      "subscribe": "Subscribe Now",
-      "saveBadge": "Save 30%",
+      "month": "mánuður",
+      "subscribe": "Skráðu þig núna",
+      "saveBadge": "Sparaðu 30%",
       "yearly": {
-        "title": "Yearly",
-        "description": "Best value"
+        "title": "Árlegt",
+        "description": "Best verðgildi"
       },
       "year": "ár",
-      "perMonthApprox": "~{value} per month"
+      "perMonthApprox": "~{value} á mánuði"
     },
     "languages": {
-      "title": "Supported Languages",
-      "subtitle": "Comprehensive security scanning for all major programming languages"
+      "title": "Stuðningstungumál",
+      "subtitle": "Heildstæð öryggisskönnun fyrir öll helstu forritunarmál"
     },
     "features": {
-      "title": "Powerful Features",
-      "subtitle": "Everything you need for secure code development",
+      "title": "Öflugir eiginleikar",
+      "subtitle": "Allt sem þú þarft fyrir örugga kóðun",
       "items": [
-        "Code analyzer runs locally, the code is not being exposed to external servers",
-        "Finds vulnerable packages vulnerabilities within the project",
-        "Finds Misconfigurations, and Secrets",
-        "Can scan for CI/CD misconfigurations and vulnerabilities"
+        "Kóðagreinirinn keyrir staðbundið og kóðinn er ekki sendur á ytri netþjóna",
+        "Finnur veik pakka í verkefninu",
+        "Finnur rangar stillingar og leyndarmál",
+        "Getur skannað rangar CI/CD stillingar og veikleika"
       ]
     },
     "screenshots": [
       {
-        "title": "Very straightforward interface"
+        "title": "Mjög einfalt viðmót"
       },
       {
-        "title": "Well structured security reports"
+        "title": "Vel uppbyggðar öryggisskýrslur"
       },
       {
-        "title": "History of scans"
+        "title": "Saga skanna"
       }
     ],
     "lightbox": {
       "close": "Loka",
-      "alt": "Screenshot"
+      "alt": "Skjámynd"
     }
   },
   "affiliate": {

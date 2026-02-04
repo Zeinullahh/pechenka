@@ -204,8 +204,9 @@ export default function SupremeLanding() {
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.15em] text-slate-200"
+                  className="relative inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 pl-7 text-xs font-semibold uppercase tracking-[0.15em] text-slate-200"
                 >
+                  <span className="absolute left-2 top-2 h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)] animate-pulse" />
                   {t("supreme.hero.badge", "Supreme · VSCode Extension")}
                 </motion.div>
 
@@ -272,37 +273,20 @@ export default function SupremeLanding() {
               <h3 className="text-2xl md:text-3xl font-bold text-white text-center mb-8">
                 {t(
                   "supreme.video.title",
-                  "Installation & Usage tutorial (60 seconds)"
+                  "Installation & Usage tutorial (5 minutes)"
                 )}
               </h3>
               <div className="relative aspect-video bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-white/10 rounded-2xl overflow-hidden shadow-2xl backdrop-blur-sm group hover:border-purple-500/40 hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-300">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(168,85,247,0.15),transparent_70%)] group-hover:bg-[radial-gradient(circle_at_center,rgba(168,85,247,0.25),transparent_70%)] transition-all duration-300" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center">
-                    <motion.div
-                      animate={{ scale: [1, 1.1, 1] }}
-                      transition={{ duration: 2, repeat: Infinity }}
-                      className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-purple-500/20 border border-purple-500/40 mb-4"
-                    >
-                      <svg
-                        className="w-10 h-10 text-purple-400"
-                        fill="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M8 5v14l11-7z" />
-                      </svg>
-                    </motion.div>
-                    <p className="text-slate-300 font-semibold text-lg">
-                      {t("supreme.video.cardTitle", "How to Use Supreme")}
-                    </p>
-                    <p className="text-slate-500 text-sm mt-1">
-                      {t(
-                        "supreme.video.cardSubtitle",
-                        "Installation & Setup Guide"
-                      )}
-                    </p>
-                  </div>
-                </div>
+                <iframe 
+                  width="100%" 
+                  height="100%" 
+                  src="https://www.youtube.com/embed/5dPw7giSBus" 
+                  title="Installation & Usage tutorial" 
+                  frameBorder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  allowFullScreen
+                  className="w-full h-full"
+                ></iframe>
               </div>
           </motion.div>
         </section>

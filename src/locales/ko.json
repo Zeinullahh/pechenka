@@ -2043,60 +2043,60 @@
   "supreme": {
     "title": "Supreme",
     "hero": {
-      "badge": "Supreme · VSCode Extension",
-      "title": "Local Code Vulnerability Scanner",
-      "description": "Scan your code locally without exposing it to external servers. Fast, comprehensive vulnerability detection right in your editor."
+      "badge": "Supreme · VSCode 확장",
+      "title": "로컬 코드 취약점 스캐너",
+      "description": "외부 서버로 보내지 않고 로컬에서 코드를 스캔합니다. 에디터 안에서 빠르고 포괄적으로 취약점을 탐지하세요."
     },
     "video": {
-      "title": "Installation & Usage tutorial (60 seconds)",
-      "cardTitle": "How to Use Supreme",
-      "cardSubtitle": "Installation & Setup Guide"
+      "title": "설치 및 사용 튜토리얼(5분)",
+      "cardTitle": "Supreme 사용법",
+      "cardSubtitle": "설치 및 설정 가이드"
     },
     "pricing": {
-      "title": "Simple Pricing",
-      "subtitle": "Choose the plan that works best for you",
+      "title": "간단한 요금제",
+      "subtitle": "가장 적합한 플랜을 선택하세요",
       "monthly": {
-        "title": "Monthly",
-        "description": "Flexible, cancel anytime"
+        "title": "월간",
+        "description": "유연함, 언제든지 취소 가능"
       },
-      "month": "month",
-      "subscribe": "Subscribe Now",
-      "saveBadge": "Save 30%",
+      "month": "월",
+      "subscribe": "지금 구독",
+      "saveBadge": "30% 절약",
       "yearly": {
-        "title": "Yearly",
-        "description": "Best value"
+        "title": "연간",
+        "description": "최고의 가치"
       },
-      "year": "year",
-      "perMonthApprox": "~{value} per month"
+      "year": "년",
+      "perMonthApprox": "월 약 {value}"
     },
     "languages": {
-      "title": "Supported Languages",
-      "subtitle": "Comprehensive security scanning for all major programming languages"
+      "title": "지원 언어",
+      "subtitle": "주요 프로그래밍 언어에 대한 포괄적 보안 스캔"
     },
     "features": {
-      "title": "Powerful Features",
-      "subtitle": "Everything you need for secure code development",
+      "title": "강력한 기능",
+      "subtitle": "안전한 코드 개발에 필요한 모든 것",
       "items": [
-        "Code analyzer runs locally, the code is not being exposed to external servers",
-        "Finds vulnerable packages vulnerabilities within the project",
-        "Finds Misconfigurations, and Secrets",
-        "Can scan for CI/CD misconfigurations and vulnerabilities"
+        "코드 분석기는 로컬에서 실행되며 코드가 외부 서버에 노출되지 않습니다",
+        "프로젝트 내 취약한 패키지를 탐지",
+        "오구성 및 시크릿을 탐지",
+        "CI/CD 오구성 및 취약점 스캔 가능"
       ]
     },
     "screenshots": [
       {
-        "title": "Very straightforward interface"
+        "title": "매우 직관적인 인터페이스"
       },
       {
-        "title": "Well structured security reports"
+        "title": "체계적인 보안 보고서"
       },
       {
-        "title": "History of scans"
+        "title": "스캔 기록"
       }
     ],
     "lightbox": {
-      "close": "Close",
-      "alt": "Screenshot"
+      "close": "닫기",
+      "alt": "스크린샷"
     }
   },
   "andManyMore": "Et bien plus encore...",

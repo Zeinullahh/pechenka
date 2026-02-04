@@ -2003,60 +2003,60 @@
   "supreme": {
     "title": "Supreme",
     "hero": {
-      "badge": "Supreme · VSCode Extension",
-      "title": "Local Code Vulnerability Scanner",
-      "description": "Scan your code locally without exposing it to external servers. Fast, comprehensive vulnerability detection right in your editor."
+      "badge": "Supreme · VSCode 扩展",
+      "title": "本地代码漏洞扫描器",
+      "description": "在本地扫描代码，无需发送到外部服务器。在你的编辑器中快速、全面地检测漏洞。"
     },
     "video": {
-      "title": "Installation & Usage tutorial (60 seconds)",
-      "cardTitle": "How to Use Supreme",
-      "cardSubtitle": "Installation & Setup Guide"
+      "title": "安装与使用教程（5 分钟）",
+      "cardTitle": "Supreme 使用指南",
+      "cardSubtitle": "安装与配置指南"
     },
     "pricing": {
-      "title": "Simple Pricing",
-      "subtitle": "Choose the plan that works best for you",
+      "title": "简洁定价",
+      "subtitle": "选择最适合你的方案",
       "monthly": {
-        "title": "Monthly",
-        "description": "Flexible, cancel anytime"
+        "title": "月付",
+        "description": "灵活，随时取消"
       },
-      "month": "month",
-      "subscribe": "Subscribe Now",
-      "saveBadge": "Save 30%",
+      "month": "月",
+      "subscribe": "立即订阅",
+      "saveBadge": "立省 30%",
       "yearly": {
-        "title": "Yearly",
-        "description": "Best value"
+        "title": "年付",
+        "description": "性价比最高"
       },
-      "year": "year",
-      "perMonthApprox": "~{value} per month"
+      "year": "年",
+      "perMonthApprox": "约 {value}/月"
     },
     "languages": {
-      "title": "Supported Languages",
-      "subtitle": "Comprehensive security scanning for all major programming languages"
+      "title": "支持的语言",
+      "subtitle": "覆盖主流编程语言的全面安全扫描"
     },
     "features": {
-      "title": "Powerful Features",
-      "subtitle": "Everything you need for secure code development",
+      "title": "强大功能",
+      "subtitle": "安全代码开发所需的一切",
       "items": [
-        "Code analyzer runs locally, the code is not being exposed to external servers",
-        "Finds vulnerable packages vulnerabilities within the project",
-        "Finds Misconfigurations, and Secrets",
-        "Can scan for CI/CD misconfigurations and vulnerabilities"
+        "代码分析器在本地运行，代码不会暴露给外部服务器",
+        "检测项目中的易受攻击依赖包",
+        "发现配置错误与密钥",
+        "可扫描 CI/CD 配置错误与漏洞"
       ]
     },
     "screenshots": [
       {
-        "title": "Very straightforward interface"
+        "title": "非常直观的界面"
       },
       {
-        "title": "Well structured security reports"
+        "title": "结构清晰的安全报告"
       },
       {
-        "title": "History of scans"
+        "title": "扫描历史"
       }
     ],
     "lightbox": {
-      "close": "Close",
-      "alt": "Screenshot"
+      "close": "关闭",
+      "alt": "截图"
     }
   },
   "andManyMore": "Et bien plus encore...",

@@ -2008,60 +2008,60 @@
   "supreme": {
     "title": "Supreme",
     "hero": {
-      "badge": "Supreme · VSCode Extension",
-      "title": "Local Code Vulnerability Scanner",
-      "description": "Scan your code locally without exposing it to external servers. Fast, comprehensive vulnerability detection right in your editor."
+      "badge": "Supreme · VSCode 拡張機能",
+      "title": "ローカルコード脆弱性スキャナー",
+      "description": "外部サーバーに送信せずにローカルでコードをスキャン。エディタ内で高速かつ包括的に脆弱性を検出します。"
     },
     "video": {
-      "title": "Installation & Usage tutorial (60 seconds)",
-      "cardTitle": "How to Use Supreme",
-      "cardSubtitle": "Installation & Setup Guide"
+      "title": "インストール＆使用方法チュートリアル（5分）",
+      "cardTitle": "Supreme の使い方",
+      "cardSubtitle": "インストール＆セットアップガイド"
     },
     "pricing": {
-      "title": "Simple Pricing",
-      "subtitle": "Choose the plan that works best for you",
+      "title": "シンプルな料金",
+      "subtitle": "最適なプランをお選びください",
       "monthly": {
-        "title": "Monthly",
-        "description": "Flexible, cancel anytime"
+        "title": "月額",
+        "description": "柔軟、いつでも解約可能"
       },
-      "month": "month",
-      "subscribe": "Subscribe Now",
-      "saveBadge": "Save 30%",
+      "month": "月",
+      "subscribe": "今すぐ購読",
+      "saveBadge": "30%お得",
       "yearly": {
-        "title": "Yearly",
-        "description": "Best value"
+        "title": "年額",
+        "description": "最高の価値"
       },
-      "year": "year",
-      "perMonthApprox": "~{value} per month"
+      "year": "年",
+      "perMonthApprox": "月あたり約{value}"
     },
     "languages": {
-      "title": "Supported Languages",
-      "subtitle": "Comprehensive security scanning for all major programming languages"
+      "title": "対応言語",
+      "subtitle": "主要なプログラミング言語を網羅したセキュリティスキャン"
     },
     "features": {
-      "title": "Powerful Features",
-      "subtitle": "Everything you need for secure code development",
+      "title": "強力な機能",
+      "subtitle": "安全なコード開発に必要なすべて",
       "items": [
-        "Code analyzer runs locally, the code is not being exposed to external servers",
-        "Finds vulnerable packages vulnerabilities within the project",
-        "Finds Misconfigurations, and Secrets",
-        "Can scan for CI/CD misconfigurations and vulnerabilities"
+        "コードアナライザーはローカルで動作し、コードは外部サーバーに送信されません",
+        "プロジェクト内の脆弱なパッケージを検出",
+        "設定ミスとシークレットを検出",
+        "CI/CD の設定ミスと脆弱性をスキャン可能"
       ]
     },
     "screenshots": [
       {
-        "title": "Very straightforward interface"
+        "title": "とても分かりやすいインターフェース"
       },
       {
-        "title": "Well structured security reports"
+        "title": "構造化されたセキュリティレポート"
       },
       {
-        "title": "History of scans"
+        "title": "スキャン履歴"
       }
     ],
     "lightbox": {
-      "close": "Close",
-      "alt": "Screenshot"
+      "close": "閉じる",
+      "alt": "スクリーンショット"
     }
   },
   "andManyMore": "Et bien plus encore...",
