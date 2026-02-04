@@ -1083,6 +1083,10 @@
       "title": "Supported Languages",
       "subtitle": "Comprehensive security scanning for all major programming languages"
     },
+    "cicd": {
+      "title": "CI/CD & Container Scanning",
+      "subtitle": "Detect vulnerabilities in CI/CD pipelines and Docker container configurations"
+    },
     "features": {
       "title": "Powerful Features",
       "subtitle": "Everything you need for secure code development",

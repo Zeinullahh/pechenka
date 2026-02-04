@@ -25,7 +25,10 @@ import {
   SiElixir, 
   SiDart, 
   SiSwift, 
-  SiJulia 
+  SiJulia,
+  SiDocker,
+  SiGithubactions,
+  SiGitlab
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
 
@@ -78,6 +81,12 @@ export default function SupremeLanding() {
     { name: "Dart", icon: SiDart, color: "#0175C2" },
     { name: "Swift", icon: SiSwift, color: "#F05138" },
     { name: "Julia", icon: SiJulia, color: "#9558B2" },
+  ];
+
+  const cicdAndContainers = [
+    { name: "Docker", icon: SiDocker, color: "#2496ED" },
+    { name: "GitHub Actions", icon: SiGithubactions, color: "#2088FF" },
+    { name: "GitLab CI", icon: SiGitlab, color: "#FC6D26" },
   ];
 
   const screenshots = [
@@ -551,6 +560,38 @@ export default function SupremeLanding() {
                 {lang.name}
               </motion.div>
             ))}
+          </div>
+
+          {/* CI/CD & Container Scanning */}
+          <div className="text-center space-y-6 pt-8">
+            <div className="space-y-2">
+              <h3 className="text-2xl sm:text-3xl font-bold text-white">
+                {t("supreme.cicd.title", "CI/CD & Container Scanning")}
+              </h3>
+              <p className="text-slate-400 max-w-2xl mx-auto text-base">
+                {t(
+                  "supreme.cicd.subtitle",
+                  "Detect vulnerabilities in CI/CD pipelines and Docker container configurations"
+                )}
+              </p>
+            </div>
+
+            <div className="flex flex-wrap justify-center gap-3 sm:gap-4 max-w-3xl mx-auto">
+              {cicdAndContainers.map((tech, idx) => (
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: idx * 0.05 }}
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  className="px-5 py-2.5 sm:px-6 sm:py-3 rounded-xl bg-slate-900/60 border border-white/10 text-slate-300 font-medium hover:bg-purple-500/10 hover:border-purple-500/50 hover:text-white hover:shadow-[0_0_15px_rgba(168,85,247,0.3)] transition-all duration-300 cursor-default backdrop-blur-sm flex items-center gap-2.5"
+                >
+                  <tech.icon className="w-5 h-5 transition-colors" style={{ color: tech.color }} />
+                  {tech.name}
+                </motion.div>
+              ))}
+            </div>
           </div>
         </section>
 

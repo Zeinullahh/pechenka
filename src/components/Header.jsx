@@ -105,7 +105,7 @@ const Header = ({ onOpenModal, policyLang, onPolicyLangChange, onSithubGet, hide
 
   const instructionsItems = [
     { key: "instructions-ai-soc", label: t("header.nav.instructionsAiSoc", "AI-SOC"), href: "/instructions/ai-soc" },
-    { key: "instructions-supreme", label: t("header.nav.instructionsSupreme", "Supreme") },
+    { key: "instructions-supreme", label: t("header.nav.instructionsSupreme", "Supreme"), href: "/instructions/supreme" },
   ];
 
   const navItems = [

@@ -1,4 +1,50 @@
 {
+  "home": {
+    "hero": {
+      "title": "Кибербезопасность больше не",
+      "titleHighlight": "сложная или дорогая",
+      "subtitle": "Создавайте безопасно. Развёртывайте уверенно."
+    },
+    "systems": {
+      "title": "Системы",
+      "cta": "Подробнее",
+      "aiSoc": {
+        "title": "AI-SOC",
+        "desc": "Система обнаружения и реагирования на основе ИИ. Защита от веб- и email-атак.",
+        "badge": "Подписка"
+      },
+      "sithub": {
+        "title": "Sithub",
+        "desc": "Самостоятельно размещаемая альтернатива GitHub со встроенным сканированием безопасности. Все репозитории и анализ кода остаются в вашей сети.",
+        "badge": "Подписка"
+      },
+      "supreme": {
+        "title": "Supreme",
+        "desc": "Локальный сканер уязвимостей кода для VSCode. Анализируйте код без отправки на внешние серверы.",
+        "badge": "Расширение"
+      }
+    },
+    "services": {
+      "title": "Услуги индивидуальной разработки",
+      "subtitle": "ИИ-агенты, интеграции и полный цикл разработки с безопасностью с первого дня.",
+      "cta": "Смотреть услуги",
+      "cardsTitle": {
+        "agents": "Агенты",
+        "integrations": "Интеграции",
+        "delivery": "Доставка"
+      },
+      "cards": {
+        "agents": "ИИ-агенты промышленного качества с защитными механизмами, RAG и безопасными коннекторами.",
+        "integrations": "Вендоро-независимые интеграции с вашим стеком, IAM и управлением данными.",
+        "delivery": "Полный цикл разработки с SLO надёжности, наблюдаемостью и проверками безопасности."
+      }
+    },
+    "resources": {
+      "title": "Избранные статьи",
+      "subtitle": "Silence AI — одна из немногих частных компаний с государственным уровнем разведки.",
+      "viewAll": "Все статьи"
+    }
+  },
   "supreme": {
     "title": "Supreme",
     "hero": {
@@ -58,21 +104,34 @@
       "alt": "Скриншот"
     }
   },
-      "mail": "Mail",
+  "header": {
+    "andManyMore": "И многое другое...",
+    "nav": {
+      "main": "Главная",
+      "mail": "Почта",
+      "affiliate": "Партнёрская программа",
+      "instructions": "Инструкции",
       "product": "AI-SOC",
       "secureDevelopment": "SLNC-env",
-      "developerServices": "Developer Services",
+      "developerServices": "Услуги разработки",
+      "home": "Главная",
+      "systems": "Системы",
+      "systemsAiSoc": "AI-SOC",
+      "systemsSithub": "Sithub",
+      "systemsSupreme": "Supreme",
       "systemsSlncEnv": "SLNC-env",
+      "services": "Услуги",
+      "instructionsAiSoc": "AI-SOC",
+      "instructionsSupreme": "Supreme",
       "instructionsSithub": "Sithub"
     },
+    "login": "Запросить демо",
     "cta": {
       "contact": "Контакты",
+      "download": "Скачать",
       "requestDemo": "Запросить демо",
-      "get": "Получить",
-      "download": "Download"
-    },
-    "andManyMore": "And many more...",
-    "login": "Request Demo"
+      "get": "Получить"
+    }
   },
   "footer": {
     "copyright": "© {year} Silence AI. Все права защищены.",
@@ -187,20 +246,20 @@
     }
   },
   "insights": {
-    "items": {
-      "0": {
+    "items": [
+       {
         "title": "39 секунд",
         "description": "Хакерская атака происходит каждые 39 секунд"
       },
-      "1": {
+      {
         "title": "20 миллионов DDoS‑атак",
         "description": "Только за Q1 2025 произошло 20,5 млн DDoS‑атак"
       },
-      "2": {
+      {
         "title": "Каждый день",
         "description": "Ежедневно взламывают 30 000 сайтов"
       }
-    }
+    ]
   },
   "floatingText": {
     "headline": "Узнайте, как мыслят хакеры",
@@ -895,17 +954,17 @@
         "3": "Сканирует CI/CD на неправильные конфигурации и уязвимости"
       }
     },
-    "screenshots": {
-      "0": {
+    "screenshots": [
+      {
         "title": "Очень понятный интерфейс"
       },
-      "1": {
+      {
         "title": "Хорошо структурированные отчёты по безопасности"
       },
-      "2": {
+      {
         "title": "История сканирований"
       }
-    },
+    ],
     "lightbox": {
       "close": "Закрыть предпросмотр",
       "alt": "Скриншот"
