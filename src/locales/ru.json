@@ -944,6 +944,10 @@
       "title": "Поддерживаемые языки",
       "subtitle": "Комплексное сканирование безопасности для всех основных языков программирования"
     },
+    "cicd": {
+      "title": "CI/CD & Container Scanning",
+      "subtitle": "Detect vulnerabilities in CI/CD pipelines and Docker container configurations"
+    },
     "features": {
       "title": "Мощные возможности",
       "subtitle": "Всё, что нужно для безопасной разработки кода",

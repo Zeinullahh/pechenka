@@ -2073,6 +2073,10 @@
       "title": "지원 언어",
       "subtitle": "주요 프로그래밍 언어에 대한 포괄적 보안 스캔"
     },
+    "cicd": {
+      "title": "CI/CD & Container Scanning",
+      "subtitle": "Detect vulnerabilities in CI/CD pipelines and Docker container configurations"
+    },
     "features": {
       "title": "강력한 기능",
       "subtitle": "안전한 코드 개발에 필요한 모든 것",

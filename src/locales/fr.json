@@ -2007,6 +2007,10 @@
       "title": "Langages pris en charge",
       "subtitle": "Analyse de sécurité complète pour tous les principaux langages de programmation"
     },
+    "cicd": {
+      "title": "CI/CD & Container Scanning",
+      "subtitle": "Detect vulnerabilities in CI/CD pipelines and Docker container configurations"
+    },
     "features": {
       "title": "Fonctionnalités puissantes",
       "subtitle": "Tout ce dont vous avez besoin pour un développement sécurisé",

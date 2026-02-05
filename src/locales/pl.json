@@ -1940,6 +1940,10 @@
       "title": "Obsługiwane języki",
       "subtitle": "Kompleksowe skanowanie bezpieczeństwa dla wszystkich głównych języków programowania"
     },
+    "cicd": {
+      "title": "CI/CD & Container Scanning",
+      "subtitle": "Detect vulnerabilities in CI/CD pipelines and Docker container configurations"
+    },
     "features": {
       "title": "Potężne funkcje",
       "subtitle": "Wszystko, czego potrzebujesz do bezpiecznego tworzenia kodu",

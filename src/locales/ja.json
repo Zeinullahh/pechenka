@@ -2038,6 +2038,10 @@
       "title": "対応言語",
       "subtitle": "主要なプログラミング言語を網羅したセキュリティスキャン"
     },
+    "cicd": {
+      "title": "CI/CD & Container Scanning",
+      "subtitle": "Detect vulnerabilities in CI/CD pipelines and Docker container configurations"
+    },
     "features": {
       "title": "強力な機能",
       "subtitle": "安全なコード開発に必要なすべて",

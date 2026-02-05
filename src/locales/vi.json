@@ -2033,6 +2033,10 @@
       "title": "Ngôn ngữ được hỗ trợ",
       "subtitle": "Quét bảo mật toàn diện cho tất cả các ngôn ngữ lập trình chính"
     },
+    "cicd": {
+      "title": "CI/CD & Container Scanning",
+      "subtitle": "Detect vulnerabilities in CI/CD pipelines and Docker container configurations"
+    },
     "features": {
       "title": "Tính năng mạnh mẽ",
       "subtitle": "Mọi thứ bạn cần để phát triển mã an toàn",

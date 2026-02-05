@@ -2033,6 +2033,10 @@
       "title": "支持的语言",
       "subtitle": "覆盖主流编程语言的全面安全扫描"
     },
+    "cicd": {
+      "title": "CI/CD & Container Scanning",
+      "subtitle": "Detect vulnerabilities in CI/CD pipelines and Docker container configurations"
+    },
     "features": {
       "title": "强大功能",
       "subtitle": "安全代码开发所需的一切",

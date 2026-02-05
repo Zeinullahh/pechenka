@@ -2033,6 +2033,10 @@
       "title": "Unterstützte Sprachen",
       "subtitle": "Umfassende Sicherheits-Scans für alle wichtigen Programmiersprachen"
     },
+    "cicd": {
+      "title": "CI/CD & Container Scanning",
+      "subtitle": "Detect vulnerabilities in CI/CD pipelines and Docker container configurations"
+    },
     "features": {
       "title": "Leistungsstarke Funktionen",
       "subtitle": "Alles, was du für sichere Codeentwicklung brauchst",

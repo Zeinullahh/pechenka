@@ -2033,6 +2033,10 @@
       "title": "Desteklenen Diller",
       "subtitle": "Tüm başlıca programlama dilleri için kapsamlı güvenlik taraması"
     },
+    "cicd": {
+      "title": "CI/CD & Container Scanning",
+      "subtitle": "Detect vulnerabilities in CI/CD pipelines and Docker container configurations"
+    },
     "features": {
       "title": "Güçlü Özellikler",
       "subtitle": "Güvenli kod geliştirme için ihtiyacınız olan her şey",

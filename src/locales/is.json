@@ -71,6 +71,10 @@
       "title": "Stuðningstungumál",
       "subtitle": "Heildstæð öryggisskönnun fyrir öll helstu forritunarmál"
     },
+    "cicd": {
+      "title": "CI/CD & Container Scanning",
+      "subtitle": "Detect vulnerabilities in CI/CD pipelines and Docker container configurations"
+    },
     "features": {
       "title": "Öflugir eiginleikar",
       "subtitle": "Allt sem þú þarft fyrir örugga kóðun",
