@@ -18,11 +18,6 @@ const PRICING_DATA = {
       monthly: 11.15,
       unit: "/user/month",
     },
-    basic: {
-      yearly: 4.40,
-      monthly: 5.28,
-      unit: "/user/month",
-    },
   },
   // Enterprise plans
   enterprise: {
@@ -41,7 +36,7 @@ const BUSINESS_PLANS = [
   {
     id: "premium",
     segment: "business",
-    title: "Microsoft 365 Business Premium (no Teams)",
+    title: "Silence 365 Business Max",
     features: [
       { id: "secureAccess300" },
       { id: "customEmail" },
@@ -61,7 +56,7 @@ const BUSINESS_PLANS = [
   {
     id: "standard",
     segment: "business",
-    title: "Microsoft 365 Business Standard (no Teams)",
+    title: "Silence 365 Business Standard",
     features: [
       { id: "secureAccess300" },
       { id: "customEmail" },
@@ -75,28 +70,13 @@ const BUSINESS_PLANS = [
       { id: "support24_7" },
     ],
   },
-  {
-    id: "basic",
-    segment: "business",
-    title: "Microsoft 365 Business Basic (no Teams)",
-    features: [
-      { id: "secureAccess300" },
-      { id: "customEmail" },
-      { id: "aiAssisted" },
-      { id: "basicFiltering" },
-      { id: "storage10gb" },
-      { id: "multiAccount" },
-      { id: "emailSearch" },
-      { id: "support24_7" },
-    ],
-  },
 ];
 
 const ENTERPRISE_PLANS = [
   {
     id: "e3",
     segment: "enterprise",
-    title: "Microsoft 365 E3",
+    title: "Silence 365 Enterprise 300+",
     features: [
       { id: "unlimitedUsers" },
       { id: "customEmail" },
@@ -116,7 +96,7 @@ const ENTERPRISE_PLANS = [
   {
     id: "e5",
     segment: "enterprise",
-    title: "Microsoft 365 E5",
+    title: "Silence 365 Enterprise 500+",
     features: [
       { id: "unlimitedUsers" },
       { id: "customEmail" },
@@ -293,7 +273,7 @@ const Pricing = ({ onOpenModal }) => {
 
         {/* Pricing Cards */}
         {segment === "business" ? (
-          // Business Layout: Asymmetric (2 top vertical, 1 bottom horizontal)
+          // Business Layout: Asymmetric (2 top vertical, optional bottom horizontal)
           <div className="space-y-6 relative z-10">
             {/* Top Row: 2 Vertical Cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-stretch">
@@ -314,26 +294,27 @@ const Pricing = ({ onOpenModal }) => {
               ))}
             </div>
 
-            {/* Bottom Row: 1 Horizontal Card */}
-            <div className="flex justify-center">
-              <div className="w-full">
-                {BUSINESS_PLANS.slice(2).map((plan, index) => (
-                  <PricingCard
-                    key={plan.id}
-                    plan={plan}
-                    price={getPriceDisplay(plan.id)}
-                    tooltipContent={tooltipContent}
-                    activeTooltip={activeTooltip}
-                    setActiveTooltip={setActiveTooltip}
-                    activeCardIndex={activeCardIndex}
-                    setActiveCardIndex={setActiveCardIndex}
-                    index={2 + index}
-                    onOpenModal={onOpenModal}
-                    isHorizontal={true}
-                  />
-                ))}
+            {BUSINESS_PLANS.length > 2 && (
+              <div className="flex justify-center">
+                <div className="w-full">
+                  {BUSINESS_PLANS.slice(2).map((plan, index) => (
+                    <PricingCard
+                      key={plan.id}
+                      plan={plan}
+                      price={getPriceDisplay(plan.id)}
+                      tooltipContent={tooltipContent}
+                      activeTooltip={activeTooltip}
+                      setActiveTooltip={setActiveTooltip}
+                      activeCardIndex={activeCardIndex}
+                      setActiveCardIndex={setActiveCardIndex}
+                      index={2 + index}
+                      onOpenModal={onOpenModal}
+                      isHorizontal={true}
+                    />
+                  ))}
+                </div>
               </div>
-            </div>
+            )}
           </div>
         ) : (
           // Enterprise Layout: Simple 2-card grid
@@ -384,18 +365,11 @@ const mapTooltipKeyToDictionaryKey = (key) => {
 };
 
 const getGlowColor = (planId) => {
-  // Premium: rose → violet
+  // Premium: violet → blue
   // Standard: cyan → blue
-  // Basic: violet → cyan
   // E3: cyan
-  // E5: rose → violet
-  if (planId === "premium" || planId === "e5") {
-    return {
-      border: "linear-gradient(135deg, rgba(236, 72, 153, 0.5) 0%, rgba(167, 139, 250, 0.5) 100%)",
-      glow: "linear-gradient(135deg, rgba(236, 72, 153, 0.9) 0%, rgba(167, 139, 250, 0.7) 100%)",
-      shadow: "0 0 60px 20px rgba(236, 72, 153, 0.3), 0 0 120px 40px rgba(167, 139, 250, 0.15)",
-    };
-  } else if (planId === "standard" || planId === "e3") {
+  // E5: violet → blue
+  if (planId === "standard" || planId === "e3") {
     return {
       border: "linear-gradient(135deg, rgba(59, 130, 246, 0.5) 0%, rgba(6, 182, 212, 0.5) 100%)",
       glow: "linear-gradient(135deg, rgba(59, 130, 246, 0.9) 0%, rgba(6, 182, 212, 0.7) 100%)",
@@ -412,13 +386,7 @@ const getGlowColor = (planId) => {
 };
 
 const getBulletColor = (planId) => {
-  if (planId === "premium" || planId === "e5") {
-    return {
-      bg: "linear-gradient(135deg, rgba(236, 72, 153, 0.2) 0%, rgba(167, 139, 250, 0.2) 100%)",
-      border: "linear-gradient(135deg, rgba(236, 72, 153, 0.6) 0%, rgba(167, 139, 250, 0.6) 100%)",
-      icon: "#ec4899", // rose
-    };
-  } else if (planId === "standard" || planId === "e3") {
+  if (planId === "standard" || planId === "e3") {
     return {
       bg: "linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(6, 182, 212, 0.2) 100%)",
       border: "linear-gradient(135deg, rgba(59, 130, 246, 0.6) 0%, rgba(6, 182, 212, 0.6) 100%)",
@@ -480,9 +448,7 @@ const PricingCard = ({
   const glowColor = getGlowColor(plan.id);
 
   const getBorderColor = (planId) => {
-    if (planId === "premium" || planId === "e5") {
-      return "rgba(236, 72, 153, 0.6)";
-    } else if (planId === "standard" || planId === "e3") {
+    if (planId === "standard" || planId === "e3") {
       return "rgba(59, 130, 246, 0.6)";
     } else {
       return "rgba(167, 139, 250, 0.6)";
@@ -490,9 +456,7 @@ const PricingCard = ({
   };
 
   const getInnerGlowColor = (planId) => {
-    if (planId === "premium" || planId === "e5") {
-      return "rgba(236, 72, 153, 0.15)";
-    } else if (planId === "standard" || planId === "e3") {
+    if (planId === "standard" || planId === "e3") {
       return "rgba(59, 130, 246, 0.15)";
     } else {
       return "rgba(167, 139, 250, 0.15)";

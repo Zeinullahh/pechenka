@@ -38,7 +38,9 @@ const AiSocLanding = () => {
           <Hero onOpenModal={openModal} />
           <Pricing onOpenModal={openModal} />
         </div>
-        <CybersecurityLamp />
+        <div className="mt-6">
+          <CybersecurityLamp />
+        </div>
         <div className="w-full max-w-7xl mx-auto">
           <Insights />
         </div>

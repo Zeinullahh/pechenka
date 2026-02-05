@@ -2000,19 +2000,19 @@
       "paidMonthly": "paid monthly",
       "plans": {
         "businessPremium": {
-          "title": "Microsoft 365 Business Premium (no Teams)"
+          "title": "Silence 365 Business Max"
         },
         "businessStandard": {
-          "title": "Microsoft 365 Business Standard (no Teams)"
+          "title": "Silence 365 Business Standard"
         },
         "businessBasic": {
           "title": "Microsoft 365 Business Basic (no Teams)"
         },
         "enterpriseE3": {
-          "title": "Microsoft 365 E3"
+          "title": "Silence 365 Enterprise 300+"
         },
         "enterpriseE5": {
-          "title": "Microsoft 365 E5"
+          "title": "Silence 365 Enterprise 500+"
         }
       },
       "features": {
