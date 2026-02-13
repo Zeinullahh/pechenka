@@ -236,6 +236,7 @@
   },
   "pricing": {
     "title": "Fiyatlandırma",
+    "subtitle": "Ürününüzle birlikte ölçeklenen mobil uyumlu planlar.",
     "tooltips": {
       "cmcGlobal": {
         "title": "Küresel Trafik İzleme ile CMC",
@@ -268,6 +269,56 @@
       "fullVulnerability": {
         "title": "TAM Güvenlik Açığı Kontrolü",
         "content": "Bir TAM güvenlik açığı kontrolü, hem dinamik bir güvenlik açığı taramasını hem de kod tabanı güvenlik açığı taramasını içerir."
+      }
+    },
+    "aiSoc": {
+      "tabs": {
+        "email": "E-posta Güvenliği",
+        "web": "Web Güvenliği"
+      },
+      "billing": {
+        "yearly": "Yıllık",
+        "monthly": "Aylık"
+      },
+      "cta": "Sistemi talep et",
+      "contactSupport": "Bizimle iletişime geçin",
+      "planTitles": {
+        "premium": "Business Premium 100",
+        "max": "Business MAX",
+        "standard": "Business Standard"
+      },
+      "features": {
+        "common": {
+          "customDomainEmail": "Kendi alan adınızda özel şirket e-postası (you@yourcompany.com)",
+          "officeSuite": "Belge, hesap tablosu, sunum ve e-posta araçlarını içeren masaüstü ve mobil ofis paketi",
+          "adminConsole": "Alan genelinde e-posta yönetimi ve toplu işlemler sunan yönetici konsolu",
+          "dnsSecuritySetup": "Yönetici konsolunda DNS üzerinden (SPF, DKIM, DMARC) e-posta güvenliği kurulumu",
+          "emailMigration": "E-posta taşıma",
+          "aiThreatProtection": "Secure, Spam, Dangerous Links, Phishing, Spoofed klasörlerine otomatik sınıflandırmalı beş katmanlı YZ destekli tehdit koruması",
+          "emailFlowVisualization": "Yönetici konsolunda tüm alan genelinde gelişmiş e-posta akışı görselleştirmesi",
+          "domainWideDeletion": "Yöneticinin alan içindeki tüm kullanıcıların e-postalarını silebilmesi"
+        },
+        "shared": {
+          "unlimitedSecurity": "Sınırsız dört katmanlı e-posta güvenliği"
+        },
+        "premium": {
+          "userLimit": "En fazla 100 kullanıcı",
+          "adminLimit": "En fazla 5 yönetici",
+          "aiAnalysis": "Kullanıcı başına ayda 60'a kadar derin YZ kimlik avı bağlam analizi içerir (5. katman gelişmiş analiz)",
+          "storage": "Kullanıcı başına 50 GB depolama"
+        },
+        "max": {
+          "userLimit": "En fazla 300 kullanıcı",
+          "adminLimit": "En fazla 10 yönetici",
+          "aiAnalysis": "Kullanıcı başına ayda 100'e kadar derin YZ kimlik avı bağlam analizi içerir (5. katman gelişmiş analiz)",
+          "storage": "Kullanıcı başına 200 GB depolama"
+        },
+        "standard": {
+          "userLimit": "En fazla 10 kullanıcı",
+          "adminLimit": "En fazla 1 yönetici",
+          "aiAnalysis": "Kullanıcı başına ayda 10'a kadar derin YZ kimlik avı bağlam analizi içerir (5. katman gelişmiş analiz)",
+          "storage": "Kullanıcı başına 8 GB depolama"
+        }
       }
     },
     "plans": {
@@ -313,12 +364,11 @@
         }
       }
     },
-    "subtitle": "Ürününüzle ölçeklenen mobil öncelikli planlar.",
     "percentMaintenance": "{percent}% yıllık bakım",
     "planEstimate": "${value}",
     "perYear": "yıllık (tahmini)",
     "calculator": {
-      "subtitle": "Przesuń suwak, aby zobaczyć roczny koszt utrzymania"
+      "subtitle": "Yıllık bakım maliyetini görmek için kaydırın"
     }
   },
   "solution": {
@@ -587,23 +637,23 @@
       }
     },
     "pricing": {
-      "subtitle": "Proste, przejrzyste ceny",
-      "title": "Wybierz plan",
-      "limitedOffer": "Oferta ograniczona czasowo",
-      "priceIncreaseNotice": "Zablokuj obecne ceny! Po 6 miesiącach ceny wzrosną o 30%",
-      "monthlyPlan": "Miesięczny",
-      "monthlyDesc": "Elastyczne rozliczenie",
-      "yearlyPlan": "Roczny",
-      "yearlyDesc": "Najlepsza wartość",
-      "month": "miesiąc",
-      "billedAnnually": "Rozliczane rocznie za",
-      "doubleSavings": "2x OSZCZĘDNOŚCI",
-      "getStarted": "Zacznij",
+      "subtitle": "Basit ve şeffaf fiyatlandırma",
+      "title": "Bir plan seçin",
+      "limitedOffer": "Süreli teklif",
+      "priceIncreaseNotice": "Mevcut fiyatları şimdi sabitleyin! 6 ay sonra fiyatlar %30 artacak",
+      "monthlyPlan": "Aylık",
+      "monthlyDesc": "Esnek faturalama",
+      "yearlyPlan": "Yıllık",
+      "yearlyDesc": "En iyi değer",
+      "month": "ay",
+      "billedAnnually": "Yıllık faturalandırılır",
+      "doubleSavings": "2x TASARRUF",
+      "getStarted": "Başlayın",
       "features": {
-        "fullAccess": "Pełny dostęp do platformy",
-        "support": "Priorytetowe wsparcie",
-        "cancelAnytime": "Możliwość rezygnacji w każdej chwili",
-        "priceLock": "Cena zablokowana na 12 miesięcy"
+        "fullAccess": "Platformun tamamına erişim",
+        "support": "Öncelikli destek",
+        "cancelAnytime": "İstediğiniz zaman iptal edin",
+        "priceLock": "Fiyat 12 ay boyunca sabitlenir"
       }
     },
     "comingSoon": {
@@ -612,7 +662,7 @@
     }
   },
   "pricingCta": {
-    "requestSystem": "Sistem Talep Et"
+    "requestSystem": "Sistemi talep et"
   },
   "contactForm": {
     "title": "Bize Ulaşın",
@@ -1948,16 +1998,16 @@
       ]
     },
     "pricingMicrosoft": {
-      "business": "Business",
-      "enterprise": "Enterprise",
-      "withoutTeams": "Plans without Teams",
-      "withTeams": "With Teams",
-      "yearly": "Yearly",
-      "monthly": "Monthly",
-      "planHighlights": "Plan highlights",
-      "userMonth": "user/month",
-      "paidYearly": "paid yearly",
-      "paidMonthly": "paid monthly",
+      "business": "İşletme",
+      "enterprise": "Kurumsal",
+      "withoutTeams": "Teams olmadan planlar",
+      "withTeams": "Teams'li planlar",
+      "yearly": "Yıllık",
+      "monthly": "Aylık",
+      "planHighlights": "Plan öne çıkanları",
+      "userMonth": "kullanıcı/ay",
+      "paidYearly": "yıllık ödenir",
+      "paidMonthly": "aylık ödenir",
       "plans": {
         "businessPremium": {
           "title": "Silence 365 Business Max"
@@ -1976,27 +2026,27 @@
         }
       },
       "features": {
-        "secureAccess300": "Secure access for up to 300 users",
-        "customDomainEmail": "Custom company email on your own domain (you@yourcompany.com)",
-        "adminConsole": "Admin console with domain-wide email management and bulk operations",
-        "aiThreatDetection": "AI-powered threat detection with automatic email categorization",
-        "securityPipeline": "Multi-layered email security pipeline (SPF, DKIM, DMARC, spam, malware, phishing)",
-        "securityFolders": "Email sorting into security folders (Secure, Spam, Dangerous Links, Malware, Phishing, Spoofed)",
-        "linkScannerAv": "Advanced link scanner and antivirus protection for attachments",
-        "emailFlowVisualization": "Email flow visualization across the domain/organization with comprehensive filters",
-        "bulkManageDelete": "Ability to manage and delete emails across all users in the domain",
-        "customFoldersRules": "Custom folders with auto-filtering rules (sender, domain, subject)",
-        "storage10gb": "10 GB secure mailbox storage per user",
-        "storage5tb": "5 TB secure mailbox storage per user",
-        "storage10tb": "10 TB secure mailbox storage per user",
-        "multiAccountSupport": "Multi-account support (Gmail/Outlook integration)",
-        "support247": "24/7 email and web support",
-        "fullTextSearch": "Email search with full-text capabilities",
-        "aiAssistedCategorization": "AI-assisted email categorization into security folders",
-        "basicFiltering": "Custom folders with basic filtering rules",
-        "prioritySupport": "Priority support with faster response times",
-        "dedicatedAM": "Dedicated account management",
-        "unlimitedUsers": "Supports unlimited users"
+        "secureAccess300": "300 kullanıcıya kadar güvenli erişim",
+        "customDomainEmail": "Kendi alan adınızda özel şirket e-postası (you@yourcompany.com)",
+        "adminConsole": "Alan genelinde e-posta yönetimi ve toplu işlemler için yönetici konsolu",
+        "aiThreatDetection": "Otomatik e-posta sınıflandırmasıyla YZ destekli tehdit algılama",
+        "securityPipeline": "Çok katmanlı e-posta güvenlik hattı (SPF, DKIM, DMARC, spam, kötü amaçlı yazılım, phishing)",
+        "securityFolders": "E-postaların Secure, Spam, Dangerous Links, Malware, Phishing, Spoofed klasörlerine ayrılması",
+        "linkScannerAv": "Ekler için gelişmiş bağlantı tarayıcı ve antivirüs koruması",
+        "emailFlowVisualization": "Alan/organizasyon genelinde kapsamlı filtrelerle e-posta akışı görselleştirmesi",
+        "bulkManageDelete": "Alan içindeki tüm kullanıcıların e-postalarını yönetme ve silme olanağı",
+        "customFoldersRules": "Gönderen, alan veya konuya göre otomatik filtreli özel klasörler",
+        "storage10gb": "Kullanıcı başına 10 GB güvenli posta kutusu depolaması",
+        "storage5tb": "Kullanıcı başına 5 TB güvenli posta depolaması",
+        "storage10tb": "Kullanıcı başına 10 TB güvenli posta depolaması",
+        "multiAccountSupport": "Birden fazla hesabı destekler (Gmail/Outlook entegrasyonu)",
+        "support247": "7/24 e-posta ve web desteği",
+        "fullTextSearch": "Tam metin yeteneklerine sahip e-posta araması",
+        "aiAssistedCategorization": "E-postaların güvenlik klasörlerine YZ destekli ayrılması",
+        "basicFiltering": "Temel otomatik filtre kurallı özel klasörler",
+        "prioritySupport": "Daha hızlı yanıt süreleriyle öncelikli destek",
+        "dedicatedAM": "Özel hesap yönetimi",
+        "unlimitedUsers": "Sınırsız kullanıcı desteği"
       }
     }
   },

@@ -145,16 +145,14 @@ const PricingSection = () => {
                 {plan.features.map((f, idx) => (
                   <li
                     key={idx}
-                    className={`flex gap-2 ${
-                      f.enabled
+                    className={`flex gap-2 ${f.enabled
                         ? "text-white/80"
                         : "text-white/30 line-through"
-                    }`}
+                      }`}
                   >
                     <span
-                      className={`${
-                        f.enabled ? "text-green-400" : "text-white/30"
-                      }`}
+                      className={`${f.enabled ? "text-green-400" : "text-white/30"
+                        }`}
                     >
                       ✓
                     </span>

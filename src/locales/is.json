@@ -305,6 +305,56 @@
         "content": "HEILDAR veikleikaprófun felur bæði í sér dýnamíska skönnun og skönnun á kóðagrunni."
       }
     },
+    "aiSoc": {
+      "tabs": {
+        "email": "Tölvupóstöryggi",
+        "web": "Veföryggi"
+      },
+      "billing": {
+        "yearly": "Árlega",
+        "monthly": "Mánaðarlega"
+      },
+      "cta": "Biðja um kerfið",
+      "contactSupport": "Hafðu samband við okkur",
+      "planTitles": {
+        "premium": "Business Premium 100",
+        "max": "Business MAX",
+        "standard": "Business Standard"
+      },
+      "features": {
+        "common": {
+          "customDomainEmail": "Sérsniðin fyrirtækjatölvupóstur á eigin léni (you@yourcompany.com)",
+          "officeSuite": "Skjalakerfi fyrir tölvu og farsíma með ritvinnslu, töflureiknum, kynningum og póstforriti",
+          "adminConsole": "Stjórnborð með léns­víðtækri tölvupóststjórnun og hópaðgerðum",
+          "dnsSecuritySetup": "Uppsetning tölvupóstöryggis í gegnum DNS (SPF, DKIM, DMARC) á stjórnborðinu",
+          "emailMigration": "Flutningur tölvupósts",
+          "aiThreatProtection": "Fimm laga, AI-knúin ógnarvörn með sjálfvirkri póstflokkun (Secure, Spam, Dangerous Links, Phishing, Spoofed)",
+          "emailFlowVisualization": "Háþróuð sjónræn framsetning á póstflæði alls léns með ítarlegum síum á stjórnborðinu",
+          "domainWideDeletion": "Stjórnandi getur eytt tölvupósti fyrir alla notendur í léninu"
+        },
+        "shared": {
+          "unlimitedSecurity": "Ótakmörkuð fjögurra laga tölvupóstvörn"
+        },
+        "premium": {
+          "userLimit": "Allt að 100 notendur",
+          "adminLimit": "Allt að 5 stjórnendur",
+          "aiAnalysis": "Innifelur allt að 60 djúpar AI phishing-greiningar á hvern notanda á mánuði (5. lag háþróuð greining)",
+          "storage": "Allt að 50GB geymsla á hvern notanda"
+        },
+        "max": {
+          "userLimit": "Allt að 300 notendur",
+          "adminLimit": "Allt að 10 stjórnendur",
+          "aiAnalysis": "Innifelur allt að 100 djúpar AI phishing-greiningar á hvern notanda á mánuði (5. lag háþróuð greining)",
+          "storage": "Allt að 200GB geymsla á hvern notanda"
+        },
+        "standard": {
+          "userLimit": "Allt að 10 notendur",
+          "adminLimit": "Allt að 1 stjórnanda",
+          "aiAnalysis": "Innifelur allt að 10 djúpar AI phishing-greiningar á hvern notanda á mánuði (5. lag háþróuð greining)",
+          "storage": "Allt að 8GB geymsla á hvern notanda"
+        }
+      }
+    },
     "plans": {
       "globalShield": {
         "title": "Veföryggi og umferðarstýring",
@@ -377,8 +427,8 @@
         }
       }
     },
-    "subtitle": "Farsímavænar áætlanir byggðar til að stækka með vörunni þinni...",
-    "percentMaintenance": "{percent}% árlegur viðhaldskostnaður",
+    "subtitle": "Farsímavænar áætlanir hannaðar til að vaxa með vörunni þinni.",
+    "percentMaintenance": "{percent}% árlegt viðhald",
     "planEstimate": "${value}",
     "perYear": "á ári (áætlað)",
     "calculator": {
@@ -709,7 +759,7 @@
     }
   },
   "pricingCta": {
-    "requestSystem": "Biðja um kerfi"
+    "requestSystem": "Biðja um kerfið"
   },
   "contactForm": {
     "title": "Contact Us",
@@ -2043,16 +2093,16 @@
       ]
     },
     "pricingMicrosoft": {
-      "business": "Business",
-      "enterprise": "Enterprise",
-      "withoutTeams": "Plans without Teams",
-      "withTeams": "With Teams",
-      "yearly": "Yearly",
-      "monthly": "Monthly",
-      "planHighlights": "Plan highlights",
-      "userMonth": "user/month",
-      "paidYearly": "paid yearly",
-      "paidMonthly": "paid monthly",
+      "business": "Fyrirtæki",
+      "enterprise": "Stórfyrirtæki",
+      "withoutTeams": "Áætlanir án Teams",
+      "withTeams": "Áætlanir með Teams",
+      "yearly": "Árlega",
+      "monthly": "Mánaðarlega",
+      "planHighlights": "Helstu atriði áætlunar",
+      "userMonth": "notandi/mánuði",
+      "paidYearly": "greitt árlega",
+      "paidMonthly": "greitt mánaðarlega",
       "plans": {
         "businessPremium": {
           "title": "Silence 365 Business Max"
@@ -2071,27 +2121,27 @@
         }
       },
       "features": {
-        "secureAccess300": "Secure access for up to 300 users",
-        "customDomainEmail": "Custom company email on your own domain (you@yourcompany.com)",
-        "adminConsole": "Admin console with domain-wide email management and bulk operations",
-        "aiThreatDetection": "AI-powered threat detection with automatic email categorization",
-        "securityPipeline": "Multi-layered email security pipeline (SPF, DKIM, DMARC, spam, malware, phishing)",
-        "securityFolders": "Email sorting into security folders (Secure, Spam, Dangerous Links, Malware, Phishing, Spoofed)",
-        "linkScannerAv": "Advanced link scanner and antivirus protection for attachments",
-        "emailFlowVisualization": "Email flow visualization across the domain/organization with comprehensive filters",
-        "bulkManageDelete": "Ability to manage and delete emails across all users in the domain",
-        "customFoldersRules": "Custom folders with auto-filtering rules (sender, domain, subject)",
-        "storage10gb": "10 GB secure mailbox storage per user",
-        "storage5tb": "5 TB secure mailbox storage per user",
-        "storage10tb": "10 TB secure mailbox storage per user",
-        "multiAccountSupport": "Multi-account support (Gmail/Outlook integration)",
-        "support247": "24/7 email and web support",
-        "fullTextSearch": "Email search with full-text capabilities",
-        "aiAssistedCategorization": "AI-assisted email categorization into security folders",
-        "basicFiltering": "Custom folders with basic filtering rules",
-        "prioritySupport": "Priority support with faster response times",
-        "dedicatedAM": "Dedicated account management",
-        "unlimitedUsers": "Supports unlimited users"
+        "secureAccess300": "Öruggur aðgangur fyrir allt að 300 notendur",
+        "customDomainEmail": "Sérsniðinn fyrirtækjatölvupóstur á eigin léni (you@yourcompany.com)",
+        "adminConsole": "Stjórnborð með léns­víðtækri póststjórnun og hópaðgerðum",
+        "aiThreatDetection": "AI-knúin ógnagreining með sjálfvirkri flokkun á tölvupósti",
+        "securityPipeline": "Fjölþætt tölvupóstöryggisleiðsla (SPF, DKIM, DMARC, ruslpóstur, spilliforrit, phishing)",
+        "securityFolders": "Flokkun tölvupósts í öryggismöppur (Secure, Spam, Dangerous Links, Malware, Phishing, Spoofed)",
+        "linkScannerAv": "Háþróuð hlekkjaskönnun og vírusvörn fyrir viðhengi",
+        "emailFlowVisualization": "Sjónræn framsetning á póstflæði alls léns/fyrirtækis með ítarlegum síum",
+        "bulkManageDelete": "Hæfni til að stjórna og eyða póstum fyrir alla notendur í léninu",
+        "customFoldersRules": "Sérsniðnar möppur með sjálfvirkum síureglum (sendandi, lén, efnislína)",
+        "storage10gb": "10 GB öruggt pósthólf á hvern notanda",
+        "storage5tb": "5 TB örugg póstgeymsla á hvern notanda",
+        "storage10tb": "10 TB örugg póstgeymsla á hvern notanda",
+        "multiAccountSupport": "Stuðningur við marga reikninga (Gmail/Outlook samþætting)",
+        "support247": "24/7 tölvupóst- og vefstuðningur",
+        "fullTextSearch": "Tölvupóstleit með fullum textaleitarhæfileikum",
+        "aiAssistedCategorization": "AI-aðstoðuð flokkun tölvupósts í öryggismöppur",
+        "basicFiltering": "Sérsniðnar möppur með grunnsíureglum",
+        "prioritySupport": "Forgangsþjónusta með hraðari viðbragðstíma",
+        "dedicatedAM": "Sérstakur reikningsstjóri",
+        "unlimitedUsers": "Stuðningur við ótakmarkaðan fjölda notenda"
       }
     }
   },

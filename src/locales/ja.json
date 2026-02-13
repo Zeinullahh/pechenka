@@ -270,6 +270,56 @@
         "content": "完全チェックには動的スキャンとコードスキャンの両方が含まれます"
       }
     },
+    "aiSoc": {
+      "tabs": {
+        "email": "メール保護",
+        "web": "Webセキュリティ"
+      },
+      "billing": {
+        "yearly": "年額",
+        "monthly": "月額"
+      },
+      "cta": "システムをリクエスト",
+      "contactSupport": "サポートに連絡",
+      "planTitles": {
+        "premium": "Business Premium 100",
+        "max": "Business MAX",
+        "standard": "Business Standard"
+      },
+      "features": {
+        "common": {
+          "customDomainEmail": "独自ドメインの法人メール (you@yourcompany.com)",
+          "officeSuite": "デスクトップ/モバイル対応のオフィススイート：文書・表計算・プレゼン・メール",
+          "adminConsole": "ドメイン全体のメールを管理し一括操作できる管理コンソール",
+          "dnsSecuritySetup": "管理コンソールでのDNSベースのメール保護設定 (SPF・DKIM・DMARC)",
+          "emailMigration": "メール移行サポート",
+          "aiThreatProtection": "AIによる5層防御と自動分類（安全・スパム・危険リンク・フィッシング・スプーフィング）",
+          "emailFlowVisualization": "管理コンソールでのドメイン全体のメールフロー可視化と高度なフィルター",
+          "domainWideDeletion": "管理者がドメイン内の全ユーザーからメールを一括削除可能"
+        },
+        "shared": {
+          "unlimitedSecurity": "無制限の4層メール防御"
+        },
+        "premium": {
+          "userLimit": "最大100ユーザー",
+          "adminLimit": "最大5名の管理者",
+          "aiAnalysis": "ユーザーあたり月60件までの詳細AIフィッシング分析（第5レイヤー防御）",
+          "storage": "ユーザーあたり最大50GB"
+        },
+        "max": {
+          "userLimit": "最大300ユーザー",
+          "adminLimit": "最大10名の管理者",
+          "aiAnalysis": "ユーザーあたり月100件までの詳細AIフィッシング分析（第5レイヤー防御）",
+          "storage": "ユーザーあたり最大200GB"
+        },
+        "standard": {
+          "userLimit": "最大10ユーザー",
+          "adminLimit": "管理者1名まで",
+          "aiAnalysis": "ユーザーあたり月10件までの詳細AIフィッシング分析（第5レイヤー防御）",
+          "storage": "ユーザーあたり最大8GB"
+        }
+      }
+    },
     "plans": {
       "globalShield": {
         "title": "Webセキュリティとトラフィック管理",

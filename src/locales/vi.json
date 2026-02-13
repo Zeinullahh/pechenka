@@ -270,6 +270,56 @@
         "content": "Kiểm tra lỗ hổng ĐẦY ĐỦ bao gồm cả quét lỗ hổng động và quét lỗ hổng cơ sở mã."
       }
     },
+    "aiSoc": {
+      "tabs": {
+        "email": "Bảo mật Email",
+        "web": "Bảo mật Web"
+      },
+      "billing": {
+        "yearly": "Hàng năm",
+        "monthly": "Hàng tháng"
+      },
+      "cta": "Yêu cầu hệ thống",
+      "contactSupport": "Liên hệ với chúng tôi",
+      "planTitles": {
+        "premium": "Business Premium 100",
+        "max": "Business MAX",
+        "standard": "Business Standard"
+      },
+      "features": {
+        "common": {
+          "customDomainEmail": "Email doanh nghiệp trên tên miền riêng (you@yourcompany.com)",
+          "officeSuite": "Bộ ứng dụng văn phòng trên máy tính và di động gồm xử lý văn bản, bảng tính, trình chiếu và email",
+          "adminConsole": "Bảng điều khiển quản trị quản lý email toàn miền và thao tác hàng loạt",
+          "dnsSecuritySetup": "Thiết lập bảo mật email qua DNS (SPF, DKIM, DMARC) ngay trong bảng điều khiển quản trị",
+          "emailMigration": "Di chuyển email",
+          "aiThreatProtection": "Bảo vệ mối đe dọa 5 lớp với AI và tự động phân loại email (Secure, Spam, Dangerous Links, Phishing, Spoofed)",
+          "emailFlowVisualization": "Trực quan hóa luồng email toàn miền với bộ lọc đầy đủ trong Bảng điều khiển quản trị",
+          "domainWideDeletion": "Quản trị viên có thể xóa email của mọi người dùng trong miền"
+        },
+        "shared": {
+          "unlimitedSecurity": "Bảo mật email 4 lớp không giới hạn"
+        },
+        "premium": {
+          "userLimit": "Tối đa 100 người dùng",
+          "adminLimit": "Tối đa 5 quản trị viên",
+          "aiAnalysis": "Bao gồm tối đa 60 phân tích ngữ cảnh phishing bằng AI mỗi người dùng/tháng (phân tích nâng cao lớp 5)",
+          "storage": "Tối đa 50GB lưu trữ mỗi người dùng"
+        },
+        "max": {
+          "userLimit": "Tối đa 300 người dùng",
+          "adminLimit": "Tối đa 10 quản trị viên",
+          "aiAnalysis": "Bao gồm tối đa 100 phân tích ngữ cảnh phishing bằng AI mỗi người dùng/tháng (phân tích nâng cao lớp 5)",
+          "storage": "Tối đa 200GB lưu trữ mỗi người dùng"
+        },
+        "standard": {
+          "userLimit": "Tối đa 10 người dùng",
+          "adminLimit": "Tối đa 1 quản trị viên",
+          "aiAnalysis": "Bao gồm tối đa 10 phân tích ngữ cảnh phishing bằng AI mỗi người dùng/tháng (phân tích nâng cao lớp 5)",
+          "storage": "Tối đa 8GB lưu trữ mỗi người dùng"
+        }
+      }
+    },
     "plans": {
       "globalShield": {
         "title": "Bảo mật Web & Quản lý Lưu lượng",
@@ -318,7 +368,7 @@
     "planEstimate": "${value}",
     "perYear": "mỗi năm (ước tính)",
     "calculator": {
-      "subtitle": "Przesuń suwak, aby zobaczyć roczny koszt utrzymania"
+      "subtitle": "Kéo thanh để xem chi phí bảo trì hàng năm"
     }
   },
   "solution": {
@@ -1948,16 +1998,16 @@
       ]
     },
     "pricingMicrosoft": {
-      "business": "Business",
-      "enterprise": "Enterprise",
-      "withoutTeams": "Plans without Teams",
-      "withTeams": "With Teams",
-      "yearly": "Yearly",
-      "monthly": "Monthly",
-      "planHighlights": "Plan highlights",
-      "userMonth": "user/month",
-      "paidYearly": "paid yearly",
-      "paidMonthly": "paid monthly",
+      "business": "Doanh nghiệp",
+      "enterprise": "Doanh nghiệp lớn",
+      "withoutTeams": "Gói không kèm Teams",
+      "withTeams": "Gói kèm Teams",
+      "yearly": "Hàng năm",
+      "monthly": "Hàng tháng",
+      "planHighlights": "Điểm nổi bật của gói",
+      "userMonth": "người dùng/tháng",
+      "paidYearly": "thanh toán hàng năm",
+      "paidMonthly": "thanh toán hàng tháng",
       "plans": {
         "businessPremium": {
           "title": "Silence 365 Business Max"
@@ -1976,27 +2026,27 @@
         }
       },
       "features": {
-        "secureAccess300": "Secure access for up to 300 users",
-        "customDomainEmail": "Custom company email on your own domain (you@yourcompany.com)",
-        "adminConsole": "Admin console with domain-wide email management and bulk operations",
-        "aiThreatDetection": "AI-powered threat detection with automatic email categorization",
-        "securityPipeline": "Multi-layered email security pipeline (SPF, DKIM, DMARC, spam, malware, phishing)",
-        "securityFolders": "Email sorting into security folders (Secure, Spam, Dangerous Links, Malware, Phishing, Spoofed)",
-        "linkScannerAv": "Advanced link scanner and antivirus protection for attachments",
-        "emailFlowVisualization": "Email flow visualization across the domain/organization with comprehensive filters",
-        "bulkManageDelete": "Ability to manage and delete emails across all users in the domain",
-        "customFoldersRules": "Custom folders with auto-filtering rules (sender, domain, subject)",
-        "storage10gb": "10 GB secure mailbox storage per user",
-        "storage5tb": "5 TB secure mailbox storage per user",
-        "storage10tb": "10 TB secure mailbox storage per user",
-        "multiAccountSupport": "Multi-account support (Gmail/Outlook integration)",
-        "support247": "24/7 email and web support",
-        "fullTextSearch": "Email search with full-text capabilities",
-        "aiAssistedCategorization": "AI-assisted email categorization into security folders",
-        "basicFiltering": "Custom folders with basic filtering rules",
-        "prioritySupport": "Priority support with faster response times",
-        "dedicatedAM": "Dedicated account management",
-        "unlimitedUsers": "Supports unlimited users"
+        "secureAccess300": "Truy cập an toàn cho tối đa 300 người dùng",
+        "customDomainEmail": "Email doanh nghiệp trên tên miền riêng của bạn (you@yourcompany.com)",
+        "adminConsole": "Bảng điều khiển quản trị quản lý email toàn miền và thao tác hàng loạt",
+        "aiThreatDetection": "Phát hiện mối đe dọa bằng AI với phân loại email tự động",
+        "securityPipeline": "Chuỗi bảo mật email nhiều lớp (SPF, DKIM, DMARC, spam, malware, phishing)",
+        "securityFolders": "Sắp xếp email vào các thư mục bảo mật (Secure, Spam, Dangerous Links, Malware, Phishing, Spoofed)",
+        "linkScannerAv": "Trình quét liên kết nâng cao và diệt virus cho tệp đính kèm",
+        "emailFlowVisualization": "Trực quan hóa luồng email trên toàn miền/tổ chức với bộ lọc toàn diện",
+        "bulkManageDelete": "Quản lý và xóa email cho tất cả người dùng trong miền",
+        "customFoldersRules": "Thư mục tùy chỉnh với quy tắc lọc tự động (người gửi, miền, chủ đề)",
+        "storage10gb": "10 GB dung lượng hộp thư an toàn cho mỗi người dùng",
+        "storage5tb": "5 TB dung lượng hộp thư an toàn cho mỗi người dùng",
+        "storage10tb": "10 TB dung lượng hộp thư an toàn cho mỗi người dùng",
+        "multiAccountSupport": "Hỗ trợ nhiều tài khoản (tích hợp Gmail/Outlook)",
+        "support247": "Hỗ trợ email và web 24/7",
+        "fullTextSearch": "Tìm kiếm email với khả năng toàn văn",
+        "aiAssistedCategorization": "Phân loại email bằng AI vào các thư mục bảo mật",
+        "basicFiltering": "Thư mục tùy chỉnh với quy tắc lọc cơ bản",
+        "prioritySupport": "Hỗ trợ ưu tiên với phản hồi nhanh hơn",
+        "dedicatedAM": "Quản lý tài khoản chuyên trách",
+        "unlimitedUsers": "Hỗ trợ số người dùng không giới hạn"
       }
     }
   },
