@@ -8,7 +8,6 @@ import { StickyScrollSolution } from '@/components/StickyScrollSolution.jsx';
 import Insights from '@/components/Insights.jsx';
 import RequestDemoModal from '@/components/RequestDemoModal.jsx';
 import { FloatingText } from '@/components/FloatingText.jsx';
-import { CybersecurityLamp } from '@/components/CybersecurityLamp.jsx';
 import Spotlights from '@/components/Spotlights.jsx';
 import BackToTopButton from '@/components/BackToTopButton';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -37,9 +36,6 @@ const AiSocLanding = () => {
           <Header onOpenModal={openModal} />
           <Hero onOpenModal={openModal} />
           <Pricing onOpenModal={openModal} />
-        </div>
-        <div className="mt-6">
-          <CybersecurityLamp />
         </div>
         <div className="w-full max-w-7xl mx-auto">
           <Insights />

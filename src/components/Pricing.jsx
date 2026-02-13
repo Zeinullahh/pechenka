@@ -1,117 +1,82 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import TooltipCard from "./TooltipCard";
+import { CybersecurityLamp } from "./CybersecurityLamp";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { motion } from "framer-motion";
 
 // Microsoft 365 Pricing Data
 const PRICING_DATA = {
   // Business plans
   business: {
-    premium: {
-      yearly: 27.45,
-      monthly: 22.55,
-      unit: "/user/month",
-    },
     standard: {
-      yearly: 9.29,
-      monthly: 11.15,
+      yearly: 8.10,
+      monthly: 9.70,
       unit: "/user/month",
     },
-  },
-  // Enterprise plans
-  enterprise: {
-    e3: {
-      yearly: 36.00,
+    premium: { // Premium 100
+      yearly: 15.40,
+      monthly: 18.60,
       unit: "/user/month",
     },
-    e5: {
-      yearly: 57.00,
+    max: { // Business MAX
+      yearly: 18.79,
+      monthly: 22.55,
       unit: "/user/month",
     },
   },
 };
 
+const COMMON_FEATURES = [
+  "Custom company email on your own domain (you@yourcompany.com)",
+  "Desktop and mobile office suite including document, spreadsheet, presentation, and email tools",
+  "Admin console with domain-wide email management and bulk operations",
+  "Email security setup through DNS (SPF, DKIM, DMARC) on the admin console",
+  "Email migration",
+  "5 layered, AI-powered threat protection with automatic email categorization (Secure, Spam, Dangerous Links, Phishing, Spoofed)",
+  "Advanced email flow visualization across entire domain with comprehensive filters on the Admin Console",
+  "Ability for admin to delete emails across all users in domain",
+];
+
 const BUSINESS_PLANS = [
   {
     id: "premium",
     segment: "business",
-    title: "Silence 365 Business Max",
+    title: "Business Premium 100",
     features: [
-      { id: "secureAccess300" },
-      { id: "customEmail" },
-      { id: "adminConsole" },
-      { id: "aiThreatDetection" },
-      { id: "multiLayerSecurity" },
-      { id: "emailSorting" },
-      { id: "advancedLinkScanner" },
-      { id: "emailFlowViz" },
-      { id: "manageDeleteEmails" },
-      { id: "customFolders" },
-      { id: "storage10gb" },
-      { id: "multiAccount" },
-      { id: "support24_7" },
+      ...COMMON_FEATURES,
+      "Up to 100 users",
+      "Up to 5 administrators",
+      "Unlimited 4-layer email security",
+      "Includes up to 60 deep AI phishing context analyses per user / month (5th-layer advanced analysis)",
+      "Up to 50GB storage per user",
+    ],
+  },
+  {
+    id: "max",
+    segment: "business",
+    title: "Business MAX",
+    features: [
+      ...COMMON_FEATURES,
+      "Up to 300 users",
+      "Up to 10 administrators",
+      "Unlimited 4-layer email security",
+      "Includes up to 100 deep AI phishing context analyses per user / month (5th-layer advanced analysis)",
+      "Up to 200GB storage per user",
     ],
   },
   {
     id: "standard",
     segment: "business",
-    title: "Silence 365 Business Standard",
+    title: "Business Standard",
     features: [
-      { id: "secureAccess300" },
-      { id: "customEmail" },
-      { id: "aiThreatDetection" },
-      { id: "multiLayerSecurity" },
-      { id: "emailSorting" },
-      { id: "customFolders" },
-      { id: "storage10gb" },
-      { id: "multiAccount" },
-      { id: "emailSearch" },
-      { id: "support24_7" },
-    ],
-  },
-];
-
-const ENTERPRISE_PLANS = [
-  {
-    id: "e3",
-    segment: "enterprise",
-    title: "Silence 365 Enterprise 300+",
-    features: [
-      { id: "unlimitedUsers" },
-      { id: "customEmail" },
-      { id: "adminConsoleEnterprise" },
-      { id: "aiThreatDetection" },
-      { id: "multiLayerSecurity" },
-      { id: "emailSorting" },
-      { id: "advancedLinkScanner" },
-      { id: "emailFlowVizOrg" },
-      { id: "manageDeleteEmails" },
-      { id: "customFolders" },
-      { id: "storage5tb" },
-      { id: "multiAccount" },
-      { id: "support24_7" },
-    ],
-  },
-  {
-    id: "e5",
-    segment: "enterprise",
-    title: "Silence 365 Enterprise 500+",
-    features: [
-      { id: "unlimitedUsers" },
-      { id: "customEmail" },
-      { id: "adminConsoleEnterprise" },
-      { id: "aiThreatDetection" },
-      { id: "multiLayerSecurity" },
-      { id: "emailSorting" },
-      { id: "advancedLinkScanner" },
-      { id: "emailFlowVizOrg" },
-      { id: "manageDeleteEmails" },
-      { id: "customFolders" },
-      { id: "storage10tb" },
-      { id: "multiAccount" },
-      { id: "prioritySupport" },
-      { id: "dedicatedAccount" },
+      ...COMMON_FEATURES,
+      "Up to 10 users",
+      "Up to 1 administrator",
+      "Unlimited 4-layer email security",
+      "Includes up to 10 deep AI phishing context analyses per user / month (5th-layer advanced analysis)",
+      "Up to 8GB storage per user",
     ],
   },
 ];
@@ -127,8 +92,16 @@ const Pricing = ({ onOpenModal }) => {
   const { t } = useLanguage();
   const [activeTooltip, setActiveTooltip] = useState(null);
   const [activeCardIndex, setActiveCardIndex] = useState(null);
-  const [segment, setSegment] = useState("business"); // "business" or "enterprise"
   const [billing, setBilling] = useState("yearly"); // "yearly" or "monthly"
+  const [productType, setProductType] = useState("email");
+
+  const tabs = useMemo(
+    () => [
+      { id: "email", label: "Email Security" },
+      { id: "web", label: "Web Security" },
+    ],
+    []
+  );
 
   const tooltipContent = TOOLTIP_KEYS.reduce((acc, key) => {
     const dictionaryKey = mapTooltipKeyToDictionaryKey(key);
@@ -172,28 +145,13 @@ const Pricing = ({ onOpenModal }) => {
   }, {});
 
   const getPriceDisplay = (planId) => {
-    let priceData;
-
-    if (segment === "business") {
-      priceData = PRICING_DATA.business[planId];
-    } else {
-      priceData = PRICING_DATA.enterprise[planId];
-    }
+    const priceData = PRICING_DATA.business[planId];
 
     if (!priceData) return "Contact us";
 
-    let price;
-    if (segment === "business") {
-      price = billing === "yearly" ? priceData.yearly : priceData.monthly;
-    } else {
-      price = priceData.yearly;
-    }
+    const price = billing === "yearly" ? priceData.yearly : priceData.monthly;
 
     return `$${price.toFixed(2)}${priceData.unit}`;
-  };
-
-  const getActivePlans = () => {
-    return segment === "business" ? BUSINESS_PLANS : ENTERPRISE_PLANS;
   };
 
   return (
@@ -213,113 +171,72 @@ const Pricing = ({ onOpenModal }) => {
           {t("pricing.title", "Pricing")}
         </h2>
 
-        {/* Controls: Segment, Billing, Currency */}
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-6 mb-12 relative z-20">
-          {/* Segment Toggle - Left */}
+        {/* Product Type Toggle (Email / Web) */}
+        <div className="relative z-10 flex  w-full justify-center  mt-30 mb-6">
+          <div className="relative flex rounded-full border border-purple-400/25 bg-[#050b1a]/85 p-1 text-sm font-medium text-purple-100/70 shadow-[0_0_55px_rgba(168,85,247,0.28)] backdrop-blur-xl">
+            {tabs.map((tab) => {
+              const isActive = tab.id === productType;
+              return (
+                <button
+                  key={tab.id}
+                  type="button"
+                  onClick={() => setProductType(tab.id)}
+                  className="relative flex min-w-[160px] items-center justify-center rounded-full px-5 py-2 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-300/40"
+                >
+                  {isActive && (
+                    <motion.span
+                      layoutId="tab-indicator"
+                      className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-200 via-violet-200 to-fuchsia-200 shadow-[0_0_35px_rgba(168,85,247,0.55)]"
+                      transition={{
+                        type: "spring",
+                        stiffness: 260,
+                        damping: 28
+                      }}
+                    />
+                  )}
+                  <span
+                    className={`relative z-10 ${isActive
+                      ? "text-black"
+                      : "text-purple-100/70 hover:text-purple-50"
+                      }`}
+                  >
+                    {tab.label}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Controls: Billing Only */}
+        <div className="flex justify-center items-center mb-12 relative z-20">
           <div className="flex gap-2 bg-white/10 rounded-full p-1 backdrop-blur-sm border border-white/20">
             <button
-              onClick={() => setSegment("business")}
-              className={`px-6 py-2 rounded-full transition-all font-medium text-sm ${segment === "business"
+              onClick={() => setBilling("yearly")}
+              className={`px-6 py-2 rounded-full transition-all font-medium text-sm ${billing === "yearly"
                 ? "bg-white text-black"
                 : "text-white hover:bg-white/10"
                 }`}
             >
-              Business
+              Yearly
             </button>
             <button
-              onClick={() => setSegment("enterprise")}
-              className={`px-6 py-2 rounded-full transition-all font-medium text-sm ${segment === "enterprise"
+              onClick={() => setBilling("monthly")}
+              className={`px-6 py-2 rounded-full transition-all font-medium text-sm ${billing === "monthly"
                 ? "bg-white text-black"
                 : "text-white hover:bg-white/10"
                 }`}
             >
-              Enterprise
+              Monthly
             </button>
-          </div>
-
-          {/* Right side: Billing Toggle + Currency Selector */}
-          <div className="flex items-center gap-3 sm:gap-4">
-            {/* Billing Toggle - Only visible for Business */}
-            {segment === "business" && (
-              <div className="flex gap-2 bg-white/10 rounded-full p-1 backdrop-blur-sm border border-white/20">
-                <button
-                  onClick={() => setBilling("yearly")}
-                  className={`px-6 py-2 rounded-full transition-all font-medium text-sm ${billing === "yearly"
-                    ? "bg-white text-black"
-                    : "text-white hover:bg-white/10"
-                    }`}
-                >
-                  Yearly
-                </button>
-                <button
-                  onClick={() => setBilling("monthly")}
-                  className={`px-6 py-2 rounded-full transition-all font-medium text-sm ${billing === "monthly"
-                    ? "bg-white text-black"
-                    : "text-white hover:bg-white/10"
-                    }`}
-                >
-                  Monthly
-                </button>
-              </div>
-            )}
-
-            {/* Currency Selector (Hidden) */}
-            {/* <CurrencySelector
-              currency={currency}
-              onCurrencyChange={setCurrency}
-            /> */}
           </div>
         </div>
 
         {/* Pricing Cards */}
-        {segment === "business" ? (
-          // Business Layout: Asymmetric (2 top vertical, optional bottom horizontal)
-          <div className="space-y-6 relative z-10">
-            {/* Top Row: 2 Vertical Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-stretch">
-              {BUSINESS_PLANS.slice(0, 2).map((plan, index) => (
-                <PricingCard
-                  key={plan.id}
-                  plan={plan}
-                  price={getPriceDisplay(plan.id)}
-                  tooltipContent={tooltipContent}
-                  activeTooltip={activeTooltip}
-                  setActiveTooltip={setActiveTooltip}
-                  activeCardIndex={activeCardIndex}
-                  setActiveCardIndex={setActiveCardIndex}
-                  index={index}
-                  onOpenModal={onOpenModal}
-                  isHorizontal={false}
-                />
-              ))}
-            </div>
-
-            {BUSINESS_PLANS.length > 2 && (
-              <div className="flex justify-center">
-                <div className="w-full">
-                  {BUSINESS_PLANS.slice(2).map((plan, index) => (
-                    <PricingCard
-                      key={plan.id}
-                      plan={plan}
-                      price={getPriceDisplay(plan.id)}
-                      tooltipContent={tooltipContent}
-                      activeTooltip={activeTooltip}
-                      setActiveTooltip={setActiveTooltip}
-                      activeCardIndex={activeCardIndex}
-                      setActiveCardIndex={setActiveCardIndex}
-                      index={2 + index}
-                      onOpenModal={onOpenModal}
-                      isHorizontal={true}
-                    />
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
-        ) : (
-          // Enterprise Layout: Simple 2-card grid
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 relative z-10 items-stretch">
-            {ENTERPRISE_PLANS.map((plan, index) => (
+        <div className="space-y-6 relative z-10">
+          {/* Top Row: 2 Vertical Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-stretch">
+            {BUSINESS_PLANS.slice(0, 2).map((plan, index) => (
               <PricingCard
                 key={plan.id}
                 plan={plan}
@@ -335,7 +252,37 @@ const Pricing = ({ onOpenModal }) => {
               />
             ))}
           </div>
-        )}
+
+          {BUSINESS_PLANS.length > 2 && (
+            <div className="flex justify-center">
+              <div className="w-full">
+                {BUSINESS_PLANS.slice(2).map((plan, index) => (
+                  <PricingCard
+                    key={plan.id}
+                    plan={plan}
+                    price={getPriceDisplay(plan.id)}
+                    tooltipContent={tooltipContent}
+                    activeTooltip={activeTooltip}
+                    setActiveTooltip={setActiveTooltip}
+                    activeCardIndex={activeCardIndex}
+                    setActiveCardIndex={setActiveCardIndex}
+                    index={2 + index}
+                    onOpenModal={onOpenModal}
+                    isHorizontal={true}
+                  />
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* Lamp element below cards - breaking out of container */}
+      <div className="relative left-1/2 -translate-x-1/2 mt-10 w-[100vw] h-[220px] pointer-events-none max-w-none overflow-visible z-0">
+        <CybersecurityLamp
+          containerClassName="w-full h-full min-h-0 bg-transparent"
+          headingClassName="hidden"
+        />
       </div>
     </section>
   );
@@ -364,42 +311,67 @@ const mapTooltipKeyToDictionaryKey = (key) => {
   }
 };
 
-const getGlowColor = (planId) => {
-  // Premium: violet → blue
-  // Standard: cyan → blue
-  // E3: cyan
-  // E5: violet → blue
-  if (planId === "standard" || planId === "e3") {
+const getCardTheme = (index) => {
+  // 1) First pricing card — light purple (soft, light violet look)
+  if (index === 0) {
     return {
-      border: "linear-gradient(135deg, rgba(59, 130, 246, 0.5) 0%, rgba(6, 182, 212, 0.5) 100%)",
-      glow: "linear-gradient(135deg, rgba(59, 130, 246, 0.9) 0%, rgba(6, 182, 212, 0.7) 100%)",
-      shadow: "0 0 60px 20px rgba(59, 130, 246, 0.3), 0 0 120px 40px rgba(6, 182, 212, 0.15)",
+      borderColor: "rgba(216, 180, 254, 0.6)", // Lighter Violet
+      innerGlowColor: "rgba(216, 180, 254, 0.2)",
+      // Lighter gradient start
+      background: "linear-gradient(135deg, rgba(80, 70, 120, 0.7) 0%, rgba(30, 25, 50, 0.7) 100%)",
+      glow: {
+        border: "linear-gradient(135deg, rgba(216, 180, 254, 0.6) 0%, rgba(167, 139, 250, 0.6) 100%)",
+        glow: "linear-gradient(135deg, rgba(216, 180, 254, 0.9) 0%, rgba(167, 139, 250, 0.7) 100%)",
+        shadow: "0 0 60px 20px rgba(216, 180, 254, 0.3), 0 0 120px 40px rgba(167, 139, 250, 0.15)",
+      }
     };
-  } else {
-    // basic
+  }
+  // 2) Second pricing card — blue
+  if (index === 1) {
     return {
+      borderColor: "rgba(96, 165, 250, 0.6)", // Blue
+      innerGlowColor: "rgba(96, 165, 250, 0.2)",
+      background: "linear-gradient(135deg, rgba(30, 60, 100, 0.7) 0%, rgba(20, 30, 60, 0.7) 100%)",
+      glow: {
+        border: "linear-gradient(135deg, rgba(96, 165, 250, 0.6) 0%, rgba(59, 130, 246, 0.6) 100%)",
+        glow: "linear-gradient(135deg, rgba(96, 165, 250, 0.9) 0%, rgba(59, 130, 246, 0.7) 100%)",
+        shadow: "0 0 60px 20px rgba(96, 165, 250, 0.3), 0 0 120px 40px rgba(59, 130, 246, 0.15)",
+      }
+    };
+  }
+  // 3) Third pricing card — purple (darker / more saturated)
+  if (index === 2) {
+    return {
+      borderColor: "rgba(168, 85, 247, 0.6)", // Purple
+      innerGlowColor: "rgba(168, 85, 247, 0.2)",
+      background: "linear-gradient(135deg, rgba(90, 30, 120, 0.7) 0%, rgba(40, 20, 60, 0.7) 100%)",
+      glow: {
+        border: "linear-gradient(135deg, rgba(168, 85, 247, 0.6) 0%, rgba(147, 51, 234, 0.6) 100%)",
+        glow: "linear-gradient(135deg, rgba(168, 85, 247, 0.9) 0%, rgba(147, 51, 234, 0.7) 100%)",
+        shadow: "0 0 60px 20px rgba(168, 85, 247, 0.3), 0 0 120px 40px rgba(147, 51, 234, 0.15)",
+      }
+    };
+  }
+
+  // Default fallback
+  return {
+    borderColor: "rgba(167, 139, 250, 0.6)",
+    innerGlowColor: "rgba(167, 139, 250, 0.15)",
+    background: "rgba(20, 20, 35, 0.6)",
+    glow: {
       border: "linear-gradient(135deg, rgba(167, 139, 250, 0.5) 0%, rgba(59, 130, 246, 0.5) 100%)",
       glow: "linear-gradient(135deg, rgba(167, 139, 250, 0.9) 0%, rgba(59, 130, 246, 0.7) 100%)",
       shadow: "0 0 60px 20px rgba(167, 139, 250, 0.3), 0 0 120px 40px rgba(59, 130, 246, 0.15)",
-    };
-  }
+    }
+  };
 };
 
 const getBulletColor = (planId) => {
-  if (planId === "standard" || planId === "e3") {
-    return {
-      bg: "linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(6, 182, 212, 0.2) 100%)",
-      border: "linear-gradient(135deg, rgba(59, 130, 246, 0.6) 0%, rgba(6, 182, 212, 0.6) 100%)",
-      icon: "#3b82f6", // blue
-    };
-  } else {
-    // basic
-    return {
-      bg: "linear-gradient(135deg, rgba(167, 139, 250, 0.2) 0%, rgba(59, 130, 246, 0.2) 100%)",
-      border: "linear-gradient(135deg, rgba(167, 139, 250, 0.6) 0%, rgba(59, 130, 246, 0.6) 100%)",
-      icon: "#a78bfa", // violet
-    };
-  }
+  return {
+    bg: "linear-gradient(135deg, rgba(167, 139, 250, 0.2) 0%, rgba(59, 130, 246, 0.2) 100%)",
+    border: "linear-gradient(135deg, rgba(167, 139, 250, 0.6) 0%, rgba(59, 130, 246, 0.6) 100%)",
+    icon: "#a78bfa", // violet
+  };
 };
 
 const PricingCard = ({
@@ -414,54 +386,9 @@ const PricingCard = ({
   onOpenModal,
   isHorizontal = false,
 }) => {
-  const featureFallbacks = {
-    // Business Premium
-    secureAccess300: "Secure access for up to 300 users",
-    customEmail: "Custom company email on your own domain (you@yourcompany.com)",
-    adminConsole: "Admin console with domain-wide email management and bulk operations",
-    aiThreatDetection: "AI-powered threat detection with automatic email categorization",
-    multiLayerSecurity: "Multi-layered email security pipeline (SPF, DKIM, DMARC, spam, malware, phishing)",
-    emailSorting: "Email sorting into security folders (Secure, Spam, Dangerous Links, Malware, Phishing, Spoofed)",
-    advancedLinkScanner: "Advanced link scanner and antivirus protection for attachments",
-    emailFlowViz: "Email flow visualization across entire domain with comprehensive filters",
-    manageDeleteEmails: "Ability to manage and delete emails across all users in domain",
-    customFolders: "Custom folders with auto-filtering rules (sender, domain, subject)",
-    storage10gb: "10 GB secure mailbox storage per user",
-    storage5tb: "5 TB secure mailbox storage per user",
-    storage10tb: "10 TB secure mailbox storage per user",
-    multiAccount: "Multi-account support (Gmail/Outlook integration)",
-    emailSearch: "Email search with full-text capabilities",
-    support24_7: "24/7 email and web support",
+  const theme = getCardTheme(index);
+  const { borderColor, innerGlowColor, background, glow: glowColor } = theme;
 
-    // Business Basic
-    aiAssisted: "AI-assisted email categorization into security folders",
-    basicFiltering: "Custom folders with basic filtering",
-
-    // Enterprise
-    unlimitedUsers: "Supports unlimited users",
-    adminConsoleEnterprise: "Admin console with enterprise-grade domain management and bulk operations",
-    emailFlowVizOrg: "Email flow visualization across entire organization with comprehensive filters",
-    prioritySupport: "Priority support with faster response times",
-    dedicatedAccount: "Dedicated account management",
-  };
-
-  const glowColor = getGlowColor(plan.id);
-
-  const getBorderColor = (planId) => {
-    if (planId === "standard" || planId === "e3") {
-      return "rgba(59, 130, 246, 0.6)";
-    } else {
-      return "rgba(167, 139, 250, 0.6)";
-    }
-  };
-
-  const getInnerGlowColor = (planId) => {
-    if (planId === "standard" || planId === "e3") {
-      return "rgba(59, 130, 246, 0.15)";
-    } else {
-      return "rgba(167, 139, 250, 0.15)";
-    }
-  };
 
   return (
     <div className="relative group w-full h-full">
@@ -479,11 +406,11 @@ const PricingCard = ({
         className="relative h-full rounded-2xl transition-all duration-300"
         style={{
           border: "1.5px solid",
-          borderColor: getBorderColor(plan.id),
-          background: "rgba(20, 20, 35, 0.6)",
+          borderColor: borderColor,
+          background: background,
           backdropFilter: "blur(16px) saturate(180%)",
           WebkitBackdropFilter: "blur(16px) saturate(180%)",
-          boxShadow: `inset 0 0 40px ${getInnerGlowColor(plan.id)}, inset 0 0 80px ${getInnerGlowColor(plan.id)}`,
+          boxShadow: `inset 0 0 40px ${innerGlowColor}, inset 0 0 80px ${innerGlowColor}`,
         }}
       >
         {/* Border glow enhancement */}
@@ -506,7 +433,7 @@ const PricingCard = ({
             backdropFilter: "blur(16px) saturate(180%)",
             WebkitBackdropFilter: "blur(16px) saturate(180%)",
             border: "1px solid rgba(255, 255, 255, 0.08)",
-            boxShadow: `inset 0 1px 2px rgba(255, 255, 255, 0.1), inset 0 0 60px ${getInnerGlowColor(plan.id)}`,
+            boxShadow: `inset 0 1px 2px rgba(255, 255, 255, 0.1), inset 0 0 60px ${innerGlowColor}`,
           }}
           onMouseEnter={() => setActiveCardIndex(index)}
           onMouseLeave={() => setActiveCardIndex(null)}
@@ -525,8 +452,8 @@ const PricingCard = ({
             className="absolute inset-0 rounded-2xl pointer-events-none transition-all duration-500"
             style={{
               boxShadow: activeCardIndex === index
-                ? `inset 0 0 80px ${getInnerGlowColor(plan.id)}, inset 0 0 120px ${getInnerGlowColor(plan.id)}`
-                : `inset 0 0 40px ${getInnerGlowColor(plan.id)}`,
+                ? `inset 0 0 80px ${innerGlowColor}, inset 0 0 120px ${innerGlowColor}`
+                : `inset 0 0 40px ${innerGlowColor}`,
               opacity: activeCardIndex === index ? 1 : 0.6,
             }}
           />
@@ -546,14 +473,15 @@ const PricingCard = ({
             {/* Middle block: Features (only for horizontal) */}
             {isHorizontal && (
               <div className={`flex-1 flex-grow`}>
-                <ul className={`${isHorizontal ? "grid grid-cols-1 sm:grid-cols-2 gap-x-3 gap-y-1.5" : "space-y-2"}`}>
-                  {plan.features.map((feature) => {
-                    const tooltipId = feature.tooltip;
-                    const label = featureFallbacks[feature.id] || feature.id;
-                    const bulletColor = getBulletColor(plan.id);
+                <ul className={`${isHorizontal ? "columns-1 sm:columns-2 gap-6" : "space-y-4"}`}>
+                  {plan.features.map((feature, i) => {
+                    {/* Simplified mapping for strings */ }
+                    const label = feature;
+                    {/* Note: tooltips disabled as per request to remove old logic, or keep if key matches? 
+                        User provided literal strings. Assuming no IDs provided in strings. */}
 
                     return (
-                      <li key={feature.id} className="flex items-start gap-2 text-white text-sm">
+                      <li key={i} className="break-inside-avoid mb-4 flex items-start gap-2 text-white text-sm">
                         <svg
                           className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5"
                           fill="none"
@@ -569,43 +497,6 @@ const PricingCard = ({
                           ></path>
                         </svg>
                         <span className="flex-1 leading-snug text-gray-100">{label}</span>
-                        {tooltipId && tooltipContent[tooltipId] && (
-                          <div
-                            className="relative hidden sm:flex h-4 w-4 items-center justify-center flex-shrink-0"
-                            onMouseEnter={() => {
-                              setActiveTooltip(tooltipId);
-                              setActiveCardIndex(index);
-                            }}
-                            onMouseLeave={() => {
-                              setActiveTooltip(null);
-                            }}
-                          >
-                            <svg
-                              className="w-3 h-3 text-gray-400 cursor-help"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                                d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                              ></path>
-                            </svg>
-                            {activeTooltip === tooltipId && (
-                              <TooltipCard className="z-[9999] w-72 sm:w-80 max-w-[calc(100vw-3rem)] rounded-lg border border-white/20 bg-black/80 p-4 text-white shadow-2xl">
-                                <h4 className="mb-2 font-bold text-white">
-                                  {tooltipContent[tooltipId].title}
-                                </h4>
-                                <p className="text-sm text-gray-200">
-                                  {tooltipContent[tooltipId].content}
-                                </p>
-                              </TooltipCard>
-                            )}
-                          </div>
-                        )}
                       </li>
                     );
                   })}
@@ -617,12 +508,11 @@ const PricingCard = ({
             {!isHorizontal && (
               <div className="flex-1 mb-8 sm:mb-8">
                 <ul className="space-y-3">
-                  {plan.features.map((feature) => {
-                    const tooltipId = feature.tooltip;
-                    const label = featureFallbacks[feature.id] || feature.id;
+                  {plan.features.map((feature, i) => {
+                    const label = feature;
 
                     return (
-                      <li key={feature.id} className="flex items-start sm:items-center gap-3 text-white text-sm sm:text-base">
+                      <li key={i} className="flex items-start sm:items-center gap-3 text-white text-sm sm:text-base">
                         <svg
                           className="w-4 h-4 text-green-400 flex-shrink-0 mt-1 sm:mt-0"
                           fill="none"
@@ -638,43 +528,6 @@ const PricingCard = ({
                           ></path>
                         </svg>
                         <span className="flex-1 leading-snug text-gray-100">{label}</span>
-                        {tooltipId && tooltipContent[tooltipId] && (
-                          <div
-                            className="relative hidden sm:flex h-5 w-5 items-center justify-center flex-shrink-0"
-                            onMouseEnter={() => {
-                              setActiveTooltip(tooltipId);
-                              setActiveCardIndex(index);
-                            }}
-                            onMouseLeave={() => {
-                              setActiveTooltip(null);
-                            }}
-                          >
-                            <svg
-                              className="w-4 h-4 text-gray-400 cursor-help"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                                d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                              ></path>
-                            </svg>
-                            {activeTooltip === tooltipId && (
-                              <TooltipCard className="z-[9999] w-72 sm:w-80 max-w-[calc(100vw-3rem)] rounded-lg border border-white/20 bg-black/80 p-4 text-white shadow-2xl">
-                                <h4 className="mb-2 font-bold text-white">
-                                  {tooltipContent[tooltipId].title}
-                                </h4>
-                                <p className="text-sm text-gray-200">
-                                  {tooltipContent[tooltipId].content}
-                                </p>
-                              </TooltipCard>
-                            )}
-                          </div>
-                        )}
                       </li>
                     );
                   })}
