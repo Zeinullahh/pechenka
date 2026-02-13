@@ -76,10 +76,10 @@
       "paidMonthly": "płatne miesięcznie",
       "plans": {
         "businessPremium": {
-          "title": "Microsoft 365 Business Premium (bez Teams)"
+          "title": "Silence 365 Business Max"
         },
         "businessStandard": {
-          "title": "Microsoft 365 Business Standard (bez Teams)"
+          "title": "Silence 365 Business Standard"
         },
         "businessBasic": {
           "title": "Microsoft 365 Business Basic (bez Teams)"
@@ -94,24 +94,24 @@
       "features": {
         "secureAccess300": "Bezpieczny dostęp dla maks. 300 użytkowników",
         "customDomainEmail": "Firmowa poczta na własnej domenie (ty@twojafirma.com)",
-        "adminConsole": "Konsola administracyjna z zarządzaniem pocztą i operacjami masowymi",
-        "aiThreatDetection": "Wykrywanie zagrożeń przez AI z automatyczną kategoryzacją",
-        "securityPipeline": "Wielowarstwowy pipeline ochrony e‑mail (SPF, DKIM, DMARC, spam, malware, phishing)",
-        "securityFolders": "Sortowanie wiadomości do folderów bezpieczeństwa (Bezpieczne, Spam, Niebezpieczne linki, Malware, Phishing, Podszywanie)",
+        "adminConsole": "Konsola administracyjna z zarządzaniem pocztą w całej domenie i operacjami masowymi",
+        "aiThreatDetection": "Wykrywanie zagrożeń zasilane przez AI z automatyczną kategoryzacją e‑maili",
+        "securityPipeline": "Wielowarstwowy pipeline bezpieczeństwa e‑mail (SPF, DKIM, DMARC, spam, malware, phishing)",
+        "securityFolders": "Sortowanie wiadomości do folderów bezpieczeństwa (Secure, Spam, Dangerous Links, Malware, Phishing, Spoofed)",
         "linkScannerAv": "Zaawansowany skaner linków i ochrona antywirusowa załączników",
-        "emailFlowVisualization": "Wizualizacja przepływu maili w domenie/organizacji z filtrami",
-        "bulkManageDelete": "Możliwość zarządzania i usuwania wiadomości u wszystkich użytkowników",
-        "customFoldersRules": "Własne foldery z regułami auto‑filtrowania (nadawca, domena, temat)",
+        "emailFlowVisualization": "Wizualizacja przepływu poczty dla całej domeny z rozbudowanymi filtrami",
+        "bulkManageDelete": "Możliwość zarządzania i usuwania wiadomości we wszystkich skrzynkach domeny",
+        "customFoldersRules": "Własne foldery z regułami automatycznego filtrowania (nadawca, domena, temat)",
         "storage10gb": "10 GB bezpiecznej skrzynki na użytkownika",
         "storage5tb": "5 TB bezpiecznej skrzynki na użytkownika",
         "storage10tb": "10 TB bezpiecznej skrzynki na użytkownika",
         "multiAccountSupport": "Obsługa wielu kont (integracja Gmail/Outlook)",
         "support247": "Wsparcie e‑mail i web 24/7",
-        "fullTextSearch": "Wyszukiwanie e‑mail z pełnym tekstem",
-        "aiAssistedCategorization": "Kategoryzacja maili przez AI do folderów bezpieczeństwa",
+        "fullTextSearch": "Wyszukiwanie wiadomości z pełnym tekstem",
+        "aiAssistedCategorization": "Kategoryzacja wiadomości przez AI do folderów bezpieczeństwa",
         "basicFiltering": "Własne foldery z podstawowymi regułami filtrowania",
         "prioritySupport": "Priorytetowe wsparcie z krótszym czasem reakcji",
-        "dedicatedAM": "Dedykowany opiekun",
+        "dedicatedAM": "Dedykowany opiekun konta",
         "unlimitedUsers": "Obsługa nielimitowanej liczby użytkowników"
       }
     },
@@ -1458,15 +1458,13 @@
   },
   "pricing": {
     "title": "Cennik",
-    "subtitle": "Plany mobile‑first, które skalują się wraz z Twoim produktem.",
-    "percentMaintenance": "{percent}% rocznej opieki",
-    "calculator": {
-      "subtitle": "Przesuń suwak, aby zobaczyć roczny koszt utrzymania"
-    },
+    "subtitle": "Plany przyjazne urządzeniom mobilnym, które skalują się wraz z Twoim produktem.",
+    "percentMaintenance": "{percent}% rocznego utrzymania",
+    "planEstimate": "${value}",
     "tooltips": {
       "cmcGlobal": {
-        "title": "CMC z globalnym monitoringiem ruchu",
-        "content": "Centralna Konsola Zarządzania (CMC) integruje się z innymi systemami bezpieczeństwa i używa tej samej domeny oraz interfejsu co Global Shield i Security Tester. Tutaj możesz blokować kraje, zamykać porty i zarządzać bezpieczeństwem na dużą skalę."
+        "title": "CMC z globalnym monitorowaniem ruchu",
+        "content": "Centralna Konsola Zarządzania (CMC) integruje się bezproblemowo z innymi systemami bezpieczeństwa i korzysta z tej samej domeny oraz interfejsu co Global Shield i Security Tester, dzięki czemu możesz zarządzać bezpieczeństwem sieci na dużą skalę. Z tego miejsca zablokujesz kraje, zamkniesz porty i wykonasz inne operacje."
       },
       "countryBlacklisting": {
         "title": "Blokowanie krajów",
@@ -1474,83 +1472,138 @@
       },
       "portManagement": {
         "title": "Zarządzanie portami",
-        "content": "Zamknij nieużywane porty, aby zmniejszyć powierzchnię ataku (np. wyłącz port 22, jeśli SSH nie jest potrzebne)."
+        "content": "Zamknij nieużywane porty, aby zmniejszyć powierzchnię ataku. Na przykład wyłącz port 22, gdy dostęp SSH nie jest potrzebny, aby ograniczyć ryzyko kompromitacji systemu."
       },
       "cmcEmail": {
         "title": "CMC z zaawansowaną wizualizacją e‑mail",
-        "content": "CMC jest zintegrowane z innymi systemami bezpieczeństwa i umożliwia monitorowanie przepływów e‑mail oraz podgląd wiadomości wszystkich dodanych użytkowników firmowych."
+        "content": "Centralna Konsola Zarządzania (CMC) integruje się z innymi systemami bezpieczeństwa i działa pod tą samą domeną oraz interfejsem co Global Shield i Security Tester. W tej konsoli możesz monitorować przepływy poczty i przeglądać wiadomości wszystkich dodanych użytkowników firmowych."
       },
       "dynamicVulnerability": {
-        "title": "Dynamiczne testy podatności",
-        "content": "Uruchom skan dynamiczny i otrzymuj wyniki w czasie rzeczywistym."
+        "title": "Dynamiczne wyszukiwanie podatności",
+        "content": "Wykrywa podatności, wchodząc w interakcję z Twoją witryną, w tym metodą wyszukiwania podatności poprzez system wywiadowczy."
       },
       "codeAnalyzer": {
         "title": "Analizator kodu",
-        "content": "Automatycznie wykrywa podatności i słabe punkty w kodzie źródłowym."
+        "content": "Identyfikuje problemy bezpieczeństwa bezpośrednio w Twojej bazie kodu dzięki wtyczce VS Code, pomagając naprawić je przed wdrożeniem."
       },
       "intelligenceReport": {
-        "title": "Raporty wywiadowcze",
-        "content": "Wnioski oparte na wywiadzie zagrożeń i historii incydentów."
+        "title": "Raport wywiadowczy",
+        "content": "Generuje szczegółowe informacje o Twoim celu, w tym otwarte porty, uruchomione usługi, subdomeny i inne wrażliwe dane wymagające działania."
       },
       "fullVulnerability": {
-        "title": "Pełny audyt podatności",
-        "content": "Kompletny przegląd bezpieczeństwa z rekomendacjami naprawczymi."
+        "title": "PEŁNA kontrola podatności",
+        "content": "Pełna kontrola podatności obejmuje zarówno dynamiczną analizę podatności, jak i analizę podatności kodu źródłowego."
       }
     },
-    "planEstimate": "${value}",
+    "aiSoc": {
+      "tabs": {
+        "email": "Bezpieczeństwo e‑mail",
+        "web": "Bezpieczeństwo webowe"
+      },
+      "billing": {
+        "yearly": "Rocznie",
+        "monthly": "Miesięcznie"
+      },
+      "cta": "Zamów system",
+      "contactSupport": "Skontaktuj się z nami",
+      "planTitles": {
+        "premium": "Business Premium 100",
+        "max": "Business MAX",
+        "standard": "Business Standard"
+      },
+      "features": {
+        "common": {
+          "customDomainEmail": "Firmowa poczta na własnej domenie (ty@twojafirma.com)",
+          "officeSuite": "Pakiet biurowy na komputery i urządzenia mobilne obejmujący dokumenty, arkusze, prezentacje i narzędzia e‑mail",
+          "adminConsole": "Konsola administracyjna z zarządzaniem pocztą w całej domenie i operacjami masowymi",
+          "dnsSecuritySetup": "Konfiguracja zabezpieczeń e‑mail przez DNS (SPF, DKIM, DMARC) w konsoli administratora",
+          "emailMigration": "Migracja poczty",
+          "aiThreatProtection": "Pięciowarstwowa ochrona e‑mail zasilana przez AI z automatyczną kategoryzacją (Secure, Spam, Dangerous Links, Phishing, Spoofed)",
+          "emailFlowVisualization": "Zaawansowana wizualizacja przepływu poczty w całej domenie z rozbudowanymi filtrami w konsoli admina",
+          "domainWideDeletion": "Możliwość usuwania wiadomości przez administratora we wszystkich skrzynkach domeny"
+        },
+        "shared": {
+          "unlimitedSecurity": "Nielimitowana 4-warstwowa ochrona e‑mail"
+        },
+        "premium": {
+          "userLimit": "Do 100 użytkowników",
+          "adminLimit": "Do 5 administratorów",
+          "aiAnalysis": "Do 60 zaawansowanych analiz phishingu AI na użytkownika/miesiąc (5. warstwa analizy)",
+          "storage": "Do 50 GB przestrzeni na użytkownika"
+        },
+        "max": {
+          "userLimit": "Do 300 użytkowników",
+          "adminLimit": "Do 10 administratorów",
+          "aiAnalysis": "Do 100 zaawansowanych analiz phishingu AI na użytkownika/miesiąc (5. warstwa analizy)",
+          "storage": "Do 200 GB przestrzeni na użytkownika"
+        },
+        "standard": {
+          "userLimit": "Do 10 użytkowników",
+          "adminLimit": "Do 1 administratora",
+          "aiAnalysis": "Do 10 zaawansowanych analiz phishingu AI na użytkownika/miesiąc (5. warstwa analizy)",
+          "storage": "Do 8 GB przestrzeni na użytkownika"
+        }
+      }
+    },
     "plans": {
       "globalShield": {
-        "title": "Sécurité Web et Gestion du Trafic",
-        "price": "$0.06/Go",
-        "description": "Aucune limite\nPas de frais supplémentaires",
-        "button": "Sécuriser l'application web et les API",
+        "title": "Ochrona sieci web i zarządzanie ruchem",
+        "price": "$0.06/GB",
+        "description": "Bez limitów\nBrak dodatkowych opłat",
+        "button": "Zabezpiecz aplikację webową i API",
         "features": {
-          "webProtection": "Protection contre tous les types d'attaques web, sauf l'exploitation de vulnérabilités de logique métier",
-          "ddosProtection": "Protection DDoS en temps réel",
-          "cmc": "CMC avec système de surveillance globale du trafic",
-          "country": "Fonctionnalité de liste noire de pays",
-          "port": "Fonctionnalité de fermeture de ports"
+          "webProtection": "Ochrona przed wszystkimi rodzajami ataków webowych poza wykorzystaniem logiki biznesowej",
+          "ddosProtection": "Ochrona DDoS w czasie rzeczywistym",
+          "cmc": "CMC z systemem globalnego monitorowania ruchu",
+          "country": "Funkcja blokowania krajów",
+          "port": "Funkcja zamykania portów"
         }
       },
       "emailProtector": {
-        "title": "Sécurité des E-mails et Visualisation",
-        "price": "$10/mois/compte",
-        "description": "Jusqu'à 10 e-mails par jour\nE-mails supplémentaires: $0.035 chaque e-mail",
-        "button": "Sécuriser l'E-mail",
+        "title": "Ochrona poczty i wizualizacja",
+        "price": "$10/miesiąc/konto",
+        "description": "Do 10 e‑maili dziennie\nDodatkowe e‑maile: $0.035 za sztukę",
+        "button": "Zabezpiecz pocztę",
         "features": {
-          "cmcEmail": "CMC avec le visualiseur de flux d'e-mails le plus avancé",
-          "visibility": "Visibilité complète des e-mails envoyés et reçus de tous les comptes e-mail, dans la CMC, avec catégorisation automatique des menaces",
-          "webClient": "Client WebMail sécurisé",
-          "phishing": "Protection contre le phishing",
-          "malware": "Analyse des pièces jointes malveillantes",
-          "links": "Détection de liens dangereux",
-          "spam": "Filtrage anti-spam",
-          "fakeSender": "Protection contre les expéditeurs falsifiés"
+          "cmcEmail": "CMC z najbardziej zaawansowanym wizualizatorem przepływu e‑mail",
+          "visibility": "Pełna widoczność wysłanych i odebranych wiadomości wszystkich kont w CMC z automatyczną kategoryzacją zagrożeń",
+          "webClient": "Bezpieczny klient WebMail",
+          "phishing": "Ochrona przed phishingiem",
+          "malware": "Skanowanie złośliwych załączników",
+          "links": "Wykrywanie niebezpiecznych linków",
+          "spam": "Filtrowanie antyspamowe",
+          "fakeSender": "Ochrona przed podszywaniem się pod nadawcę"
         }
       },
       "securityTester": {
-        "title": "Recherche de Vulnérabilités",
-        "price": "$25/mois",
-        "description": "Jusqu'à 50 vérifications COMPLÈTES de vulnérabilités par mois\nVérifications COMPLÈTES supplémentaires: $0.5 chacune",
-        "button": "Commencer les tests",
+        "title": "Wyszukiwanie podatności",
+        "price": "$25/miesiąc",
+        "description": "Do 50 PEŁNYCH kontroli podatności miesięcznie\nDodatkowe PEŁNE kontrole: $0.5 za sztukę",
+        "button": "Rozpocznij testy",
         "features": {
-          "dynamic": "Recherche dynamique de vulnérabilités",
-          "codeAnalyzer": "Analyseur de code",
-          "reports": "Rapports d'évaluation de sécurité faciles à comprendre",
-          "intelligence": "Rapport de renseignement"
+          "dynamic": "Dynamiczne wyszukiwanie podatności",
+          "codeAnalyzer": "Analizator kodu",
+          "reports": "Łatwe do zrozumienia raporty oceny bezpieczeństwa",
+          "intelligence": "Raport wywiadowczy"
         }
       }
     },
-    "perYear": "par an (est.)"
+    "perYear": "rocznie (szac.)",
+    "calculator": {
+      "subtitle": "Przesuń suwak, aby zobaczyć roczny koszt utrzymania"
+    }
   },
   "pricingCustom": {
-    "title": "Przejrzyste ceny",
-    "perYear": "za rok (szac.)",
+    "title": "Przejrzysty cennik",
+    "subtitle": "Plany przyjazne urządzeniom mobilnym, stworzone tak, by rosły wraz z Twoim produktem.",
+    "perYear": "rocznie (szacunkowo)",
+    "percentMaintenance": "{percent}% rocznego utrzymania",
+    "planEstimate": "${value}",
     "plans": {
       "basic": {
         "name": "Basic",
         "features": {
-          "fix": "Krytyczne poprawki (SLA 48h)",
+          "fix": "Krytyczne poprawki (SLA 48 h)",
           "updates": "Miesięczne aktualizacje",
           "audit": "Kwartalne audyty bezpieczeństwa",
           "manager": "Dedykowany opiekun"
@@ -1560,8 +1613,8 @@
         "name": "Pro",
         "badge": "Najpopularniejszy",
         "features": {
-          "fix": "Krytyczne poprawki (SLA 24h)",
-          "updates": "10h aktualizacji miesięcznie",
+          "fix": "Krytyczne poprawki (SLA 24 h)",
+          "updates": "10 h aktualizacji miesięcznie",
           "audit": "Miesięczne audyty bezpieczeństwa",
           "manager": "Dedykowany opiekun"
         }
@@ -1570,22 +1623,19 @@
         "name": "Enterprise",
         "badge": "Najlepsza wartość",
         "features": {
-          "fix": "Krytyczne poprawki (SLA 4h)",
+          "fix": "Krytyczne poprawki (SLA 4 h)",
           "updates": "Nielimitowane aktualizacje + roadmapa",
-          "audit": "Tygodniowe audyty + kopie zapasowe",
+          "audit": "Cotygodniowe audyty + kopie zapasowe",
           "manager": "Dedykowany opiekun"
         }
       }
     },
     "calculator": {
-      "title": "Kalkulator kosztu projektu",
+      "title": "Kalkulator kosztów projektu",
+      "subtitle": "Przesuń suwak, aby zobaczyć roczne utrzymanie",
       "projectCost": "Koszt projektu:",
-      "subtitle": "Faites glisser pour voir votre maintenance annuelle",
       "projectValue": "${value}"
-    },
-    "subtitle": "Plans adaptés aux mobiles conçus pour évoluer avec votre produit.",
-    "percentMaintenance": "{percent}% maintenance annuelle",
-    "planEstimate": "${value}"
+    }
   },
   "requestDemoModal": {
     "successTitle": "Dziękujemy!",
@@ -2011,7 +2061,7 @@
     }
   },
   "pricingCta": {
-    "requestSystem": "Demander le système"
+    "requestSystem": "Poproś o system"
   },
   "backToTop": {
     "label": "Haut de page"

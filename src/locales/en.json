@@ -1407,6 +1407,56 @@
         "content": "A FULL vulnerability check includes both dynamic vulnerability analysis and source code vulnerability analysis."
       }
     },
+    "aiSoc": {
+      "tabs": {
+        "email": "Email Security",
+        "web": "Web Security"
+      },
+      "billing": {
+        "yearly": "Yearly",
+        "monthly": "Monthly"
+      },
+      "cta": "Request the system",
+      "contactSupport": "Contact us",
+      "planTitles": {
+        "premium": "Business Premium 100",
+        "max": "Business MAX",
+        "standard": "Business Standard"
+      },
+      "features": {
+        "common": {
+          "customDomainEmail": "Custom company email on your own domain (you@yourcompany.com)",
+          "officeSuite": "Desktop and mobile office suite including document, spreadsheet, presentation, and email tools",
+          "adminConsole": "Admin console with domain-wide email management and bulk operations",
+          "dnsSecuritySetup": "Email security setup through DNS (SPF, DKIM, DMARC) on the admin console",
+          "emailMigration": "Email migration",
+          "aiThreatProtection": "5 layered, AI-powered threat protection with automatic email categorization (Secure, Spam, Dangerous Links, Phishing, Spoofed)",
+          "emailFlowVisualization": "Advanced email flow visualization across entire domain with comprehensive filters on the Admin Console",
+          "domainWideDeletion": "Ability for admin to delete emails across all users in domain"
+        },
+        "shared": {
+          "unlimitedSecurity": "Unlimited 4-layer email security"
+        },
+        "premium": {
+          "userLimit": "Up to 100 users",
+          "adminLimit": "Up to 5 administrators",
+          "aiAnalysis": "Includes up to 60 deep AI phishing context analyses per user / month (5th-layer advanced analysis)",
+          "storage": "Up to 50GB storage per user"
+        },
+        "max": {
+          "userLimit": "Up to 300 users",
+          "adminLimit": "Up to 10 administrators",
+          "aiAnalysis": "Includes up to 100 deep AI phishing context analyses per user / month (5th-layer advanced analysis)",
+          "storage": "Up to 200GB storage per user"
+        },
+        "standard": {
+          "userLimit": "Up to 10 users",
+          "adminLimit": "Up to 1 administrator",
+          "aiAnalysis": "Includes up to 10 deep AI phishing context analyses per user / month (5th-layer advanced analysis)",
+          "storage": "Up to 8GB storage per user"
+        }
+      }
+    },
     "plans": {
       "globalShield": {
         "title": "Web Security and Traffic Management",
@@ -2044,3 +2094,4 @@
     }
   }
 }
+

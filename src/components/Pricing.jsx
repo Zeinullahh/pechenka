@@ -1,10 +1,12 @@
 "use client";
 
+
 import React, { useState, useMemo } from "react";
 import TooltipCard from "./TooltipCard";
 import { CybersecurityLamp } from "./CybersecurityLamp";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { motion } from "framer-motion";
+
 
 // Microsoft 365 Pricing Data
 const PRICING_DATA = {
@@ -28,58 +30,93 @@ const PRICING_DATA = {
   },
 };
 
-const COMMON_FEATURES = [
-  "Custom company email on your own domain (you@yourcompany.com)",
-  "Desktop and mobile office suite including document, spreadsheet, presentation, and email tools",
-  "Admin console with domain-wide email management and bulk operations",
-  "Email security setup through DNS (SPF, DKIM, DMARC) on the admin console",
-  "Email migration",
-  "5 layered, AI-powered threat protection with automatic email categorization (Secure, Spam, Dangerous Links, Phishing, Spoofed)",
-  "Advanced email flow visualization across entire domain with comprehensive filters on the Admin Console",
-  "Ability for admin to delete emails across all users in domain",
+
+const COMMON_FEATURE_KEYS = [
+  "pricing.aiSoc.features.common.customDomainEmail",
+  "pricing.aiSoc.features.common.officeSuite",
+  "pricing.aiSoc.features.common.adminConsole",
+  "pricing.aiSoc.features.common.dnsSecuritySetup",
+  "pricing.aiSoc.features.common.emailMigration",
+  "pricing.aiSoc.features.common.aiThreatProtection",
+  "pricing.aiSoc.features.common.emailFlowVisualization",
+  "pricing.aiSoc.features.common.domainWideDeletion",
 ];
 
-const BUSINESS_PLANS = [
+
+const PLAN_SPECIFIC_FEATURE_KEYS = {
+  premium: [
+    "pricing.aiSoc.features.premium.userLimit",
+    "pricing.aiSoc.features.premium.adminLimit",
+    "pricing.aiSoc.features.shared.unlimitedSecurity",
+    "pricing.aiSoc.features.premium.aiAnalysis",
+    "pricing.aiSoc.features.premium.storage",
+  ],
+  max: [
+    "pricing.aiSoc.features.max.userLimit",
+    "pricing.aiSoc.features.max.adminLimit",
+    "pricing.aiSoc.features.shared.unlimitedSecurity",
+    "pricing.aiSoc.features.max.aiAnalysis",
+    "pricing.aiSoc.features.max.storage",
+  ],
+  standard: [
+    "pricing.aiSoc.features.standard.userLimit",
+    "pricing.aiSoc.features.standard.adminLimit",
+    "pricing.aiSoc.features.shared.unlimitedSecurity",
+    "pricing.aiSoc.features.standard.aiAnalysis",
+    "pricing.aiSoc.features.standard.storage",
+  ],
+};
+
+
+const FEATURE_FALLBACKS = {
+  "pricing.aiSoc.features.common.customDomainEmail": "Custom company email on your own domain (you@yourcompany.com)",
+  "pricing.aiSoc.features.common.officeSuite": "Desktop and mobile office suite including document, spreadsheet, presentation, and email tools",
+  "pricing.aiSoc.features.common.adminConsole": "Admin console with domain-wide email management and bulk operations",
+  "pricing.aiSoc.features.common.dnsSecuritySetup": "Email security setup through DNS (SPF, DKIM, DMARC) on the admin console",
+  "pricing.aiSoc.features.common.emailMigration": "Email migration",
+  "pricing.aiSoc.features.common.aiThreatProtection": "5 layered, AI-powered threat protection with automatic email categorization (Secure, Spam, Dangerous Links, Phishing, Spoofed)",
+  "pricing.aiSoc.features.common.emailFlowVisualization": "Advanced email flow visualization across entire domain with comprehensive filters on the Admin Console",
+  "pricing.aiSoc.features.common.domainWideDeletion": "Ability for admin to delete emails across all users in domain",
+  "pricing.aiSoc.features.shared.unlimitedSecurity": "Unlimited 4-layer email security",
+  "pricing.aiSoc.features.premium.userLimit": "Up to 100 users",
+  "pricing.aiSoc.features.premium.adminLimit": "Up to 5 administrators",
+  "pricing.aiSoc.features.premium.aiAnalysis": "Includes up to 60 deep AI phishing context analyses per user / month (5th-layer advanced analysis)",
+  "pricing.aiSoc.features.premium.storage": "Up to 50GB storage per user",
+  "pricing.aiSoc.features.max.userLimit": "Up to 300 users",
+  "pricing.aiSoc.features.max.adminLimit": "Up to 10 administrators",
+  "pricing.aiSoc.features.max.aiAnalysis": "Includes up to 100 deep AI phishing context analyses per user / month (5th-layer advanced analysis)",
+  "pricing.aiSoc.features.max.storage": "Up to 200GB storage per user",
+  "pricing.aiSoc.features.standard.userLimit": "Up to 10 users",
+  "pricing.aiSoc.features.standard.adminLimit": "Up to 1 administrator",
+  "pricing.aiSoc.features.standard.aiAnalysis": "Includes up to 10 deep AI phishing context analyses per user / month (5th-layer advanced analysis)",
+  "pricing.aiSoc.features.standard.storage": "Up to 8GB storage per user",
+};
+
+
+const BUSINESS_PLAN_CONFIG = [
   {
     id: "premium",
     segment: "business",
-    title: "Business Premium 100",
-    features: [
-      ...COMMON_FEATURES,
-      "Up to 100 users",
-      "Up to 5 administrators",
-      "Unlimited 4-layer email security",
-      "Includes up to 60 deep AI phishing context analyses per user / month (5th-layer advanced analysis)",
-      "Up to 50GB storage per user",
-    ],
+    titleKey: "pricing.aiSoc.planTitles.premium",
+    titleFallback: "Business Premium 100",
+    featureKeys: [...COMMON_FEATURE_KEYS, ...PLAN_SPECIFIC_FEATURE_KEYS.premium],
   },
   {
     id: "max",
     segment: "business",
-    title: "Business MAX",
-    features: [
-      ...COMMON_FEATURES,
-      "Up to 300 users",
-      "Up to 10 administrators",
-      "Unlimited 4-layer email security",
-      "Includes up to 100 deep AI phishing context analyses per user / month (5th-layer advanced analysis)",
-      "Up to 200GB storage per user",
-    ],
+    titleKey: "pricing.aiSoc.planTitles.max",
+    titleFallback: "Business MAX",
+    featureKeys: [...COMMON_FEATURE_KEYS, ...PLAN_SPECIFIC_FEATURE_KEYS.max],
   },
   {
     id: "standard",
     segment: "business",
-    title: "Business Standard",
-    features: [
-      ...COMMON_FEATURES,
-      "Up to 10 users",
-      "Up to 1 administrator",
-      "Unlimited 4-layer email security",
-      "Includes up to 10 deep AI phishing context analyses per user / month (5th-layer advanced analysis)",
-      "Up to 8GB storage per user",
-    ],
+    titleKey: "pricing.aiSoc.planTitles.standard",
+    titleFallback: "Business Standard",
+    featureKeys: [...COMMON_FEATURE_KEYS, ...PLAN_SPECIFIC_FEATURE_KEYS.standard],
   },
 ];
+
 
 const TOOLTIP_KEYS = [
   "cmc-global-traffic",
@@ -88,6 +125,7 @@ const TOOLTIP_KEYS = [
   "cmc-email-visualizer",
 ];
 
+
 const Pricing = ({ onOpenModal }) => {
   const { t } = useLanguage();
   const [activeTooltip, setActiveTooltip] = useState(null);
@@ -95,16 +133,56 @@ const Pricing = ({ onOpenModal }) => {
   const [billing, setBilling] = useState("yearly"); // "yearly" or "monthly"
   const [productType, setProductType] = useState("email");
 
+
   const tabs = useMemo(
     () => [
-      { id: "email", label: "Email Security" },
-      { id: "web", label: "Web Security" },
+      { id: "email", label: t("pricing.aiSoc.tabs.email", "Email Security") },
+      { id: "web", label: t("pricing.aiSoc.tabs.web", "Web Security") },
     ],
-    []
+    [t]
   );
+
+
+  const billingLabels = useMemo(
+    () => ({
+      yearly: t("pricing.aiSoc.billing.yearly", "Yearly"),
+      monthly: t("pricing.aiSoc.billing.monthly", "Monthly"),
+    }),
+    [t]
+  );
+
+
+  const requestSystemLabel = t("pricing.aiSoc.cta", "Request the system");
+  const contactSupportLabel = t("pricing.aiSoc.contactSupport", "Contact us");
+
+
+  const businessPlans = useMemo(
+    () =>
+      BUSINESS_PLAN_CONFIG.map((plan) => {
+        const { featureKeys, titleKey, titleFallback, ...rest } = plan;
+
+
+        return {
+          ...rest,
+          title: t(titleKey, titleFallback),
+          features: featureKeys.map((featureKey) =>
+            t(featureKey, FEATURE_FALLBACKS[featureKey] || featureKey)
+          ),
+        };
+      }),
+    [t]
+  );
+
+
+  const visiblePlans = useMemo(
+    () => (productType === "email" ? businessPlans : []),
+    [productType, businessPlans]
+  );
+
 
   const tooltipContent = TOOLTIP_KEYS.reduce((acc, key) => {
     const dictionaryKey = mapTooltipKeyToDictionaryKey(key);
+
 
     // Tooltip fallbacks
     const tooltipFallbacks = {
@@ -126,10 +204,12 @@ const Pricing = ({ onOpenModal }) => {
       },
     };
 
+
     const fallback = tooltipFallbacks[dictionaryKey] || {
       title: dictionaryKey,
       content: "",
     };
+
 
     acc[key] = {
       title: t(
@@ -144,15 +224,20 @@ const Pricing = ({ onOpenModal }) => {
     return acc;
   }, {});
 
+
   const getPriceDisplay = (planId) => {
     const priceData = PRICING_DATA.business[planId];
 
-    if (!priceData) return "Contact us";
+
+    if (!priceData) return contactSupportLabel;
+
 
     const price = billing === "yearly" ? priceData.yearly : priceData.monthly;
 
+
     return `$${price.toFixed(2)}${priceData.unit}`;
   };
+
 
   return (
     <section className="w-full pt-12 sm:pt-16 relative px-4 sm:px-6 lg:px-8">
@@ -170,6 +255,7 @@ const Pricing = ({ onOpenModal }) => {
         >
           {t("pricing.title", "Pricing")}
         </h2>
+
 
         {/* Product Type Toggle (Email / Web) */}
         <div className="relative z-10 flex  w-full justify-center  mt-30 mb-6">
@@ -208,6 +294,7 @@ const Pricing = ({ onOpenModal }) => {
           </div>
         </div>
 
+
         {/* Controls: Billing Only */}
         <div className="flex justify-center items-center mb-12 relative z-20">
           <div className="flex gap-2 bg-white/10 rounded-full p-1 backdrop-blur-sm border border-white/20">
@@ -218,7 +305,7 @@ const Pricing = ({ onOpenModal }) => {
                 : "text-white hover:bg-white/10"
                 }`}
             >
-              Yearly
+              {billingLabels.yearly}
             </button>
             <button
               onClick={() => setBilling("monthly")}
@@ -227,16 +314,17 @@ const Pricing = ({ onOpenModal }) => {
                 : "text-white hover:bg-white/10"
                 }`}
             >
-              Monthly
+              {billingLabels.monthly}
             </button>
           </div>
         </div>
+
 
         {/* Pricing Cards */}
         <div className="space-y-6 relative z-10">
           {/* Top Row: 2 Vertical Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-stretch">
-            {BUSINESS_PLANS.slice(0, 2).map((plan, index) => (
+            {visiblePlans.slice(0, 2).map((plan, index) => (
               <PricingCard
                 key={plan.id}
                 plan={plan}
@@ -249,14 +337,16 @@ const Pricing = ({ onOpenModal }) => {
                 index={index}
                 onOpenModal={onOpenModal}
                 isHorizontal={false}
+                requestSystemLabel={requestSystemLabel}
               />
             ))}
           </div>
 
-          {BUSINESS_PLANS.length > 2 && (
+
+          {visiblePlans.length > 2 && (
             <div className="flex justify-center">
               <div className="w-full">
-                {BUSINESS_PLANS.slice(2).map((plan, index) => (
+                {visiblePlans.slice(2).map((plan, index) => (
                   <PricingCard
                     key={plan.id}
                     plan={plan}
@@ -269,6 +359,7 @@ const Pricing = ({ onOpenModal }) => {
                     index={2 + index}
                     onOpenModal={onOpenModal}
                     isHorizontal={true}
+                    requestSystemLabel={requestSystemLabel}
                   />
                 ))}
               </div>
@@ -276,6 +367,7 @@ const Pricing = ({ onOpenModal }) => {
           )}
         </div>
       </div>
+
 
       {/* Lamp element below cards - breaking out of container */}
       <div className="relative left-1/2 -translate-x-1/2 mt-10 w-[100vw] h-[220px] pointer-events-none max-w-none overflow-visible z-0">
@@ -287,6 +379,7 @@ const Pricing = ({ onOpenModal }) => {
     </section>
   );
 };
+
 
 const mapTooltipKeyToDictionaryKey = (key) => {
   switch (key) {
@@ -310,6 +403,7 @@ const mapTooltipKeyToDictionaryKey = (key) => {
       return key;
   }
 };
+
 
 const getCardTheme = (index) => {
   // 1) First pricing card — light purple (soft, light violet look)
@@ -353,6 +447,7 @@ const getCardTheme = (index) => {
     };
   }
 
+
   // Default fallback
   return {
     borderColor: "rgba(167, 139, 250, 0.6)",
@@ -366,6 +461,7 @@ const getCardTheme = (index) => {
   };
 };
 
+
 const getBulletColor = (planId) => {
   return {
     bg: "linear-gradient(135deg, rgba(167, 139, 250, 0.2) 0%, rgba(59, 130, 246, 0.2) 100%)",
@@ -373,6 +469,7 @@ const getBulletColor = (planId) => {
     icon: "#a78bfa", // violet
   };
 };
+
 
 const PricingCard = ({
   plan,
@@ -385,9 +482,12 @@ const PricingCard = ({
   index,
   onOpenModal,
   isHorizontal = false,
+  requestSystemLabel,
 }) => {
   const theme = getCardTheme(index);
   const { borderColor, innerGlowColor, background, glow: glowColor } = theme;
+
+
 
 
   return (
@@ -400,6 +500,7 @@ const PricingCard = ({
           opacity: activeCardIndex === index ? 0.3 : 0,
         }}
       />
+
 
       {/* Outer wrapper: stroke border with gradient */}
       <div
@@ -422,6 +523,7 @@ const PricingCard = ({
             opacity: activeCardIndex === index ? 0.8 : 0,
           }}
         />
+
 
         {/* Inner card with glass background */}
         <div
@@ -447,6 +549,7 @@ const PricingCard = ({
             }}
           />
 
+
           {/* Enhanced inner glow layer */}
           <div
             className="absolute inset-0 rounded-2xl pointer-events-none transition-all duration-500"
@@ -457,6 +560,7 @@ const PricingCard = ({
               opacity: activeCardIndex === index ? 1 : 0.6,
             }}
           />
+
 
           {/* Content container: SHARP TEXT, NO BLUR */}
           <div className={`relative p-6 sm:p-8 flex ${isHorizontal ? "flex flex-col lg:flex-row gap-6 lg:gap-8" : "flex-col"} h-full z-10`}>
@@ -470,6 +574,7 @@ const PricingCard = ({
               </div>
             </div>
 
+
             {/* Middle block: Features (only for horizontal) */}
             {isHorizontal && (
               <div className={`flex-1 flex-grow`}>
@@ -477,8 +582,9 @@ const PricingCard = ({
                   {plan.features.map((feature, i) => {
                     {/* Simplified mapping for strings */ }
                     const label = feature;
-                    {/* Note: tooltips disabled as per request to remove old logic, or keep if key matches? 
+                    {/* Note: tooltips disabled as per request to remove old logic, or keep if key matches?
                         User provided literal strings. Assuming no IDs provided in strings. */}
+
 
                     return (
                       <li key={i} className="break-inside-avoid mb-4 flex items-start gap-2 text-white text-sm">
@@ -504,12 +610,14 @@ const PricingCard = ({
               </div>
             )}
 
+
             {/* Features list (only for vertical cards) */}
             {!isHorizontal && (
               <div className="flex-1 mb-8 sm:mb-8">
                 <ul className="space-y-3">
                   {plan.features.map((feature, i) => {
                     const label = feature;
+
 
                     return (
                       <li key={i} className="flex items-start sm:items-center gap-3 text-white text-sm sm:text-base">
@@ -535,6 +643,7 @@ const PricingCard = ({
               </div>
             )}
 
+
             {/* Right block: CTA Button */}
             <div className={`flex ${isHorizontal ? "items-center lg:ml-auto" : "justify-center"} mt-3 sm:mt-3`}>
               <div
@@ -553,6 +662,7 @@ const PricingCard = ({
                     opacity: activeCardIndex === index ? 0.6 : 0,
                   }}
                 />
+
 
                 <button
                   onClick={onOpenModal}
@@ -573,7 +683,7 @@ const PricingCard = ({
                     border: "1px solid rgba(255, 255, 255, 0.12)",
                   }}
                 >
-                  Request the system
+                  {requestSystemLabel}
                 </button>
               </div>
             </div>
@@ -583,5 +693,6 @@ const PricingCard = ({
     </div>
   );
 };
+
 
 export default Pricing;

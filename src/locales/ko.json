@@ -1,2127 +1,2169 @@
 {
-  "languageSelector": {
-    "triggerLabel": "언어 선택",
-    "menuLabel": "언어를 선택하세요",
-    "searchLabel": "Search languages",
-    "searchPlaceholder": "Search by name or native script",
-    "searchResults": "Search results",
-    "noMatches": "No languages match your search.",
-    "popular": "Most popular",
-    "allLanguages": "All languages"
-  },
-  "header": {
-    "andManyMore": "그리고 더 많은 것들...",
-    "nav": {
-      "main": "메인",
-      "mail": "메일",
-      "affiliate": "제휴 프로그램",
-      "instructions": "가이드",
-      "product": "AI-SOC",
-      "secureDevelopment": "SLNC-env",
-      "developerServices": "개발자 서비스",
-      "home": "Home",
-      "systems": "Systems",
-      "systemsAiSoc": "AI-SOC",
-      "systemsSlncEnv": "SLNC-env",
-      "services": "Services",
-      "systemsSithub": "Sithub",
-      "systemsSupreme": "Supreme",
-      "instructionsAiSoc": "AI-SOC",
-      "instructionsSupreme": "Supreme",
-      "instructionsSithub": "Sithub"
-    },
-    "login": "로그인",
-    "cta": {
-      "contact": "Contact",
-      "download": "Download",
-      "requestDemo": "Request Demo",
-      "get": "Get"
-    }
-  },
-  "affiliate": {
-    "hero": {
-      "tagline": "Silence AI 파트너 프로그램에 참여하세요",
-      "title": "초대를 수익으로 바꾸세요.",
-      "cta": "파트너 프로그램 참여하기",
-      "earnings": "$2,940.00",
-      "growth": "+18% (전월 대비)",
-      "snapshot": {
-        "label": "실시간 스냅샷",
-        "caption": "성과 데이터가 60초마다 업데이트되고, 확정된 지급금은 즉시 동기화됩니다."
-      },
-      "graph": {
-        "label": "수익 추이",
-        "title": "추천 수익 성장",
-        "window": "최근 30일",
-        "label0": "1주차",
-        "label1": "2주차",
-        "label2": "3주차",
-        "label3": "4주차",
-        "label4": "5주차",
-        "label5": "6주차",
-        "label6": "오늘"
-      },
-      "metric": {
-        "conversion": "활성화",
-        "conversionChange": "이번 달 신규 팀 24개",
-        "pending": "보류 중인 보상",
-        "pendingChange": "출금은 영업일 기준 2일 내 처리됩니다"
-      }
-    },
-    "howItWorks": {
-      "title": "작동 방식",
-      "create": {
-        "title": "링크 만들기",
-        "description": "Silence AI 대시보드에서 고유한 추천 링크 또는 프로모션 코드를 생성하세요."
-      },
-      "share": {
-        "title": "공유",
-        "description": "이메일, LinkedIn, 커뮤니티를 통해 팀을 초대하고 실시간으로 성과를 추적하세요."
-      },
-      "earn": {
-        "title": "수익 얻기",
-        "description": "추천한 고객이 Silence AI 보호를 활성화하는 즉시 커미션을 받습니다."
-      }
-    },
-    "commission": {
-      "heading": "잔액 리워드",
-      "highlight": {
-        "label": "파트너들이 좋아하는 이유"
-      },
-      "reward": {
-        "title": "충전 금액의 10% 리워드",
-        "description": "초대한 팀이 Silence AI 지갑을 충전하면 순금액의 10%가 즉시 적립됩니다."
-      },
-      "settlement": {
-        "title": "실시간 장부 반영",
-        "description": "거래가 완료되면 1분 이내에 리워드가 파트너 잔액에 반영되며, 수동 승인 대기열이 없습니다."
-      },
-      "withdrawal": {
-        "title": "출금은 영업일 기준 2일 내 처리",
-        "description": "출금 요청은 자동으로 검토되며, 2 영업일 내에 은행 계좌로 입금됩니다."
-      },
-      "sample": {
-        "label": "충전 예시",
-        "caption": "각 충전마다 파트너 수익이 증가합니다—레벨 초기화나 제품 매핑은 필요 없습니다.",
-        "topup": "$250 충전 → $25 리워드",
-        "topupHigher": "$1,000 충전 → $100 리워드"
-      },
-      "note": "커미션은 결제 처리 수수료를 제외한 순금액을 기준으로 계산됩니다."
-    },
-    "faq": {
-      "title": "질문과 답변",
-      "payments": {
-        "question": "지급금은 어떻게 받나요?",
-        "answer": "프로필에 VISA 또는 Mastercard 번호를 추가하면 지정된 카드로 바로 출금할 수 있습니다."
-      },
-      "discounts": {
-        "question": "추천 고객에게 할인 혜택이 있나요?",
-        "answer": "아니요. 추천 고객에게는 할인이 제공되지 않으며, 성공적인 추천의 커미션은 파트너만 받습니다."
-      },
-      "statistics": {
-        "question": "추천 통계를 언제 볼 수 있나요?",
-        "answer": "사용자가 프로모션 코드 또는 추천 링크로 가입하면 해당 이메일과 보상이 대시보드에 표시됩니다."
-      }
-    },
-    "termsAff": {
-      "label": "Affiliate Program",
-      "title": "Affiliate Terms of Service",
-      "notice": "This policy is available only in English",
-      "intro": "These terms describe how rewards are issued and paid to partners participating in the Silence AI affiliate program.",
-      "meta": {
-        "effective": "Effective date: 10 November 2024",
-        "lastUpdated": "Last updated: 10 November 2024"
-      },
-      "sections": {
-        "overview": {
-          "title": "1. Program Overview",
-          "body1": "1.1 Agreement Scope: These Affiliate Terms of Service (\"Terms\") govern your participation in the Silence AI affiliate program operated by Silence AI LLC (\"Silence AI,\" \"we,\" \"us,\" or \"our\"). These Terms apply to you, the individual or entity enrolling as an affiliate partner (\"you\" or \"your\"), and, where applicable, your employer, principal, or organization if you act on their behalf.",
-          "body2": "1.2 Program Summary: Under this program, qualified partners earn commission-based rewards when referred customers purchase or top up the AI-SOC 1 product. Participation in the affiliate program also requires compliance with the general Silence AI Terms of Service."
+    "home": {
+        "hero": {
+            "title": "사이버 보안은 더 이상",
+            "titleHighlight": "복잡하거나 비싸지 않습니다",
+            "subtitle": "안전하게 구축하고 자신 있게 배포하세요.",
+            "badge": "AI 보안 및 개발",
+            "ctaPrimary": "데모 요청",
+            "ctaSecondary": "시스템 살펴보기",
+            "highlights": {
+                "coverage": "24/7 AI 지원 SOC",
+                "onPrem": "데이터 유출 없는 온프레미스",
+                "deploy": "4분 만에 안전 배포"
+            },
+            "metrics": {
+                "title": "규제 대상 팀을 위해 설계",
+                "soc": "AI 지원 SOC 커버리지",
+                "egress": "모두 온프레미스 — 코드, 프롬프트, 빌드",
+                "deployment": "첫 안전 배포까지",
+                "locales": "기본 제공 언어"
+            }
         },
-        "eligibility": {
-          "title": "2. Partner Eligibility",
-          "item1": "You must maintain an active Silence AI affiliate account with accurate business and payment details.",
-          "item2": "Referrals must complete registration through your issued link or promo code.",
-          "item3": "Accounts found to be fraudulent, self-referred, or in breach of applicable law are not eligible for rewards."
+        "systems": {
+            "title": "시스템",
+            "cta": "자세히 보기",
+            "aiSoc": {
+                "title": "AI-SOC",
+                "desc": "AI로 구동되는 관리형 위협 탐지 및 대응 시스템. 웹과 이메일 공격을 선제적으로 차단합니다.",
+                "badge": "구독"
+            },
+            "sithub": {
+                "title": "Sithub",
+                "desc": "보안 스캔이 내장된 자체 호스팅 GitHub 대안. 모든 리포지토리와 코드 분석이 내부 네트워크에 머뭅니다.",
+                "badge": "구독"
+            },
+            "supreme": {
+                "title": "Supreme",
+                "desc": "VSCode용 로컬 코드 취약성 스캐너. 코드를 외부 서버로 보내지 않고 취약점을 분석합니다.",
+                "badge": "확장 프로그램"
+            },
+            "subtitle": "적합한 구독 제품을 선택하세요: 탐지를 위한 AI-SOC, 밀폐 개발을 위한 SLNC-env.",
+            "slncEnv": {
+                "title": "SLNC-env",
+                "desc": "코드, 프롬프트, 빌드를 온프레미스에 유지하는 밀폐형 개발 클라우드.",
+                "badge": "구독"
+            }
+        },
+        "services": {
+            "title": "맞춤형 개발",
+            "subtitle": "보안이 기본값인 AI 에이전트, 통합, 풀사이클 개발.",
+            "cta": "서비스 살펴보기",
+            "cardsTitle": {
+                "agents": "에이전트",
+                "integrations": "통합",
+                "delivery": "딜리버리"
+            },
+            "cards": {
+                "agents": "가드레일, RAG, 안전한 커넥터를 갖춘 산업용 AI 에이전트.",
+                "integrations": "스택, IAM, 데이터 거버넌스에 중립적으로 연결되는 통합.",
+                "delivery": "신뢰성·관측성·보안 리뷰 SLO를 충족하는 풀사이클 딜리버리."
+            }
+        },
+        "resources": {
+            "title": "추천 아티클",
+            "subtitle": "Silence AI는 국가 수준 정보 역량을 갖춘 드문 민간 기업입니다.",
+            "viewAll": "모든 글 보기"
+        },
+        "contact": {
+            "title": "AI-SOC과 SLNC-env를 결합할 준비가 되셨나요?",
+            "subtitle": "보안 및 딜리버리 목표를 알려주세요 — 적합한 시스템과 서비스를 맞추겠습니다.",
+            "cta": "데모 요청",
+            "ctaSecondary": "서비스 팀과 상담"
+        }
+    },
+    "header": {
+        "nav": {
+            "home": "홈",
+            "services": "서비스",
+            "affiliate": "제휴 프로그램",
+            "systems": "시스템",
+            "instructions": "가이드",
+            "systemsAiSoc": "AI-SOC",
+            "systemsSithub": "Sithub",
+            "systemsSupreme": "Supreme",
+            "instructionsAiSoc": "AI-SOC",
+            "instructionsSupreme": "Supreme",
+            "main": "Main",
+            "mail": "Mail",
+            "product": "AI-SOC",
+            "secureDevelopment": "SLNC-env",
+            "developerServices": "Developer Services",
+            "systemsSlncEnv": "SLNC-env",
+            "instructionsSithub": "Sithub"
+        },
+        "cta": {
+            "contact": "문의",
+            "requestDemo": "데모 요청",
+            "get": "받기",
+            "download": "다운로드"
+        },
+        "andManyMore": "그리고 더 많은 기능...",
+        "login": "데모 요청"
+    },
+    "footer": {
+        "copyright": "© {year} Silence AI. 모든 권리 보유.",
+        "contactLabel": "연락처:",
+        "contactValue": "info@silenceai.net",
+        "addressLabel": "주소:",
+        "addressValue": "카자흐스탄 알마티",
+        "links": {
+            "cookies": "쿠키 정책",
+            "termsUse": "이용 약관",
+            "termsService": "서비스 약관",
+            "privacy": "개인정보 보호정책",
+            "affiliateTerms": "제휴 서비스 약관"
+        }
+    },
+    "cookie": {
+        "title": "쿠키를 사용합니다",
+        "description": "더 나은 경험과 트래픽 분석을 위해 쿠키를 사용합니다.",
+        "more": "“동의”를 누르면 쿠키 사용에 동의하게 됩니다.",
+        "link": "자세히 보기",
+        "ok": "동의"
+    },
+    "hero": {
+        "headline": "AI-SOC 1: 사이버 보안은 더 이상 비싸고 복잡하지 않습니다",
+        "playgroundHeading": "AI 보안 운영 센터",
+        "tooltips": {
+            "web": {
+                "title": "웹 공격 방어",
+                "content": "DDoS, SQLi 등 비즈니스 로직 취약점을 제외한 모든 유형의 웹 공격을 차단합니다."
+            },
+            "email": {
+                "title": "이메일 공격 방어",
+                "content": "피싱, 악성 첨부, 위험 링크 등 모든 이메일 공격을 차단합니다."
+            },
+            "vulnerability": {
+                "title": "취약성 탐지",
+                "content": "지능형 엔진을 포함해 애플리케이션 코드와 웹/ API 상호작용을 통해 취약점을 식별합니다."
+            }
+        },
+        "subheading": "하나의 AI 사이버 보안 플랫폼이 다음을 결합합니다:",
+        "bullets": {
+            "web": "실시간 웹 공격 방어",
+            "email": "이메일 공격 방어",
+            "vulnerability": "취약성 탐지"
+        },
+        "buttons": {
+            "connect": "4분 만에 연결",
+            "tour": "90초 데모 보기"
+        }
+    },
+    "solution": {
+        "sectionTitle": "솔루션",
+        "sectionSubtitle": "4분 만에 준비되며 IT 담당자라면 누구나 사용할 수 있습니다. 고급 시각화와 합리적인 비용을 제공합니다.",
+        "cards": {
+            "globalShield": {
+                "title": "Global Shield - CIA급 트래픽 모니터링",
+                "description": "인터랙티브 3D 지구본으로 초당 요청, 활성 사용자, 바이트 단위 트래픽을 생생하게 보여줍니다.",
+                "bullets": {
+                    "one": "간단한 설정: IP와 도메인만 입력하세요.",
+                    "two": "DNS에 추가할 에이전트 IP를 전달받습니다.",
+                    "three": "포트를 닫아 노출 면적을 0으로 만듭니다."
+                }
+            },
+            "emailProtector": {
+                "title": "Email Protector - 세계 최초 AI 이메일 보호",
+                "description": "AI 기반 최초의 상용 이메일 보호 시스템. 벡터 뷰로 시간 흐름별 플로우를 쉽게 추적하고 위협을 감지합니다.",
+                "bullets": {
+                    "one": "스푸핑, 스팸, 피싱, 멀웨어를 탐지합니다.",
+                    "two": "관리자가 보호할 이메일 계정을 추가합니다.",
+                    "three": "가장 발전된 상용 이메일 플로우 뷰어."
+                }
+            },
+            "securityTester": {
+                "title": "Security Tester - 차세대 취약성 테스트",
+                "description": "원타임 토큰(OTT)으로 전체 감사를 수행합니다. 전용 브라우저나 VS Code 확장으로 접속하세요.",
+                "bullets": {
+                    "one": "CMC에서 범위와 대상을 정의합니다.",
+                    "two": "OTT를 붙여넣고 검사를 시작합니다.",
+                    "three": "지능형 인사이트 기반 위험 정보를 제공합니다."
+                }
+            }
+        },
+        "cmc": {
+            "title": "중앙 관리 콘솔(CMC)",
+            "description": "세 구성 요소를 단일 콘솔에서 제어하여 중앙 시각화, 손쉬운 설정/추적, 완전한 보안 리포트를 제공합니다."
+        }
+    },
+    "stickySolution": {
+        "webSecurity": {
+            "title": "웹 보안 시스템: 사이트/API 2분 연결",
+            "description": "DDoS, SQLi 같은 웹 공격을 차단합니다. 필요 없을 때 포트 22를 끄는 등 포트 차단으로 공격 표면을 줄입니다."
+        },
+        "ciaMonitoring": {
+            "title": "CIA 급 트래픽 모니터링",
+            "description": "인터랙티브 3D 지구본이 요청 수, 사용자 수, 트래픽 볼륨을 히스토리와 함께 보여줍니다."
+        },
+        "userGrowth": {
+            "title": "사용자 성장 인사이트",
+            "description": "사용자 수 변화를 히스토리로 확인하세요."
+        },
+        "aiEmailProtection": {
+            "title": "세계 최초 AI 이메일 보호: 네트워크 2분 연결",
+            "description": "CMC가 모든 발신/수신 메일을 위협 분류(스푸핑, 스팸, 피싱, 위험 링크, 악성 파일)와 함께 보여줍니다."
+        },
+        "emailVisualization": {
+            "title": "이메일 플로우 시각화",
+            "description": "CMC에 업계 최고 수준의 상용 이메일 시각화가 포함됩니다."
+        },
+        "secureWebmail": {
+            "title": "보안 웹메일",
+            "description": "관리자가 추가한 계정은 스푸핑, 스팸, 피싱, 악성 파일을 식별하는 안전한 웹메일을 사용합니다."
+        }
+    },
+    "insights": {
+        "items": {
+            "0": {
+                "title": "39초",
+                "description": "해킹 공격은 39초마다 발생합니다"
+            },
+            "1": {
+                "title": "2천만 건의 DDoS 공격",
+                "description": "2025년 1분기에만 2,050만 건의 DDoS 공격이 발생했습니다"
+            },
+            "2": {
+                "title": "매일",
+                "description": "하루에 3만 개의 웹사이트가 해킹됩니다"
+            }
+        }
+    },
+    "floatingText": {
+        "headline": "해커의 사고방식을 배우세요",
+        "description": "실제 공격과 위협에 대한 일일 리서치를 따라가세요"
+    },
+    "lamp": {
+        "title": "사이버 공격의 현실"
+    },
+    "pricing": {
+        "title": "가격",
+        "subtitle": "제품과 함께 확장되는 모바일 중심 요금제.",
+        "percentMaintenance": "연간 유지보수 {percent}%",
+        "calculator": {
+            "subtitle": "슬라이더를 움직여 연간 유지 비용을 확인하세요",
+            "title": "프로젝트 비용 계산기",
+            "projectCost": "프로젝트 비용:",
+            "projectValue": "${value}"
+        },
+        "tooltips": {
+            "cmcGlobal": {
+                "title": "글로벌 트래픽 모니터링이 포함된 CMC",
+                "content": "CMC는 다른 보안 시스템과 매끄럽게 통합되고 Global Shield 및 Security Tester와 동일한 도메인과 UI를 사용합니다. 국가 차단, 포트 차단, 대규모 보안 관리를 수행하세요."
+            },
+            "countryBlacklisting": {
+                "title": "국가 차단",
+                "content": "선택한 국가에서 오는 모든 트래픽을 차단합니다."
+            },
+            "portManagement": {
+                "title": "포트 관리",
+                "content": "사용하지 않는 포트를 닫아 공격 표면을 줄입니다(예: SSH가 필요 없으면 포트 22 비활성화)."
+            },
+            "cmcEmail": {
+                "title": "이메일 시각화가 포함된 CMC",
+                "content": "CMC에서 이메일 플로우를 모니터링하고 추가된 모든 기업 사용자의 메일을 확인할 수 있습니다."
+            },
+            "dynamicVulnerability": {
+                "title": "동적 취약성 탐색",
+                "content": "지능형 시스템을 활용해 웹사이트와 상호작용하며 취약점을 찾아냅니다."
+            },
+            "codeAnalyzer": {
+                "title": "코드 분석기",
+                "content": "VS Code 플러그인을 통해 코드베이스의 보안 문제를 식별해 배포 전 해결을 돕습니다."
+            },
+            "intelligenceReport": {
+                "title": "정보 보고서",
+                "content": "오픈 포트, 실행 중인 서비스, 서브도메인 등 조치가 필요한 민감 정보를 상세히 제공합니다."
+            },
+            "fullVulnerability": {
+                "title": "완전한 취약성 점검",
+                "content": "동적 취약성 분석과 소스 코드 취약성 분석이 모두 포함된 점검입니다."
+            }
+        },
+        "aiSoc": {
+            "tabs": {
+                "email": "이메일 보호",
+                "web": "웹 보안"
+            },
+            "billing": {
+                "yearly": "연간",
+                "monthly": "월간"
+            },
+            "cta": "시스템 요청",
+            "contactSupport": "문의하기",
+            "planTitles": {
+                "premium": "Business Premium 100",
+                "max": "Business MAX",
+                "standard": "Business Standard"
+            },
+            "features": {
+                "common": {
+                    "customDomainEmail": "자체 도메인의 기업 이메일(you@yourcompany.com)",
+                    "officeSuite": "데스크톱·모바일 문서/스프레드시트/프레젠테이션/메일",
+                    "adminConsole": "도메인 전체 메일/대량 작업을 제어하는 관리자 콘솔",
+                    "dnsSecuritySetup": "관리 콘솔에서 SPF, DKIM, DMARC 등 이메일 보안 DNS 구성",
+                    "emailMigration": "이메일 마이그레이션",
+                    "aiThreatProtection": "AI 기반 5단계 보호 및 자동 메일 분류(안전, 스팸, 위험 링크, 피싱, 스푸핑)",
+                    "emailFlowVisualization": "필터가 포함된 도메인 전체 이메일 플로우 시각화",
+                    "domainWideDeletion": "관리자가 전체 사용자 메일을 원격 삭제"
+                },
+                "shared": {
+                    "unlimitedSecurity": "무제한 4중 이메일 보호"
+                },
+                "premium": {
+                    "userLimit": "최대 100명 사용자",
+                    "adminLimit": "최대 5명 관리자",
+                    "aiAnalysis": "사용자당 월 60회의 심층 AI 피싱 분석(5단계 보호)",
+                    "storage": "사용자당 최대 50GB"
+                },
+                "max": {
+                    "userLimit": "최대 300명 사용자",
+                    "adminLimit": "최대 10명 관리자",
+                    "aiAnalysis": "사용자당 월 100회의 심층 AI 피싱 분석(5단계 보호)",
+                    "storage": "사용자당 최대 200GB"
+                },
+                "standard": {
+                    "userLimit": "최대 10명 사용자",
+                    "adminLimit": "최대 1명 관리자",
+                    "aiAnalysis": "사용자당 월 10회의 심층 AI 피싱 분석(5단계 보호)",
+                    "storage": "사용자당 최대 8GB"
+                }
+            }
+        },
+        "planEstimate": "${value}",
+        "plans": {
+            "globalShield": {
+                "title": "웹 보안 및 트래픽 관리",
+                "price": "$0.06/GB",
+                "description": "제한 없음\n추가 요금 없음",
+                "button": "웹앱·API 보호",
+                "features": {
+                    "webProtection": "비즈니스 로직 악용을 제외한 모든 웹 공격 방어",
+                    "ddosProtection": "실시간 DDoS 방어",
+                    "cmc": "글로벌 트래픽 모니터링 CMC",
+                    "country": "국가 차단 기능",
+                    "port": "포트 차단 기능"
+                }
+            },
+            "emailProtector": {
+                "title": "이메일 보안 및 시각화",
+                "price": "계정당 월 $10",
+                "description": "일 10통까지 포함\n추가 이메일: 1통당 $0.035",
+                "button": "이메일 보호",
+                "features": {
+                    "cmcEmail": "가장 진보한 이메일 플로우 뷰어가 포함된 CMC",
+                    "visibility": "CMC에서 모든 계정의 발신·수신 메일과 자동 위협 분류를 전체 가시화",
+                    "webClient": "보안 웹메일 클라이언트",
+                    "phishing": "피싱 방어",
+                    "malware": "악성 첨부 분석",
+                    "links": "위험 링크 감지",
+                    "spam": "스팸 필터링",
+                    "fakeSender": "위조 발신자 방어"
+                }
+            },
+            "securityTester": {
+                "title": "취약성 탐지",
+                "price": "월 $25",
+                "description": "월 최대 50건의 완전한 취약성 점검\n추가 점검: 건당 $0.5",
+                "button": "테스트 시작",
+                "features": {
+                    "dynamic": "동적 취약성 탐색",
+                    "codeAnalyzer": "코드 분석기",
+                    "reports": "이해하기 쉬운 보안 평가 보고서",
+                    "intelligence": "정보 보고서"
+                }
+            },
+            "basic": {
+                "name": "베이직",
+                "features": {
+                    "fix": "치명적 버그 수정 (48시간 SLA)",
+                    "updates": "월간 업데이트",
+                    "audit": "분기별 보안 감사",
+                    "manager": "전담 매니저"
+                }
+            },
+            "pro": {
+                "name": "프로",
+                "badge": "가장 인기",
+                "features": {
+                    "fix": "치명적 버그 수정 (24시간 SLA)",
+                    "updates": "월 10시간 업데이트",
+                    "audit": "월간 보안 감사",
+                    "manager": "전담 매니저"
+                }
+            },
+            "enterprise": {
+                "name": "엔터프라이즈",
+                "badge": "최고 가치",
+                "features": {
+                    "fix": "치명적 버그 수정 (4시간 SLA)",
+                    "updates": "무제한 업데이트 + 로드맵",
+                    "audit": "주간 감사 + 백업",
+                    "manager": "전담 매니저"
+                }
+            }
+        },
+        "perYear": "연간(추정)"
+    },
+    "pricingCustom": {
+        "title": "투명한 가격",
+        "perYear": "연간(추정)",
+        "plans": {
+            "basic": {
+                "name": "베이식",
+                "features": {
+                    "fix": "치명적 수정 (SLA 48시간)",
+                    "updates": "매달 업데이트",
+                    "audit": "분기별 보안 점검",
+                    "manager": "전담 PM"
+                }
+            },
+            "pro": {
+                "name": "프로",
+                "badge": "베스트셀러",
+                "features": {
+                    "fix": "치명적 수정 (SLA 24시간)",
+                    "updates": "월 10시간 업데이트",
+                    "audit": "월간 보안 점검",
+                    "manager": "전담 PM"
+                }
+            },
+            "enterprise": {
+                "name": "엔터프라이즈",
+                "badge": "최고 가치",
+                "features": {
+                    "fix": "치명적 수정 (SLA 4시간)",
+                    "updates": "무제한 업데이트 및 로드맵",
+                    "audit": "주간 점검 및 백업",
+                    "manager": "전담 PM"
+                }
+            }
+        },
+        "calculator": {
+            "title": "프로젝트 예산 계산기",
+            "projectCost": "프로젝트 예산:",
+            "subtitle": "슬라이드하여 연간 유지비를 확인하세요",
+            "projectValue": "${value}"
+        },
+        "subtitle": "제품과 함께 성장하도록 설계된 모바일 최적화 플랜.",
+        "percentMaintenance": "연간 유지보수 {percent}%",
+        "planEstimate": "${value}"
+    },
+    "requestDemoModal": {
+        "successTitle": "감사합니다!",
+        "successBody": "곧 연락드려 데모 일정을 조율하겠습니다.",
+        "close": "닫기",
+        "title": "데모 요청",
+        "name": "이름",
+        "email": "이메일",
+        "company": "회사",
+        "submit": "요청 보내기",
+        "placeholders": {
+            "name": "귀하의 이름",
+            "email": "you@email.com",
+            "company": "귀사명"
+        }
+    },
+    "affiliate": {
+        "hero": {
+            "tagline": "Silence AI 제휴 프로그램에 참여하세요",
+            "title": "초대를 수익으로 전환하세요.",
+            "cta": "제휴 프로그램 가입",
+            "snapshot": {
+                "label": "실시간 스냅샷",
+                "caption": "60초마다 갱신, 승인된 지급은 즉시 동기화됩니다."
+            },
+            "earnings": "$2,940.00",
+            "growth": "전월 대비 +18%",
+            "metric": {
+                "conversion": "활성화",
+                "conversionChange": "이번 달 새 팀 24곳",
+                "pending": "대기 중 지급",
+                "pendingChange": "지급은 영업일 기준 2일 내 처리"
+            },
+            "graph": {
+                "label": "수익 추세",
+                "title": "추천 매출 성장",
+                "window": "최근 30일",
+                "label0": "1주차",
+                "label1": "2주차",
+                "label2": "3주차",
+                "label3": "4주차",
+                "label4": "5주차",
+                "label5": "6주차",
+                "label6": "오늘"
+            }
+        },
+        "howItWorks": {
+            "title": "동작 방식",
+            "create": {
+                "title": "링크 생성",
+                "description": "Silence AI 콘솔에서 고유 추천 링크나 프로모 코드를 만드세요."
+            },
+            "share": {
+                "title": "공유",
+                "description": "이메일, LinkedIn, 커뮤니티로 팀을 초대하고 실시간 성과를 추적하세요."
+            },
+            "earn": {
+                "title": "수익 창출",
+                "description": "참여자가 Silence AI 보호를 활성화하는 즉시 커미션을 받습니다."
+            }
+        },
+        "balanceRewards": {
+            "lampTitle": "잔액 기반 보상"
         },
         "commission": {
-          "title": "3. Commission Structure",
-          "body1": "You earn a 10% reward on every balance top-up completed by an account registered through your invitation.",
-          "body2": "Commission is calculated from the net top-up amount after payment processing fees are deducted."
+            "highlight": {
+                "label": "파트너들이 좋아하는 이유"
+            },
+            "reward": {
+                "title": "충전 금액의 10% 보상",
+                "description": "초대한 팀이 Silence AI 지갑을 충전하면 순금액의 10%가 즉시 적립됩니다."
+            },
+            "settlement": {
+                "title": "즉시 장부 반영",
+                "description": "거래 완료 1분 이내에 파트너 잔액으로 이동하며 수동 승인 없이 처리됩니다."
+            },
+            "withdrawal": {
+                "title": "영업일 2일 내 지급",
+                "description": "출금 요청은 자동 처리되며 2 영업일 이내 계좌로 입금됩니다."
+            },
+            "sample": {
+                "label": "충전 예시",
+                "caption": "제품 제한 없이 충전이 늘수록 제휴 수익이 누적됩니다.",
+                "topup": "$250 충전 → $25 보상",
+                "topupHigher": "$1,000 충전 → $100 보상"
+            },
+            "note": "커미션은 결제 수수료를 제외한 순충전액 기준으로 계산됩니다.",
+            "heading": "잔액 보상"
         },
-        "rewardPosting": {
-          "title": "4. Reward Posting",
-          "body1": "Rewards post to your partner balance within one minute after the transaction successfully clears. There is no manual approval queue.",
-          "body2": "Notifications appear in your affiliate dashboard alongside the customer identifier and top-up amount."
+        "faq": {
+            "title": "FAQ",
+            "payments": {
+                "question": "어떻게 지급을 받나요?",
+                "answer": "프로필에 VISA 또는 Mastercard 번호를 추가하세요. 해당 카드로 직접 지급됩니다."
+            },
+            "discounts": {
+                "question": "초대한 고객이 할인받나요?",
+                "answer": "아니요. 할인은 제공되지 않으며 커미션은 오직 파트너에게만 지급됩니다."
+            },
+            "statistics": {
+                "question": "추천 통계는 언제 볼 수 있나요?",
+                "answer": "사용자가 링크나 코드로 가입하면 이메일이 콘솔에 표시되고 즉시 보상이 반영됩니다."
+            }
         },
-        "withdrawals": {
-          "title": "5. Withdrawals",
-          "body1": "Withdrawal requests are processed within two business days and paid out using the settlement method on file.",
-          "body2": "Minimum withdrawal thresholds and supported payout networks are published inside the affiliate dashboard."
+        "termsAff": {
+            "label": "제휴 프로그램",
+            "title": "제휴 서비스 약관",
+            "gitServer": {
+                "title": "Git 리포지토리 서버",
+                "tag": "자체 호스팅 버전 관리"
+            },
+            "analyzer": {
+                "title": "보안 분석기",
+                "tag": "로컬 코드 분석 엔진"
+            },
+            "vulnDb": {
+                "title": "취약성 데이터베이스",
+                "tag": "다운로드 가능한 보안 패치"
+            },
+            "notice": "이 정책은 영어로만 제공됩니다",
+            "intro": "본 약관은 Silence AI 제휴 프로그램 참여 파트너에게 보상이 발급·지급되는 방식을 설명합니다.",
+            "meta": {
+                "effective": "시행일: 2024년 11월 10일",
+                "lastUpdated": "최종 업데이트: 2024년 11월 10일"
+            },
+            "sections": {
+                "overview": {
+                    "title": "1. 프로그램 개요",
+                    "body1": "1.1 계약 범위: 본 제휴 서비스 약관(“약관”)은 Silence AI LLC(“Silence AI”, “당사”)가 운영하는 제휴 프로그램 참여를 규율합니다. 이 약관은 제휴 파트너로 등록하는 개인 또는 단체(“귀하”)와 귀하가 대표하는 고용주·원청·조직에 적용됩니다.",
+                    "body2": "1.2 프로그램 요약: 자격을 갖춘 파트너는 추천 고객이 AI-SOC 1 상품을 구매하거나 잔액을 충전하면 커미션 기반 보상을 받습니다. 제휴 프로그램 참여 시 Silence AI 일반 서비스 약관 준수가 필요합니다."
+                },
+                "eligibility": {
+                    "title": "2. 파트너 자격",
+                    "item1": "정확한 사업/결제 정보를 갖춘 활성 Silence AI 제휴 계정을 유지해야 합니다.",
+                    "item2": "추천은 귀하에게 발급된 링크나 프로모 코드를 통해 등록을 완료해야 합니다.",
+                    "item3": "사기, 자기 추천, 관련 법 위반 계정은 보상 대상이 아닙니다."
+                },
+                "commission": {
+                    "title": "3. 커미션 구조",
+                    "body1": "귀하는 초대한 계정이 잔액을 충전할 때마다 순충전액의 10%를 보상으로 받습니다.",
+                    "body2": "커미션은 결제 처리 수수료를 공제한 후 순충전액 기준으로 계산됩니다."
+                },
+                "rewardPosting": {
+                    "title": "4. 보상 반영",
+                    "body1": "거래가 성공적으로 승인된 후 1분 이내에 보상이 파트너 잔액에 반영됩니다. 수동 승인 큐가 없습니다.",
+                    "body2": "알림은 제휴 대시보드에 고객 식별자와 충전 금액과 함께 표시됩니다."
+                },
+                "withdrawals": {
+                    "title": "5. 출금",
+                    "body1": "출금 요청은 영업일 기준 2일 이내 처리되며 등록된 결제 방식으로 지급됩니다.",
+                    "body2": "최소 출금 한도와 지원되는 네트워크는 제휴 대시보드에 게시됩니다."
+                },
+                "productScope": {
+                    "title": "6. 제품 범위",
+                    "body1": "보상은 AI-SOC 1 제품에만 제공됩니다. 별도 서면 명시 없이는 다른 Silence AI 서비스는 제외됩니다.",
+                    "body2": "추가 제품이 포함되면 Silence AI가 본 약관에 업데이트 목록을 게시합니다."
+                },
+                "compliance": {
+                    "title": "7. 파트너 행동 및 준수",
+                    "item1": "파트너는 Silence AI를 정확히 소개하고 기능·가격에 대해 오해를 불러일으키는 주장을 피해야 합니다.",
+                    "item2": "마케팅 커뮤니케이션은 관련 스팸, 개인정보, 광고 규정을 준수해야 합니다.",
+                    "item3": "이 의무를 위반하거나 브랜드에 피해를 주는 계정은 정지 또는 종료될 수 있습니다."
+                },
+                "changes": {
+                    "title": "8. 변경 및 문의",
+                    "body1": "Silence AI는 프로그램이나 관련 법 변경을 반영하기 위해 제휴 약관을 갱신할 수 있으며, 게시 즉시 효력이 발생합니다.",
+                    "body2": "제휴 프로그램 관련 질문은 info@silenceai.net으로 보내주세요."
+                }
+            }
+        }
+    },
+    "heroSection": {
+        "badge": "프로덕션 준비 완료 AI & 소프트웨어",
+        "title": "맞춤형 AI 및 소프트웨어 개발",
+        "description": "{country}에서 {market}을 위해 프로덕션급 AI 에이전트와 맞춤형 소프트웨어를 만듭니다.",
+        "country": "카자흐스탄",
+        "market": "글로벌 시장",
+        "startProject": "프로젝트 시작",
+        "liveDemo": "실시간 데모 — AI 에이전트",
+        "live": "라이브",
+        "aiAgent": "AI 에이전트 v2.1",
+        "processing": "요청 처리 중...",
+        "active": "활성",
+        "userMessage": "고객 데이터를 기반으로 트렌드를 분석해줘",
+        "aiResponse": "분석 중",
+        "tasks": {
+            "dataCollection": "데이터 수집",
+            "aiAnalysis": "AI 분석",
+            "reportGeneration": "보고서 생성"
         },
-        "productScope": {
-          "title": "6. Product Scope",
-          "body1": "Rewards are only provided for the AI-SOC 1 product. Other Silence AI services are excluded from the affiliate program unless explicitly stated otherwise in writing.",
-          "body2": "If additional products become eligible, Silence AI will publish an updated list inside these terms."
+        "stats": {
+            "tasks": "작업",
+            "success": "성공",
+            "speed": "속도"
+        }
+    },
+    "whyChooseUs": {
+        "badge": "성과 중심 엔지니어링",
+        "title": "우리를 선택하는 이유",
+        "subtitle": "우리는",
+        "subtitleHighlight": "수십억 규모 조직들의 신뢰",
+        "subtitleTail": "를 받으면서 스타트업 속도로 전달합니다.",
+        "learnMore": "자세히 보기",
+        "features": {
+            "fast": {
+                "title": "기업급 품질의 빠른 딜리버리",
+                "description": "빠른 반복과 동시에 기업 신뢰성 및 컴플라이언스를 충족합니다.",
+                "pill": "속도 + 품질"
+            },
+            "ai": {
+                "title": "AI 중심 제품 엔지니어링",
+                "description": "프로토타입부터 프로덕션 에이전트까지 실제 비즈니스 문제를 해결하는 모델을 설계·학습·배포합니다.",
+                "pill": "AI 엔지니어링"
+            },
+            "local": {
+                "title": "현지 전문성, 글로벌 스케일",
+                "description": "카자흐스탄 시장/규제 지식과 글로벌 모범 사례를 결합합니다.",
+                "pill": "KZ + 글로벌"
+            }
         },
-        "compliance": {
-          "title": "7. Partner Conduct & Compliance",
-          "item1": "Partners must represent Silence AI accurately and avoid misleading claims about features or pricing.",
-          "item2": "Marketing communications must comply with applicable anti-spam, privacy, and advertising regulations.",
-          "item3": "Silence AI may suspend or terminate accounts that violate these obligations or harm the brand."
+        "logos": {
+            "kmg": "카즈무나이가스",
+            "nak": "누르 아스타나 쿠릴리스"
+        }
+    },
+    "servicesBlock": {
+        "badge": "제공 서비스",
+        "title": "서비스",
+        "description": "프리미엄 UI, 견고한 엔지니어링, 빠른 출시로 톱 브랜드 수준 제품을 제공합니다.",
+        "learnMore": "자세히 보기",
+        "learnMoreAria": "서비스 자세히 보기",
+        "services": {
+            "aiAgents": {
+                "title": "AI 에이전트",
+                "description": "지원, 운영, 분석용 맞춤형 대화형·자율형 에이전트.",
+                "tag": "자동화"
+            },
+            "customSoftware": {
+                "title": "맞춤형 소프트웨어",
+                "description": "프로세스에 맞춘 웹·데스크톱 풀사이클 애플리케이션.",
+                "tag": "개발"
+            },
+            "cybersecurity": {
+                "title": "사이버 보안",
+                "description": "감사, 모의 해킹, 지속 모니터링.",
+                "tag": "보호"
+            },
+            "backend": {
+                "title": "백엔드 / DevOps",
+                "description": "확장형 API, CI/CD 파이프라인, 클라우드 인프라.",
+                "tag": "스케일"
+            },
+            "mobile": {
+                "title": "모바일 앱",
+                "description": "네이티브 성능과 정교한 UX를 갖춘 크로스플랫폼 앱.",
+                "tag": "출시"
+            }
+        }
+    },
+    "caseStudies": {
+        "badge": "입증된 임팩트",
+        "title": "케이스 스터디",
+        "subtitle": "기능이 아니라 결과를 제공합니다.",
+        "caseStudy": "케이스",
+        "problem": "문제:",
+        "solution": "해결:",
+        "liveImpact": "실시간 임팩트",
+        "before": "이전",
+        "after": "이후",
+        "buildCta": "비슷하게 만들기 →",
+        "items": {
+            "nak": {
+                "title": "NAK — AI 팀 운영",
+                "problem": "수동 자원 배분",
+                "solution": "AI 기반 계획 에이전트",
+                "result": "+32% 생산성",
+                "metricLabel": "팀 성과 지수"
+            },
+            "chic": {
+                "title": "Chic Flowers — 이커머스",
+                "problem": "낮은 온라인 전환율",
+                "solution": "개인화 추천 엔진 + UX 리프레시",
+                "result": "+45% 온라인 매출",
+                "metricLabel": "전환 상승"
+            },
+            "silence": {
+                "title": "Silence AI-SOC",
+                "problem": "높은 오탐율",
+                "solution": "AI 탐지 및 자동 대응",
+                "result": "오탐 68% 감소",
+                "metricLabel": "오탐 볼륨"
+            }
+        }
+    },
+    "howWeWork": {
+        "title": "워크플로",
+        "steps": {
+            "discovery": {
+                "title": "리서치",
+                "desc": "요구사항, 이해관계자, 성공 지표."
+            },
+            "design": {
+                "title": "디자인",
+                "desc": "UX, 아키텍처, 프로토타입."
+            },
+            "poc": {
+                "title": "PoC",
+                "desc": "계량 가능 KPI로 빠른 검증."
+            },
+            "build": {
+                "title": "개발",
+                "desc": "반복 스프린트와 자동 테스트."
+            },
+            "deploy": {
+                "title": "배포",
+                "desc": "CI/CD, 모니터링, 보안 강화."
+            },
+            "support": {
+                "title": "지원·확장",
+                "desc": "지원, 로드맵, 지속 개선."
+            }
         },
-        "changes": {
-          "title": "8. Changes & Contact",
-          "body1": "Silence AI may update these affiliate terms to reflect changes in the program or applicable law. Updated versions take effect upon publication on this page.",
-          "body2": "Questions about the affiliate program can be sent to info@silenceai.net."
-        }
-      },
-      "gitServer": {
-        "title": "Serveur de dépôts Git",
-        "tag": "Gestion de versions auto-hébergée"
-      },
-      "analyzer": {
-        "title": "Analyseur de sécurité",
-        "tag": "Moteur local d’analyse de code"
-      },
-      "vulnDb": {
-        "title": "Base de vulnérabilités",
-        "tag": "Correctifs de sécurité téléchargés"
-      }
+        "subtitle": "초고속 딜리버리 파이프라인 — 속도에 맞게 최적화."
     },
-    "balanceRewards": {
-      "lampTitle": "Nagrody salda"
-    }
-  },
-  "hero": {
-    "headline": "AI-SOC 1: 사이버보안은 더 이상 비싸고 복잡하지 않습니다",
-    "subheading": "통합 AI 사이버보안 플랫폼이 다음을 결합합니다:",
-    "playgroundHeading": "AI 기반 보안 운영 센터",
-    "bullets": {
-      "web": "실시간 웹 공격 방어",
-      "email": "이메일 공격 방어",
-      "vulnerability": "취약점 탐지"
+    "technologyStack": {
+        "title": "기술 스택",
+        "subtitle": "속도, 확장성, 아름다운 UX를 위한 정교한 프로덕션 스택."
     },
-    "buttons": {
-      "connect": "4분 만에 연결",
-      "tour": "90초 투어 보기"
-    },
-    "tooltips": {
-      "web": {
-        "title": "웹 공격 방어",
-        "content": "시스템은 DDoS, SQLi 등 모든 유형의 웹 공격을 방어합니다(비즈니스 로직 취약점 제외)."
-      },
-      "email": {
-        "title": "이메일 공격 방어",
-        "content": "시스템은 피싱, 악성 첨부파일, 위험한 링크 등 모든 유형의 이메일 공격을 방어합니다."
-      },
-      "vulnerability": {
-        "title": "취약점 탐지",
-        "content": "애플리케이션 코드 분석과 웹사이트/API와의 동적 상호작용, 그리고 인텔리전스 엔진을 통해 취약점을 찾아냅니다"
-      }
-    }
-  },
-  "playground": {
-    "options": {
-      "globeShield": "웹 보안 및 트래픽 관리",
-      "emailSecurity": "이메일 보안"
-    }
-  },
-  "cookie": {
-    "title": "기술 쿠키 안내",
-    "description": "본 사이트는 언어 설정을 기억하고 다음 방문 시 본 안내가 다시 나타나지 않도록 하기 위해 자사가 설정한 1차 기술 쿠키만 사용합니다. 추적 쿠키나 제3자 쿠키는 사용하지 않습니다.",
-    "more": "자세한 내용은",
-    "link": "쿠키 정책",
-    "ok": "확인"
-  },
-  "pricing": {
-    "title": "가격",
-    "tooltips": {
-      "cmcGlobal": {
-        "title": "글로벌 트래픽 모니터링 CMC",
-        "content": "중앙 관리 콘솔(CMC)은 다른 보안 시스템과 원활하게 연동되며 Global Shield 및 Security Tester와 동일한 도메인과 인터페이스를 사용합니다. 여기서 국가 차단, 포트 차단 등 다양한 운영을 수행할 수 있습니다"
-      },
-      "countryBlacklisting": {
-        "title": "국가 차단",
-        "content": "특정 국가에서 들어오는 모든 트래픽을 차단합니다"
-      },
-      "portManagement": {
-        "title": "포트 관리",
-        "content": "사용하지 않는 포트를 닫아 공격 표면을 줄입니다. 예를 들어 SSH가 필요 없을 때 22번 포트를 비활성화하면 침해 위험을 낮출 수 있습니다"
-      },
-      "cmcEmail": {
-        "title": "고급 이메일 플로우 시각화 CMC",
-        "content": "CMC는 다른 보안 시스템과 통합돼 있으며 추가한 모든 기업 사용자 계정의 이메일 플로우를 모니터링하고 검토할 수 있습니다"
-      },
-      "dynamicVulnerability": {
-        "title": "동적 취약점 탐지",
-        "content": "웹사이트와의 상호작용을 통해 취약점을 발견하며, 인텔리전스 시스템이 이를 지원합니다"
-      },
-      "codeAnalyzer": {
-        "title": "코드 분석기",
-        "content": "VS Code 플러그인을 통해 코드베이스의 보안 문제를 직접 찾아내고 배포 전에 수정할 수 있도록 도와줍니다"
-      },
-      "intelligenceReport": {
-        "title": "인텔리전스 보고서",
-        "content": "열린 포트, 실행 중인 서비스, 서브도메인 등 조치가 필요한 민감 정보를 포함한 상세 인사이트를 제공합니다"
-      },
-      "fullVulnerability": {
-        "title": "완전한 취약점 점검",
-        "content": "동적 스캔과 코드 스캔을 모두 포함한 종합 점검입니다"
-      }
-    },
-    "plans": {
-      "globalShield": {
-        "title": "웹 보안 및 트래픽 관리",
-        "price": "$0.06/GB",
-        "description": "제한 없음\n추가 요금 없음",
-        "button": "웹 앱과 API 보호",
-        "features": {
-          "webProtection": "비즈니스 로직 공격을 제외한 모든 웹 공격 차단",
-          "ddosProtection": "실시간 DDoS 방어",
-          "cmc": "글로벌 트래픽 모니터링 CMC",
-          "country": "국가 차단 기능",
-          "port": "포트 차단 기능"
-        }
-      },
-      "emailProtector": {
-        "title": "이메일 보안",
-        "price": "$10/월/계정",
-        "description": "하루 10통까지\n추가 이메일: 통당 $0.035",
-        "button": "이메일 보호 시작",
-        "features": {
-          "cmcEmail": "CMC의 최첨단 이메일 플로우 시각화",
-          "visibility": "모든 계정의 송수신 메일을 완전하게 확인하고 위협을 자동 분류",
-          "webClient": "안전한 웹메일 클라이언트",
-          "phishing": "피싱 방어",
-          "malware": "악성 파일 검사",
-          "links": "위험한 링크 감지",
-          "spam": "스팸 필터",
-          "fakeSender": "사칭 발신자 차단"
-        }
-      },
-      "securityTester": {
-        "title": "취약점 탐지",
-        "price": "$25/월",
-        "description": "월 50회까지 종합 점검\n추가 점검: 회당 $0.5",
-        "button": "테스트 시작",
-        "features": {
-          "dynamic": "동적 취약점 탐지",
-          "codeAnalyzer": "코드 분석기",
-          "reports": "이해하기 쉬운 보안 보고서",
-          "intelligence": "인텔리전스 보고서"
-        }
-      },
-      "basic": {
-        "name": "베이직",
-        "features": {
-          "fix": "치명적 버그 수정 (48시간 SLA)",
-          "updates": "월간 업데이트",
-          "audit": "분기별 보안 감사",
-          "manager": "전담 매니저"
-        }
-      },
-      "pro": {
-        "name": "프로",
-        "badge": "가장 인기",
-        "features": {
-          "fix": "치명적 버그 수정 (24시간 SLA)",
-          "updates": "월 10시간 업데이트",
-          "audit": "월간 보안 감사",
-          "manager": "전담 매니저"
-        }
-      },
-      "enterprise": {
-        "name": "엔터프라이즈",
-        "badge": "최고 가치",
-        "features": {
-          "fix": "치명적 버그 수정 (4시간 SLA)",
-          "updates": "무제한 업데이트 + 로드맵",
-          "audit": "주간 감사 + 백업",
-          "manager": "전담 매니저"
-        }
-      }
-    },
-    "subtitle": "모바일 우선 계획은 귀하의 제품과 함께 확장되도록 구축되었습니다...",
-    "percentMaintenance": "{percent}% 연간 유지보수",
-    "planEstimate": "${value}",
-    "perYear": "연간 (추정)",
-    "calculator": {
-      "title": "프로젝트 비용 계산기",
-      "subtitle": "슬라이드하여 연간 유지보수를 확인하세요",
-      "projectCost": "프로젝트 비용:",
-      "projectValue": "${value}"
-    }
-  },
-  "solution": {
-    "sectionTitle": "솔루션",
-    "sectionSubtitle": "4분 안에 가동되며, 별도의 사이버 보안 전문 지식이 없어도 모든 IT 전문가가 사용할 수 있습니다. 고급 시각화와 합리적인 비용을 제공합니다.",
-    "cards": {
-      "globalShield": {
-        "title": "Global Shield - CIA급 트래픽 모니터링",
-        "description": "인터랙티브 3D 지구본이 초당 요청 수, 활성 사용자 수, 데이터량을 생생하게 보여줍니다.",
-        "bullets": {
-          "one": "간단한 설정: IP와 도메인만 지정하면 됩니다.",
-          "two": "DNS에 추가할 에이전트 IP를 받으세요.",
-          "three": "노출을 막기 위해 포트를 닫으세요."
-        }
-      },
-      "emailProtector": {
-        "title": "Email Protector - 세계 최초의 AI 이메일 보호",
-        "description": "세계 최초의 AI 기반 상용 이메일 보호 시스템입니다. 벡터 뷰가 이메일 흐름을 시간에 따라 추적하고 위협을 식별하기 쉽게 만들어줍니다.",
-        "bullets": {
-          "one": "스푸핑, 스팸, 피싱, 악성코드를 탐지합니다.",
-          "two": "관리자가 보호할 이메일 계정을 추가할 수 있습니다.",
-          "three": "가장 발전된 상용 이메일 플로우 시각화."
-        }
-      },
-      "securityTester": {
-        "title": "Security Tester - 차세대 취약점 테스트",
-        "description": "시스템이 원타임 토큰(OTT)을 제공해 완전한 보안 점검을 수행합니다. 브라우저나 VS Code 확장으로 연결하세요.",
-        "bullets": {
-          "one": "CMC에서 보안 범위와 대상을 지정합니다.",
-          "two": "OTT를 입력하고 점검을 시작하세요.",
-          "three": "인텔리전스 기반 위험 인사이트를 제공합니다."
-        }
-      }
-    },
-    "cmc": {
-      "title": "중앙 관리 콘솔 (CMC)",
-      "description": "세 구성 요소를 단일 콘솔에서 관리하여 중앙 시각화, 쉬운 설정 및 모니터링, 포괄적인 보안 리포트를 제공합니다."
-    }
-  },
-  "insights": {
-    "items": [
-      {
-        "title": "39초",
-        "description": "39초마다 해킹 공격이 발생합니다"
-      },
-      {
-        "title": "2천만 건의 DDoS 공격",
-        "description": "2025년 1분기에만 2,050만 건의 DDoS 공격이 기록되었습니다"
-      },
-      {
-        "title": "매일",
-        "description": "매일 30,000개의 웹사이트가 해킹됩니다"
-      }
-    ]
-  },
-  "floatingText": {
-    "headline": "해커의 관점을 이해하세요",
-    "description": "실제 공격 기법과 사이버 위협에 대한 우리의 일일 리서치를 팔로우하세요"
-  },
-  "modal": {
-    "title": "개발 진행 중",
-    "body": "시스템은 10월 10일 출시 예정입니다"
-  },
-  "lamp": {
-    "title": "사이버 공격의 현실"
-  },
-  "stickySolution": {
-    "webSecurity": {
-      "title": "웹 보안 시스템: 웹사이트/API 2분 만에 연결",
-      "description": "DDoS, SQLi 등 웹 공격으로부터 보호합니다. 사용하지 않을 때는 포트 22를 닫는 것이 좋은 관행입니다."
-    },
-    "ciaMonitoring": {
-      "title": "CIA 수준 트래픽 모니터링",
-      "description": "인터랙티브 3D 지구본이 요청 수, 사용자 수, 데이터량 변화와 이력을 보여줍니다."
-    },
-    "userGrowth": {
-      "title": "사용자 성장에 대한 유용한 인사이트",
-      "description": "사용자 수 변화 이력을 확인하세요"
-    },
-    "aiEmailProtection": {
-      "title": "AI 이메일 보호: 2분 내 네트워크 연결",
-      "description": "CMC는 모든 송수신 이메일을 완전히 가시화하고 위협을 자동 분류합니다(스푸핑, 스팸, 피싱, 위험 링크, 악성코드)."
-    },
-    "emailVisualization": {
-      "title": "송수신 이메일 시각화",
-      "description": "CMC는 시장에서 가장 발전된 상용 이메일 플로우 시각화를 제공합니다"
-    },
-    "secureWebmail": {
-      "title": "안전한 웹메일 클라이언트",
-      "description": "관리자가 추가한 계정에 대해 스푸핑, 스팸, 피싱, 악성코드를 감지·분류하는 안전한 웹 클라이언트를 제공합니다."
-    }
-  },
-  "footer": {
-    "contactLabel": "문의:",
-    "contactValue": "info@silenceai.net",
-    "addressLabel": "주소:",
-    "addressValue": "Media City Free Zone, Al Messaned, Sharjah, UAE",
-    "links": {
-      "termsUse": "이용 약관",
-      "termsService": "서비스 약관",
-      "privacy": "개인정보 보호정책",
-      "cookies": "쿠키 정책",
-      "affiliateTerms": "제휴 서비스 약관"
-    },
-    "copyright": "© {year} Silence AI. 모든 권리 보유."
-  },
-  "notFound": {
-    "title": "페이지를 찾을 수 없습니다",
-    "description": "어디에서나 찾아보았지만 이 페이지를 찾을 수 없었습니다.",
-    "cta": "홈페이지로 돌아가기"
-  },
-  "heroSection": {
-    "badge": "생산 준비 완료 AI 및 소프트웨어",
-    "title": "맞춤형 AI 및 소프트웨어 개발",
-    "description": "우리는 {country} 및 {market}을 위한 생산 준비 완료 AI 에이전트와 맞춤형 소프트웨어를 구축합니다.",
-    "country": "카자흐스탄",
-    "market": "글로벌 시장",
-    "startProject": "프로젝트 시작",
-    "liveDemo": "라이브 데모 — AI 에이전트",
-    "live": "라이브",
-    "aiAgent": "AI 에이전트 v2.1",
-    "processing": "요청 처리 중...",
-    "active": "활성",
-    "userMessage": "고객 데이터 트렌드 분석",
-    "aiResponse": "분석 중",
-    "tasks": {
-      "dataCollection": "데이터 수집",
-      "aiAnalysis": "AI 분석",
-      "reportGeneration": "보고서 생성"
-    },
-    "stats": {
-      "tasks": "작업",
-      "success": "성공률",
-      "speed": "속도"
-    }
-  },
-  "secureDevelopment": {
-    "hero": {
-      "badge": "SLNC-env · 보안 개발 환경",
-      "title": "안전하고 프라이빗한 코드로 시스템 구축",
-      "description": "코드가 기업 네트워크를 벗어나지 않는 기업용 프라이빗 개발 환경. 최신 AI 기술을 제공합니다.",
-      "requestSystem": "시스템 요청"
-    },
-    "components": {
-      "title": "모든 것이 내부에 있습니다",
-      "subtitle": "세 가지 구성 요소, 하나의 폐쇄 루프",
-      "description": "코드, 프롬프트, 빌드는 네트워크를 떠나지 않습니다. SLNC-env는 클라우드 제공업체, 정부 팀, 산업 플랜트에 대해 AI 지원, 리뷰, 전달을 프라이빗하게 유지합니다.",
-      "sithub": {
-        "title": "Sithub 서버",
-        "tag": "로컬 버전 관리"
-      },
-      "llm": {
-        "title": "LLM 서버 (Qwen-Code)",
-        "tag": "온프레미스 인텔리전스"
-      },
-      "ide": {
-        "title": "로컬 Copilot IDE",
-        "tag": "Cursor 수준 경험"
-      },
-      "gitServer": {
-        "title": "Git 리포지토리 서버",
-        "tag": "자체 호스팅 버전 관리"
-      },
-      "analyzer": {
-        "title": "보안 분석기",
-        "tag": "로컬 코드 스캐닝 엔진"
-      },
-      "vulnDb": {
-        "title": "취약점 데이터베이스",
-        "tag": "다운로드된 보안 패치"
-      },
-      "staysOnPrem": "온프레미스에 유지. 외부 유출 없음.",
-      "onPremNotice": "Stays on-prem. No egress."
-    },
-    "timeline": {
-      "title": "격리되고 확인된 코드가 중요한 이유",
-      "subtitle": "최근 경고",
-      "incident": {
-        "title": "심각한 사고 — 유출된 코드",
-        "heading": "DeepSeek 침해로 소스 코드와 프롬프트가 공개 인터넷에 노출됨",
-        "description": "추론과 스캔을 온프레미스에 유지하세요. 외부 모델로의 유출 없음. 기본으로 감사 추적 제공.",
-        "seePlan": "차단 계획 보기"
-      },
-      "stuxnet": {
-        "year": "2010",
-        "attack": "스턱스넷",
-        "target": "나탄즈 농축 시설",
-        "impact": "원심분리기 약 1,000대 파괴",
-        "severity": "치명적"
-      },
-      "blackEnergy": {
-        "year": "2015",
-        "attack": "BlackEnergy",
-        "target": "우크라이나 전력망",
-        "impact": "23만 명 고객 정전",
-        "severity": "높음"
-      },
-      "triton": {
-        "year": "2017",
-        "attack": "트리톤",
-        "target": "사우디아라비아 석유화학 공장",
-        "impact": "안전 시스템 비활성화",
-        "severity": "치명적"
-      },
-      "colonialPipeline": {
-        "year": "2021",
-        "attack": "콜로니얼 파이프라인",
-        "target": "미국 연료 파이프라인",
-        "impact": "6일간 연료 공급 마비",
-        "severity": "높음"
-      },
-      "pdvsa": {
-        "year": "2025",
-        "attack": "PDVSA",
-        "target": "베네수엘라 정유 시설",
-        "impact": "정유 운영 중단",
-        "severity": "중간"
-      }
-    },
-    "analyzer": {
-      "title": "CodeQL을 능가하는 분석기",
-      "subtitle": "실시간 보증",
-      "features": {
-        "quality": {
-          "title": "자동 코드 품질",
-          "description": "안전에 중요한 코드를 위해 조정된 구조, 스타일 및 모범 사례 검사"
+    "secureDevelopment": {
+        "hero": {
+            "badge": "Sithub · 자체 호스팅 개발 플랫폼",
+            "title": "GitHub를 내 서버에서. 코드는 네트워크 밖으로 나가지 않습니다.",
+            "description": "보안 스캔이 내장된 자체 호스팅 GitHub 대안. 리포지토리, 코드 분석기, 취약성 리포트가 모두 로컬에서 동작합니다.",
+            "requestSystem": "시스템 요청"
         },
-        "vulnerability": {
-          "title": "취약점 스윕",
-          "description": "SQLi, XSS, 인증 우회 및 불안전한 의존성을 즉시 탐지합니다."
+        "pricing": {
+            "subtitle": "간단하고 투명한 가격",
+            "title": "플랜 선택",
+            "limitedOffer": "한정 혜택",
+            "priceIncreaseNotice": "지금 가격을 잠그세요! 6개월 후 30% 인상 예정",
+            "monthlyPlan": "월간",
+            "monthlyDesc": "유연한 결제",
+            "month": "월",
+            "yearlyPlan": "연간",
+            "yearlyDesc": "최저가",
+            "billedAnnually": "연 1회 청구",
+            "doubleSavings": "2배 절약",
+            "getStarted": "시작하기",
+            "features": {
+                "fullAccess": "플랫폼 전체 접근",
+                "support": "우선 지원",
+                "cancelAnytime": "언제든 해지",
+                "priceLock": "12개월 가격 고정"
+            }
         },
-        "secrets": {
-          "title": "시크릿 가드",
-          "description": "커밋 시 키, 토큰 및 자격 증명이 차단됨"
+        "components": {
+            "subtitle": "완전히 격리된 세 가지 핵심 구성",
+            "title": "모든 것이 귀사 인프라에서 실행",
+            "description": "코드, 리포지토리, 보안 분석이 네트워크 밖으로 나가지 않습니다. Sithub는 코드 스캔이 내장된 GitHub 기능 전체를 자체 서버에서 제공합니다. 취약성 DB만 다운로드하며 코드는 비공개로 유지됩니다.",
+            "gitServer": {
+                "title": "Git 리포지토리 서버",
+                "tag": "자체 호스팅 형상 관리"
+            },
+            "analyzer": {
+                "title": "보안 분석기",
+                "tag": "로컬 코드 스캔 엔진"
+            },
+            "vulnDb": {
+                "title": "취약성 DB",
+                "tag": "다운로드 패치"
+            },
+            "onPremNotice": "온프렘 유지. 외부 트래픽 없음.",
+            "sithub": {
+                "title": "Sithub 서버",
+                "tag": "로컬 버전 관리"
+            },
+            "llm": {
+                "title": "LLM 서버(Qwen-Code)",
+                "tag": "온사이트 인텔리전스"
+            },
+            "ide": {
+                "title": "로컬 Copilot IDE",
+                "tag": "Cursor급 경험"
+            },
+            "staysOnPrem": "온프렘 유지. 외부 유출 없음."
         },
-        "config": {
-          "title": "구성 경화",
-          "description": "Docker/K8s, IAM 및 네트워크 정책을 검색하여 권한 변동 검사"
-        }
-      },
-      "beyondCodeQL": {
-        "title": "정적 쿼리가 놓치는 것을 찾습니다",
-        "subtitle": "CodeQL 그 이상",
-        "description": "CodeQL보다 빠르게 잘못된 구성과 취약한 패키지를 찾고 경고뿐만 아니라 수정 사항을 제공합니다.",
-        "points": {
-          "packages": "패키지 그래프를 파악하고 위험 종속성을 몇 초 만에 플래그합니다.",
-          "config": "구성 드리프트와 권한 확장을 정적 규칙 이상으로 포착합니다.",
-          "patches": "각 발견에는 제안된 패치와 소유자가 함께 제공됩니다."
-        }
-      },
-      "visualizer": {
-        "title": "코드 분석기 사용 중",
-        "subtitle": "시각화",
-        "description": "온프레미스 콘솔에서 아름답게 렌더링된 최근 스캔의 선명한 스냅샷.",
-        "privateWorkspace": "비공개 업무 공간만 해당",
-        "andManyMore": "그리고 더 많은 것들...",
-        "shots": {
-          "scanOverview": {
-            "title": "스캔 개요",
-            "description": "코드가 네트워크를 떠나기 전에 심각도별로 그룹화된 문제를 확인하세요."
-          },
-          "misconfigurations": {
-            "title": "잘못된 구성 감지",
-            "description": "당사의 AI 기반 코드 분석기는 심지어 코드 내에서 잘못된 구성을 찾기도 합니다."
-          },
-          "inlineDiffs": {
-            "title": "인라인 차이",
-            "description": "보안 컨텍스트와 함께 제안된 패치를 인라인으로 검토합니다."
-          }
+        "timeline": {
+            "subtitle": "최근 경고",
+            "title": "격리된 검증 코드가 필요한 이유",
+            "incident": {
+                "title": "치명적 사건 — 코드 유출",
+                "heading": "DeepSeek 해킹으로 소스와 프롬프트가 인터넷에 유출",
+                "description": "추론과 스캔을 온프렘에 두세요. 외부 egress 차단. 기본 감사 로그.",
+                "seePlan": "보호 플랜 보기"
+            },
+            "stuxnet": {
+                "attack": "Stuxnet",
+                "target": "나탄즈 농축 시설",
+                "impact": "약 1,000대 원심분리기 파괴",
+                "severity": "치명적",
+                "year": "2010"
+            },
+            "blackEnergy": {
+                "attack": "BlackEnergy",
+                "target": "우크라이나 전력망",
+                "impact": "23만 가구 정전",
+                "severity": "높음",
+                "year": "2015"
+            },
+            "triton": {
+                "attack": "TRITON",
+                "target": "사우디 석유화학 공장",
+                "impact": "안전 시스템 비활성화",
+                "severity": "치명적",
+                "year": "2017"
+            },
+            "colonialPipeline": {
+                "attack": "Colonial Pipeline",
+                "target": "미국 연료 파이프라인",
+                "impact": "연료 공급 6일 마비",
+                "severity": "높음",
+                "year": "2021"
+            },
+            "pdvsa": {
+                "attack": "PDVSA",
+                "target": "베네수엘라 정유",
+                "impact": "정유 운영 차질",
+                "severity": "중간",
+                "year": "2025"
+            }
         },
-        "frame": "SLNC-env Analyzer"
-      }
-    },
-    "industries": {
-      "title": "규제, 고영향 분야를 위한 설계",
-      "subtitle": "배포 위치",
-      "oilGas": {
-        "title": "석유 및 가스",
-        "description": "드릴링, 정제, 파이프라인 제어"
-      },
-      "energy": {
-        "title": "에너지",
-        "description": "그리드, 배포 및 EMS"
-      },
-      "nuclear": {
-        "title": "원자력",
-        "description": "원자로 제어 및 안전"
-      },
-      "manufacturing": {
-        "title": "제조업",
-        "description": "ICS, OT 및 로봇 공학"
-      },
-      "government": {
-        "title": "정부",
-        "description": "부처, 국방, 핵심 기관"
-      }
-    },
-    "pricing": {
-      "subtitle": "Proste, przejrzyste ceny",
-      "title": "Wybierz plan",
-      "limitedOffer": "Oferta ograniczona czasowo",
-      "priceIncreaseNotice": "Zablokuj obecne ceny! Po 6 miesiącach ceny wzrosną o 30%",
-      "monthlyPlan": "Miesięczny",
-      "monthlyDesc": "Elastyczne rozliczenie",
-      "yearlyPlan": "Roczny",
-      "yearlyDesc": "Najlepsza wartość",
-      "month": "miesiąc",
-      "billedAnnually": "Rozliczane rocznie za",
-      "doubleSavings": "2x OSZCZĘDNOŚCI",
-      "getStarted": "Zacznij",
-      "features": {
-        "fullAccess": "Pełny dostęp do platformy",
-        "support": "Priorytetowe wsparcie",
-        "cancelAnytime": "Możliwość rezygnacji w każdej chwili",
-        "priceLock": "Cena zablokowana na 12 miesięcy"
-      }
-    },
-    "comingSoon": {
-      "title": "Coming Soon",
-      "message": "This feature is currently under development."
-    }
-  },
-  "pricingCta": {
-    "requestSystem": "시스템 요청"
-  },
-  "contactForm": {
-    "title": "Contact Us",
-    "success": "Thanks! Your message has been sent. We will contact you shortly.",
-    "errorRequired": "Please fill in your name, email and a short message.",
-    "errorSend": "Unable to send message. Please try again later.",
-    "placeholders": {
-      "name": "Your name",
-      "email": "Email",
-      "type": "Project Type (optional)",
-      "budget": "Budget (optional)",
-      "message": "Tell us about your project..."
-    },
-    "submit": {
-      "idle": "Send Message",
-      "loading": "Sending…"
-    }
-  },
-  "consulting": {
-    "title": "Consulting Questionnaire",
-    "searchPlaceholder": "Search questions...",
-    "noResults": "No questions found.",
-    "questions": [
-      {
-        "question": "What is your company's core value proposition beyond competitive pricing?",
-        "answer": "Security is our primary differentiator. We position ourselves as a company that builds highly secure systems with enterprise-grade security practices embedded throughout the development lifecycle."
-      },
-      {
-        "question": "How long has your company been in business, and what is your track record?",
-        "answer": "We have successfully delivered major projects including: NAK (Nur Astana Kurylys) - AI-powered team management platform, and Chic Flowers - Complete digital platform for a major flower retail company."
-      },
-      {
-        "question": "What differentiates your technical capabilities and service quality from EPAM and other competitors?",
-        "answer": "Our key differentiator is our security-first development approach. We integrate security practices from project inception through deployment and maintenance."
-      },
-      {
-        "question": "How do you maintain quality while offering competitive pricing?",
-        "answer": "We offer services at 15% below market rates while maintaining exceptional quality through optimized operations, strategic talent sourcing, and efficient project management methodologies."
-      },
-      {
-        "question": "What specific software development services do you provide?",
-        "answer": "End-to-end software development: custom applications, AI-powered solutions, cybersecurity product development (Silence AI-SOC), system integration, cloud migration, and DevOps. We also offer dedicated product development and staff augmentation."
-      },
-      {
-        "question": "Which industries and domains do you specialize in?",
-        "answer": "Construction, retail, fintech, cybersecurity, and digital platforms — including AI-driven team management, e-commerce, and enterprise security solutions."
-      },
-      {
-        "question": "What technology stacks and platforms does your team have expertise in?",
-        "answer": "GO, Swift, Flutter, cloud platforms (AWS/Azure/GCP), Docker/Kubernetes, FastAPI, JavaScript, and AI/ML frameworks. We build proprietary security tools like Silence AI-SOC."
-      },
-      {
-        "question": "Do you offer end-to-end product development or specific services only?",
-        "answer": "We offer both: MVPs, full-cycle product delivery, staff augmentation, and cybersecurity integration."
-      },
-      {
-        "question": "Can you provide both staff augmentation and dedicated team models?",
-        "answer": "Yes, we provide flexible engagement models: staff augmentation, dedicated teams, and project-based outsourcing."
-      },
-      {
-        "question": "Do you offer consulting, architecture, and advisory services beyond development?",
-        "answer": "Yes: cybersecurity consulting, system architecture design, technology advisory, and security compliance assessments using Silence AI-SOC."
-      }
-    ]
-  },
-  "requestDemoModal": {
-    "title": "데모 요청",
-    "name": "이름",
-    "email": "이메일",
-    "company": "회사명",
-    "placeholders": {
-      "name": "홍길동",
-      "email": "hong@company.com",
-      "company": "Acme Corp"
-    },
-    "submit": "요청 보내기",
-    "successTitle": "감사합니다!",
-    "successBody": "데모 일정을 위해 곧 연락드리겠습니다.",
-    "close": "닫기"
-  },
-  "requestSystemModal": {
-    "title": "시스템 요청",
-    "name": "이름",
-    "email": "회사 이메일",
-    "company": "회사명",
-    "placeholders": {
-      "name": "홍길동",
-      "email": "hong@company.com",
-      "company": "Acme Corp"
-    },
-    "submit": "다운로드",
-    "successTitle": "요청이 전송되었습니다!",
-    "successBody": "감사합니다. 시스템 다운로드 안내를 이메일로 보내드립니다.",
-    "close": "닫기"
-  },
-  "policySidebar": {
-    "tableOfContents": "Table of Contents",
-    "close": "Close",
-    "topics": "Topics"
-  },
-  "whyChooseUs": {
-    "badge": "결과 중심의 엔지니어링",
-    "title": "우리를 선택해야 하는 이유",
-    "subtitle": "신뢰하는 팀들:",
-    "subtitleHighlight": "수십억 달러 규모 기업",
-    "subtitleTail": "— 그리고 스타트업 속도로 제공합니다.",
-    "learnMore": "더 알아보기",
-    "logos": {
-      "kmg": "KazMunayGas",
-      "nak": "Nur Astana Kurylys"
-    },
-    "features": {
-      "fast": {
-        "title": "엔터프라이즈 품질의 빠른 배송",
-        "description": "엔터프라이즈급 신뢰성과 규정 준수를 충족하는 신속하고 반복적인 배송 주기.",
-        "pill": "속도 + 품질"
-      },
-      "ai": {
-        "title": "AI 우선 제품 엔지니어링",
-        "description": "프로토타입부터 프로덕션 AI 에이전트까지 — 실제 비즈니스 문제를 해결하는 모델을 설계, 훈련 및 배포합니다.",
-        "pill": "AI 엔지니어링"
-      },
-      "local": {
-        "title": "현지 전문성, 글로벌 도달",
-        "description": "카자흐스탄 시장 및 규정에 대한 깊은 지식과 국제 모범 사례의 결합.",
-        "pill": "KZ + 글로벌"
-      }
-    }
-  },
-  "servicesBlock": {
-    "badge": "제공 서비스",
-    "title": "우리의 서비스",
-    "description": "프리미엄 UI, 강력한 엔지니어링, 빠른 배송 — 일류 브랜드처럼 보이고 작동하는 제품을 출시하는 데 필요한 모든 것.",
-    "learnMore": "더 알아보기",
-    "learnMoreAria": "이 서비스에 대해 더 알아보기",
-    "services": {
-      "aiAgents": {
-        "title": "AI 에이전트",
-        "description": "지원, 운영 및 분석을 위한 맞춤형 대화형 및 자율 에이전트.",
-        "tag": "자동화"
-      },
-      "customSoftware": {
-        "title": "맞춤형 소프트웨어",
-        "description": "귀하의 워크플로우에 맞춘 엔드투엔드 웹 및 데스크톱 앱.",
-        "tag": "빌드"
-      },
-      "cybersecurity": {
-        "title": "사이버 보안",
-        "description": "감사, 모의 해킹 및 지속적인 모니터링.",
-        "tag": "보호"
-      },
-      "backend": {
-        "title": "백엔드 / DevOps",
-        "description": "확장 가능한 API, CI/CD 파이프라인 및 클라우드 인프라.",
-        "tag": "확장"
-      },
-      "mobile": {
-        "title": "모바일",
-        "description": "네이티브 성능과 세련된 UX를 갖춘 크로스 플랫폼 앱.",
-        "tag": "배포"
-      }
-    }
-  },
-  "caseStudies": {
-    "badge": "검증된 임팩트",
-    "title": "사례 연구",
-    "subtitle": "우리는 기능을 배달하지 않습니다. 결과를 배달합니다.",
-    "problem": "문제:",
-    "solution": "해결책:",
-    "liveImpact": "실제 효과",
-    "before": "전",
-    "after": "후",
-    "buildCta": "이런 제품 구축하기 →",
-    "caseStudy": "사례 연구",
-    "items": {
-      "nak": {
-        "title": "NAK — 팀 관리 AI",
-        "problem": "수동 자원 할당",
-        "solution": "AI 기반 스케줄링 에이전트",
-        "result": "생산성 +32%",
-        "metricLabel": "팀 산출 지수"
-      },
-      "chic": {
-        "title": "Chic Flowers — 이커머스",
-        "problem": "낮은 온라인 전환율",
-        "solution": "개인화 추천 + UX 개편",
-        "result": "온라인 매출 +45%",
-        "metricLabel": "전환율 성장"
-      },
-      "silence": {
-        "title": "Silence AI-SOC",
-        "problem": "높은 알람 노이즈",
-        "solution": "AI 탐지 및 자동 대응",
-        "result": "오탐지 −68%",
-        "metricLabel": "거짓 경보 양"
-      }
-    }
-  },
-  "howWeWork": {
-    "title": "작업 방식",
-    "subtitle": "초고속 배송 파이프라인 — 속도에 최적화됨.",
-    "steps": {
-      "discovery": {
-        "title": "발견",
-        "desc": "요구 사항, 이해 관계자, 성공 지표."
-      },
-      "design": {
-        "title": "디자인",
-        "desc": "UX, 아키텍처, 프로토타입."
-      },
-      "poc": {
-        "title": "개념 증명 (PoC)",
-        "desc": "측정 가능한 KPI를 통한 빠른 검증."
-      },
-      "build": {
-        "title": "구축",
-        "desc": "반복 스프린트, 자동화 테스트."
-      },
-      "deploy": {
-        "title": "배포",
-        "desc": "CI/CD, 모니터링, 보안 강화."
-      },
-      "support": {
-        "title": "지원 및 확장",
-        "desc": "유지 보수, 로드맵, 지속적 개선."
-      }
-    }
-  },
-  "technologyStack": {
-    "title": "기술 스택",
-    "subtitle": "속도, 확장성 및 아름다운 사용자 경험을 위해 설계된 엄선된 프로덕션 등급 스택."
-  },
-  "backToTop": {
-    "label": "맨 위로"
-  },
-  "pricingCustom": {
-    "title": "투명한 가격 정책",
-    "subtitle": "제품과 함께 성장하는 모바일 우선 요금제.",
-    "percentMaintenance": "{percent}% 연간 유지보수",
-    "planEstimate": "${value}",
-    "perYear": "년 (예상)",
-    "calculator": {
-      "title": "프로젝트 비용 계산기",
-      "subtitle": "슬라이드하여 연간 유지보수 비용 확인",
-      "projectCost": "프로젝트 비용:",
-      "projectValue": "${value}"
-    },
-    "plans": {
-      "basic": {
-        "name": "베이직",
-        "features": {
-          "fix": "치명적 버그 수정 (48시간 SLA)",
-          "updates": "월간 업데이트",
-          "audit": "분기별 보안 감사",
-          "manager": "전담 매니저"
+        "analyzer": {
+            "subtitle": "실시간 증명",
+            "title": "CodeQL을 능가하는 분석기",
+            "features": {
+                "quality": {
+                    "title": "자동 품질 관리",
+                    "description": "중요 코드를 위한 구조·스타일·베스트 프랙티스 검증"
+                },
+                "vulnerability": {
+                    "title": "취약성 탐색",
+                    "description": "SQLi, XSS, 인증 우회, 취약 의존성을 즉시 탐지"
+                },
+                "secrets": {
+                    "title": "시크릿 보호",
+                    "description": "키, 토큰, 자격 증명을 커밋 단계에서 차단"
+                },
+                "config": {
+                    "title": "구성 강화",
+                    "description": "Docker/K8s, IAM, 네트워크 정책의 권한 상승을 스캔"
+                }
+            },
+            "beyondCodeQL": {
+                "subtitle": "CodeQL 그 이상",
+                "title": "정적 쿼리가 놓치는 부분까지 탐지",
+                "description": "CodeQL보다 빠르게 구성 오류·취약 패키지를 찾아 경보가 아닌 해결책을 제시합니다.",
+                "points": {
+                    "packages": "의존성 그래프를 이해하고 위험 패키지를 즉시 표시.",
+                    "config": "정적 규칙 너머의 구성 드리프트·권한 상승을 발견.",
+                    "patches": "모든 탐지에 제안 패치와 책임자를 연결."
+                }
+            },
+            "visualizer": {
+                "subtitle": "비주얼라이저",
+                "title": "실행 중인 코드 분석기",
+                "description": "온프렘 콘솔에서 최신 스캔을 명확하게 보여줍니다.",
+                "privateWorkspace": "프라이빗 워크스페이스 전용",
+                "frame": "프레임 {index}",
+                "shots": {
+                    "scanOverview": {
+                        "title": "스캔 개요",
+                        "description": "코드가 외부로 나가기 전 심각도별 문제를 확인하세요."
+                    },
+                    "misconfigurations": {
+                        "title": "구성 오류 탐지",
+                        "description": "AI 코드 분석기로 코드 속 misconfig를 찾습니다."
+                    },
+                    "inlineDiffs": {
+                        "title": "취약 패키지 탐지",
+                        "description": "취약 버전과 해결 버전을 즉시 보여줍니다."
+                    }
+                },
+                "andManyMore": "이 외에도 다수..."
+            }
+        },
+        "industries": {
+            "subtitle": "도입 산업",
+            "title": "규제가 강하고 위험이 높은 산업을 위해 설계",
+            "oilGas": {
+                "title": "석유·가스",
+                "description": "시추, 정제, 파이프라인 운영"
+            },
+            "energy": {
+                "title": "에너지",
+                "description": "그리드, 송배전, EMS"
+            },
+            "nuclear": {
+                "title": "원자력",
+                "description": "원자로 운영과 안전"
+            },
+            "manufacturing": {
+                "title": "제조",
+                "description": "ICS, OT, 로보틱스"
+            },
+            "government": {
+                "title": "정부",
+                "description": "부처, 국방, 핵심 기관"
+            }
+        },
+        "comingSoon": {
+            "title": "관리자 패널",
+            "message": "관리자 패널은 개발 중이며 다음 주 말 공개됩니다."
         }
-      },
-      "pro": {
-        "name": "프로",
-        "badge": "인기",
-        "features": {
-          "fix": "치명적 버그 수정 (24시간 SLA)",
-          "updates": "월 10시간 업데이트",
-          "audit": "월간 보안 감사",
-          "manager": "전담 매니저"
-        }
-      },
-      "enterprise": {
-        "name": "엔터프라이즈",
-        "badge": "최고 가치",
-        "features": {
-          "fix": "치명적 버그 수정 (4시간 SLA)",
-          "updates": "무제한 업데이트 + 로드맵",
-          "audit": "주간 감사 + 백업",
-          "manager": "전담 매니저"
-        }
-      }
-    }
-  },
-  "home": {
-    "hero": {
-      "badge": "AI 보안 및 개발",
-      "title": "사이버 보안은 더 이상",
-      "subtitle": "안전하게 구축하고, 자신 있게 배포하세요.",
-      "ctaPrimary": "데모 요청",
-      "ctaSecondary": "시스템 살펴보기",
-      "highlights": {
-        "coverage": "24/7 AI 지원 SOC",
-        "onPrem": "데이터 유출 없는 온프레미스",
-        "deploy": "4분 만에 안전 배포"
-      },
-      "metrics": {
-        "title": "규제 대상 팀을 위해 설계",
-        "soc": "AI 지원 SOC 커버리지",
-        "egress": "모두 온프레미스 — 코드, 프롬프트, 빌드",
-        "deployment": "첫 안전 배포까지",
-        "locales": "기본 제공 언어"
-      },
-      "titleHighlight": "복잡하거나 비싸지 않습니다"
     },
-    "systems": {
-      "title": "시스템",
-      "subtitle": "적합한 구독 제품을 선택하세요: 탐지를 위한 AI-SOC, 밀폐 개발을 위한 SLNC-env.",
-      "cta": "자세히 보기",
-      "aiSoc": {
-        "title": "AI-SOC",
-        "desc": "AI가 구동·운영하는 관리형 탐지 및 대응 시스템. 웹과 이메일 공격을 예방합니다.",
-        "badge": "구독"
-      },
-      "slncEnv": {
-        "title": "SLNC-env",
-        "desc": "코드, 프롬프트, 빌드를 온프레미스에 유지하는 밀폐형 개발 클라우드.",
-        "badge": "구독"
-      },
-      "sithub": {
-        "title": "Sithub",
-        "desc": "내장 보안 스캐닝이 있는 자체 호스팅 GitHub 대안. 모든 저장소와 코드 분석이 네트워크 내부에 유지됩니다.",
-        "badge": "구독"
-      },
-      "supreme": {
+    "supreme": {
+        "hero": {
+            "badge": "Supreme · VSCode 확장",
+            "title": "로컬 코드 취약성 스캐너",
+            "description": "코드를 외부 서버로 보내지 않고 로컬에서 스캔합니다. 에디터 안에서 빠르고 포괄적인 취약성 탐지를 실행하세요."
+        },
+        "video": {
+            "title": "설치·사용 가이드 (60초)",
+            "cardTitle": "Supreme 사용법",
+            "cardSubtitle": "설치 및 설정 안내"
+        },
+        "pricing": {
+            "title": "단순한 가격",
+            "subtitle": "가장 적합한 플랜을 선택하세요",
+            "monthly": {
+                "title": "월간",
+                "description": "유연하며 언제든 해지"
+            },
+            "yearly": {
+                "title": "연간",
+                "description": "최저가"
+            },
+            "month": "월",
+            "year": "년",
+            "saveBadge": "30% 절약",
+            "subscribe": "구독하기",
+            "perMonthApprox": "월 약 {value}"
+        },
+        "languages": {
+            "title": "지원 언어",
+            "subtitle": "주요 프로그래밍 언어를 위한 종합 보안 스캔"
+        },
+        "features": {
+            "title": "강력한 기능",
+            "subtitle": "안전한 코드 개발에 필요한 모든 것",
+            "items": {
+                "0": "코드 분석기는 로컬에서 실행되어 외부로 전송되지 않습니다",
+                "1": "프로젝트의 취약 패키지를 탐지합니다",
+                "2": "구성 오류와 시크릿을 찾아냅니다",
+                "3": "CI/CD의 구성 오류와 취약성을 스캔합니다"
+            }
+        },
+        "screenshots": {
+            "0": {
+                "title": "매우 직관적인 인터페이스"
+            },
+            "1": {
+                "title": "잘 구조화된 보안 보고서"
+            },
+            "2": {
+                "title": "스캔 히스토리"
+            }
+        },
+        "lightbox": {
+            "close": "미리보기 닫기",
+            "alt": "스크린샷"
+        },
         "title": "Supreme",
-        "desc": "Lokalny skaner podatności kodu dla VSCode. Analizuj kod bez wysyłania go na zewnętrzne serwery.",
-        "badge": "Rozszerzenie"
-      }
-    },
-    "services": {
-      "title": "맞춤 개발 서비스",
-      "subtitle": "AI 에이전트, 통합, 전주기 소프트웨어 딜리버리를 처음부터 보안 내재화로 제공합니다.",
-      "cta": "서비스 보기",
-      "cards": {
-        "agents": "가드레일, RAG, 안전한 커넥터를 갖춘 프로덕션급 AI 에이전트.",
-        "integrations": "스택, IAM, 데이터 거버넌스를 아우르는 벤더 중립 통합.",
-        "delivery": "신뢰성 SLO, 관측성, 보안 리뷰를 포함한 전주기 딜리버리."
-      },
-      "cardsTitle": {
-        "agents": "에이전트",
-        "integrations": "통합",
-        "delivery": "딜리버리"
-      }
-    },
-    "contact": {
-      "title": "AI-SOC과 SLNC-env를 결합할 준비가 되셨나요?",
-      "subtitle": "보안 및 딜리버리 목표를 알려주세요 — 적합한 시스템과 서비스를 맞추겠습니다.",
-      "cta": "데모 요청",
-      "ctaSecondary": "서비스 팀과 상담"
-    },
-    "resources": {
-      "title": "추천 기사",
-      "subtitle": "Silence AI는 정부 수준의 인텔리전스를 보유한 소수의 민간 기업 중 하나입니다.",
-      "viewAll": "모든 기사 보기"
-    }
-  },
-  "documentation": {
-    "tabs": {
-      "web": "웹 보안",
-      "email": "이메일 보안"
-    },
-    "system": {
-      "sections": "섹션",
-      "topics": "주제",
-      "tableOfContents": "목차",
-      "close": "닫기"
-    },
-    "webSecurity": {
-      "placeholder": {
-        "badge": "웹 보안",
-        "title": "문서가 곧 제공됩니다",
-        "description": "웹 애플리케이션 구성과 보호를 위한 자세한 가이드를 준비 중입니다. 곧 자료가 공개될 예정이니 다시 확인해 주세요."
-      }
-    },
-    "emailSecurity": {
-      "title": "이메일 보안 시스템",
-      "subtitle": "문서 | 버전 1.0",
-      "description": "기업 이메일 보안 플랫폼을 구성하고 운영하는 방법.",
-      "chapters": [
-        {
-          "id": "getting-started",
-          "title": "시작하기",
-          "label": "시작하기",
-          "description": "관리자와 최종 사용자를 위한 초기 단계입니다.",
-          "sections": [
-            {
-              "id": "admin-setup",
-              "title": "관리자용",
-              "body": [
-                {
-                  "type": "paragraph",
-                  "content": "시스템을 온보딩하려면 다음을 수행하세요."
-                },
-                {
-                  "type": "orderedList",
-                  "items": [
-                    "Google 또는 Microsoft OAuth를 사용해 admin.silenceai.net의 CMC 관리자 패널에 로그인합니다.",
-                    "회사 도메인을 등록합니다.",
-                    "DNS를 통해 도메인 소유권을 확인합니다.",
-                    "보안 레코드(SPF, DKIM, DMARC)를 구성합니다.",
-                    "직원용 이메일 계정을 생성합니다."
-                  ]
-                },
-                {
-                  "type": "paragraph",
-                  "content": "구성이 완료되면 사용자는 웹메일 클라이언트에 접속해 보호된 메시지를 보낼 수 있습니다."
-                }
-              ]
-            },
-            {
-              "id": "user-onboarding",
-              "title": "최종 사용자용",
-              "body": [
-                {
-                  "type": "paragraph",
-                  "content": "이메일을 사용하려면 다음을 따르세요."
-                },
-                {
-                  "type": "orderedList",
-                  "items": [
-                    "관리자로부터 자격 증명을 받습니다.",
-                    "mail.silenceai.net에 이메일/비밀번호 또는 OAuth로 로그인합니다.",
-                    "\"Compose\" 버튼을 눌러 첫 메시지를 전송합니다.",
-                    "보안 수준에 따라 메시지를 자동 분류하는 시스템 폴더를 확인합니다."
-                  ]
-                },
-                {
-                  "type": "paragraph",
-                  "content": "수신 메일은 위협을 자동으로 검사한 뒤 해당 폴더로 이동합니다."
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "step-by-step",
-          "title": "단계별 안내",
-          "label": "단계별 안내",
-          "description": "CMC 관리자 패널에서 도메인을 온보딩하고 DNS를 구성하는 절차입니다.",
-          "sections": [
-            {
-              "id": "add-domain",
-              "title": "도메인 추가",
-              "body": [
-                {
-                  "type": "paragraph",
-                  "content": "도메인 관리는 CMC 관리자 패널에서 시작됩니다."
-                },
-                {
-                  "type": "orderedList",
-                  "items": [
-                    "CMC 관리자 패널을 엽니다.",
-                    "\"Add Domain\"을 클릭합니다.",
-                    "www 없이 도메인 이름을 입력합니다(예: company.com).",
-                    "\"Add\"를 클릭합니다."
-                  ]
-                },
-                {
-                  "type": "paragraph",
-                  "content": "시스템이 도메인 소유권을 확인할 검증 토큰을 발급합니다."
-                }
-              ]
-            },
-            {
-              "id": "verify-domain",
-              "title": "도메인 소유권 확인",
-              "body": [
-                {
-                  "type": "paragraph",
-                  "content": "도메인을 추가한 뒤에는 소유권을 증명해야 합니다."
-                },
-                {
-                  "type": "orderedList",
-                  "items": [
-                    "CMC에서 TXT 레코드를 복사합니다:"
-                  ]
-                },
-                {
-                  "type": "code",
-                  "content": "_cmc-verification.company.com TXT \"cmc-verify-abc123xyz\""
-                },
-                {
-                  "type": "orderedList",
-                  "items": [
-                    "도메인 DNS 설정에 레코드를 추가합니다.",
-                    "자동 검사(5분마다)를 기다리거나 \"Check Now\"를 클릭합니다."
-                  ]
-                },
-                {
-                  "type": "paragraph",
-                  "content": "검증에는 최대 48시간이 걸릴 수 있습니다. 완료되면 도메인 상태가 'Verified'로 바뀝니다."
-                }
-              ]
-            },
-            {
-              "id": "configure-spf",
-              "title": "SPF 레코드 구성",
-              "body": [
-                {
-                  "type": "paragraph",
-                  "content": "SPF는 도메인을 대신해 메일을 보낼 수 있는 서버를 정의합니다."
-                },
-                {
-                  "type": "orderedList",
-                  "items": [
-                    "CMC에서 \"DNS Configuration\" → \"SPF\"를 엽니다.",
-                    "\"Check Current SPF\"를 눌러 기존 레코드를 확인합니다.",
-                    "\"Generate SPF Record\"를 클릭합니다.",
-                    "권장 레코드를 복사합니다:"
-                  ]
-                },
-                {
-                  "type": "code",
-                  "content": "company.com TXT \"v=spf1 include:_spf.silenceai.net -all\""
-                },
-                {
-                  "type": "orderedList",
-                  "items": [
-                    "레코드를 DNS에 추가합니다."
-                  ]
-                },
-                {
-                  "type": "paragraph",
-                  "content": "이미 SPF 레코드(예: Gmail용)가 있다면 마지막 -all 앞에 include:_spf.silenceai.net을 추가하세요."
-                }
-              ]
-            },
-            {
-              "id": "configure-dkim",
-              "title": "DKIM 키 생성",
-              "body": [
-                {
-                  "type": "paragraph",
-                  "content": "DKIM은 메일에 암호화된 서명을 추가합니다."
-                },
-                {
-                  "type": "orderedList",
-                  "items": [
-                    "CMC에서 \"DNS Configuration\" → \"DKIM\"을 엽니다.",
-                    "\"Generate DKIM Keys\"를 클릭합니다.",
-                    "시스템이 키 쌍을 생성합니다(개인 키는 서버에 저장되고 공개 키는 DNS에 사용됩니다).",
-                    "다음 DNS 레코드를 복사합니다:"
-                  ]
-                },
-                {
-                  "type": "code",
-                  "content": "silenceai._domainkey.company.com TXT \"v=DKIM1; k=rsa; p=MIIBIjAN...\""
-                },
-                {
-                  "type": "orderedList",
-                  "items": [
-                    "레코드를 DNS에 추가합니다.",
-                    "\"Verify DKIM\"을 실행해 확인합니다."
-                  ]
-                }
-              ]
-            },
-            {
-              "id": "configure-dmarc",
-              "title": "DMARC 정책 설정",
-              "body": [
-                {
-                  "type": "paragraph",
-                  "content": "DMARC는 SPF 또는 DKIM 검사를 통과하지 못한 메시지를 처리하는 정책을 정의합니다."
-                },
-                {
-                  "type": "orderedList",
-                  "items": [
-                    "CMC에서 \"DNS Configuration\" → \"DMARC\"를 엽니다.",
-                    "정책을 선택합니다:"
-                  ]
-                },
-                {
-                  "type": "list",
-                  "items": [
-                    "quarantine — 스팸으로 이동(권장)",
-                    "reject — 메시지를 차단"
-                  ]
-                },
-                {
-                  "type": "orderedList",
-                  "items": [
-                    "\"Generate DMARC Record\"를 클릭합니다.",
-                    "레코드를 복사합니다:"
-                  ]
-                },
-                {
-                  "type": "code",
-                  "content": "_dmarc.company.com TXT \"v=DMARC1; p=quarantine; rua=mailto:dmarc-reports@silenceai.net\""
-                },
-                {
-                  "type": "orderedList",
-                  "items": [
-                    "레코드를 DNS에 추가합니다."
-                  ]
-                },
-                {
-                  "type": "paragraph",
-                  "content": "먼저 quarantine으로 설정하고 1~2주 동안 보고서를 모니터링한 뒤 필요하면 reject로 전환하세요."
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "user-management",
-          "title": "사용자 관리",
-          "label": "사용자 관리",
-          "description": "메일 계정을 생성하고 유지 관리하는 방법입니다.",
-          "sections": [
-            {
-              "id": "create-account",
-              "title": "이메일 계정 만들기",
-              "body": [
-                {
-                  "type": "orderedList",
-                  "items": [
-                    "CMC의 \"Email Accounts\" 섹션을 엽니다.",
-                    "\"Create Account\"를 클릭합니다.",
-                    "다음 항목을 입력합니다:"
-                  ]
-                },
-                {
-                  "type": "list",
-                  "items": [
-                    "Email: john.doe@company.com",
-                    "이름과 성",
-                    "비밀번호(최소 8자, 대문자·소문자·숫자·특수문자 포함)",
-                    "저장 용량: 메일함 크기를 선택합니다"
-                  ]
-                },
-                {
-                  "type": "orderedList",
-                  "items": [
-                    "\"Create\"를 클릭합니다."
-                  ]
-                },
-                {
-                  "type": "paragraph",
-                  "content": "사용자는 즉시 웹메일에 로그인할 수 있습니다."
-                }
-              ]
-            },
-            {
-              "id": "suspend-activate",
-              "title": "계정 일시 중지 또는 재활성화",
-              "body": [
-                {
-                  "type": "orderedList",
-                  "items": [
-                    "\"Email Accounts\"에서 사용자를 찾습니다.",
-                    "동작 메뉴에서 다음을 선택합니다:"
-                  ]
-                },
-                {
-                  "type": "list",
-                  "items": [
-                    "Suspend — 액세스를 일시 중지(사용자는 로그인할 수 없음)",
-                    "Activate — 액세스를 복원"
-                  ]
-                },
-                {
-                  "type": "orderedList",
-                  "items": [
-                    "동작을 확인합니다."
-                  ]
-                }
-              ]
-            },
-            {
-              "id": "change-quota",
-              "title": "저장 용량 변경",
-              "body": [
-                {
-                  "type": "orderedList",
-                  "items": [
-                    "목록에서 사용자를 찾습니다.",
-                    "동작 메뉴에서 \"Edit Quota\"를 선택합니다.",
-                    "새 저장 용량을 선택합니다.",
-                    "변경 사항을 저장합니다."
-                  ]
-                },
-                {
-                  "type": "paragraph",
-                  "content": "변경 사항은 즉시 적용됩니다."
-                }
-              ]
-            },
-            {
-              "id": "delete-account",
-              "title": "계정 삭제",
-              "body": [
-                {
-                  "type": "orderedList",
-                  "items": [
-                    "목록에서 사용자를 찾습니다.",
-                    "동작 메뉴에서 \"Delete\"를 선택합니다.",
-                    "삭제를 확인합니다."
-                  ]
-                },
-                {
-                  "type": "callout",
-                  "intent": "warning",
-                  "content": "경고: 사용자 데이터는 모두 영구적으로 삭제됩니다."
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "mail-operations",
-          "title": "메일 작업",
-          "label": "메일 작업",
-          "description": "웹메일 클라이언트에서 수행하는 일상적인 작업입니다.",
-          "sections": [
-            {
-              "id": "send-letter",
-              "title": "메시지 보내기",
-              "body": [
-                {
-                  "type": "orderedList",
-                  "items": [
-                    "웹메일에서 \"Compose\"를 클릭합니다.",
-                    "다음을 입력합니다:"
-                  ]
-                },
-                {
-                  "type": "list",
-                  "items": [
-                    "To: 수신자 주소",
-                    "Subject: 이메일 제목",
-                    "Body: 메시지 본문(서식 있는 편집 지원)"
-                  ]
-                },
-                {
-                  "type": "orderedList",
-                  "items": [
-                    "필요하면 파일을 첨부합니다(파일당 최대 25MB).",
-                    "\"Send\"를 클릭합니다."
-                  ]
-                },
-                {
-                  "type": "paragraph",
-                  "content": "메시지에는 DKIM 서명이 자동으로 적용되어 전송됩니다."
-                }
-              ]
-            },
-            {
-              "id": "custom-folder",
-              "title": "규칙이 있는 사용자 정의 폴더 만들기",
-              "body": [
-                {
-                  "type": "paragraph",
-                  "content": "사용자 정의 폴더는 정의한 규칙에 따라 메시지를 자동으로 분류합니다."
-                },
-                {
-                  "type": "orderedList",
-                  "items": [
-                    "사이드바에서 \"Create Folder\"를 클릭합니다.",
-                    "폴더 이름을 입력합니다(예: \"Clients\").",
-                    "\"Add Rules\"를 클릭합니다.",
-                    "규칙을 구성합니다:"
-                  ]
-                },
-                {
-                  "type": "list",
-                  "items": [
-                    "Filter by: Sender Domain(발신 도메인 기준)",
-                    "Match mode: Contains(포함)",
-                    "Value: client.com"
-                  ]
-                },
-                {
-                  "type": "orderedList",
-                  "items": [
-                    "기존 이메일에 다시 적용하려면 \"Apply to existing emails\"를 활성화합니다.",
-                    "\"Create\"를 클릭합니다."
-                  ]
-                },
-                {
-                  "type": "paragraph",
-                  "content": "*@client.com에서 오는 새 메일은 자동으로 \"Clients\" 폴더로 이동합니다."
-                }
-              ]
-            },
-            {
-              "id": "add-whitelist",
-              "title": "발신자를 화이트리스트에 추가",
-              "body": [
-                {
-                  "type": "paragraph",
-                  "content": "메시지가 실수로 스팸으로 분류된 경우:"
-                },
-                {
-                  "type": "orderedList",
-                  "items": [
-                    "SPAM 폴더에서 해당 이메일을 엽니다.",
-                    "\"Not Spam\" → \"Add to Whitelist\"를 클릭합니다.",
-                    "다음을 선택합니다:"
-                  ]
-                },
-                {
-                  "type": "list",
-                  "items": [
-                    "Whitelist sender email(발신자 이메일 허용)",
-                    "Whitelist sender domain(발신 도메인 허용)"
-                  ]
-                },
-                {
-                  "type": "orderedList",
-                  "items": [
-                    "동작을 확인합니다."
-                  ]
-                },
-                {
-                  "type": "paragraph",
-                  "content": "이후 이 발신자의 메시지는 스팸으로 이동하지 않습니다."
-                }
-              ]
-            },
-            {
-              "id": "email-signature",
-              "title": "이메일 서명 설정",
-              "body": [
-                {
-                  "type": "orderedList",
-                  "items": [
-                    "Settings → \"Email Signature\"를 엽니다.",
-                    "\"Enable signature\"를 활성화합니다.",
-                    "편집기에 서명 텍스트를 입력합니다.",
-                    "\"Save\"를 클릭합니다."
-                  ]
-                },
-                {
-                  "type": "paragraph",
-                  "content": "서명은 모든 발신 메시지에 자동으로 추가됩니다."
-                }
-              ]
-            },
-            {
-              "id": "vacation-responder",
-              "title": "자동 응답 설정",
-              "body": [
-                {
-                  "type": "orderedList",
-                  "items": [
-                    "Settings → \"Vacation Responder\"를 엽니다.",
-                    "\"Enable vacation responder\"를 활성화합니다.",
-                    "시작 및 종료 날짜를 설정합니다.",
-                    "자동 응답 메시지를 입력합니다.",
-                    "발신자당 1회만 응답하려면 \"Reply once per sender\"를 선택합니다.",
-                    "\"Save\"를 클릭합니다."
-                  ]
-                },
-                {
-                  "type": "paragraph",
-                  "content": "자동 응답은 지정한 기간 동안 동작한 후 자동으로 종료됩니다."
-                }
-              ]
-            },
-            {
-              "id": "forwarding",
-              "title": "메일 전달 설정",
-              "body": [
-                {
-                  "type": "orderedList",
-                  "items": [
-                    "Settings → \"Email Forwarding\"을 엽니다.",
-                    "\"Add Forwarding Address\"를 클릭합니다.",
-                    "전달 받을 이메일 주소를 입력합니다.",
-                    "사본을 보관하려면 \"Keep copy in inbox\"를 활성화합니다.",
-                    "\"Save\"를 클릭합니다."
-                  ]
-                },
-                {
-                  "type": "paragraph",
-                  "content": "모든 수신 메일이 선택한 주소로 전달됩니다."
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "domain-administration",
-          "title": "도메인 관리",
-          "label": "도메인 관리",
-          "description": "도메인 분석과 대량 메일 작업을 위한 기능입니다.",
-          "sections": [
-            {
-              "id": "view-activity",
-              "title": "도메인 메일 활동 검토",
-              "body": [
-                {
-                  "type": "paragraph",
-                  "content": "관리자는 도메인 내 모든 사용자의 메시지를 확인할 수 있습니다."
-                },
-                {
-                  "type": "orderedList",
-                  "items": [
-                    "CMC → \"Email Activity\"를 엽니다.",
-                    "다음 필터를 사용합니다:"
-                  ]
-                },
-                {
-                  "type": "list",
-                  "items": [
-                    "사용자별",
-                    "폴더별(Secure, Spam, Phishing)",
-                    "날짜별",
-                    "위협 유형별"
-                  ]
-                },
-                {
-                  "type": "orderedList",
-                  "items": [
-                    "제목이나 발신자를 찾으려면 검색창을 사용합니다."
-                  ]
-                }
-              ]
-            },
-            {
-              "id": "bulk-delete",
-              "title": "모든 사용자 메시지 삭제",
-              "body": [
-                {
-                  "type": "paragraph",
-                  "content": "악성 메시지가 모든 사용자에게 발송된 경우:"
-                },
-                {
-                  "type": "orderedList",
-                  "items": [
-                    "\"Email Activity\"를 엽니다.",
-                    "필터나 검색으로 메시지를 찾습니다.",
-                    "삭제할 메시지를 선택합니다.",
-                    "\"Delete Selected\"를 클릭합니다.",
-                    "대량 삭제를 확인합니다."
-                  ]
-                },
-                {
-                  "type": "paragraph",
-                  "content": "메시지는 모든 사용자 메일함에서 제거됩니다."
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "concepts",
-          "title": "핵심 개념",
-          "label": "핵심 개념",
-          "description": "플랫폼의 핵심 개념과 보안 흐름을 설명합니다.",
-          "sections": [
-            {
-              "id": "system-overview",
-              "title": "시스템 개요",
-              "body": [
-                {
-                  "type": "paragraph",
-                  "content": "이메일 보안 시스템은 기업 이메일을 사이버 위협으로부터 보호하는 플랫폼입니다."
-                },
-                {
-                  "type": "list",
-                  "title": "구성 요소:",
-                  "items": [
-                    "CMC 관리자 패널 — 도메인, 사용자, DNS 설정을 위한 관리자 콘솔.",
-                    "웹메일 클라이언트 — 자동 위협 보호가 적용된 직원용 메일함.",
-                    "인프라 서비스 — 메시지 처리를 위한 SMTP 서버와 보안 파이프라인."
-                  ]
-                }
-              ]
-            },
-            {
-              "id": "security-stack",
-              "title": "보안 파이프라인",
-              "body": [
-                {
-                  "type": "paragraph",
-                  "content": "모든 수신 메시지는 여섯 단계의 보호를 거칩니다:"
-                },
-                {
-                  "type": "orderedList",
-                  "items": [
-                    "레이어 0: 피싱 도메인 검사 — 알려진 피싱 데이터베이스와 발신 도메인을 비교합니다.",
-                    "레이어 1: 스푸핑 감지 — SPF, DKIM, DMARC 정합성을 검증합니다.",
-                    "레이어 2: 스팸 감지 — RSPAMD로 콘텐츠를 분석해 스팸 특성을 찾습니다.",
-                    "레이어 3: 링크 스캐너 — URLScan.io로 악성 링크를 검사합니다.",
-                    "레이어 4: 백신 — Bitdefender로 첨부 파일을 검사합니다.",
-                    "레이어 5: AI 피싱 탐지 — AI로 메시지 내용을 분석해 피싱 신호를 식별합니다."
-                  ]
-                },
-                {
-                  "type": "paragraph",
-                  "content": "위협이 감지되면 처리가 중단되고 해당 폴더로 메시지가 이동합니다."
-                }
-              ]
-            },
-            {
-              "id": "system-folders",
-              "title": "시스템 폴더",
-              "body": [
-                {
-                  "type": "paragraph",
-                  "content": "검사 결과에 따라 메시지가 다음 폴더로 분류됩니다:"
-                },
-                {
-                  "type": "list",
-                  "items": [
-                    "Unfiltered — 처리 전 임시 폴더입니다.",
-                    "Secure — 모든 검사를 통과한 메시지.",
-                    "Possibly Spoofed — 발신자 진위가 의심스러운 메시지.",
-                    "SPAM — 스팸 메시지.",
-                    "Dangerous Links — 악성 URL이 포함된 메시지.",
-                    "Malware — 감염된 첨부 파일이 있는 메시지.",
-                    "Possibly Phishing — 피싱 징후가 감지된 메시지.",
-                    "Sent — 발신 메시지."
-                  ]
-                },
-                {
-                  "type": "paragraph",
-                  "content": "하나의 메시지가 여러 폴더(예: SPAM과 Possibly Spoofed)에 동시에 표시될 수 있습니다."
-                }
-              ]
-            },
-            {
-              "id": "custom-folders",
-              "title": "사용자 정의 폴더",
-              "body": [
-                {
-                  "type": "paragraph",
-                  "content": "사용자는 자동 필터링 규칙이 있는 사용자 정의 폴더를 만들 수 있습니다."
-                },
-                {
-                  "type": "list",
-                  "title": "필터 규칙:",
-                  "items": [
-                    "발신 도메인 기준",
-                    "발신 이메일 기준",
-                    "제목 기준",
-                    "발신자 이름 기준"
-                  ]
-                },
-                {
-                  "type": "list",
-                  "title": "일치 모드:",
-                  "items": [
-                    "포함",
-                    "일치",
-                    "시작 문자",
-                    "끝 문자"
-                  ]
-                },
-                {
-                  "type": "paragraph",
-                  "content": "규칙은 기존 메일에도 적용할 수 있습니다(소급 적용)."
-                }
-              ]
-            },
-            {
-              "id": "spf",
-              "title": "SPF(발신자 정책 프레임워크)",
-              "body": [
-                {
-                  "type": "paragraph",
-                  "content": "SPF는 도메인을 대신해 메일을 보낼 수 있는 서버를 정의하는 DNS 레코드입니다."
-                },
-                {
-                  "type": "paragraph",
-                  "content": "형식:"
-                },
-                {
-                  "type": "code",
-                  "content": "v=spf1 include:_spf.silenceai.net -all"
-                },
-                {
-                  "type": "list",
-                  "title": "메커니즘:",
-                  "items": [
-                    "include:domain — 참조된 도메인의 서버를 허용",
-                    "ip4:x.x.x.x — 특정 IP 주소를 허용",
-                    "-all — 나머지는 모두 거부",
-                    "~all — 나머지는 의심으로 표시"
-                  ]
-                },
-                {
-                  "type": "paragraph",
-                  "content": "SPF 검사: 수신자는 발신 IP가 도메인의 SPF 레코드에서 허용되는지 확인합니다. 실패하면 메시지가 의심스럽다고 표시됩니다."
-                }
-              ]
-            },
-            {
-              "id": "dkim",
-              "title": "DKIM(도메인키 확인 메일)",
-              "body": [
-                {
-                  "type": "paragraph",
-                  "content": "DKIM은 메시지가 도메인 소유자가 보냈으며 전송 중 변경되지 않았음을 확인하기 위해 암호화 서명을 추가합니다."
-                },
-                {
-                  "type": "paragraph",
-                  "content": "동작 방식:"
-                },
-                {
-                  "type": "list",
-                  "items": [
-                    "전송 시 서버가 개인 키로 메시지에 서명하고 DKIM-Signature 헤더를 추가합니다.",
-                    "수신자는 DNS에서 공개 키를 가져와 서명을 검증합니다."
-                  ]
-                },
-                {
-                  "type": "paragraph",
-                  "content": "DNS 레코드:"
-                },
-                {
-                  "type": "code",
-                  "content": "selector._domainkey.domain.com TXT \"v=DKIM1; k=rsa; p=public_key\""
-                },
-                {
-                  "type": "paragraph",
-                  "content": "개인 키는 서버에 암호화된 상태로 저장되며 클라이언트와 공유되지 않습니다."
-                }
-              ]
-            },
-            {
-              "id": "dmarc",
-              "title": "DMARC(도메인 기반 메시지 인증)",
-              "body": [
-                {
-                  "type": "paragraph",
-                  "content": "DMARC는 SPF 또는 DKIM 검사를 통과하지 못한 메시지에 대한 정책을 정의합니다."
-                },
-                {
-                  "type": "paragraph",
-                  "content": "형식:"
-                },
-                {
-                  "type": "code",
-                  "content": "_dmarc.domain.com TXT \"v=DMARC1; p=quarantine; rua=mailto:reports@domain.com\""
-                },
-                {
-                  "type": "list",
-                  "title": "매개변수:",
-                  "items": [
-                    "p=quarantine — 스팸함으로 전달",
-                    "p=reject — 메시지를 거부",
-                    "p=none — 모니터링 전용",
-                    "rua= — 집계 보고서를 받을 주소"
-                  ]
-                },
-                {
-                  "type": "paragraph",
-                  "content": "DMARC 검사: 수신자는 메시지가 SPF 또는 DKIM을 정렬된 도메인으로 통과했는지 확인하고, 실패하면 구성된 정책을 적용합니다."
-                }
-              ]
-            },
-            {
-              "id": "attachments",
-              "title": "첨부 파일 및 백신",
-              "body": [
-                {
-                  "type": "list",
-                  "title": "제한 사항:",
-                  "items": [
-                    "최대 파일 크기: 25MB",
-                    "모든 파일 형식을 지원"
-                  ]
-                },
-                {
-                  "type": "paragraph",
-                  "content": "첨부 파일 검사: 모든 파일은 Bitdefender로 검사하며 악성 코드가 발견되면 메시지는 Malware 폴더로 이동하고 첨부 파일은 차단됩니다."
-                },
-                {
-                  "type": "paragraph",
-                  "content": "저장소: 첨부 파일은 메시지 단위로 서버에 저장되며 감염된 파일은 격리됩니다."
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "access-control",
-          "title": "접근 제어",
-          "label": "접근 제어",
-          "description": "사용자 역할과 접근 보호.",
-          "sections": [
-            {
-              "id": "user-roles",
-              "title": "사용자 역할",
-              "body": [
-                {
-                  "type": "list",
-                  "title": "관리자(Admin)",
-                  "items": [
-                    "CMC 관리자 패널 전체 접근",
-                    "도메인 및 DNS 관리",
-                    "사용자 생성 및 관리",
-                    "도메인의 모든 메일 열람",
-                    "대량 메일 작업 수행"
-                  ]
-                },
-                {
-                  "type": "list",
-                  "title": "부관리자(Subordinate)",
-                  "items": [
-                    "제한된 CMC 접근",
-                    "사용자 목록 열람",
-                    "자신의 메일만 접근"
-                  ]
-                },
-                {
-                  "type": "list",
-                  "title": "사용자(User)",
-                  "items": [
-                    "웹메일 클라이언트 접근",
-                    "자신의 메일 처리",
-                    "개인 설정 구성"
-                  ]
-                }
-              ]
-            },
-            {
-              "id": "role-assignment",
-              "title": "역할 부여",
-              "body": [
-                {
-                  "type": "paragraph",
-                  "content": "자동 관리자: OAuth로 최초 로그인한 사용자는 자동으로 관리자(Admin)가 됩니다."
-                },
-                {
-                  "type": "paragraph",
-                  "content": "부관리자 생성: 관리자는 CMC의 \"User Management\"에서 부관리자 계정을 추가합니다."
-                },
-                {
-                  "type": "paragraph",
-                  "content": "일반 사용자 생성: 관리자는 \"Email Accounts\"에서 메일함을 만들면 해당 계정에 사용자(User) 역할이 부여됩니다."
-                }
-              ]
-            },
-            {
-              "id": "authentication",
-              "title": "인증",
-              "body": [
-                {
-                  "type": "list",
-                  "items": [
-                    "OAuth 2.0: Google 또는 Microsoft 로그인에 PKCE를 적용해 보안을 강화합니다.",
-                    "이메일/비밀번호: 관리자가 CMC에서 발급한 자격 증명을 사용합니다.",
-                    "JWT 토큰: 액세스 토큰은 7일 동안 유효하며 httpOnly 쿠키에 저장됩니다.",
-                    "토큰 갱신: 액세스 토큰은 리프레시 토큰으로 자동 갱신되며, 리프레시 토큰이 만료되면 다시 로그인해야 합니다."
-                  ]
-                }
-              ]
-            },
-            {
-              "id": "access-protection",
-              "title": "접근 보호",
-              "body": [
-                {
-                  "type": "list",
-                  "items": [
-                    "요청 제한: 단일 IP에서 15분 동안 최대 5회 로그인 시도.",
-                    "세션 관리: 활성 세션을 데이터베이스에 저장하고 모든 요청마다 검증합니다.",
-                    "감사 로그: 중요한 관리자 및 사용자 작업을 기록합니다."
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "quotas-limits",
-          "title": "할당량 및 제한",
-          "label": "할당량 및 제한",
-          "description": "저장 공간, 발송량, 사용자 한도를 안내합니다.",
-          "sections": [
-            {
-              "id": "storage-quota",
-              "title": "저장 용량",
-              "body": [
-                {
-                  "type": "paragraph",
-                  "content": "각 사용자에게 메일함 할당량이 부여됩니다. 사용량이 100%가 되면 메일을 보내거나 받을 수 없습니다."
-                }
-              ]
-            },
-            {
-              "id": "sending-limits",
-              "title": "발송 한도",
-              "body": [
-                {
-                  "type": "list",
-                  "items": [
-                    "Business Basic: 사용자당 하루 500건",
-                    "Business Standard: 하루 1000건",
-                    "Business Premium: 하루 2000건",
-                    "Enterprise: 하루 10000건"
-                  ]
-                }
-              ]
-            },
-            {
-              "id": "user-limit",
-              "title": "사용자 한도",
-              "body": [
-                {
-                  "type": "list",
-                  "items": [
-                    "Business 요금제: 최대 300명",
-                    "Enterprise 요금제: 무제한 사용자"
-                  ]
-                }
-              ]
-            }
-          ]
+        "cicd": {
+            "title": "CI/CD & Container Scanning",
+            "subtitle": "Detect vulnerabilities in CI/CD pipelines and Docker container configurations"
         }
-      ]
     },
-    "pricingMicrosoft": {
-      "business": "Business",
-      "enterprise": "Enterprise",
-      "withoutTeams": "Plans without Teams",
-      "withTeams": "With Teams",
-      "yearly": "Yearly",
-      "monthly": "Monthly",
-      "planHighlights": "Plan highlights",
-      "userMonth": "user/month",
-      "paidYearly": "paid yearly",
-      "paidMonthly": "paid monthly",
-      "plans": {
-        "businessPremium": {
-          "title": "Silence 365 Business Max"
+    "languageSelector": {
+        "triggerLabel": "언어 선택",
+        "menuLabel": "언어를 고르세요",
+        "searchLabel": "언어 검색",
+        "searchPlaceholder": "이름 또는 자모로 검색",
+        "searchResults": "검색 결과",
+        "noMatches": "일치하는 언어가 없습니다.",
+        "popular": "인기 언어",
+        "allLanguages": "모든 언어"
+    },
+    "documentation": {
+        "tabs": {
+            "web": "웹 보안",
+            "email": "이메일 보안"
         },
-        "businessStandard": {
-          "title": "Silence 365 Business Standard"
+        "system": {
+            "sections": "섹션",
+            "topics": "토픽",
+            "tableOfContents": "목차",
+            "close": "닫기"
         },
-        "businessBasic": {
-          "title": "Microsoft 365 Business Basic (no Teams)"
+        "webSecurity": {
+            "placeholder": {
+                "badge": "웹 보안",
+                "title": "문서가 곧 제공됩니다",
+                "description": "웹 애플리케이션 설정과 보안에 관한 자세한 가이드를 준비 중입니다. 곧 다시 확인해주세요."
+            }
         },
-        "enterpriseE3": {
-          "title": "Silence 365 Enterprise 300+"
+        "pricingMicrosoft": {
+            "business": "Business",
+            "enterprise": "Enterprise",
+            "withoutTeams": "Teams 미포함 플랜",
+            "withTeams": "Teams 포함 플랜",
+            "yearly": "연간",
+            "monthly": "월간",
+            "planHighlights": "플랜 하이라이트",
+            "userMonth": "사용자/월",
+            "paidYearly": "연간 결제 시",
+            "paidMonthly": "월간 결제 시",
+            "plans": {
+                "businessPremium": {
+                    "title": "Microsoft 365 Business Premium (Teams 제외)"
+                },
+                "businessStandard": {
+                    "title": "Microsoft 365 Business Standard (Teams 제외)"
+                },
+                "businessBasic": {
+                    "title": "Microsoft 365 Business Basic (Teams 제외)"
+                },
+                "enterpriseE3": {
+                    "title": "Microsoft 365 E3"
+                },
+                "enterpriseE5": {
+                    "title": "Microsoft 365 E5"
+                }
+            },
+            "features": {
+                "secureAccess300": "최대 300명 사용자 보안 액세스",
+                "customDomainEmail": "자체 도메인 기업 이메일(you@yourcompany.com)",
+                "adminConsole": "도메인 전체 이메일 관리 및 대량 작업이 가능한 관리자 콘솔",
+                "aiThreatDetection": "자동 이메일 분류가 포함된 AI 위협 탐지",
+                "securityPipeline": "다계층 이메일 보안 파이프라인(SPF, DKIM, DMARC, 스팸, 멀웨어, 피싱)",
+                "securityFolders": "보안 폴더 분류(안전, 스팸, 위험 링크, 멀웨어, 피싱, 스푸핑)",
+                "linkScannerAv": "고급 링크 스캐너 및 첨부파일 AV 보호",
+                "emailFlowVisualization": "도메인 전체 이메일 플로우 시각화 및 고급 필터",
+                "bulkManageDelete": "도메인 전체 이메일 관리·삭제",
+                "customFoldersRules": "자동 필터 규칙(발신자, 도메인, 제목)이 있는 맞춤 폴더",
+                "storage10gb": "사용자당 10GB 보안 메일박스",
+                "storage5tb": "사용자당 5TB 보안 저장소",
+                "storage10tb": "사용자당 10TB 보안 저장소",
+                "multiAccountSupport": "멀티 계정 지원(Gmail/Outlook 통합)",
+                "support247": "24/7 이메일·웹 지원",
+                "fullTextSearch": "전체 텍스트 이메일 검색",
+                "aiAssistedCategorization": "AI 지원 보안 폴더 분류",
+                "basicFiltering": "기본 필터 규칙이 있는 맞춤 폴더",
+                "prioritySupport": "신속 대응 우선 지원",
+                "dedicatedAM": "전담 계정 매니지먼트",
+                "unlimitedUsers": "무제한 사용자 지원"
+            }
         },
-        "enterpriseE5": {
-          "title": "Silence 365 Enterprise 500+"
+        "emailSecurity": {
+            "title": "이메일 보안 시스템",
+            "subtitle": "문서 | 버전 1.0",
+            "description": "기업 이메일 보안 플랫폼을 설정하고 사용하는 방법.",
+            "chapters": [
+                {
+                    "id": "getting-started",
+                    "title": "시작하기",
+                    "label": "시작하기",
+                    "description": "연결 첫 단계, 도메인 및 DNS 설정을 CMC 관리자 패널에서 수행합니다.",
+                    "sections": [
+                        {
+                            "id": "admin-setup",
+                            "title": "관리자용",
+                            "body": [
+                                {
+                                    "type": "paragraph",
+                                    "content": "시작하려면:"
+                                },
+                                {
+                                    "type": "orderedList",
+                                    "items": [
+                                        "admin.silenceai.net에서 Google 또는 Microsoft OAuth로 CMC 관리자 패널에 로그인합니다.",
+                                        "회사 도메인을 등록합니다.",
+                                        "DNS로 도메인 소유권을 확인합니다.",
+                                        "보안 레코드(SPF, DKIM, DMARC)를 구성합니다.",
+                                        "직원 이메일 계정을 생성합니다."
+                                    ]
+                                },
+                                {
+                                    "type": "paragraph",
+                                    "content": "설정 후 사용자는 웹메일에 접속해 안전한 메시지를 보낼 수 있습니다."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "user-onboarding",
+                            "title": "최종 사용자용",
+                            "body": [
+                                {
+                                    "type": "paragraph",
+                                    "content": "이메일을 사용하려면:"
+                                },
+                                {
+                                    "type": "orderedList",
+                                    "items": [
+                                        "관리자로부터 자격 증명을 받습니다.",
+                                        "mail.silenceai.net에 이메일/비밀번호 또는 OAuth로 로그인합니다.",
+                                        "“작성” 버튼으로 첫 메시지를 보냅니다.",
+                                        "보안 수준별로 자동 분류되는 시스템 폴더를 확인합니다."
+                                    ]
+                                },
+                                {
+                                    "type": "paragraph",
+                                    "content": "수신 메일은 자동으로 위협을 스캔하고 적절한 폴더에 배치됩니다."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "add-domain",
+                            "title": "도메인 추가",
+                            "body": [
+                                {
+                                    "type": "paragraph",
+                                    "content": "도메인 관리는 CMC 관리자 패널에서 시작됩니다."
+                                },
+                                {
+                                    "type": "orderedList",
+                                    "items": [
+                                        "CMC 관리자 패널을 엽니다.",
+                                        "“도메인 추가”를 클릭합니다.",
+                                        "www 없이 도메인 이름을 입력합니다(예: company.com).",
+                                        "“추가”를 클릭합니다."
+                                    ]
+                                },
+                                {
+                                    "type": "paragraph",
+                                    "content": "시스템이 소유권 확인 토큰을 제공합니다."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "verify-domain",
+                            "title": "도메인 소유권 확인",
+                            "body": [
+                                {
+                                    "type": "paragraph",
+                                    "content": "도메인을 추가한 뒤 소유권을 증명합니다."
+                                },
+                                {
+                                    "type": "orderedList",
+                                    "items": [
+                                        "CMC에서 TXT 레코드를 복사합니다:"
+                                    ]
+                                },
+                                {
+                                    "type": "code",
+                                    "content": "_cmc-verification.company.com TXT \"cmc-verify-abc123xyz\""
+                                },
+                                {
+                                    "type": "orderedList",
+                                    "items": [
+                                        "DNS 설정에 레코드를 추가합니다.",
+                                        "자동 확인(5분 간격)을 기다리거나 “지금 확인”을 클릭합니다."
+                                    ]
+                                },
+                                {
+                                    "type": "paragraph",
+                                    "content": "확인은 최대 48시간 걸릴 수 있습니다. 성공 시 상태가 ‘확인됨’으로 변경됩니다."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "configure-spf",
+                            "title": "SPF 레코드 설정",
+                            "body": [
+                                {
+                                    "type": "paragraph",
+                                    "content": "SPF는 어떤 서버가 도메인 이메일을 발송할 수 있는지 정의합니다."
+                                },
+                                {
+                                    "type": "orderedList",
+                                    "items": [
+                                        "CMC 관리자 패널에서 “DNS 설정” → “SPF”로 이동합니다.",
+                                        "“현재 SPF 확인”을 눌러 기존 레코드를 봅니다.",
+                                        "“SPF 레코드 생성”을 클릭합니다.",
+                                        "제안된 레코드를 복사합니다:"
+                                    ]
+                                },
+                                {
+                                    "type": "code",
+                                    "content": "company.com TXT \"v=spf1 include:_spf.silenceai.net -all\""
+                                },
+                                {
+                                    "type": "orderedList",
+                                    "items": [
+                                        "DNS에 레코드를 추가합니다."
+                                    ]
+                                },
+                                {
+                                    "type": "paragraph",
+                                    "content": "이미 SPF 레코드가 있다면(예: Gmail) 우리 include를 -all 앞에 배치하세요."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "configure-dkim",
+                            "title": "DKIM 키 생성",
+                            "body": [
+                                {
+                                    "type": "paragraph",
+                                    "content": "DKIM은 이메일에 암호 서명을 추가합니다."
+                                },
+                                {
+                                    "type": "orderedList",
+                                    "items": [
+                                        "CMC 관리자 패널에서 “DNS 설정” → “DKIM”으로 이동합니다.",
+                                        "“DKIM 키 생성”을 클릭합니다.",
+                                        "시스템이 키 쌍을 생성하며, 프라이빗 키는 서버에 남고 퍼블릭 키는 DNS용입니다.",
+                                        "DNS 레코드를 복사합니다:"
+                                    ]
+                                },
+                                {
+                                    "type": "code",
+                                    "content": "silenceai._domainkey.company.com TXT \"v=DKIM1; k=rsa; p=MIIBIjAN...\""
+                                },
+                                {
+                                    "type": "orderedList",
+                                    "items": [
+                                        "DNS에 레코드를 추가합니다.",
+                                        "“DKIM 확인”을 눌러 검증합니다."
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": "configure-dmarc",
+                            "title": "DMARC 정책 설정",
+                            "body": [
+                                {
+                                    "type": "paragraph",
+                                    "content": "DMARC는 SPF 또는 DKIM을 통과하지 못한 메일 처리 방식을 정의합니다."
+                                },
+                                {
+                                    "type": "orderedList",
+                                    "items": [
+                                        "CMC 관리자 패널에서 “DNS 설정” → “DMARC”를 엽니다.",
+                                        "정책을 선택합니다:"
+                                    ]
+                                },
+                                {
+                                    "type": "list",
+                                    "items": [
+                                        "quarantine — 스팸함 이동(권장)",
+                                        "reject — 메시지 거부"
+                                    ]
+                                },
+                                {
+                                    "type": "orderedList",
+                                    "items": [
+                                        "“DMARC 레코드 생성”을 클릭합니다.",
+                                        "레코드를 복사합니다:"
+                                    ]
+                                },
+                                {
+                                    "type": "code",
+                                    "content": "_dmarc.company.com TXT \"v=DMARC1; p=quarantine; rua=mailto:dmarc-reports@silenceai.net\""
+                                },
+                                {
+                                    "type": "orderedList",
+                                    "items": [
+                                        "DNS에 레코드를 추가합니다."
+                                    ]
+                                },
+                                {
+                                    "type": "paragraph",
+                                    "content": "quarantine으로 시작해 1~2주 보고를 모니터링한 뒤 필요 시 reject로 전환하세요."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "user-management",
+                    "title": "사용자 관리",
+                    "label": "사용자 관리",
+                    "description": "이메일 계정 생성 및 유지.",
+                    "sections": [
+                        {
+                            "id": "create-account",
+                            "title": "이메일 계정 생성",
+                            "body": [
+                                {
+                                    "type": "orderedList",
+                                    "items": [
+                                        "CMC에서 “이메일 계정” 섹션을 엽니다.",
+                                        "“계정 생성”을 클릭합니다.",
+                                        "필드를 채웁니다:"
+                                    ]
+                                },
+                                {
+                                    "type": "list",
+                                    "items": [
+                                        "Email: john.doe@company.com",
+                                        "사용자 이름",
+                                        "비밀번호(8+자, 대소문자, 숫자, 특수문자)",
+                                        "저장소 할당량: 메일박스 용량 선택"
+                                    ]
+                                },
+                                {
+                                    "type": "orderedList",
+                                    "items": [
+                                        "“생성”을 클릭합니다."
+                                    ]
+                                },
+                                {
+                                    "type": "paragraph",
+                                    "content": "사용자는 즉시 웹메일에 로그인할 수 있습니다."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "suspend-activate",
+                            "title": "계정 일시중지/활성화",
+                            "body": [
+                                {
+                                    "type": "orderedList",
+                                    "items": [
+                                        "“이메일 계정”에서 사용자를 찾습니다.",
+                                        "작업 메뉴에서 선택합니다:"
+                                    ]
+                                },
+                                {
+                                    "type": "list",
+                                    "items": [
+                                        "일시중지 — 접근을 차단합니다",
+                                        "활성화 — 접근을 복원합니다"
+                                    ]
+                                },
+                                {
+                                    "type": "orderedList",
+                                    "items": [
+                                        "동작을 확인합니다."
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": "change-quota",
+                            "title": "저장소 할당량 변경",
+                            "body": [
+                                {
+                                    "type": "orderedList",
+                                    "items": [
+                                        "목록에서 사용자를 찾습니다.",
+                                        "작업 메뉴에서 “할당량 변경”을 선택합니다.",
+                                        "새 용량을 선택합니다.",
+                                        "변경 사항을 저장합니다."
+                                    ]
+                                },
+                                {
+                                    "type": "paragraph",
+                                    "content": "변경은 즉시 적용됩니다."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "delete-account",
+                            "title": "이메일 계정 삭제",
+                            "body": [
+                                {
+                                    "type": "orderedList",
+                                    "items": [
+                                        "목록에서 사용자를 찾습니다.",
+                                        "작업 메뉴에서 “삭제”를 선택합니다.",
+                                        "삭제를 확인합니다."
+                                    ]
+                                },
+                                {
+                                    "type": "callout",
+                                    "intent": "warning",
+                                    "content": "주의: 사용자 데이터는 복구할 수 없이 삭제됩니다."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "mail-operations",
+                    "title": "메일 작업",
+                    "label": "메일 작업",
+                    "description": "메일 관리 및 설정의 핵심 기능.",
+                    "sections": [
+                        {
+                            "id": "send-letter",
+                            "title": "메시지 보내기",
+                            "body": [
+                                {
+                                    "type": "orderedList",
+                                    "items": [
+                                        "웹메일에서 “작성”을 클릭합니다.",
+                                        "다음을 입력합니다:"
+                                    ]
+                                },
+                                {
+                                    "type": "list",
+                                    "items": [
+                                        "받는사람(To)",
+                                        "제목",
+                                        "본문(서식 지원)"
+                                    ]
+                                },
+                                {
+                                    "type": "orderedList",
+                                    "items": [
+                                        "필요 시 최대 25MB 첨부파일을 추가합니다.",
+                                        "“보내기”를 누릅니다."
+                                    ]
+                                },
+                                {
+                                    "type": "paragraph",
+                                    "content": "메시지는 DKIM으로 자동 서명되어 전달됩니다."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "custom-folder",
+                            "title": "규칙이 있는 사용자 폴더",
+                            "body": [
+                                {
+                                    "type": "paragraph",
+                                    "content": "사용자 폴더는 설정한 규칙에 따라 메일을 자동 정렬합니다."
+                                },
+                                {
+                                    "type": "orderedList",
+                                    "items": [
+                                        "사이드바에서 “폴더 만들기”를 클릭합니다.",
+                                        "폴더 이름을 입력합니다(예: “고객”).",
+                                        "“규칙 추가”를 클릭합니다.",
+                                        "규칙을 설정합니다:"
+                                    ]
+                                },
+                                {
+                                    "type": "list",
+                                    "items": [
+                                        "Filter by: 발신 도메인",
+                                        "Match mode: 포함",
+                                        "Value: client.com"
+                                    ]
+                                },
+                                {
+                                    "type": "orderedList",
+                                    "items": [
+                                        "“기존 메일에 적용”을 선택하면 과거 메일에도 적용됩니다.",
+                                        "“생성”을 클릭합니다."
+                                    ]
+                                },
+                                {
+                                    "type": "paragraph",
+                                    "content": "이후 *@client.com 메일은 자동으로 “Clients” 폴더로 이동합니다."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "add-whitelist",
+                            "title": "화이트리스트 추가",
+                            "body": [
+                                {
+                                    "type": "paragraph",
+                                    "content": "정상 메일이 SPAM으로 간 경우:"
+                                },
+                                {
+                                    "type": "orderedList",
+                                    "items": [
+                                        "SPAM 폴더에서 메일을 엽니다.",
+                                        "“Not Spam” → “Whitelist에 추가”를 클릭합니다.",
+                                        "다음을 선택합니다:"
+                                    ]
+                                },
+                                {
+                                    "type": "list",
+                                    "items": [
+                                        "발신 이메일을 화이트리스트에 추가",
+                                        "발신 도메인을 화이트리스트에 추가"
+                                    ]
+                                },
+                                {
+                                    "type": "orderedList",
+                                    "items": [
+                                        "확인합니다."
+                                    ]
+                                },
+                                {
+                                    "type": "paragraph",
+                                    "content": "이후 해당 발신자의 메일은 스팸 처리되지 않습니다."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "email-signature",
+                            "title": "서명 설정",
+                            "body": [
+                                {
+                                    "type": "orderedList",
+                                    "items": [
+                                        "설정 → “Email Signature”를 엽니다.",
+                                        "“Enable signature”를 켭니다.",
+                                        "에디터에 서명을 입력합니다.",
+                                        "“Save”를 클릭합니다."
+                                    ]
+                                },
+                                {
+                                    "type": "paragraph",
+                                    "content": "모든 발신 메일에 서명이 자동 추가됩니다."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "vacation-responder",
+                            "title": "부재중 응답기 설정",
+                            "body": [
+                                {
+                                    "type": "orderedList",
+                                    "items": [
+                                        "설정 → “Vacation Responder”를 엽니다.",
+                                        "“Enable vacation responder”를 켭니다.",
+                                        "시작·종료 날짜를 지정합니다.",
+                                        "응답 메시지를 입력합니다.",
+                                        "“Reply once per sender”를 선택해 발신자당 1회만 응답하도록 합니다.",
+                                        "“Save”를 클릭합니다."
+                                    ]
+                                },
+                                {
+                                    "type": "paragraph",
+                                    "content": "지정 기간 동안 자동 응답이 실행되며 이후 비활성화됩니다."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "forwarding",
+                            "title": "메일 전달 설정",
+                            "body": [
+                                {
+                                    "type": "orderedList",
+                                    "items": [
+                                        "설정 → “Email Forwarding”을 엽니다.",
+                                        "“Add Forwarding Address”를 클릭합니다.",
+                                        "전달할 이메일을 입력합니다.",
+                                        "사본을 보관하려면 “Keep copy in inbox”를 켭니다.",
+                                        "“Save”를 클릭합니다."
+                                    ]
+                                },
+                                {
+                                    "type": "paragraph",
+                                    "content": "모든 수신 메일이 선택한 주소로 전달됩니다."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "domain-administration",
+                    "title": "도메인 관리",
+                    "label": "도메인 관리",
+                    "description": "도메인 전체 메일 분석과 대량 작업.",
+                    "sections": [
+                        {
+                            "id": "view-activity",
+                            "title": "메일 활동 보기",
+                            "body": [
+                                {
+                                    "type": "paragraph",
+                                    "content": "관리자는 도메인 내 모든 사용자의 메일을 열람할 수 있습니다."
+                                },
+                                {
+                                    "type": "orderedList",
+                                    "items": [
+                                        "CMC → “Email Activity”를 엽니다.",
+                                        "다음 필터를 사용합니다:"
+                                    ]
+                                },
+                                {
+                                    "type": "list",
+                                    "items": [
+                                        "사용자별",
+                                        "폴더별(안전, 스팸, 피싱)",
+                                        "날짜별",
+                                        "위협 유형별"
+                                    ]
+                                },
+                                {
+                                    "type": "orderedList",
+                                    "items": [
+                                        "검색창으로 제목이나 발신자를 찾습니다."
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": "bulk-delete",
+                            "title": "전체 메시지 삭제",
+                            "body": [
+                                {
+                                    "type": "paragraph",
+                                    "content": "악성 메일이 모두에게 발송된 경우:"
+                                },
+                                {
+                                    "type": "orderedList",
+                                    "items": [
+                                        "“Email Activity”를 엽니다.",
+                                        "필터 또는 검색으로 메시지를 찾습니다.",
+                                        "삭제할 메시지를 선택합니다.",
+                                        "“Delete Selected”를 클릭합니다.",
+                                        "대량 삭제를 확인합니다."
+                                    ]
+                                },
+                                {
+                                    "type": "paragraph",
+                                    "content": "메시지가 모든 사용자 메일함에서 제거됩니다."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "concepts",
+                    "title": "개념",
+                    "label": "개념",
+                    "description": "플랫폼 핵심 개념과 보안 흐름.",
+                    "sections": [
+                        {
+                            "id": "system-overview",
+                            "title": "시스템 개요",
+                            "body": [
+                                {
+                                    "type": "paragraph",
+                                    "content": "이메일 보안 시스템은 기업 메일을 사이버 위협으로부터 보호하는 플랫폼입니다."
+                                },
+                                {
+                                    "type": "list",
+                                    "title": "구성 요소:",
+                                    "items": [
+                                        "CMC Admin Panel — 도메인, 사용자, DNS 설정을 관리하는 관리자 콘솔.",
+                                        "Webmail Client — 자동 위협 방어를 갖춘 직원 메일박스.",
+                                        "Infrastructure Services — SMTP 서버와 보안 파이프라인."
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": "security-stack",
+                            "title": "보안 파이프라인",
+                            "body": [
+                                {
+                                    "type": "paragraph",
+                                    "content": "모든 수신 메일은 여섯 단계 보호를 거칩니다:"
+                                },
+                                {
+                                    "type": "orderedList",
+                                    "items": [
+                                        "0단계: 피싱 도메인 검사 — 발신 도메인을 피싱 DB와 대조.",
+                                        "1단계: 스푸핑 감지 — SPF, DKIM, DMARC 정합성 확인.",
+                                        "2단계: 스팸 감지 — RSPAMD로 콘텐츠 분석.",
+                                        "3단계: 링크 스캐너 — URLScan.io로 악성 링크 검사.",
+                                        "4단계: 안티바이러스 — Bitdefender로 첨부 스캔.",
+                                        "5단계: AI 피싱 감지 — AI로 메시지 내용을 분석."
+                                    ]
+                                },
+                                {
+                                    "type": "paragraph",
+                                    "content": "위협이 발견되면 처리가 중단되고 해당 폴더로 이동합니다."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "system-folders",
+                            "title": "시스템 폴더",
+                            "body": [
+                                {
+                                    "type": "paragraph",
+                                    "content": "검사 결과에 따라 메시지가 폴더로 분류됩니다:"
+                                },
+                                {
+                                    "type": "list",
+                                    "items": [
+                                        "필터 미적용 — 처리 전 임시 보관.",
+                                        "안전 — 모든 검사를 통과한 메시지.",
+                                        "의심 스푸핑 — 발신자 진위 의심.",
+                                        "스팸 — 스팸 메시지.",
+                                        "위험 링크 — 악성 URL 포함.",
+                                        "멀웨어 — 감염 첨부 포함.",
+                                        "의심 피싱 — 피싱 지표 발견.",
+                                        "보낸 편지함 — 발신 메일."
+                                    ]
+                                },
+                                {
+                                    "type": "paragraph",
+                                    "content": "하나의 메시지가 여러 폴더에 동시에 속할 수 있습니다."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "custom-folders",
+                            "title": "사용자 지정 폴더",
+                            "body": [
+                                {
+                                    "type": "paragraph",
+                                    "content": "사용자는 자동 필터 규칙으로 폴더를 생성할 수 있습니다."
+                                },
+                                {
+                                    "type": "list",
+                                    "title": "필터 기준:",
+                                    "items": [
+                                        "발신 도메인",
+                                        "발신 이메일",
+                                        "제목",
+                                        "발신자 이름"
+                                    ]
+                                },
+                                {
+                                    "type": "list",
+                                    "title": "매칭 모드:",
+                                    "items": [
+                                        "포함",
+                                        "일치",
+                                        "시작 문자",
+                                        "끝 문자"
+                                    ]
+                                },
+                                {
+                                    "type": "paragraph",
+                                    "content": "규칙은 기존 메일에도 소급 적용할 수 있습니다."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "spf",
+                            "title": "SPF (Sender Policy Framework)",
+                            "body": [
+                                {
+                                    "type": "paragraph",
+                                    "content": "SPF는 도메인 대신 이메일을 보낼 수 있는 서버를 정의하는 DNS 레코드입니다."
+                                },
+                                {
+                                    "type": "paragraph",
+                                    "content": "형식:"
+                                },
+                                {
+                                    "type": "code",
+                                    "content": "v=spf1 include:_spf.silenceai.net -all"
+                                },
+                                {
+                                    "type": "list",
+                                    "title": "메커니즘:",
+                                    "items": [
+                                        "include:domain — 지정 도메인의 서버 허용",
+                                        "ip4:x.x.x.x — 특정 IP 허용",
+                                        "-all — 나머지 전부 거부",
+                                        "~all — 나머지를 의심 처리"
+                                    ]
+                                },
+                                {
+                                    "type": "paragraph",
+                                    "content": "SPF 검증: 수신 서버는 발신 IP가 SPF 레코드에 허용된 IP인지 확인하며 실패 시 메시지를 의심으로 표시합니다."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "dkim",
+                            "title": "DKIM (DomainKeys Identified Mail)",
+                            "body": [
+                                {
+                                    "type": "paragraph",
+                                    "content": "DKIM은 도메인 소유자가 보낸 메일인지, 전송 중 변경되지 않았는지 확인하는 암호 서명을 추가합니다."
+                                },
+                                {
+                                    "type": "paragraph",
+                                    "content": "작동 방식:"
+                                },
+                                {
+                                    "type": "list",
+                                    "items": [
+                                        "발신 서버가 프라이빗 키로 서명하고 DKIM-Signature 헤더를 추가합니다.",
+                                        "수신자는 DNS에서 퍼블릭 키를 가져와 서명을 검증합니다."
+                                    ]
+                                },
+                                {
+                                    "type": "paragraph",
+                                    "content": "DNS 레코드:"
+                                },
+                                {
+                                    "type": "code",
+                                    "content": "selector._domainkey.domain.com TXT \"v=DKIM1; k=rsa; p=public_key\""
+                                },
+                                {
+                                    "type": "paragraph",
+                                    "content": "프라이빗 키는 암호화된 상태로 서버에 저장되며 클라이언트로 전달되지 않습니다."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "dmarc",
+                            "title": "DMARC (Domain-based Message Authentication)",
+                            "body": [
+                                {
+                                    "type": "paragraph",
+                                    "content": "DMARC는 SPF나 DKIM을 통과하지 못한 메일에 적용할 정책을 정의합니다."
+                                },
+                                {
+                                    "type": "paragraph",
+                                    "content": "형식:"
+                                },
+                                {
+                                    "type": "code",
+                                    "content": "_dmarc.domain.com TXT \"v=DMARC1; p=quarantine; rua=mailto:reports@domain.com\""
+                                },
+                                {
+                                    "type": "list",
+                                    "title": "파라미터:",
+                                    "items": [
+                                        "p=quarantine — 스팸함으로 이동",
+                                        "p=reject — 메시지 거부",
+                                        "p=none — 모니터링만",
+                                        "rua= — 집계 보고서 이메일"
+                                    ]
+                                },
+                                {
+                                    "type": "paragraph",
+                                    "content": "DMARC 검증: 수신자는 SPF 또는 DKIM을 통과하면서 정렬된 도메인을 사용하는지 확인하고, 실패 시 설정 정책을 적용합니다."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "attachments",
+                            "title": "첨부파일과 안티바이러스",
+                            "body": [
+                                {
+                                    "type": "list",
+                                    "title": "제한:",
+                                    "items": [
+                                        "최대 파일 크기: 25MB",
+                                        "모든 파일 형식 지원"
+                                    ]
+                                },
+                                {
+                                    "type": "paragraph",
+                                    "content": "첨부 스캔: 모든 파일은 Bitdefender로 검사되며 멀웨어 발견 시 메시지는 Malware 폴더로 이동하고 첨부는 차단됩니다."
+                                },
+                                {
+                                    "type": "paragraph",
+                                    "content": "저장: 첨부는 메시지별로 서버에 저장되며 감염 파일은 격리됩니다."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "access-control",
+                    "title": "접근 제어",
+                    "label": "접근 제어",
+                    "description": "사용자 역할과 접근 보호.",
+                    "sections": [
+                        {
+                            "id": "user-roles",
+                            "title": "사용자 역할",
+                            "body": [
+                                {
+                                    "type": "list",
+                                    "title": "관리자",
+                                    "items": [
+                                        "CMC 관리자 패널 전체 접근",
+                                        "도메인 및 DNS 관리",
+                                        "사용자 생성·관리",
+                                        "도메인 전체 메일 열람",
+                                        "메일 대량 작업 수행"
+                                    ]
+                                },
+                                {
+                                    "type": "list",
+                                    "title": "부관리자",
+                                    "items": [
+                                        "CMC 제한 접근",
+                                        "사용자 목록 보기",
+                                        "자신의 메일만 접근"
+                                    ]
+                                },
+                                {
+                                    "type": "list",
+                                    "title": "사용자",
+                                    "items": [
+                                        "웹메일 클라이언트 접근",
+                                        "자신의 메일 사용",
+                                        "개인 설정 구성"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": "role-assignment",
+                            "title": "역할 배정",
+                            "body": [
+                                {
+                                    "type": "paragraph",
+                                    "content": "자동 관리자: OAuth로 최초 로그인한 사용자가 자동으로 관리자가 됩니다."
+                                },
+                                {
+                                    "type": "paragraph",
+                                    "content": "부관리자 생성: 관리자는 CMC “사용자 관리”에서 부관리자 계정을 추가합니다."
+                                },
+                                {
+                                    "type": "paragraph",
+                                    "content": "일반 사용자 생성: 관리자는 “이메일 계정”에서 메일박스를 만들며 자동으로 ‘사용자’ 역할이 부여됩니다."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "authentication",
+                            "title": "인증",
+                            "body": [
+                                {
+                                    "type": "list",
+                                    "items": [
+                                        "OAuth 2.0: Google/Microsoft 로그인에 PKCE 적용.",
+                                        "이메일/비밀번호: 관리자가 발급한 자격 증명.",
+                                        "JWT 토큰: access 토큰은 7일 유효하며 httpOnly 쿠키에 저장.",
+                                        "토큰 갱신: refresh 토큰으로 자동 갱신하며 만료 시 재로그인 필요."
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": "access-protection",
+                            "title": "접근 보호",
+                            "body": [
+                                {
+                                    "type": "list",
+                                    "items": [
+                                        "빈도 제한: 동일 IP는 15분간 최대 5회 로그인 시도.",
+                                        "세션 관리: 활성 세션을 DB에 저장하고 요청마다 검증.",
+                                        "감사 로그: 관리자와 사용자 주요 작업을 기록."
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "quotas-limits",
+                    "title": "쿼터 및 제한",
+                    "label": "쿼터 및 제한",
+                    "description": "저장, 발송, 사용자 제한.",
+                    "sections": [
+                        {
+                            "id": "storage-quota",
+                            "title": "저장소 쿼터",
+                            "body": [
+                                {
+                                    "type": "paragraph",
+                                    "content": "각 사용자는 메일박스 쿼터를 받으며 100% 사용 시 메일 송수신이 불가합니다."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "sending-limits",
+                            "title": "발송 제한",
+                            "body": [
+                                {
+                                    "type": "list",
+                                    "items": [
+                                        "Business Basic: 사용자당 하루 500통",
+                                        "Business Standard: 하루 1,000통",
+                                        "Business Premium: 하루 2,000통",
+                                        "Enterprise: 하루 10,000통"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": "user-limit",
+                            "title": "사용자 제한",
+                            "body": [
+                                {
+                                    "type": "list",
+                                    "items": [
+                                        "Business 플랜: 최대 300명",
+                                        "Enterprise 플랜: 무제한"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         }
-      },
-      "features": {
-        "secureAccess300": "Secure access for up to 300 users",
-        "customDomainEmail": "Custom company email on your own domain (you@yourcompany.com)",
-        "adminConsole": "Admin console with domain-wide email management and bulk operations",
-        "aiThreatDetection": "AI-powered threat detection with automatic email categorization",
-        "securityPipeline": "Multi-layered email security pipeline (SPF, DKIM, DMARC, spam, malware, phishing)",
-        "securityFolders": "Email sorting into security folders (Secure, Spam, Dangerous Links, Malware, Phishing, Spoofed)",
-        "linkScannerAv": "Advanced link scanner and antivirus protection for attachments",
-        "emailFlowVisualization": "Email flow visualization across the domain/organization with comprehensive filters",
-        "bulkManageDelete": "Ability to manage and delete emails across all users in the domain",
-        "customFoldersRules": "Custom folders with auto-filtering rules (sender, domain, subject)",
-        "storage10gb": "10 GB secure mailbox storage per user",
-        "storage5tb": "5 TB secure mailbox storage per user",
-        "storage10tb": "10 TB secure mailbox storage per user",
-        "multiAccountSupport": "Multi-account support (Gmail/Outlook integration)",
-        "support247": "24/7 email and web support",
-        "fullTextSearch": "Email search with full-text capabilities",
-        "aiAssistedCategorization": "AI-assisted email categorization into security folders",
-        "basicFiltering": "Custom folders with basic filtering rules",
-        "prioritySupport": "Priority support with faster response times",
-        "dedicatedAM": "Dedicated account management",
-        "unlimitedUsers": "Supports unlimited users"
-      }
+    },
+    "policySidebar": {
+        "tableOfContents": "목차",
+        "close": "닫기",
+        "topics": "토픽"
+    },
+    "andManyMore": "그리고 더 많은 것들이...",
+    "playground": {
+        "options": {
+            "globeShield": "웹 보안 및 트래픽 관리",
+            "emailSecurity": "이메일 보안 및 시각화"
+        }
+    },
+    "modal": {
+        "title": "개발 중",
+        "body": "시스템은 10월 10일 출시 예정입니다"
+    },
+    "notFound": {
+        "title": "페이지를 찾을 수 없습니다",
+        "description": "어디에서나 찾아봤지만 해당 페이지를 발견하지 못했습니다.",
+        "cta": "홈으로 돌아가기"
+    },
+    "pricingCta": {
+        "requestSystem": "시스템 요청"
+    },
+    "contactForm": {
+        "title": "문의하기",
+        "success": "감사합니다! 메시지를 전송했습니다. 곧 연락드리겠습니다.",
+        "errorRequired": "이름, 이메일, 메시지를 입력해주세요.",
+        "errorSend": "전송할 수 없습니다. 잠시 후 다시 시도하세요.",
+        "placeholders": {
+            "name": "이름",
+            "email": "이메일",
+            "type": "프로젝트 유형(선택)",
+            "budget": "예산(선택)",
+            "message": "프로젝트를 소개해주세요..."
+        },
+        "submit": {
+            "idle": "메시지 보내기",
+            "loading": "전송 중…"
+        }
+    },
+    "consulting": {
+        "title": "컨설팅 설문",
+        "searchPlaceholder": "질문 검색...",
+        "noResults": "질문을 찾을 수 없습니다.",
+        "questions": [
+            {
+                "question": "귀사의 핵심 가치 제안은 가격 경쟁력 외에 무엇인가요?",
+                "answer": "보안이 우리의 주요 차별점입니다. 개발 생애주기 전반에 기업급 보안 관행을 내재화한 시스템을 구축합니다."
+            },
+            {
+                "question": "회사 운영 기간과 실적은 어떠한가요?",
+                "answer": "NAK(누르 아스타나 쿠릴리스) — AI 팀 관리 플랫폼, Chic Flowers — 대형 플라워 리테일 기업 디지털 플랫폼 등 주요 프로젝트를 성공적으로交付했습니다."
+            },
+            {
+                "question": "EPAM 등 경쟁사 대비 기술 역량과 서비스 품질의 차별점은 무엇인가요?",
+                "answer": "보안 우선 개발 접근이 핵심 차별점입니다. 기획부터 배포·유지까지 보안 관행을 통합합니다."
+            },
+            {
+                "question": "가격 경쟁력을 유지하면서 품질은 어떻게 보장하나요?",
+                "answer": "시장 대비 15% 낮은 비용으로 제공하면서 최적화된 운영, 전략적 인재 확보, 효율적 프로젝트 관리로 품질을 유지합니다."
+            },
+            {
+                "question": "제공하는 구체적 개발 서비스는 무엇인가요?",
+                "answer": "엔드투엔드 개발: 맞춤 애플리케이션, AI 솔루션, 사이버보안 제품(AI-SOC), 시스템 통합, 클라우드 마이그레이션, DevOps, 전담 제품 개발, 스태프 증원까지 제공합니다."
+            },
+            {
+                "question": "전문 산업 및 도메인은 무엇인가요?",
+                "answer": "건설, 리테일, 핀테크, 사이버보안, 디지털 플랫폼 — AI 기반 팀 운영, 이커머스, 엔터프라이즈 보안 솔루션을 포함합니다."
+            },
+            {
+                "question": "전문 기술 스택과 플랫폼은 무엇인가요?",
+                "answer": "GO, Swift, Flutter, 클라우드(AWS/Azure/GCP), Docker/Kubernetes, FastAPI, JavaScript, AI/ML 프레임워크, 자체 보안 도구 Silence AI-SOC를 다룹니다."
+            },
+            {
+                "question": "엔드투엔드 제품 개발과 개별 서비스 모두 제공하나요?",
+                "answer": "예. MVP, 풀사이클 제품 딜리버리, 스태프 증원, 사이버보안 통합을 모두 제공합니다."
+            },
+            {
+                "question": "스태프 증원과 전담 팀 모델을 모두 제공하나요?",
+                "answer": "예. 스태프 증원, 전담 팀, 프로젝트 기반 아웃소싱 등 유연한 모델을 제공합니다."
+            },
+            {
+                "question": "개발 외 컨설팅·아키텍처·자문 서비스도 제공하나요?",
+                "answer": "예. Silence AI-SOC를 활용한 사이버보안 컨설팅, 시스템 아키텍처 설계, 기술 자문, 보안 컴플라이언스 평가를 제공합니다."
+            }
+        ]
+    },
+    "requestSystemModal": {
+        "title": "시스템 요청",
+        "name": "이름",
+        "email": "업무용 이메일",
+        "company": "회사명",
+        "placeholders": {
+            "name": "홍길동",
+            "email": "hong@enterprise.com",
+            "company": "Acme SAS"
+        },
+        "submit": "다운로드",
+        "successTitle": "요청이 전송되었습니다!",
+        "successBody": "감사합니다. 시스템 다운로드 안내를 이메일로 보내드릴게요.",
+        "close": "닫기"
+    },
+    "backToTop": {
+        "label": "맨 위로"
+    },
+    "badRequest": {
+        "title": "잘못된 요청",
+        "cta": "홈으로 돌아가기",
+        "description": "요청하신 페이지를 찾을 수 없거나 잘못된 요청입니다."
+    },
+    "countrySelect": {
+        "title": "국가 선택",
+        "subtitle": "계속하려면 위치를 선택하세요",
+        "searchPlaceholder": "국가 검색...",
+        "noResults": "국가를 찾을 수 없습니다",
+        "continue": "계속",
+        "comingSoon": {
+            "title": "거의 준비되었습니다!",
+            "message": "구독 관리용 관리자 패널은 다음까지 준비됩니다",
+            "hours": "시간",
+            "notification": "사용 가능해지면 알려드릴게요!",
+            "back": "뒤로",
+            "gotIt": "알겠습니다!"
+        }
     }
-  },
-  "supreme": {
-    "title": "Supreme",
-    "hero": {
-      "badge": "Supreme · VSCode 확장",
-      "title": "로컬 코드 취약점 스캐너",
-      "description": "외부 서버로 보내지 않고 로컬에서 코드를 스캔합니다. 에디터 안에서 빠르고 포괄적으로 취약점을 탐지하세요."
-    },
-    "video": {
-      "title": "설치 및 사용 튜토리얼(5분)",
-      "cardTitle": "Supreme 사용법",
-      "cardSubtitle": "설치 및 설정 가이드"
-    },
-    "pricing": {
-      "title": "간단한 요금제",
-      "subtitle": "가장 적합한 플랜을 선택하세요",
-      "monthly": {
-        "title": "월간",
-        "description": "유연함, 언제든지 취소 가능"
-      },
-      "month": "월",
-      "subscribe": "지금 구독",
-      "saveBadge": "30% 절약",
-      "yearly": {
-        "title": "연간",
-        "description": "최고의 가치"
-      },
-      "year": "년",
-      "perMonthApprox": "월 약 {value}"
-    },
-    "languages": {
-      "title": "지원 언어",
-      "subtitle": "주요 프로그래밍 언어에 대한 포괄적 보안 스캔"
-    },
-    "cicd": {
-      "title": "CI/CD & Container Scanning",
-      "subtitle": "Detect vulnerabilities in CI/CD pipelines and Docker container configurations"
-    },
-    "features": {
-      "title": "강력한 기능",
-      "subtitle": "안전한 코드 개발에 필요한 모든 것",
-      "items": [
-        "코드 분석기는 로컬에서 실행되며 코드가 외부 서버에 노출되지 않습니다",
-        "프로젝트 내 취약한 패키지를 탐지",
-        "오구성 및 시크릿을 탐지",
-        "CI/CD 오구성 및 취약점 스캔 가능"
-      ]
-    },
-    "screenshots": [
-      {
-        "title": "매우 직관적인 인터페이스"
-      },
-      {
-        "title": "체계적인 보안 보고서"
-      },
-      {
-        "title": "스캔 기록"
-      }
-    ],
-    "lightbox": {
-      "close": "닫기",
-      "alt": "스크린샷"
-    }
-  },
-  "andManyMore": "Et bien plus encore...",
-  "badRequest": {
-    "title": "Błędne żądanie",
-    "cta": "Wróć na stronę główną",
-    "description": "The page you are looking for could not be found or the request was invalid."
-  },
-  "countrySelect": {
-    "title": "Wybierz kraj",
-    "subtitle": "Wybierz lokalizację, aby kontynuować",
-    "searchPlaceholder": "Szukaj kraju...",
-    "noResults": "Nie znaleziono krajów",
-    "continue": "Kontynuuj",
-    "comingSoon": {
-      "title": "Już prawie gotowe!",
-      "message": "Panel administracyjny do zarządzania subskrypcją będzie gotowy za",
-      "hours": "godziny",
-      "notification": "Powiadomimy Cię, gdy będzie dostępny!",
-      "back": "Wstecz",
-      "gotIt": "Rozumiem!"
-    }
-  }
 }

@@ -177,20 +177,20 @@
         }
       },
       "gitServer": {
-        "title": "Serveur de dépôts Git",
-        "tag": "Gestion de versions auto-hébergée"
+        "title": "Git-Repository-Server",
+        "tag": "Self-hosted Versionskontrolle"
       },
       "analyzer": {
-        "title": "Analyseur de sécurité",
-        "tag": "Moteur local d’analyse de code"
+        "title": "Sicherheits-Analyzer",
+        "tag": "Lokale Codeanalyse-Engine"
       },
       "vulnDb": {
-        "title": "Base de vulnérabilités",
-        "tag": "Correctifs de sécurité téléchargés"
+        "title": "Schwachstellen-Datenbank",
+        "tag": "Heruntergeladene Sicherheitspatches"
       }
     },
     "balanceRewards": {
-      "lampTitle": "Nagrody salda"
+      "lampTitle": "Saldo-Belohnungen"
     }
   },
   "hero": {
@@ -204,7 +204,7 @@
     },
     "buttons": {
       "connect": "In 4 Minuten verbinden",
-      "tour": "90-Sekunden-Tour ansehen"
+      "tour": "90-Sekunden-Demo ansehen"
     },
     "tooltips": {
       "web": {
@@ -216,8 +216,8 @@
         "content": "Das System schützt vor ALLEN Arten von E-Mail-Angriffen: Phishing, schädliche Anhänge, gefährliche Links usw."
       },
       "vulnerability": {
-        "title": "Schwachstellen-Finder",
-        "content": "Das System findet Schwachstellen im Anwendungscode und durch dynamische Interaktion mit deiner Website bzw. API, inklusive der Intelligenz-gestützten Suche"
+        "title": "Schwachstellenerkennung",
+        "content": "Das System identifiziert Schwachstellen im Anwendungscode und über die dynamische Interaktion mit Ihrer Website bzw. API, inklusive der Intelligence-Engine"
       }
     }
   },
@@ -228,18 +228,18 @@
     }
   },
   "cookie": {
-    "title": "Hinweis zu technischen Cookies",
-    "description": "Diese Website verwendet ausschließlich technische Erstanbieter-Cookies, um deine Spracheinstellungen zu speichern und den Cookie-Hinweis bei deinem nächsten Besuch nicht erneut anzuzeigen. Es werden keine Tracking- oder Drittanbieter-Cookies eingesetzt.",
-    "more": "Weitere Informationen findest du in unserer",
-    "link": "Cookie-Richtlinie",
-    "ok": "OK"
+    "title": "Wir verwenden Cookies",
+    "description": "Wir nutzen Cookies, um Ihr Erlebnis zu verbessern und den Traffic zu analysieren.",
+    "more": "Mit einem Klick auf \"Akzeptieren\" stimmen Sie der Verwendung von Cookies zu.",
+    "link": "Mehr erfahren",
+    "ok": "Akzeptieren"
   },
   "pricing": {
     "title": "Preise",
-    "subtitle": "Mobile-first Pläne, die mit Ihrem Produkt skalieren...",
+    "subtitle": "Mobile Tarife, die mit Ihrem Produkt skalieren.",
     "percentMaintenance": "{percent}% jährliche Wartung",
     "planEstimate": "${value}",
-    "perYear": "pro Jahr (geschätzt)",
+    "perYear": "pro Jahr (ca.)",
     "tooltips": {
       "cmcGlobal": {
         "title": "CMC mit globaler Verkehrsüberwachung",
@@ -272,6 +272,56 @@
       "fullVulnerability": {
         "title": "VOLLSTÄNDIGE Schwachstellenprüfung",
         "content": "Eine VOLLSTÄNDIGE Schwachstellenprüfung beinhaltet sowohl einen dynamischen Schwachstellenscan als auch einen Codebasis-Schwachstellenscan."
+      }
+    },
+    "aiSoc": {
+      "tabs": {
+        "email": "E-Mail-Schutz",
+        "web": "Web-Sicherheit"
+      },
+      "billing": {
+        "yearly": "Jährlich",
+        "monthly": "Monatlich"
+      },
+      "cta": "System anfragen",
+      "contactSupport": "Kontaktieren Sie uns",
+      "planTitles": {
+        "premium": "Business Premium 100",
+        "max": "Business MAX",
+        "standard": "Business Standard"
+      },
+      "features": {
+        "common": {
+          "customDomainEmail": "Unternehmensmail auf eigener Domain (you@yourcompany.com)",
+          "officeSuite": "Desktop- und Mobil-Office: Dokumente, Tabellen, Präsentationen und Mail",
+          "adminConsole": "Admin-Konsole mit Domain-weitem Mail-Management und Massenaktionen",
+          "dnsSecuritySetup": "Mail-Schutz via DNS (SPF, DKIM, DMARC) direkt in der Admin-Konsole",
+          "emailMigration": "E-Mail-Migration",
+          "aiThreatProtection": "Fünfstufiger KI-Schutz mit automatischer Kategorisierung (Sicher, Spam, Gefährliche Links, Phishing, Spoofing)",
+          "emailFlowVisualization": "Fortgeschrittene Visualisierung der Mail-Flüsse über die gesamte Domain",
+          "domainWideDeletion": "Admins können Mails für alle Nutzer der Domain löschen"
+        },
+        "shared": {
+          "unlimitedSecurity": "Unbegrenzter vierstufiger Mail-Schutz"
+        },
+        "premium": {
+          "userLimit": "Bis zu 100 Nutzer",
+          "adminLimit": "Bis zu 5 Administratoren",
+          "aiAnalysis": "Bis zu 60 tiefgehende KI-Phishing-Analysen pro Nutzer/Monat (Schutzstufe 5)",
+          "storage": "Bis zu 50 GB pro Nutzer"
+        },
+        "max": {
+          "userLimit": "Bis zu 300 Nutzer",
+          "adminLimit": "Bis zu 10 Administratoren",
+          "aiAnalysis": "Bis zu 100 tiefgehende KI-Phishing-Analysen pro Nutzer/Monat (Schutzstufe 5)",
+          "storage": "Bis zu 200 GB pro Nutzer"
+        },
+        "standard": {
+          "userLimit": "Bis zu 10 Nutzer",
+          "adminLimit": "Bis zu 1 Administrator",
+          "aiAnalysis": "Bis zu 10 tiefgehende KI-Phishing-Analysen pro Nutzer/Monat (Schutzstufe 5)",
+          "storage": "Bis zu 8 GB pro Nutzer"
+        }
       }
     },
     "plans": {
@@ -318,7 +368,7 @@
       }
     },
     "calculator": {
-      "subtitle": "Przesuń suwak, aby zobaczyć roczny koszt utrzymania"
+      "subtitle": "Bewegen Sie den Regler, um die jährlichen Wartungskosten zu sehen"
     }
   },
   "solution": {
@@ -415,7 +465,7 @@
     "contactLabel": "Kontakt:",
     "contactValue": "info@silenceai.net",
     "addressLabel": "Adresse:",
-    "addressValue": "Media City Free Zone, Al Messaned, Sharjah, VAE",
+    "addressValue": "Almaty, Kasachstan",
     "links": {
       "termsUse": "Nutzungsbedingungen",
       "termsService": "Dienstleistungsbedingungen",
@@ -457,27 +507,35 @@
   },
   "secureDevelopment": {
     "hero": {
-      "badge": "SLNC-env · Sichere Entwicklungsumgebung",
-      "title": "Erstellen Sie Systeme mit sicherem und privatem Code",
-      "description": "Private Entwicklungsumgebung für Unternehmen, in der Code niemals Ihr Unternehmensnetzwerk verlässt. Gleichzeitig bietet sie die neueste KI-gestützte Technologie",
+      "badge": "Sithub · Self-hosted Entwicklungsplattform",
+      "title": "GitHub auf Ihrem Server. Der Code verlässt Ihr Netzwerk nicht.",
+      "description": "Self-hosted Alternative zu GitHub mit integriertem Sicherheitsscan. Repositories, Code-Analyzer und Schwachstellenberichte bleiben vollständig in Ihrer Infrastruktur.",
       "requestSystem": "System anfordern"
     },
+    "pricing": {
+      "subtitle": "Einfaches und transparentes Preismodell",
+      "title": "Plan wählen",
+      "limitedOffer": "Begrenztes Angebot",
+      "priceIncreaseNotice": "Sichern Sie sich den aktuellen Preis! In 6 Monaten steigt er um 30 %",
+      "monthlyPlan": "Monatlich",
+      "monthlyDesc": "Flexible Zahlung",
+      "month": "Monat",
+      "yearlyPlan": "Jährlich",
+      "yearlyDesc": "Bester Preis",
+      "billedAnnually": "Jährliche Zahlung über",
+      "doubleSavings": "2× ERSPARNIS",
+      "getStarted": "Jetzt starten",
+      "features": {
+        "fullAccess": "Voller Plattformzugang",
+        "support": "Priorisierter Support",
+        "cancelAnytime": "Jederzeit kündbar",
+        "priceLock": "Preis 12 Monate fix"
+      }
+    },
     "components": {
-      "title": "Alles bleibt intern",
-      "subtitle": "Drei Komponenten, ein geschlossener Kreislauf",
-      "description": "Code, Prompts und Builds verlassen niemals Ihr Netzwerk. SLNC-env hält KI-Hilfe, Reviews und Auslieferung privat für Cloud-Anbieter, Regierungsteams und Industrieanlagen.",
-      "sithub": {
-        "title": "Sithub-Server",
-        "tag": "Lokale Versionskontrolle"
-      },
-      "llm": {
-        "title": "LLM-Server (Qwen-Code)",
-        "tag": "Lokale Intelligenz"
-      },
-      "ide": {
-        "title": "IDE mit lokalem Copilot",
-        "tag": "Cursor-ähnliche Erfahrung"
-      },
+      "subtitle": "Drei isolierte Kernkomponenten",
+      "title": "Alles läuft auf Ihrer Infrastruktur",
+      "description": "Code, Repositories und Security-Analysen verlassen nie Ihr Netzwerk. Sithub liefert die komplette GitHub-Funktionalität plus Code-Scanning – alles bleibt auf Ihren Servern. Wir liefern die Schwachstellen-Datenbanken, Ihr Code bleibt privat.",
       "gitServer": {
         "title": "Git-Repository-Server",
         "tag": "Self-hosted Versionskontrolle"
@@ -488,115 +546,127 @@
       },
       "vulnDb": {
         "title": "Schwachstellen-Datenbank",
-        "tag": "Heruntergeladene Sicherheits-Patches"
+        "tag": "Herunterladbare Sicherheitspatches"
       },
-      "staysOnPrem": "Bleibt vor Ort. Kein Ausgang.",
-      "onPremNotice": "Stays on-prem. No egress."
+      "onPremNotice": "Bleibt on-prem. Kein externer Traffic.",
+      "sithub": {
+        "title": "Sithub-Server",
+        "tag": "Lokale Versionskontrolle"
+      },
+      "llm": {
+        "title": "LLM-Server (Qwen-Code)",
+        "tag": "On-Prem-Intelligenz"
+      },
+      "ide": {
+        "title": "IDE mit lokalem Copilot",
+        "tag": "Experience auf Cursor-Niveau"
+      },
+      "staysOnPrem": "Bleibt vor Ort. Kein Abfluss."
     },
     "timeline": {
-      "title": "Warum isolierter und geprüfter Code wichtig ist",
-      "subtitle": "Aktuelle Weckrufe",
+      "subtitle": "Aktuelle Warnsignale",
+      "title": "Warum isolierter und geprüfter Code entscheidend ist",
       "incident": {
-        "title": "Kritischer Vorfall — geleakter Code",
-        "heading": "DeepSeek-Leak legte Quellcode und Prompts ins offene Internet",
-        "description": "Halten Sie Inferenz und Scans lokal. Kein Ausgang externer Modelle. Audit-Trails standardmäßig.",
-        "seePlan": "Eindämmungsplan ansehen"
+        "title": "Kritischer Vorfall – Code-Leak",
+        "heading": "DeepSeek-Hack brachte Quellcode und Prompts ins offene Internet",
+        "description": "Halten Sie Inferenz und Scans on-prem – kein externer Egress, Audit-Trails standardmäßig.",
+        "seePlan": "Schutzplan ansehen"
       },
       "stuxnet": {
-        "year": "2010",
         "attack": "Stuxnet",
         "target": "Urananreicherungsanlage Natanz",
-        "impact": "Zerstörte ca. 1.000 Zentrifugen",
-        "severity": "Kritisch"
+        "impact": "Rund 1.000 Zentrifugen zerstört",
+        "severity": "Kritisch",
+        "year": "2010"
       },
       "blackEnergy": {
-        "year": "2015",
         "attack": "BlackEnergy",
         "target": "Stromnetz der Ukraine",
-        "impact": "230.000 Haushalte ohne Strom",
-        "severity": "Hoch"
+        "impact": "230.000 Kunden ohne Strom",
+        "severity": "Hoch",
+        "year": "2015"
       },
       "triton": {
-        "year": "2017",
         "attack": "TRITON",
-        "target": "Saudische petrochemische Anlage",
-        "impact": "Sicherheits­systeme außer Kraft gesetzt",
-        "severity": "Kritisch"
+        "target": "Saudi-arabische Petrochemieanlage",
+        "impact": "Sicherheitssysteme abgeschaltet",
+        "severity": "Kritisch",
+        "year": "2017"
       },
       "colonialPipeline": {
-        "year": "2021",
         "attack": "Colonial Pipeline",
         "target": "US-Treibstoffpipeline",
-        "impact": "6 Tage Kraftstoffstillstand",
-        "severity": "Hoch"
+        "impact": "6 Tage Stillstand bei Kraftstofflieferungen",
+        "severity": "Hoch",
+        "year": "2021"
       },
       "pdvsa": {
-        "year": "2025",
         "attack": "PDVSA",
-        "target": "Venezolanische Raffinerien",
+        "target": "Raffinerien in Venezuela",
         "impact": "Raffineriebetrieb gestört",
-        "severity": "Mittel"
+        "severity": "Mittel",
+        "year": "2025"
       }
     },
     "analyzer": {
-      "title": "Analyse-Tool, das CodeQL übertrifft",
-      "subtitle": "Live-Zusicherung",
+      "subtitle": "Live-Bestätigung",
+      "title": "Analyzer, der CodeQL übertrifft",
       "features": {
         "quality": {
-          "title": "Automatische Codequalität",
-          "description": "Struktur-, Stil- und Best-Practice-Prüfungen für sicherheitskritischen Code"
+          "title": "Automatischer Qualitätscheck",
+          "description": "Prüft Struktur, Stil und Best Practices für sicherheitskritischen Code"
         },
         "vulnerability": {
-          "title": "Schwachstellen-Scans",
-          "description": "SQLi, XSS, Authentifizierungs-Umgehungen und unsichere Abhängigkeiten sofort erkannt"
+          "title": "Schwachstellensuche",
+          "description": "SQLi, XSS, Authentifizierungs-Umgehungen und unsichere Abhängigkeiten werden sofort erkannt"
         },
         "secrets": {
-          "title": "Geheimnis-Schutz",
-          "description": "Schlüssel, Token und Zugangsdaten werden beim Commit blockiert"
+          "title": "Schutz von Secrets",
+          "description": "Schlüssel, Tokens und Zugangsdaten werden schon beim Commit blockiert"
         },
         "config": {
-          "title": "Konfigurationshärtung",
-          "description": "Docker/K8s, IAM und Netzwerkrichtlinien auf Privilegien-Eskalation gescannt"
+          "title": "Konfigurations-Hardening",
+          "description": "Docker/K8s, IAM und Netzwerkrichtlinien werden auf Privilegienausweitung geprüft"
         }
       },
       "beyondCodeQL": {
-        "title": "Findet, was statische Abfragen verpassen",
-        "subtitle": "Jenseits von CodeQL",
-        "description": "Findet Fehlkonfigurationen und anfällige Pakete schneller als CodeQL und bietet Korrekturen, nicht nur Warnungen.",
+        "subtitle": "Über CodeQL hinaus",
+        "title": "Findet, was statische Abfragen übersehen",
+        "description": "Entdeckt Fehlkonfigurationen und riskante Pakete schneller als CodeQL und liefert Fixes statt nur Alerts.",
         "points": {
-          "packages": "Kennt Paketgraphen und markiert riskante Abhängigkeiten in Sekunden.",
-          "config": "Erkennt Konfigurationsabweichungen und Privilegien-Eskalation – jenseits statischer Regeln.",
-          "patches": "Jeder Fund enthält einen vorgeschlagenen Patch und Verantwortlichen."
+          "packages": "Versteht den Abhängigkeitsgraphen und markiert riskante Pakete in Sekunden.",
+          "config": "Erkennt Konfigurationsdrift und Privilegienanstieg – jenseits statischer Regeln.",
+          "patches": "Jeder Fund enthält einen vorgeschlagenen Patch plus Owner."
         }
       },
       "visualizer": {
+        "subtitle": "Visualizer",
         "title": "Code-Analyzer in Aktion",
-        "subtitle": "Visualisierer",
-        "description": "Klarer Schnappschuss aktueller Scans, schön dargestellt in der lokalen Konsole.",
-        "privateWorkspace": "Nur privater Arbeitsbereich",
+        "description": "Klare Momentaufnahmen der letzten Scans, dargestellt in der On-Prem-Konsole.",
+        "privateWorkspace": "Nur privates Workspace",
         "andManyMore": "Und vieles mehr...",
         "shots": {
           "scanOverview": {
             "title": "Scan-Übersicht",
-            "description": "Probleme nach Schweregrad gruppiert sehen, bevor Code Ihr Netzwerk verlässt."
+            "description": "Sehen Sie Probleme nach Schweregrad, bevor Code das Netzwerk verlässt."
           },
           "misconfigurations": {
-            "title": "Erkennung von Fehlkonfigurationen",
-            "description": "Unser KI-gestützter Code-Analyzer findet sogar Fehlkonfigurationen im Code."
+            "title": "Erkennung falscher Konfigurationen",
+            "description": "Unser KI-Analyzer findet Misconfigs direkt im Code."
           },
           "inlineDiffs": {
-            "title": "Inline-Diffs",
-            "description": "Vorgeschlagene Patches inline mit Sicherheitskontext überprüfen."
+            "title": "Schwachstellen in Paketen",
+            "description": "Zeigt verwundbare Versionen und die sichere Version an."
           }
         },
-        "frame": "SLNC-env Analyzer"
+        "frame": "Sithub Analyzer"
       }
     },
     "industries": {
-      "title": "Entwickelt für regulierte, hochwirksame Sektoren",
-      "subtitle": "Wo wir einsetzen",
+      "subtitle": "Wo wir implementieren",
+      "title": "Für regulierte Branchen mit hohem Risiko gebaut",
       "oilGas": {
-        "title": "Öl & Gas",
+        "title": "Öl und Gas",
         "description": "Bohrung, Raffination, Pipeline-Steuerung"
       },
       "energy": {
@@ -605,10 +675,10 @@
       },
       "nuclear": {
         "title": "Nuklear",
-        "description": "Reaktorsteuerungen und Sicherheit"
+        "description": "Reaktorführung und Sicherheit"
       },
       "manufacturing": {
-        "title": "Fertigung",
+        "title": "Industrie",
         "description": "ICS, OT und Robotik"
       },
       "government": {
@@ -616,29 +686,9 @@
         "description": "Ministerien, Verteidigung, kritische Behörden"
       }
     },
-    "pricing": {
-      "subtitle": "Proste, przejrzyste ceny",
-      "title": "Wybierz plan",
-      "limitedOffer": "Oferta ograniczona czasowo",
-      "priceIncreaseNotice": "Zablokuj obecne ceny! Po 6 miesiącach ceny wzrosną o 30%",
-      "monthlyPlan": "Miesięczny",
-      "monthlyDesc": "Elastyczne rozliczenie",
-      "yearlyPlan": "Roczny",
-      "yearlyDesc": "Najlepsza wartość",
-      "month": "miesiąc",
-      "billedAnnually": "Rozliczane rocznie za",
-      "doubleSavings": "2x OSZCZĘDNOŚCI",
-      "getStarted": "Zacznij",
-      "features": {
-        "fullAccess": "Pełny dostęp do platformy",
-        "support": "Priorytetowe wsparcie",
-        "cancelAnytime": "Możliwość rezygnacji w każdej chwili",
-        "priceLock": "Cena zablokowana na 12 miesięcy"
-      }
-    },
     "comingSoon": {
-      "title": "Coming Soon",
-      "message": "This feature is currently under development."
+      "title": "Admin-Panel",
+      "message": "Das Admin-Panel befindet sich in Entwicklung und ist bis Ende nächster Woche verfügbar."
     }
   },
   "pricingCta": {
@@ -964,8 +1014,8 @@
       },
       "supreme": {
         "title": "Supreme",
-        "desc": "Lokalny skaner podatności kodu dla VSCode. Analizuj kod bez wysyłania go na zewnętrzne serwery.",
-        "badge": "Rozszerzenie"
+        "desc": "Lokaler Code-Schwachstellenscanner für VS Code. Analysieren Sie Code, ohne ihn an externe Server zu senden.",
+        "badge": "Erweiterung"
       }
     },
     "services": {
@@ -2008,13 +2058,13 @@
       "description": "Scanne deinen Code lokal, ohne ihn an externe Server zu senden. Schnelle, umfassende Schwachstellenerkennung direkt im Editor."
     },
     "video": {
-      "title": "Installations- & Nutzungstutorial (5 Minuten)",
-      "cardTitle": "So nutzt du Supreme",
-      "cardSubtitle": "Installations- & Einrichtungsleitfaden"
+      "title": "Installations- und Nutzungsguide (60 Sekunden)",
+      "cardTitle": "So nutzen Sie Supreme",
+      "cardSubtitle": "Installations- und Setup-Anleitung"
     },
     "pricing": {
       "title": "Einfache Preise",
-      "subtitle": "Wähle den Plan, der am besten zu dir passt",
+      "subtitle": "Wählen Sie den Plan, der am besten zu Ihnen passt",
       "monthly": {
         "title": "Monatlich",
         "description": "Flexibel, jederzeit kündbar"
@@ -2024,7 +2074,7 @@
       "saveBadge": "30 % sparen",
       "yearly": {
         "title": "Jährlich",
-        "description": "Bester Wert"
+        "description": "Bester Preis"
       },
       "year": "Jahr",
       "perMonthApprox": "~{value} pro Monat"

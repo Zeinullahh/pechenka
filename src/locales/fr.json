@@ -274,6 +274,56 @@
         "content": "Une vérification COMPLÈTE de vulnérabilités comprend à la fois une analyse dynamique des vulnérabilités et une analyse des vulnérabilités du code source."
       }
     },
+    "aiSoc": {
+      "tabs": {
+        "email": "Protection e-mail",
+        "web": "Sécurité web"
+      },
+      "billing": {
+        "yearly": "Annuel",
+        "monthly": "Mensuel"
+      },
+      "cta": "Demander le système",
+      "contactSupport": "Contactez-nous",
+      "planTitles": {
+        "premium": "Business Premium 100",
+        "max": "Business MAX",
+        "standard": "Business Standard"
+      },
+      "features": {
+        "common": {
+          "customDomainEmail": "Messagerie d'entreprise sur votre propre domaine (you@yourcompany.com)",
+          "officeSuite": "Suite bureautique de bureau et mobile : documents, feuilles de calcul, présentations et e-mail",
+          "adminConsole": "Console d'administration avec gestion des e-mails sur tout le domaine et opérations en masse",
+          "dnsSecuritySetup": "Configuration de la protection e-mail via DNS (SPF, DKIM, DMARC) dans la console d'administration",
+          "emailMigration": "Migration de messagerie",
+          "aiThreatProtection": "Protection à cinq couches alimentée par l'IA avec catégorisation automatique (Sûr, Spam, Liens dangereux, Phishing, Spoofing)",
+          "emailFlowVisualization": "Visualisation avancée des flux d'e-mails sur l'ensemble du domaine avec filtres dans la console d'administration",
+          "domainWideDeletion": "Possibilité pour l'administrateur de supprimer des e-mails pour tous les utilisateurs du domaine"
+        },
+        "shared": {
+          "unlimitedSecurity": "Protection e-mail illimitée à quatre couches"
+        },
+        "premium": {
+          "userLimit": "Jusqu'à 100 utilisateurs",
+          "adminLimit": "Jusqu'à 5 administrateurs",
+          "aiAnalysis": "Jusqu'à 60 analyses IA approfondies de phishing par utilisateur et par mois (5e couche de protection)",
+          "storage": "Jusqu'à 50 Go par utilisateur"
+        },
+        "max": {
+          "userLimit": "Jusqu'à 300 utilisateurs",
+          "adminLimit": "Jusqu'à 10 administrateurs",
+          "aiAnalysis": "Jusqu'à 100 analyses IA approfondies de phishing par utilisateur et par mois (5e couche de protection)",
+          "storage": "Jusqu'à 200 Go par utilisateur"
+        },
+        "standard": {
+          "userLimit": "Jusqu'à 10 utilisateurs",
+          "adminLimit": "Jusqu'à 1 administrateur",
+          "aiAnalysis": "Jusqu'à 10 analyses IA approfondies de phishing par utilisateur et par mois (5e couche de protection)",
+          "storage": "Jusqu'à 8 Go par utilisateur"
+        }
+      }
+    },
     "plans": {
       "globalShield": {
         "title": "Sécurité Web et Gestion du Trafic",
@@ -319,7 +369,7 @@
     },
     "perYear": "par an (est.)",
     "calculator": {
-      "subtitle": "Przesuń suwak, aby zobaczyć roczny koszt utrzymania"
+      "subtitle": "Faites glisser le curseur pour voir le coût annuel de maintenance"
     }
   },
   "solution": {
@@ -618,28 +668,28 @@
       }
     },
     "pricing": {
-      "subtitle": "Proste, przejrzyste ceny",
-      "title": "Wybierz plan",
-      "limitedOffer": "Oferta ograniczona czasowo",
-      "priceIncreaseNotice": "Zablokuj obecne ceny! Po 6 miesiącach ceny wzrosną o 30%",
-      "monthlyPlan": "Miesięczny",
-      "monthlyDesc": "Elastyczne rozliczenie",
-      "yearlyPlan": "Roczny",
-      "yearlyDesc": "Najlepsza wartość",
-      "month": "miesiąc",
-      "billedAnnually": "Rozliczane rocznie za",
-      "doubleSavings": "2x OSZCZĘDNOŚCI",
-      "getStarted": "Zacznij",
+      "subtitle": "Tarification simple et transparente",
+      "title": "Choisissez un plan",
+      "limitedOffer": "Offre limitée",
+      "priceIncreaseNotice": "Verrouillez les tarifs actuels ! Dans 6 mois, les prix augmenteront de 30 %",
+      "monthlyPlan": "Mensuel",
+      "monthlyDesc": "Paiement flexible",
+      "yearlyPlan": "Annuel",
+      "yearlyDesc": "Meilleur tarif",
+      "month": "mois",
+      "billedAnnually": "Facturé annuellement à",
+      "doubleSavings": "ÉCONOMIES ×2",
+      "getStarted": "Commencer",
       "features": {
-        "fullAccess": "Pełny dostęp do platformy",
-        "support": "Priorytetowe wsparcie",
-        "cancelAnytime": "Możliwość rezygnacji w każdej chwili",
-        "priceLock": "Cena zablokowana na 12 miesięcy"
+        "fullAccess": "Accès complet à la plateforme",
+        "support": "Support prioritaire",
+        "cancelAnytime": "Annulation à tout moment",
+        "priceLock": "Tarif verrouillé pendant 12 mois"
       }
     },
     "comingSoon": {
-      "title": "Coming Soon",
-      "message": "This feature is currently under development."
+      "title": "Panneau d'administration",
+      "message": "Le panneau d'administration est en cours de développement et sera disponible d'ici la fin de la semaine prochaine."
     }
   },
   "pricingCta": {
@@ -944,8 +994,8 @@
       },
       "supreme": {
         "title": "Supreme",
-        "desc": "Lokalny skaner podatności kodu dla VSCode. Analizuj kod bez wysyłania go na zewnętrzne serwery.",
-        "badge": "Rozszerzenie"
+        "desc": "Analyseur local de vulnérabilités pour VS Code. Analysez le code sans l'envoyer vers des serveurs externes.",
+        "badge": "Extension"
       }
     },
     "services": {
@@ -2038,23 +2088,23 @@
     }
   },
   "badRequest": {
-    "title": "Błędne żądanie",
-    "cta": "Wróć na stronę główną",
+    "title": "Requête invalide",
+    "cta": "Retourner à la page d'accueil",
     "description": "The page you are looking for could not be found or the request was invalid."
   },
   "countrySelect": {
-    "title": "Wybierz kraj",
-    "subtitle": "Wybierz lokalizację, aby kontynuować",
-    "searchPlaceholder": "Szukaj kraju...",
-    "noResults": "Nie znaleziono krajów",
-    "continue": "Kontynuuj",
+    "title": "Choisissez un pays",
+    "subtitle": "Sélectionnez une localisation pour continuer",
+    "searchPlaceholder": "Rechercher un pays...",
+    "noResults": "Aucun pays trouvé",
+    "continue": "Continuer",
     "comingSoon": {
-      "title": "Już prawie gotowe!",
-      "message": "Panel administracyjny do zarządzania subskrypcją będzie gotowy za",
-      "hours": "godziny",
-      "notification": "Powiadomimy Cię, gdy będzie dostępny!",
-      "back": "Wstecz",
-      "gotIt": "Rozumiem!"
+      "title": "Presque prêt !",
+      "message": "Le panneau d'administration des abonnements sera prêt dans",
+      "hours": "heures",
+      "notification": "Nous vous avertirons dès qu'il sera disponible !",
+      "back": "Retour",
+      "gotIt": "Compris !"
     }
   }
 }
