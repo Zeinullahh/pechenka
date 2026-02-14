@@ -1,4 +1,22 @@
 {
+  "aiSocModal": {
+    "title": "Admin-Konsole",
+    "emailSecurity": "Login/Registrierung für E-Mail-Sicherheit",
+    "webSecurity": "Login/Registrierung für Web-Sicherheit",
+    "getOnlyOffice": "OnlyOffice holen"
+  },
+  "emailSecurityModal": {
+    "title": "E-Mail-Sicherheit",
+    "subtitle": "Wählen Sie, wie Sie auf Ihr Konto zugreifen möchten",
+    "webmail": {
+      "title": "Webmail",
+      "desc": "Greifen Sie direkt auf Ihren Posteingang zu"
+    },
+    "admin": {
+      "title": "Admin-Konsole",
+      "desc": "Sicherheitseinstellungen und Benutzer verwalten"
+    }
+  },
   "languageSelector": {
     "triggerLabel": "Sprache wählen",
     "menuLabel": "Sprache auswählen",

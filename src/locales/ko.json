@@ -1,4 +1,22 @@
 {
+    "aiSocModal": {
+        "title": "관리 콘솔",
+        "emailSecurity": "이메일 보안 로그인/등록",
+        "webSecurity": "웹 보안 로그인/등록",
+        "getOnlyOffice": "OnlyOffice 받기"
+    },
+    "emailSecurityModal": {
+        "title": "이메일 보안",
+        "subtitle": "계정 접속 방법을 선택하세요",
+        "webmail": {
+            "title": "Webmail",
+            "desc": "받은 편지함으로 바로 이동"
+        },
+        "admin": {
+            "title": "관리 콘솔",
+            "desc": "보안 설정 및 사용자 관리"
+        }
+    },
     "home": {
         "hero": {
             "title": "사이버 보안은 더 이상",

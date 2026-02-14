@@ -1,4 +1,22 @@
 {
+  "aiSocModal": {
+    "title": "Bảng điều khiển quản trị",
+    "emailSecurity": "Đăng nhập/Đăng ký bảo mật email",
+    "webSecurity": "Đăng nhập/Đăng ký bảo mật web",
+    "getOnlyOffice": "Tải OnlyOffice"
+  },
+  "emailSecurityModal": {
+    "title": "Bảo mật Email",
+    "subtitle": "Chọn cách bạn muốn truy cập tài khoản của mình",
+    "webmail": {
+      "title": "Webmail",
+      "desc": "Truy cập trực tiếp vào hộp thư của bạn"
+    },
+    "admin": {
+      "title": "Bảng quản trị",
+      "desc": "Quản lý cài đặt bảo mật và người dùng"
+    }
+  },
   "languageSelector": {
     "triggerLabel": "Chọn ngôn ngữ",
     "menuLabel": "Vui lòng chọn ngôn ngữ",

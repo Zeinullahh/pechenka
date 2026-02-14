@@ -1,4 +1,22 @@
 {
+  "aiSocModal": {
+    "title": "Konsola administratora",
+    "emailSecurity": "Zaloguj/Zarejestruj się w bezpieczeństwie e-mail",
+    "webSecurity": "Zaloguj/Zarejestruj się w bezpieczeństwie sieciowym",
+    "getOnlyOffice": "Pobierz OnlyOffice"
+  },
+  "emailSecurityModal": {
+    "title": "Bezpieczeństwo e-mail",
+    "subtitle": "Wybierz sposób dostępu do swojego konta",
+    "webmail": {
+      "title": "Webmail",
+      "desc": "Uzyskaj bezpośredni dostęp do skrzynki odbiorczej"
+    },
+    "admin": {
+      "title": "Konsola administratora",
+      "desc": "Zarządzaj ustawieniami bezpieczeństwa i użytkownikami"
+    }
+  },
   "home": {
     "hero": {
       "title": "Cyberbezpieczeństwo nie jest już",

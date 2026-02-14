@@ -1,4 +1,22 @@
 {
+  "aiSocModal": {
+    "title": "Console d'administration",
+    "emailSecurity": "Connexion/Inscription à la sécurité des emails",
+    "webSecurity": "Connexion/Inscription à la sécurité web",
+    "getOnlyOffice": "Obtenir OnlyOffice"
+  },
+  "emailSecurityModal": {
+    "title": "Sécurité de messagerie",
+    "subtitle": "Sélectionnez comment vous souhaitez accéder à votre compte",
+    "webmail": {
+      "title": "Webmail",
+      "desc": "Accédez directement à votre boîte de réception"
+    },
+    "admin": {
+      "title": "Console d'administration",
+      "desc": "Gérez les paramètres de sécurité et les utilisateurs"
+    }
+  },
   "languageSelector": {
     "triggerLabel": "Choisir la langue",
     "menuLabel": "Sélectionner une langue",

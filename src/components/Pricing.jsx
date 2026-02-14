@@ -174,9 +174,25 @@ const Pricing = ({ onOpenModal }) => {
   );
 
 
+  const webPlans = useMemo(() => {
+    const plan = {
+      id: "globalShield",
+      title: t("pricing.plans.globalShield.title", "Web Security and Traffic Management"),
+      features: [
+        t("pricing.plans.globalShield.features.webProtection", "Protection against all types of web attacks except business logic exploitation"),
+        t("pricing.plans.globalShield.features.ddosProtection", "Real-time DDoS protection"),
+        t("pricing.plans.globalShield.features.cmc", "CMC with global traffic monitoring:"),
+        t("pricing.plans.globalShield.features.country", "Country blocking:"),
+        t("pricing.plans.globalShield.features.port", "Port closing:"),
+      ],
+    };
+    return [plan];
+  }, [t]);
+
+
   const visiblePlans = useMemo(
-    () => (productType === "email" ? businessPlans : []),
-    [productType, businessPlans]
+    () => (productType === "email" ? businessPlans : webPlans),
+    [productType, businessPlans, webPlans]
   );
 
 
@@ -322,31 +338,40 @@ const Pricing = ({ onOpenModal }) => {
 
         {/* Pricing Cards */}
         <div className="space-y-6 relative z-10">
-          {/* Top Row: 2 Vertical Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-stretch">
-            {visiblePlans.slice(0, 2).map((plan, index) => (
-              <PricingCard
-                key={plan.id}
-                plan={plan}
-                price={getPriceDisplay(plan.id)}
-                tooltipContent={tooltipContent}
-                activeTooltip={activeTooltip}
-                setActiveTooltip={setActiveTooltip}
-                activeCardIndex={activeCardIndex}
-                setActiveCardIndex={setActiveCardIndex}
-                index={index}
-                onOpenModal={onOpenModal}
-                isHorizontal={false}
-                requestSystemLabel={requestSystemLabel}
-              />
-            ))}
-          </div>
-
-
-          {visiblePlans.length > 2 && (
+          {productType === "web" ? (
             <div className="flex justify-center">
               <div className="w-full">
-                {visiblePlans.slice(2).map((plan, index) => (
+                {visiblePlans.map((plan, index) => (
+                  <PricingCard
+                    key={plan.id}
+                    plan={plan}
+                    price={
+                      <div className="flex flex-col">
+                        <span>{billing === "yearly" ? "$200.00/year" : "$20.00/month"}</span>
+                        <div className="flex flex-col mt-2">
+                          <span className="text-xl sm:text-2xl text-purple-200">+ $0.06 per GB</span>
+                          <span className="text-xs sm:text-sm font-normal text-gray-400 mt-0.5">For handled data</span>
+                        </div>
+                      </div>
+                    }
+                    tooltipContent={tooltipContent}
+                    activeTooltip={activeTooltip}
+                    setActiveTooltip={setActiveTooltip}
+                    activeCardIndex={activeCardIndex}
+                    setActiveCardIndex={setActiveCardIndex}
+                    index={2}
+                    onOpenModal={onOpenModal}
+                    isHorizontal={true}
+                    requestSystemLabel={requestSystemLabel}
+                  />
+                ))}
+              </div>
+            </div>
+          ) : (
+            <>
+              {/* Top Row: 2 Vertical Cards */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-stretch">
+                {visiblePlans.slice(0, 2).map((plan, index) => (
                   <PricingCard
                     key={plan.id}
                     plan={plan}
@@ -356,14 +381,37 @@ const Pricing = ({ onOpenModal }) => {
                     setActiveTooltip={setActiveTooltip}
                     activeCardIndex={activeCardIndex}
                     setActiveCardIndex={setActiveCardIndex}
-                    index={2 + index}
+                    index={index}
                     onOpenModal={onOpenModal}
-                    isHorizontal={true}
+                    isHorizontal={false}
                     requestSystemLabel={requestSystemLabel}
                   />
                 ))}
               </div>
-            </div>
+
+              {visiblePlans.length > 2 && (
+                <div className="flex justify-center">
+                  <div className="w-full">
+                    {visiblePlans.slice(2).map((plan, index) => (
+                      <PricingCard
+                        key={plan.id}
+                        plan={plan}
+                        price={getPriceDisplay(plan.id)}
+                        tooltipContent={tooltipContent}
+                        activeTooltip={activeTooltip}
+                        setActiveTooltip={setActiveTooltip}
+                        activeCardIndex={activeCardIndex}
+                        setActiveCardIndex={setActiveCardIndex}
+                        index={2 + index}
+                        onOpenModal={onOpenModal}
+                        isHorizontal={true}
+                        requestSystemLabel={requestSystemLabel}
+                      />
+                    ))}
+                  </div>
+                </div>
+              )}
+            </>
           )}
         </div>
       </div>
@@ -484,6 +532,7 @@ const PricingCard = ({
   isHorizontal = false,
   requestSystemLabel,
 }) => {
+  const { t } = useLanguage();
   const theme = getCardTheme(index);
   const { borderColor, innerGlowColor, background, glow: glowColor } = theme;
 
@@ -602,7 +651,37 @@ const PricingCard = ({
                             d="M5 13l4 4L19 7"
                           ></path>
                         </svg>
-                        <span className="flex-1 leading-snug text-gray-100">{label}</span>
+                        <div className="flex-1 flex items-center gap-1 leading-snug">
+                          <span className="text-gray-100">{label.replace(/:$/, '')}</span>
+                          {label.endsWith(':') && (
+                            <div
+                              className="relative"
+                              onMouseEnter={() => setActiveTooltip(`${plan.id}-${i}`)}
+                              onMouseLeave={() => setActiveTooltip(null)}
+                            >
+                              <svg className="h-4 w-4 text-gray-400 cursor-help" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                              </svg>
+                              {activeTooltip === `${plan.id}-${i}` && (
+                                <TooltipCard className="z-[9999] w-72 sm:w-80 max-w-[calc(100vw-3rem)] rounded-lg border border-white/20 bg-black p-4 text-white shadow-2xl">
+                                  {(() => {
+                                    let tooltipKey = "";
+                                    if (label.includes("CMC")) tooltipKey = "cmc-global-traffic";
+                                    if (label.includes("Country")) tooltipKey = "country-blacklisting";
+                                    if (label.includes("Port")) tooltipKey = "port-management";
+                                    const content = tooltipContent[tooltipKey];
+                                    return content ? (
+                                      <>
+                                        <h4 className="mb-2 font-bold text-white">{content.title}</h4>
+                                        <p className="text-sm text-gray-200">{content.content}</p>
+                                      </>
+                                    ) : null;
+                                  })()}
+                                </TooltipCard>
+                              )}
+                            </div>
+                          )}
+                        </div>
                       </li>
                     );
                   })}
@@ -635,7 +714,37 @@ const PricingCard = ({
                             d="M5 13l4 4L19 7"
                           ></path>
                         </svg>
-                        <span className="flex-1 leading-snug text-gray-100">{label}</span>
+                        <div className="flex-1 flex items-center gap-1 leading-snug">
+                          <span className="text-gray-100">{label.replace(/:$/, '')}</span>
+                          {label.endsWith(':') && (
+                            <div
+                              className="relative"
+                              onMouseEnter={() => setActiveTooltip(`${plan.id}-${i}`)}
+                              onMouseLeave={() => setActiveTooltip(null)}
+                            >
+                              <svg className="h-4 w-4 text-gray-400 cursor-help" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                              </svg>
+                              {activeTooltip === `${plan.id}-${i}` && (
+                                <TooltipCard className="z-[9999] w-72 sm:w-80 max-w-[calc(100vw-3rem)] rounded-lg border border-white/20 bg-black p-4 text-white shadow-2xl">
+                                  {(() => {
+                                    let tooltipKey = "";
+                                    if (label.includes("CMC")) tooltipKey = "cmc-global-traffic";
+                                    if (label.includes("Country")) tooltipKey = "country-blacklisting";
+                                    if (label.includes("Port")) tooltipKey = "port-management";
+                                    const content = tooltipContent[tooltipKey];
+                                    return content ? (
+                                      <>
+                                        <h4 className="mb-2 font-bold text-white">{content.title}</h4>
+                                        <p className="text-sm text-gray-200">{content.content}</p>
+                                      </>
+                                    ) : null;
+                                  })()}
+                                </TooltipCard>
+                              )}
+                            </div>
+                          )}
+                        </div>
                       </li>
                     );
                   })}
@@ -683,7 +792,7 @@ const PricingCard = ({
                     border: "1px solid rgba(255, 255, 255, 0.12)",
                   }}
                 >
-                  {requestSystemLabel}
+                  {t("header.cta.get", "Get")}
                 </button>
               </div>
             </div>

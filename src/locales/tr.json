@@ -1,4 +1,22 @@
 {
+  "aiSocModal": {
+    "title": "Yönetici Konsolu",
+    "emailSecurity": "E-posta güvenliğine Giriş Yap/Kaydol",
+    "webSecurity": "Web güvenliğine Giriş Yap/Kaydol",
+    "getOnlyOffice": "OnlyOffice Edin"
+  },
+  "emailSecurityModal": {
+    "title": "E-posta Güvenliği",
+    "subtitle": "Hesabınıza nasıl erişmek istediğinizi seçin",
+    "webmail": {
+      "title": "Webmail",
+      "desc": "Gelen kutunuza doğrudan erişin"
+    },
+    "admin": {
+      "title": "Yönetici Konsolu",
+      "desc": "Güvenlik ayarlarını ve kullanıcıları yönetin"
+    }
+  },
   "languageSelector": {
     "triggerLabel": "Dil seçin",
     "menuLabel": "Lütfen dili seçiniz",

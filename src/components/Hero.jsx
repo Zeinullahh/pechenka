@@ -133,7 +133,7 @@ const Hero = ({ onOpenModal }) => {
         </div>
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full sm:w-auto">
           <GlowButton onClick={onOpenModal} className="w-full sm:w-auto">
-            {t("hero.buttons.connect", "Connect in 4 minutes")}
+            {t("header.cta.get", "Get")}
           </GlowButton>
         </div>
       </div>

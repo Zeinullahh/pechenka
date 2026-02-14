@@ -10,6 +10,7 @@ import LanguageSelector from "./LanguageSelector";
 import PolicyLanguageSelector from "./PolicyLanguageSelector";
 import ComingSoonModal from "./ComingSoonModal";
 import CountrySelectModal from "./CountrySelectModal";
+import EmailSecurityModal from "./EmailSecurityModal";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const SCROLL_THRESHOLD = 10;
@@ -27,6 +28,7 @@ const Header = ({ onOpenModal, policyLang, onPolicyLangChange, onSithubGet, hide
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [comingSoonOpen, setComingSoonOpen] = useState(false);
   const [countrySelectOpen, setCountrySelectOpen] = useState(false);
+  const [emailSecurityOpen, setEmailSecurityOpen] = useState(false);
   const [openDesktopDropdown, setOpenDesktopDropdown] = useState(null);
   const [openMobileDropdown, setOpenMobileDropdown] = useState(null);
   const { t } = useLanguage();
@@ -111,6 +113,7 @@ const Header = ({ onOpenModal, policyLang, onPolicyLangChange, onSithubGet, hide
   const navItems = [
     { key: "services", label: t("header.nav.services", "Services"), href: "/services" },
     { key: "affiliate", label: t("header.nav.affiliate", "Affiliate Program"), href: "/affiliate" },
+    { key: "mail", label: t("header.nav.mail", "Mail"), onClick: () => setEmailSecurityOpen(true) },
     { key: "systems", label: t("header.nav.systems", "Systems"), children: systemsItems },
     { key: "instructions", label: t("header.nav.instructions", "Instructions"), children: instructionsItems },
   ];
@@ -264,7 +267,7 @@ const Header = ({ onOpenModal, policyLang, onPolicyLangChange, onSithubGet, hide
                         setIsMobileMenuOpen(false);
                       }}
                     >
-                      {isSithubPage || isSupremePage ? t("header.cta.get", "Get") : t("header.cta.requestDemo", "Request Demo")}
+                      {isSithubPage || isSupremePage || pathname === "/ai-soc" || pathname === "/ai-soc/" ? t("header.cta.get", "Get") : t("header.cta.requestDemo", "Request Demo")}
                     </GlowButton>
                   )}
                 </div>
@@ -470,7 +473,7 @@ const Header = ({ onOpenModal, policyLang, onPolicyLangChange, onSithubGet, hide
                 {/* Request Demo button for other non-main, non-policy, non-sithub pages - desktop only */}
                 {isDesktop && !isMainPage && !isPolicyPage && !isSithubPage && !isSupremePage && !hideCta && (
                   <GlowButton onClick={onOpenModal}>
-                    {t("header.cta.requestDemo", "Request Demo")}
+                    {pathname === "/ai-soc" || pathname === "/ai-soc/" ? t("header.cta.get", "Get") : t("header.cta.requestDemo", "Request Demo")}
                   </GlowButton>
                 )}
               </motion.div>
@@ -501,6 +504,7 @@ const Header = ({ onOpenModal, policyLang, onPolicyLangChange, onSithubGet, hide
       </motion.header>
       <ComingSoonModal isOpen={comingSoonOpen} onClose={() => setComingSoonOpen(false)} />
       <CountrySelectModal isOpen={countrySelectOpen} onClose={() => setCountrySelectOpen(false)} />
+      <EmailSecurityModal isOpen={emailSecurityOpen} onClose={() => setEmailSecurityOpen(false)} />
     </>
   );
 };

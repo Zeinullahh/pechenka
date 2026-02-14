@@ -1,4 +1,22 @@
 {
+  "aiSocModal": {
+    "title": "管理控制台",
+    "emailSecurity": "登录/注册电子邮件安全",
+    "webSecurity": "登录/注册网络安全",
+    "getOnlyOffice": "获取 OnlyOffice"
+  },
+  "emailSecurityModal": {
+    "title": "电子邮件安全",
+    "subtitle": "选择您想要访问账户的方式",
+    "webmail": {
+      "title": "Webmail",
+      "desc": "直接访问您的收件箱"
+    },
+    "admin": {
+      "title": "管理控制台",
+      "desc": "管理安全设置和用户"
+    }
+  },
   "home": {
     "hero": {
       "title": "网络安全不再",

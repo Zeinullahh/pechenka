@@ -6,7 +6,7 @@ import Hero from '@/components/Hero.jsx';
 import Pricing from '@/components/Pricing.jsx';
 import { StickyScrollSolution } from '@/components/StickyScrollSolution.jsx';
 import Insights from '@/components/Insights.jsx';
-import RequestDemoModal from '@/components/RequestDemoModal.jsx';
+import AiSocGetModal from '@/components/AiSocGetModal.jsx';
 import { FloatingText } from '@/components/FloatingText.jsx';
 import Spotlights from '@/components/Spotlights.jsx';
 import BackToTopButton from '@/components/BackToTopButton';
@@ -55,7 +55,7 @@ const AiSocLanding = () => {
           <FloatingText />
         </div>
       </main>
-      <RequestDemoModal isOpen={isModalOpen} onClose={closeModal} />
+      <AiSocGetModal isOpen={isModalOpen} onClose={closeModal} />
       <BackToTopButton />
     </>
   );

@@ -1,4 +1,22 @@
 {
+  "aiSocModal": {
+    "title": "管理コンソール",
+    "emailSecurity": "メールセキュリティのログイン/登録",
+    "webSecurity": "ウェブセキュリティのログイン/登録",
+    "getOnlyOffice": "OnlyOfficeを入手"
+  },
+  "emailSecurityModal": {
+    "title": "メールセキュリティ",
+    "subtitle": "アカウントへのアクセス方法を選択してください",
+    "webmail": {
+      "title": "Webmail",
+      "desc": "受信トレイに直接アクセスする"
+    },
+    "admin": {
+      "title": "管理コンソール",
+      "desc": "セキュリティ設定とユーザーを管理する"
+    }
+  },
   "languageSelector": {
     "triggerLabel": "言語を選択",
     "menuLabel": "言語を選んでください",

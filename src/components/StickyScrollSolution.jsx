@@ -85,7 +85,10 @@ export function StickyScrollSolution() {
   return (
     <div className="w-full">
       <div className="hidden lg:block">
-        <StickyScroll content={desktopContent} />
+        <StickyScroll
+          content={desktopContent}
+          contentClassName="aspect-video max-w-4xl bg-transparent"
+        />
       </div>
       <div className="lg:hidden flex flex-col gap-10 px-4 py-12">
         {localizedContent.map((item) => (

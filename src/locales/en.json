@@ -1,4 +1,22 @@
 {
+  "aiSocModal": {
+    "title": "Admin Console",
+    "emailSecurity": "Login/Register to Email security",
+    "webSecurity": "Login/Register to Web security",
+    "getOnlyOffice": "Get OnlyOffice"
+  },
+  "emailSecurityModal": {
+    "title": "Email Security",
+    "subtitle": "Select how you would like to access your account",
+    "webmail": {
+      "title": "Webmail",
+      "desc": "Access your inbox directly"
+    },
+    "admin": {
+      "title": "Admin Console",
+      "desc": "Manage security settings and users"
+    }
+  },
   "home": {
     "hero": {
       "title": "Cybersecurity is no longer",
@@ -1375,16 +1393,16 @@
     "planEstimate": "${value}",
     "tooltips": {
       "cmcGlobal": {
-        "title": "CMC with Global Traffic Monitoring",
-        "content": "The Central Management Console (CMC) integrates seamlessly with other security systems and is available under the same domain and interface as Global Shield and Security Tester, allowing you to manage network security at scale. From here, you can blacklist countries, close ports, and perform other operations."
+        "title": "CMC with global traffic monitoring",
+        "content": "The Centralized Management Console (CMC) seamlessly integrates with other security systems and uses the same domain and interface as Global Shield and Security Tester. Here you can block countries, close ports, and manage security at scale."
       },
       "countryBlacklisting": {
-        "title": "Country Blacklisting",
-        "content": "Block all traffic from a specific country"
+        "title": "Country blocking",
+        "content": "Block all traffic originating from a selected country"
       },
       "portManagement": {
-        "title": "Port Management",
-        "content": "Close unused ports to reduce attack surface. For example, disable port 22 when SSH access is not needed. To minimize the risk of system compromise."
+        "title": "Port closing",
+        "content": "Close unused ports to reduce the attack surface (e.g., disable port 22 if SSH is not needed)"
       },
       "cmcEmail": {
         "title": "CMC with Advanced Email Flow Visualizer",
@@ -1464,11 +1482,11 @@
         "description": "No limits\nNo additional fees",
         "button": "Secure web app and APIs",
         "features": {
-          "webProtection": "Protection against all types of web attacks, except business logic vulnerability exploitation",
+          "webProtection": "Protection against all types of web attacks except business logic exploitation",
           "ddosProtection": "Real-time DDoS protection",
-          "cmc": "CMC with global traffic monitoring system",
-          "country": "Country blacklisting feature",
-          "port": "Port closing feature"
+          "cmc": "CMC with global traffic monitoring:",
+          "country": "Country blocking:",
+          "port": "Port closing:"
         }
       },
       "emailProtector": {
@@ -2094,4 +2112,3 @@
     }
   }
 }
-

@@ -1,4 +1,22 @@
 {
+  "aiSocModal": {
+    "title": "Stjórnborð",
+    "emailSecurity": "Skrá inn/Nýskrá í tölvupóstöryggi",
+    "webSecurity": "Skrá inn/Nýskrá í veföryggi",
+    "getOnlyOffice": "Sækja OnlyOffice"
+  },
+  "emailSecurityModal": {
+    "title": "Tölvupóstöryggi",
+    "subtitle": "Veldu hvernig á að nálgast aðganginn þinn",
+    "webmail": {
+      "title": "Vefpóstur",
+      "desc": "Beinn aðgangur að pósthólfi"
+    },
+    "admin": {
+      "title": "Stjórnborð",
+      "desc": "Sýsla með öryggisstillingar og notendur"
+    }
+  },
   "languageSelector": {
     "triggerLabel": "Select language",
     "menuLabel": "Choose language",
