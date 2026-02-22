@@ -60,16 +60,6 @@ export default function HomeLanding() {
       badge: t("home.systems.aiSoc.badge", "Subscription"),
     },
     {
-      key: "sithub",
-      title: t("home.systems.sithub.title", "Sithub"),
-      desc: t(
-        "home.systems.sithub.desc",
-        "Self-hosted GitHub alternative with built-in security scanning. All repositories and code analysis stay within your network."
-      ),
-      href: "/sithub",
-      badge: t("home.systems.sithub.badge", "Subscription"),
-    },
-    {
       key: "supreme",
       title: t("home.systems.supreme.title", "Supreme"),
       desc: t(
@@ -87,21 +77,21 @@ export default function HomeLanding() {
   return (
     <div className="min-h-screen bg-[#01091C] text-white overflow-hidden">
       <Header onOpenModal={openModal} />
-      
+
       {/* Background Effect - extends throughout the page */}
       <div className="fixed inset-0 z-0">
         <BackgroundBeams className="opacity-50" />
       </div>
 
       <main className="relative mx-auto flex flex-col gap-0 pb-16 z-10">
-        
+
         {/* Hero Section - Clean and Beautiful */}
         <section className="relative w-full pt-32 pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-5xl mx-auto text-center">
             {/* Decorative gradient orbs */}
             <div className="absolute top-20 left-1/4 w-72 h-72 bg-blue-500/20 rounded-full blur-[120px] pointer-events-none" />
             <div className="absolute top-32 right-1/4 w-64 h-64 bg-purple-500/20 rounded-full blur-[100px] pointer-events-none" />
-            
+
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -110,15 +100,15 @@ export default function HomeLanding() {
             >
               {/* Main Heading with Eye-Catching Effect */}
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">
-                <motion.span 
+                <motion.span
                   className="inline-block bg-gradient-to-r from-blue-400 via-purple-400 via-pink-400 to-blue-400 bg-[length:200%_auto] bg-clip-text text-transparent"
-                  animate={{ 
+                  animate={{
                     backgroundPosition: ["0% center", "200% center"],
                   }}
-                  transition={{ 
-                    duration: 4, 
-                    repeat: Infinity, 
-                    ease: "linear" 
+                  transition={{
+                    duration: 4,
+                    repeat: Infinity,
+                    ease: "linear"
                   }}
                   style={{
                     textShadow: "0 0 80px rgba(147, 51, 234, 0.5)",
@@ -127,7 +117,7 @@ export default function HomeLanding() {
                   {t("home.hero.title", "Cybersecurity is no longer")}
                 </motion.span>
                 <br />
-                <motion.span 
+                <motion.span
                   className="inline-block relative"
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -164,10 +154,10 @@ export default function HomeLanding() {
                       <stop offset="100%" stopColor="#22d3ee" />
                     </linearGradient>
                     <filter id="glow">
-                      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                      <feGaussianBlur stdDeviation="3" result="coloredBlur" />
                       <feMerge>
-                        <feMergeNode in="coloredBlur"/>
-                        <feMergeNode in="SourceGraphic"/>
+                        <feMergeNode in="coloredBlur" />
+                        <feMergeNode in="SourceGraphic" />
                       </feMerge>
                     </filter>
                   </defs>
@@ -180,7 +170,7 @@ export default function HomeLanding() {
                     strokeLinecap="round"
                     filter="url(#glow)"
                     initial={{ pathLength: 0 }}
-                    animate={{ 
+                    animate={{
                       pathLength: 1,
                       d: [
                         "M0,20 C50,5 100,35 150,20 C200,5 250,35 300,20 C350,5 400,35 450,20 C500,5 550,35 600,20",
@@ -188,7 +178,7 @@ export default function HomeLanding() {
                         "M0,20 C50,5 100,35 150,20 C200,5 250,35 300,20 C350,5 400,35 450,20 C500,5 550,35 600,20",
                       ]
                     }}
-                    transition={{ 
+                    transition={{
                       pathLength: { duration: 1.5, delay: 0.8, ease: "easeOut" },
                       d: { duration: 3, repeat: Infinity, ease: "easeInOut", delay: 2.3 }
                     }}
@@ -202,7 +192,7 @@ export default function HomeLanding() {
                     strokeLinecap="round"
                     opacity="0.6"
                     initial={{ pathLength: 0 }}
-                    animate={{ 
+                    animate={{
                       pathLength: 1,
                       d: [
                         "M0,22 C50,37 100,7 150,22 C200,37 250,7 300,22 C350,37 400,7 450,22 C500,37 550,7 600,22",
@@ -210,7 +200,7 @@ export default function HomeLanding() {
                         "M0,22 C50,37 100,7 150,22 C200,37 250,7 300,22 C350,37 400,7 450,22 C500,37 550,7 600,22",
                       ]
                     }}
-                    transition={{ 
+                    transition={{
                       pathLength: { duration: 1.8, delay: 1, ease: "easeOut" },
                       d: { duration: 2.5, repeat: Infinity, ease: "easeInOut", delay: 2.8 }
                     }}
@@ -241,7 +231,7 @@ export default function HomeLanding() {
                 <div className="absolute top-10 left-0 right-0 flex justify-between max-w-2xl mx-auto px-8">
                   <motion.span
                     className="text-[10px] sm:text-xs font-bold text-cyan-400 tracking-widest"
-                    animate={{ 
+                    animate={{
                       y: [0, -5, 0],
                       opacity: [0.7, 1, 0.7]
                     }}
@@ -251,7 +241,7 @@ export default function HomeLanding() {
                   </motion.span>
                   <motion.span
                     className="text-[10px] sm:text-xs font-bold text-blue-400 tracking-widest"
-                    animate={{ 
+                    animate={{
                       y: [0, -6, 0],
                       opacity: [0.6, 1, 0.6]
                     }}
@@ -261,7 +251,7 @@ export default function HomeLanding() {
                   </motion.span>
                   <motion.span
                     className="text-[10px] sm:text-xs font-bold text-purple-400 tracking-widest"
-                    animate={{ 
+                    animate={{
                       y: [0, -5, 0],
                       opacity: [0.7, 1, 0.7]
                     }}
@@ -271,7 +261,7 @@ export default function HomeLanding() {
                   </motion.span>
                 </div>
               </motion.div>
-              
+
               {/* Subtitle */}
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -302,131 +292,58 @@ export default function HomeLanding() {
                 outerClassName="group relative flex h-full flex-col justify-between overflow-hidden rounded-3xl p-[2px]"
                 innerClassName="rounded-[22px] bg-black/40 backdrop-blur-xl p-8 sm:p-10 lg:p-12 h-full transition duration-300 group-hover:bg-black/60"
               >
-                  {/* Inner breathing glow effect - Exclude for Supreme */}
-                   <div className="absolute inset-0 bg-radial-gradient from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition duration-500 pointer-events-none" />
-                   {item.key !== 'supreme' && (
-                     <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full blur-[100px] opacity-20 pointer-events-none ${idx === 0 ? 'bg-pink-500' : 'bg-blue-500'} animate-pulse`} />
-                   )}
-
-                  <div className="flex flex-col lg:flex-row gap-8 relative z-10">
-                    {/* 3D Animation Area */}
-                    <div className="w-full lg:w-1/2 h-[320px] sm:h-[380px] lg:h-[400px] relative flex items-center justify-center">
-                      {item.key === 'supreme' ? (
-                        /* Supreme Animation - 2D */
-                        <div className="relative w-full h-full flex items-center justify-center scale-[1.1]">
-                          <Supreme2D />
-                        </div>
-                      ) : idx === 0 ? (
-                        /* AI-SOC Animation */
-                        <div className="relative w-full h-full scale-[0.85]">
-                          <StickyScrollAnimation />
-                        </div>
-                      ) : (
-                        /* Sithub Animation */
-                        <div className="relative w-full h-full flex items-center justify-center scale-[0.7]">
-                          <GlassyBox3D />
-                        </div>
-                      )}
-                    </div>
-                    
-                    {/* Content Area */}
-                    <div className="w-full lg:w-1/2 flex flex-col justify-between">
-                      <div className="space-y-5">
-                        <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-5 py-2 text-sm font-semibold uppercase tracking-[0.12em] text-white/80">
-                          {item.badge}
-                        </div>
-                        <div className="space-y-3">
-                          <h3 className="text-4xl font-semibold text-white sm:text-5xl">{item.title}</h3>
-                          <p className="text-lg text-white/75 sm:text-xl leading-relaxed">{item.desc}</p>
-                        </div>
-                      </div>
-                      <Link
-                        href={item.href}
-                        className="mt-8 inline-flex h-[56px] items-center justify-center gap-2 rounded-full bg-white px-8 text-lg font-semibold text-slate-900 shadow-lg transition hover:-translate-y-0.5 hover:bg-gray-100"
-                      >
-                        {t("home.systems.cta", "View details")}
-                        <span aria-hidden>→</span>
-                      </Link>
-                    </div>
-                  </div>
-                </EdgeGlowCard>
-            ))}
-          </div>
-        </section>
-
-        {/* Services */}
-        <section className="space-y-6 pt-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-            <div className="space-y-2 max-w-3xl">
-              <h2 className="text-3xl font-bold sm:text-4xl">
-                {t("home.services.title", "Custom development services")}
-              </h2>
-              <p className="text-lg text-white/75 sm:text-xl">
-                {t(
-                  "home.services.subtitle",
-                  "AI agents, integrations, and full-cycle software delivery with security baked in from day one."
+                {/* Inner breathing glow effect - Exclude for Supreme */}
+                <div className="absolute inset-0 bg-radial-gradient from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition duration-500 pointer-events-none" />
+                {item.key !== 'supreme' && (
+                  <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full blur-[100px] opacity-20 pointer-events-none ${idx === 0 ? 'bg-pink-500' : 'bg-blue-500'} animate-pulse`} />
                 )}
-              </p>
-            </div>
-            <Link
-              href="/services"
-              className="inline-flex h-[54px] items-center justify-center rounded-full bg-white px-7 text-base font-semibold text-slate-900 shadow-lg transition hover:-translate-y-0.5 hover:bg-gray-100"
-            >
-              {t("home.services.cta", "View services")}
-            </Link>
-          </div>
-          <div className="grid gap-5 sm:grid-cols-3">
-            {[
-              {
-                title: t("home.services.cardsTitle.agents", "Agents"),
-                desc: t(
-                  "home.services.cards.agents",
-                  "Production-grade AI agents with guardrails, RAG, and secure connectors."
-                ),
-                color: "#F472B6" 
-              },
-              {
-                title: t("home.services.cardsTitle.integrations", "Integrations"),
-                desc: t(
-                  "home.services.cards.integrations",
-                  "Vendor-neutral integrations with your stack, IAM, and data governance."
-                ),
-                color: "#60A5FA"
-              },
-              {
-                title: t("home.services.cardsTitle.delivery", "Delivery"),
-                desc: t(
-                  "home.services.cards.delivery",
-                  "Full-cycle delivery with reliability SLOs, observability, and security reviews."
-                ),
-                color: "#34D399"
-              },
-            ].map((card, idx) => (
-             <EdgeGlowCard
-                key={card.title}
-                mode="static"
-                glowColor={card.color}
-                secondaryGlowColor="rgba(255,255,255,0.2)"
-                outerClassName="group h-full rounded-3xl p-[1px]"
-                innerClassName="rounded-[23px] bg-black/40 p-6 h-full transition duration-300 hover:bg-black/60 relative overflow-hidden"
-             >
-                 {/* Hover Glow Effect */}
-                <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition duration-500 pointer-events-none" />
-                <div 
-                    className="absolute -right-10 -bottom-10 w-32 h-32 rounded-full blur-[60px] opacity-0 group-hover:opacity-30 transition duration-500 pointer-events-none"
-                    style={{ backgroundColor: card.color }}
-                />
 
-                <div className="relative z-10 h-full flex flex-col justify-between">
-                    <div>
-                        <p className="text-lg font-semibold text-white">{card.title}</p>
-                        <p className="mt-3 text-base leading-relaxed text-white/75">{card.desc}</p>
+                <div className="flex flex-col lg:flex-row gap-8 relative z-10">
+                  {/* 3D Animation Area */}
+                  <div className="w-full lg:w-1/2 h-[320px] sm:h-[380px] lg:h-[400px] relative flex items-center justify-center">
+                    {item.key === 'supreme' ? (
+                      /* Supreme Animation - 2D */
+                      <div className="relative w-full h-full flex items-center justify-center scale-[1.1]">
+                        <Supreme2D />
+                      </div>
+                    ) : idx === 0 ? (
+                      /* AI-SOC Animation */
+                      <div className="relative w-full h-full scale-[0.85]">
+                        <StickyScrollAnimation />
+                      </div>
+                    ) : (
+                      /* Sithub Animation */
+                      <div className="relative w-full h-full flex items-center justify-center scale-[0.7]">
+                        <GlassyBox3D />
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Content Area */}
+                  <div className="w-full lg:w-1/2 flex flex-col justify-between">
+                    <div className="space-y-5">
+                      <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-5 py-2 text-sm font-semibold uppercase tracking-[0.12em] text-white/80">
+                        {item.badge}
+                      </div>
+                      <div className="space-y-3">
+                        <h3 className="text-4xl font-semibold text-white sm:text-5xl">{item.title}</h3>
+                        <p className="text-lg text-white/75 sm:text-xl leading-relaxed">{item.desc}</p>
+                      </div>
                     </div>
+                    <Link
+                      href={item.href}
+                      className="mt-8 inline-flex h-[56px] items-center justify-center gap-2 rounded-full bg-white px-8 text-lg font-semibold text-slate-900 shadow-lg transition hover:-translate-y-0.5 hover:bg-gray-100"
+                    >
+                      {t("home.systems.cta", "View details")}
+                      <span aria-hidden>→</span>
+                    </Link>
+                  </div>
                 </div>
-            </EdgeGlowCard>
+              </EdgeGlowCard>
             ))}
           </div>
         </section>
+
 
         {/* Featured Resources - Auto-fetching Link Previews */}
         <section className="space-y-8 pt-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
@@ -467,14 +384,14 @@ export default function HomeLanding() {
         <div className="py-16 sm:py-20 lg:py-24" />
 
         <div className="w-full">
-            <FloatingText />
+          <FloatingText />
         </div>
 
       </main>
 
       <BackToTopButton />
       <RequestDemoModal isOpen={isModalOpen} onClose={closeModal} />
-      
+
     </div>
   );
 }

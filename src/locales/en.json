@@ -1898,9 +1898,10 @@
     ]
   },
   "requestDemoModal": {
-    "title": "Request a Demo",
-    "fields": {},
-    "submit": "Submit",
+    "title": "Contact Us",
+    "contactInfo": "You can contact us through this email",
+    "contactSuffix": "to reach us out",
+    "close": "Close",
     "successTitle": "Request Sent!",
     "successBody": "We will contact you shortly to schedule the demo."
   },

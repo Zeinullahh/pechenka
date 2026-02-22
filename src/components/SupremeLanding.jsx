@@ -1,731 +1,666 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import Header from "@/components/Header";
-import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
-import BackToTopButton from "@/components/BackToTopButton";
-import RequestDemoModal from "@/components/RequestDemoModal";
-import EdgeGlowCard from "@/components/EdgeGlowCard";
-import { motion } from "framer-motion";
-import { useLanguage } from "@/contexts/LanguageContext";
+import SupremeHeroBox from "@/components/SupremeHeroBox";
 import GlowButton from "@/components/GlowButton";
-import { FloatingText } from "@/components/FloatingText";
 import Spotlights from "@/components/Spotlights";
-import SupremeBackground from "@/components/SupremeBackground";
-import Supreme2D from "@/components/Supreme2D";
-import { 
-  SiRuby, 
-  SiPython, 
-  SiPhp, 
-  SiNodedotjs, 
-  SiDotnet,
-  SiGo, 
-  SiRust, 
-  SiCplusplus, 
-  SiElixir, 
-  SiDart, 
-  SiSwift, 
-  SiJulia,
+import { BackgroundBeams } from "@/components/ui/background/background-beams";
+import { SupremeComparisonAnimation } from "./SupremeComparisonAnimation";
+import { McpFlowAnimation } from "./McpFlowAnimation";
+import {
+  AlertTriangle,
+  ArrowRight,
+  Bot,
+  Check,
+  ChevronDown,
+  Code,
+  Database,
+  FolderSearch,
+  Play,
+  ShieldCheck,
+  Terminal,
+  Workflow,
+  Wrench,
+  X,
+} from "lucide-react";
+import {
   SiDocker,
-  SiGithubactions,
-  SiGitlab
+  SiGo,
+  SiJavascript,
+  SiPhp,
+  SiPython,
+  SiRuby,
+  SiRust,
+  SiTypescript,
+  SiYaml,
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
 
+function PricingCard({
+  name,
+  price,
+  subprice,
+  badge,
+  icon,
+  highlights,
+  cta,
+  onCtaClick,
+  videoLabel,
+  emphasized = false,
+}) {
+  return (
+    <motion.article
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      className={`relative rounded-2xl border p-7 md:p-8 backdrop-blur-xl ${
+        emphasized
+          ? "md:-translate-y-2 border-violet-400/40 bg-gradient-to-b from-violet-500/14 via-fuchsia-500/12 to-blue-500/8 shadow-[0_0_55px_rgba(168,85,247,0.2)]"
+          : "border-white/10 bg-white/5"
+      }`}
+    >
+      {badge ? (
+        <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-violet-400 via-fuchsia-400 to-blue-400 px-3 py-1 text-xs font-semibold text-slate-950">
+          {badge}
+        </div>
+      ) : null}
+
+      <div className="mb-4 flex items-center gap-2 text-lg font-semibold text-white">
+        <span aria-hidden>{icon}</span>
+        {name}
+      </div>
+      <div className="mb-2 text-4xl font-bold text-white">{price}</div>
+      <div className="mb-6 text-sm text-violet-200/90">{subprice}</div>
+
+      <ul className="mb-7 space-y-3 text-sm text-slate-300">
+        {highlights.map((item) => (
+          <li key={item} className="flex items-start gap-2">
+            <Check className="mt-0.5 h-4 w-4 shrink-0 text-fuchsia-300" />
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
+
+      {emphasized ? (
+        <GlowButton className="mb-5 w-full" innerClassName="w-full" onClick={onCtaClick}>{cta}</GlowButton>
+      ) : (
+        <button onClick={onCtaClick} className="mb-5 w-full rounded-full border border-violet-300/25 bg-gradient-to-r from-slate-900/80 via-slate-800/70 to-slate-900/80 px-4 py-2.5 font-medium text-slate-100 transition hover:border-fuchsia-300/50 hover:text-white">
+          {cta}
+        </button>
+      )}
+
+      <div className="aspect-video rounded-xl border border-white/10 bg-black/30 p-3">
+        <div className="flex h-full w-full items-center justify-center gap-2 rounded-lg border border-dashed border-white/15 text-center text-sm text-slate-400">
+          <Play className="h-4 w-4" />
+          {videoLabel}
+        </div>
+      </div>
+    </motion.article>
+  );
+}
+
+function FaqItem({ question, answer, open, onToggle }) {
+  return (
+    <motion.div
+      layout
+      transition={{ duration: 0.28, ease: "easeOut" }}
+      className={`overflow-hidden rounded-xl border transition-all duration-300 ${
+        open
+          ? "border-violet-300/45 bg-gradient-to-r from-violet-500/18 via-fuchsia-500/16 to-blue-500/14 shadow-[0_16px_48px_rgba(168,85,247,0.24)]"
+          : "border-violet-300/22 bg-gradient-to-r from-violet-500/10 via-fuchsia-500/9 to-blue-500/9 hover:border-fuchsia-300/40 hover:shadow-[0_12px_34px_rgba(217,70,239,0.22)]"
+      }`}
+    >
+      <button
+        onClick={onToggle}
+        className="flex w-full items-center justify-between px-5 py-4 text-left"
+      >
+        <span className="font-semibold text-white">{question}</span>
+        <ChevronDown
+          className={`h-5 w-5 text-violet-100 transition-transform duration-300 ${
+            open ? "rotate-180" : ""
+          }`}
+        />
+      </button>
+      <AnimatePresence initial={false}>
+        {open ? (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.28, ease: "easeOut" }}
+            className="overflow-hidden"
+          >
+            <div className="border-t border-violet-200/20 px-5 py-4 text-sm leading-7 text-slate-100">{answer}</div>
+          </motion.div>
+        ) : null}
+      </AnimatePresence>
+    </motion.div>
+  );
+}
+
 export default function SupremeLanding() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [currency, setCurrency] = useState("USD");
-  const [activeCardIndex, setActiveCardIndex] = useState(null);
-  const [lightboxOpen, setLightboxOpen] = useState(false);
-  const [lightboxIndex, setLightboxIndex] = useState(0);
-  const { t } = useLanguage();
+  const [openFaq, setOpenFaq] = useState(null);
+  const maxUrl = "https://supreme.silence.codes/";
 
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
-
-  const pricing = {
-    USD: {
-      monthly: "$18",
-      yearly: "$150",
-      suffix: "",
-    },
+  const goToMax = () => {
+    window.location.href = maxUrl;
   };
 
-  const features = [
-    t(
-      "supreme.features.items.0",
-      "Code analyzer runs locally, the code is not being exposed to external servers"
-    ),
-    t(
-      "supreme.features.items.1",
-      "Finds vulnerable packages vulnerabilities within the project"
-    ),
-    t("supreme.features.items.2", "Finds Misconfigurations, and Secrets"),
-    t(
-      "supreme.features.items.3",
-      "Can scan for CI/CD misconfigurations and vulnerabilities"
-    ),
-  ];
+  const goToPricing = () => {
+    const pricingSection = document.getElementById("pricing");
+    if (pricingSection) {
+      pricingSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
 
-  const languages = [
-    { name: "Ruby", icon: SiRuby, color: "#CC342D" },
+  const languageLogos = [
+    { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
+    { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
     { name: "Python", icon: SiPython, color: "#3776AB" },
-    { name: "PHP", icon: SiPhp, color: "#777BB4" },
-    { name: "Node.js (JavaScript)", icon: SiNodedotjs, color: "#339933" },
-    { name: ".NET", icon: SiDotnet, color: "#512BD4" },
-    { name: "Java", icon: FaJava, color: "#007396" },
     { name: "Go", icon: SiGo, color: "#00ADD8" },
+    { name: "Java", icon: FaJava, color: "#007396" },
+    { name: "C#", icon: Code, color: "#8B5CF6" },
+    { name: "PHP", icon: SiPhp, color: "#777BB4" },
+    { name: "Ruby", icon: SiRuby, color: "#CC342D" },
     { name: "Rust", icon: SiRust, color: "#DEA584" },
-    { name: "C / C++", icon: SiCplusplus, color: "#00599C" },
-    { name: "Elixir", icon: SiElixir, color: "#A374FF" }, 
-    { name: "Dart", icon: SiDart, color: "#0175C2" },
-    { name: "Swift", icon: SiSwift, color: "#F05138" },
-    { name: "Julia", icon: SiJulia, color: "#9558B2" },
+    { name: "Bash", icon: Terminal, color: "#4EAA25" },
+    { name: "YAML", icon: SiYaml, color: "#CB171E" },
+    { name: "Dockerfiles", icon: SiDocker, color: "#2496ED" },
   ];
 
-  const cicdAndContainers = [
-    { name: "Docker", icon: SiDocker, color: "#2496ED" },
-    { name: "GitHub Actions", icon: SiGithubactions, color: "#2088FF" },
-    { name: "GitLab CI", icon: SiGitlab, color: "#FC6D26" },
-  ];
-
-  const screenshots = [
+  const scannerCoverage = [
     {
-      title: t("supreme.screenshots.0.title", "Very straightforward interface"),
-      image: "/supreme_dashboard.jpeg",
-      contains: [
-        "Interactive dashboard",
-        "Security score display",
-        "Real-time scan status",
+      title: "Backend Languages (9)",
+      items: [
+        "Python — Bandit (.py)",
+        "JavaScript/TypeScript — ESLint (.js, .jsx, .ts, .tsx)",
+        "Go — golangci-lint (.go)",
+        "Ruby — RuboCop (.rb, .rake, .gemspec)",
+        "PHP — PHPStan (.php)",
+        "Rust — Clippy (.rs)",
+        "Java — Checkstyle (.java)",
+        "C/C++ — cppcheck (.c, .cpp, .cc, .cxx, .h, .hpp)",
+        "C# — Roslynator (.cs)",
       ],
     },
     {
-      title: t("supreme.screenshots.1.title", "Well structured security reports"),
-      image: "/supreme_report.jpeg",
-      contains: [
-        "Detailed vulnerability analysis",
-        "Code snippets with issues",
-        "Severity levels & explanations",
+      title: "JVM Languages (3)",
+      items: [
+        "Kotlin — ktlint (.kt, .kts)",
+        "Scala — Scalastyle (.scala)",
+        "Groovy — CodeNarc (.groovy, .gradle)",
       ],
     },
     {
-      title: t("supreme.screenshots.2.title", "History of scans"),
-      image: "/supreme_scanning.jpeg",
-      contains: [
-        "Scan timeline view",
-        "Progress tracking",
-        "Historical comparisons",
+      title: "Functional Languages (5)",
+      items: [
+        "Haskell — HLint (.hs, .lhs)",
+        "Elixir — Credo (.ex, .exs)",
+        "Erlang — Elvis (.erl, .hrl)",
+        "F# — FSharpLint (.fs, .fsx)",
+        "Clojure — clj-kondo (.clj, .cljs, .cljc)",
+      ],
+    },
+    {
+      title: "Mobile Development (2)",
+      items: [
+        "Swift — SwiftLint (.swift)",
+        "Objective-C — OCLint (.m, .mm)",
+      ],
+    },
+    {
+      title: "Frontend & Styling (3)",
+      items: [
+        "CSS/SCSS/Sass/Less — Stylelint (.css, .scss, .sass, .less)",
+        "HTML — HTMLHint (.html, .htm)",
+        "Vue.js — ESLint (.vue)",
+      ],
+    },
+    {
+      title: "Infrastructure as Code (4)",
+      items: [
+        "Terraform — tflint (.tf, .tfvars)",
+        "Ansible — ansible-lint (.yml playbooks)",
+        "Kubernetes — kubeval (.yml, .yaml manifests)",
+        "CloudFormation — cfn-lint (.yml, .yaml, .json templates)",
+      ],
+    },
+    {
+      title: "Configuration Files (4)",
+      items: [
+        "JSON — built-in (.json)",
+        "TOML — taplo (.toml)",
+        "XML — xmllint (.xml)",
+        "Protobuf — buf lint (.proto)",
+      ],
+    },
+    {
+      title: "Shell & Scripts (4)",
+      items: [
+        "Bash/Shell — ShellCheck (.sh, .bash)",
+        "PowerShell — PSScriptAnalyzer (.ps1, .psm1)",
+        "Lua — luacheck (.lua)",
+        "Perl — perlcritic (.pl, .pm)",
+      ],
+    },
+    {
+      title: "Documentation (2)",
+      items: [
+        "Markdown — markdownlint (.md)",
+        "reStructuredText — rst-lint (.rst)",
+      ],
+    },
+    {
+      title: "Other Languages (5)",
+      items: [
+        "SQL — SQLFluff (.sql)",
+        "R — lintr (.r, .R)",
+        "Dart — dart analyze (.dart)",
+        "Solidity — solhint (.sol)",
+        "Docker — hadolint (Dockerfile*)",
       ],
     },
   ];
 
-  const GlowOrb = ({
-    className = "",
-    color = "rgba(168,85,247,0.25)",
-    size = "28rem",
-    blur = "80px",
-  }) => (
-    <div
-      className={`pointer-events-none absolute rounded-full mix-blend-screen ${className}`}
-      style={{ background: color, width: size, height: size, filter: `blur(${blur})` }}
-      aria-hidden
-    />
-  );
-
-  const stickyScrollColors = [
-    "linear-gradient(to bottom, #01091C, #FF00D4 50%)",
-    "#FF00D4",
-    "linear-gradient(to bottom, #FF00D4 50%, #01091C)",
-  ];
-
-  const stickyScrollContent = [
-    {
-      title: screenshots[0].title,
-      description: "",
-      content: (
-        <div className="h-full w-full flex items-center justify-center text-white bg-black">
-           <img
-             src={screenshots[0].image}
-             className="w-full h-full object-contain"
-             alt={screenshots[0].title}
-           />
-        </div>
-      ),
-    },
-    {
-      title: screenshots[1].title,
-      description: "",
-      content: (
-        <div className="h-full w-full flex items-center justify-center text-white bg-black">
-           <img
-             src={screenshots[1].image}
-             className="w-full h-full object-contain"
-             alt={screenshots[1].title}
-           />
-        </div>
-      ),
-    },
-    {
-      title: screenshots[2].title,
-      description: "",
-      content: (
-        <div className="h-full w-full flex items-center justify-center text-white bg-black">
-           <img
-             src={screenshots[2].image}
-             className="w-full h-full object-contain"
-             alt={screenshots[2].title}
-           />
-        </div>
-      ),
-    },
-  ];
-
-  return (
-    <div className="min-h-screen bg-[#01091C] text-slate-200 font-sans selection:bg-pink-500/30 relative">
-      <Header onOpenModal={openModal} />
-
-      <main className="relative z-10 pb-24">
-        {/* Hero Section */}
-        <section className="relative px-4 sm:px-6 lg:px-8 pt-10 pb-12 overflow-hidden">
-          {/* Animated Background Spotlights component */}
-          <div className="absolute inset-0 z-0">
-             <Spotlights />
-          </div>
-
-          {/* Circuit Board / Tech Pattern Overlay */}
-          <div 
-            className="absolute inset-0 z-0 opacity-[0.15] pointer-events-none"
-            style={{
-              backgroundImage: `radial-gradient(circle at 2px 2px, rgba(255,255,255,0.15) 1px, transparent 0)`,
-              backgroundSize: '24px 24px',
-              maskImage: 'radial-gradient(ellipse at center, black 40%, transparent 80%)',
-              WebkitMaskImage: 'radial-gradient(ellipse at center, black 40%, transparent 80%)'
-            }}
-          />
-
-          {/* Abstract Background Animation */}
-          <SupremeBackground />
-
-          <div className="relative z-10 max-w-7xl mx-auto">
-            <div className="flex flex-col lg:flex-row lg:items-center lg:gap-12 gap-8">
-              {/* Left content */}
-              <div className="flex-[2] space-y-6">
+  const faq = useMemo(
+    () => [
+      {
+        q: "What programming languages does Supreme 2 support?",
+        a: (
+          <div className="space-y-4">
+            <p>Supreme 2 supports major modern languages, configuration formats, and infrastructure files across backend, frontend, cloud, scripting, and documentation workflows.</p>
+            <div className="grid grid-cols-3 gap-3 sm:grid-cols-4 md:grid-cols-6">
+              {languageLogos.map((lang, index) => (
                 <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="relative inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 pl-7 text-xs font-semibold uppercase tracking-[0.15em] text-slate-200"
-                >
-                  <span className="absolute left-2 top-2 h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)] animate-pulse" />
-                  {t("supreme.hero.badge", "Supreme · VSCode Extension")}
-                </motion.div>
-
-                <motion.h1
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.1 }}
-                  className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight"
-                >
-                  {t("supreme.hero.title", "Local Code Vulnerability Scanner")}
-                </motion.h1>
-
-                <motion.p
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.2 }}
-                  className="text-lg text-slate-300 max-w-xl"
-                >
-                  {t(
-                    "supreme.hero.description",
-                    "Scan your code locally without exposing it to external servers. Fast, comprehensive vulnerability detection right in your editor."
-                  )}
-                </motion.p>
-
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.3 }}
-                  className="flex flex-wrap gap-3 pt-4"
-                >
-                  <GlowButton
-                    onClick={() => (window.location.href = "https://supreme.silence.codes")}
-                    variant="primary"
-                    size="lg"
-                  >
-                    {t("header.cta.get", "Get")}
-                  </GlowButton>
-                </motion.div>
-              </div>
-
-              {/* Right Box 3D Animation */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.4 }}
-                className="flex-1 w-full h-[400px] flex items-center justify-center relative"
-              >
-                  <div className="relative w-full h-full flex items-center justify-center scale-[1.6]">
-                    <Supreme2D />
-                  </div>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* Video / How to Use Guide Section */}
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-          <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="w-full max-w-4xl mx-auto"
-            >
-              <h3 className="text-2xl md:text-3xl font-bold text-white text-center mb-8">
-                {t(
-                  "supreme.video.title",
-                  "Installation & Usage tutorial (5 minutes)"
-                )}
-              </h3>
-              <div className="relative aspect-video bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-white/10 rounded-2xl overflow-hidden shadow-2xl backdrop-blur-sm group hover:border-purple-500/40 hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-300">
-                <iframe 
-                  width="100%" 
-                  height="100%" 
-                  src="https://www.youtube.com/embed/5dPw7giSBus" 
-                  title="Installation & Usage tutorial" 
-                  frameBorder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                  allowFullScreen
-                  className="w-full h-full"
-                ></iframe>
-              </div>
-          </motion.div>
-        </section>
-
-        {/* Pricing Section */}
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 space-y-12">
-          <div className="text-center space-y-4">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">
-              {t("supreme.pricing.title", "Simple Pricing")}
-            </h2>
-            <p className="text-slate-400 max-w-2xl mx-auto text-lg">
-              {t(
-                "supreme.pricing.subtitle",
-                "Choose the plan that works best for you"
-              )}
-            </p>
-          </div>
-
-          {/* Currency Selector (Hidden as only USD is available) */}
-          {/* <div className="flex justify-center gap-2">
-            <button
-              onClick={() => setCurrency("USD")}
-              className={`px-6 py-2 rounded-full font-medium transition-all ${
-                currency === "USD"
-                  ? "bg-purple-600 text-white"
-                  : "bg-slate-800/60 text-slate-300 hover:bg-slate-700/60"
-              }`}
-            >
-              USD
-            </button>
-          </div> */}
-
-          {/* Pricing Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-8 max-w-3xl mx-auto">
-            {/* Monthly Plan */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              onMouseEnter={() => setActiveCardIndex(0)}
-              onMouseLeave={() => setActiveCardIndex(null)}
-              className="group relative h-full"
-            >
-              {/* Glow backdrop */}
-              <div
-                className="absolute -inset-4 rounded-2xl transition-all duration-300 pointer-events-none blur-2xl"
-                style={{
-                  background: activeCardIndex === 0 ? "linear-gradient(135deg, rgba(168,85,247,0.9), rgba(99,102,241,0.7))" : "transparent",
-                  opacity: activeCardIndex === 0 ? 0.3 : 0,
-                }}
-              />
-
-              {/* Outer wrapper */}
-              <div
-                className="relative h-full rounded-2xl transition-all duration-300"
-                style={{
-                  border: "1.5px solid",
-                  borderColor: activeCardIndex === 0 ? "rgba(168,85,247,0.8)" : "rgba(168,85,247,0.4)",
-                  background: "rgba(20, 20, 35, 0.6)",
-                  backdropFilter: "blur(16px) saturate(180%)",
-                  boxShadow: activeCardIndex === 0 
-                    ? "inset 0 0 60px rgba(168,85,247,0.15), inset 0 0 120px rgba(168,85,247,0.08)"
-                    : "inset 0 0 40px rgba(168,85,247,0.06)",
-                }}
-              >
-                {/* Inner card */}
-                <div
-                  className="relative rounded-2xl overflow-hidden h-full flex flex-col p-5 sm:p-10 transition-all duration-300"
-                  style={{
-                    background: "rgba(8, 10, 20, 0.50)",
-                    backdropFilter: "blur(16px) saturate(180%)",
-                    border: "1px solid rgba(255, 255, 255, 0.08)",
-                    transform: activeCardIndex === 0 ? "translateY(-4px)" : "translateY(0)",
-                  }}
-                >
-                  {/* Colored overlay */}
-                  <div
-                    className="absolute inset-0 rounded-2xl pointer-events-none transition-all duration-300"
-                    style={{
-                      background: activeCardIndex === 0 ? "linear-gradient(135deg, rgba(168,85,247,0.1), rgba(99,102,241,0.05))" : "transparent",
-                      opacity: 1,
-                    }}
-                  />
-
-                  {/* Content */}
-                  <div className="relative z-10 space-y-3 sm:space-y-6 flex-1 flex flex-col">
-                    <div>
-                      <h3 className="text-lg sm:text-3xl font-bold text-white mb-1 sm:mb-2">
-                        {t("supreme.pricing.monthly.title", "Monthly")}
-                      </h3>
-                      <p className="text-sm sm:text-base text-slate-400">
-                        {t(
-                          "supreme.pricing.monthly.description",
-                          "Flexible, cancel anytime"
-                        )}
-                      </p>
-                    </div>
-
-                    <div className="pt-2 sm:pt-4">
-                      <div className="flex items-baseline gap-2 mb-1 sm:mb-2">
-                        <span className="text-3xl sm:text-6xl font-bold text-white">
-                          {pricing[currency].monthly}
-                        </span>
-                        <span className="text-xs sm:text-base text-slate-400">
-                          /{t("supreme.pricing.month", "month")}
-                        </span>
-                      </div>
-                    </div>
-
-                    <div className="flex-1" />
-
-                    <div className="flex justify-center">
-                      <GlowButton
-                        onClick={openModal}
-                        variant="primary"
-                        innerClassName="px-6 py-2 sm:px-7 sm:py-3 text-sm sm:text-base"
-                      >
-                        {t("supreme.pricing.subscribe", "Subscribe Now")}
-                      </GlowButton>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Yearly Plan - Featured */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
-              onMouseEnter={() => setActiveCardIndex(1)}
-              onMouseLeave={() => setActiveCardIndex(null)}
-              className="group relative h-full"
-            >
-              {/* Save badge */}
-              <motion.div
-                animate={{ y: [0, -4, 0] }}
-                transition={{ duration: 3, repeat: Infinity }}
-                className="absolute -top-4 left-8 z-20 px-4 py-1.5 bg-gradient-to-r from-purple-600 to-purple-500 rounded-full text-xs font-bold text-white shadow-lg"
-              >
-                {t("supreme.pricing.saveBadge", "Save 30%")}
-              </motion.div>
-
-              {/* Glow backdrop */}
-              <div
-                className="absolute -inset-4 rounded-2xl transition-all duration-300 pointer-events-none blur-2xl"
-                style={{
-                  background: activeCardIndex === 1 ? "linear-gradient(135deg, rgba(168,85,247,0.9), rgba(99,102,241,0.7))" : "transparent",
-                  opacity: activeCardIndex === 1 ? 0.3 : 0,
-                }}
-              />
-
-              {/* Outer wrapper */}
-              <div
-                className="relative h-full rounded-2xl transition-all duration-300"
-                style={{
-                  border: "1.5px solid",
-                  borderColor: activeCardIndex === 1 ? "rgba(168,85,247,0.8)" : "rgba(168,85,247,0.6)",
-                  background: "rgba(20, 20, 35, 0.6)",
-                  backdropFilter: "blur(16px) saturate(180%)",
-                  boxShadow: activeCardIndex === 1 
-                    ? "inset 0 0 60px rgba(168,85,247,0.15), inset 0 0 120px rgba(168,85,247,0.08), 0 0 60px 15px rgba(168,85,247,0.25)"
-                    : "inset 0 0 40px rgba(168,85,247,0.08), 0 0 40px 10px rgba(168,85,247,0.15)",
-                }}
-              >
-                {/* Inner card */}
-                <div
-                  className="relative rounded-2xl overflow-hidden h-full flex flex-col p-5 sm:p-10 transition-all duration-300"
-                  style={{
-                    background: "rgba(8, 10, 20, 0.50)",
-                    backdropFilter: "blur(16px) saturate(180%)",
-                    border: "1px solid rgba(255, 255, 255, 0.1)",
-                    transform: activeCardIndex === 1 ? "translateY(-4px)" : "translateY(0)",
-                  }}
-                >
-                  {/* Colored overlay */}
-                  <div
-                    className="absolute inset-0 rounded-2xl pointer-events-none transition-all duration-300"
-                    style={{
-                      background: "linear-gradient(135deg, rgba(168,85,247,0.15), rgba(99,102,241,0.08))",
-                      opacity: 1,
-                    }}
-                  />
-
-                  {/* Content */}
-                  <div className="relative z-10 space-y-3 sm:space-y-6 flex-1 flex flex-col">
-                    <div>
-                      <h3 className="text-lg sm:text-3xl font-bold text-white mb-1 sm:mb-2">
-                        {t("supreme.pricing.yearly.title", "Yearly")}
-                      </h3>
-                      <p className="text-sm sm:text-base text-slate-400">
-                        {t("supreme.pricing.yearly.description", "Best value")}
-                      </p>
-                    </div>
-
-                    <div className="pt-2 sm:pt-4">
-                      <div className="flex items-baseline gap-2 mb-1 sm:mb-2">
-                        <span className="text-3xl sm:text-6xl font-bold text-white">
-                          {pricing[currency].yearly}
-                        </span>
-                        <span className="text-xs sm:text-base text-slate-400">
-                          /{t("supreme.pricing.year", "year")}
-                        </span>
-                      </div>
-                      <p className="text-xs sm:text-sm text-slate-500">
-                        {t(
-                          "supreme.pricing.perMonthApprox",
-                          "~{value} per month",
-                          {
-                            value: Math.round(
-                              parseInt(pricing[currency].yearly.replace(/[^0-9]/g, "")) /
-                                12
-                            ),
-                          }
-                        )}
-                      </p>
-                    </div>
-
-                    <div className="flex-1" />
-
-                    <div className="flex justify-center">
-                      <GlowButton
-                        onClick={openModal}
-                        variant="primary"
-                        innerClassName="px-6 py-2 sm:px-7 sm:py-3 text-sm sm:text-base"
-                      >
-                        {t("supreme.pricing.subscribe", "Subscribe Now")}
-                      </GlowButton>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Supported Languages Section */}
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-0 space-y-12">
-          <div className="text-center space-y-4">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">
-              {t("supreme.languages.title", "Supported Languages")}
-            </h2>
-            <p className="text-slate-400 max-w-2xl mx-auto text-lg">
-              {t(
-                "supreme.languages.subtitle",
-                "Comprehensive security scanning for all major programming languages"
-              )}
-            </p>
-          </div>
-
-          <div className="flex flex-wrap justify-center gap-3 sm:gap-4 max-w-4xl mx-auto">
-            {languages.map((lang, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.05 }}
-                whileHover={{ scale: 1.05, y: -2 }}
-                className="px-5 py-2.5 sm:px-6 sm:py-3 rounded-xl bg-slate-900/60 border border-white/10 text-slate-300 font-medium hover:bg-purple-500/10 hover:border-purple-500/50 hover:text-white hover:shadow-[0_0_15px_rgba(168,85,247,0.3)] transition-all duration-300 cursor-default backdrop-blur-sm flex items-center gap-2.5"
-              >
-                <lang.icon className="w-5 h-5 transition-colors" style={{ color: lang.color }} />
-                {lang.name}
-              </motion.div>
-            ))}
-          </div>
-
-          {/* CI/CD & Container Scanning */}
-          <div className="text-center space-y-6 pt-8">
-            <div className="space-y-2">
-              <h3 className="text-2xl sm:text-3xl font-bold text-white">
-                {t("supreme.cicd.title", "CI/CD & Container Scanning")}
-              </h3>
-              <p className="text-slate-400 max-w-2xl mx-auto text-base">
-                {t(
-                  "supreme.cicd.subtitle",
-                  "Detect vulnerabilities in CI/CD pipelines and Docker container configurations"
-                )}
-              </p>
-            </div>
-
-            <div className="flex flex-wrap justify-center gap-3 sm:gap-4 max-w-3xl mx-auto">
-              {cicdAndContainers.map((tech, idx) => (
-                <motion.div
-                  key={idx}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
+                  key={lang.name}
+                  initial={{ opacity: 0, y: 8 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: idx * 0.05 }}
-                  whileHover={{ scale: 1.05, y: -2 }}
-                  className="px-5 py-2.5 sm:px-6 sm:py-3 rounded-xl bg-slate-900/60 border border-white/10 text-slate-300 font-medium hover:bg-purple-500/10 hover:border-purple-500/50 hover:text-white hover:shadow-[0_0_15px_rgba(168,85,247,0.3)] transition-all duration-300 cursor-default backdrop-blur-sm flex items-center gap-2.5"
+                  transition={{ delay: index * 0.03 }}
+                  whileHover={{ y: -4, scale: 1.04 }}
+                  className="group rounded-lg border border-white/20 bg-gradient-to-br from-violet-500/14 via-fuchsia-500/12 to-blue-500/12 px-2 py-3 text-center shadow-[0_0_24px_rgba(168,85,247,0.16)]"
                 >
-                  <tech.icon className="w-5 h-5 transition-colors" style={{ color: tech.color }} />
-                  {tech.name}
+                  <lang.icon
+                    className="mx-auto mb-2 h-6 w-6 transition duration-300 group-hover:scale-110"
+                    style={{ color: lang.color, filter: `drop-shadow(0 0 10px ${lang.color}66)` }}
+                  />
+                  <div className="text-[11px] font-medium text-slate-100">{lang.name}</div>
                 </motion.div>
               ))}
             </div>
+            <p className="text-violet-100">
+              Coverage includes <span className="font-semibold text-fuchsia-300">41 different scanner types</span> across <span className="font-semibold text-fuchsia-300">100+ file extensions</span>.
+            </p>
+          </div>
+        ),
+      },
+      {
+        q: "What scanner types and file formats are covered in detail?",
+        a: (
+          <div className="space-y-4">
+            <p>
+              Supreme 2 supports <span className="font-semibold text-fuchsia-300">41 scanner types</span> covering all major programming languages and file formats.
+            </p>
+            <div className="grid gap-3 md:grid-cols-2">
+              {scannerCoverage.map((group) => (
+                <div
+                  key={group.title}
+                  className="rounded-lg border border-violet-300/25 bg-gradient-to-br from-violet-500/12 via-fuchsia-500/10 to-blue-500/10 p-3"
+                >
+                  <h4 className="mb-2 text-sm font-semibold text-violet-200">{group.title}</h4>
+                  <ul className="space-y-1 text-xs leading-6 text-slate-100">
+                    {group.items.map((item) => (
+                      <li key={item} className="flex items-start gap-2">
+                        <Check className="mt-1 h-3.5 w-3.5 shrink-0 text-fuchsia-300" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+            <p className="text-violet-100">
+              Total: <span className="font-semibold text-fuchsia-300">41 scanner types</span> covering <span className="font-semibold text-fuchsia-300">100+ file extensions</span>.
+            </p>
+          </div>
+        ),
+      },
+      {
+        q: "How is Supreme 2 different from asking an LLM to review my code?",
+        a: (
+          <div className="space-y-2">
+            <p><span className="font-semibold text-rose-300">LLMs:</span> only analyze pasted snippets, cannot systematically scan entire repositories, miss hidden files/configs, and don’t deeply parse dependency graphs.</p>
+            <p><span className="font-semibold text-fuchsia-300">Supreme 2:</span> performs full-repository scanning with 74+ scanners, detects architectural patterns, produces structured intelligence, and enables MCP-powered auto-remediation in MAX.</p>
+          </div>
+        ),
+      },
+      {
+        q: "What is MCP and why does it matter?",
+        a: (
+          <div>
+            MCP allows Supreme 2 MAX to run as a structured security server. Instead of raw text, it returns categorized JSON vulnerability reports for automated remediation, AI-driven fixing, programmatic interpretation, and continuous improvement workflows.
+          </div>
+        ),
+      },
+      {
+        q: "Does Supreme 2 store my code?",
+        a: (
+          <div>
+            Supreme 2 scans locally in your environment. Your code nevers leaves your computer on which the scanner is working on. You, as the user might check the source code of Supreme 2 Light, available on github, and also you might check the network activity of the computer while code is being scanned
+          </div>
+        ),
+      },
+      {
+        q: "Is Supreme 2 suitable for startups?",
+        a: (
+          <div>
+            Yes. It is especially effective for AI-first startup teams shipping fast with LLM-generated code, where hidden cross-file risks are easy to miss without repository-wide security analysis.
+          </div>
+        ),
+      },
+    ],
+    [languageLogos, scannerCoverage]
+  );
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "SUPREME 2",
+    applicationCategory: "SecurityApplication",
+    operatingSystem: "Windows, macOS, Linux",
+    offers: [
+      { "@type": "Offer", name: "Supreme 2 Light", price: "0", priceCurrency: "USD" },
+      { "@type": "Offer", name: "Supreme 2 MAX", price: "18", priceCurrency: "USD" },
+    ],
+  };
+
+  return (
+    <div className="min-h-screen overflow-hidden bg-[#01091C] font-sans text-slate-200 selection:bg-violet-400/25">
+      <div className="fixed inset-0 z-0 pointer-events-none">
+        <BackgroundBeams className="opacity-50" />
+      </div>
+      <Header />
+
+      <main className="relative z-10 pb-16 pt-24">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+
+        <section className="relative mx-auto w-full px-4 pb-24 pt-16 sm:px-6 lg:px-8 max-w-[90rem]">
+          <Spotlights />
+
+          
+           {/* Code Snippets - Floating Background Elements */}
+          <div className="pointer-events-none absolute inset-0 overflow-hidden z-0">
+            <motion.div
+              animate={{ 
+                opacity: [0.1, 0.25, 0.1], 
+                y: [0, -15, 0],
+                rotate: [0, 2, 0]
+              }}
+              transition={{ 
+                duration: 8, 
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+              className="absolute left-[8%] top-32 lg:left-[12%] lg:top-48 rounded-lg border border-violet-400/15 bg-violet-500/5 p-3 px-4 font-mono text-xs text-violet-200/60 hidden sm:block backdrop-blur-[1px]"
+            >
+              scan.repos({`{"depth":"full"}`})
+            </motion.div>
+            <motion.div
+              animate={{ 
+                opacity: [0.08, 0.2, 0.08], 
+                y: [0, 20, 0],
+                rotate: [0, -3, 0]
+              }}
+              transition={{ 
+                duration: 10, 
+                repeat: Infinity, 
+                delay: 0.5,
+                ease: "easeInOut" 
+              }}
+              className="absolute right-[8%] bottom-32 lg:right-[10%] lg:bottom-48 rounded-lg border border-fuchsia-400/10 bg-fuchsia-500/5 p-3 px-4 font-mono text-xs text-fuchsia-200/50 hidden sm:block backdrop-blur-[1px]"
+            >
+              vulnerabilities.json
+            </motion.div>
+          </div>
+
+          <div className="grid gap-12 lg:grid-cols-2 items-center relative z-10">
+            {/* Left Column: Text - Left Aligned */}
+            <div className="flex flex-col items-start text-left pl-4 lg:pl-12">
+              <motion.h1
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-white tracking-tight"
+              >
+                Build Fast. Ship Safe.
+                <span className="mt-2 block bg-gradient-to-r from-violet-300 via-fuchsia-300 to-blue-300 bg-clip-text text-transparent">
+                  Your AI writes the code. Supreme 2 secures it.
+                </span>
+              </motion.h1>
+              <p className="mt-6 max-w-2xl text-lg text-slate-300 sm:text-lg leading-relaxed">
+                74+ intelligent scanners. Deep architecture-level analysis. The world’s first MCP-based code scanner.
+              </p>
+            </div>
+
+            {/* Right Column: 3D Cube Animation + Buttons Below */}
+            <div className="flex flex-col items-center justify-center w-full pr-4 lg:pr-12 md:-mt-12">
+               <div className="relative flex items-center justify-center w-full h-[320px] lg:h-[400px]">
+                 <SupremeHeroBox />
+               </div>
+               
+               {/* Buttons moved here, below animation */}
+               <div className="mt-8 flex flex-col w-full sm:w-auto items-center gap-4">
+                <GlowButton glowColor="#C026D3" onClick={goToMax} className="w-full sm:w-[320px] justify-center text-center whitespace-nowrap" innerClassName="px-8 py-4 w-full text-base sm:text-lg font-bold">Upgrade to Supreme 2 MAX</GlowButton>
+                <button onClick={goToPricing} className="w-full sm:w-[320px] whitespace-nowrap rounded-full border border-violet-300/25 bg-gradient-to-r from-slate-900/85 via-slate-800/70 to-slate-900/85 px-8 py-4 text-base sm:text-lg font-medium text-slate-100 transition hover:border-fuchsia-300/50 hover:text-white justify-center text-center">
+                  Start Free with Supreme 2 Light
+                </button>
+              </div>
+            </div>
           </div>
         </section>
 
-        {/* Features Section */}
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-0 space-y-12">
-          <div className="text-center space-y-4">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">
-              {t("supreme.features.title", "Powerful Features")}
-            </h2>
-            <p className="text-slate-400 max-w-2xl mx-auto text-lg">
-              {t(
-                "supreme.features.subtitle",
-                "Everything you need for secure code development"
-              )}
+        <section className="mx-auto max-w-6xl px-4 pb-24 text-center sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-white sm:text-3xl">🎬 Watch Supreme 2 in Action</h2>
+          <div className="mx-auto mt-8 max-w-4xl rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-xl">
+            <div className="aspect-video rounded-xl border border-dashed border-white/20 bg-black/30">
+              <div className="flex h-full w-full items-center justify-center gap-3 text-slate-300">
+                <Play className="h-5 w-5 text-fuchsia-300" />
+                [ Trailer Video Placeholder ]
+              </div>
+            </div>
+            <p className="mt-3 text-sm text-slate-400">
+              Problem of AI-only review · why LLMs miss hidden code · MCP breakthrough · Light vs MAX
             </p>
           </div>
+        </section>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {features.map((feature, idx) => (
+        <section className="mx-auto max-w-6xl px-4 pb-24 sm:px-6 lg:px-8" id="pricing">
+          <div className="grid gap-7 md:grid-cols-2">
+            <PricingCard
+              name="Supreme 2 Light"
+              price="Free"
+              subprice="Forever · No credit card required"
+              icon="🆓"
+              highlights={[
+                "VSCode extension",
+                "Full project scanning",
+                "74+ scanners",
+                "Comprehensive report",
+                "Report-only workflow (no auto-fix)",
+              ]}
+              cta={
+                <span>
+                  Get Supreme 2 Light
+                </span>
+              }
+              onCtaClick={goToPricing}
+              videoLabel="🎥 Instructional Video Placeholder – Supreme 2 Light"
+            />
+            <PricingCard
+              name="Supreme 2 MAX"
+              price="$18/month"
+              subprice="$150/year · Best Value"
+              badge="Best Value"
+              icon="💎"
+              highlights={[
+                "MCP server-based scanner",
+                "Full project scanning",
+                "74+ scanners",
+                "Comprehensive report",
+                "LLM-friendly report for auto-remediation",
+                "Autonomous vulnerability fixing",
+                "Enhanced detection via threat intelligence",
+              ]}
+              cta="Upgrade to MAX"
+              onCtaClick={goToMax}
+              videoLabel="🎥 Instructional Video Placeholder – Supreme 2 MAX Setup"
+              emphasized
+            />
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-7xl px-4 pb-24 sm:px-6 lg:px-8">
+          <h2 className="text-center text-2xl font-bold text-white sm:text-3xl">The Hidden Risk of AI-Generated Code</h2>
+          <div className="mt-10 grid gap-8 md:grid-cols-2 md:items-center">
+            <div className="rounded-2xl border border-rose-300/20 bg-rose-500/5 p-6">
+              <h3 className="mb-4 flex items-center gap-2 font-semibold text-rose-300">
+                <AlertTriangle className="h-5 w-5" /> LLM = partial visibility
+              </h3>
+              <ul className="space-y-2 text-sm text-slate-300">
+                <li className="flex items-start gap-2"><X className="mt-0.5 h-4 w-4 text-rose-300" />Only see pasted snippets</li>
+                <li className="flex items-start gap-2"><X className="mt-0.5 h-4 w-4 text-rose-300" />Miss hidden files</li>
+                <li className="flex items-start gap-2"><X className="mt-0.5 h-4 w-4 text-rose-300" />Ignore dependency chains</li>
+                <li className="flex items-start gap-2"><X className="mt-0.5 h-4 w-4 text-rose-300" />Don’t scan architecture</li>
+                <li className="flex items-start gap-2"><X className="mt-0.5 h-4 w-4 text-rose-300" />Don’t systematically audit configs</li>
+              </ul>
+            </div>
+            <div className="rounded-2xl border border-violet-300/25 bg-violet-500/8 p-6">
+              <h3 className="mb-4 flex items-center gap-2 font-semibold text-violet-300">
+                <ShieldCheck className="h-5 w-5" /> Supreme 2 = full repository scan
+              </h3>
+              <div className="rounded-xl border border-white/10 bg-black/30 p-4">
+                <div className="flex flex-wrap items-center justify-center gap-2 text-xs text-slate-300 sm:gap-3">
+                  <div className="rounded-md border border-white/15 bg-white/5 px-3 py-2">Repo</div>
+                  <ArrowRight className="h-4 w-4 text-fuchsia-300" />
+                  <div className="rounded-md border border-violet-300/30 bg-violet-500/10 px-3 py-2">Deep Scanner</div>
+                  <ArrowRight className="h-4 w-4 text-fuchsia-300" />
+                  <div className="rounded-md border border-blue-300/30 bg-blue-500/10 px-3 py-2">Full findings</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-6xl px-4 pb-24 sm:px-6 lg:px-8">
+          <h2 className="text-center text-2xl font-bold text-white sm:text-3xl">Meet SUPREME 2</h2>
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+            {[
+              "74+ scanners",
+              "Deep multi-language support",
+              "Architecture-aware analysis",
+              "Parallel scanning engine",
+              "Intelligent vulnerability detection",
+            ].map((item, index) => (
               <motion.div
-                key={idx}
+                key={item}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: idx * 0.05 }}
-                className="group relative"
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.08 }}
+                className="rounded-xl border border-white/10 bg-white/5 p-4"
               >
-                {/* Glow effect on hover */}
-                <div
-                  className="absolute -inset-2 rounded-xl transition-all duration-300 pointer-events-none blur-xl opacity-0 group-hover:opacity-40"
-                  style={{
-                    background: "linear-gradient(135deg, rgba(168,85,247,0.6), rgba(99,102,241,0.4))",
-                  }}
-                />
-                
-                <div className="relative h-full flex items-start gap-4 p-6 bg-slate-900/40 border border-white/5 rounded-xl hover:border-purple-500/60 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-purple-500/20">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-purple-500/20 border border-purple-500/40 flex items-center justify-center mt-0.5 group-hover:bg-purple-500/40 group-hover:border-purple-500/80 transition-all duration-300">
-                    <svg
-                      className="w-4 h-4 text-purple-400"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </div>
-                  <p className="text-slate-200 text-sm leading-relaxed group-hover:text-slate-100 transition-colors duration-300">{feature}</p>
+                <div className="mb-2 inline-flex rounded-full border border-violet-300/30 bg-violet-500/10 p-1.5">
+                  <Check className="h-4 w-4 text-fuchsia-300" />
                 </div>
+                <p className="text-sm text-slate-200">{item}</p>
               </motion.div>
             ))}
           </div>
         </section>
 
-        {/* Screenshots Section - Sticky Scroll */}
-        <div className="w-full pt-10 pb-20 relative z-30">
-          <div className="hidden lg:block">
-            <StickyScroll 
-              content={stickyScrollContent} 
-              backgroundColors={stickyScrollColors} 
-              itemClassName="my-60 md:my-96 lg:my-[30rem]"
-            />
+        <section className="mx-auto max-w-7xl px-4 pb-24 sm:px-6 lg:px-8">
+          <div className="rounded-2xl border border-violet-300/25 bg-gradient-to-b from-violet-500/12 via-fuchsia-500/8 to-blue-500/8 p-6 md:p-8">
+            <h2 className="text-center text-2xl font-bold text-white sm:text-3xl">The World’s First MCP-Based Code Scanner</h2>
+            <p className="mx-auto mt-4 max-w-3xl text-center text-slate-300">
+              Supreme 2 MAX runs as an MCP server so your LLM can trigger full scans, consume structured JSON, understand categorized vulnerabilities, securely refactor, and re-validate fixes.
+            </p>
+
+            <McpFlowAnimation />
           </div>
-          <div className="lg:hidden flex flex-col gap-10 px-4 py-12">
-            {screenshots.map((item, idx) => (
-              <EdgeGlowCard
-                key={idx}
-                mode="static"
-                outerClassName="rounded-3xl p-[2px]"
-                innerClassName="glass-card p-6 space-y-4 rounded-3xl"
-                glowColor="#FF00B7"
-                secondaryGlowColor="rgba(0,191,255,0.7)"
-                topColor="#FF00B7"
-                leftColor="#FF00B7"
-                rightColor="rgba(0,191,255,0.7)"
-                bottomColor="rgba(0,191,255,0.7)"
-              >
-                <h3 className="text-2xl font-semibold text-center text-white">{item.title}</h3>
-                <div className="flex justify-center">
-                  <div className="relative w-full max-w-[280px] aspect-[4/5] overflow-hidden rounded-lg border border-white/10 bg-black/60">
-                    <img
-                      src={item.image}
-                      className="w-full h-full object-contain"
-                      alt={item.title}
-                    />
-                  </div>
-                </div>
-              </EdgeGlowCard>
+        </section>
+
+
+
+        <section className="mx-auto max-w-7xl px-4 pb-24 sm:px-6 lg:px-8">
+          <div className="rounded-2xl border border-violet-300/25 bg-gradient-to-b from-violet-500/12 via-fuchsia-500/8 to-blue-500/8 p-6 md:p-8">
+            <h2 className="mb-8 text-center text-2xl font-bold text-white sm:text-3xl">Supreme 2 Light vs Supreme 2 MAX</h2>
+            <SupremeComparisonAnimation />
+             <div className="mt-8 text-center">
+              <p className="mx-auto max-w-3xl text-sm text-slate-300">
+                <span className="font-semibold text-fuchsia-300">MAX Advantage:</span> Includes detailed Threat Intelligence and runs as an MCP Server meant to be used by LLMs.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-7xl px-4 pb-24 sm:px-6 lg:px-8">
+          <h2 className="text-center text-2xl font-bold text-white sm:text-3xl">Why Supreme 2 Doesn’t Miss Code Snippets</h2>
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
+              <h3 className="mb-4 flex items-center gap-2 text-lg font-semibold text-slate-200">
+                <Terminal className="h-5 w-5 text-rose-300" /> LLM-only review
+              </h3>
+              <ul className="space-y-2 text-sm text-slate-300">
+                <li className="flex items-center gap-2"><X className="h-4 w-4 text-rose-300" />Analyzes fragments</li>
+                <li className="flex items-center gap-2"><X className="h-4 w-4 text-rose-300" />Misses configs</li>
+                <li className="flex items-center gap-2"><X className="h-4 w-4 text-rose-300" />Skips hidden modules</li>
+                <li className="flex items-center gap-2"><X className="h-4 w-4 text-rose-300" />Ignores dependency graphs</li>
+              </ul>
+            </div>
+            <div className="rounded-2xl border border-violet-300/25 bg-violet-500/8 p-6">
+              <h3 className="mb-4 flex items-center gap-2 text-lg font-semibold text-violet-200">
+                <FolderSearch className="h-5 w-5 text-fuchsia-300" /> Supreme 2
+              </h3>
+              <ul className="space-y-2 text-sm text-slate-200">
+                <li className="flex items-center gap-2"><Check className="h-4 w-4 text-fuchsia-300" />Scans entire repository</li>
+                <li className="flex items-center gap-2"><Check className="h-4 w-4 text-fuchsia-300" />Parses configs</li>
+                <li className="flex items-center gap-2"><Check className="h-4 w-4 text-fuchsia-300" />Checks dependency trees</li>
+                <li className="flex items-center gap-2"><Check className="h-4 w-4 text-fuchsia-300" />Detects cross-file patterns</li>
+                <li className="flex items-center gap-2"><Check className="h-4 w-4 text-fuchsia-300" />Performs architecture analysis</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section className="relative mx-auto max-w-4xl px-4 pb-24 sm:px-6 lg:px-8">
+          <motion.div
+            animate={{ opacity: [0.2, 0.35, 0.2] }}
+            transition={{ duration: 5, repeat: Infinity }}
+            className="pointer-events-none absolute -left-8 top-20 h-40 w-40 rounded-full bg-fuchsia-400/20 blur-3xl"
+          />
+          <motion.div
+            animate={{ opacity: [0.18, 0.3, 0.18] }}
+            transition={{ duration: 5, repeat: Infinity, delay: 1 }}
+            className="pointer-events-none absolute -right-8 bottom-6 h-44 w-44 rounded-full bg-violet-400/20 blur-3xl"
+          />
+          <h2 className="text-center text-2xl font-bold text-white sm:text-3xl">Frequently Asked Questions</h2>
+          <div className="relative mt-8 space-y-3">
+            {faq.map((item, idx) => (
+              <FaqItem
+                key={item.q}
+                question={item.q}
+                answer={item.a}
+                open={openFaq === idx}
+                onToggle={() => setOpenFaq(openFaq === idx ? null : idx)}
+              />
             ))}
           </div>
-        </div>
+        </section>
 
-        {/* Spacer before social dock */}
-        <div className="py-16 sm:py-20 lg:py-24" />
-
-        <div className="w-full">
-            <FloatingText />
-        </div>
 
       </main>
 
-      {lightboxOpen && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-6"
-          role="dialog"
-          aria-modal="true"
-          onClick={() => setLightboxOpen(false)}
-        >
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              setLightboxOpen(false);
-            }}
-            className="absolute top-6 right-6 text-slate-200 bg-black/40 rounded-full p-2"
-            aria-label={t("supreme.lightbox.close", "Close preview")}
-          >
-            ✕
-          </button>
-
-          <img
-            src={`/components/supreme/supreme-scan-${lightboxIndex + 1}.png`}
-            alt={
-              screenshots[lightboxIndex]?.title ||
-              t("supreme.lightbox.alt", "Screenshot")
-            }
-            className="max-h-[90vh] max-w-[90vw] rounded-lg shadow-2xl"
-            onClick={(e) => e.stopPropagation()}
-          />
-        </div>
-      )}
-
-      <RequestDemoModal isOpen={isModalOpen} onClose={closeModal} />
-      <BackToTopButton />
     </div>
   );
 }

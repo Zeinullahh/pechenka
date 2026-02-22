@@ -18,7 +18,7 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-12 items-center text-gray-400 text-center md:text-left text-sm md:text-base">
-             <div className="flex flex-col sm:flex-row items-center sm:space-x-2">
+            <div className="flex flex-col sm:flex-row items-center sm:space-x-2">
               <span className="font-semibold text-white">{t("footer.contactLabel", "Contact:")}</span>
               <span>{t("footer.contactValue", "info@silenceai.net")}</span>
             </div>
@@ -30,58 +30,45 @@ const Footer = () => {
         </div>
         <div className="mt-8 sm:mt-12 border-t border-gray-800 pt-8 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
           <p className="text-gray-500 text-sm text-center lg:text-left w-full lg:w-auto order-2 lg:order-1">{copyright}</p>
-          
+
           <div className="w-full lg:w-auto order-1 lg:order-2">
-             <div className="flex justify-center lg:justify-end mb-4">
-                <a href="/policies/cookies" className="text-gray-400 hover:text-white transition-colors duration-300 text-sm">
-                  {t("footer.links.cookies", "Cookies Policy")}
-                </a>
-             </div>
-             
-             <div className="grid grid-cols-1 sm:grid-cols-[100px_repeat(3,auto)] gap-y-3 gap-x-2 sm:gap-x-6 items-center text-sm md:text-right">
-                
-                {/* AI-SOC 1 */}
-                <div className="text-gray-500 text-xs uppercase tracking-wider font-semibold text-center sm:text-right">AI-SOC 1:</div>
-                <div className="flex flex-wrap justify-center sm:justify-end gap-3 sm:contents">
-                  <Link href="/policies/terms_of_use" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
-                    {t("footer.links.termsUse", "Terms of Use")}
-                  </Link>
-                  <Link href="/policies/terms_of_service" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
-                    {t("footer.links.termsService", "Terms of Service")}
-                  </Link>
-                  <Link href="/policies/privacy" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
-                    {t("footer.links.privacy", "Privacy Policy")}
-                  </Link>
-                </div>
+            <div className="flex justify-center lg:justify-end mb-4">
+              <a href="/policies/cookies" className="text-gray-400 hover:text-white transition-colors duration-300 text-sm">
+                {t("footer.links.cookies", "Cookies Policy")}
+              </a>
+            </div>
 
-                {/* SITHUB */}
-                <div className="text-gray-500 text-xs uppercase tracking-wider font-semibold text-center sm:text-right mt-2 sm:mt-0">Sithub:</div>
-                <div className="flex flex-wrap justify-center sm:justify-end gap-3 sm:contents">
-                  <Link href="/policies/sithub/terms_of_use" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
-                    {t("footer.links.termsUse", "Terms of Use")}
-                  </Link>
-                  <Link href="/policies/sithub/terms_of_service" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
-                    {t("footer.links.termsService", "Terms of Service")}
-                  </Link>
-                  <Link href="/policies/sithub/privacy" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
-                    {t("footer.links.privacy", "Privacy Policy")}
-                  </Link>
-                </div>
+            <div className="grid grid-cols-1 sm:grid-cols-[100px_repeat(3,auto)] gap-y-3 gap-x-2 sm:gap-x-6 items-center text-sm md:text-right">
 
-                {/* SUPREME */}
-                <div className="text-gray-500 text-xs uppercase tracking-wider font-semibold text-center sm:text-right mt-2 sm:mt-0">Supreme:</div>
-                <div className="flex flex-wrap justify-center sm:justify-end gap-3 sm:contents">
-                  <Link href="/policies/supreme/terms_of_use" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
-                    {t("footer.links.termsUse", "Terms of Use")}
-                  </Link>
-                  <Link href="/policies/supreme/terms_of_service" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
-                    {t("footer.links.termsService", "Terms of Service")}
-                  </Link>
-                  <Link href="/policies/supreme/privacy" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
-                    {t("footer.links.privacy", "Privacy Policy")}
-                  </Link>
-                </div>
-             </div>
+              {/* AI-SOC 1 */}
+              <div className="text-gray-500 text-xs uppercase tracking-wider font-semibold text-center sm:text-right">AI-SOC 1:</div>
+              <div className="flex flex-wrap justify-center sm:justify-end gap-3 sm:contents">
+                <Link href="/policies/terms_of_use" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
+                  {t("footer.links.termsUse", "Terms of Use")}
+                </Link>
+                <Link href="/policies/terms_of_service" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
+                  {t("footer.links.termsService", "Terms of Service")}
+                </Link>
+                <Link href="/policies/privacy" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
+                  {t("footer.links.privacy", "Privacy Policy")}
+                </Link>
+              </div>
+
+
+              {/* SUPREME */}
+              <div className="text-gray-500 text-xs uppercase tracking-wider font-semibold text-center sm:text-right mt-2 sm:mt-0">Supreme:</div>
+              <div className="flex flex-wrap justify-center sm:justify-end gap-3 sm:contents">
+                <Link href="/policies/supreme/terms_of_use" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
+                  {t("footer.links.termsUse", "Terms of Use")}
+                </Link>
+                <Link href="/policies/supreme/terms_of_service" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
+                  {t("footer.links.termsService", "Terms of Service")}
+                </Link>
+                <Link href="/policies/supreme/privacy" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
+                  {t("footer.links.privacy", "Privacy Policy")}
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
 

@@ -19,7 +19,6 @@ const DESKTOP_WIDTH = 1130;
 const Header = ({ onOpenModal, policyLang, onPolicyLangChange, onSithubGet, hideCta = false }) => {
   const pathname = usePathname();
   const isMainPage = pathname === "/";
-  const isSithubPage = pathname === "/sithub" || pathname === "/sithub/";
   const isSupremePage = pathname === "/supreme" || pathname === "/supreme/";
   const isPolicyPage = pathname?.startsWith("/policies");
   const isSlncEnvPolicyPage = pathname?.startsWith("/policies/slnc_env");
@@ -101,7 +100,6 @@ const Header = ({ onOpenModal, policyLang, onPolicyLangChange, onSithubGet, hide
 
   const systemsItems = [
     { key: "ai-soc", label: t("header.nav.systemsAiSoc", "AI-SOC"), href: "/ai-soc" },
-    { key: "sithub", label: t("header.nav.systemsSithub", "Sithub"), href: "/sithub" },
     { key: "supreme", label: t("header.nav.systemsSupreme", "Supreme"), href: "/supreme" },
   ];
 
@@ -111,7 +109,6 @@ const Header = ({ onOpenModal, policyLang, onPolicyLangChange, onSithubGet, hide
   ];
 
   const navItems = [
-    { key: "services", label: t("header.nav.services", "Services"), href: "/services" },
     { key: "affiliate", label: t("header.nav.affiliate", "Affiliate Program"), href: "/affiliate" },
     { key: "mail", label: t("header.nav.mail", "Mail"), onClick: () => setEmailSecurityOpen(true) },
     { key: "systems", label: t("header.nav.systems", "Systems"), children: systemsItems },
@@ -254,20 +251,14 @@ const Header = ({ onOpenModal, policyLang, onPolicyLangChange, onSithubGet, hide
                     <GlowButton
                       onClick={() => {
                         if (isSupremePage) {
-                          window.location.href = "https://supreme.silence.codes";
-                        } else if (isSithubPage) {
-                          if (onSithubGet) {
-                            onSithubGet();
-                          } else {
-                            setCountrySelectOpen(true);
-                          }
+                          window.location.href = "https://supreme.silence.codes/";
                         } else {
                           onOpenModal?.();
                         }
                         setIsMobileMenuOpen(false);
                       }}
                     >
-                      {isSithubPage || isSupremePage || pathname === "/ai-soc" || pathname === "/ai-soc/" ? t("header.cta.get", "Get") : t("header.cta.requestDemo", "Request Demo")}
+                        {isSupremePage ? "Get MAX" : pathname === "/ai-soc" || pathname === "/ai-soc/" ? t("header.cta.get", "Get") : t("header.cta.contact", "Contact")}
                     </GlowButton>
                   )}
                 </div>
@@ -446,34 +437,19 @@ const Header = ({ onOpenModal, policyLang, onPolicyLangChange, onSithubGet, hide
                     {t("header.cta.contact", "Contact")}
                   </GlowButton>
                 )}
-                {/* Get button for /sithub - desktop only, mobile shows in menu */}
-                {isDesktop && isSithubPage && !hideCta && (
-                  <GlowButton
-                    onClick={() => {
-                      if (onSithubGet) {
-                        onSithubGet();
-                      } else {
-                        setCountrySelectOpen(true);
-                      }
-                    }}
-                  >
-                    {t("header.cta.get", "Get")}
-                  </GlowButton>
-                )}
                 {/* Get button for /supreme - desktop only */}
                 {isDesktop && isSupremePage && !hideCta && (
                   <GlowButton
                     onClick={() => {
-                      window.location.href = "https://supreme.silence.codes";
+                      window.location.href = "https://supreme.silence.codes/";
                     }}
                   >
-                    {t("header.cta.get", "Get")}
+                    Get MAX
                   </GlowButton>
                 )}
-                {/* Request Demo button for other non-main, non-policy, non-sithub pages - desktop only */}
-                {isDesktop && !isMainPage && !isPolicyPage && !isSithubPage && !isSupremePage && !hideCta && (
+                {isDesktop && !isMainPage && !isPolicyPage && !isSupremePage && !hideCta && (
                   <GlowButton onClick={onOpenModal}>
-                    {pathname === "/ai-soc" || pathname === "/ai-soc/" ? t("header.cta.get", "Get") : t("header.cta.requestDemo", "Request Demo")}
+                    {pathname === "/ai-soc" || pathname === "/ai-soc/" ? t("header.cta.get", "Get") : t("header.cta.contact", "Contact")}
                   </GlowButton>
                 )}
               </motion.div>

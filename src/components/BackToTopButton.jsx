@@ -38,7 +38,7 @@ const BackToTopButton = () => {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           onClick={scrollToTop}
-          aria-label={t('backToTop.label', 'Back to top')}
+          aria-label="Back to top"
         >
           <svg
             className="w-6 h-6"

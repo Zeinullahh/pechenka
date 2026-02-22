@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import ParallaxGlobe from "@/components/ParallaxGlobe";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import CookieConsent from "@/components/CookieConsent";
+import BackToTopButton from "@/components/BackToTopButton";
 
 export default function LayoutWrapper({ children, initialLanguage }) {
   const pathname = usePathname();
@@ -36,6 +37,7 @@ export default function LayoutWrapper({ children, initialLanguage }) {
         <Footer />
       </div>
       <CookieConsent />
+      <BackToTopButton />
     </LanguageProvider>
   );
 }

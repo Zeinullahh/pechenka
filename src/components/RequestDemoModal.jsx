@@ -62,56 +62,41 @@ const RequestDemoModal = ({ isOpen, onClose }) => {
                 </button>
               </div>
             ) : (
-              <>
-                <h2 className="text-2xl font-bold mb-6 text-center">{t("requestDemoModal.title", "Request a Demo")}</h2>
-                
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-1">
-                      {t("requestDemoModal.name", "Name")}
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      className="w-full px-4 py-2 bg-slate-900/50 border border-white/10 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all text-white placeholder-gray-500"
-                      placeholder={t("requestDemoModal.placeholders.name", "Your name")}
-                    />
+              <div className="text-center py-8">
+                <h2 className="text-2xl font-bold mb-6">{t("requestDemoModal.title", "Contact Us")}</h2>
+
+                <div className="space-y-6">
+                  <div className="flex justify-center mb-4">
+                    <div className="w-16 h-16 bg-blue-500/10 rounded-full flex items-center justify-center border border-blue-500/20">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                    </div>
                   </div>
 
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-1">
-                      {t("requestDemoModal.email", "Email")}
-                    </label>
-                    <input
-                      type="email"
-                      required
-                      className="w-full px-4 py-2 bg-slate-900/50 border border-white/10 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all text-white placeholder-gray-500"
-                      placeholder={t("requestDemoModal.placeholders.email", "your@email.com")}
-                    />
-                  </div>
+                  <p className="text-gray-300 text-lg leading-relaxed">
+                    {t("requestDemoModal.contactInfo", "You can contact us through this email")}
+                    <br />
+                    <a
+                      href="mailto:info@silence.codes"
+                      className="text-blue-400 font-bold hover:text-blue-300 transition-colors text-xl mt-2 inline-block"
+                    >
+                      info@silence.codes
+                    </a>
+                    <br />
+                    {t("requestDemoModal.contactSuffix", "to reach us out")}
+                  </p>
 
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-1">
-                      {t("requestDemoModal.company", "Company")}
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      className="w-full px-4 py-2 bg-slate-900/50 border border-white/10 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all text-white placeholder-gray-500"
-                      placeholder={t("requestDemoModal.placeholders.company", "Your company")}
-                    />
-                  </div>
-
-                  <div className="pt-4">
+                  <div className="pt-6">
                     <button
-                      type="submit"
+                      onClick={handleClose}
                       className="w-full py-3 px-4 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold rounded-lg transition-all transform hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-blue-500/25"
                     >
-                      {t("requestDemoModal.submit", "Submit Request")}
+                      {t("requestDemoModal.close", "Close")}
                     </button>
                   </div>
-                </form>
-              </>
+                </div>
+              </div>
             )}
           </motion.div>
         </motion.div>

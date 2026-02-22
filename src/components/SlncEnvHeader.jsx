@@ -49,17 +49,9 @@ const SlncEnvHeader = ({ onOpenAdminModal }) => {
   const widthTarget = "100%";
   const condensedShift = isCondensed ? (isDesktop ? 24 : 16) : 0;
 
-  const handleAdminClick = () => {
-    if (onOpenAdminModal) {
-      onOpenAdminModal();
-      return;
-    }
-    window.location.href = "https://sithub.silence.codes/login";
-  };
 
   const systemsItems = [
     { key: "ai-soc", label: t("header.nav.systemsAiSoc", "AI-SOC"), href: "/ai-soc" },
-    { key: "slnc-env", label: t("header.nav.systemsSlncEnv", "SLNC-env"), href: "/slnc-env" },
     {
       key: "supreme",
       label: t("header.nav.systemsSupreme", "Supreme"),
@@ -69,7 +61,6 @@ const SlncEnvHeader = ({ onOpenAdminModal }) => {
 
   const navItems = [
     { key: "home", label: t("header.nav.home", "Home"), href: "/" },
-    { key: "services", label: t("header.nav.services", "Services"), href: "/services" },
     { key: "affiliate", label: t("header.nav.affiliate", "Affiliate Program"), href: "/affiliate" },
     { key: "systems", label: t("header.nav.systems", "Systems"), children: systemsItems },
   ];
@@ -171,7 +162,7 @@ const SlncEnvHeader = ({ onOpenAdminModal }) => {
                   <LanguageSelector align="left" />
                   <GlowButton
                     onClick={() => {
-                      handleAdminClick();
+                      onOpenAdminModal?.();
                       setIsMobileMenuOpen(false);
                     }}
                     className="w-full"
@@ -331,7 +322,7 @@ const SlncEnvHeader = ({ onOpenAdminModal }) => {
                   <LanguageSelector align={isDesktop ? "right" : "left"} />
                 </div>
                 {isDesktop && (
-                  <GlowButton onClick={handleAdminClick}>
+                  <GlowButton onClick={onOpenAdminModal}>
                     {t("header.cta.get", "Get")}
                   </GlowButton>
                 )}
