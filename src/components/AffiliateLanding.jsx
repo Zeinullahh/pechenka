@@ -78,7 +78,7 @@ const AffiliateLanding = () => {
           title: t("affiliate.howItWorks.create.title", "Create your link"),
           description: t(
             "affiliate.howItWorks.create.description",
-            "Generate a unique referral link or promo code inside your Silence AI dashboard."
+            "Generate a unique referral link or promo code inside your Silence dashboard."
           ),
           accent: "#FF00B7",
           icon: (
@@ -162,7 +162,7 @@ const AffiliateLanding = () => {
           title: t("affiliate.howItWorks.earn.title", "Earn"),
           description: t(
             "affiliate.howItWorks.earn.description",
-            "Receive commissions as soon as your referred customers activate their Silence AI protection."
+            "Receive commissions as soon as your referred customers activate their Silence protection."
           ),
           accent: "#37FF8B",
           icon: (
@@ -203,7 +203,7 @@ const AffiliateLanding = () => {
           accentGlow: "rgba(255,0,183,0.35)",
           description: t(
             "affiliate.commission.reward.description",
-            "Whenever an invited team recharges their Silence AI wallet, 10% of the net amount is credited to you instantly."
+            "Whenever an invited team recharges their Silence wallet, 10% of the net amount is credited to you instantly."
           ),
           icon: (
             <svg
@@ -395,7 +395,7 @@ const AffiliateLanding = () => {
 
             <div className="relative z-10 space-y-6 lg:space-y-8">
               <div className="inline-flex items-center rounded-full border border-[rgba(255,0,183,0.35)] bg-[rgba(255,0,183,0.18)] px-5 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-white/80 shadow-[0_12px_35px_rgba(255,0,183,0.22)]">
-                {t("affiliate.hero.tagline", "Join Silence AI's Affiliate Program")}
+                {t("affiliate.hero.tagline", "Join Silence's Affiliate Program")}
               </div>
               <h1 className="text-4xl font-bold text-white sm:text-5xl lg:text-6xl lg:whitespace-nowrap">
                 {t("affiliate.hero.title", "Turn invitations into income.")}

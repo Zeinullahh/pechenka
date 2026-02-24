@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Check, X, ShieldCheck, Zap, Brain, FileText, User, ArrowDown, Activity, ScrollText, Sparkles } from "lucide-react";
+import { Check, X, ShieldCheck, Brain, FileText, User, ArrowDown, Activity, ScrollText } from "lucide-react";
 
 export const SupremeComparisonAnimation = () => {
   return (
@@ -64,10 +64,7 @@ export const SupremeComparisonAnimation = () => {
           
           <div className="relative z-10 mb-6 flex items-center justify-between">
             <div>
-              <h3 className="text-xl font-bold text-white flex items-center gap-2">
-                Supreme 2 MAX
-                <Zap className="h-4 w-4 text-amber-300 fill-amber-300" />
-              </h3>
+              <h3 className="text-xl font-bold text-white">Supreme 2 MAX</h3>
               <p className="text-sm text-fuchsia-200">AI-driven auto-fix loop</p>
             </div>
             <div className="rounded-full bg-fuchsia-500/20 border border-fuchsia-500/30 px-3 py-1 text-xs font-semibold text-fuchsia-300">

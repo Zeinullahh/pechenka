@@ -1,42 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://silenceai.net/</loc>
+    <loc>https://silence.codes/</loc>
   </url>
   <url>
-    <loc>https://silenceai.net/slnc-env/</loc>
+    <loc>https://silence.codes/slnc-env/</loc>
   </url>
   <url>
-    <loc>https://silenceai.net/affiliate/</loc>
+    <loc>https://silence.codes/affiliate/</loc>
   </url>
   <url>
-    <loc>https://silenceai.net/affiliate/terms-of-service-affiliate/</loc>
+    <loc>https://silence.codes/affiliate/terms-of-service-affiliate/</loc>
   </url>
   <url>
-    <loc>https://silenceai.net/ai-soc/</loc>
+    <loc>https://silence.codes/ai-soc/</loc>
   </url>
   <url>
-    <loc>https://silenceai.net/services/</loc>
+    <loc>https://silence.codes/en/ai-soc/</loc>
   </url>
   <url>
-    <loc>https://silenceai.net/policies/cookies/</loc>
+    <loc>https://silence.codes/en/supreme/</loc>
   </url>
   <url>
-    <loc>https://silenceai.net/policies/cookies_email/</loc>
+    <loc>https://silence.codes/services/</loc>
   </url>
   <url>
-    <loc>https://silenceai.net/policies/privacy/</loc>
+    <loc>https://silence.codes/policies/cookies/</loc>
   </url>
   <url>
-    <loc>https://silenceai.net/policies/privacy_email/</loc>
+    <loc>https://silence.codes/policies/cookies_email/</loc>
   </url>
   <url>
-    <loc>https://silenceai.net/policies/terms_of_service/</loc>
+    <loc>https://silence.codes/policies/privacy/</loc>
   </url>
   <url>
-    <loc>https://silenceai.net/policies/terms_of_use/</loc>
+    <loc>https://silence.codes/policies/privacy_email/</loc>
   </url>
   <url>
-    <loc>https://silenceai.net/policies/terms_of_use_email/</loc>
+    <loc>https://silence.codes/policies/terms_of_service/</loc>
+  </url>
+  <url>
+    <loc>https://silence.codes/policies/terms_of_use/</loc>
+  </url>
+  <url>
+    <loc>https://silence.codes/policies/terms_of_use_email/</loc>
   </url>
 </urlset>

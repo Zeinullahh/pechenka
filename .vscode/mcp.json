@@ -1,67 +1,8 @@
 {
-    "brave-search": {
-      "timeout": 60,
-      "type": "stdio",
-      "command": "npx",
-      "args": [
-        "-y",
-        "@modelcontextprotocol/server-brave-search"
-      ],
-      "env": {
-        "BRAVE_API_KEY": "BSAQt3L9Noe6PhYABITXVOBPoIrSooM"
-      }
-    },
-    "puppeteer": {
-      "timeout": 60,
-      "type": "stdio",
-      "command": "npx",
-      "args": [
-        "-y",
-        "@modelcontextprotocol/server-puppeteer"
-      ],
-      "env": {
-        "DOCKER_CONTAINER": "false"
-      }
-    },
-    "sequentialthinking": {
-      "disabled": false,
-      "timeout": 60,
-      "type": "stdio",
-      "command": "docker",
-      "args": [
-        "run",
-        "--rm",
-        "-i",
-        "mcp/sequentialthinking"
-      ]
-    },
-    "microsoft.docs.mcp": {
-      "timeout": 60,
-      "type": "stdio",
-      "command": "npx",
-      "args": [
-        "-y",
-        "mcp-remote",
-        "https://learn.microsoft.com/api/mcp"
-      ]
-    },
-    "github.com/upstash/context7-mcp": {
-      "url": "https://mcp.context7.com/mcp",
-      "type": "streamableHttp",
-      "timeout": 60,
-      "disabled": false,
-      "autoApprove": []
-    },
-    
-    "filesystem": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "@modelcontextprotocol/server-filesystem",
-        "/home/abuka/silence/pechenka"
-        ],
-      "type": "stdio"
-    }
-
+  "supreme-max": {
+  "command": "sm-mcp",
+  "env": {
+    "SUPREME2_API_KEY": "supreme_api_key_e1f9b395006695462c465ab134b161bb"
   }
+}
 }

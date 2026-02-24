@@ -4,10 +4,11 @@ import React, { useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Header from "@/components/Header";
 import SupremeHeroBox from "@/components/SupremeHeroBox";
-import GlowButton from "@/components/GlowButton";
 import Spotlights from "@/components/Spotlights";
 import { BackgroundBeams } from "@/components/ui/background/background-beams";
+import { FloatingText } from "@/components/FloatingText";
 import { SupremeComparisonAnimation } from "./SupremeComparisonAnimation";
+import { SupremeVsOthers } from "./SupremeVsOthers";
 import { McpFlowAnimation } from "./McpFlowAnimation";
 import {
   AlertTriangle,
@@ -48,6 +49,7 @@ function PricingCard({
   cta,
   onCtaClick,
   videoLabel,
+  videoEmbedUrl,
   emphasized = false,
 }) {
   return (
@@ -68,7 +70,7 @@ function PricingCard({
       ) : null}
 
       <div className="mb-4 flex items-center gap-2 text-lg font-semibold text-white">
-        <span aria-hidden>{icon}</span>
+        {icon ? <span aria-hidden>{icon}</span> : null}
         {name}
       </div>
       <div className="mb-2 text-4xl font-bold text-white">{price}</div>
@@ -84,7 +86,9 @@ function PricingCard({
       </ul>
 
       {emphasized ? (
-        <GlowButton className="mb-5 w-full" innerClassName="w-full" onClick={onCtaClick}>{cta}</GlowButton>
+        <MaxUpgradeButton onClick={onCtaClick} className="mb-5 w-full">
+          {cta}
+        </MaxUpgradeButton>
       ) : (
         <button onClick={onCtaClick} className="mb-5 w-full rounded-full border border-violet-300/25 bg-gradient-to-r from-slate-900/80 via-slate-800/70 to-slate-900/80 px-4 py-2.5 font-medium text-slate-100 transition hover:border-fuchsia-300/50 hover:text-white">
           {cta}
@@ -92,10 +96,21 @@ function PricingCard({
       )}
 
       <div className="aspect-video rounded-xl border border-white/10 bg-black/30 p-3">
-        <div className="flex h-full w-full items-center justify-center gap-2 rounded-lg border border-dashed border-white/15 text-center text-sm text-slate-400">
-          <Play className="h-4 w-4" />
-          {videoLabel}
-        </div>
+        {videoEmbedUrl ? (
+          <iframe
+            src={videoEmbedUrl}
+            title={`${name} video`}
+            className="h-full w-full rounded-lg"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          />
+        ) : (
+          <div className="flex h-full w-full items-center justify-center gap-2 rounded-lg border border-dashed border-white/15 text-center text-sm text-slate-400">
+            <Play className="h-4 w-4" />
+            {videoLabel}
+          </div>
+        )}
       </div>
     </motion.article>
   );
@@ -137,6 +152,46 @@ function FaqItem({ question, answer, open, onToggle }) {
         ) : null}
       </AnimatePresence>
     </motion.div>
+  );
+}
+
+function MaxUpgradeButton({ onClick, className = "", children }) {
+  return (
+    <motion.button
+      type="button"
+      onClick={onClick}
+      animate={{ 
+        backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
+        boxShadow: [
+          "0 0 25px rgba(167, 139, 250, 0.6), 0 0 10px rgba(255, 255, 255, 0.3)",
+          "0 0 50px rgba(232, 121, 249, 0.8), 0 0 20px rgba(255, 255, 255, 0.5)",
+          "0 0 25px rgba(167, 139, 250, 0.6), 0 0 10px rgba(255, 255, 255, 0.3)"
+        ]
+      }}
+      transition={{
+        backgroundPosition: { duration: 1.8, repeat: Infinity, ease: "linear" },
+        boxShadow: { duration: 1.5, repeat: Infinity, ease: "easeInOut" }
+      }}
+      whileHover={{
+        scale: 1.05,
+        boxShadow: "0 0 60px rgba(192, 132, 252, 0.9), 0 0 30px rgba(255, 255, 255, 0.6)",
+        transition: { duration: 0.2, ease: "easeOut" },
+      }}
+      whileTap={{ scale: 0.95, transition: { duration: 0.1 } }}
+      className={`relative inline-flex items-center justify-center rounded-full px-8 py-4 text-base font-bold tracking-wide text-white transition-transform duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-fuchsia-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 ${className}`}
+      style={{
+        backgroundImage:
+          "linear-gradient(120deg, #8B5CF6 0%, #D946EF 35%, #F472B6 60%, #3B82F6 85%, #8B5CF6 100%)",
+        backgroundSize: "200% 200%",
+        textShadow: "0 0 8px rgba(255, 255, 255, 0.5)"
+      }}
+    >
+      <span className="relative z-10 flex items-center gap-2">
+        {children}
+        <ArrowRight className="h-5 w-5 animate-pulse text-white drop-shadow-md" />
+      </span>
+      <div className="absolute inset-0 rounded-full bg-white/20 mix-blend-overlay pointer-events-none" />
+    </motion.button>
   );
 }
 
@@ -328,15 +383,6 @@ export default function SupremeLanding() {
         ),
       },
       {
-        q: "How is Supreme 2 different from asking an LLM to review my code?",
-        a: (
-          <div className="space-y-2">
-            <p><span className="font-semibold text-rose-300">LLMs:</span> only analyze pasted snippets, cannot systematically scan entire repositories, miss hidden files/configs, and don’t deeply parse dependency graphs.</p>
-            <p><span className="font-semibold text-fuchsia-300">Supreme 2:</span> performs full-repository scanning with 74+ scanners, detects architectural patterns, produces structured intelligence, and enables MCP-powered auto-remediation in MAX.</p>
-          </div>
-        ),
-      },
-      {
         q: "What is MCP and why does it matter?",
         a: (
           <div>
@@ -349,6 +395,14 @@ export default function SupremeLanding() {
         a: (
           <div>
             Supreme 2 scans locally in your environment. Your code nevers leaves your computer on which the scanner is working on. You, as the user might check the source code of Supreme 2 Light, available on github, and also you might check the network activity of the computer while code is being scanned
+          </div>
+        ),
+      },
+      {
+        q: "What are the pre-installation requirements?",
+        a: (
+          <div>
+            To run Supreme 2, you must have <a href="https://www.python.org/downloads/" target="_blank" rel="noopener noreferrer" className="text-fuchsia-300 hover:underline">Python 3.0 or higher</a> installed on your machine. Additionally, you must ensure that <span className="font-semibold text-fuchsia-300">pip</span> is installed prior to the installation of Supreme itself.
           </div>
         ),
       },
@@ -383,10 +437,10 @@ export default function SupremeLanding() {
       </div>
       <Header />
 
-      <main className="relative z-10 pb-16 pt-24">
+      <main className="relative z-10 pb-16 pt-16">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-        <section className="relative mx-auto w-full px-4 pb-24 pt-16 sm:px-6 lg:px-8 max-w-[90rem]">
+        <section className="relative mx-auto w-full px-4 pb-24 pt-8 sm:px-6 lg:px-8 max-w-[90rem]">
           <Spotlights />
 
           
@@ -451,27 +505,17 @@ export default function SupremeLanding() {
                
                {/* Buttons moved here, below animation */}
                <div className="mt-8 flex flex-col w-full sm:w-auto items-center gap-4">
-                <GlowButton glowColor="#C026D3" onClick={goToMax} className="w-full sm:w-[320px] justify-center text-center whitespace-nowrap" innerClassName="px-8 py-4 w-full text-base sm:text-lg font-bold">Upgrade to Supreme 2 MAX</GlowButton>
+                <MaxUpgradeButton
+                  onClick={goToMax}
+                  className="w-full sm:w-[320px] justify-center text-center whitespace-nowrap"
+                >
+                  Upgrade to Supreme 2 MAX
+                </MaxUpgradeButton>
                 <button onClick={goToPricing} className="w-full sm:w-[320px] whitespace-nowrap rounded-full border border-violet-300/25 bg-gradient-to-r from-slate-900/85 via-slate-800/70 to-slate-900/85 px-8 py-4 text-base sm:text-lg font-medium text-slate-100 transition hover:border-fuchsia-300/50 hover:text-white justify-center text-center">
                   Start Free with Supreme 2 Light
                 </button>
               </div>
             </div>
-          </div>
-        </section>
-
-        <section className="mx-auto max-w-6xl px-4 pb-24 text-center sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-white sm:text-3xl">🎬 Watch Supreme 2 in Action</h2>
-          <div className="mx-auto mt-8 max-w-4xl rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-xl">
-            <div className="aspect-video rounded-xl border border-dashed border-white/20 bg-black/30">
-              <div className="flex h-full w-full items-center justify-center gap-3 text-slate-300">
-                <Play className="h-5 w-5 text-fuchsia-300" />
-                [ Trailer Video Placeholder ]
-              </div>
-            </div>
-            <p className="mt-3 text-sm text-slate-400">
-              Problem of AI-only review · why LLMs miss hidden code · MCP breakthrough · Light vs MAX
-            </p>
           </div>
         </section>
 
@@ -481,7 +525,6 @@ export default function SupremeLanding() {
               name="Supreme 2 Light"
               price="Free"
               subprice="Forever · No credit card required"
-              icon="🆓"
               highlights={[
                 "VSCode extension",
                 "Full project scanning",
@@ -495,14 +538,13 @@ export default function SupremeLanding() {
                 </span>
               }
               onCtaClick={goToPricing}
-              videoLabel="🎥 Instructional Video Placeholder – Supreme 2 Light"
+              videoEmbedUrl="https://www.youtube.com/embed/k282t3QKG2w"
             />
             <PricingCard
               name="Supreme 2 MAX"
               price="$18/month"
               subprice="$150/year · Best Value"
               badge="Best Value"
-              icon="💎"
               highlights={[
                 "MCP server-based scanner",
                 "Full project scanning",
@@ -512,9 +554,10 @@ export default function SupremeLanding() {
                 "Autonomous vulnerability fixing",
                 "Enhanced detection via threat intelligence",
               ]}
-              cta="Upgrade to MAX"
+              cta="Upgrade to Supreme 2 MAX"
               onCtaClick={goToMax}
-              videoLabel="🎥 Instructional Video Placeholder – Supreme 2 MAX Setup"
+              videoEmbedUrl="https://www.youtube.com/embed/1Sy8-Pph5KY"
+              videoLabel="Instructional Video Placeholder – Supreme 2 MAX Setup"
               emphasized
             />
           </div>
@@ -605,7 +648,12 @@ export default function SupremeLanding() {
         </section>
 
         <section className="mx-auto max-w-7xl px-4 pb-24 sm:px-6 lg:px-8">
-          <h2 className="text-center text-2xl font-bold text-white sm:text-3xl">Why Supreme 2 Doesn’t Miss Code Snippets</h2>
+          <h2 className="text-center text-2xl font-bold text-white sm:text-3xl mb-12">Why Supreme Leads the Market</h2>
+          <SupremeVsOthers />
+        </section>
+
+        <section className="mx-auto max-w-7xl px-4 pb-24 sm:px-6 lg:px-8">
+          <h2 className="text-center text-2xl font-bold text-white sm:text-3xl">Searching for vulns/misconfigs with LLMs VS Supreme 2</h2>
           <div className="mt-10 grid gap-6 md:grid-cols-2">
             <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
               <h3 className="mb-4 flex items-center gap-2 text-lg font-semibold text-slate-200">
@@ -658,7 +706,9 @@ export default function SupremeLanding() {
           </div>
         </section>
 
-
+        <div className="w-full">
+          <FloatingText />
+        </div>
       </main>
 
     </div>

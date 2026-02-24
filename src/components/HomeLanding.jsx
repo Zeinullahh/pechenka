@@ -2,8 +2,9 @@
 
 import { cn } from "@/lib/utils";
 
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { BackgroundBeams } from "@/components/ui/background/background-beams";
 import Header from "@/components/Header";
@@ -44,9 +45,82 @@ const cardVariants = {
   },
 };
 
+
+
+
+
+
+// Helper Component for Auto-Scrolling Sections
+function AutoScrollSection({ children, speed = 0.5, className = "" }) {
+  const scrollRef = useRef(null);
+  const [isPaused, setIsPaused] = useState(false);
+
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+
+    let rafId;
+    let accumulator = 0;
+
+    const step = () => {
+      if (!el) return;
+      
+      const halfWidth = el.scrollWidth / 2;
+
+      // Auto-scroll logic
+      if (!isPaused) {
+        accumulator += speed;
+        // Apply scroll when we have at least 1px of movement accumulated
+        if (accumulator >= 1) {
+          el.scrollLeft += 1;
+          accumulator -= 1;
+        }
+      }
+
+      // Seamless Loop Logic
+      if (el.scrollLeft >= halfWidth) {
+        el.scrollLeft -= halfWidth; 
+      } else if (el.scrollLeft <= 0) {
+        el.scrollLeft += halfWidth;
+      }
+
+      rafId = requestAnimationFrame(step);
+    };
+
+    rafId = requestAnimationFrame(step);
+
+    return () => cancelAnimationFrame(rafId);
+  }, [speed, isPaused]);
+
+  return (
+    <div
+      ref={scrollRef}
+      className={`flex overflow-x-auto ${className} no-scrollbar cursor-grab active:cursor-grabbing select-none`}
+      // Pause interactions on hover/touch
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+      onTouchStart={() => setIsPaused(true)}
+      onTouchEnd={() => setIsPaused(false)}
+      
+      style={{ 
+        scrollbarWidth: "none", 
+        msOverflowStyle: "none",
+        WebkitOverflowScrolling: "touch" 
+      }}
+    >
+      {children}
+    </div>
+  );
+}
+
 export default function HomeLanding() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const withLocalePrefix = (path) => {
+    const normalizedPath = path.startsWith("/") ? path : `/${path}`;
+    return `/${language}${normalizedPath}`;
+  };
 
   const systems = [
     {
@@ -86,7 +160,7 @@ export default function HomeLanding() {
       <main className="relative mx-auto flex flex-col gap-0 pb-16 z-10">
 
         {/* Hero Section - Clean and Beautiful */}
-        <section className="relative w-full pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+        <section className="relative w-full pt-20 pb-10 px-4 sm:px-6 lg:px-8">
           <div className="max-w-5xl mx-auto text-center">
             {/* Decorative gradient orbs */}
             <div className="absolute top-20 left-1/4 w-72 h-72 bg-blue-500/20 rounded-full blur-[120px] pointer-events-none" />
@@ -129,164 +203,19 @@ export default function HomeLanding() {
                 </motion.span>
               </h1>
 
-              {/* Animated wave underline - positioned below the heading */}
-              <motion.div
-                className="relative w-full h-16 mt-4"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1, delay: 0.8 }}
-              >
-                <svg
-                  className="absolute left-1/2 -translate-x-1/2 w-full max-w-3xl h-10"
-                  viewBox="0 0 600 40"
-                  preserveAspectRatio="none"
-                  style={{ overflow: 'visible' }}
-                >
-                  <defs>
-                    <linearGradient id="waveGradient1" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" stopColor="#22d3ee" />
-                      <stop offset="50%" stopColor="#3b82f6" />
-                      <stop offset="100%" stopColor="#a855f7" />
-                    </linearGradient>
-                    <linearGradient id="waveGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" stopColor="#a855f7" />
-                      <stop offset="50%" stopColor="#ec4899" />
-                      <stop offset="100%" stopColor="#22d3ee" />
-                    </linearGradient>
-                    <filter id="glow">
-                      <feGaussianBlur stdDeviation="3" result="coloredBlur" />
-                      <feMerge>
-                        <feMergeNode in="coloredBlur" />
-                        <feMergeNode in="SourceGraphic" />
-                      </feMerge>
-                    </filter>
-                  </defs>
-                  {/* Primary animated wave */}
-                  <motion.path
-                    d="M0,20 C50,5 100,35 150,20 C200,5 250,35 300,20 C350,5 400,35 450,20 C500,5 550,35 600,20"
-                    fill="none"
-                    stroke="url(#waveGradient1)"
-                    strokeWidth="3"
-                    strokeLinecap="round"
-                    filter="url(#glow)"
-                    initial={{ pathLength: 0 }}
-                    animate={{
-                      pathLength: 1,
-                      d: [
-                        "M0,20 C50,5 100,35 150,20 C200,5 250,35 300,20 C350,5 400,35 450,20 C500,5 550,35 600,20",
-                        "M0,20 C50,35 100,5 150,20 C200,35 250,5 300,20 C350,35 400,5 450,20 C500,35 550,5 600,20",
-                        "M0,20 C50,5 100,35 150,20 C200,5 250,35 300,20 C350,5 400,35 450,20 C500,5 550,35 600,20",
-                      ]
-                    }}
-                    transition={{
-                      pathLength: { duration: 1.5, delay: 0.8, ease: "easeOut" },
-                      d: { duration: 3, repeat: Infinity, ease: "easeInOut", delay: 2.3 }
-                    }}
-                  />
-                  {/* Secondary wave (offset) */}
-                  <motion.path
-                    d="M0,22 C50,37 100,7 150,22 C200,37 250,7 300,22 C350,37 400,7 450,22 C500,37 550,7 600,22"
-                    fill="none"
-                    stroke="url(#waveGradient2)"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    opacity="0.6"
-                    initial={{ pathLength: 0 }}
-                    animate={{
-                      pathLength: 1,
-                      d: [
-                        "M0,22 C50,37 100,7 150,22 C200,37 250,7 300,22 C350,37 400,7 450,22 C500,37 550,7 600,22",
-                        "M0,22 C50,7 100,37 150,22 C200,7 250,37 300,22 C350,7 400,37 450,22 C500,7 550,37 600,22",
-                        "M0,22 C50,37 100,7 150,22 C200,37 250,7 300,22 C350,37 400,7 450,22 C500,37 550,7 600,22",
-                      ]
-                    }}
-                    transition={{
-                      pathLength: { duration: 1.8, delay: 1, ease: "easeOut" },
-                      d: { duration: 2.5, repeat: Infinity, ease: "easeInOut", delay: 2.8 }
-                    }}
-                  />
-                  {/* Animated particles/dots along the wave */}
-                  <motion.circle
-                    r="4"
-                    fill="#22d3ee"
-                    filter="url(#glow)"
-                    animate={{
-                      cx: [0, 150, 300, 450, 600],
-                      cy: [20, 5, 20, 35, 20],
-                    }}
-                    transition={{ duration: 4, repeat: Infinity, ease: "linear", delay: 2.5 }}
-                  />
-                  <motion.circle
-                    r="3"
-                    fill="#a855f7"
-                    filter="url(#glow)"
-                    animate={{
-                      cx: [600, 450, 300, 150, 0],
-                      cy: [20, 35, 20, 5, 20],
-                    }}
-                    transition={{ duration: 4, repeat: Infinity, ease: "linear", delay: 3 }}
-                  />
-                </svg>
-                {/* Floating keywords */}
-                <div className="absolute top-10 left-0 right-0 flex justify-between max-w-2xl mx-auto px-8">
-                  <motion.span
-                    className="text-[10px] sm:text-xs font-bold text-cyan-400 tracking-widest"
-                    animate={{
-                      y: [0, -5, 0],
-                      opacity: [0.7, 1, 0.7]
-                    }}
-                    transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
-                  >
-                    AI
-                  </motion.span>
-                  <motion.span
-                    className="text-[10px] sm:text-xs font-bold text-blue-400 tracking-widest"
-                    animate={{
-                      y: [0, -6, 0],
-                      opacity: [0.6, 1, 0.6]
-                    }}
-                    transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-                  >
-                    FUTURE
-                  </motion.span>
-                  <motion.span
-                    className="text-[10px] sm:text-xs font-bold text-purple-400 tracking-widest"
-                    animate={{
-                      y: [0, -5, 0],
-                      opacity: [0.7, 1, 0.7]
-                    }}
-                    transition={{ duration: 2.8, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                  >
-                    SECURITY
-                  </motion.span>
-                </div>
-              </motion.div>
-
-              {/* Subtitle */}
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
-                className="mt-10 text-xl sm:text-2xl md:text-3xl font-medium text-white/80"
-              >
-                {t("home.hero.subtitle", "Build securely. Deploy confidently.")}
-              </motion.p>
+              {/* Animated wave underline removed */}
             </motion.div>
           </div>
         </section>
 
         {/* Systems - Moved higher with 3D animations */}
         <section id="systems" className="space-y-12 pt-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-          <div className="space-y-4">
-            <h2 className="text-4xl font-bold sm:text-5xl lg:text-6xl text-center">
-              {t("home.systems.title", "Systems")}
-            </h2>
-          </div>
           <div className="grid gap-10 lg:grid-cols-2">
             {systems.map((item, idx) => (
               <EdgeGlowCard
                 key={item.key}
                 mode="static"
+                animateOnView={false}
                 glowColor={idx === 0 ? "#FF00B7" : "#00BFFF"}
                 secondaryGlowColor={idx === 0 ? "rgba(32,140,255,0.45)" : "rgba(168,85,247,0.45)"}
                 outerClassName="group relative flex h-full flex-col justify-between overflow-hidden rounded-3xl p-[2px]"
@@ -331,7 +260,7 @@ export default function HomeLanding() {
                       </div>
                     </div>
                     <Link
-                      href={item.href}
+                      href={withLocalePrefix(item.href)}
                       className="mt-8 inline-flex h-[56px] items-center justify-center gap-2 rounded-full bg-white px-8 text-lg font-semibold text-slate-900 shadow-lg transition hover:-translate-y-0.5 hover:bg-gray-100"
                     >
                       {t("home.systems.cta", "View details")}
@@ -345,6 +274,232 @@ export default function HomeLanding() {
         </section>
 
 
+        {/* Compliance Section — Scrollable Strip */}
+        {(() => {
+          const complianceItems = [
+            {
+              flag: "🇪🇺",
+              name: "GDPR",
+              citation: "EU Regulation 2016/679",
+              desc: "The world's most stringent privacy and security law, governing personal data of all EU residents. Sets the global benchmark for data protection worldwide.",
+            },
+            {
+              flag: "🇬🇧",
+              name: "UK GDPR",
+              citation: "UK Data Protection Act 2018",
+              desc: "Post-Brexit UK equivalent of EU GDPR, retained in domestic law. Substantively identical in scope and obligations — EU GDPR compliance extends to UK GDPR.",
+            },
+            {
+              flag: "🇺🇸",
+              name: "CCPA / CPRA",
+              citation: "California Consumer Privacy Act, 2020",
+              desc: "Registration uses Google OAuth, which transmits profile data (name, email, Google ID) to our servers — this is personal data under CCPA. Users retain full rights to know, access, and delete their account data at any time.",
+            },
+            {
+              flag: "🇨🇦",
+              name: "PIPEDA",
+              citation: "Canada — Personal Information Protection and Electronic Documents Act",
+              desc: "Applies to any commercial organization handling Canadian residents' data regardless of where the company is based. As we scale globally, personal data from Canadian users is handled with the same minimal-collection standards.",
+            },
+            {
+              flag: "🇸🇦",
+              name: "KSA PDPL",
+              citation: "Saudi Arabia — SDAIA, 2023",
+              desc: "Saudi Personal Data Protection Law enforced by SDAIA. Governs collection, processing, and cross-border transfer of personal data.",
+            },
+            {
+              flag: "🇦🇪",
+              name: "UAE PDPL",
+              citation: "Federal Law No. 45 of 2021",
+              desc: "UAE Personal Data Protection Law regulating personal data processing across the mainland and free zones, including DIFC and ADGM.",
+            },
+            {
+              flag: "🇶🇦",
+              name: "Qatar PDPL",
+              citation: "Law No. 13 of 2016",
+              desc: "Qatar's Personal Data Privacy Protection Law administered by the Ministry of Transport and Communications.",
+            },
+            {
+              flag: "🇧🇭",
+              name: "Bahrain PDPL",
+              citation: "Law No. 30 of 2018",
+              desc: "Bahrain Personal Data Protection Law regulated by the Personal Data Protection Authority (PDPA), aligned with international standards.",
+            },
+            {
+              flag: "🇰🇼",
+              name: "Kuwait DP",
+              citation: "Decree-Law No. 20 of 2014",
+              desc: "Kuwait's Electronic Communications and Transactions Law establishing data protection obligations for electronic service providers.",
+            },
+            {
+              flag: "🇴🇲",
+              name: "Oman PDPL",
+              citation: "Royal Decree No. 6 of 2022",
+              desc: "Oman Personal Data Protection Law establishing comprehensive rights for data subjects and obligations for controllers and processors.",
+            },
+            {
+              flag: "🔒",
+              name: "Privacy by Design",
+              citation: "GDPR Art. 25 · All GCC frameworks",
+              desc: "Supreme's code scanning runs entirely on your local machine — no source code is ever transmitted or processed externally. Account data (Google OAuth profile) is handled separately under our privacy policy.",
+              supremeOnly: true,
+            },
+          ];
+
+
+
+
+
+          const doubled = [...complianceItems, ...complianceItems];
+
+          return (
+            <section className="pt-24 pb-4 w-full">
+
+              {/* Label + heading */}
+              <motion.div
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.55, ease: "easeOut" }}
+                className="mb-8 text-center px-4"
+              >
+                <div className="inline-flex items-center gap-2 rounded-full border border-green-400/25 bg-green-500/10 px-4 py-1.5 text-sm font-semibold text-green-300 mb-4">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                  Regulatory Compliance
+                </div>
+                <h2 className="text-3xl font-bold sm:text-4xl text-white">
+                  {t("home.compliance.title", "Built for Global Compliance")}
+                </h2>
+                <p className="mt-3 text-white/50 text-sm">
+                  Continuous live compliance coverage
+                </p>
+              </motion.div>
+
+              {/* Scrollable band */}
+              <div className="relative w-full">
+
+                <AutoScrollSection speed={0.5} className="py-5 gap-0">
+                  {doubled.map((item, i) => (
+                    <div
+                      key={`${item.name}-${i}`}
+                      className="shrink-0 w-64 mx-3 rounded-2xl border border-white/5 bg-black/20 p-5 backdrop-blur-sm flex flex-col justify-between"
+                    >
+                      <div>
+                        <div className="flex items-center gap-3 mb-3">
+                          <div className="shrink-0 rounded-xl border border-white/10 bg-white/5 p-2 text-xl leading-none">
+                            {item.flag}
+                          </div>
+                          <div>
+                            <div className="font-bold text-white text-sm leading-tight">{item.name}</div>
+                            <div className="text-[11px] text-gray-400 mt-0.5 leading-tight">{item.citation}</div>
+                          </div>
+                        </div>
+                        <p className="text-sm text-white leading-relaxed">{item.desc}</p>
+                      </div>
+                      <div className="mt-4 flex items-center justify-between gap-2 flex-wrap">
+                        <div className="inline-flex items-center gap-1.5 text-[11px] font-semibold text-green-400">
+                          <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                          </svg>
+                          Compliant
+                        </div>
+                        {item.supremeOnly && (
+                          <div className="inline-flex items-center gap-1 rounded-full border border-violet-400/30 bg-violet-500/15 px-2 py-0.5 text-[10px] font-semibold text-violet-300">
+                            Supreme only
+                          </div>
+                        )}
+                      </div>
+                    </div>
+
+                  ))}
+                </AutoScrollSection>
+              </div>
+            </section>
+          );
+        })()}
+
+        {/* Partners Section */}
+        {(() => {
+          const partners = [
+            {
+              name: "Nur Astana Kurylys",
+              cap: "$1.5 Billion",
+              logo: "/partners/nur-astana-kurylys.png",
+            },
+            {
+              name: "KazMunayGas",
+              cap: "$25 Billion",
+              logo: "/partners/kazmunaygas.png",
+            },
+            {
+              name: "QazCloud",
+              cap: "$100 Million",
+              logo: "/partners/qazcloud.png",
+            },
+            {
+              name: "KazakhCinema",
+              cap: "$50 Million",
+              logo: "/partners/kazakhcinema.png",
+            },
+          ];
+
+          const allPartners = [...partners, ...partners, ...partners, ...partners]; // 4x for smooth density and reset logic compatibility
+
+          return (
+            <section className="py-12 w-full">
+              <div className="mb-10 text-center px-4">
+                <h2 className="text-3xl font-bold sm:text-4xl text-white">
+                  Clients and Partners
+                </h2>
+                <p className="mt-3 text-sm text-white/60">
+                  Featured here are some of our leading clients and partners; this is not a complete list.
+                </p>
+              </div>
+              
+              <div className="relative w-full">
+
+                <AutoScrollSection speed={0.4} className="py-8 gap-0 items-center">
+                  {allPartners.map((p, i) => (
+                    <div 
+                      key={`${p.name}-${i}`} 
+                      className="shrink-0 w-64 mx-3 p-5 flex flex-col items-center gap-4 group opacity-50 hover:opacity-100 transition-opacity duration-300"
+                    >
+                      {/* Logo Area */}
+                      <div className="relative h-32 w-48 flex flex-col items-center justify-center gap-2 grayscale group-hover:grayscale-0 transition-all duration-300">
+                        {/* Use native img + onError fallback or just styled div if missing */}
+                        <div className="relative h-20 w-full flex items-center justify-center">
+                          <img 
+                            src={p.logo} 
+                            alt={p.name} 
+                            className="max-h-full max-w-full object-contain drop-shadow-md"
+                            onError={(e) => {
+                               e.currentTarget.style.display = 'none'; 
+                            }}
+                          />
+                        </div>
+                        
+                        {/* Always visible name below logo */}
+                        <div className="text-center">
+                           <span className="text-sm font-bold text-white/50 group-hover:text-white transition-colors duration-300">{p.name}</span>
+                        </div>
+                      </div>
+
+                      {/* Info Area */}
+                      <div className="text-center mt-2">
+                        <div className="text-[10px] text-white/30 font-mono tracking-wider uppercase">Market Cap</div>
+                        <div className="text-sm font-medium text-white/80">{p.cap}</div>
+                      </div>
+                    </div>
+                  ))}
+                </AutoScrollSection>
+              </div>
+            </section>
+          );
+        })()}
+
+
         {/* Featured Resources - Auto-fetching Link Previews */}
         <section className="space-y-8 pt-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
@@ -355,7 +510,7 @@ export default function HomeLanding() {
               <p className="text-white/70 max-w-xl">
                 {t(
                   "home.resources.subtitle",
-                  "Silence AI is one of few private companies that have government level intelligence."
+                  "Silence is one of few private companies that have government level intelligence."
                 )}
               </p>
             </div>

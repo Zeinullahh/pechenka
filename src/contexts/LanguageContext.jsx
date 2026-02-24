@@ -50,6 +50,10 @@ export const LanguageProvider = ({ children, initialLanguage }) => {
 
   const translate = (key, fallback, values) => {
     try {
+      if (typeof t_next.has === "function" && !t_next.has(key)) {
+        return fallback || key;
+      }
+
       // Use next-intl translation
       const result = t_next(key, values);
       

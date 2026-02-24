@@ -20,7 +20,7 @@ export default function MediumArticleCard({ article, index = 0 }) {
   
   // Extract data with fallbacks
   const title = articleData.title || "Featured Article";
-  const description = articleData.description || "Click to read the full article from Silence AI.";
+  const description = articleData.description || "Click to read the full article from Silence.";
   const url = articleData.url;
   
   // For LinkedIn posts, try to construct OG image URL

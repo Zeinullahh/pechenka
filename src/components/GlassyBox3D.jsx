@@ -9,27 +9,11 @@ const GlassyBox3D = () => {
       <style jsx>{`
         .cube-container {
           transform-style: preserve-3d;
-          animation: spin 12s ease-in-out infinite;
+          animation: spin 20s linear infinite;
         }
         @keyframes spin {
-          0% {
-            transform: rotateX(0deg) rotateY(0deg);
-          }
-          20% {
-             transform: rotateX(45deg) rotateY(72deg);
-          }
-          40% {
-            transform: rotateX(0deg) rotateY(144deg);
-          }
-          60% {
-             transform: rotateX(-45deg) rotateY(216deg);
-          }
-          80% {
-            transform: rotateX(0deg) rotateY(288deg);
-          }
-          100% {
-            transform: rotateX(0deg) rotateY(360deg);
-          }
+          0% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+          100% { transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg); }
         }
         .face {
           position: absolute;
@@ -52,27 +36,11 @@ const GlassyBox3D = () => {
             align-items: center;
             justify-content: center;
             transform-style: preserve-3d;
-            animation: counter-spin 12s ease-in-out infinite;
+            animation: counter-spin 20s linear infinite;
         }
         @keyframes counter-spin {
-          0% {
-            transform: rotateY(0deg) rotateX(0deg);
-          }
-          20% {
-             transform: rotateY(-72deg) rotateX(-45deg);
-          }
-          40% {
-            transform: rotateY(-144deg) rotateX(0deg);
-          }
-           60% {
-             transform: rotateY(-216deg) rotateX(45deg);
-          }
-          80% {
-             transform: rotateY(-288deg) rotateX(0deg);
-          }
-          100% {
-            transform: rotateY(-360deg) rotateX(0deg);
-          }
+          0% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+          100% { transform: rotateX(-360deg) rotateY(-360deg) rotateZ(-360deg); }
         }
       `}</style>
       

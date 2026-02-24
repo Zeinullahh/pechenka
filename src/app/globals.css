@@ -1,6 +1,17 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -947,7 +958,6 @@ body.not-found-page footer {
 .bg-gradient-conic {
   background-image: conic-gradient(var(--conic-position, from 180deg at 50% 50%), var(--tw-gradient-stops));
 }
-
 
 
 .bg-gradient-conic {

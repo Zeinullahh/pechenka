@@ -15,8 +15,8 @@ const SupremeHeroBox = () => {
         }
 
         @keyframes spin-flip-hero {
-          0% { transform: rotateX(25deg) rotateY(0deg); }
-          100% { transform: rotateX(25deg) rotateY(360deg); }
+          0% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+          100% { transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg); }
         }
 
         .face {
@@ -97,9 +97,9 @@ const SupremeHeroBox = () => {
         </div>
         <div className="face back"></div>
         <div className="face right">
-            <div className="flex flex-col items-center justify-center transform translate-z-[1px] rotate-0">
-                <span className="text-base font-bold tracking-[0.2em] text-purple-200 uppercase border-b border-white/20 pb-1.5 mb-1.5">VSCode</span>
-                <span className="text-base font-bold tracking-[0.2em] text-white/90 uppercase">Extension</span>
+            <div className="flex flex-col items-center justify-center transform translate-z-[1px] rotate-0 px-2 text-center">
+                <span className="text-[10px] font-black tracking-[0.15em] text-purple-300 uppercase border-b border-white/20 pb-1.5 mb-1.5 leading-tight shadow-md">WORLD'S FIRST</span>
+                <span className="text-[9px] font-bold tracking-[0.1em] text-white/90 uppercase leading-snug">MCP-BASED</span>
             </div>
         </div>
         <div className="face left"></div>
