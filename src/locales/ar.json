@@ -1,4 +1,58 @@
 {
+  "aiSocModal": {
+    "title": "لوحة المسؤول",
+    "emailSecurity": "تسجيل الدخول/التسجيل لحماية البريد الإلكتروني",
+    "webSecurity": "تسجيل الدخول/التسجيل لحماية الويب",
+    "getOnlyOffice": "الحصول على OnlyOffice",
+    "comingSoonTitle": "قريبًا",
+    "comingSoonMessage": "يعمل فريق Silence على تسهيل الوصول إلى النظام."
+  },
+  "emailSecurityModal": {
+    "title": "أمن البريد الإلكتروني",
+    "subtitle": "اختر الطريقة التي تريد بها الوصول إلى حسابك",
+    "webmail": {
+      "title": "بريد الويب",
+      "desc": "الوصول إلى صندوق الوارد مباشرة"
+    },
+    "admin": {
+      "title": "لوحة المسؤول",
+      "desc": "إدارة إعدادات الأمان والمستخدمين"
+    }
+  },
+  "homeCompliance": {
+    "badge": "الامتثال التنظيمي",
+    "title": "مصمم للامتثال العالمي",
+    "subtitle": "تغطية امتثال مباشرة ومستمرة",
+    "statusLabel": "متوافق",
+    "supremeOnly": "خاص بـ Supreme",
+    "cards": {
+      "gdpr": { "desc": "أشمل قانون للخصوصية والأمن في العالم، يحكم البيانات الشخصية لجميع مقيمي الاتحاد الأوروبي. يضع المرجعية العالمية لحماية البيانات." },
+      "ukGdpr": { "desc": "النظير البريطاني للائحة GDPR الأوروبية بعد خروج بريطانيا من الاتحاد، مُدرج في القانون المحلي. متطابق جوهريًا في النطاق والالتزامات — الامتثال للـ GDPR الأوروبي يمتد إلى الـ GDPR البريطاني." },
+      "ccpa": { "desc": "يستخدم التسجيل بروتوكول Google OAuth الذي ينقل بيانات الملف الشخصي (الاسم والبريد الإلكتروني ومعرف Google) إلى خوادمنا — وهذه بيانات شخصية وفق CCPA. يحتفظ المستخدمون بالحق الكامل في الاطلاع على بياناتهم والوصول إليها وحذفها في أي وقت." },
+      "pipeda": { "desc": "ينطبق على أي منظمة تجارية تتعامل مع بيانات المقيمين الكنديين بغض النظر عن موقع الشركة. تُعالَج بيانات المستخدمين الكنديين وفق نفس معايير الجمع الأدنى." },
+      "ksaPdpl": { "desc": "نظام حماية البيانات الشخصية السعودي الصادر عن الهيئة السعودية للبيانات والذكاء الاصطناعي (سدايا). يُنظّم جمع البيانات الشخصية ومعالجتها ونقلها عبر الحدود." },
+      "uaePdpl": { "desc": "قانون حماية البيانات الشخصية الاتحادي الإماراتي الذي ينظم معالجة البيانات في البر الرئيسي والمناطق الحرة، بما فيها مركز دبي المالي العالمي وسوق أبوظبي العالمي." },
+      "qatarPdpl": { "desc": "قانون حماية خصوصية البيانات الشخصية في قطر، تُشرف عليه وزارة المواصلات والاتصالات." },
+      "bahrainPdpl": { "desc": "قانون حماية البيانات الشخصية البحريني المنظَّم من قِبَل PDPA، متوافق مع المعايير الدولية." },
+      "kuwaitDp": { "desc": "قانون الاتصالات الإلكترونية والمعاملات الكويتي الذي يُرسي التزامات حماية البيانات على مزودي الخدمات الإلكترونية." },
+      "omanPdpl": { "desc": "قانون حماية البيانات الشخصية العُماني الذي يُقرّ حقوقًا شاملة لأصحاب البيانات والتزامات على المتحكمين والمعالجين." },
+      "privacyByDesign": { "desc": "يعمل فحص الكود في Supreme بالكامل على جهازك المحلي — لا يُرسَل أي كود مصدري أو يُعالَج خارجيًا. بيانات الحساب (ملف تعريف Google OAuth) تُعالَج بشكل منفصل وفق سياسة الخصوصية الخاصة بنا." }
+    }
+  },
+  "homePartners": {
+    "title": "العملاء والشركاء",
+    "subtitle": "المعروض هنا بعض من أبرز عملائنا وشركائنا، وهذه ليست قائمة كاملة.",
+    "marketCap": "القيمة السوقية",
+    "billion": "مليار",
+    "million": "مليون"
+  },
+  "supremeInstructions": {
+    "light": "لايت",
+    "videoInstructions": "تعليمات الفيديو",
+    "lightVideoTitle": "تعليمات فيديو Supreme Light",
+    "openYoutube": "فتح الفيديو على يوتيوب",
+    "maxPlaceholder": "عنصر نائب للفيديو — سيتم إضافة الشرح الكامل قريبًا."
+  },
   "languageSelector": {
     "triggerLabel": "اختر اللغة",
     "menuLabel": "اختر اللغة",
@@ -356,6 +410,7 @@
   },
   "modal": {
     "title": "قيد التطوير النشط",
+    "message": "قيد التطوير النشط، تاريخ الإطلاق المخطط — 10 نوفمبر",
     "body": "من المتوقع إطلاق النظام في 10 أكتوبر"
   },
   "lamp": {
@@ -648,6 +703,8 @@
   },
   "requestDemoModal": {
     "title": "طلب النظام",
+    "contactInfo": "يمكنك التواصل معنا عبر هذا البريد الإلكتروني",
+    "contactSuffix": "للتواصل معنا",
     "name": "الاسم",
     "email": "بريد الشركة",
     "company": "اسم الشركة",
@@ -675,6 +732,21 @@
     "successTitle": "تم إرسال الطلب!",
     "successBody": "شكرًا لك. ستصلك تعليمات تنزيل النظام عبر البريد الإلكتروني.",
     "close": "إغلاق"
+  },
+  "countrySelect": {
+    "title": "اختر بلدك",
+    "subtitle": "اختر موقعك للمتابعة",
+    "searchPlaceholder": "ابحث عن بلد...",
+    "noResults": "لم يتم العثور على بلدان",
+    "continue": "متابعة",
+    "comingSoon": {
+      "title": "جاهز تقريبًا!",
+      "message": "لوحة المسؤول لإدارة الاشتراك ستكون جاهزة خلال",
+      "hours": "ساعة",
+      "notification": "سنقوم بإشعارك عند الإطلاق!",
+      "back": "رجوع",
+      "gotIt": "حسنًا"
+    }
   },
   "policySidebar": {
     "tableOfContents": "جدول المحتويات"
@@ -901,115 +973,124 @@
   },
   "documentation": {
     "tabs": {
-      "web": "Web Security",
-      "email": "Email Security"
+      "web": "أمن الويب",
+      "email": "أمن البريد الإلكتروني"
     },
     "system": {
-      "sections": "Sections",
-      "topics": "Topics",
-      "tableOfContents": "Table of contents",
-      "close": "Close"
+      "sections": "الأقسام",
+      "topics": "المواضيع",
+      "tableOfContents": "جدول المحتويات",
+      "close": "إغلاق"
     },
     "webSecurity": {
       "placeholder": {
-        "badge": "Web Security",
-        "title": "Documentation is coming soon",
-        "description": "We are preparing a detailed guide for configuring and protecting web applications. Check back soon — the materials will appear shortly."
+        "badge": "أمن الويب",
+        "title": "الوثائق قيد الإعداد",
+        "description": "نُعد دليلًا مفصلًا لإعداد تطبيقات الويب وحمايتها. تفقّد الصفحة قريبًا — سيتم نشر المواد قريبًا."
       }
     },
+    "supreme": {
+      "tabs": {
+        "light": "لايت"
+      },
+      "videoInstructions": "تعليمات الفيديو",
+      "lightVideoTitle": "تعليمات فيديو Supreme Light",
+      "openYoutube": "فتح الفيديو على يوتيوب",
+      "maxPlaceholder": "عنصر نائب للفيديو — سيتم إضافة الشرح الكامل قريبًا."
+    },
     "emailSecurity": {
-      "title": "Email Security System",
-      "subtitle": "Documentation | Version 1.0",
-      "description": "How to configure and operate the corporate email security platform.",
+      "title": "نظام أمن البريد الإلكتروني",
+      "subtitle": "الوثائق | الإصدار 1.0",
+      "description": "كيفية إعداد وتشغيل منصة حماية البريد الإلكتروني للشركات.",
       "chapters": [
         {
           "id": "getting-started",
-          "title": "Getting started",
-          "label": "Getting started",
-          "description": "Initial onboarding steps plus domain and DNS configuration in the CMC Admin Panel.",
+          "title": "البدء السريع",
+          "label": "البدء السريع",
+          "description": "خطوات الإعداد الأولية وتكوين النطاق وإعدادات DNS في لوحة تحكم CMC.",
           "sections": [
             {
               "id": "admin-setup",
-              "title": "For administrators",
+              "title": "للمديرين",
               "body": [
                 {
                   "type": "paragraph",
-                  "content": "To onboard the system:"
+                  "content": "لإعداد النظام:"
                 },
                 {
                   "type": "orderedList",
                   "items": [
-                    "Sign in to the CMC Admin Panel at admin.silenceai.net using Google or Microsoft OAuth.",
-                    "Register your company domain.",
-                    "Verify domain ownership through DNS.",
-                    "Configure security records (SPF, DKIM, DMARC).",
-                    "Create email accounts for employees."
+                    "سجّل الدخول إلى لوحة تحكم CMC على admin.silenceai.net باستخدام Google أو Microsoft OAuth.",
+                    "سجّل نطاق شركتك.",
+                    "تحقق من ملكية النطاق عبر DNS.",
+                    "اضبط سجلات الأمان (SPF، DKIM، DMARC).",
+                    "أنشئ حسابات البريد الإلكتروني للموظفين."
                   ]
                 },
                 {
                   "type": "paragraph",
-                  "content": "After configuration, users can access the webmail client and send protected messages."
+                  "content": "بعد الإعداد، يمكن للمستخدمين الوصول إلى عميل البريد الإلكتروني وإرسال رسائل محمية."
                 }
               ]
             },
             {
               "id": "user-onboarding",
-              "title": "For end users",
+              "title": "للمستخدمين النهائيين",
               "body": [
                 {
                   "type": "paragraph",
-                  "content": "To start working with email:"
+                  "content": "للبدء في استخدام البريد الإلكتروني:"
                 },
                 {
                   "type": "orderedList",
                   "items": [
-                    "Get your credentials from the administrator.",
-                    "Sign in to mail.silenceai.net with email/password or OAuth.",
-                    "Send your first message using the \"Compose\" button.",
-                    "Review the system folders that automatically categorize messages by security level."
+                    "احصل على بيانات اعتمادك من المدير.",
+                    "سجّل الدخول إلى mail.silenceai.net باستخدام البريد/كلمة المرور أو OAuth.",
+                    "أرسل رسالتك الأولى باستخدام زر \"إنشاء رسالة\".",
+                    "راجع المجلدات النظامية التي تصنّف الرسائل تلقائياً حسب مستوى الأمان."
                   ]
                 },
                 {
                   "type": "paragraph",
-                  "content": "Incoming mail is automatically scanned for threats and routed into folders."
+                  "content": "يتم فحص البريد الوارد تلقائياً بحثاً عن التهديدات وتوجيهه إلى المجلدات المناسبة."
                 }
               ]
             },
             {
               "id": "add-domain",
-              "title": "Add a domain",
+              "title": "إضافة نطاق",
               "body": [
                 {
                   "type": "paragraph",
-                  "content": "Domain management starts in the CMC Admin Panel."
+                  "content": "تبدأ إدارة النطاق في لوحة تحكم CMC."
                 },
                 {
                   "type": "orderedList",
                   "items": [
-                    "Open the CMC Admin Panel.",
-                    "Click \"Add Domain\".",
-                    "Enter the domain name without www (for example, company.com).",
-                    "Click \"Add\"."
+                    "افتح لوحة تحكم CMC.",
+                    "انقر على \"إضافة نطاق\".",
+                    "أدخل اسم النطاق بدون www (مثلاً: company.com).",
+                    "انقر على \"إضافة\"."
                   ]
                 },
                 {
                   "type": "paragraph",
-                  "content": "The system issues a verification token to confirm domain ownership."
+                  "content": "يُصدر النظام رمز تحقق لتأكيد ملكية النطاق."
                 }
               ]
             },
             {
               "id": "verify-domain",
-              "title": "Verify domain ownership",
+              "title": "التحقق من ملكية النطاق",
               "body": [
                 {
                   "type": "paragraph",
-                  "content": "After adding a domain, prove that you own it."
+                  "content": "بعد إضافة النطاق، أثبت ملكيتك له."
                 },
                 {
                   "type": "orderedList",
                   "items": [
-                    "Copy the TXT record from the CMC:"
+                    "انسخ سجل TXT من CMC:"
                   ]
                 },
                 {
@@ -1019,31 +1100,31 @@
                 {
                   "type": "orderedList",
                   "items": [
-                    "Add the record to your domain's DNS settings.",
-                    "Wait for the automatic check (every 5 minutes) or click \"Check Now\"."
+                    "أضف السجل إلى إعدادات DNS الخاصة بنطاقك.",
+                    "انتظر الفحص التلقائي (كل 5 دقائق) أو انقر على \"التحقق الآن\"."
                   ]
                 },
                 {
                   "type": "paragraph",
-                  "content": "Verification can take up to 48 hours. After success, the domain status becomes verified."
+                  "content": "قد يستغرق التحقق ما يصل إلى 48 ساعة. عند النجاح، تصبح حالة النطاق \"تم التحقق\"."
                 }
               ]
             },
             {
               "id": "configure-spf",
-              "title": "Configure the SPF record",
+              "title": "ضبط سجل SPF",
               "body": [
                 {
                   "type": "paragraph",
-                  "content": "SPF defines which servers may send email on behalf of your domain."
+                  "content": "يحدد SPF الخوادم المسموح لها بإرسال البريد الإلكتروني باسم نطاقك."
                 },
                 {
                   "type": "orderedList",
                   "items": [
-                    "In the CMC open \"DNS Configuration\" → \"SPF\".",
-                    "Click \"Check Current SPF\" to review existing records.",
-                    "Click \"Generate SPF Record\".",
-                    "Copy the suggested record:"
+                    "في CMC، افتح \"تكوين DNS\" ← \"SPF\".",
+                    "انقر على \"فحص SPF الحالي\" لمراجعة السجلات الموجودة.",
+                    "انقر على \"إنشاء سجل SPF\".",
+                    "انسخ السجل المقترح:"
                   ]
                 },
                 {
@@ -1053,30 +1134,30 @@
                 {
                   "type": "orderedList",
                   "items": [
-                    "Add the record to DNS."
+                    "أضف السجل إلى DNS."
                   ]
                 },
                 {
                   "type": "paragraph",
-                  "content": "If an SPF record already exists (for example, for Gmail), place our include before the final -all qualifier."
+                  "content": "إذا كان سجل SPF موجوداً بالفعل (مثلاً لـ Gmail)، ضع تعليمة include الخاصة بنا قبل المُحدِّد -all الأخير."
                 }
               ]
             },
             {
               "id": "configure-dkim",
-              "title": "Generate DKIM keys",
+              "title": "توليد مفاتيح DKIM",
               "body": [
                 {
                   "type": "paragraph",
-                  "content": "DKIM adds a cryptographic signature to your mail."
+                  "content": "يضيف DKIM توقيعاً تشفيرياً إلى بريدك الإلكتروني."
                 },
                 {
                   "type": "orderedList",
                   "items": [
-                    "In the CMC open \"DNS Configuration\" → \"DKIM\".",
-                    "Click \"Generate DKIM Keys\".",
-                    "The system creates a key pair (the private key stays on the server, the public key is for DNS).",
-                    "Copy the DNS record:"
+                    "في CMC، افتح \"تكوين DNS\" ← \"DKIM\".",
+                    "انقر على \"إنشاء مفاتيح DKIM\".",
+                    "يُنشئ النظام زوج مفاتيح (المفتاح الخاص يبقى على الخادم، والمفتاح العام لـ DNS).",
+                    "انسخ سجل DNS:"
                   ]
                 },
                 {
@@ -1086,39 +1167,39 @@
                 {
                   "type": "orderedList",
                   "items": [
-                    "Add the record to DNS.",
-                    "Run \"Verify DKIM\" to confirm."
+                    "أضف السجل إلى DNS.",
+                    "شغّل \"التحقق من DKIM\" للتأكيد."
                   ]
                 }
               ]
             },
             {
               "id": "configure-dmarc",
-              "title": "Set up DMARC policy",
+              "title": "إعداد سياسة DMARC",
               "body": [
                 {
                   "type": "paragraph",
-                  "content": "DMARC defines what to do with messages that fail SPF or DKIM checks."
+                  "content": "يحدد DMARC ما يجب فعله بالرسائل التي تفشل في فحوصات SPF أو DKIM."
                 },
                 {
                   "type": "orderedList",
                   "items": [
-                    "In the CMC open \"DNS Configuration\" → \"DMARC\".",
-                    "Select a policy:"
+                    "في CMC، افتح \"تكوين DNS\" ← \"DMARC\".",
+                    "اختر سياسة:"
                   ]
                 },
                 {
                   "type": "list",
                   "items": [
-                    "quarantine — move to spam (recommended)",
-                    "reject — drop the message"
+                    "quarantine — نقل إلى البريد المزعج (موصى به)",
+                    "reject — رفض الرسالة"
                   ]
                 },
                 {
                   "type": "orderedList",
                   "items": [
-                    "Click \"Generate DMARC Record\".",
-                    "Copy the record:"
+                    "انقر على \"إنشاء سجل DMARC\".",
+                    "انسخ السجل:"
                   ]
                 },
                 {
@@ -1128,12 +1209,12 @@
                 {
                   "type": "orderedList",
                   "items": [
-                    "Add the record to DNS."
+                    "أضف السجل إلى DNS."
                   ]
                 },
                 {
                   "type": "paragraph",
-                  "content": "Start with quarantine, monitor reports for 1-2 weeks, then switch to reject if desired."
+                  "content": "ابدأ بـ quarantine، وراقب التقارير لمدة 1-2 أسبوع، ثم انتقل إلى reject إذا أردت."
                 }
               ]
             }
@@ -1141,104 +1222,104 @@
         },
         {
           "id": "user-management",
-          "title": "User management",
-          "label": "User management",
-          "description": "Creating and maintaining mail accounts.",
+          "title": "إدارة المستخدمين",
+          "label": "إدارة المستخدمين",
+          "description": "إنشاء حسابات البريد وصيانتها.",
           "sections": [
             {
               "id": "create-account",
-              "title": "Create an email account",
+              "title": "إنشاء حساب بريد إلكتروني",
               "body": [
                 {
                   "type": "orderedList",
                   "items": [
-                    "Open the \"Email Accounts\" section in the CMC.",
-                    "Click \"Create Account\".",
-                    "Fill out the fields:"
+                    "افتح قسم \"حسابات البريد الإلكتروني\" في CMC.",
+                    "انقر على \"إنشاء حساب\".",
+                    "املأ الحقول:"
                   ]
                 },
                 {
                   "type": "list",
                   "items": [
-                    "Email: john.doe@company.com",
-                    "First and last name",
-                    "Password (minimum 8 characters, uppercase, lowercase, digit, special character)",
-                    "Storage quota: pick a mailbox size"
+                    "البريد الإلكتروني: john.doe@company.com",
+                    "الاسم الأول واللقب",
+                    "كلمة المرور (حد أدنى 8 أحرف، حرف كبير، حرف صغير، رقم، رمز خاص)",
+                    "حصة التخزين: اختر حجم صندوق البريد"
                   ]
                 },
                 {
                   "type": "orderedList",
                   "items": [
-                    "Click \"Create\"."
+                    "انقر على \"إنشاء\"."
                   ]
                 },
                 {
                   "type": "paragraph",
-                  "content": "The user can sign in to webmail immediately."
+                  "content": "يمكن للمستخدم تسجيل الدخول إلى عميل البريد فوراً."
                 }
               ]
             },
             {
               "id": "suspend-activate",
-              "title": "Suspend or reactivate an account",
+              "title": "تعليق الحساب أو إعادة تفعيله",
               "body": [
                 {
                   "type": "orderedList",
                   "items": [
-                    "Find the user in \"Email Accounts\".",
-                    "In the Actions menu choose:"
+                    "ابحث عن المستخدم في \"حسابات البريد الإلكتروني\".",
+                    "من قائمة الإجراءات، اختر:"
                   ]
                 },
                 {
                   "type": "list",
                   "items": [
-                    "Suspend — pause access (the user cannot sign in)",
-                    "Activate — restore access"
+                    "تعليق — إيقاف الوصول مؤقتاً (لا يستطيع المستخدم تسجيل الدخول)",
+                    "تفعيل — استعادة الوصول"
                   ]
                 },
                 {
                   "type": "orderedList",
                   "items": [
-                    "Confirm the action."
+                    "أكد الإجراء."
                   ]
                 }
               ]
             },
             {
               "id": "change-quota",
-              "title": "Change storage quota",
+              "title": "تعديل حصة التخزين",
               "body": [
                 {
                   "type": "orderedList",
                   "items": [
-                    "Find the user in the list.",
-                    "Choose \"Edit Quota\" in the Actions menu.",
-                    "Select a new storage size.",
-                    "Save changes."
+                    "ابحث عن المستخدم في القائمة.",
+                    "اختر \"تعديل الحصة\" من قائمة الإجراءات.",
+                    "حدِّد حجم التخزين الجديد.",
+                    "احفظ التغييرات."
                   ]
                 },
                 {
                   "type": "paragraph",
-                  "content": "Changes take effect immediately."
+                  "content": "تسري التغييرات فوراً."
                 }
               ]
             },
             {
               "id": "delete-account",
-              "title": "Delete an account",
+              "title": "حذف حساب",
               "body": [
                 {
                   "type": "orderedList",
                   "items": [
-                    "Find the user in the list.",
-                    "Choose \"Delete\" in the Actions menu.",
-                    "Confirm the deletion."
+                    "ابحث عن المستخدم في القائمة.",
+                    "اختر \"حذف\" من قائمة الإجراءات.",
+                    "أكد عملية الحذف."
                   ]
                 },
                 {
                   "type": "callout",
                   "intent": "warning",
-                  "content": "Warning: All user data will be removed permanently."
+                  "content": "تحذير: سيتم حذف جميع بيانات المستخدم نهائياً."
                 }
               ]
             }
@@ -1246,172 +1327,172 @@
         },
         {
           "id": "mail-operations",
-          "title": "Mail operations",
-          "label": "Mail operations",
-          "description": "Everyday actions in the webmail client.",
+          "title": "عمليات البريد",
+          "label": "عمليات البريد",
+          "description": "الإجراءات اليومية في عميل البريد الإلكتروني.",
           "sections": [
             {
               "id": "send-letter",
-              "title": "Send a message",
+              "title": "إرسال رسالة",
               "body": [
                 {
                   "type": "orderedList",
                   "items": [
-                    "In webmail click \"Compose\".",
-                    "Fill in:"
+                    "في عميل البريد، انقر على \"إنشاء رسالة\".",
+                    "املأ الحقول:"
                   ]
                 },
                 {
                   "type": "list",
                   "items": [
-                    "To: recipient address",
-                    "Subject: email subject",
-                    "Body: message text (rich formatting available)"
+                    "إلى: عنوان المستلم",
+                    "الموضوع: موضوع الرسالة",
+                    "النص: محتوى الرسالة (يدعم التنسيق الغني)"
                   ]
                 },
                 {
                   "type": "orderedList",
                   "items": [
-                    "Attach files if needed (up to 25 MB per file).",
-                    "Click \"Send\"."
+                    "أرفق الملفات إذا لزم الأمر (حتى 25 ميغابايت لكل ملف).",
+                    "انقر على \"إرسال\"."
                   ]
                 },
                 {
                   "type": "paragraph",
-                  "content": "Messages are automatically signed with DKIM and delivered."
+                  "content": "يُوقَّع على الرسائل تلقائياً بـ DKIM وتُسلَّم."
                 }
               ]
             },
             {
               "id": "custom-folder",
-              "title": "Create a custom folder with rules",
+              "title": "إنشاء مجلد مخصص بقواعد",
               "body": [
                 {
                   "type": "paragraph",
-                  "content": "Custom folders automatically sort messages by the rules you define."
+                  "content": "تُرتِّب المجلدات المخصصة الرسائل تلقائياً وفق القواعد التي تحددها."
                 },
                 {
                   "type": "orderedList",
                   "items": [
-                    "In the sidebar click \"Create Folder\".",
-                    "Enter a folder name (for example, \"Clients\").",
-                    "Click \"Add Rules\".",
-                    "Configure the rule:"
+                    "في الشريط الجانبي، انقر على \"إنشاء مجلد\".",
+                    "أدخل اسم المجلد (مثلاً: \"العملاء\").",
+                    "انقر على \"إضافة قواعد\".",
+                    "اضبط القاعدة:"
                   ]
                 },
                 {
                   "type": "list",
                   "items": [
-                    "Filter by: Sender Domain",
-                    "Match mode: Contains",
-                    "Value: client.com"
+                    "تصفية حسب: نطاق المرسل",
+                    "وضع التطابق: يحتوي على",
+                    "القيمة: client.com"
                   ]
                 },
                 {
                   "type": "orderedList",
                   "items": [
-                    "Enable \"Apply to existing emails\" if you want to reprocess current messages.",
-                    "Click \"Create\"."
+                    "فعِّل \"تطبيق على الرسائل الموجودة\" إذا أردت إعادة معالجة الرسائل الحالية.",
+                    "انقر على \"إنشاء\"."
                   ]
                 },
                 {
                   "type": "paragraph",
-                  "content": "All new mail from *@client.com will go to the \"Clients\" folder automatically."
+                  "content": "ستنتقل جميع الرسائل الجديدة من *@client.com إلى مجلد \"العملاء\" تلقائياً."
                 }
               ]
             },
             {
               "id": "add-whitelist",
-              "title": "Add a sender to the whitelist",
+              "title": "إضافة مُرسِل إلى قائمة السماح",
               "body": [
                 {
                   "type": "paragraph",
-                  "content": "If a message was flagged as spam by mistake:"
+                  "content": "إذا صُنِّفت رسالة على أنها بريد مزعج بشكل خاطئ:"
                 },
                 {
                   "type": "orderedList",
                   "items": [
-                    "Open the email in the SPAM folder.",
-                    "Click \"Not Spam\" → \"Add to Whitelist\".",
-                    "Choose:"
+                    "افتح الرسالة في مجلد البريد المزعج.",
+                    "انقر على \"ليس بريداً مزعجاً\" → \"إضافة إلى قائمة السماح\".",
+                    "اختر:"
                   ]
                 },
                 {
                   "type": "list",
                   "items": [
-                    "Whitelist sender email",
-                    "Whitelist sender domain"
+                    "إضافة بريد المرسل إلى قائمة السماح",
+                    "إضافة نطاق المرسل إلى قائمة السماح"
                   ]
                 },
                 {
                   "type": "orderedList",
                   "items": [
-                    "Confirm the action."
+                    "أكد الإجراء."
                   ]
                 },
                 {
                   "type": "paragraph",
-                  "content": "Future messages from this sender will no longer be sent to spam."
+                  "content": "لن تُرسَل الرسائل المستقبلية من هذا المرسل إلى البريد المزعج."
                 }
               ]
             },
             {
               "id": "email-signature",
-              "title": "Set up an email signature",
+              "title": "إعداد توقيع البريد الإلكتروني",
               "body": [
                 {
                   "type": "orderedList",
                   "items": [
-                    "Open Settings → \"Email Signature\".",
-                    "Enable \"Enable signature\".",
-                    "Enter the signature text in the editor.",
-                    "Click \"Save\"."
+                    "افتح الإعدادات → \"توقيع البريد الإلكتروني\".",
+                    "فعِّل \"تفعيل التوقيع\".",
+                    "أدخل نص التوقيع في المحرر.",
+                    "انقر على \"حفظ\"."
                   ]
                 },
                 {
                   "type": "paragraph",
-                  "content": "The signature is added to every outgoing message automatically."
+                  "content": "يُضاف التوقيع تلقائياً إلى كل رسالة صادرة."
                 }
               ]
             },
             {
               "id": "vacation-responder",
-              "title": "Configure an auto-reply",
+              "title": "إعداد رد تلقائي",
               "body": [
                 {
                   "type": "orderedList",
                   "items": [
-                    "Open Settings → \"Vacation Responder\".",
-                    "Enable \"Enable vacation responder\".",
-                    "Set the start and end dates.",
-                    "Enter the auto-reply text.",
-                    "Check \"Reply once per sender\" to send a single response to each sender.",
-                    "Click \"Save\"."
+                    "افتح الإعدادات → \"الرد التلقائي على الغياب\".",
+                    "فعِّل \"تفعيل الرد التلقائي\".",
+                    "حدِّد تاريخ البدء والانتهاء.",
+                    "أدخل نص الرد التلقائي.",
+                    "حدِّد \"رد مرة واحدة لكل مرسل\" لإرسال رد واحد فقط لكل مرسل.",
+                    "انقر على \"حفظ\"."
                   ]
                 },
                 {
                   "type": "paragraph",
-                  "content": "The auto-responder runs during the selected dates and shuts off automatically."
+                  "content": "يعمل الرد التلقائي خلال التواريخ المحددة ويتوقف تلقائياً."
                 }
               ]
             },
             {
               "id": "forwarding",
-              "title": "Configure forwarding",
+              "title": "إعداد إعادة التوجيه",
               "body": [
                 {
                   "type": "orderedList",
                   "items": [
-                    "Open Settings → \"Email Forwarding\".",
-                    "Click \"Add Forwarding Address\".",
-                    "Enter the forwarding email.",
-                    "Enable \"Keep copy in inbox\" if you want to retain a copy.",
-                    "Click \"Save\"."
+                    "افتح الإعدادات → \"إعادة توجيه البريد\".",
+                    "انقر على \"إضافة عنوان إعادة التوجيه\".",
+                    "أدخل عنوان البريد الإلكتروني للتوجيه.",
+                    "فعِّل \"الاحتفاظ بنسخة في صندوق الوارد\" إذا أردت الاحتفاظ بنسخة.",
+                    "انقر على \"حفظ\"."
                   ]
                 },
                 {
                   "type": "paragraph",
-                  "content": "All incoming email will be forwarded to the selected address."
+                  "content": "سيُعاد توجيه جميع الرسائل الواردة إلى العنوان المحدد."
                 }
               ]
             }
@@ -1419,63 +1500,63 @@
         },
         {
           "id": "domain-administration",
-          "title": "Domain administration",
-          "label": "Domain administration",
-          "description": "Analytics and bulk mail operations for the domain.",
+          "title": "إدارة النطاق",
+          "label": "إدارة النطاق",
+          "description": "التحليلات وعمليات البريد الجماعية للنطاق.",
           "sections": [
             {
               "id": "view-activity",
-              "title": "Review domain mail activity",
+              "title": "مراجعة نشاط البريد في النطاق",
               "body": [
                 {
                   "type": "paragraph",
-                  "content": "Administrators can view every message for every user in the domain."
+                  "content": "يمكن للمديرين عرض كل رسالة لكل مستخدم في النطاق."
                 },
                 {
                   "type": "orderedList",
                   "items": [
-                    "Open CMC → \"Email Activity\".",
-                    "Use the filters:"
+                    "افتح CMC → \"نشاط البريد\".",
+                    "استخدم عوامل التصفية:"
                   ]
                 },
                 {
                   "type": "list",
                   "items": [
-                    "By user",
-                    "By folder (Secure, Spam, Phishing)",
-                    "By date",
-                    "By threat type"
+                    "حسب المستخدم",
+                    "حسب المجلد (آمن، بريد مزعج، تصيد احتيالي)",
+                    "حسب التاريخ",
+                    "حسب نوع التهديد"
                   ]
                 },
                 {
                   "type": "orderedList",
                   "items": [
-                    "Use the search bar for subject or sender lookups."
+                    "استخدم شريط البحث للبحث بالموضوع أو المرسل."
                   ]
                 }
               ]
             },
             {
               "id": "bulk-delete",
-              "title": "Delete messages for all users",
+              "title": "حذف الرسائل لجميع المستخدمين",
               "body": [
                 {
                   "type": "paragraph",
-                  "content": "If a malicious message was sent to everyone:"
+                  "content": "إذا أُرسلت رسالة ضارة إلى الجميع:"
                 },
                 {
                   "type": "orderedList",
                   "items": [
-                    "Open \"Email Activity\".",
-                    "Locate the message via filters or search.",
-                    "Select the messages to remove.",
-                    "Click \"Delete Selected\".",
-                    "Confirm the bulk deletion."
+                    "افتح \"نشاط البريد\".",
+                    "حدِّد الرسالة عبر عوامل التصفية أو البحث.",
+                    "اختر الرسائل المراد حذفها.",
+                    "انقر على \"حذف المحدد\".",
+                    "أكد الحذف الجماعي."
                   ]
                 },
                 {
                   "type": "paragraph",
-                  "content": "The message is removed from every user mailbox."
+                  "content": "تُحذف الرسالة من صندوق بريد كل مستخدم."
                 }
               ]
             }
@@ -1483,126 +1564,126 @@
         },
         {
           "id": "concepts",
-          "title": "Concepts",
-          "label": "Concepts",
-          "description": "Key platform concepts and security flows.",
+          "title": "المفاهيم",
+          "label": "المفاهيم",
+          "description": "المفاهيم الأساسية للمنصة وتدفقات الأمان.",
           "sections": [
             {
               "id": "system-overview",
-              "title": "System overview",
+              "title": "نظرة عامة على النظام",
               "body": [
                 {
                   "type": "paragraph",
-                  "content": "Email Security System is a platform that protects corporate email from cyber threats."
+                  "content": "نظام أمن البريد الإلكتروني هو منصة تحمي البريد الإلكتروني للشركات من التهديدات الإلكترونية."
                 },
                 {
                   "type": "list",
-                  "title": "Components:",
+                  "title": "المكونات:",
                   "items": [
-                    "CMC Admin Panel — administrator console for domains, users, and DNS settings.",
-                    "Webmail Client — employee mailbox with automatic threat protection.",
-                    "Infrastructure Services — SMTP server and security pipeline for message processing."
+                    "لوحة تحكم CMC — وحدة تحكم المدير للنطاقات والمستخدمين وإعدادات DNS.",
+                    "عميل البريد الإلكتروني — صندوق بريد الموظف مع حماية تلقائية من التهديدات.",
+                    "خدمات البنية التحتية — خادم SMTP وسلسلة الأمان لمعالجة الرسائل."
                   ]
                 }
               ]
             },
             {
               "id": "security-stack",
-              "title": "Security pipeline",
+              "title": "سلسلة الأمان",
               "body": [
                 {
                   "type": "paragraph",
-                  "content": "Every inbound message passes through six layers of protection:"
+                  "content": "تمر كل رسالة واردة عبر ست طبقات حماية:"
                 },
                 {
                   "type": "orderedList",
                   "items": [
-                    "Layer 0: Phishing Domain Check — evaluate sender domains against known phishing databases.",
-                    "Layer 1: Spoof Detection — validate SPF, DKIM, and DMARC alignment.",
-                    "Layer 2: Spam Detection — analyse content with RSPAMD for spam traits.",
-                    "Layer 3: Link Scanner — scan URLs with URLScan.io for malicious links.",
-                    "Layer 4: Antivirus — inspect attachments with Bitdefender.",
-                    "Layer 5: AI Phishing Detection — analyse message content with AI for phishing signals."
+                    "الطبقة 0: فحص نطاق التصيد — تقييم نطاقات المرسلين مقارنةً بقواعد بيانات التصيد المعروفة.",
+                    "الطبقة 1: كشف الانتحال — التحقق من توافق SPF وDKIM وDMARC.",
+                    "الطبقة 2: كشف البريد المزعج — تحليل المحتوى بـ RSPAMD للكشف عن سمات البريد المزعج.",
+                    "الطبقة 3: ماسح الروابط — فحص عناوين URL بـ URLScan.io للكشف عن الروابط الضارة.",
+                    "الطبقة 4: مكافحة الفيروسات — فحص المرفقات بـ Bitdefender.",
+                    "الطبقة 5: كشف التصيد بالذكاء الاصطناعي — تحليل محتوى الرسالة بالذكاء الاصطناعي للكشف عن إشارات التصيد."
                   ]
                 },
                 {
                   "type": "paragraph",
-                  "content": "If a threat is detected, processing stops and the message is placed in the corresponding folder."
+                  "content": "عند اكتشاف تهديد، تتوقف المعالجة وتُوضع الرسالة في المجلد المقابل."
                 }
               ]
             },
             {
               "id": "system-folders",
-              "title": "System folders",
+              "title": "المجلدات النظامية",
               "body": [
                 {
                   "type": "paragraph",
-                  "content": "Messages are routed to folders based on the inspection results:"
+                  "content": "تُوجَّه الرسائل إلى المجلدات بناءً على نتائج الفحص:"
                 },
                 {
                   "type": "list",
                   "items": [
-                    "Unfiltered — new mail before processing (temporary).",
-                    "Secure — messages that passed all checks.",
-                    "Possibly Spoofed — sender authenticity is suspicious.",
-                    "SPAM — spam messages.",
-                    "Dangerous Links — messages containing malicious URLs.",
-                    "Malware — messages with infected attachments.",
-                    "Possibly Phishing — phishing indicators detected.",
-                    "Sent — sent mail."
+                    "غير مفلتر — بريد جديد قبل المعالجة (مؤقت).",
+                    "آمن — رسائل اجتازت جميع الفحوصات.",
+                    "مشبوه الانتحال — هوية المرسل مشكوك فيها.",
+                    "بريد مزعج — رسائل مزعجة.",
+                    "روابط خطيرة — رسائل تحتوي على عناوين URL ضارة.",
+                    "برامج ضارة — رسائل بمرفقات مصابة.",
+                    "تصيد محتمل — مؤشرات تصيد احتيالي مكتشفة.",
+                    "مُرسَل — البريد المُرسَل."
                   ]
                 },
                 {
                   "type": "paragraph",
-                  "content": "A single message may appear in multiple folders (for example, SPAM and Possibly Spoofed)."
+                  "content": "قد تظهر رسالة واحدة في مجلدات متعددة (مثلاً: بريد مزعج ومشبوه الانتحال معاً)."
                 }
               ]
             },
             {
               "id": "custom-folders",
-              "title": "Custom folders",
+              "title": "المجلدات المخصصة",
               "body": [
                 {
                   "type": "paragraph",
-                  "content": "Users can create custom folders with automatic filtering rules."
+                  "content": "يمكن للمستخدمين إنشاء مجلدات مخصصة بقواعد تصفية تلقائية."
                 },
                 {
                   "type": "list",
-                  "title": "Filtering rules:",
+                  "title": "قواعد التصفية:",
                   "items": [
-                    "By sender domain",
-                    "By sender email",
-                    "By subject",
-                    "By sender name"
+                    "حسب نطاق المرسل",
+                    "حسب بريد المرسل",
+                    "حسب الموضوع",
+                    "حسب اسم المرسل"
                   ]
                 },
                 {
                   "type": "list",
-                  "title": "Match modes:",
+                  "title": "أوضاع التطابق:",
                   "items": [
-                    "Contains",
-                    "Equals",
-                    "Starts with",
-                    "Ends with"
+                    "يحتوي على",
+                    "يساوي",
+                    "يبدأ بـ",
+                    "ينتهي بـ"
                   ]
                 },
                 {
                   "type": "paragraph",
-                  "content": "Rules can be applied to existing mail (retroactive filtering)."
+                  "content": "يمكن تطبيق القواعد على البريد الموجود (تصفية بأثر رجعي)."
                 }
               ]
             },
             {
               "id": "spf",
-              "title": "SPF (Sender Policy Framework)",
+              "title": "SPF (إطار سياسة المُرسِل)",
               "body": [
                 {
                   "type": "paragraph",
-                  "content": "SPF is a DNS record that defines servers allowed to send mail for the domain."
+                  "content": "SPF هو سجل DNS يحدد الخوادم المسموح لها بإرسال البريد عن النطاق."
                 },
                 {
                   "type": "paragraph",
-                  "content": "Format:"
+                  "content": "الصيغة:"
                 },
                 {
                   "type": "code",
@@ -1610,42 +1691,42 @@
                 },
                 {
                   "type": "list",
-                  "title": "Mechanisms:",
+                  "title": "الآليات:",
                   "items": [
-                    "include:domain — allow servers from the referenced domain",
-                    "ip4:x.x.x.x — allow a specific IP address",
-                    "-all — reject everything else",
-                    "~all — mark everything else as suspicious"
+                    "include:domain — السماح لخوادم النطاق المُشار إليه",
+                    "ip4:x.x.x.x — السماح لعنوان IP محدد",
+                    "-all — رفض كل شيء آخر",
+                    "~all — تمييز كل شيء آخر على أنه مشبوه"
                   ]
                 },
                 {
                   "type": "paragraph",
-                  "content": "SPF check: the recipient verifies that the sender IP is authorised in the domain's SPF record. If the check fails, the message is flagged as suspicious."
+                  "content": "فحص SPF: يتحقق المستلم من أن IP المرسل مُخوَّل في سجل SPF للنطاق. إذا فشل الفحص، تُعلَّم الرسالة على أنها مشبوهة."
                 }
               ]
             },
             {
               "id": "dkim",
-              "title": "DKIM (DomainKeys Identified Mail)",
+              "title": "DKIM (البريد المُعرَّف بمفاتيح النطاق)",
               "body": [
                 {
                   "type": "paragraph",
-                  "content": "DKIM adds a cryptographic signature to confirm the message was sent by the domain owner and was not altered in transit."
+                  "content": "يُضيف DKIM توقيعاً تشفيرياً لتأكيد أن الرسالة أُرسلت من قِبل مالك النطاق ولم تُعدَّل أثناء الإرسال."
                 },
                 {
                   "type": "paragraph",
-                  "content": "How it works:"
+                  "content": "طريقة العمل:"
                 },
                 {
                   "type": "list",
                   "items": [
-                    "When sending, the server signs the message with a private key and adds a DKIM-Signature header.",
-                    "The recipient fetches the public key from DNS and verifies the signature."
+                    "عند الإرسال، يُوقِّع الخادم الرسالة بمفتاح خاص ويضيف ترويسة DKIM-Signature.",
+                    "يجلب المستلم المفتاح العام من DNS ويتحقق من التوقيع."
                   ]
                 },
                 {
                   "type": "paragraph",
-                  "content": "DNS record:"
+                  "content": "سجل DNS:"
                 },
                 {
                   "type": "code",
@@ -1653,21 +1734,21 @@
                 },
                 {
                   "type": "paragraph",
-                  "content": "The private key is stored on the server in encrypted form and never shared with clients."
+                  "content": "يُخزَّن المفتاح الخاص على الخادم بصورة مشفرة ولا يُشارَك أبداً مع العملاء."
                 }
               ]
             },
             {
               "id": "dmarc",
-              "title": "DMARC (Domain-based Message Authentication)",
+              "title": "DMARC (مصادقة الرسائل المبنية على النطاق)",
               "body": [
                 {
                   "type": "paragraph",
-                  "content": "DMARC defines the policy for messages that fail SPF or DKIM."
+                  "content": "يحدد DMARC السياسة للرسائل التي تفشل في SPF أو DKIM."
                 },
                 {
                   "type": "paragraph",
-                  "content": "Format:"
+                  "content": "الصيغة:"
                 },
                 {
                   "type": "code",
@@ -1675,39 +1756,39 @@
                 },
                 {
                   "type": "list",
-                  "title": "Parameters:",
+                  "title": "المعاملات:",
                   "items": [
-                    "p=quarantine — deliver to spam",
-                    "p=reject — reject the message",
-                    "p=none — monitor only",
-                    "rua= — address for aggregate reports"
+                    "p=quarantine — تسليم إلى البريد المزعج",
+                    "p=reject — رفض الرسالة",
+                    "p=none — مراقبة فقط",
+                    "rua= — عنوان للتقارير الإجمالية"
                   ]
                 },
                 {
                   "type": "paragraph",
-                  "content": "DMARC check: the recipient confirms the message passes SPF or DKIM with aligned domains. If not, the configured policy applies."
+                  "content": "فحص DMARC: يؤكد المستلم أن الرسالة اجتازت SPF أو DKIM مع توافق النطاقات. إذا لم يحدث ذلك، تُطبَّق السياسة المُهيَّأة."
                 }
               ]
             },
             {
               "id": "attachments",
-              "title": "Attachments and antivirus",
+              "title": "المرفقات ومكافحة الفيروسات",
               "body": [
                 {
                   "type": "list",
-                  "title": "Restrictions:",
+                  "title": "القيود:",
                   "items": [
-                    "Maximum file size: 25 MB",
-                    "All file types are supported"
+                    "الحد الأقصى لحجم الملف: 25 ميغابايت",
+                    "جميع أنواع الملفات مدعومة"
                   ]
                 },
                 {
                   "type": "paragraph",
-                  "content": "Attachment scanning: every file is scanned by Bitdefender. If malware is detected, the message moves to the Malware folder and the attachment is blocked."
+                  "content": "فحص المرفقات: يُفحص كل ملف بـ Bitdefender. إذا اكتُشفت برامج ضارة، تنتقل الرسالة إلى مجلد البرامج الضارة ويُحظر المرفق."
                 },
                 {
                   "type": "paragraph",
-                  "content": "Storage: attachments are kept per message on the server. Infected files are moved to quarantine."
+                  "content": "التخزين: تُحفظ المرفقات لكل رسالة على الخادم. تنتقل الملفات المصابة إلى الحجر الصحي."
                 }
               ]
             }
@@ -1715,88 +1796,88 @@
         },
         {
           "id": "access-control",
-          "title": "Access control",
-          "label": "Access control",
-          "description": "User roles and access protection.",
+          "title": "التحكم في الوصول",
+          "label": "التحكم في الوصول",
+          "description": "أدوار المستخدمين وحماية الوصول.",
           "sections": [
             {
               "id": "user-roles",
-              "title": "User roles",
+              "title": "أدوار المستخدمين",
               "body": [
                 {
                   "type": "list",
-                  "title": "Admin",
+                  "title": "مدير",
                   "items": [
-                    "Full access to the CMC Admin Panel",
-                    "Domain and DNS management",
-                    "Create and manage users",
-                    "View all domain mail",
-                    "Perform bulk mail operations"
+                    "وصول كامل إلى لوحة تحكم CMC",
+                    "إدارة النطاق وDNS",
+                    "إنشاء المستخدمين وإدارتهم",
+                    "عرض كل بريد النطاق",
+                    "تنفيذ عمليات البريد الجماعية"
                   ]
                 },
                 {
                   "type": "list",
-                  "title": "Subordinate",
+                  "title": "مساعد",
                   "items": [
-                    "Limited CMC access",
-                    "View the user list",
-                    "Access only their own mail"
+                    "وصول محدود إلى CMC",
+                    "عرض قائمة المستخدمين",
+                    "الوصول إلى بريده الخاص فقط"
                   ]
                 },
                 {
                   "type": "list",
-                  "title": "User",
+                  "title": "مستخدم",
                   "items": [
-                    "Access to the webmail client",
-                    "Work with their own mail",
-                    "Configure personal settings"
+                    "الوصول إلى عميل البريد الإلكتروني",
+                    "التعامل مع بريده الخاص",
+                    "ضبط الإعدادات الشخصية"
                   ]
                 }
               ]
             },
             {
               "id": "role-assignment",
-              "title": "Role assignment",
+              "title": "تعيين الأدوار",
               "body": [
                 {
                   "type": "paragraph",
-                  "content": "Auto-admin: the first user who signs in via OAuth automatically becomes an Admin."
+                  "content": "المدير التلقائي: أول مستخدم يسجل دخوله عبر OAuth يصبح مديراً تلقائياً."
                 },
                 {
                   "type": "paragraph",
-                  "content": "Creating Subordinate users: Admins add subordinate accounts in the CMC under \"User Management\"."
+                  "content": "إنشاء المساعدين: يضيف المديرون حسابات المساعدين في CMC تحت \"إدارة المستخدمين\"."
                 },
                 {
                   "type": "paragraph",
-                  "content": "Creating User accounts: Admins create mailboxes under \"Email Accounts\"; the accounts receive the User role."
+                  "content": "إنشاء حسابات المستخدمين: يُنشئ المديرون صناديق البريد تحت \"حسابات البريد الإلكتروني\"؛ تحصل هذه الحسابات على دور مستخدم."
                 }
               ]
             },
             {
               "id": "authentication",
-              "title": "Authentication",
+              "title": "المصادقة",
               "body": [
                 {
                   "type": "list",
                   "items": [
-                    "OAuth 2.0: Google or Microsoft sign-in with PKCE for security.",
-                    "Email/password: credentials issued by the administrator in the CMC.",
-                    "JWT tokens: access tokens last 7 days and are stored in httpOnly cookies.",
-                    "Token refresh: access tokens renew automatically via refresh tokens; once the refresh token expires, sign-in is required again."
+                    "OAuth 2.0: تسجيل الدخول عبر Google أو Microsoft مع PKCE للأمان.",
+                    "البريد/كلمة المرور: بيانات اعتماد يُصدرها المدير في CMC.",
+                    "رموز JWT: رموز الوصول صالحة 7 أيام وتُخزَّن في ملفات تعريف الارتباط httpOnly.",
+                    "تجديد الرمز: تتجدد رموز الوصول تلقائياً عبر رموز التجديد؛ عند انتهاء صلاحية رمز التجديد، يُلزَم المستخدم بتسجيل الدخول مجدداً."
                   ]
                 }
               ]
             },
             {
               "id": "access-protection",
-              "title": "Access protection",
+              "title": "حماية الوصول",
               "body": [
                 {
                   "type": "list",
                   "items": [
-                    "Rate limiting: maximum 5 sign-in attempts per 15 minutes from a single IP.",
-                    "Session management: active sessions stored in the database and validated on each request.",
-                    "Audit logging: critical administrator and user actions are recorded."
+                    "تحديد معدل الطلبات: حد أقصى 5 محاولات تسجيل دخول كل 15 دقيقة من IP واحد.",
+                    "إدارة الجلسات: تُخزَّن الجلسات النشطة في قاعدة البيانات وتُتحقق منها عند كل طلب.",
+                    "سجل التدقيق: تُسجَّل الإجراءات الحساسة للمديرين والمستخدمين."
                   ]
                 }
               ]
@@ -1805,44 +1886,44 @@
         },
         {
           "id": "quotas-limits",
-          "title": "Quotas and limits",
-          "label": "Quotas and limits",
-          "description": "Storage, sending, and user quotas.",
+          "title": "الحصص والقيود",
+          "label": "الحصص والقيود",
+          "description": "حصص التخزين والإرسال والمستخدمين.",
           "sections": [
             {
               "id": "storage-quota",
-              "title": "Storage quota",
+              "title": "حصة التخزين",
               "body": [
                 {
                   "type": "paragraph",
-                  "content": "Each user gets a mailbox quota. At 100% usage the user cannot send or receive mail."
+                  "content": "يحصل كل مستخدم على حصة تخزين لصندوق بريده. عند بلوغ 100% من الاستخدام، لا يستطيع المستخدم إرسال البريد أو استقباله."
                 }
               ]
             },
             {
               "id": "sending-limits",
-              "title": "Sending limits",
+              "title": "حدود الإرسال",
               "body": [
                 {
                   "type": "list",
                   "items": [
-                    "Business Basic: 500 messages per user per day",
-                    "Business Standard: 1000 messages per day",
-                    "Business Premium: 2000 messages per day",
-                    "Enterprise: 10000 messages per day"
+                    "Business Basic: 500 رسالة لكل مستخدم يومياً",
+                    "Business Standard: 1000 رسالة يومياً",
+                    "Business Premium: 2000 رسالة يومياً",
+                    "Enterprise: 10000 رسالة يومياً"
                   ]
                 }
               ]
             },
             {
               "id": "user-limit",
-              "title": "User limit",
+              "title": "حد المستخدمين",
               "body": [
                 {
                   "type": "list",
                   "items": [
-                    "Business plans: up to 300 users",
-                    "Enterprise plans: unlimited users"
+                    "خطط Business: حتى 300 مستخدم",
+                    "خطط Enterprise: مستخدمون غير محدودين"
                   ]
                 }
               ]
@@ -1850,6 +1931,126 @@
           ]
         }
       ]
+    }
+  },
+  "supreme": {
+    "landing": {
+      "hero": {
+        "headline": "طوِّر بسرعة. اشحن بأمان.",
+        "subheadline": "الذكاء الاصطناعي يكتب الكود. Supreme 2 يحميه.",
+        "tagline": "أكثر من 74 ماسحاً ذكياً. تحليل عميق على مستوى البنية المعمارية. أول ماسح كود قائم على MCP في العالم.",
+        "ctaMax": "الترقية إلى Supreme 2 MAX",
+        "ctaFree": "البدء مجاناً مع Supreme 2 Light"
+      },
+      "pricingLight": {
+        "name": "Supreme 2 Light",
+        "price": "مجاني",
+        "subprice": "مجاناً للأبد · لا يلزم بطاقة ائتمان",
+        "features": [
+          "امتداد VSCode",
+          "مسح المشروع كاملاً",
+          "74+ ماسح",
+          "تقرير شامل",
+          "سير عمل التقارير فقط (بدون إصلاح تلقائي)"
+        ],
+        "cta": "احصل على Supreme 2 Light"
+      },
+      "pricingMax": {
+        "name": "Supreme 2 MAX",
+        "price": "$18/شهرياً",
+        "subprice": "$150/سنة · أفضل قيمة",
+        "badge": "أفضل قيمة",
+        "features": [
+          "ماسح قائم على خادم MCP",
+          "مسح المشروع كاملاً",
+          "74+ ماسح",
+          "تقرير شامل",
+          "تقرير صديق للذكاء الاصطناعي للمعالجة التلقائية",
+          "إصلاح المشكلات الأمنية تلقائياً",
+          "كشف مُحسَّن عبر استخبارات التهديدات"
+        ],
+        "cta": "الترقية إلى Supreme 2 MAX",
+        "videoLabel": "فيديو تعليمي مؤقت – إعداد Supreme 2 MAX"
+      },
+      "hiddenRisk": {
+        "title": "خطر خفي في الكود المُوَلَّد بالذكاء الاصطناعي",
+        "llmTitle": "LLM = رؤية جزئية",
+        "llmItems": [
+          "يرى فقط الأجزاء المُلصقة",
+          "يفوّت الملفات المخفية",
+          "يتجاهل سلاسل التبعيات",
+          "لا يفحص البنية المعمارية",
+          "لا يراجع الإعدادات بشكل منهجي"
+        ],
+        "supremeTitle": "Supreme 2 = مسح كامل للمستودع",
+        "diagramRepo": "المستودع",
+        "diagramScanner": "ماسح عميق",
+        "diagramFindings": "نتائج كاملة"
+      },
+      "meet": {
+        "title": "تعرّف على SUPREME 2",
+        "features": [
+          "74+ ماسح",
+          "دعم متعدد اللغات بعمق",
+          "تحليل مدرك للبنية المعمارية",
+          "محرك مسح متوازٍ",
+          "كشف ذكي للثغرات"
+        ]
+      },
+      "mcp": {
+        "title": "أول ماسح كود قائم على MCP في العالم",
+        "subtitle": "يعمل Supreme 2 MAX كخادم MCP حتى يتمكن نموذج الذكاء الاصطناعي من تشغيل عمليات المسح الكاملة، واستهلاك JSON المنظَّم، وفهم الثغرات المصنَّفة، وإعادة بناء الكود بأمان، والتحقق من صحة الإصلاحات."
+      },
+      "comparison": {
+        "title": "Supreme 2 Light مقابل Supreme 2 MAX",
+        "maxAdvantage": "ميزة MAX: يشمل استخبارات تهديدات مفصّلة ويعمل كخادم MCP مخصص للنماذج اللغوية."
+      },
+      "whyLeads": {
+        "title": "لماذا يتصدّر Supreme السوق"
+      },
+      "llmVsSupreme": {
+        "title": "البحث عن ثغرات/إعدادات خاطئة باستخدام LLMs مقابل Supreme 2",
+        "llmTitle": "المراجعة بالذكاء الاصطناعي فقط",
+        "llmItems": [
+          "يحلّل فقط الأجزاء",
+          "يفوّت الإعدادات",
+          "يتخطى الوحدات المخفية",
+          "يتجاهل رسوم التبعيات"
+        ],
+        "supremeTitle": "Supreme 2",
+        "supremeItems": [
+          "يمسح المستودع كاملاً",
+          "يحلّل الإعدادات",
+          "يفحص أشجار التبعيات",
+          "يكشف الأنماط عبر الملفات",
+          "يُجري تحليل البنية المعمارية"
+        ]
+      },
+      "faq": {
+        "title": "الأسئلة المتكررة",
+        "q1": "ما لغات البرمجة التي يدعمها Supreme 2؟",
+        "a1": "يدعم Supreme 2 اللغات الحديثة الرئيسية وتنسيقات الإعدادات وملفات البنية التحتية عبر سير عمل الواجهة الخلفية والأمامية والسحابة والسكريبت والتوثيق.",
+        "a1Coverage": "يغطي 41 نوعاً مختلفاً من الماسحات لأكثر من 100 امتداد ملف.",
+        "q2": "ما أنواع الماسحات وتنسيقات الملفات المدعومة بالتفصيل؟",
+        "a2Intro": "يدعم Supreme 2 أنواع 41 من الماسحات تغطي جميع لغات البرمجة الرئيسية وتنسيقات الملفات.",
+        "a2Total": "الإجمالي: 41 نوعاً من الماسحات لأكثر من 100 امتداد ملف.",
+        "q3": "ما هو MCP ولماذا يهم؟",
+        "a3": "يتيح MCP لـ Supreme 2 MAX العمل كخادم أمني منظَّم. بدلاً من النص الخام، يُعيد تقارير JSON مُصنَّفة للثغرات من أجل المعالجة التلقائية والإصلاح بالذكاء الاصطناعي والتفسير البرمجي وسير عمل التحسين المستمر.",
+        "q4": "هل يُخزِّن Supreme 2 بياناتي؟",
+        "a4": "يُجري Supreme 2 المسح محلياً في بيئتك. لا يغادر كودك الجهاز الذي يعمل عليه الماسح أبداً. يمكنك الاطلاع على الكود المصدري لـ Supreme 2 Light على GitHub ومراقبة نشاط الشبكة أثناء المسح.",
+        "q5": "ما متطلبات ما قبل التثبيت؟",
+        "a5Prefix": "لتشغيل Supreme 2، يجب أن يكون",
+        "a5Python": "Python 3.0 أو أعلى",
+        "a5Suffix": "مثبّتاً على جهازك. بالإضافة إلى ذلك، يجب التأكد من تثبيت",
+        "a5Pip": "pip",
+        "a5End": "قبل تثبيت Supreme نفسه.",
+        "q6": "هل Supreme 2 مناسب للشركات الناشئة؟",
+        "a6": "نعم. فعّال بشكل خاص لفرق الشركات الناشئة التي تعتمد أولاً على الذكاء الاصطناعي وتشحن بسرعة باستخدام الكود المُولَّد بالذكاء الاصطناعي، حيث يسهل إغفال المخاطر الخفية عبر الملفات بدون تحليل أمني لكامل المستودع.",
+        "a1ScannerTypes": "نوعاً من أنواع الماسحات",
+        "a1Across": "تغطي",
+        "a1Extensions": "امتداد ملف",
+        "a2Covering": "تغطي جميع لغات البرمجة الرئيسية وصيغ الملفات."
+      }
     }
   }
 }

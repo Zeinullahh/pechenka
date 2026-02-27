@@ -27,6 +27,40 @@
     "popular": "Most popular",
     "allLanguages": "All languages"
   },
+  "homeCompliance": {
+    "badge": "規制コンプライアンス",
+    "title": "グローバルコンプライアンス対応",
+    "subtitle": "継続的なライブコンプライアンスカバレッジ",
+    "statusLabel": "準拠",
+    "supremeOnly": "Supremeのみ",
+    "cards": {
+      "gdpr": { "desc": "すべてのEU居住者の個人データを規制する、世界で最も厳格なプライバシーおよびセキュリティ法。世界中のデータ保護のグローバルスタンダードを設定しています。" },
+      "ukGdpr": { "desc": "EU GDPRに相当する、Brexit後に国内法として維持された英国法。範囲と義務は実質的に同一であり、EU GDPRへの準拠はUK GDPRにも適用されます。" },
+      "ccpa": { "desc": "登録にはGoogle OAuthを使用しており、プロフィールデータ（氏名、メールアドレス、Google ID）がサーバーに送信されます。これはCCPAに基づく個人データです。ユーザーはアカウントデータをいつでも確認、アクセス、および削除する権利を有します。" },
+      "pipeda": { "desc": "企業の所在地に関わらず、カナダ居住者のデータを扱うすべての商業組織に適用されます。グローバルに拡大するにあたり、カナダユーザーの個人データも同様の最小収集基準で管理されます。" },
+      "ksaPdpl": { "desc": "SDAIAが施行するサウジアラビアの個人データ保護法。個人データの収集、処理、および国境を越えた転送を規制しています。" },
+      "uaePdpl": { "desc": "DIFCやADGMを含む本土およびフリーゾーン全体での個人データ処理を規制する、UAEの個人データ保護法。" },
+      "qatarPdpl": { "desc": "交通通信省が管轄するカタールの個人データプライバシー保護法。" },
+      "bahrainPdpl": { "desc": "PDPAによって規制され、国際標準に準拠したバーレーンの個人データ保護法。" },
+      "kuwaitDp": { "desc": "電子サービスプロバイダーに対するデータ保護義務を定めるクウェートの電子通信取引法。" },
+      "omanPdpl": { "desc": "データ主体の包括的な権利と、コントローラー及びプロセッサーの義務を規定するオマーンの個人データ保護法。" },
+      "privacyByDesign": { "desc": "Supremeのコードスキャンはすべてローカルマシン上で実行され、ソースコードが外部に送信または処理されることはありません。アカウントデータ（Google OAuthプロフィール）はプライバシーポリシーに従って別途管理されます。" }
+    }
+  },
+  "homePartners": {
+    "title": "クライアントとパートナー",
+    "subtitle": "ここでは主要なクライアントとパートナーの一部をご紹介しています。全一覧ではありません。",
+    "marketCap": "時価総額",
+    "billion": "十億",
+    "million": "百万"
+  },
+  "supremeInstructions": {
+    "light": "ライト",
+    "videoInstructions": "ビデオガイド",
+    "lightVideoTitle": "Supreme Light ビデオガイド",
+    "openYoutube": "YouTubeで動画を開く",
+    "maxPlaceholder": "動画プレースホルダー — 完全なチュートリアルは近日追加予定です。"
+  },
   "header": {
     "andManyMore": "そして他にも多数...",
     "nav": {
@@ -35,13 +69,6 @@
       "affiliate": "アフィリエイト",
       "instructions": "手順",
       "product": "AI-SOC",
-      "secureDevelopment": "SLNC-env",
-      "developerServices": "開発者向けサービス",
-      "home": "Home",
-      "systems": "Systems",
-      "systemsAiSoc": "AI-SOC",
-      "systemsSlncEnv": "SLNC-env",
-      "services": "Services",
       "systemsSithub": "Sithub",
       "systemsSupreme": "Supreme",
       "instructionsAiSoc": "AI-SOC",
@@ -717,23 +744,23 @@
       }
     },
     "pricing": {
-      "subtitle": "Proste, przejrzyste ceny",
-      "title": "Wybierz plan",
-      "limitedOffer": "Oferta ograniczona czasowo",
-      "priceIncreaseNotice": "Zablokuj obecne ceny! Po 6 miesiącach ceny wzrosną o 30%",
-      "monthlyPlan": "Miesięczny",
-      "monthlyDesc": "Elastyczne rozliczenie",
-      "yearlyPlan": "Roczny",
-      "yearlyDesc": "Najlepsza wartość",
-      "month": "miesiąc",
-      "billedAnnually": "Rozliczane rocznie za",
-      "doubleSavings": "2x OSZCZĘDNOŚCI",
-      "getStarted": "Zacznij",
+      "subtitle": "シンプルで透明な価格設定",
+      "title": "プランを選ぶ",
+      "limitedOffer": "期間限定オファー",
+      "priceIncreaseNotice": "現在の価格をロックしてください！6ヶ月後、価格は30%上昇します",
+      "monthlyPlan": "月次",
+      "monthlyDesc": "柔軟な請求",
+      "yearlyPlan": "年次",
+      "yearlyDesc": "最高の価値",
+      "month": "月",
+      "billedAnnually": "年間請求",
+      "doubleSavings": "2倍の節約",
+      "getStarted": "始める",
       "features": {
-        "fullAccess": "Pełny dostęp do platformy",
-        "support": "Priorytetowe wsparcie",
-        "cancelAnytime": "Możliwość rezygnacji w każdej chwili",
-        "priceLock": "Cena zablokowana na 12 miesięcy"
+        "fullAccess": "フルプラットフォームアクセス",
+        "support": "優先サポート",
+        "cancelAnytime": "いつでもキャンセル",
+        "priceLock": "12ヶ月間価格固定"
       }
     },
     "comingSoon": {
@@ -2134,27 +2161,145 @@
     "lightbox": {
       "close": "閉じる",
       "alt": "スクリーンショット"
+    },
+    "landing": {
+      "hero": {
+        "headline": "高速に作り、安全に届ける。",
+        "subheadline": "AIがコードを書く。Supreme 2がそれを守る。",
+        "tagline": "74以上のインテリジェントスキャナー。深層アーキテクチャ解析。世界初MCPベースのコードスキャナー。",
+        "ctaMax": "Supreme 2 MAXにアップグレード",
+        "ctaFree": "Supreme 2 Lightで無料スタート"
+      },
+      "pricingLight": {
+        "name": "Supreme 2 Light",
+        "price": "無料",
+        "subprice": "永久無料・クレジットカード不要",
+        "features": [
+          "VSCode拡張機能",
+          "全プロジェクトスキャン",
+          "74以上のスキャナー",
+          "総合レポート",
+          "レポートのみワークフロー（自動修正なし）"
+        ],
+        "cta": "Supreme 2 Lightを入手"
+      },
+      "pricingMax": {
+        "name": "Supreme 2 MAX",
+        "price": "$18/月",
+        "subprice": "$150/年・最高の価値",
+        "badge": "最高の価値",
+        "features": [
+          "MCPサーバーベースのスキャナー",
+          "全プロジェクトスキャン",
+          "74以上のスキャナー",
+          "総合レポート",
+          "LLMフレンドリーな自動修正レポート",
+          "自律的な脆弱性修正",
+          "脅威インテリジェンスによる強化された検出"
+        ],
+        "cta": "Supreme 2 MAXにアップグレード",
+        "videoLabel": "動画プレースホルダー – Supreme 2 MAX セットアップ"
+      },
+      "hiddenRisk": {
+        "title": "AIが生成したコードの潜在的リスク",
+        "llmTitle": "LLM = 部分的な可視性",
+        "llmItems": [
+          "貼り付けたスニペットしか見えない",
+          "隠しファイルを見落とす",
+          "依存関係チェーンを無視する",
+          "アーキテクチャをスキャンしない",
+          "設定ファイルを体系的に監査しない"
+        ],
+        "supremeTitle": "Supreme 2 = 完全リポジトリスキャン",
+        "diagramRepo": "リポジトリ",
+        "diagramScanner": "深層スキャナー",
+        "diagramFindings": "完全な検出結果"
+      },
+      "meet": {
+        "title": "SUPREME 2について",
+        "features": [
+          "74以上のスキャナー",
+          "深い多言語対応",
+          "アーキテクチャ認識解析",
+          "並列スキャンエンジン",
+          "インテリジェントな脆弱性検出"
+        ]
+      },
+      "mcp": {
+        "title": "世界初のMCPベースのコードスキャナー",
+        "subtitle": "Supreme 2 MAXはMCPサーバーとして動作し、LLMが完全スキャンを起動し、構造化JSONを利用し、分類済みの脆弱性を把握し、安全にリファクタリングし、修正を再検証できます。"
+      },
+      "comparison": {
+        "title": "Supreme 2 Light vs Supreme 2 MAX",
+        "maxAdvantage": "MAXの利点：詳細な脅威インテリジェンスを含み、LLMが使用するMCPサーバーとして動作します。"
+      },
+      "whyLeads": {
+        "title": "Supreme が市場をリードする理由"
+      },
+      "llmVsSupreme": {
+        "title": "LLMを使った脆弱性・設定ミス探索 VS Supreme 2",
+        "llmTitle": "LLMのみのレビュー",
+        "llmItems": [
+          "断片的にしか分析できない",
+          "設定ファイルを見落とす",
+          "隠しモジュールをスキップする",
+          "依存関係グラフを無視する"
+        ],
+        "supremeTitle": "Supreme 2",
+        "supremeItems": [
+          "リポジトリ全体をスキャン",
+          "設定ファイルを解析",
+          "依存ツリーをチェック",
+          "ファイル横断パターンを検出",
+          "アーキテクチャ解析を実行"
+        ]
+      },
+      "faq": {
+        "title": "よくある質問",
+        "q1": "Supreme 2 はどのプログラミング言語をサポートしていますか？",
+        "a1": "Supreme 2はバックエンド、フロントエンド、クラウド、スクリプト、ドキュメントワークフロー全般にわたる主要な現代言語、設定フォーマット、インフラファイルをサポートしています。",
+        "a1Coverage": "41種類のスキャナータイプで100以上のファイル拡張子をカバーしています。",
+        "q2": "詳細にどのスキャナータイプとファイル形式がカバーされていますか？",
+        "a2Intro": "Supreme 2はすべての主要なプログラミング言語とファイル形式をカバーする41種類のスキャナータイプをサポートしています。",
+        "a2Total": "合計：41種類のスキャナータイプで100以上のファイル拡張子をカバー。",
+        "q3": "MCPとは何ですか？なぜ重要なのですか？",
+        "a3": "MCPにより、Supreme 2 MAXは構造化されたセキュリティサーバーとして動作します。生テキストではなく、自動修正、AI駆動の修正、プログラム的解釈、継続的改善ワークフローのためのカテゴリ化されたJSON脆弱性レポートを返します。",
+        "q4": "Supreme 2はコードを保存しますか？",
+        "a4": "Supreme 2はあなたの環境でローカルにスキャンします。コードはスキャナーが動作するコンピュータから一切外に出ることはありません。GitHubでSupreme 2 Lightのソースコードを確認したり、コードスキャン中のネットワーク活動を監視することもできます。",
+        "q5": "インストール前の要件は何ですか？",
+        "a5Prefix": "Supreme 2を実行するには、",
+        "a5Python": "Python 3.0以上",
+        "a5Suffix": "がマシンにインストールされている必要があります。さらに、Supreme本体のインストール前に",
+        "a5Pip": "pip",
+        "a5End": "がインストールされていることを確認する必要があります。",
+        "q6": "Supreme 2はスタートアップに適していますか？",
+        "a6": "はい。特にLLM生成コードで素早くリリースするAIファーストのスタートアップチームに効果的で、リポジトリ全体のセキュリティ分析なしでは見逃しやすいファイル横断のリスクが容易に見つかります。",
+        "a1ScannerTypes": "種類のスキャナー",
+        "a1Across": "にわたる",
+        "a1Extensions": "のファイル拡張子",
+        "a2Covering": "主要なプログラミング言語とファイル形式を網羅しています。"
+      }
     }
   },
   "andManyMore": "Et bien plus encore...",
   "badRequest": {
-    "title": "Błędne żądanie",
-    "cta": "Wróć na stronę główną",
+    "title": "不正なリクエスト",
+    "cta": "ホームに戻る",
     "description": "The page you are looking for could not be found or the request was invalid."
   },
   "countrySelect": {
-    "title": "Wybierz kraj",
-    "subtitle": "Wybierz lokalizację, aby kontynuować",
-    "searchPlaceholder": "Szukaj kraju...",
-    "noResults": "Nie znaleziono krajów",
-    "continue": "Kontynuuj",
+    "title": "国を選択",
+    "subtitle": "続けるには場所を選択してください",
+    "searchPlaceholder": "国を検索...",
+    "noResults": "国が見つかりません",
+    "continue": "続ける",
     "comingSoon": {
-      "title": "Już prawie gotowe!",
-      "message": "Panel administracyjny do zarządzania subskrypcją będzie gotowy za",
-      "hours": "godziny",
-      "notification": "Powiadomimy Cię, gdy będzie dostępny!",
-      "back": "Wstecz",
-      "gotIt": "Rozumiem!"
+      "title": "もうすぐ準備完了！",
+      "message": "サブスクリプション管理の管理パネルがあと以下の時間で準備できます",
+      "hours": "時間",
+      "notification": "利用可能になったらお知らせします！",
+      "back": "戻る",
+      "gotIt": "わかりました！"
     }
   }
 }

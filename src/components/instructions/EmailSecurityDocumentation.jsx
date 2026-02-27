@@ -477,8 +477,8 @@ const EmailSecurityDocumentation = () => {
                                                 if (el) sectionRefs.current.set(section.id, el);
                                                 else sectionRefs.current.delete(section.id);
                                             }}
-                                            initial={{ opacity: 0, x: -10 }}
-                                            whileInView={{ opacity: 1, x: 0 }}
+                                            initial={index === 0 ? false : { opacity: 0, x: -10 }}
+                                            whileInView={index === 0 ? undefined : { opacity: 1, x: 0 }}
                                             viewport={{ once: true, margin: "-100px" }}
                                             transition={transition}
                                             className="relative scroll-mt-32 group"

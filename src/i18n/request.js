@@ -1,5 +1,4 @@
 import {getRequestConfig} from 'next-intl/server';
-import {LOCALES} from '@/locales';
 import {supportedLocales} from './locales.mjs';
 
 export default getRequestConfig(async ({locale}) => {
@@ -10,9 +9,11 @@ export default getRequestConfig(async ({locale}) => {
     resolvedLocale = 'en';
   }
 
+  const messages = (await import(`../locales/${resolvedLocale}.json`)).default;
+
   return {
     locale: resolvedLocale,
-    messages: LOCALES[resolvedLocale] ?? LOCALES['en'],
+    messages,
     // Use fallback behavior for missing messages instead of throwing errors
     onError: (error) => {
       // Silently ignore missing message errors during build

@@ -17,6 +17,40 @@
       "desc": "Güvenlik ayarlarını ve kullanıcıları yönetin"
     }
   },
+  "homeCompliance": {
+    "badge": "Düzenleyici Uyumluluk",
+    "title": "Küresel uyumluluk için tasarlandı",
+    "subtitle": "Sürekli canlı uyumluluk kapsamı",
+    "statusLabel": "Uyumlu",
+    "supremeOnly": "Yalnızca Supreme",
+    "cards": {
+      "gdpr": { "desc": "Tüm AB sakinlerinin kişisel verilerini düzenleyen, dünyanın en katı gizlilik ve güvenlik yasası. Dünya genelinde veri koruma için küresel referans noktasını belirler." },
+      "ukGdpr": { "desc": "Brexit sonrası iç hukuka dahil edilen AB GDPR'ının İngiltere eşdeğeri. Kapsam ve yükümlülükler bakımından özünde aynıdır — AB GDPR uyumluluğu UK GDPR'a da uzanır." },
+      "ccpa": { "desc": "Kayıt, ad, e-posta ve Google Kimliği gibi profil verilerini sunucularımıza ileten Google OAuth kullanır — bunlar CCPA kapsamında kişisel veridir. Kullanıcılar hesap verilerini istedikleri zaman öğrenme, erişme ve silme hakkına sahiptir." },
+      "pipeda": { "desc": "Şirketin bulunduğu yerden bağımsız olarak Kanada'da ikamet edenlerin verilerini işleyen her ticari kuruluşa uygulanır. Küresel büyüme sürecimizde Kanadalı kullanıcıların verileri aynı minimum veri toplama standartlarına göre işlenmektedir." },
+      "ksaPdpl": { "desc": "SDAIA tarafından uygulanan Suudi Arabistan Kişisel Veri Koruma Kanunu. Kişisel verilerin toplanmasını, işlenmesini ve sınır ötesi aktarımını düzenler." },
+      "uaePdpl": { "desc": "DIFC ve ADGM dahil ana kara ve serbest bölgeler genelinde kişisel veri işlenmesini düzenleyen BAE Federal Kişisel Veri Koruma Kanunu." },
+      "qatarPdpl": { "desc": "Ulaştırma ve İletişim Bakanlığı tarafından yönetilen Katar Kişisel Veri Gizliliği Koruma Kanunu." },
+      "bahrainPdpl": { "desc": "PDPA tarafından düzenlenen ve uluslararası standartlarla uyumlu Bahreyn Kişisel Veri Koruma Kanunu." },
+      "kuwaitDp": { "desc": "Elektronik hizmet sağlayıcıları için veri koruma yükümlülükleri belirleyen Kuveyt Elektronik İletişim ve İşlemler Kanunu." },
+      "omanPdpl": { "desc": "Veri sahipleri için kapsamlı haklar ile veri sorumluları ve işleyicileri için yükümlülükler belirleyen Umman Kişisel Veri Koruma Kanunu." },
+      "privacyByDesign": { "desc": "Supreme'in kod taraması tamamen yerel makinenizde çalışır — hiçbir kaynak kod asla dışarıya iletilmez veya harici olarak işlenmez. Hesap verileri (Google OAuth profili) gizlilik politikamız kapsamında ayrıca yönetilmektedir." }
+    }
+  },
+  "homePartners": {
+    "title": "Müşteriler ve İş Ortakları",
+    "subtitle": "Burada öne çıkanlar lider müşterilerimiz ve iş ortaklarımızdan bazılarıdır; bu tam liste değildir.",
+    "marketCap": "Piyasa Değeri",
+    "billion": "Milyar",
+    "million": "Milyon"
+  },
+  "supremeInstructions": {
+    "light": "Light",
+    "videoInstructions": "video talimatları",
+    "lightVideoTitle": "Supreme Light Video Talimatları",
+    "openYoutube": "Videoyu YouTube'da aç",
+    "maxPlaceholder": "Video yer tutucu — tam eğitim yakında eklenecek."
+  },
   "languageSelector": {
     "triggerLabel": "Dil seçin",
     "menuLabel": "Lütfen dili seçiniz",
@@ -2129,27 +2163,145 @@
     "lightbox": {
       "close": "Kapat",
       "alt": "Ekran görüntüsü"
+    },
+    "landing": {
+      "hero": {
+        "headline": "Hızlı Geliştirin. Güvenli Gönderin.",
+        "subheadline": "Yapay Zeka kodu yazar. Supreme 2 onu güvence altına alır.",
+        "tagline": "74+ akıllı tarayıcı. Derin mimari düzey analiz. Dünyanın ilk MCP tabanlı kod tarayıcısı.",
+        "ctaMax": "Supreme 2 MAX'e Yükselt",
+        "ctaFree": "Supreme 2 Light ile Ücretsiz Başla"
+      },
+      "pricingLight": {
+        "name": "Supreme 2 Light",
+        "price": "Ücretsiz",
+        "subprice": "Sonsuza kadar · Kredi kartı gerekmez",
+        "features": [
+          "VSCode eklentisi",
+          "Tam proje taraması",
+          "74+ tarayıcı",
+          "Kapsamlı rapor",
+          "Yalnızca rapor iş akışı (otomatik düzeltme yok)"
+        ],
+        "cta": "Supreme 2 Light'ı Edinin"
+      },
+      "pricingMax": {
+        "name": "Supreme 2 MAX",
+        "price": "$18/ay",
+        "subprice": "$150/yıl · En İyi Değer",
+        "badge": "En İyi Değer",
+        "features": [
+          "MCP sunucu tabanlı tarayıcı",
+          "Tam proje taraması",
+          "74+ tarayıcı",
+          "Kapsamlı rapor",
+          "Otomatik düzeltme için LLM dostu rapor",
+          "Özerk güvenlik açığı düzeltme",
+          "Tehdit istihbaratı ile geliştirilmiş algılama"
+        ],
+        "cta": "Supreme 2 MAX'e Yükselt",
+        "videoLabel": "Eğitim Videosu Yer Tutucusu – Supreme 2 MAX Kurulumu"
+      },
+      "hiddenRisk": {
+        "title": "Yapay Zeka Tarafından Oluşturulan Kodun Gizli Riski",
+        "llmTitle": "LLM = kısmi görünürlük",
+        "llmItems": [
+          "Yalnızca yapıştırılan parçacıkları görür",
+          "Gizli dosyaları kaçırır",
+          "Bağımlılık zincirlerini görmezden gelir",
+          "Mimariyi taramaz",
+          "Konfigürasyonları sistematik olarak denetlemez"
+        ],
+        "supremeTitle": "Supreme 2 = tam depo taraması",
+        "diagramRepo": "Depo",
+        "diagramScanner": "Derin Tarayıcı",
+        "diagramFindings": "Tam Bulgular"
+      },
+      "meet": {
+        "title": "SUPREME 2 ile Tanışın",
+        "features": [
+          "74+ tarayıcı",
+          "Derin çok dil desteği",
+          "Mimari-farkındalıklı analiz",
+          "Paralel tarama motoru",
+          "Akıllı güvenlik açığı tespiti"
+        ]
+      },
+      "mcp": {
+        "title": "Dünyanın İlk MCP Tabanlı Kod Tarayıcısı",
+        "subtitle": "Supreme 2 MAX, LLM'nizin tam taramalar tetikleyebilmesi, yapılandırılmış JSON tüketebilmesi, kategorize edilmiş güvenlik açıklarını anlayabilmesi, güvenli şekilde yeniden yapılandırabilmesi ve düzeltmeleri yeniden doğrulayabilmesi için MCP sunucusu olarak çalışır."
+      },
+      "comparison": {
+        "title": "Supreme 2 Light ile Supreme 2 MAX Karşılaştırması",
+        "maxAdvantage": "MAX Avantajı: Ayrıntılı Tehdit İstihbaratı içerir ve LLM'lerin kullanımı için MCP Sunucusu olarak çalışır."
+      },
+      "whyLeads": {
+        "title": "Neden Supreme Pazara Öncülük Eder"
+      },
+      "llmVsSupreme": {
+        "title": "LLM'lerle güvenlik açığı/yanlış yapılandırma arama VS Supreme 2",
+        "llmTitle": "Yalnızca LLM incelemesi",
+        "llmItems": [
+          "Parçacıkları analiz eder",
+          "Konfigürasyonları kaçırır",
+          "Gizli modülleri atlar",
+          "Bağımlılık grafiklerini görmezden gelir"
+        ],
+        "supremeTitle": "Supreme 2",
+        "supremeItems": [
+          "Tüm depoyu tarar",
+          "Konfigürasyonları ayrıştırır",
+          "Bağımlılık ağaçlarını kontrol eder",
+          "Dosyalar arası desenleri algılar",
+          "Mimari analiz gerçekleştirir"
+        ]
+      },
+      "faq": {
+        "title": "Sık Sorulan Sorular",
+        "q1": "Supreme 2 hangi programlama dillerini destekler?",
+        "a1": "Supreme 2, arka uç, ön uç, bulut, betik ve dokümantasyon iş akışlarını kapsayan tüm büyük modern dilleri, yapılandırma formatlarını ve altyapı dosyalarını destekler.",
+        "a1Coverage": "41 farklı tarayıcı türü ile 100'den fazla dosya uzantısını kapsar.",
+        "q2": "Hangi tarayıcı türleri ve dosya formatları ayrıntılı olarak karşılanmaktadır?",
+        "a2Intro": "Supreme 2, tüm büyük programlama dilleri ve dosya formatlarını kapsayan 41 tarayıcı türünü destekler.",
+        "a2Total": "Toplam: 100'den fazla dosya uzantısını kapsayan 41 tarayıcı türü.",
+        "q3": "MCP nedir ve neden önemlidir?",
+        "a3": "MCP, Supreme 2 MAX'in yapılandırılmış bir güvenlik sunucusu olarak çalışmasına olanak tanır. Ham metin yerine otomatik düzeltme, yapay zeka güdümlü düzeltme, programatik yorumlama ve sürekli iyileştirme iş akışları için kategorize edilmiş JSON güvenlik açığı raporları döndürür.",
+        "q4": "Supreme 2 kodumu depoluyor mu?",
+        "a4": "Supreme 2, ortamınızda yerel olarak tarama yapar. Kodunuz hiçbir zaman tarayıcının çalıştığı bilgisayarı terk etmez. Supreme 2 Light'ın kaynak kodunu GitHub'da inceleyebilir ve kod taranırken ağ etkinliğini izleyebilirsiniz.",
+        "q5": "Ön kurulum gereksinimleri nelerdir?",
+        "a5Prefix": "Supreme 2'yi çalıştırmak için makinenizde",
+        "a5Python": "Python 3.0 veya üzeri",
+        "a5Suffix": "kurulu olmalıdır. Ayrıca Supreme'in kurulumundan önce",
+        "a5Pip": "pip",
+        "a5End": "kurulu olduğundan emin olmak gerekir.",
+        "q6": "Supreme 2 başlangıç şirketleri için uygun mudur?",
+        "a6": "Evet. LLM tarafından üretilen kodla hızlı teslimat yapan yapay zeka öncelikli başlangıç ekipleri için özellikle etkilidir; depo genelinde güvenlik analizi olmadan dosyalar arası saklı riskler kolayca gözden kaçabilir.",
+        "a1ScannerTypes": "farklı tarayıcı türü",
+        "a1Across": "üzerinde",
+        "a1Extensions": "dosya uzantısı",
+        "a2Covering": "tüm önemli programlama dillerini ve dosya formatlarını kapsamaktadır."
+      }
     }
   },
   "andManyMore": "Et bien plus encore...",
   "badRequest": {
-    "title": "Błędne żądanie",
-    "cta": "Wróć na stronę główną",
+    "title": "Geçersiz İstek",
+    "cta": "Ana Sayfaya Dön",
     "description": "The page you are looking for could not be found or the request was invalid."
   },
   "countrySelect": {
-    "title": "Wybierz kraj",
-    "subtitle": "Wybierz lokalizację, aby kontynuować",
-    "searchPlaceholder": "Szukaj kraju...",
-    "noResults": "Nie znaleziono krajów",
-    "continue": "Kontynuuj",
+    "title": "Ülke Seç",
+    "subtitle": "Devam etmek için konumunuzu seçin",
+    "searchPlaceholder": "Ülke ara...",
+    "noResults": "Ülke bulunamadı",
+    "continue": "Devam",
     "comingSoon": {
-      "title": "Już prawie gotowe!",
-      "message": "Panel administracyjny do zarządzania subskrypcją będzie gotowy za",
-      "hours": "godziny",
-      "notification": "Powiadomimy Cię, gdy będzie dostępny!",
-      "back": "Wstecz",
-      "gotIt": "Rozumiem!"
+      "title": "Neredeyse Hazır!",
+      "message": "Abonelik yönetimi için yönetici paneli hazır olacak",
+      "hours": "saat",
+      "notification": "Kullanılabilir olduğunda sizi bilgilendireceğiz!",
+      "back": "Geri",
+      "gotIt": "Anladım!"
     }
   }
 }

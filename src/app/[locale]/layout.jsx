@@ -1,6 +1,5 @@
 import { NextIntlClientProvider } from "next-intl";
 import { Geist, Geist_Mono } from "next/font/google";
-import { LOCALES } from "@/locales";
 import { supportedLocales } from "@/i18n/locales.mjs";
 import "../globals.css";
 import LayoutWrapper from "@/components/LayoutWrapper";
@@ -118,10 +117,8 @@ export const metadata = {
       'fr': '/fr',
       'de': '/de',
       'ru': '/ru',
-      'is': '/is',
+      'ar': '/ar',
       'tr': '/tr',
-      'pl': '/pl',
-      'vi': '/vi',
     },
   },
   other: {
@@ -160,7 +157,8 @@ export default async function RootLayout(props) {
   // Enable static rendering
   setRequestLocale(locale);
 
-  const messages = transformBranding(LOCALES[locale] ?? LOCALES['en']);
+  const localeMessages = (await import(`@/locales/${locale}.json`)).default;
+  const messages = transformBranding(localeMessages);
 
   return (
     <html lang={locale}>

@@ -17,6 +17,40 @@
       "desc": "管理安全设置和用户"
     }
   },
+  "homeCompliance": {
+    "badge": "监管合规",
+    "title": "面向全球合规而构建",
+    "subtitle": "持续实时合规覆盖",
+    "statusLabel": "已合规",
+    "supremeOnly": "仅限 Supreme",
+    "cards": {
+      "gdpr": { "desc": "世界上最严格的隐私和安全法律，规范所有欧盟居民的个人数据。为全球数据保护设立了国际标杆。" },
+      "ukGdpr": { "desc": "英国脱欧后保留于国内法的EU GDPR对等法规，在范围和义务上实质相同——EU GDPR合规同样适用于UK GDPR。" },
+      "ccpa": { "desc": "注册使用Google OAuth，会将个人资料（姓名、电子邮件、Google ID）传输至我们的服务器——这属于CCPA下的个人数据。用户随时享有查询、访问和删除账户数据的完整权利。" },
+      "pipeda": { "desc": "无论公司注册地在哪里，凡处理加拿大居民数据的商业组织均须遵守。随着我们全球扩张，加拿大用户的个人数据均按照最小化收集标准处理。" },
+      "ksaPdpl": { "desc": "由SDAIA执行的沙特个人数据保护法，规范个人数据的收集、处理及跨境传输。" },
+      "uaePdpl": { "desc": "规范阿联酋本土及自由区（包括DIFC和ADGM）个人数据处理的联邦数据保护法。" },
+      "qatarPdpl": { "desc": "由卡塔尔交通通信部管理的个人数据隐私保护法。" },
+      "bahrainPdpl": { "desc": "由PDPA监管、符合国际标准的巴林个人数据保护法。" },
+      "kuwaitDp": { "desc": "科威特电子通信与交易法，为电子服务提供商确立数据保护义务。" },
+      "omanPdpl": { "desc": "阿曼个人数据保护法，为数据主体确立全面权利，并为控制者和处理者规定相应义务。" },
+      "privacyByDesign": { "desc": "Supreme的代码扫描完全在本地机器上运行——源代码不会被发送或在外部处理。账户数据（Google OAuth资料）依据我们的隐私政策单独处理。" }
+    }
+  },
+  "homePartners": {
+    "title": "客户与合作伙伴",
+    "subtitle": "这里展示的是我们部分领先客户与合作伙伴，并非完整名单。",
+    "marketCap": "市值",
+    "billion": "十亿",
+    "million": "百万"
+  },
+  "supremeInstructions": {
+    "light": "轻量版",
+    "videoInstructions": "视频说明",
+    "lightVideoTitle": "Supreme Light 视频说明",
+    "openYoutube": "在 YouTube 上打开视频",
+    "maxPlaceholder": "视频占位符——完整教程即将上线。"
+  },
   "home": {
     "hero": {
       "title": "网络安全不再",
@@ -232,7 +266,7 @@
     "subtitle": "移动优先的计划，随您的产品扩展。",
     "percentMaintenance": "{percent}% 年度维护费用",
     "calculator": {
-      "subtitle": "Przesuń suwak, aby zobaczyć roczny koszt utrzymania"
+      "subtitle": "拖动滑块以查看年度维护成本"
     },
     "tooltips": {
       "cmcGlobal": {
@@ -743,23 +777,23 @@
       "requestSystem": "请求系统"
     },
     "pricing": {
-      "subtitle": "Proste, przejrzyste ceny",
-      "title": "Wybierz plan",
-      "limitedOffer": "Oferta ograniczona czasowo",
-      "priceIncreaseNotice": "Zablokuj obecne ceny! Po 6 miesiącach ceny wzrosną o 30%",
-      "monthlyPlan": "Miesięczny",
-      "monthlyDesc": "Elastyczne rozliczenie",
-      "month": "miesiąc",
-      "yearlyPlan": "Roczny",
-      "yearlyDesc": "Najlepsza wartość",
-      "billedAnnually": "Rozliczane rocznie za",
-      "doubleSavings": "2x OSZCZĘDNOŚCI",
-      "getStarted": "Zacznij",
+      "subtitle": "简单、透明的定价",
+      "title": "选择计划",
+      "limitedOffer": "限时优惠",
+      "priceIncreaseNotice": "锁定当前价格！6个月后，价格将上涨30%",
+      "monthlyPlan": "月度",
+      "monthlyDesc": "灵活计费",
+      "month": "月",
+      "yearlyPlan": "年度",
+      "yearlyDesc": "最佳性价比",
+      "billedAnnually": "按年计费，共",
+      "doubleSavings": "2倍节省",
+      "getStarted": "立即开始",
       "features": {
-        "fullAccess": "Pełny dostęp do platformy",
-        "support": "Priorytetowe wsparcie",
-        "cancelAnytime": "Możliwość rezygnacji w każdej chwili",
-        "priceLock": "Cena zablokowana na 12 miesięcy"
+        "fullAccess": "完整平台访问权限",
+        "support": "优先支持",
+        "cancelAnytime": "随时取消",
+        "priceLock": "价格锁定12个月"
       }
     },
     "components": {
@@ -978,7 +1012,125 @@
       "close": "关闭",
       "alt": "截图"
     },
-    "title": "Supreme"
+    "title": "Supreme",
+    "landing": {
+      "hero": {
+        "headline": "快速构建，安全交付。",
+        "subheadline": "AI 编写代码，Supreme 2 守护安全。",
+        "tagline": "74 款智能扫描器。深层架构级分析。全球首款基于 MCP 的代码扫描器。",
+        "ctaMax": "升级到 Supreme 2 MAX",
+        "ctaFree": "免费开始使用 Supreme 2 Light"
+      },
+      "pricingLight": {
+        "name": "Supreme 2 Light",
+        "price": "免费",
+        "subprice": "永久免费 · 无需信用卡",
+        "features": [
+          "VSCode 扩展",
+          "完整项目扫描",
+          "74+ 扫描器",
+          "全面报告",
+          "仅报告工作流（无自动修复）"
+        ],
+        "cta": "获取 Supreme 2 Light"
+      },
+      "pricingMax": {
+        "name": "Supreme 2 MAX",
+        "price": "$18/月",
+        "subprice": "$150/年 · 最佳性价比",
+        "badge": "最佳性价比",
+        "features": [
+          "基于 MCP 服务器的扫描器",
+          "完整项目扫描",
+          "74+ 扫描器",
+          "全面报告",
+          "LLM 友好的自动修复报告",
+          "自主漏洞修复",
+          "通过威胁情报增强检测"
+        ],
+        "cta": "升级到 Supreme 2 MAX",
+        "videoLabel": "演示视频占位符 – Supreme 2 MAX 设置"
+      },
+      "hiddenRisk": {
+        "title": "AI 生成代码的潜在风险",
+        "llmTitle": "LLM = 部分可见性",
+        "llmItems": [
+          "只能看到粘贴的代码片段",
+          "遗漏隐藏文件",
+          "忽略依赖链",
+          "不扫描架构",
+          "不系统审计配置"
+        ],
+        "supremeTitle": "Supreme 2 = 全仓库扫描",
+        "diagramRepo": "代码库",
+        "diagramScanner": "深度扫描器",
+        "diagramFindings": "完整发现"
+      },
+      "meet": {
+        "title": "认识 SUPREME 2",
+        "features": [
+          "74+ 扫描器",
+          "深度多语言支持",
+          "架构感知分析",
+          "并行扫描引擎",
+          "智能漏洞检测"
+        ]
+      },
+      "mcp": {
+        "title": "全球首款基于 MCP 的代码扫描器",
+        "subtitle": "Supreme 2 MAX 作为 MCP 服务器运行，让您的 LLM 触发完整扫描、消费结构化 JSON、理解分类漏洞、安全重构并重新验证修复。"
+      },
+      "comparison": {
+        "title": "Supreme 2 Light vs Supreme 2 MAX",
+        "maxAdvantage": "MAX 优势：包含详细威胁情报，并作为 LLM 使用的 MCP 服务器运行。"
+      },
+      "whyLeads": {
+        "title": "Supreme 为何领跑市场"
+      },
+      "llmVsSupreme": {
+        "title": "使用 LLM 搜索漏洞/配置错误 VS Supreme 2",
+        "llmTitle": "仅用 LLM 审查",
+        "llmItems": [
+          "仅分析代码片段",
+          "遗漏配置文件",
+          "跳过隐藏模块",
+          "忽略依赖图谱"
+        ],
+        "supremeTitle": "Supreme 2",
+        "supremeItems": [
+          "扫描整个代码库",
+          "解析配置文件",
+          "检查依赖树",
+          "检测跨文件模式",
+          "执行架构分析"
+        ]
+      },
+      "faq": {
+        "title": "常见问题",
+        "q1": "Supreme 2 支持哪些编程语言？",
+        "a1": "Supreme 2 支持覆盖后端、前端、云、脚本和文档工作流的所有主流现代语言、配置格式和基础设施文件。",
+        "a1Coverage": "涵盖 41 种不同扫描器类型，支持 100 多种文件扩展名。",
+        "q2": "详细支持哪些扫描器类型和文件格式？",
+        "a2Intro": "Supreme 2 支持 41 种扫描器类型，覆盖所有主流编程语言和文件格式。",
+        "a2Total": "共计：41 种扫描器类型，涵盖 100 多种文件扩展名。",
+        "q3": "MCP 是什么？为什么重要？",
+        "a3": "MCP 允许 Supreme 2 MAX 作为结构化安全服务器运行。它返回分类的 JSON 漏洞报告，而非纯文本，用于自动修复、AI 驱动修复、程序化解读和持续改进工作流。",
+        "q4": "Supreme 2 会存储我的代码吗？",
+        "a4": "Supreme 2 在您的环境中本地扫描。您的代码永远不会离开运行扫描器的计算机。您可以在 GitHub 上查看 Supreme 2 Light 的源代码，也可以在代码扫描期间监控网络活动。",
+        "q5": "安装前有哪些预置要求？",
+        "a5Prefix": "要运行 Supreme 2，您的机器上必须安装",
+        "a5Python": "Python 3.0 或更高版本",
+        "a5Suffix": "。此外，必须确保在安装 Supreme 本体之前已安装",
+        "a5Pip": "pip",
+        "a5End": "。",
+        "q6": "Supreme 2 适合初创公司吗？",
+        "a6": "是的。对于使用 LLM 生成代码快速发布的 AI 优先初创团队尤其有效，在没有全仓库安全分析的情况下，跨文件的隐藏风险极易被遗漏。",
+        "a1ScannerTypes": "种扫描器类型",
+        "a1Across": "覆盖",
+        "a1Extensions": "种文件扩展名",
+        "a2Covering": "覆盖所有主要编程语言和文件格式。"
+      }
+    }
   },
   "languageSelector": {
     "triggerLabel": "选择语言",
@@ -2102,23 +2254,23 @@
     "label": "回到顶部"
   },
   "badRequest": {
-    "title": "Błędne żądanie",
-    "cta": "Wróć na stronę główną",
+    "title": "错误请求",
+    "cta": "返回主页",
     "description": "The page you are looking for could not be found or the request was invalid."
   },
   "countrySelect": {
-    "title": "Wybierz kraj",
-    "subtitle": "Wybierz lokalizację, aby kontynuować",
-    "searchPlaceholder": "Szukaj kraju...",
-    "noResults": "Nie znaleziono krajów",
-    "continue": "Kontynuuj",
+    "title": "选择国家",
+    "subtitle": "选择您的位置以继续",
+    "searchPlaceholder": "搜索国家...",
+    "noResults": "未找到国家",
+    "continue": "继续",
     "comingSoon": {
-      "title": "Już prawie gotowe!",
-      "message": "Panel administracyjny do zarządzania subskrypcją będzie gotowy za",
-      "hours": "godziny",
-      "notification": "Powiadomimy Cię, gdy będzie dostępny!",
-      "back": "Wstecz",
-      "gotIt": "Rozumiem!"
+      "title": "即将准备好！",
+      "message": "订阅管理后台面板将在以下时间内准备好",
+      "hours": "小时",
+      "notification": "当它可用时我们会通知您！",
+      "back": "返回",
+      "gotIt": "我知道了！"
     }
   }
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useMemo, useState } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { AnimatePresence, motion } from "framer-motion";
 import Header from "@/components/Header";
 import SupremeHeroBox from "@/components/SupremeHeroBox";
@@ -196,6 +197,7 @@ function MaxUpgradeButton({ onClick, className = "", children }) {
 }
 
 export default function SupremeLanding() {
+  const { t } = useLanguage();
   const [openFaq, setOpenFaq] = useState(null);
   const maxUrl = "https://supreme.silence.codes/";
 
@@ -322,10 +324,10 @@ export default function SupremeLanding() {
   const faq = useMemo(
     () => [
       {
-        q: "What programming languages does Supreme 2 support?",
+        q: t("supreme.landing.faq.q1", "What programming languages does Supreme 2 support?"),
         a: (
           <div className="space-y-4">
-            <p>Supreme 2 supports major modern languages, configuration formats, and infrastructure files across backend, frontend, cloud, scripting, and documentation workflows.</p>
+            <p>{t("supreme.landing.faq.a1", "Supreme 2 supports major modern languages, configuration formats, and infrastructure files across backend, frontend, cloud, scripting, and documentation workflows.")}</p>
             <div className="grid grid-cols-3 gap-3 sm:grid-cols-4 md:grid-cols-6">
               {languageLogos.map((lang, index) => (
                 <motion.div
@@ -346,17 +348,17 @@ export default function SupremeLanding() {
               ))}
             </div>
             <p className="text-violet-100">
-              Coverage includes <span className="font-semibold text-fuchsia-300">41 different scanner types</span> across <span className="font-semibold text-fuchsia-300">100+ file extensions</span>.
+              {t("supreme.landing.faq.a1Coverage", "Coverage includes")} <span className="font-semibold text-fuchsia-300">41 {t("supreme.landing.faq.a1ScannerTypes", "different scanner types")}</span> {t("supreme.landing.faq.a1Across", "across")} <span className="font-semibold text-fuchsia-300">100+ {t("supreme.landing.faq.a1Extensions", "file extensions")}</span>.
             </p>
           </div>
         ),
       },
       {
-        q: "What scanner types and file formats are covered in detail?",
+        q: t("supreme.landing.faq.q2", "What scanner types and file formats are covered in detail?"),
         a: (
           <div className="space-y-4">
             <p>
-              Supreme 2 supports <span className="font-semibold text-fuchsia-300">41 scanner types</span> covering all major programming languages and file formats.
+              {t("supreme.landing.faq.a2Intro", "Supreme 2 supports")} <span className="font-semibold text-fuchsia-300">41 {t("supreme.landing.faq.a1ScannerTypes", "scanner types")}</span> {t("supreme.landing.faq.a2Covering", "covering all major programming languages and file formats.")}
             </p>
             <div className="grid gap-3 md:grid-cols-2">
               {scannerCoverage.map((group) => (
@@ -377,45 +379,45 @@ export default function SupremeLanding() {
               ))}
             </div>
             <p className="text-violet-100">
-              Total: <span className="font-semibold text-fuchsia-300">41 scanner types</span> covering <span className="font-semibold text-fuchsia-300">100+ file extensions</span>.
+              {t("supreme.landing.faq.a2Total", "Total:")} <span className="font-semibold text-fuchsia-300">41 {t("supreme.landing.faq.a1ScannerTypes", "scanner types")}</span> {t("supreme.landing.faq.a1Across", "covering")} <span className="font-semibold text-fuchsia-300">100+ {t("supreme.landing.faq.a1Extensions", "file extensions")}</span>.
             </p>
           </div>
         ),
       },
       {
-        q: "What is MCP and why does it matter?",
+        q: t("supreme.landing.faq.q3", "What is MCP and why does it matter?"),
         a: (
           <div>
-            MCP allows Supreme 2 MAX to run as a structured security server. Instead of raw text, it returns categorized JSON vulnerability reports for automated remediation, AI-driven fixing, programmatic interpretation, and continuous improvement workflows.
+            {t("supreme.landing.faq.a3", "MCP allows Supreme 2 MAX to run as a structured security server. Instead of raw text, it returns categorized JSON vulnerability reports for automated remediation, AI-driven fixing, programmatic interpretation, and continuous improvement workflows.")}
           </div>
         ),
       },
       {
-        q: "Does Supreme 2 store my code?",
+        q: t("supreme.landing.faq.q4", "Does Supreme 2 store my code?"),
         a: (
           <div>
-            Supreme 2 scans locally in your environment. Your code nevers leaves your computer on which the scanner is working on. You, as the user might check the source code of Supreme 2 Light, available on github, and also you might check the network activity of the computer while code is being scanned
+            {t("supreme.landing.faq.a4", "Supreme 2 scans locally in your environment. Your code never leaves your computer on which the scanner is working on. You, as the user might check the source code of Supreme 2 Light, available on github, and also you might check the network activity of the computer while code is being scanned.")}
           </div>
         ),
       },
       {
-        q: "What are the pre-installation requirements?",
+        q: t("supreme.landing.faq.q5", "What are the pre-installation requirements?"),
         a: (
           <div>
-            To run Supreme 2, you must have <a href="https://www.python.org/downloads/" target="_blank" rel="noopener noreferrer" className="text-fuchsia-300 hover:underline">Python 3.0 or higher</a> installed on your machine. Additionally, you must ensure that <span className="font-semibold text-fuchsia-300">pip</span> is installed prior to the installation of Supreme itself.
+            {t("supreme.landing.faq.a5Prefix", "To run Supreme 2, you must have")} <a href="https://www.python.org/downloads/" target="_blank" rel="noopener noreferrer" className="text-fuchsia-300 hover:underline">{t("supreme.landing.faq.a5Python", "Python 3.0 or higher")}</a> {t("supreme.landing.faq.a5Suffix", "installed on your machine. Additionally, you must ensure that")} <span className="font-semibold text-fuchsia-300">pip</span> {t("supreme.landing.faq.a5End", "is installed prior to the installation of Supreme itself.")}
           </div>
         ),
       },
       {
-        q: "Is Supreme 2 suitable for startups?",
+        q: t("supreme.landing.faq.q6", "Is Supreme 2 suitable for startups?"),
         a: (
           <div>
-            Yes. It is especially effective for AI-first startup teams shipping fast with LLM-generated code, where hidden cross-file risks are easy to miss without repository-wide security analysis.
+            {t("supreme.landing.faq.a6", "Yes. It is especially effective for AI-first startup teams shipping fast with LLM-generated code, where hidden cross-file risks are easy to miss without repository-wide security analysis.")}
           </div>
         ),
       },
     ],
-    [languageLogos, scannerCoverage]
+    [languageLogos, scannerCoverage, t]
   );
 
   const jsonLd = {
@@ -487,13 +489,13 @@ export default function SupremeLanding() {
                 animate={{ opacity: 1, x: 0 }}
                 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-white tracking-tight"
               >
-                Build Fast. Ship Safe.
+                {t("supreme.landing.hero.headline", "Build Fast. Ship Safe.")}
                 <span className="mt-2 block bg-gradient-to-r from-violet-300 via-fuchsia-300 to-blue-300 bg-clip-text text-transparent">
-                  Your AI writes the code. Supreme 2 secures it.
+                  {t("supreme.landing.hero.subheadline", "Your AI writes the code. Supreme 2 secures it.")}
                 </span>
               </motion.h1>
               <p className="mt-6 max-w-2xl text-lg text-slate-300 sm:text-lg leading-relaxed">
-                74+ intelligent scanners. Deep architecture-level analysis. The world’s first MCP-based code scanner.
+                {t("supreme.landing.hero.tagline", "74+ intelligent scanners. Deep architecture-level analysis. The world's first MCP-based code scanner.")}
               </p>
             </div>
 
@@ -509,10 +511,10 @@ export default function SupremeLanding() {
                   onClick={goToMax}
                   className="w-full sm:w-[320px] justify-center text-center whitespace-nowrap"
                 >
-                  Upgrade to Supreme 2 MAX
+                  {t("supreme.landing.hero.ctaMax", "Upgrade to Supreme 2 MAX")}
                 </MaxUpgradeButton>
                 <button onClick={goToPricing} className="w-full sm:w-[320px] whitespace-nowrap rounded-full border border-violet-300/25 bg-gradient-to-r from-slate-900/85 via-slate-800/70 to-slate-900/85 px-8 py-4 text-base sm:text-lg font-medium text-slate-100 transition hover:border-fuchsia-300/50 hover:text-white justify-center text-center">
-                  Start Free with Supreme 2 Light
+                  {t("supreme.landing.hero.ctaFree", "Start Free with Supreme 2 Light")}
                 </button>
               </div>
             </div>
@@ -522,73 +524,105 @@ export default function SupremeLanding() {
         <section className="mx-auto max-w-6xl px-4 pb-24 sm:px-6 lg:px-8" id="pricing">
           <div className="grid gap-7 md:grid-cols-2">
             <PricingCard
-              name="Supreme 2 Light"
-              price="Free"
-              subprice="Forever · No credit card required"
+              name={t("supreme.landing.pricingLight.name", "Supreme 2 Light")}
+              price={t("supreme.landing.pricingLight.price", "Free")}
+              subprice={t("supreme.landing.pricingLight.subprice", "Forever · No credit card required")}
               highlights={[
-                "VSCode extension",
-                "Full project scanning",
-                "74+ scanners",
-                "Comprehensive report",
-                "Report-only workflow (no auto-fix)",
+                t("supreme.landing.pricingLight.features.0", "VSCode extension"),
+                t("supreme.landing.pricingLight.features.1", "Full project scanning"),
+                t("supreme.landing.pricingLight.features.2", "74+ scanners"),
+                t("supreme.landing.pricingLight.features.3", "Comprehensive report"),
+                t("supreme.landing.pricingLight.features.4", "Report-only workflow (no auto-fix)"),
               ]}
               cta={
                 <span>
-                  Get Supreme 2 Light
+                  {t("supreme.landing.pricingLight.cta", "Get Supreme 2 Light")}
                 </span>
               }
               onCtaClick={goToPricing}
               videoEmbedUrl="https://www.youtube.com/embed/k282t3QKG2w"
             />
             <PricingCard
-              name="Supreme 2 MAX"
-              price="$18/month"
-              subprice="$150/year · Best Value"
-              badge="Best Value"
+              name={t("supreme.landing.pricingMax.name", "Supreme 2 MAX")}
+              price={t("supreme.landing.pricingMax.price", "$18/month")}
+              subprice={t("supreme.landing.pricingMax.subprice", "$150/year · Best Value")}
+              badge={t("supreme.landing.pricingMax.badge", "Best Value")}
               highlights={[
-                "MCP server-based scanner",
-                "Full project scanning",
-                "74+ scanners",
-                "Comprehensive report",
-                "LLM-friendly report for auto-remediation",
-                "Autonomous vulnerability fixing",
-                "Enhanced detection via threat intelligence",
+                t("supreme.landing.pricingMax.features.0", "MCP server-based scanner"),
+                t("supreme.landing.pricingMax.features.1", "Full project scanning"),
+                t("supreme.landing.pricingMax.features.2", "74+ scanners"),
+                t("supreme.landing.pricingMax.features.3", "Comprehensive report"),
+                t("supreme.landing.pricingMax.features.4", "LLM-friendly report for auto-remediation"),
+                t("supreme.landing.pricingMax.features.5", "Autonomous vulnerability fixing"),
+                t("supreme.landing.pricingMax.features.6", "Enhanced detection via threat intelligence"),
               ]}
-              cta="Upgrade to Supreme 2 MAX"
+              cta={t("supreme.landing.pricingMax.cta", "Upgrade to Supreme 2 MAX")}
               onCtaClick={goToMax}
-              videoEmbedUrl="https://www.youtube.com/embed/1Sy8-Pph5KY"
-              videoLabel="Instructional Video Placeholder – Supreme 2 MAX Setup"
+              videoEmbedUrl="https://www.youtube.com/embed/vrmw08p7B1k"
+              videoLabel={t("supreme.landing.pricingMax.videoLabel", "Supreme 2 MAX Video Instructions")}
               emphasized
             />
           </div>
         </section>
 
+        <section className="mx-auto max-w-6xl px-4 pb-24 sm:px-6 lg:px-8">
+          <h2 className="text-center text-2xl font-bold text-white sm:text-3xl">
+            Best Code Scanner of 2025 (CodeQL){" "}
+            <span className="bg-gradient-to-r from-fuchsia-300 via-violet-200 to-cyan-200 bg-clip-text font-extrabold uppercase tracking-wide text-transparent">
+              VS
+            </span>{" "}
+            the Best of 2026 (Supreme)
+          </h2>
+          <div className="mx-auto mt-8 w-full max-w-4xl">
+            <div className="relative aspect-video overflow-hidden rounded-2xl border border-white/10 bg-black shadow-2xl">
+              <iframe
+                className="h-full w-full"
+                src="https://www.youtube.com/embed/gxzbXb-sB54"
+                title="Best Code Scanner of 2025 (CodeQL) vs the Best of 2026 (Supreme)"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+            </div>
+            <div className="mt-3 text-center">
+              <a
+                href="https://youtu.be/gxzbXb-sB54?si=unPkOmRN9tDPYhtU"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-purple-200/90 underline decoration-purple-300/70 underline-offset-4 hover:text-purple-100"
+              >
+                Open video on YouTube
+              </a>
+            </div>
+          </div>
+        </section>
+
         <section className="mx-auto max-w-7xl px-4 pb-24 sm:px-6 lg:px-8">
-          <h2 className="text-center text-2xl font-bold text-white sm:text-3xl">The Hidden Risk of AI-Generated Code</h2>
+          <h2 className="text-center text-2xl font-bold text-white sm:text-3xl">{t("supreme.landing.hiddenRisk.title", "The Hidden Risk of AI-Generated Code")}</h2>
           <div className="mt-10 grid gap-8 md:grid-cols-2 md:items-center">
             <div className="rounded-2xl border border-rose-300/20 bg-rose-500/5 p-6">
               <h3 className="mb-4 flex items-center gap-2 font-semibold text-rose-300">
-                <AlertTriangle className="h-5 w-5" /> LLM = partial visibility
+                <AlertTriangle className="h-5 w-5" /> {t("supreme.landing.hiddenRisk.llmTitle", "LLM = partial visibility")}
               </h3>
               <ul className="space-y-2 text-sm text-slate-300">
-                <li className="flex items-start gap-2"><X className="mt-0.5 h-4 w-4 text-rose-300" />Only see pasted snippets</li>
-                <li className="flex items-start gap-2"><X className="mt-0.5 h-4 w-4 text-rose-300" />Miss hidden files</li>
-                <li className="flex items-start gap-2"><X className="mt-0.5 h-4 w-4 text-rose-300" />Ignore dependency chains</li>
+                <li className="flex items-start gap-2"><X className="mt-0.5 h-4 w-4 text-rose-300" />{t("supreme.landing.hiddenRisk.llmItems.0", "Only see pasted snippets")}</li>
+                <li className="flex items-start gap-2"><X className="mt-0.5 h-4 w-4 text-rose-300" />{t("supreme.landing.hiddenRisk.llmItems.1", "Miss hidden files")}</li>
+                <li className="flex items-start gap-2"><X className="mt-0.5 h-4 w-4 text-rose-300" />{t("supreme.landing.hiddenRisk.llmItems.2", "Ignore dependency chains")}</li>
                 <li className="flex items-start gap-2"><X className="mt-0.5 h-4 w-4 text-rose-300" />Don’t scan architecture</li>
                 <li className="flex items-start gap-2"><X className="mt-0.5 h-4 w-4 text-rose-300" />Don’t systematically audit configs</li>
               </ul>
             </div>
             <div className="rounded-2xl border border-violet-300/25 bg-violet-500/8 p-6">
               <h3 className="mb-4 flex items-center gap-2 font-semibold text-violet-300">
-                <ShieldCheck className="h-5 w-5" /> Supreme 2 = full repository scan
+                <ShieldCheck className="h-5 w-5" /> {t("supreme.landing.hiddenRisk.supremeTitle", "Supreme 2 = full repository scan")}
               </h3>
               <div className="rounded-xl border border-white/10 bg-black/30 p-4">
                 <div className="flex flex-wrap items-center justify-center gap-2 text-xs text-slate-300 sm:gap-3">
-                  <div className="rounded-md border border-white/15 bg-white/5 px-3 py-2">Repo</div>
+                  <div className="rounded-md border border-white/15 bg-white/5 px-3 py-2">{t("supreme.landing.hiddenRisk.diagramRepo", "Repo")}</div>
                   <ArrowRight className="h-4 w-4 text-fuchsia-300" />
-                  <div className="rounded-md border border-violet-300/30 bg-violet-500/10 px-3 py-2">Deep Scanner</div>
+                  <div className="rounded-md border border-violet-300/30 bg-violet-500/10 px-3 py-2">{t("supreme.landing.hiddenRisk.diagramScanner", "Deep Scanner")}</div>
                   <ArrowRight className="h-4 w-4 text-fuchsia-300" />
-                  <div className="rounded-md border border-blue-300/30 bg-blue-500/10 px-3 py-2">Full findings</div>
+                  <div className="rounded-md border border-blue-300/30 bg-blue-500/10 px-3 py-2">{t("supreme.landing.hiddenRisk.diagramFindings", "Full findings")}</div>
                 </div>
               </div>
             </div>
@@ -596,14 +630,14 @@ export default function SupremeLanding() {
         </section>
 
         <section className="mx-auto max-w-6xl px-4 pb-24 sm:px-6 lg:px-8">
-          <h2 className="text-center text-2xl font-bold text-white sm:text-3xl">Meet SUPREME 2</h2>
+          <h2 className="text-center text-2xl font-bold text-white sm:text-3xl">{t("supreme.landing.meet.title", "Meet SUPREME 2")}</h2>
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
             {[
-              "74+ scanners",
-              "Deep multi-language support",
-              "Architecture-aware analysis",
-              "Parallel scanning engine",
-              "Intelligent vulnerability detection",
+              t("supreme.landing.meet.features.0", "74+ scanners"),
+              t("supreme.landing.meet.features.1", "Deep multi-language support"),
+              t("supreme.landing.meet.features.2", "Architecture-aware analysis"),
+              t("supreme.landing.meet.features.3", "Parallel scanning engine"),
+              t("supreme.landing.meet.features.4", "Intelligent vulnerability detection"),
             ].map((item, index) => (
               <motion.div
                 key={item}
@@ -624,9 +658,9 @@ export default function SupremeLanding() {
 
         <section className="mx-auto max-w-7xl px-4 pb-24 sm:px-6 lg:px-8">
           <div className="rounded-2xl border border-violet-300/25 bg-gradient-to-b from-violet-500/12 via-fuchsia-500/8 to-blue-500/8 p-6 md:p-8">
-            <h2 className="text-center text-2xl font-bold text-white sm:text-3xl">The World’s First MCP-Based Code Scanner</h2>
+            <h2 className="text-center text-2xl font-bold text-white sm:text-3xl">{t("supreme.landing.mcp.title", "The World's First MCP-Based Code Scanner")}</h2>
             <p className="mx-auto mt-4 max-w-3xl text-center text-slate-300">
-              Supreme 2 MAX runs as an MCP server so your LLM can trigger full scans, consume structured JSON, understand categorized vulnerabilities, securely refactor, and re-validate fixes.
+              {t("supreme.landing.mcp.subtitle", "Supreme 2 MAX runs as an MCP server so your LLM can trigger full scans, consume structured JSON, understand categorized vulnerabilities, securely refactor, and re-validate fixes.")}
             </p>
 
             <McpFlowAnimation />
@@ -637,45 +671,45 @@ export default function SupremeLanding() {
 
         <section className="mx-auto max-w-7xl px-4 pb-24 sm:px-6 lg:px-8">
           <div className="rounded-2xl border border-violet-300/25 bg-gradient-to-b from-violet-500/12 via-fuchsia-500/8 to-blue-500/8 p-6 md:p-8">
-            <h2 className="mb-8 text-center text-2xl font-bold text-white sm:text-3xl">Supreme 2 Light vs Supreme 2 MAX</h2>
+            <h2 className="mb-8 text-center text-2xl font-bold text-white sm:text-3xl">{t("supreme.landing.comparison.title", "Supreme 2 Light vs Supreme 2 MAX")}</h2>
             <SupremeComparisonAnimation />
              <div className="mt-8 text-center">
               <p className="mx-auto max-w-3xl text-sm text-slate-300">
-                <span className="font-semibold text-fuchsia-300">MAX Advantage:</span> Includes detailed Threat Intelligence and runs as an MCP Server meant to be used by LLMs.
+                <span className="font-semibold text-fuchsia-300">MAX Advantage:</span> {t("supreme.landing.comparison.maxAdvantage", "Includes detailed Threat Intelligence and runs as an MCP Server meant to be used by LLMs.")}
               </p>
             </div>
           </div>
         </section>
 
         <section className="mx-auto max-w-7xl px-4 pb-24 sm:px-6 lg:px-8">
-          <h2 className="text-center text-2xl font-bold text-white sm:text-3xl mb-12">Why Supreme Leads the Market</h2>
+          <h2 className="text-center text-2xl font-bold text-white sm:text-3xl mb-12">{t("supreme.landing.whyLeads.title", "Why Supreme Leads the Market")}</h2>
           <SupremeVsOthers />
         </section>
 
         <section className="mx-auto max-w-7xl px-4 pb-24 sm:px-6 lg:px-8">
-          <h2 className="text-center text-2xl font-bold text-white sm:text-3xl">Searching for vulns/misconfigs with LLMs VS Supreme 2</h2>
+          <h2 className="text-center text-2xl font-bold text-white sm:text-3xl">{t("supreme.landing.llmVsSupreme.title", "Searching for vulns/misconfigs with LLMs VS Supreme 2")}</h2>
           <div className="mt-10 grid gap-6 md:grid-cols-2">
             <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
               <h3 className="mb-4 flex items-center gap-2 text-lg font-semibold text-slate-200">
-                <Terminal className="h-5 w-5 text-rose-300" /> LLM-only review
+                <Terminal className="h-5 w-5 text-rose-300" /> {t("supreme.landing.llmVsSupreme.llmTitle", "LLM-only review")}
               </h3>
               <ul className="space-y-2 text-sm text-slate-300">
-                <li className="flex items-center gap-2"><X className="h-4 w-4 text-rose-300" />Analyzes fragments</li>
-                <li className="flex items-center gap-2"><X className="h-4 w-4 text-rose-300" />Misses configs</li>
-                <li className="flex items-center gap-2"><X className="h-4 w-4 text-rose-300" />Skips hidden modules</li>
-                <li className="flex items-center gap-2"><X className="h-4 w-4 text-rose-300" />Ignores dependency graphs</li>
+                <li className="flex items-center gap-2"><X className="h-4 w-4 text-rose-300" />{t("supreme.landing.llmVsSupreme.llmItems.0", "Analyzes fragments")}</li>
+                <li className="flex items-center gap-2"><X className="h-4 w-4 text-rose-300" />{t("supreme.landing.llmVsSupreme.llmItems.1", "Misses configs")}</li>
+                <li className="flex items-center gap-2"><X className="h-4 w-4 text-rose-300" />{t("supreme.landing.llmVsSupreme.llmItems.2", "Skips hidden modules")}</li>
+                <li className="flex items-center gap-2"><X className="h-4 w-4 text-rose-300" />{t("supreme.landing.llmVsSupreme.llmItems.3", "Ignores dependency graphs")}</li>
               </ul>
             </div>
             <div className="rounded-2xl border border-violet-300/25 bg-violet-500/8 p-6">
               <h3 className="mb-4 flex items-center gap-2 text-lg font-semibold text-violet-200">
-                <FolderSearch className="h-5 w-5 text-fuchsia-300" /> Supreme 2
+                <FolderSearch className="h-5 w-5 text-fuchsia-300" /> {t("supreme.landing.llmVsSupreme.supremeTitle", "Supreme 2")}
               </h3>
               <ul className="space-y-2 text-sm text-slate-200">
-                <li className="flex items-center gap-2"><Check className="h-4 w-4 text-fuchsia-300" />Scans entire repository</li>
-                <li className="flex items-center gap-2"><Check className="h-4 w-4 text-fuchsia-300" />Parses configs</li>
-                <li className="flex items-center gap-2"><Check className="h-4 w-4 text-fuchsia-300" />Checks dependency trees</li>
-                <li className="flex items-center gap-2"><Check className="h-4 w-4 text-fuchsia-300" />Detects cross-file patterns</li>
-                <li className="flex items-center gap-2"><Check className="h-4 w-4 text-fuchsia-300" />Performs architecture analysis</li>
+                <li className="flex items-center gap-2"><Check className="h-4 w-4 text-fuchsia-300" />{t("supreme.landing.llmVsSupreme.supremeItems.0", "Scans entire repository")}</li>
+                <li className="flex items-center gap-2"><Check className="h-4 w-4 text-fuchsia-300" />{t("supreme.landing.llmVsSupreme.supremeItems.1", "Parses configs")}</li>
+                <li className="flex items-center gap-2"><Check className="h-4 w-4 text-fuchsia-300" />{t("supreme.landing.llmVsSupreme.supremeItems.2", "Checks dependency trees")}</li>
+                <li className="flex items-center gap-2"><Check className="h-4 w-4 text-fuchsia-300" />{t("supreme.landing.llmVsSupreme.supremeItems.3", "Detects cross-file patterns")}</li>
+                <li className="flex items-center gap-2"><Check className="h-4 w-4 text-fuchsia-300" />{t("supreme.landing.llmVsSupreme.supremeItems.4", "Performs architecture analysis")}</li>
               </ul>
             </div>
           </div>
@@ -692,7 +726,7 @@ export default function SupremeLanding() {
             transition={{ duration: 5, repeat: Infinity, delay: 1 }}
             className="pointer-events-none absolute -right-8 bottom-6 h-44 w-44 rounded-full bg-violet-400/20 blur-3xl"
           />
-          <h2 className="text-center text-2xl font-bold text-white sm:text-3xl">Frequently Asked Questions</h2>
+          <h2 className="text-center text-2xl font-bold text-white sm:text-3xl">{t("supreme.landing.faq.title", "Frequently Asked Questions")}</h2>
           <div className="relative mt-8 space-y-3">
             {faq.map((item, idx) => (
               <FaqItem

@@ -8,5 +8,3 @@ Dutch (Nederlands) - NL
 Estonian (Eesti) - ET
 Icelandic (Íslenska) - IS
 Turkish (Türkçe) - TR
-Polish (Polski) - PL
-Vietnamese (Tiếng Việt) - VI

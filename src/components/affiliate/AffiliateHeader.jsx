@@ -118,7 +118,7 @@ const AffiliateHeader = ({ onOpenModal }) => {
                   )
                 )}
                 <div className="pt-4 flex flex-col gap-4">
-                  <LanguageSelector align="left" />
+                    <LanguageSelector align="left" />
                   <GlowButton onClick={handleLoginClick} className="w-full">
                     {t("header.login", "Login")}
                   </GlowButton>

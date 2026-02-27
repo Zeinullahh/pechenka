@@ -7,7 +7,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import clsx from "clsx";
 import GlowButton from "./GlowButton";
 import LanguageSelector from "./LanguageSelector";
-import PolicyLanguageSelector from "./PolicyLanguageSelector";
 import ComingSoonModal from "./ComingSoonModal";
 import CountrySelectModal from "./CountrySelectModal";
 import EmailSecurityModal from "./EmailSecurityModal";
@@ -16,12 +15,11 @@ import { useLanguage } from "@/contexts/LanguageContext";
 const SCROLL_THRESHOLD = 10;
 const DESKTOP_WIDTH = 1130;
 
-const Header = ({ onOpenModal, policyLang, onPolicyLangChange, onSithubGet, hideCta = false }) => {
+const Header = ({ onOpenModal, hideCta = false }) => {
   const pathname = usePathname();
   const isMainPage = pathname === "/";
   const isSupremePage = pathname === "/supreme" || pathname === "/supreme/";
   const isPolicyPage = pathname?.startsWith("/policies");
-  const isSlncEnvPolicyPage = pathname?.startsWith("/policies/slnc_env");
   const [isCondensed, setIsCondensed] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -230,13 +228,7 @@ const Header = ({ onOpenModal, policyLang, onPolicyLangChange, onSithubGet, hide
                   );
                 })}
                 <div className="pt-4 flex flex-col gap-4 w-full items-center">
-                  {!isPolicyPage && (
-                    isSlncEnvPolicyPage && policyLang && onPolicyLangChange ? (
-                      <PolicyLanguageSelector currentLang={policyLang} onLanguageChange={onPolicyLangChange} align="left" />
-                    ) : (
-                      <LanguageSelector align="left" />
-                    )
-                  )}
+                  {!isPolicyPage && <LanguageSelector align="left" />}
                   {!hideCta && isMainPage && (
                     <GlowButton
                       onClick={() => {
@@ -424,13 +416,7 @@ const Header = ({ onOpenModal, policyLang, onPolicyLangChange, onSithubGet, hide
                       : undefined
                   }
                 >
-                  {!isPolicyPage && (
-                    isSlncEnvPolicyPage && policyLang && onPolicyLangChange ? (
-                      <PolicyLanguageSelector currentLang={policyLang} onLanguageChange={onPolicyLangChange} align={isDesktop ? "right" : "center"} />
-                    ) : (
-                      <LanguageSelector align={isDesktop ? "right" : "center"} />
-                    )
-                  )}
+                  {!isPolicyPage && <LanguageSelector align={isDesktop ? "right" : "center"} />}
                 </div>
                 {isDesktop && isMainPage && !hideCta && (
                   <GlowButton onClick={handleContactClick}>

@@ -3,14 +3,16 @@
 import { useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Card } from "@/components/ui/card";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function SupremeInstructions() {
+    const { t } = useLanguage();
     const tabs = useMemo(
         () => [
-            { id: "light", label: "Light" },
+            { id: "light", label: t("supremeInstructions.light", "Light") },
             { id: "max", label: "MAX" }
         ],
-        []
+        [t]
     );
     const [activeTab, setActiveTab] = useState("light");
 
@@ -61,7 +63,7 @@ export default function SupremeInstructions() {
                         exit={{ opacity: 0, y: -8, filter: "blur(10px)" }}
                         transition={{ duration: 0.4, ease: "easeOut" }}
                     >
-                        <SupremeVideoPlaceholder tierLabel={activeTab === "light" ? "Light" : "MAX"} />
+                        <SupremeVideoPlaceholder tierLabel={activeTab === "light" ? t("supremeInstructions.light", "Light") : "MAX"} />
                     </motion.div>
                 </AnimatePresence>
             </div>
@@ -70,6 +72,13 @@ export default function SupremeInstructions() {
 }
 
 function SupremeVideoPlaceholder({ tierLabel }) {
+    const { t } = useLanguage();
+    const isLightTier = tierLabel === t("supremeInstructions.light", "Light");
+    const lightVideoUrl = "https://youtu.be/k282t3QKG2w?si=bWA1fIPGosxz7Ay7";
+    const lightVideoEmbedUrl = "https://www.youtube.com/embed/k282t3QKG2w";
+    const maxVideoUrl = "https://youtu.be/vrmw08p7B1k";
+    const maxVideoEmbedUrl = "https://www.youtube.com/embed/vrmw08p7B1k";
+
     return (
         <div className="mx-auto w-full max-w-7xl">
             <div className="relative">
@@ -88,7 +97,7 @@ function SupremeVideoPlaceholder({ tierLabel }) {
                                 transition={{ duration: 0.4, ease: "easeOut", delay: 0.1 }}
                                 className="bg-gradient-to-r from-white via-purple-100 to-violet-200 bg-clip-text text-2xl font-semibold text-transparent sm:text-3xl text-center"
                             >
-                                {tierLabel} video instructions
+                                {tierLabel} {t("supremeInstructions.videoInstructions", "video instructions")}
                             </motion.h2>
 
                             <motion.div
@@ -97,13 +106,53 @@ function SupremeVideoPlaceholder({ tierLabel }) {
                                 transition={{ duration: 0.4, ease: "easeOut", delay: 0.15 }}
                                 className="w-full max-w-4xl"
                             >
-                                <div className="relative aspect-video rounded-2xl border border-white/10 bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 text-center shadow-2xl backdrop-blur-sm">
-                                    <div className="flex h-full w-full items-center justify-center">
-                                        <p className="text-base text-slate-300/85 sm:text-lg">
-                                            Video placeholder — full tutorial will be added soon.
-                                        </p>
+                                {isLightTier ? (
+                                    <div className="space-y-3">
+                                        <div className="relative aspect-video overflow-hidden rounded-2xl border border-white/10 bg-black shadow-2xl">
+                                            <iframe
+                                                className="h-full w-full"
+                                                src={lightVideoEmbedUrl}
+                                                title={t("supremeInstructions.lightVideoTitle", "Supreme Light Video Instructions")}
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                referrerPolicy="strict-origin-when-cross-origin"
+                                                allowFullScreen
+                                            />
+                                        </div>
+                                        <div className="text-center">
+                                            <a
+                                                href={lightVideoUrl}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="text-sm text-purple-200/90 underline decoration-purple-300/70 underline-offset-4 hover:text-purple-100"
+                                            >
+                                                {t("supremeInstructions.openYoutube", "Open video on YouTube")}
+                                            </a>
+                                        </div>
                                     </div>
-                                </div>
+                                ) : (
+                                    <div className="space-y-3">
+                                        <div className="relative aspect-video overflow-hidden rounded-2xl border border-white/10 bg-black shadow-2xl">
+                                            <iframe
+                                                className="h-full w-full"
+                                                src={maxVideoEmbedUrl}
+                                                title={t("supremeInstructions.maxVideoTitle", "Supreme MAX Video Instructions")}
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                referrerPolicy="strict-origin-when-cross-origin"
+                                                allowFullScreen
+                                            />
+                                        </div>
+                                        <div className="text-center">
+                                            <a
+                                                href={maxVideoUrl}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="text-sm text-purple-200/90 underline decoration-purple-300/70 underline-offset-4 hover:text-purple-100"
+                                            >
+                                                {t("supremeInstructions.openYoutube", "Open video on YouTube")}
+                                            </a>
+                                        </div>
+                                    </div>
+                                )}
                             </motion.div>
                         </div>
                     </Card>

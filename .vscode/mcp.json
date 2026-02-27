@@ -1,8 +1,11 @@
 {
-  "supreme-max": {
-  "command": "sm-mcp",
-  "env": {
-    "SUPREME2_API_KEY": "supreme_api_key_e1f9b395006695462c465ab134b161bb"
+  "servers": {
+    "supreme-max": {
+      "command": "sm-mcp",
+      "env": {
+      "SUPREME2_API_KEY": "supreme_api_key_e1f9b395006695462c465ab134b161bb"
+      }
+    }
+
   }
-}
 }

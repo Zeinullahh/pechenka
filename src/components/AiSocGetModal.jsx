@@ -118,9 +118,9 @@ const AiSocGetModal = ({ isOpen, onClose }) => {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                     </svg>
                                 </div>
-                                <h3 className="text-xl font-bold mb-4 text-white">Coming soon</h3>
+                                <h3 className="text-xl font-bold mb-4 text-white">{t("aiSocModal.comingSoonTitle", "Coming soon")}</h3>
                                 <p className="text-gray-300 leading-relaxed">
-                                    Silence team is working on easing access to the system.
+                                    {t("aiSocModal.comingSoonMessage", "Silence team is working on easing access to the system.")}
                                 </p>
                             </div>
                         </motion.div>

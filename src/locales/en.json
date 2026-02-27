@@ -1,4 +1,38 @@
 {
+  "homeCompliance": {
+    "badge": "Regulatory Compliance",
+    "title": "Built for Global Compliance",
+    "subtitle": "Continuous live compliance coverage",
+    "statusLabel": "Compliant",
+    "supremeOnly": "Supreme only",
+    "cards": {
+      "gdpr": { "desc": "The world's most stringent privacy and security law, governing personal data of all EU residents. Sets the global benchmark for data protection worldwide." },
+      "ukGdpr": { "desc": "Post-Brexit UK equivalent of EU GDPR, retained in domestic law. Substantively identical in scope and obligations — EU GDPR compliance extends to UK GDPR." },
+      "ccpa": { "desc": "Registration uses Google OAuth, which transmits profile data (name, email, Google ID) to our servers — this is personal data under CCPA. Users retain full rights to know, access, and delete their account data at any time." },
+      "pipeda": { "desc": "Applies to any commercial organization handling Canadian residents' data regardless of where the company is based. As we scale globally, personal data from Canadian users is handled with the same minimal-collection standards." },
+      "ksaPdpl": { "desc": "Saudi Personal Data Protection Law enforced by SDAIA. Governs collection, processing, and cross-border transfer of personal data." },
+      "uaePdpl": { "desc": "UAE Personal Data Protection Law regulating personal data processing across the mainland and free zones, including DIFC and ADGM." },
+      "qatarPdpl": { "desc": "Qatar's Personal Data Privacy Protection Law administered by the Ministry of Transport and Communications." },
+      "bahrainPdpl": { "desc": "Bahrain Personal Data Protection Law regulated by the Personal Data Protection Authority (PDPA), aligned with international standards." },
+      "kuwaitDp": { "desc": "Kuwait's Electronic Communications and Transactions Law establishing data protection obligations for electronic service providers." },
+      "omanPdpl": { "desc": "Oman Personal Data Protection Law establishing comprehensive rights for data subjects and obligations for controllers and processors." },
+      "privacyByDesign": { "desc": "Supreme's code scanning runs entirely on your local machine — no source code is ever transmitted or processed externally. Account data (Google OAuth profile) is handled separately under our privacy policy." }
+    }
+  },
+  "homePartners": {
+    "title": "Clients and Partners",
+    "subtitle": "Featured here are some of our leading clients and partners; this is not a complete list.",
+    "marketCap": "Market Cap",
+    "billion": "Billion",
+    "million": "Million"
+  },
+  "supremeInstructions": {
+    "light": "Light",
+    "videoInstructions": "video instructions",
+    "lightVideoTitle": "Supreme Light Video Instructions",
+    "openYoutube": "Open video on YouTube",
+    "maxPlaceholder": "Video placeholder — full tutorial will be added soon."
+  },
   "aiSocModal": {
     "title": "Admin Console",
     "emailSecurity": "Login/Register to Email security",
@@ -1132,6 +1166,124 @@
     "lightbox": {
       "close": "Close",
       "alt": "Screenshot"
+    },
+    "landing": {
+      "hero": {
+        "headline": "Build Fast. Ship Safe.",
+        "subheadline": "Your AI writes the code. Supreme 2 secures it.",
+        "tagline": "74+ intelligent scanners. Deep architecture-level analysis. The world's first MCP-based code scanner.",
+        "ctaMax": "Upgrade to Supreme 2 MAX",
+        "ctaFree": "Start Free with Supreme 2 Light"
+      },
+      "pricingLight": {
+        "name": "Supreme 2 Light",
+        "price": "Free",
+        "subprice": "Forever · No credit card required",
+        "features": [
+          "VSCode extension",
+          "Full project scanning",
+          "74+ scanners",
+          "Comprehensive report",
+          "Report-only workflow (no auto-fix)"
+        ],
+        "cta": "Get Supreme 2 Light"
+      },
+      "pricingMax": {
+        "name": "Supreme 2 MAX",
+        "price": "$18/month",
+        "subprice": "$150/year · Best Value",
+        "badge": "Best Value",
+        "features": [
+          "MCP server-based scanner",
+          "Full project scanning",
+          "74+ scanners",
+          "Comprehensive report",
+          "LLM-friendly report for auto-remediation",
+          "Autonomous vulnerability fixing",
+          "Enhanced detection via threat intelligence"
+        ],
+        "cta": "Upgrade to Supreme 2 MAX",
+        "videoLabel": "Instructional Video Placeholder – Supreme 2 MAX Setup"
+      },
+      "hiddenRisk": {
+        "title": "The Hidden Risk of AI-Generated Code",
+        "llmTitle": "LLM = partial visibility",
+        "llmItems": [
+          "Only see pasted snippets",
+          "Miss hidden files",
+          "Ignore dependency chains",
+          "Don't scan architecture",
+          "Don't systematically audit configs"
+        ],
+        "supremeTitle": "Supreme 2 = full repository scan",
+        "diagramRepo": "Repo",
+        "diagramScanner": "Deep Scanner",
+        "diagramFindings": "Full findings"
+      },
+      "meet": {
+        "title": "Meet SUPREME 2",
+        "features": [
+          "74+ scanners",
+          "Deep multi-language support",
+          "Architecture-aware analysis",
+          "Parallel scanning engine",
+          "Intelligent vulnerability detection"
+        ]
+      },
+      "mcp": {
+        "title": "The World's First MCP-Based Code Scanner",
+        "subtitle": "Supreme 2 MAX runs as an MCP server so your LLM can trigger full scans, consume structured JSON, understand categorized vulnerabilities, securely refactor, and re-validate fixes."
+      },
+      "comparison": {
+        "title": "Supreme 2 Light vs Supreme 2 MAX",
+        "maxAdvantage": "MAX Advantage: Includes detailed Threat Intelligence and runs as an MCP Server meant to be used by LLMs."
+      },
+      "whyLeads": {
+        "title": "Why Supreme Leads the Market"
+      },
+      "llmVsSupreme": {
+        "title": "Searching for vulns/misconfigs with LLMs VS Supreme 2",
+        "llmTitle": "LLM-only review",
+        "llmItems": [
+          "Analyzes fragments",
+          "Misses configs",
+          "Skips hidden modules",
+          "Ignores dependency graphs"
+        ],
+        "supremeTitle": "Supreme 2",
+        "supremeItems": [
+          "Scans entire repository",
+          "Parses configs",
+          "Checks dependency trees",
+          "Detects cross-file patterns",
+          "Performs architecture analysis"
+        ]
+      },
+      "faq": {
+        "title": "Frequently Asked Questions",
+        "q1": "What programming languages does Supreme 2 support?",
+        "a1": "Supreme 2 supports major modern languages, configuration formats, and infrastructure files across backend, frontend, cloud, scripting, and documentation workflows.",
+        "a1Coverage": "Coverage includes 41 different scanner types across 100+ file extensions.",
+        "q2": "What scanner types and file formats are covered in detail?",
+        "a2Intro": "Supreme 2 supports 41 scanner types covering all major programming languages and file formats.",
+        "a2Total": "Total: 41 scanner types covering 100+ file extensions.",
+        "q3": "What is MCP and why does it matter?",
+        "a3": "MCP allows Supreme 2 MAX to run as a structured security server. Instead of raw text, it returns categorized JSON vulnerability reports for automated remediation, AI-driven fixing, programmatic interpretation, and continuous improvement workflows.",
+        "q4": "Does Supreme 2 store my code?",
+        "a4": "Supreme 2 scans locally in your environment. Your code never leaves your computer. You can check the source code of Supreme 2 Light on GitHub, and also monitor network activity while code is being scanned.",
+        "q5": "What are the pre-installation requirements?",
+        "a5Prefix": "To run Supreme 2, you must have",
+        "a5Python": "Python 3.0 or higher",
+        "a5Suffix": "installed on your machine. Additionally, you must ensure that",
+        "a5Pip": "pip",
+        "a5End": "is installed prior to the installation of Supreme itself.",
+        "q6": "Is Supreme 2 suitable for startups?",
+        "a6": "Yes. It is especially effective for AI-first startup teams shipping fast with LLM-generated code, where hidden cross-file risks are easy to miss without repository-wide security analysis.",
+        "a1ScannerTypes": "different scanner types",
+        "a1Across": "across",
+        "a1Extensions": "file extensions",
+        "a2Covering": "covering all major programming languages and file formats."
+      }
     }
   },
   "languageSelector": {

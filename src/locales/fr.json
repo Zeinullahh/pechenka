@@ -17,6 +17,40 @@
       "desc": "Gérez les paramètres de sécurité et les utilisateurs"
     }
   },
+  "homeCompliance": {
+    "badge": "Conformité réglementaire",
+    "title": "Conçu pour la conformité mondiale",
+    "subtitle": "Couverture de conformité continue en temps réel",
+    "statusLabel": "Conforme",
+    "supremeOnly": "Supreme uniquement",
+    "cards": {
+      "gdpr": { "desc": "La loi sur la confidentialité et la sécurité la plus stricte au monde, régissant les données personnelles de tous les résidents de l'UE. Établit le standard mondial de référence pour la protection des données." },
+      "ukGdpr": { "desc": "Équivalent britannique post-Brexit du RGPD européen, intégré dans le droit interne. Identique dans sa portée et ses obligations — la conformité au RGPD UE s'étend au RGPD britannique." },
+      "ccpa": { "desc": "L'inscription utilise Google OAuth, qui transmet des données de profil (nom, e-mail, identifiant Google) à nos serveurs — il s'agit de données personnelles au sens de la CCPA. Les utilisateurs conservent tous les droits de consulter, accéder et supprimer leurs données à tout moment." },
+      "pipeda": { "desc": "S'applique à toute organisation commerciale traitant des données de résidents canadiens, quel que soit son lieu d'établissement. Nous gérons les données des utilisateurs canadiens selon les mêmes normes de collecte minimale." },
+      "ksaPdpl": { "desc": "Loi saoudienne de protection des données personnelles, appliquée par la SDAIA. Régit la collecte, le traitement et le transfert transfrontalier des données personnelles." },
+      "uaePdpl": { "desc": "Loi fédérale des EAU sur la protection des données personnelles, régissant leur traitement sur le continent et dans les zones franches, y compris le DIFC et l'ADGM." },
+      "qatarPdpl": { "desc": "Loi qatarienne sur la protection de la vie privée des données personnelles, administrée par le ministère des Transports et des Communications." },
+      "bahrainPdpl": { "desc": "Loi de Bahreïn sur la protection des données personnelles, régulée par l'APDP, conforme aux standards internationaux." },
+      "kuwaitDp": { "desc": "Loi koweïtienne sur les communications électroniques et les transactions, établissant des obligations de protection des données pour les fournisseurs de services électroniques." },
+      "omanPdpl": { "desc": "Loi omanaise sur la protection des données personnelles, établissant des droits complets pour les personnes concernées et des obligations pour les responsables de traitement." },
+      "privacyByDesign": { "desc": "L'analyse de code de Supreme s'exécute entièrement en local — aucun code source n'est transmis ni traité à l'extérieur. Les données de compte (profil Google OAuth) sont traitées séparément conformément à notre politique de confidentialité." }
+    }
+  },
+  "homePartners": {
+    "title": "Clients et partenaires",
+    "subtitle": "Voici quelques-uns de nos principaux clients et partenaires ; cette liste n’est pas exhaustive.",
+    "marketCap": "Capitalisation boursière",
+    "billion": "Milliard",
+    "million": "Million"
+  },
+  "supremeInstructions": {
+    "light": "Light",
+    "videoInstructions": "instructions vidéo",
+    "lightVideoTitle": "Instructions vidéo Supreme Light",
+    "openYoutube": "Ouvrir la vidéo sur YouTube",
+    "maxPlaceholder": "Espace réservé vidéo — le tutoriel complet sera ajouté bientôt."
+  },
   "languageSelector": {
     "triggerLabel": "Choisir la langue",
     "menuLabel": "Sélectionner une langue",
@@ -2103,6 +2137,124 @@
     "lightbox": {
       "close": "Fermer",
       "alt": "Capture d’écran"
+    },
+    "landing": {
+      "hero": {
+        "headline": "Développez vite. Livrez en sécurité.",
+        "subheadline": "L’IA écrit le code. Supreme 2 le sécurise.",
+        "tagline": "74+ scanners intelligents. Analyse en profondeur au niveau de l’architecture. Le premier scanner de code MCP au monde.",
+        "ctaMax": "Passer à Supreme 2 MAX",
+        "ctaFree": "Commencer gratuitement avec Supreme 2 Light"
+      },
+      "pricingLight": {
+        "name": "Supreme 2 Light",
+        "price": "Gratuit",
+        "subprice": "Pour toujours · Aucune carte de crédit requise",
+        "features": [
+          "Extension VSCode",
+          "Analyse complète du projet",
+          "74+ scanners",
+          "Rapport complet",
+          "Flux de travail rapport uniquement (sans correction automatique)"
+        ],
+        "cta": "Obtenir Supreme 2 Light"
+      },
+      "pricingMax": {
+        "name": "Supreme 2 MAX",
+        "price": "$18/mois",
+        "subprice": "$150/an · Meilleur rapport qualité-prix",
+        "badge": "Meilleure valeur",
+        "features": [
+          "Scanner basé sur serveur MCP",
+          "Analyse complète du projet",
+          "74+ scanners",
+          "Rapport complet",
+          "Rapport LLM pour la remédiation automatique",
+          "Correction autonome des vulnérabilités",
+          "Détection renforcée via threat intelligence"
+        ],
+        "cta": "Passer à Supreme 2 MAX",
+        "videoLabel": "Vidéo de démonstration – Configuration de Supreme 2 MAX"
+      },
+      "hiddenRisk": {
+        "title": "Le risque caché du code généré par IA",
+        "llmTitle": "LLM = visibilité partielle",
+        "llmItems": [
+          "Voient uniquement les extraits collés",
+          "Ratent les fichiers cachés",
+          "Ignorent les chaînes de dépendances",
+          "Ne scannent pas l’architecture",
+          "N’auditent pas systématiquement les configs"
+        ],
+        "supremeTitle": "Supreme 2 = scan complet du dépôt",
+        "diagramRepo": "Dépôt",
+        "diagramScanner": "Scanneur profond",
+        "diagramFindings": "Résultats complets"
+      },
+      "meet": {
+        "title": "Présentation de SUPREME 2",
+        "features": [
+          "74+ scanners",
+          "Support multi-langages approfondi",
+          "Analyse sensible à l’architecture",
+          "Moteur de scan parallèle",
+          "Détection intelligente des vulnérabilités"
+        ]
+      },
+      "mcp": {
+        "title": "Le premier scanner de code MCP au monde",
+        "subtitle": "Supreme 2 MAX s’exécute en tant que serveur MCP afin que votre LLM puisse déclencher des scans complets, consommer du JSON structuré, comprendre les vulnérabilités catégorisées, refactoriser en toute sécurité et revalider les corrections."
+      },
+      "comparison": {
+        "title": "Supreme 2 Light vs Supreme 2 MAX",
+        "maxAdvantage": "Avantage MAX : inclut une threat intelligence détaillée et fonctionne comme serveur MCP destiné aux LLMs."
+      },
+      "whyLeads": {
+        "title": "Pourquoi Supreme domine le marché"
+      },
+      "llmVsSupreme": {
+        "title": "Recherche de vulnérabilités/mauvaises configs avec des LLMs VS Supreme 2",
+        "llmTitle": "Revue par LLM uniquement",
+        "llmItems": [
+          "Analyse des fragments",
+          "Rate les configs",
+          "Ignore les modules cachés",
+          "Ignore les graphes de dépendances"
+        ],
+        "supremeTitle": "Supreme 2",
+        "supremeItems": [
+          "Scan du dépôt entier",
+          "Analyse les configs",
+          "Vérifie les arbres de dépendances",
+          "Détecte les patterns inter-fichiers",
+          "Effectue une analyse d’architecture"
+        ]
+      },
+      "faq": {
+        "title": "Questions fréquentes",
+        "q1": "Quels langages de programmation Supreme 2 supporte-t-il ?",
+        "a1": "Supreme 2 supporte les principaux langages modernes, formats de configuration et fichiers d’infrastructure couvrant les workflows backend, frontend, cloud, script et documentation.",
+        "a1Coverage": "Couverture de 41 types de scanners différents pour plus de 100 extensions de fichiers.",
+        "q2": "Quels types de scanners et formats de fichiers sont couverts en détail ?",
+        "a2Intro": "Supreme 2 supporte 41 types de scanners couvrant tous les principaux langages de programmation et formats de fichiers.",
+        "a2Total": "Total : 41 types de scanners couvrant plus de 100 extensions de fichiers.",
+        "q3": "Qu’est-ce que MCP et pourquoi est-ce important ?",
+        "a3": "MCP permet à Supreme 2 MAX de fonctionner comme un serveur de sécurité structuré. Au lieu de texte brut, il renvoie des rapports de vulnérabilités JSON catégorisés pour la remédiation automatisée, la correction par IA, l’interprétation programmatique et les workflows d’amélioration continue.",
+        "q4": "Supreme 2 stocke-t-il mon code ?",
+        "a4": "Supreme 2 scanne localement dans votre environnement. Votre code ne quitte jamais l’ordinateur sur lequel le scanner fonctionne. Vous pouvez consulter le code source de Supreme 2 Light sur GitHub et surveiller l’activité réseau durant le scan.",
+        "q5": "Quels sont les prérequis d’installation ?",
+        "a5Prefix": "Pour exécuter Supreme 2, vous devez avoir",
+        "a5Python": "Python 3.0 ou supérieur",
+        "a5Suffix": "installé sur votre machine. De plus, vous devez vous assurer que",
+        "a5Pip": "pip",
+        "a5End": "est installé avant l’installation de Supreme lui-même.",
+        "q6": "Supreme 2 convient-il aux startups ?",
+        "a6": "Oui. Il est particulièrement efficace pour les équipes de startups AI-first qui livrent rapidement avec du code généré par LLM, où les risques inter-fichiers cachés sont facilement omis sans analyse de sécurité à l’échelle du dépôt.",
+        "a1ScannerTypes": "types de scanners différents",
+        "a1Across": "couvrant",
+        "a1Extensions": "extensions de fichiers",
+        "a2Covering": "couvrant tous les principaux langages de programmation et formats de fichiers."
+      }
     }
   },
   "badRequest": {

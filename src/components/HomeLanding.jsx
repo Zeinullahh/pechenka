@@ -6,7 +6,6 @@ import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { BackgroundBeams } from "@/components/ui/background/background-beams";
 import Header from "@/components/Header";
 import BackToTopButton from "@/components/BackToTopButton";
 import RequestDemoModal from "@/components/RequestDemoModal";
@@ -152,11 +151,6 @@ export default function HomeLanding() {
     <div className="min-h-screen bg-[#01091C] text-white overflow-hidden">
       <Header onOpenModal={openModal} />
 
-      {/* Background Effect - extends throughout the page */}
-      <div className="fixed inset-0 z-0">
-        <BackgroundBeams className="opacity-50" />
-      </div>
-
       <main className="relative mx-auto flex flex-col gap-0 pb-16 z-10">
 
         {/* Hero Section - Clean and Beautiful */}
@@ -281,67 +275,67 @@ export default function HomeLanding() {
               flag: "🇪🇺",
               name: "GDPR",
               citation: "EU Regulation 2016/679",
-              desc: "The world's most stringent privacy and security law, governing personal data of all EU residents. Sets the global benchmark for data protection worldwide.",
+              desc: t("homeCompliance.cards.gdpr.desc", "The world's most stringent privacy and security law, governing personal data of all EU residents. Sets the global benchmark for data protection worldwide."),
             },
             {
               flag: "🇬🇧",
               name: "UK GDPR",
               citation: "UK Data Protection Act 2018",
-              desc: "Post-Brexit UK equivalent of EU GDPR, retained in domestic law. Substantively identical in scope and obligations — EU GDPR compliance extends to UK GDPR.",
+              desc: t("homeCompliance.cards.ukGdpr.desc", "Post-Brexit UK equivalent of EU GDPR, retained in domestic law. Substantively identical in scope and obligations — EU GDPR compliance extends to UK GDPR."),
             },
             {
               flag: "🇺🇸",
               name: "CCPA / CPRA",
               citation: "California Consumer Privacy Act, 2020",
-              desc: "Registration uses Google OAuth, which transmits profile data (name, email, Google ID) to our servers — this is personal data under CCPA. Users retain full rights to know, access, and delete their account data at any time.",
+              desc: t("homeCompliance.cards.ccpa.desc", "Registration uses Google OAuth, which transmits profile data (name, email, Google ID) to our servers — this is personal data under CCPA. Users retain full rights to know, access, and delete their account data at any time."),
             },
             {
               flag: "🇨🇦",
               name: "PIPEDA",
               citation: "Canada — Personal Information Protection and Electronic Documents Act",
-              desc: "Applies to any commercial organization handling Canadian residents' data regardless of where the company is based. As we scale globally, personal data from Canadian users is handled with the same minimal-collection standards.",
+              desc: t("homeCompliance.cards.pipeda.desc", "Applies to any commercial organization handling Canadian residents' data regardless of where the company is based. As we scale globally, personal data from Canadian users is handled with the same minimal-collection standards."),
             },
             {
               flag: "🇸🇦",
               name: "KSA PDPL",
               citation: "Saudi Arabia — SDAIA, 2023",
-              desc: "Saudi Personal Data Protection Law enforced by SDAIA. Governs collection, processing, and cross-border transfer of personal data.",
+              desc: t("homeCompliance.cards.ksaPdpl.desc", "Saudi Personal Data Protection Law enforced by SDAIA. Governs collection, processing, and cross-border transfer of personal data."),
             },
             {
               flag: "🇦🇪",
               name: "UAE PDPL",
               citation: "Federal Law No. 45 of 2021",
-              desc: "UAE Personal Data Protection Law regulating personal data processing across the mainland and free zones, including DIFC and ADGM.",
+              desc: t("homeCompliance.cards.uaePdpl.desc", "UAE Personal Data Protection Law regulating personal data processing across the mainland and free zones, including DIFC and ADGM."),
             },
             {
               flag: "🇶🇦",
               name: "Qatar PDPL",
               citation: "Law No. 13 of 2016",
-              desc: "Qatar's Personal Data Privacy Protection Law administered by the Ministry of Transport and Communications.",
+              desc: t("homeCompliance.cards.qatarPdpl.desc", "Qatar's Personal Data Privacy Protection Law administered by the Ministry of Transport and Communications."),
             },
             {
               flag: "🇧🇭",
               name: "Bahrain PDPL",
               citation: "Law No. 30 of 2018",
-              desc: "Bahrain Personal Data Protection Law regulated by the Personal Data Protection Authority (PDPA), aligned with international standards.",
+              desc: t("homeCompliance.cards.bahrainPdpl.desc", "Bahrain Personal Data Protection Law regulated by the Personal Data Protection Authority (PDPA), aligned with international standards."),
             },
             {
               flag: "🇰🇼",
               name: "Kuwait DP",
               citation: "Decree-Law No. 20 of 2014",
-              desc: "Kuwait's Electronic Communications and Transactions Law establishing data protection obligations for electronic service providers.",
+              desc: t("homeCompliance.cards.kuwaitDp.desc", "Kuwait's Electronic Communications and Transactions Law establishing data protection obligations for electronic service providers."),
             },
             {
               flag: "🇴🇲",
               name: "Oman PDPL",
               citation: "Royal Decree No. 6 of 2022",
-              desc: "Oman Personal Data Protection Law establishing comprehensive rights for data subjects and obligations for controllers and processors.",
+              desc: t("homeCompliance.cards.omanPdpl.desc", "Oman Personal Data Protection Law establishing comprehensive rights for data subjects and obligations for controllers and processors."),
             },
             {
               flag: "🔒",
               name: "Privacy by Design",
               citation: "GDPR Art. 25 · All GCC frameworks",
-              desc: "Supreme's code scanning runs entirely on your local machine — no source code is ever transmitted or processed externally. Account data (Google OAuth profile) is handled separately under our privacy policy.",
+              desc: t("homeCompliance.cards.privacyByDesign.desc", "Supreme's code scanning runs entirely on your local machine — no source code is ever transmitted or processed externally. Account data (Google OAuth profile) is handled separately under our privacy policy."),
               supremeOnly: true,
             },
           ];
@@ -367,13 +361,13 @@ export default function HomeLanding() {
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                   </svg>
-                  Regulatory Compliance
+                  {t("homeCompliance.badge", "Regulatory Compliance")}
                 </div>
                 <h2 className="text-3xl font-bold sm:text-4xl text-white">
-                  {t("home.compliance.title", "Built for Global Compliance")}
+                  {t("homeCompliance.title", "Built for Global Compliance")}
                 </h2>
                 <p className="mt-3 text-white/50 text-sm">
-                  Continuous live compliance coverage
+                  {t("homeCompliance.subtitle", "Continuous live compliance coverage")}
                 </p>
               </motion.div>
 
@@ -403,11 +397,11 @@ export default function HomeLanding() {
                           <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                           </svg>
-                          Compliant
+                          {t("homeCompliance.statusLabel", "Compliant")}
                         </div>
                         {item.supremeOnly && (
                           <div className="inline-flex items-center gap-1 rounded-full border border-violet-400/30 bg-violet-500/15 px-2 py-0.5 text-[10px] font-semibold text-violet-300">
-                            Supreme only
+                            {t("homeCompliance.supremeOnly", "Supreme only")}
                           </div>
                         )}
                       </div>
@@ -425,22 +419,26 @@ export default function HomeLanding() {
           const partners = [
             {
               name: "Nur Astana Kurylys",
-              cap: "$1.5 Billion",
+              capAmount: "$1.5",
+              capUnit: "billion",
               logo: "/partners/nur-astana-kurylys.png",
             },
             {
               name: "KazMunayGas",
-              cap: "$25 Billion",
+              capAmount: "$25",
+              capUnit: "billion",
               logo: "/partners/kazmunaygas.png",
             },
             {
               name: "QazCloud",
-              cap: "$100 Million",
+              capAmount: "$100",
+              capUnit: "million",
               logo: "/partners/qazcloud.png",
             },
             {
               name: "KazakhCinema",
-              cap: "$50 Million",
+              capAmount: "$50",
+              capUnit: "million",
               logo: "/partners/kazakhcinema.png",
             },
           ];
@@ -451,10 +449,10 @@ export default function HomeLanding() {
             <section className="py-12 w-full">
               <div className="mb-10 text-center px-4">
                 <h2 className="text-3xl font-bold sm:text-4xl text-white">
-                  Clients and Partners
+                  {t("homePartners.title", "Clients and Partners")}
                 </h2>
                 <p className="mt-3 text-sm text-white/60">
-                  Featured here are some of our leading clients and partners; this is not a complete list.
+                  {t("homePartners.subtitle", "Featured here are some of our leading clients and partners; this is not a complete list.")}
                 </p>
               </div>
               
@@ -488,8 +486,8 @@ export default function HomeLanding() {
 
                       {/* Info Area */}
                       <div className="text-center mt-2">
-                        <div className="text-[10px] text-white/30 font-mono tracking-wider uppercase">Market Cap</div>
-                        <div className="text-sm font-medium text-white/80">{p.cap}</div>
+                        <div className="text-[10px] text-white/30 font-mono tracking-wider uppercase">{t("homePartners.marketCap", "Market Cap")}</div>
+                        <div className="text-sm font-medium text-white/80">{p.capAmount} {t(`homePartners.${p.capUnit}`, p.capUnit === "billion" ? "Billion" : "Million")}</div>
                       </div>
                     </div>
                   ))}

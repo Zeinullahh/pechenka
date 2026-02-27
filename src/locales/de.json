@@ -17,6 +17,40 @@
       "desc": "Sicherheitseinstellungen und Benutzer verwalten"
     }
   },
+  "homeCompliance": {
+    "badge": "Regulatorische Compliance",
+    "title": "Für globale Compliance entwickelt",
+    "subtitle": "Kontinuierliche Live-Compliance-Abdeckung",
+    "statusLabel": "Konform",
+    "supremeOnly": "Nur für Supreme",
+    "cards": {
+      "gdpr": { "desc": "Das weltweit strengste Datenschutz- und Sicherheitsgesetz, das die personenbezogenen Daten aller EU-Bürger regelt. Setzt den globalen Maßstab für den Datenschutz weltweit." },
+      "ukGdpr": { "desc": "Post-Brexit-Äquivalent der EU-DSGVO im britischen Recht. Inhaltlich identisch in Umfang und Pflichten — EU-DSGVO-Konformität erstreckt sich auch auf die UK-DSGVO." },
+      "ccpa": { "desc": "Die Registrierung nutzt Google OAuth, das Profildaten (Name, E-Mail, Google-ID) an unsere Server überträgt. Diese sind personenbezogene Daten gemäß CCPA. Nutzer haben das vollständige Recht, ihre Kontodaten jederzeit einzusehen, darauf zuzugreifen und sie zu löschen." },
+      "pipeda": { "desc": "Gilt für jede Handelsorganisation, die Daten kanadischer Einwohner verarbeitet, unabhängig vom Unternehmenssitz. Personenbezogene Daten kanadischer Nutzer werden nach denselben Minimalprinzipien behandelt." },
+      "ksaPdpl": { "desc": "Das saudi-arabische Datenschutzgesetz, durchgesetzt von der SDAIA. Regelt Erhebung, Verarbeitung und grenzüberschreitenden Transfer personenbezogener Daten." },
+      "uaePdpl": { "desc": "Das VAE-Datenschutzgesetz, das die Verarbeitung personenbezogener Daten im Festland und in Freizonen, einschließlich DIFC und ADGM, reguliert." },
+      "qatarPdpl": { "desc": "Katars Datenschutzgesetz, verwaltet vom Ministerium für Verkehr und Kommunikation." },
+      "bahrainPdpl": { "desc": "Bahrains Datenschutzgesetz, reguliert von der PDPA und an internationalen Standards ausgerichtet." },
+      "kuwaitDp": { "desc": "Kuwaits Gesetz über elektronische Kommunikation und Transaktionen, das Datenschutzpflichten für elektronische Dienstleister festlegt." },
+      "omanPdpl": { "desc": "Omans Datenschutzgesetz, das umfassende Rechte für Betroffene sowie Pflichten für Verantwortliche und Auftragsverarbeiter begründet." },
+      "privacyByDesign": { "desc": "Supremes Code-Scanning läuft vollständig lokal auf Ihrem Gerät — kein Quellcode wird jemals extern übertragen oder verarbeitet. Kontodaten (Google-OAuth-Profil) werden separat gemäß unserer Datenschutzrichtlinie verwaltet." }
+    }
+  },
+  "homePartners": {
+    "title": "Kunden und Partner",
+    "subtitle": "Hier sind einige unserer führenden Kunden und Partner aufgeführt; dies ist keine vollständige Liste.",
+    "marketCap": "Marktkapitalisierung",
+    "billion": "Milliarde",
+    "million": "Million"
+  },
+  "supremeInstructions": {
+    "light": "Light",
+    "videoInstructions": "Videoanleitungen",
+    "lightVideoTitle": "Supreme Light Videoanleitungen",
+    "openYoutube": "Video auf YouTube öffnen",
+    "maxPlaceholder": "Video-Platzhalter — das vollständige Tutorial wird bald hinzugefügt."
+  },
   "languageSelector": {
     "triggerLabel": "Sprache wählen",
     "menuLabel": "Sprache auswählen",
@@ -2129,27 +2163,145 @@
     "lightbox": {
       "close": "Schließen",
       "alt": "Screenshot"
+    },
+    "landing": {
+      "hero": {
+        "headline": "Schnell entwickeln. Sicher liefern.",
+        "subheadline": "Die KI schreibt den Code. Supreme 2 sichert ihn ab.",
+        "tagline": "74+ intelligente Scanner. Tiefe Architektur-Analyse. Der weltweit erste MCP-basierte Code-Scanner.",
+        "ctaMax": "Auf Supreme 2 MAX upgraden",
+        "ctaFree": "Kostenlos mit Supreme 2 Light starten"
+      },
+      "pricingLight": {
+        "name": "Supreme 2 Light",
+        "price": "Kostenlos",
+        "subprice": "Für immer · Keine Kreditkarte erforderlich",
+        "features": [
+          "VSCode-Erweiterung",
+          "Vollständige Projektanalyse",
+          "74+ Scanner",
+          "Umfassender Bericht",
+          "Nur-Bericht-Workflow (keine automatische Behebung)"
+        ],
+        "cta": "Supreme 2 Light herunterladen"
+      },
+      "pricingMax": {
+        "name": "Supreme 2 MAX",
+        "price": "$18/Monat",
+        "subprice": "$150/Jahr · Bestes Angebot",
+        "badge": "Bestes Angebot",
+        "features": [
+          "MCP-Server-basierter Scanner",
+          "Vollständige Projektanalyse",
+          "74+ Scanner",
+          "Umfassender Bericht",
+          "LLM-freundlicher Bericht für automatische Behebung",
+          "Autonome Schwachstellenbehebung",
+          "Erweiterte Erkennung durch Bedrohungsintelligenz"
+        ],
+        "cta": "Auf Supreme 2 MAX upgraden",
+        "videoLabel": "Video-Platzhalter – Supreme 2 MAX Einrichtung"
+      },
+      "hiddenRisk": {
+        "title": "Das verborgene Risiko von KI-generiertem Code",
+        "llmTitle": "LLM = begrenzte Sichtbarkeit",
+        "llmItems": [
+          "Sehen nur eingefügte Ausschnitte",
+          "Übersehen versteckte Dateien",
+          "Ignorieren Abhängigkeitsketten",
+          "Scannen keine Architektur",
+          "Prüfen Konfigurationen nicht systematisch"
+        ],
+        "supremeTitle": "Supreme 2 = vollständiger Repository-Scan",
+        "diagramRepo": "Repo",
+        "diagramScanner": "Tiefen-Scanner",
+        "diagramFindings": "Vollständige Ergebnisse"
+      },
+      "meet": {
+        "title": "Entdecke SUPREME 2",
+        "features": [
+          "74+ Scanner",
+          "Tiefe Multi-Sprachen-Unterstützung",
+          "Architektur-bewusste Analyse",
+          "Paralleles Scan-Engine",
+          "Intelligente Schwachstellenerkennung"
+        ]
+      },
+      "mcp": {
+        "title": "Der weltweit erste MCP-basierte Code-Scanner",
+        "subtitle": "Supreme 2 MAX läuft als MCP-Server, damit Ihr LLM vollständige Scans auslösen, strukturiertes JSON verarbeiten, kategorisierte Schwachstellen verstehen, sicher refaktorieren und Fixes neu validieren kann."
+      },
+      "comparison": {
+        "title": "Supreme 2 Light vs Supreme 2 MAX",
+        "maxAdvantage": "MAX-Vorteil: Enthält detaillierte Bedrohungsintelligenz und läuft als MCP-Server für LLMs."
+      },
+      "whyLeads": {
+        "title": "Warum Supreme den Markt anführt"
+      },
+      "llmVsSupreme": {
+        "title": "Suche nach Schwachstellen/Fehlkonfigurationen mit LLMs VS Supreme 2",
+        "llmTitle": "Nur-LLM-Überprüfung",
+        "llmItems": [
+          "Analysiert Fragmente",
+          "Übersieht Konfigurationen",
+          "Überspringt versteckte Module",
+          "Ignoriert Abhängigkeitsgraphen"
+        ],
+        "supremeTitle": "Supreme 2",
+        "supremeItems": [
+          "Scannt das gesamte Repository",
+          "Parst Konfigurationen",
+          "Prüft Abhängigkeitsbäume",
+          "Erkennt dateiübergreifende Muster",
+          "Führt Architekturanalyse durch"
+        ]
+      },
+      "faq": {
+        "title": "Häufig gestellte Fragen",
+        "q1": "Welche Programmiersprachen unterstützt Supreme 2?",
+        "a1": "Supreme 2 unterstützt alle wichtigen modernen Sprachen, Konfigurationsformate und Infrastrukturdateien für Backend-, Frontend-, Cloud-, Scripting- und Dokumentations-Workflows.",
+        "a1Coverage": "Abdeckung von 41 verschiedenen Scanner-Typen für über 100 Dateierweiterungen.",
+        "q2": "Welche Scanner-Typen und Dateiformate werden im Detail abgedeckt?",
+        "a2Intro": "Supreme 2 unterstützt 41 Scanner-Typen, die alle wichtigen Programmiersprachen und Dateiformate abdecken.",
+        "a2Total": "Gesamt: 41 Scanner-Typen für über 100 Dateierweiterungen.",
+        "q3": "Was ist MCP und warum ist es wichtig?",
+        "a3": "MCP ermöglicht es Supreme 2 MAX, als strukturierter Sicherheitsserver zu laufen. Anstelle von Rohtext liefert es kategorisierte JSON-Schwachstellenberichte für automatisierte Behebung, KI-gesteuerte Fixes, programmatische Interpretation und kontinuierliche Verbesserungs-Workflows.",
+        "q4": "Speichert Supreme 2 meinen Code?",
+        "a4": "Supreme 2 scannt lokal in Ihrer Umgebung. Ihr Code verlässt den Computer, auf dem der Scanner läuft, niemals. Sie können den Quellcode von Supreme 2 Light auf GitHub einsehen und die Netzwerkaktivität während des Scannens überwachen.",
+        "q5": "Was sind die Voraussetzungen für die Installation?",
+        "a5Prefix": "Um Supreme 2 auszuführen, muss",
+        "a5Python": "Python 3.0 oder höher",
+        "a5Suffix": "auf Ihrem Rechner installiert sein. Außerdem müssen Sie sicherstellen, dass",
+        "a5Pip": "pip",
+        "a5End": "vor der Installation von Supreme selbst installiert ist.",
+        "q6": "Ist Supreme 2 für Startups geeignet?",
+        "a6": "Ja. Es ist besonders effektiv für AI-first-Startup-Teams, die schnell mit LLM-generiertem Code liefern, wo dateiübergreifende Risiken ohne repository-weite Sicherheitsanalyse leicht übersehen werden.",
+        "a1ScannerTypes": "verschiedene Scanner-Typen",
+        "a1Across": "über",
+        "a1Extensions": "Dateierweiterungen",
+        "a2Covering": "alle wichtigen Programmiersprachen und Dateiformate abdeckend."
+      }
     }
   },
   "andManyMore": "Et bien plus encore...",
   "badRequest": {
-    "title": "Błędne żądanie",
-    "cta": "Wróć na stronę główną",
+    "title": "Ungültige Anfrage",
+    "cta": "Zurück zur Startseite",
     "description": "The page you are looking for could not be found or the request was invalid."
   },
   "countrySelect": {
-    "title": "Wybierz kraj",
-    "subtitle": "Wybierz lokalizację, aby kontynuować",
-    "searchPlaceholder": "Szukaj kraju...",
-    "noResults": "Nie znaleziono krajów",
-    "continue": "Kontynuuj",
+    "title": "Land auswählen",
+    "subtitle": "Wählen Sie Ihren Standort, um fortzufahren",
+    "searchPlaceholder": "Land suchen...",
+    "noResults": "Keine Länder gefunden",
+    "continue": "Weiter",
     "comingSoon": {
-      "title": "Już prawie gotowe!",
-      "message": "Panel administracyjny do zarządzania subskrypcją będzie gotowy za",
-      "hours": "godziny",
-      "notification": "Powiadomimy Cię, gdy będzie dostępny!",
-      "back": "Wstecz",
-      "gotIt": "Rozumiem!"
+      "title": "Fast bereit!",
+      "message": "Das Admin-Panel für die Abonnementverwaltung wird in bereit sein",
+      "hours": "Stunden",
+      "notification": "Wir benachrichtigen Sie, wenn es verfügbar ist!",
+      "back": "Zurück",
+      "gotIt": "Verstanden!"
     }
   }
 }
