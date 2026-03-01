@@ -200,16 +200,14 @@ export default function SupremeLanding() {
   const { t } = useLanguage();
   const [openFaq, setOpenFaq] = useState(null);
   const maxUrl = "https://supreme.silence.codes/";
+  const lightVideoUrl = "https://youtu.be/k282t3QKG2w?si=tsrRlgiktFE2buFG";
 
   const goToMax = () => {
     window.location.href = maxUrl;
   };
 
   const goToPricing = () => {
-    const pricingSection = document.getElementById("pricing");
-    if (pricingSection) {
-      pricingSection.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
+    window.open(lightVideoUrl, "_blank", "noopener,noreferrer");
   };
 
   const languageLogos = [
