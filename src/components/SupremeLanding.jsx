@@ -51,6 +51,7 @@ function PricingCard({
   onCtaClick,
   videoLabel,
   videoEmbedUrl,
+  belowVideo,
   emphasized = false,
 }) {
   return (
@@ -113,6 +114,8 @@ function PricingCard({
           </div>
         )}
       </div>
+
+      {belowVideo ? <div className="mt-3 text-center">{belowVideo}</div> : null}
     </motion.article>
   );
 }
@@ -539,6 +542,17 @@ export default function SupremeLanding() {
               }
               onCtaClick={goToPricing}
               videoEmbedUrl="https://www.youtube.com/embed/k282t3QKG2w"
+              belowVideo={
+                <a
+                  href="https://github.com/silence-codes/supreme"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full border border-fuchsia-300/35 bg-fuchsia-500/10 px-4 py-2 text-sm font-semibold text-fuchsia-100 transition hover:border-fuchsia-200/60 hover:bg-fuchsia-500/15 hover:text-white"
+                >
+                  <img src="/supreme/github-logo.png" alt="GitHub" className="h-10 w-10 object-contain" />
+                  {t("supreme.landing.openSourceLink", "View Supreme 2 Light source code on GitHub")}
+                </a>
+              }
             />
             <PricingCard
               name={t("supreme.landing.pricingMax.name", "Supreme 2 MAX")}
