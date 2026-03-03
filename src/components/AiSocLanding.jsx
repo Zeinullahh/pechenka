@@ -10,6 +10,7 @@ import AiSocGetModal from '@/components/AiSocGetModal.jsx';
 import { FloatingText } from '@/components/FloatingText.jsx';
 import Spotlights from '@/components/Spotlights.jsx';
 import BackToTopButton from '@/components/BackToTopButton';
+import FaqSection from '@/components/FaqSection.jsx';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { solutionContent } from '@/lib/solutionContent';
 
@@ -51,6 +52,7 @@ const AiSocLanding = () => {
           </div>
           <StickyScrollSolution />
         </div>
+        <FaqSection />
         <div className="w-full max-w-7xl mx-auto mt-24">
           <FloatingText />
         </div>
