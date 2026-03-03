@@ -12,27 +12,27 @@ const faqItems = [
     {
         question: 'Is AI-SOC just a security engine or a full email platform?',
         response:
-            'AI-SOC is a complete secure email infrastructure provided by SilenceAI. It includes its own EmailGate, mail server base, and administrative console for managing corporate accounts. Organizations can deploy it as their primary business email system — similar to how Outlook or Gmail operate — but with built-in AI-driven protection embedded at the core.'
+            'AI-SOC is a complete secure email infrastructure provided by SilenceAI. It includes its own mail server foundation and administrative console for managing corporate accounts. Organizations can deploy it as their primary business email system — similar to how Outlook or Gmail operate — but with built-in AI-driven protection embedded directly into the platform.'
     },
     {
         question: 'Can AI-SOC be used alongside existing Gmail or Outlook environments?',
         response:
-            'Yes. AI-SOC can integrate with existing Gmail or Outlook-based corporate domains. In this configuration, emails continue flowing through your current provider, while AI-SOC applies an additional inspection layer through its Webmail Gateway and AI engine, creating a double protection architecture.'
+            'Yes. AI-SOC can integrate with existing Gmail or Outlook-based corporate domains. In this configuration, emails continue flowing through your current provider, while AI-SOC performs an additional inspection layer within its security system, creating a double protection architecture.'
     },
     {
         question: 'What happens when AI-SOC operates as the primary email infrastructure?',
         response:
-            'When deployed as the standalone infrastructure, all emails are sent and received directly through SilenceAI’s EmailGate without intermediaries. Every message passes through multiple internal AI inspection stages before reaching the inbox. High-risk emails may be blocked entirely or isolated before delivery.'
+            'When deployed as standalone infrastructure, all emails are sent and received directly through SilenceAI’s email system without intermediaries such as Gmail or Outlook. Every message passes through multiple internal AI inspection stages before reaching the inbox. High-risk emails may be blocked entirely or isolated before delivery.'
     },
     {
         question: 'Can administrators create and control corporate email accounts?',
         response:
-            'Yes. Administrators can create business email accounts directly within the AI-SOC administrative console using corporate domains. They can manage domain policies, enforce security rules, and remove emails across accounts within the system.'
+            'Yes. Administrators can create business email accounts directly within the AI-SOC administrative console using corporate domains. They can enforce domain-level security policies and remove emails across accounts created within the system.'
     },
     {
-        question: 'Can existing corporate email accounts be added to AI-SOC?',
+        question: 'Can existing corporate email accounts be connected to AI-SOC?',
         response:
-            'Existing Gmail or Outlook-based corporate accounts can be connected to the Webmail Gateway. This allows organizations to maintain their current provider while leveraging SilenceAI as a structured protection layer.'
+            'Existing Gmail or Outlook-based corporate accounts can be connected to AI-SOC. This allows organizations to maintain their current provider while leveraging SilenceAI as an additional structured protection layer.'
     },
     {
         question: 'Is security pre-configured or does it require manual setup?',
