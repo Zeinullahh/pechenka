@@ -258,12 +258,11 @@ const Pricing = ({ onOpenModal }) => {
   return (
     <section className="w-full pt-12 sm:pt-16 relative px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto max-w-7xl">
-        {/* Pricing Title - Huge, half screen height */}
+        {/* Pricing Title - Simplified and smaller */}
         <h2
-          className="font-bold text-white text-center mb-16 sm:mb-20 leading-none"
+          className="font-bold text-white text-center mb-8 sm:mb-12 leading-none"
           style={{
-            fontSize: "clamp(70px, 15vw, 200px)",
-            height: "1vh",
+            fontSize: "clamp(40px, 8vw, 100px)",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -272,65 +271,170 @@ const Pricing = ({ onOpenModal }) => {
           {t("pricing.title", "Pricing")}
         </h2>
 
+        {/* Architecture / Toggle Section */}
+        <div className="relative z-10 flex flex-col items-center justify-center mb-16 sm:mb-24">
+          {/* Top Text */}
+          <p className="text-purple-200/80 text-xs sm:text-sm uppercase tracking-[0.2em] mb-8 font-medium text-center">
+            AI-SOC consists of 2 security components
+          </p>
 
-        {/* Product Type Toggle (Email / Web) */}
-        <div className="relative z-10 flex  w-full justify-center  mt-30 mb-6">
-          <div className="relative flex rounded-full border border-purple-400/25 bg-[#050b1a]/85 p-1 text-sm font-medium text-purple-100/70 shadow-[0_0_55px_rgba(168,85,247,0.28)] backdrop-blur-xl">
-            {tabs.map((tab) => {
-              const isActive = tab.id === productType;
-              return (
-                <button
-                  key={tab.id}
-                  type="button"
-                  onClick={() => setProductType(tab.id)}
-                  className="relative flex min-w-[160px] items-center justify-center rounded-full px-5 py-2 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-300/40"
+          {/* Triangle Diagram */}
+          <div className="relative w-[180px] h-[50px] sm:w-[220px] sm:h-[60px]">
+            {/* The Roof Triangle */}
+            <svg
+              viewBox="0 0 220 60"
+              className="w-full h-full"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <defs>
+                <filter id="neon-glow" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="2" result="coloredBlur" />
+                  <feMerge>
+                    <feMergeNode in="coloredBlur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+              </defs>
+
+              {/* Left Slope (Email) */}
+              <path
+                d="M110 2 L10 58"
+                stroke="#9B5CF6"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                filter="url(#neon-glow)"
+                className={`transition-all duration-500 ease-out ${productType === "email" ? "opacity-100 stroke-[2px]" : "opacity-30"
+                  }`}
+              />
+
+              {/* Right Slope (Web) */}
+              <path
+                d="M110 2 L210 58"
+                stroke="#9B5CF6"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                filter="url(#neon-glow)"
+                className={`transition-all duration-500 ease-out ${productType === "web" ? "opacity-100 stroke-[2px]" : "opacity-30"
+                  }`}
+              />
+
+              {/* Top vertex dot */}
+              <circle
+                cx="110"
+                cy="2"
+                r="2"
+                fill="#9B5CF6"
+                className="animate-pulse"
+                filter="url(#neon-glow)"
+              />
+            </svg>
+
+            {/* Left Label Button - Email */}
+            <button
+              onClick={() => setProductType("email")}
+              className="absolute -bottom-12 left-[-60px] sm:-bottom-14 sm:left-[-80px] group focus:outline-none min-w-[160px] text-center flex justify-center"
+            >
+              <div className="flex flex-col items-center">
+                <span
+                  className={`text-lg sm:text-[22px] font-semibold transition-all duration-300 whitespace-nowrap ${productType === "email"
+                    ? "text-white drop-shadow-[0_0_12px_rgba(155,92,246,0.8)]"
+                    : "text-white/40 group-hover:text-white/70"
+                    }`}
                 >
-                  {isActive && (
-                    <motion.span
-                      layoutId="tab-indicator"
-                      className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-200 via-violet-200 to-fuchsia-200 shadow-[0_0_35px_rgba(168,85,247,0.55)]"
-                      transition={{
-                        type: "spring",
-                        stiffness: 260,
-                        damping: 28
-                      }}
-                    />
-                  )}
-                  <span
-                    className={`relative z-10 ${isActive
-                      ? "text-black"
-                      : "text-purple-100/70 hover:text-purple-50"
-                      }`}
-                  >
-                    {tab.label}
-                  </span>
-                </button>
-              );
-            })}
+                  {t("pricing.aiSoc.tabs.email", "Email Security")}
+                </span>
+                <div
+                  className={`h-[2px] mt-2 transition-all duration-300 bg-[#9B5CF6] shadow-[0_0_12px_#9B5CF6] rounded-full ${productType === "email" ? "w-full opacity-100" : "w-0 opacity-0"
+                    }`}
+                />
+              </div>
+            </button>
+
+            {/* Right Label Button - Web */}
+            <button
+              onClick={() => setProductType("web")}
+              className="absolute -bottom-12 right-[-60px] sm:-bottom-14 sm:right-[-80px] group focus:outline-none min-w-[160px] text-center flex justify-center"
+            >
+              <div className="flex flex-col items-center">
+                <span
+                  className={`text-lg sm:text-[22px] font-semibold transition-all duration-300 whitespace-nowrap ${productType === "web"
+                    ? "text-white drop-shadow-[0_0_12px_rgba(155,92,246,0.8)]"
+                    : "text-white/40 group-hover:text-white/70"
+                    }`}
+                >
+                  {t("pricing.aiSoc.tabs.web", "Web Security")}
+                </span>
+                <div
+                  className={`h-[2px] mt-2 transition-all duration-300 bg-[#9B5CF6] shadow-[0_0_12px_#9B5CF6] rounded-full ${productType === "web" ? "w-full opacity-100" : "w-0 opacity-0"
+                    }`}
+                />
+              </div>
+            </button>
           </div>
         </div>
 
 
+
+
+        {/* Architecture Descriptions: Replaced with Compact Blocks */}
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-8 px-4 mb-16 relative z-10 w-full justify-center">
+          {/* Email Security Card */}
+          <div className={`flex-1 p-6 sm:p-8 rounded-2xl border transition-all duration-300 backdrop-blur-sm group hover:scale-[1.02] flex flex-col h-full bg-black/20 border-white/5 hover:border-purple-500/30 ${productType === 'email' ? 'ring-1 ring-purple-500/50 shadow-[0_0_20px_rgba(168,85,247,0.1)]' : ''
+            }`}>
+            <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-purple-500 shadow-[0_0_8px_#a855f7]"></span>
+              Email Security
+            </h3>
+            <p className="text-sm text-gray-400 leading-relaxed flex-grow">
+              Email Security acts as a protective shield for your corporate communications. It filters incoming and outgoing messages to neutralize phishing attempts, spoofing attacks, and malicious links before they reach your users, ensuring the integrity of your business correspondence.
+            </p>
+          </div>
+
+          {/* Web Security Card */}
+          <div className={`flex-1 p-6 sm:p-8 rounded-2xl border transition-all duration-300 backdrop-blur-sm group hover:scale-[1.02] flex flex-col h-full bg-black/20 border-white/5 hover:border-purple-500/30 ${productType === 'web' ? 'ring-1 ring-purple-500/50 shadow-[0_0_20px_rgba(168,85,247,0.1)]' : ''
+            }`}>
+            <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-cyan-400 shadow-[0_0_8px_#22d3ee]"></span>
+              Web Security
+            </h3>
+            <p className="text-sm text-gray-400 leading-relaxed flex-grow">
+              Web Security safeguards your digital infrastructure by analyzing traffic patterns in real-time. It defends websites and APIs against common vulnerabilities, DDoS attacks, and unauthorized access, providing deep visibility into network activity without impacting performance.
+            </p>
+          </div>
+        </div>
+
         {/* Controls: Billing Only */}
         <div className="flex justify-center items-center mb-12 relative z-20">
-          <div className="flex gap-2 bg-white/10 rounded-full p-1 backdrop-blur-sm border border-white/20">
+          <div className="flex items-center gap-12">
             <button
               onClick={() => setBilling("yearly")}
-              className={`px-6 py-2 rounded-full transition-all font-medium text-sm ${billing === "yearly"
-                ? "bg-white text-black"
-                : "text-white hover:bg-white/10"
+              className={`relative pb-2 text-lg font-medium transition-colors duration-300 ${billing === "yearly" ? "text-white" : "text-white/40 hover:text-white/70"
                 }`}
             >
               {billingLabels.yearly}
+              {billing === "yearly" && (
+                <motion.div
+                  layoutId="billing-underline"
+                  className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#a855f7] shadow-[0_0_10px_#a855f7]"
+                  transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                />
+              )}
             </button>
+
             <button
               onClick={() => setBilling("monthly")}
-              className={`px-6 py-2 rounded-full transition-all font-medium text-sm ${billing === "monthly"
-                ? "bg-white text-black"
-                : "text-white hover:bg-white/10"
+              className={`relative pb-2 text-lg font-medium transition-colors duration-300 ${billing === "monthly" ? "text-white" : "text-white/40 hover:text-white/70"
                 }`}
             >
               {billingLabels.monthly}
+              {billing === "monthly" && (
+                <motion.div
+                  layoutId="billing-underline"
+                  className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#a855f7] shadow-[0_0_10px_#a855f7]"
+                  transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                />
+              )}
             </button>
           </div>
         </div>
@@ -612,13 +716,13 @@ const PricingCard = ({
 
 
           {/* Content container: SHARP TEXT, NO BLUR */}
-          <div className={`relative p-6 sm:p-8 flex ${isHorizontal ? "flex flex-col lg:flex-row gap-6 lg:gap-8" : "flex-col"} h-full z-10`}>
+          <div className={`relative p-5 sm:p-6 flex ${isHorizontal ? "flex flex-col lg:flex-row gap-6 lg:gap-8" : "flex-col"} h-full z-10`}>
             {/* Left block: Title and Price */}
             <div className={`flex flex-col ${isHorizontal ? "lg:w-auto lg:min-w-[240px]" : "w-full mb-6 sm:mb-8"}`}>
-              <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 leading-tight">
+              <h3 className="text-lg sm:text-xl font-bold text-white mb-3 leading-tight">
                 {plan.title}
               </h3>
-              <div className="text-3xl sm:text-4xl font-bold text-white mb-4 lg:mb-0">
+              <div className="text-2xl sm:text-3xl font-bold text-white mb-4 lg:mb-0">
                 {price}
               </div>
             </div>
@@ -699,7 +803,7 @@ const PricingCard = ({
 
 
                     return (
-                      <li key={i} className="flex items-start sm:items-center gap-3 text-white text-sm sm:text-base">
+                      <li key={i} className="flex items-start sm:items-center gap-3 text-white text-xs sm:text-sm">
                         <svg
                           className="w-4 h-4 text-green-400 flex-shrink-0 mt-1 sm:mt-0"
                           fill="none"
