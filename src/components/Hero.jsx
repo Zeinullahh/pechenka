@@ -11,17 +11,30 @@ const Hero = ({ onOpenModal }) => {
   const playgroundRef = useRef(null);
   const playgroundHeadingRef = useRef(null);
   const { t } = useLanguage();
-  const fullText = t("hero.headline", "AI-SOC 1: Cybersecurity is no longer expensive and complicated");
+  const fullText = t("hero.headline", "AI-SOC — AI-Powered Security Operations Center");
   const playgroundHeading = t("hero.playgroundHeading", <>AI powered<br />Security Operations Center</>);
 
   const tooltipContent = {
     "web-attack-protection": {
       title: t("hero.tooltips.web.title", "Web Attack Protection"),
-      content: t("hero.tooltips.web.content", "The system protects against ALL types of web attacks such as DDoS, SQLi, etc., except business logic vulnerabilities"),
+      content: t(
+        "hero.tooltips.web.content",
+        "Protection against major web attacks including DDoS, SQL injection, and other network threats. Business logic vulnerabilities are not included."
+      ),
     },
     "email-attack-protection": {
       title: t("hero.tooltips.email.title", "Email Attack Protection"),
-      content: t("hero.tooltips.email.content", "The system protects against ALL types of email attacks: phishing, malicious attachments, dangerous links, etc."),
+      content: t(
+        "hero.tooltips.email.content",
+        "AI analyzes incoming and outgoing emails to detect phishing, spoofing attempts, malicious links, and other email-based attacks."
+      ),
+    },
+    "unified-monitoring": {
+      title: t("hero.tooltips.unified.title", "Unified security monitoring and threat detection"),
+      content: t(
+        "hero.tooltips.unified.content",
+        "AI-SOC provides centralized monitoring of web infrastructure and email communications within a single security platform."
+      ),
     },
   };
 
@@ -97,17 +110,24 @@ const Hero = ({ onOpenModal }) => {
           {fullText}
         </h1>
         <p className="font-bold mb-4 text-base sm:text-lg">
-          {t("hero.subheading", "A unified AI cybersecurity platform that combines:")}
+          {t(
+            "hero.subheading",
+            "A unified AI cybersecurity platform that combines Web Security and Email Security in a single control center."
+          )}
         </p>
         <div className="space-y-4 mb-8">
           {[
             {
               key: "web-attack-protection",
-              label: t("hero.bullets.web", "Real-time web attack protection"),
+              label: t("hero.bullets.web", "Real-time protection for web infrastructure and APIs"),
             },
             {
               key: "email-attack-protection",
-              label: t("hero.bullets.email", "Email attack protection"),
+              label: t("hero.bullets.email", "Advanced protection against phishing, spoofing, and malicious email threats"),
+            },
+            {
+              key: "unified-monitoring",
+              label: t("hero.bullets.unified", "Unified security monitoring and threat detection"),
             },
           ].map((item) => (
             <div key={item.key} className="flex items-start sm:items-center gap-2 text-sm sm:text-base">
@@ -133,7 +153,7 @@ const Hero = ({ onOpenModal }) => {
         </div>
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full sm:w-auto">
           <GlowButton onClick={onOpenModal} className="w-full sm:w-auto">
-            {t("header.cta.get", "Get")}
+            {t("header.cta.get", "Get Started")}
           </GlowButton>
         </div>
       </div>

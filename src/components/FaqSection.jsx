@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { ChevronDown } from 'lucide-react';
 
 const deploymentModes = [
     'A standalone secure email infrastructure that can replace traditional Gmail or Outlook environments while preserving enterprise-grade reliability.',
@@ -41,11 +42,6 @@ const faqItems = [
     }
 ];
 
-const containerVariants = {
-    hidden: { opacity: 0, y: 40 },
-    visible: { opacity: 1, y: 0 }
-};
-
 const FaqSection = () => {
     const [openIndex, setOpenIndex] = useState(null);
 
@@ -54,79 +50,89 @@ const FaqSection = () => {
     };
 
     return (
-        <section className="w-full mt-24 px-4 sm:px-6 lg:px-8">
-            <motion.div
-                className="max-w-4xl mx-auto rounded-3xl border border-white/10 bg-gradient-to-br from-[#050409]/90 via-[#0a0f1c]/80 to-[#04030a]/90 shadow-[0_25px_120px_rgba(0,0,0,0.55)] backdrop-blur"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.6, ease: 'easeOut' }}
-                variants={containerVariants}
-            >
-                <div className="px-6 py-10 sm:px-10 sm:py-12">
-                    <div className="text-center">
-                        <p className="text-sm uppercase tracking-[0.3em] text-slate-400">FAQ</p>
-                        <h2 className="mt-3 text-3xl font-semibold text-white sm:text-4xl">Answers for security leaders</h2>
-                        <p className="mt-4 text-base text-slate-300">
-                            Understand how AI-SOC embeds into your messaging estate, enforces zero-trust controls, and adapts to hybrid or fully managed deployment models.
-                        </p>
-                    </div>
-                    <div className="mt-10 flex flex-col gap-4">
-                        {faqItems.map((item, index) => {
-                            const isOpen = openIndex === index;
-                            return (
-                                <motion.div
-                                    key={item.question}
-                                    layout
-                                    className={`rounded-2xl border border-white/10 transition duration-300 hover:border-white/20 ${isOpen ? 'bg-white/5 shadow-[0_15px_60px_rgba(0,0,0,0.35)]' : 'bg-white/0'
-                                        }`}
-                                >
-                                    <button
-                                        type="button"
-                                        className="flex w-full items-center justify-between px-6 py-5 text-left"
-                                        onClick={() => handleToggle(index)}
-                                    >
-                                        <span className="text-lg font-medium text-white">{item.question}</span>
-                                        <motion.span
-                                            className="ml-4 flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-white"
-                                            animate={{ rotate: isOpen ? 180 : 0 }}
-                                            transition={{ duration: 0.3, ease: 'easeOut' }}
-                                        >
-                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" className="text-white">
-                                                <path d="M6 1v10M1 6h10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-                                            </svg>
-                                        </motion.span>
-                                    </button>
-                                    <AnimatePresence initial={false}>
-                                        {isOpen && (
-                                            <motion.div
-                                                key="content"
-                                                initial={{ height: 0, opacity: 0 }}
-                                                animate={{ height: 'auto', opacity: 1 }}
-                                                exit={{ height: 0, opacity: 0 }}
-                                                transition={{ duration: 0.35, ease: 'easeInOut' }}
-                                                className="overflow-hidden"
-                                            >
-                                                <div className="px-6 pb-6 text-slate-300">
-                                                    <p className="text-base leading-relaxed text-slate-200">{item.response}</p>
-                                                    <ul className="mt-4 space-y-2 text-sm">
-                                                        {deploymentModes.map((mode) => (
-                                                            <li key={mode} className="flex items-start gap-3 text-slate-300">
-                                                                <span className="mt-2 h-1.5 w-1.5 rounded-full bg-emerald-400" />
-                                                                <span>{mode}</span>
-                                                            </li>
-                                                        ))}
-                                                    </ul>
-                                                </div>
-                                            </motion.div>
-                                        )}
-                                    </AnimatePresence>
-                                </motion.div>
-                            );
-                        })}
-                    </div>
+        <section className="relative w-full py-16 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+            {/* Background Glows */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] opacity-20 pointer-events-none">
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 via-blue-500/20 to-pink-500/20 blur-[120px] rounded-full mix-blend-screen" />
+            </div>
+
+            <div className="relative z-10 max-w-3xl mx-auto">
+                {/* Header */}
+                <div className="text-center mb-12">
+                    <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                        Frequently Asked Questions
+                    </h2>
                 </div>
-            </motion.div>
+
+                {/* FAQ List */}
+                <div className="flex flex-col gap-4">
+                    {faqItems.map((item, index) => {
+                        const isOpen = openIndex === index;
+                        return (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: "-50px" }}
+                                transition={{ duration: 0.5, delay: index * 0.1 }}
+                                className={`group relative rounded-2xl border transition-all duration-300 overflow-hidden ${isOpen
+                                    ? "bg-white/10 border-purple-500/30 shadow-[0_0_40px_-10px_rgba(168,85,247,0.3)]"
+                                    : "bg-white/5 border-white/10 hover:border-white/20 hover:bg-white/[0.07]"
+                                    }`}
+                            >
+                                {/* Gradient Border Glow on Hover (via background layer) */}
+                                <div
+                                    className={`absolute inset-0 -z-10 bg-gradient-to-r from-purple-600/20 via-blue-600/20 to-pink-600/20 transition-opacity duration-500 blur-xl ${isOpen || "group-hover:opacity-100 opacity-0"
+                                        }`}
+                                    style={{ opacity: isOpen ? 0.3 : undefined }}
+                                />
+
+                                <button
+                                    type="button"
+                                    onClick={() => handleToggle(index)}
+                                    className="flex w-full items-center justify-between px-6 py-5 sm:px-8 sm:py-6 text-left focus:outline-none z-10 relative"
+                                >
+                                    <span className="text-base sm:text-lg font-semibold text-white pr-8">
+                                        {item.question}
+                                    </span>
+                                    <div className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full border transition-all duration-300 ${isOpen
+                                        ? "border-purple-500/50 bg-purple-500/20 text-purple-300 rotate-180"
+                                        : "border-white/10 bg-white/5 text-slate-400 group-hover:border-white/20 group-hover:bg-white/10 group-hover:text-white"
+                                        }`}>
+                                        <ChevronDown className="h-4 w-4" />
+                                    </div>
+                                </button>
+
+                                <AnimatePresence initial={false}>
+                                    {isOpen && (
+                                        <motion.div
+                                            initial={{ height: 0, opacity: 0 }}
+                                            animate={{ height: "auto", opacity: 1 }}
+                                            exit={{ height: 0, opacity: 0 }}
+                                            transition={{ duration: 0.4, ease: [0.04, 0.62, 0.23, 0.98] }}
+                                        >
+                                            <div className="px-5 pb-5 sm:px-6 sm:pb-6 pt-0 relative z-10">
+                                                <div className="h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent mb-4" />
+                                                <p className="text-sm text-white/80 font-normal leading-relaxed">
+                                                    {item.response}
+                                                </p>
+                                                <ul className="mt-4 space-y-2">
+                                                    {deploymentModes.map((mode, i) => (
+                                                        <li key={i} className="flex items-start gap-3 text-sm text-white/70">
+                                                            <div className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-400 shadow-[0_0_8px_rgba(96,165,250,0.8)]" />
+                                                            <span>{mode}</span>
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            </div>
+                                        </motion.div>
+                                    )}
+                                </AnimatePresence>
+                            </motion.div>
+                        );
+                    })}
+                </div>
+            </div>
         </section>
     );
 };
