@@ -13,28 +13,28 @@ export function StickyScrollSolution() {
   // Fallback content mapping
   const fallbackContent = {
     webSecurity: {
-      title: "Web Security System: site/API connected in 2 minutes",
-      description: "Protection against web attacks such as DDoS and SQLi. Ability to close ports; good practice is to disable port 22 when not in use."
+      title: "Step 1 · Connect your infrastructure",
+      description: "Add your website domain and server IP address to connect AI-SOC protection."
     },
     ciaMonitoring: {
-      title: "CIA-level traffic monitoring",
-      description: "Interactive 3D globe shows traffic by request count, users, and volume with change history."
+      title: "Step 2 · Real-time traffic monitoring",
+      description: "Monitor traffic activity across countries, users, bandwidth, and requests per second."
     },
     userGrowth: {
-      title: "Useful insights on user growth",
-      description: "View the history of user count changes"
+      title: "Step 3 · Interactive global traffic visualization",
+      description: "The 3D globe displays traffic patterns and geographic activity in real time."
     },
     aiEmailProtection: {
-      title: "First AI email protection: network connected in 2 minutes",
-      description: "CMC provides administrators with a complete overview of all sent and received emails with automatic threat categorization (spoofing, spam, phishing, dangerous links, malware)."
+      title: "Step 4 · Email security monitoring",
+      description: "Administrators can monitor and manage corporate email flows and detect threats."
     },
     emailVisualization: {
-      title: "Email flow visualization",
-      description: "CMC with the most advanced commercial email visualizer"
+      title: "Step 4 · Email security monitoring",
+      description: "Administrators can monitor and manage corporate email flows and detect threats."
     },
     secureWebmail: {
-      title: "Secure web client",
-      description: "For accounts added by the administrator, a secure web client is available that detects spoofing, spam, phishing, and malware."
+      title: "Step 4 · Email security monitoring",
+      description: "Administrators can monitor and manage corporate email flows and detect threats."
     }
   };
 

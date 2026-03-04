@@ -6,17 +6,39 @@
     "statusLabel": "Compliant",
     "supremeOnly": "Supreme only",
     "cards": {
-      "gdpr": { "desc": "The world's most stringent privacy and security law, governing personal data of all EU residents. Sets the global benchmark for data protection worldwide." },
-      "ukGdpr": { "desc": "Post-Brexit UK equivalent of EU GDPR, retained in domestic law. Substantively identical in scope and obligations — EU GDPR compliance extends to UK GDPR." },
-      "ccpa": { "desc": "Registration uses Google OAuth, which transmits profile data (name, email, Google ID) to our servers — this is personal data under CCPA. Users retain full rights to know, access, and delete their account data at any time." },
-      "pipeda": { "desc": "Applies to any commercial organization handling Canadian residents' data regardless of where the company is based. As we scale globally, personal data from Canadian users is handled with the same minimal-collection standards." },
-      "ksaPdpl": { "desc": "Saudi Personal Data Protection Law enforced by SDAIA. Governs collection, processing, and cross-border transfer of personal data." },
-      "uaePdpl": { "desc": "UAE Personal Data Protection Law regulating personal data processing across the mainland and free zones, including DIFC and ADGM." },
-      "qatarPdpl": { "desc": "Qatar's Personal Data Privacy Protection Law administered by the Ministry of Transport and Communications." },
-      "bahrainPdpl": { "desc": "Bahrain Personal Data Protection Law regulated by the Personal Data Protection Authority (PDPA), aligned with international standards." },
-      "kuwaitDp": { "desc": "Kuwait's Electronic Communications and Transactions Law establishing data protection obligations for electronic service providers." },
-      "omanPdpl": { "desc": "Oman Personal Data Protection Law establishing comprehensive rights for data subjects and obligations for controllers and processors." },
-      "privacyByDesign": { "desc": "Supreme's code scanning runs entirely on your local machine — no source code is ever transmitted or processed externally. Account data (Google OAuth profile) is handled separately under our privacy policy." }
+      "gdpr": {
+        "desc": "The world's most stringent privacy and security law, governing personal data of all EU residents. Sets the global benchmark for data protection worldwide."
+      },
+      "ukGdpr": {
+        "desc": "Post-Brexit UK equivalent of EU GDPR, retained in domestic law. Substantively identical in scope and obligations — EU GDPR compliance extends to UK GDPR."
+      },
+      "ccpa": {
+        "desc": "Registration uses Google OAuth, which transmits profile data (name, email, Google ID) to our servers — this is personal data under CCPA. Users retain full rights to know, access, and delete their account data at any time."
+      },
+      "pipeda": {
+        "desc": "Applies to any commercial organization handling Canadian residents' data regardless of where the company is based. As we scale globally, personal data from Canadian users is handled with the same minimal-collection standards."
+      },
+      "ksaPdpl": {
+        "desc": "Saudi Personal Data Protection Law enforced by SDAIA. Governs collection, processing, and cross-border transfer of personal data."
+      },
+      "uaePdpl": {
+        "desc": "UAE Personal Data Protection Law regulating personal data processing across the mainland and free zones, including DIFC and ADGM."
+      },
+      "qatarPdpl": {
+        "desc": "Qatar's Personal Data Privacy Protection Law administered by the Ministry of Transport and Communications."
+      },
+      "bahrainPdpl": {
+        "desc": "Bahrain Personal Data Protection Law regulated by the Personal Data Protection Authority (PDPA), aligned with international standards."
+      },
+      "kuwaitDp": {
+        "desc": "Kuwait's Electronic Communications and Transactions Law establishing data protection obligations for electronic service providers."
+      },
+      "omanPdpl": {
+        "desc": "Oman Personal Data Protection Law establishing comprehensive rights for data subjects and obligations for controllers and processors."
+      },
+      "privacyByDesign": {
+        "desc": "Supreme's code scanning runs entirely on your local machine — no source code is ever transmitted or processed externally. Account data (Google OAuth profile) is handled separately under our privacy policy."
+      }
     }
   },
   "homePartners": {
@@ -1322,7 +1344,7 @@
       "contact": "Contact",
       "download": "Download",
       "requestDemo": "Request Demo",
-      "get": "Get"
+      "get": "Get Started"
     }
   },
   "footer": {
@@ -1501,13 +1523,14 @@
     }
   },
   "hero": {
-    "headline": "AI-SOC 1: cybersecurity is no longer costly or complex",
-    "subheading": "A unified AI cybersecurity platform that combines:",
+    "headline": "AI-SOC — AI-Powered Security Operations Center",
+    "subheading": "A unified AI cybersecurity platform that combines Web Security and Email Security in a single control center.",
     "playgroundHeading": "AI-powered Security Operations Center",
     "bullets": {
-      "web": "Real-time protection against web attacks",
-      "email": "Protection against email attacks",
-      "vulnerability": "Vulnerability detection"
+      "web": "Real-time protection for web infrastructure and APIs",
+      "email": "Advanced protection against phishing, spoofing, and malicious email threats",
+      "vulnerability": "Vulnerability detection",
+      "unified": "Unified security monitoring and threat detection"
     },
     "buttons": {
       "connect": "Connect in 4 minutes",
@@ -1516,11 +1539,15 @@
     "tooltips": {
       "web": {
         "title": "Web attack protection",
-        "content": "The system protects against ALL types of web attacks (DDoS, SQLi, etc.), except business logic vulnerabilities."
+        "content": "Protection against major web attacks including DDoS, SQL injection, and other network threats. Business logic vulnerabilities are not included."
       },
       "email": {
         "title": "Email attack protection",
-        "content": "The system protects against ALL types of email attacks: phishing, malicious attachments, dangerous links, etc."
+        "content": "AI analyzes incoming and outgoing emails to detect phishing, spoofing attempts, malicious links, and other email-based attacks."
+      },
+      "unified": {
+        "title": "Unified security monitoring and threat detection",
+        "content": "AI-SOC provides centralized monitoring of web infrastructure and email communications within a single security platform."
       },
       "vulnerability": {
         "title": "Vulnerability detection",
@@ -1679,8 +1706,8 @@
     }
   },
   "solution": {
-    "sectionTitle": "Our Solution",
-    "sectionSubtitle": "Operational in 4 minutes and usable by any IT professional, no cybersecurity expertise required. We offer advanced visualization and affordable pricing.",
+    "sectionTitle": "AI-SOC Platform Overview",
+    "sectionSubtitle": "AI-SOC provides a unified interface for monitoring and protecting web infrastructure and corporate email in real time.",
     "cards": {
       "globalShield": {
         "title": "Global Shield - CIA-level traffic monitoring",
@@ -1715,6 +1742,28 @@
       "description": "All three components are controlled through a unified console offering centralized visualization, easy configuration and monitoring, and comprehensive security reports."
     }
   },
+  "valueSection": {
+    "title": "Why AI-SOC",
+    "subtitle": "AI-SOC makes enterprise-level cybersecurity accessible to any company. Deploy protection in minutes and manage web and email security from one unified platform.",
+    "features": {
+      "deploy": {
+        "title": "Deploy in minutes",
+        "description": "Set up web and email protection in under 4 minutes without complex configuration."
+      },
+      "ai": {
+        "title": "AI-powered analysis",
+        "description": "Advanced AI continuously analyzes traffic, emails, and threats in real time."
+      },
+      "visualization": {
+        "title": "Advanced visualization",
+        "description": "Monitor web traffic and email flows through an advanced visual interface."
+      },
+      "affordable": {
+        "title": "Affordable security",
+        "description": "Enterprise-level protection without the cost of traditional cybersecurity systems."
+      }
+    }
+  },
   "insights": {
     "items": [
       {
@@ -1744,28 +1793,28 @@
   },
   "stickySolution": {
     "webSecurity": {
-      "title": "Web security system: site/API connected in 2 minutes",
-      "description": "Protection against web attacks (DDoS, SQLi, etc.). Ability to close ports; for example, disable port 22 when not in use."
+      "title": "Step 1 · Connect your infrastructure",
+      "description": "Add your website domain and server IP address to connect AI-SOC protection."
     },
     "ciaMonitoring": {
-      "title": "CIA-level traffic monitoring",
-      "description": "The interactive 3D globe displays traffic by requests, users, and volume, with variation history."
+      "title": "Step 2 · Real-time traffic monitoring",
+      "description": "Monitor traffic activity across countries, users, bandwidth, and requests per second."
     },
     "userGrowth": {
-      "title": "Useful user growth data",
-      "description": "View the history of user count evolution"
+      "title": "Step 3 · Interactive global traffic visualization",
+      "description": "The 3D globe displays traffic patterns and geographic activity in real time."
     },
     "aiEmailProtection": {
-      "title": "First AI email protection: secure network in 2 minutes",
-      "description": "The CMC provides admins with full visibility of all sent/received emails, with automatic categorization (spoofing, spam, phishing, dangerous links, malware)."
+      "title": "Step 4 · Email security monitoring",
+      "description": "Administrators can monitor and manage corporate email flows and detect threats."
     },
     "emailVisualization": {
-      "title": "Sent and received email visualization",
-      "description": "CMC with the most advanced commercial email flow visualizer"
+      "title": "Step 4 · Email security monitoring",
+      "description": "Administrators can monitor and manage corporate email flows and detect threats."
     },
     "secureWebmail": {
-      "title": "Secure webmail client",
-      "description": "For accounts added by admin, a highly secure web client that detects and classifies spoofing, spam, phishing, and malware."
+      "title": "Step 4 · Email security monitoring",
+      "description": "Administrators can monitor and manage corporate email flows and detect threats."
     }
   },
   "notFound": {

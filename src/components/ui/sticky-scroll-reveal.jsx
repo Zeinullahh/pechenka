@@ -22,7 +22,7 @@ export const StickyScroll = ({
     "linear-gradient(to bottom, #FB00FF, #01091C)",
   ];
 
-  const colors = backgroundColors || defaultBackgroundColors; 
+  const colors = backgroundColors || defaultBackgroundColors;
 
   useEffect(() => {
     const handleScroll = () => {
