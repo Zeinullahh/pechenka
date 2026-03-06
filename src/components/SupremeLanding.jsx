@@ -579,18 +579,29 @@ export default function SupremeLanding() {
 
         <section className="mx-auto max-w-6xl px-4 pb-24 sm:px-6 lg:px-8">
           <h2 className="text-center text-2xl font-bold text-white sm:text-3xl">
-            Best Code Scanner of 2025 (CodeQL){" "}
+            <span className="bg-gradient-to-r from-fuchsia-200 via-violet-100 to-cyan-200 bg-clip-text font-extrabold uppercase tracking-[0.08em] text-transparent">
+              Comparative Analysis of Free Code Security Scanners
+            </span>{" "}
+            <span className="text-white">Snyk</span>{" "}
             <span className="bg-gradient-to-r from-fuchsia-300 via-violet-200 to-cyan-200 bg-clip-text font-extrabold uppercase tracking-wide text-transparent">
               VS
             </span>{" "}
-            the Best of 2026 (Supreme)
+            <span className="text-white">GitHub CodeQL</span>{" "}
+            <span className="bg-gradient-to-r from-fuchsia-300 via-violet-200 to-cyan-200 bg-clip-text font-extrabold uppercase tracking-wide text-transparent">
+              VS
+            </span>{" "}
+            <span className="text-white">Claude Code</span>{" "}
+            <span className="bg-gradient-to-r from-fuchsia-300 via-violet-200 to-cyan-200 bg-clip-text font-extrabold uppercase tracking-wide text-transparent">
+              VS
+            </span>{" "}
+            <span className="text-white">Supreme</span>
           </h2>
           <div className="mx-auto mt-8 w-full max-w-4xl">
             <div className="relative aspect-video overflow-hidden rounded-2xl border border-white/10 bg-black shadow-2xl">
               <iframe
                 className="h-full w-full"
-                src="https://www.youtube.com/embed/gxzbXb-sB54"
-                title="Best Code Scanner of 2025 (CodeQL) vs the Best of 2026 (Supreme)"
+                src="https://www.youtube.com/embed/aL89vOpla2g"
+                title="Comparative Analysis of Free Code Security Scanners: Snyk vs GitHub CodeQL vs Claude Code vs Supreme"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen
@@ -598,7 +609,7 @@ export default function SupremeLanding() {
             </div>
             <div className="mt-3 text-center">
               <a
-                href="https://youtu.be/gxzbXb-sB54?si=unPkOmRN9tDPYhtU"
+                href="https://youtu.be/aL89vOpla2g?si=S2EYsXpwQUmqi2iy"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm text-purple-200/90 underline decoration-purple-300/70 underline-offset-4 hover:text-purple-100"
