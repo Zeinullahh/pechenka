@@ -4,31 +4,59 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 
-const deploymentModes = [
-    'A standalone secure email infrastructure that can replace traditional Gmail or Outlook environments while preserving enterprise-grade reliability.',
-    'A second-layer protection system that augments existing Gmail or Outlook deployments without forcing users to migrate their primary inbox provider.'
-];
-
 const faqItems = [
     {
         question: 'Is AI-SOC just a security engine or a full email platform?',
         response:
-            'AI-SOC is a complete secure email infrastructure provided by SilenceAI. It includes its own mail server foundation and administrative console for managing corporate accounts. Organizations can deploy it as their primary business email system — similar to how Outlook or Gmail operate — but with built-in AI-driven protection embedded directly into the platform.'
+            `AI-SOC can be used in two different ways, depending on how your organization manages email.
+
+1️⃣ As a standalone secure email platform
+
+AI-SOC can operate as your organization’s primary email system, similar to Gmail or Outlook.
+It includes its own mail server infrastructure, secure webmail interface, and administrative console for managing corporate accounts.
+In this mode, organizations use AI-SOC as their main email platform while benefiting from built-in AI-driven security protection.
+
+2️⃣ As an AI security layer for existing email systems
+
+AI-SOC can also work alongside existing Gmail or Outlook environments as an additional security layer.
+In this setup, users keep their current email provider while AI-SOC analyzes email traffic and protects against phishing, spoofing, malicious links, and other threats without requiring migration.`
     },
     {
         question: 'Can AI-SOC be used alongside existing Gmail or Outlook environments?',
         response:
-            'Yes. AI-SOC can integrate with existing Gmail or Outlook-based corporate domains. In this configuration, emails continue flowing through your current provider, while AI-SOC performs an additional inspection layer within its security system, creating a double protection architecture.'
+            `AI-SOC can be used in two different ways, depending on how your organization manages email.
+
+1️⃣ As a standalone secure email platform
+
+AI-SOC can operate as your organization’s primary email system, similar to Gmail or Outlook.
+It includes its own mail server infrastructure, secure webmail interface, and administrative console for managing corporate accounts.
+In this mode, organizations use AI-SOC as their main email platform while benefiting from built-in AI-driven security protection.
+
+2️⃣ As an AI security layer for existing email systems
+
+AI-SOC can also work alongside existing Gmail or Outlook environments as an additional security layer.
+In this setup, users keep their current email provider while AI-SOC analyzes email traffic and protects against phishing, spoofing, malicious links, and other threats without requiring migration.`
     },
     {
         question: 'What happens when AI-SOC operates as the primary email infrastructure?',
         response:
-            'When deployed as standalone infrastructure, all emails are sent and received directly through SilenceAI’s email system without intermediaries such as Gmail or Outlook. Every message passes through multiple internal AI inspection stages before reaching the inbox. High-risk emails may be blocked entirely or isolated before delivery.'
+            `AI-SOC can be used in two different ways, depending on how your organization manages email.
+
+1️⃣ As a standalone secure email platform
+
+AI-SOC can operate as your organization’s primary email system, similar to Gmail or Outlook.
+It includes its own mail server infrastructure, secure webmail interface, and administrative console for managing corporate accounts.
+In this mode, organizations use AI-SOC as their main email platform while benefiting from built-in AI-driven security protection.
+
+2️⃣ As an AI security layer for existing email systems
+
+AI-SOC can also work alongside existing Gmail or Outlook environments as an additional security layer.
+In this setup, users keep their current email provider while AI-SOC analyzes email traffic and protects against phishing, spoofing, malicious links, and other threats without requiring migration.`
     },
     {
         question: 'Can administrators create and control corporate email accounts?',
         response:
-            'Yes. Administrators can create business email accounts directly within the AI-SOC administrative console using corporate domains. They can enforce domain-level security policies and remove emails across accounts created within the system.'
+            'Administrators can view all corporate email accounts that send and receive emails within the domain. They can monitor email activity across the corporate domain. Administrators also have the ability to delete emails from corporate user accounts when necessary.'
     },
     {
         question: 'Can existing corporate email accounts be connected to AI-SOC?',
@@ -38,7 +66,10 @@ const faqItems = [
     {
         question: 'Is security pre-configured or does it require manual setup?',
         response:
-            'AI-SOC delivers built-in AI protection by default. When deployed as standalone infrastructure, no external security configuration is required. Protection mechanisms are embedded directly into the email flow and enforced automatically.'
+            `AI-SOC is a pre-configured, AI-powered system that provides built-in security without requiring additional installations, except for the setup steps described in the instructions page:
+https://silence.codes/en/instructions/ai-soc/
+
+Protection mechanisms are embedded directly into the email flow and enforced automatically.`
     }
 ];
 
@@ -113,17 +144,10 @@ const FaqSection = () => {
                                         >
                                             <div className="px-5 pb-5 sm:px-6 sm:pb-6 pt-0 relative z-10">
                                                 <div className="h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent mb-4" />
-                                                <p className="text-sm text-white/80 font-normal leading-relaxed">
+                                                <div className="text-sm text-white/80 font-normal leading-relaxed whitespace-pre-wrap">
                                                     {item.response}
-                                                </p>
-                                                <ul className="mt-4 space-y-2">
-                                                    {deploymentModes.map((mode, i) => (
-                                                        <li key={i} className="flex items-start gap-3 text-sm text-white/70">
-                                                            <div className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-400 shadow-[0_0_8px_rgba(96,165,250,0.8)]" />
-                                                            <span>{mode}</span>
-                                                        </li>
-                                                    ))}
-                                                </ul>
+                                                </div>
+
                                             </div>
                                         </motion.div>
                                     )}
