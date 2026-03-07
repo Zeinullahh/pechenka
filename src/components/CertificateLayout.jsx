@@ -6,16 +6,15 @@ import Image from "next/image";
 import Header from "@/components/Header";
 import RequestDemoModal from "@/components/RequestDemoModal";
 import useCertificateDownload from "@/lib/useCertificateDownload";
-import { Download, Loader2 } from "lucide-react";
+import { Download, Loader2, Smartphone } from "lucide-react";
 
-const CERT_WIDTH = 1100;
-const CERT_ASPECT = 1.414; // width / height (landscape A4)
-const CERT_HEIGHT = CERT_WIDTH / CERT_ASPECT;
+const CERT_WIDTH = 1123; // A4 width at 96PPI
+const CERT_ASPECT = 297 / 210; // Exact A4 aspect ratio
+const CERT_HEIGHT = Math.round(CERT_WIDTH / CERT_ASPECT); // A4 height at 96PPI
 
 export default function CertificateLayout({ name, certId, role }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [scale, setScale] = useState(0.3);
-  const [isMobile, setIsMobile] = useState(false);
+  const [scale, setScale] = useState(1);
   const certRef = useRef(null);
 
   const openModal = () => setIsModalOpen(true);
@@ -28,20 +27,19 @@ export default function CertificateLayout({ name, certId, role }) {
 
   useEffect(() => {
     const handleResize = () => {
-      const vw = window.innerWidth;
-      const mobile = vw < 768;
-      setIsMobile(mobile);
+      // Certificate should take exactly 70% of screen's height
+      const targetHeight = window.innerHeight * 0.7;
+      let newScale = targetHeight / CERT_HEIGHT;
 
-      const padding = mobile ? 8 : vw * 0.05;
-      const availableWidth = vw - padding * 2;
-      const headerOffset = mobile ? 70 : 120;
-      // Cap certificate to 80% of the remaining viewport height
-      const availableHeight = (window.innerHeight - headerOffset) * 0.80;
+      // Ensure it doesn't overflow horizontally on very narrow screens
+      const padding = 32; // 16px padding on each side
+      const maxWidth = window.innerWidth - padding;
+      
+      if (CERT_WIDTH * newScale > maxWidth) {
+        newScale = maxWidth / CERT_WIDTH;
+      }
 
-      const scaleW = availableWidth / CERT_WIDTH;
-      const scaleH = availableHeight / CERT_HEIGHT;
-
-      setScale(Math.min(1, scaleW, scaleH));
+      setScale(newScale);
     };
 
     handleResize();
@@ -61,12 +59,12 @@ export default function CertificateLayout({ name, certId, role }) {
       </div>
 
       {/* Header */}
-      <div className="print:hidden relative z-20">
+      <div className="print:hidden relative z-20 header-container">
         <Header onOpenModal={openModal} />
       </div>
 
       {/* Main Content */}
-      <main className="relative flex-grow flex flex-col items-center justify-start pt-20 px-0 pb-10 z-10 w-full print:p-0 print:pb-0 print:pt-0">
+      <main className="certificate-main relative flex-grow flex flex-col items-center justify-start pt-20 px-0 pb-10 z-10 w-full print:p-0 print:pb-0 print:pt-0">
         {/* Download Button — bottom-center on mobile, top-right on desktop */}
         <div className="fixed bottom-5 left-1/2 -translate-x-1/2 md:bottom-auto md:top-24 md:right-8 md:left-auto md:translate-x-0 z-50 print:hidden">
           <button
@@ -92,38 +90,59 @@ export default function CertificateLayout({ name, certId, role }) {
           </button>
         </div>
 
-        {/* Certificate Wrapper — explicit size to contain the scaled element */}
+        {/* Rotation Overlay for Portrait Mobile (moved to top of main) */}
+        <div className="rotate-overlay hidden flex-col items-center justify-start w-full mt-4 md:hidden">
+          <div className="relative mb-6">
+            <Smartphone size={56} className="text-blue-400 animate-phone-rotate" />
+          </div>
+          <h2 className="text-2xl font-bold text-center mb-3 text-white px-4">
+            Please Rotate Your Device
+          </h2>
+          <p className="text-center text-blue-200/80 text-base max-w-[280px] px-4 leading-relaxed">
+            This certificate is designed for landscape viewing. Turn your phone horizontally to view it.
+          </p>
+        </div>
+
+        {/* Certificate Container providing exact bounding box for centered scaling */}
         <div
-          className="relative flex justify-center items-start certificate-wrapper mx-auto"
-          style={{
-            width: `${scaledWidth}px`,
-            height: `${scaledHeight}px`,
-            maxWidth: "100%",
-          }}
+          className="relative flex justify-center items-center w-full mt-4 mb-10 overflow-hidden"
+          style={{ height: `${scaledHeight}px` }}
         >
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="absolute top-0 left-0 print:!scale-100 print:!transform-none print:!position-static"
+          {/* Certificate Wrapper */}
+          <div
+            className="relative flex justify-center items-center certificate-wrapper"
             style={{
-              width: `${CERT_WIDTH}px`,
-              height: `${CERT_HEIGHT}px`,
-              transform: `scale(${scale})`,
-              transformOrigin: "top left",
+              width: `${scaledWidth}px`,
+              height: `${scaledHeight}px`,
             }}
           >
-            {/* The Certificate Card */}
-            <div
-              ref={certRef}
-              className="relative overflow-hidden border border-white/10 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.8)] text-slate-900 certificate-card flex flex-col"
+            <motion.div
+              initial={{ opacity: 0, scale: scale * 0.9 }}
+              animate={{ opacity: 1, scale: scale }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="absolute top-0 left-0 origin-top-left print:!scale-100 print:!transform-none print:!position-static"
               style={{
                 width: `${CERT_WIDTH}px`,
                 height: `${CERT_HEIGHT}px`,
-                background:
-                  "radial-gradient(ellipse at center, #1a2a50, #0d1530 50%, #060a18)",
+                transformOrigin: "0 0"
               }}
             >
+              {/* The Certificate Card */}
+              <div
+                ref={certRef}
+                className="relative overflow-hidden shadow-[0_30px_80px_-20px_rgba(0,0,0,0.8)] text-slate-900 certificate-card flex flex-col mx-auto"
+                style={{
+                  width: `${CERT_WIDTH}px`,
+                  height: `${CERT_HEIGHT}px`,
+                  minWidth: `${CERT_WIDTH}px`,
+                  minHeight: `${CERT_HEIGHT}px`,
+                  maxWidth: `${CERT_WIDTH}px`,
+                  maxHeight: `${CERT_HEIGHT}px`,
+                  border: "1px solid rgba(255,255,255,0.1)",
+                  background:
+                    "radial-gradient(ellipse at center, #1a2a50, #0d1530 50%, #060a18)",
+                }}
+              >
               {/* Rendering Overlay */}
               <AnimatePresence>
                 {isGenerating && (
@@ -241,7 +260,7 @@ function init_protocol() {
               </div>
 
               {/* Inner Content */}
-              <div className="relative h-full w-full flex flex-col items-center justify-between p-12 z-20 text-white">
+              <div className="absolute inset-0 flex flex-col items-center justify-between p-12 z-20 text-white pointer-events-none">
                 {/* Top: Logo & Header */}
                 <div className="flex flex-col items-center gap-4 w-full mt-2 flex-shrink-0 z-20">
                   <div className="relative w-40 h-10 mb-2">
@@ -259,7 +278,7 @@ function init_protocol() {
                     <p className="text-xs font-semibold uppercase tracking-[0.6em] text-blue-400/80">
                       Silence Internship Program
                     </p>
-                    <h1 className="text-7xl font-sans font-bold tracking-tight text-white mb-1 drop-shadow-md pb-1">
+                    <h1 className="text-6xl font-sans font-bold tracking-tight text-white mb-1 drop-shadow-md pb-1 whitespace-nowrap">
                       Certificate of Completion
                     </h1>
                     <div className="flex items-center justify-center gap-4 w-full opacity-100 mt-2">
@@ -339,6 +358,7 @@ function init_protocol() {
             </div>
           </motion.div>
         </div>
+        </div>
       </main>
 
       <RequestDemoModal isOpen={isModalOpen} onClose={closeModal} />
@@ -348,6 +368,15 @@ function init_protocol() {
         html,
         body {
           overflow-x: hidden;
+        }
+        @keyframes phone-rotate {
+          0%, 10% { transform: rotate(0deg); }
+          40%, 60% { transform: rotate(90deg); }
+          90%, 100% { transform: rotate(0deg); }
+        }
+        .animate-phone-rotate {
+          animation: phone-rotate 2.5s ease-in-out infinite;
+          transform-origin: center center;
         }
         @keyframes spin-slow {
           from {
@@ -359,6 +388,14 @@ function init_protocol() {
         }
         .animate-spin-slow {
           animation: spin-slow 20s linear infinite;
+        }
+        @media screen and (max-width: 767px) and (orientation: portrait) {
+          .certificate-wrapper {
+            display: none !important;
+          }
+          .rotate-overlay {
+            display: flex !important;
+          }
         }
         @media print {
           @page {
@@ -391,10 +428,10 @@ function init_protocol() {
           }
           .certificate-card {
             width: 100vw !important;
-            height: calc(100vw / 1.414) !important;
+            height: calc(100vw * 210 / 297) !important;
             max-height: 100vh !important;
-            max-width: calc(100vh * 1.414) !important;
-            aspect-ratio: 1.414 / 1 !important;
+            max-width: calc(100vh * 297 / 210) !important;
+            aspect-ratio: 297 / 210 !important;
             border-radius: 0 !important;
             border: none !important;
             box-shadow: none !important;
