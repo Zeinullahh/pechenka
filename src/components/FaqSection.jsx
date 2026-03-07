@@ -70,6 +70,20 @@ In this setup, users keep their current email provider while AI-SOC analyzes ema
 https://silence.codes/en/instructions/ai-soc/
 
 Protection mechanisms are embedded directly into the email flow and enforced automatically.`
+    },
+    {
+        question: 'Beyond email and web filtering, what advanced threats are detected?',
+        response:
+            `Currently AI-SOC 1 only secures the email accounts and the websites/APIs, so it fully secures the email network, and all the incoming requests to the web server of a user through the https protocol.
+
+We built the most advanced email protection system to this date. AI checks the entire email and all the links. If it is a login page on an unpopular domain, it considers that as a potential threat. Then it reads the content of the email itself, and if it contains phishing context where the user is encouraged to enter that link, then the threat is confirmed and the email is stored in the phishing folder.`
+    },
+    {
+        question: 'Does AI-SOC use threat intelligence to prevent attacks in advance?',
+        response:
+            `Yes, Silence team have implemented a lot of Threat Intelligence platforms, that allows us to detect the threat before it reaches AI-SOC’s reverse proxy.
+
+For example if there is a group of IP addresses that recently conducted a DDoS attack, that group is being added into the list of blacklisted IPs, so if their next target is the website protected by AI-SOC, the attack will not be successful, because all the requests will be dropped.`
     }
 ];
 

@@ -13,10 +13,10 @@ import GlowButton from "@/components/GlowButton";
 import { FloatingText } from "@/components/FloatingText";
 import { useLanguage } from "@/contexts/LanguageContext";
 import EdgeGlowCard from "@/components/EdgeGlowCard";
-import GlassyBox3D from "@/components/GlassyBox3D";
 import Supreme2D from "@/components/Supreme2D";
 import { StickyScrollAnimation } from "@/components/StickyScrollAnimation";
 import MediumArticleCard from "@/components/MediumArticleCard";
+
 import LinkPreviewCard from "@/components/LinkPreviewCard";
 import { articles, featuredResourcesConfig } from "@/constants/mediumArticles";
 
@@ -229,17 +229,13 @@ export default function HomeLanding() {
                       <div className="relative w-full h-full flex items-center justify-center scale-[1.1]">
                         <Supreme2D />
                       </div>
-                    ) : idx === 0 ? (
-                      /* AI-SOC Animation */
+                    ) : (
+                      /* AI-SOC Animation - Default */
                       <div className="relative w-full h-full scale-[0.85]">
                         <StickyScrollAnimation />
                       </div>
-                    ) : (
-                      /* Sithub Animation */
-                      <div className="relative w-full h-full flex items-center justify-center scale-[0.7]">
-                        <GlassyBox3D />
-                      </div>
                     )}
+
                   </div>
 
                   {/* Content Area */}

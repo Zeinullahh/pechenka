@@ -275,7 +275,7 @@ const Pricing = ({ onOpenModal }) => {
         <div className="relative z-10 flex flex-col items-center justify-center mb-16 sm:mb-24">
           {/* Top Text */}
           <p className="text-purple-200/80 text-xs sm:text-sm uppercase tracking-[0.2em] mb-8 font-medium text-center">
-            AI-SOC consists of 2 security components
+            AI-SOC is a lineup of standalone cybersecurity systems
           </p>
 
           {/* Triangle Diagram */}
@@ -404,40 +404,42 @@ const Pricing = ({ onOpenModal }) => {
           </div>
         </div>
 
-        {/* Controls: Billing Only */}
-        <div className="flex justify-center items-center mb-12 relative z-20">
-          <div className="flex items-center gap-12">
-            <button
-              onClick={() => setBilling("yearly")}
-              className={`relative pb-2 text-lg font-medium transition-colors duration-300 ${billing === "yearly" ? "text-white" : "text-white/40 hover:text-white/70"
-                }`}
-            >
-              {billingLabels.yearly}
-              {billing === "yearly" && (
-                <motion.div
-                  layoutId="billing-underline"
-                  className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#a855f7] shadow-[0_0_10px_#a855f7]"
-                  transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                />
-              )}
-            </button>
+        {/* Controls: Billing Only for Email Security */}
+        {productType === "email" && (
+          <div className="flex justify-center items-center mb-12 relative z-20">
+            <div className="flex items-center gap-12">
+              <button
+                onClick={() => setBilling("yearly")}
+                className={`relative pb-2 text-lg font-medium transition-colors duration-300 ${billing === "yearly" ? "text-white" : "text-white/40 hover:text-white/70"
+                  }`}
+              >
+                {billingLabels.yearly}
+                {billing === "yearly" && (
+                  <motion.div
+                    layoutId="billing-underline"
+                    className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#a855f7] shadow-[0_0_10px_#a855f7]"
+                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                  />
+                )}
+              </button>
 
-            <button
-              onClick={() => setBilling("monthly")}
-              className={`relative pb-2 text-lg font-medium transition-colors duration-300 ${billing === "monthly" ? "text-white" : "text-white/40 hover:text-white/70"
-                }`}
-            >
-              {billingLabels.monthly}
-              {billing === "monthly" && (
-                <motion.div
-                  layoutId="billing-underline"
-                  className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#a855f7] shadow-[0_0_10px_#a855f7]"
-                  transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                />
-              )}
-            </button>
+              <button
+                onClick={() => setBilling("monthly")}
+                className={`relative pb-2 text-lg font-medium transition-colors duration-300 ${billing === "monthly" ? "text-white" : "text-white/40 hover:text-white/70"
+                  }`}
+              >
+                {billingLabels.monthly}
+                {billing === "monthly" && (
+                  <motion.div
+                    layoutId="billing-underline"
+                    className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#a855f7] shadow-[0_0_10px_#a855f7]"
+                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                  />
+                )}
+              </button>
+            </div>
           </div>
-        </div>
+        )}
 
 
         {/* Pricing Cards */}
@@ -451,10 +453,10 @@ const Pricing = ({ onOpenModal }) => {
                     plan={plan}
                     price={
                       <div className="flex flex-col">
-                        <span>{billing === "yearly" ? "$200.00/year" : "$20.00/month"}</span>
+                        <span>$0.18 per GB</span>
                         <div className="flex flex-col mt-2">
-                          <span className="text-xl sm:text-2xl text-purple-200">+ $0.06 per GB</span>
-                          <span className="text-xs sm:text-sm font-normal text-gray-400 mt-0.5">For handled data</span>
+                          <span className="text-xl sm:text-2xl text-purple-200">$1.20 per 1M requests</span>
+                          <span className="text-xs sm:text-sm font-normal text-gray-400 mt-0.5">Usage-based pricing</span>
                         </div>
                       </div>
                     }

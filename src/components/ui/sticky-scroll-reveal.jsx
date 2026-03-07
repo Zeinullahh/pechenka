@@ -70,7 +70,7 @@ export const StickyScroll = ({
             <div
               key={item.title + index}
               ref={(el) => (contentRefs.current[index] = el)}
-              className={cn("my-16 md:my-24 lg:my-40", itemClassName)}
+              className={cn("my-16 md:my-24 lg:my-40 last:mb-[30rem]", itemClassName)}
             >
               <motion.h2
                 initial={{
@@ -101,22 +101,26 @@ export const StickyScroll = ({
         </div>
         <div
           className={cn(
-            "sticky top-24 col-span-7 hidden w-full max-w-[24rem] mx-auto aspect-[4/5] overflow-hidden rounded-md bg-black lg:block",
-            contentClassName
+            "sticky top-0 h-screen col-span-7 hidden lg:flex items-start justify-center w-full pt-20",
           )}
         >
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activeCard}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.5 }}
-              className="h-full w-full"
-            >
-              {content[activeCard].content ?? null}
-            </motion.div>
-          </AnimatePresence>
+          <div className={cn(
+            "w-full mx-auto overflow-hidden rounded-md",
+            contentClassName
+          )}>
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeCard}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5 }}
+                className="h-full w-full"
+              >
+                {content[activeCard].content ?? null}
+              </motion.div>
+            </AnimatePresence>
+          </div>
         </div>
       </div>
     </motion.div>

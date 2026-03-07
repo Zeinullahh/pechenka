@@ -6,8 +6,8 @@ import BackToTopButton from "@/components/BackToTopButton";
 import RequestSystemModal from "@/components/RequestSystemModal";
 import ComingSoonModal from "@/components/ComingSoonModal";
 import EdgeGlowCard from "@/components/EdgeGlowCard";
-import GlassyBox3D from "@/components/GlassyBox3D";
 import { FloatingText } from "@/components/FloatingText";
+
 import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -214,10 +214,9 @@ export default function SecureDevelopmentPage() {
                             </motion.div>
                         </div>
 
-                        <div className="flex w-full max-w-lg items-center justify-center lg:self-center">
-                             <GlassyBox3D />
-                        </div>
+                        {/* GlassyBox3D removed as requested */}
                     </div>
+
                 </div>
                 </EdgeGlowCard>
                 </section>
