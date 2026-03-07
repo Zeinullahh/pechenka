@@ -32,10 +32,11 @@ export default function CertificateLayout({ name, certId, role }) {
       const mobile = vw < 768;
       setIsMobile(mobile);
 
-      const padding = mobile ? 16 : vw * 0.05;
+      const padding = mobile ? 8 : vw * 0.05;
       const availableWidth = vw - padding * 2;
-      const headerOffset = mobile ? 80 : 150;
-      const availableHeight = (window.innerHeight - headerOffset) * 0.92;
+      const headerOffset = mobile ? 70 : 120;
+      // Cap certificate to 80% of the remaining viewport height
+      const availableHeight = (window.innerHeight - headerOffset) * 0.80;
 
       const scaleW = availableWidth / CERT_WIDTH;
       const scaleH = availableHeight / CERT_HEIGHT;
@@ -65,13 +66,13 @@ export default function CertificateLayout({ name, certId, role }) {
       </div>
 
       {/* Main Content */}
-      <main className="relative flex-grow flex flex-col items-center justify-start pt-20 sm:pt-28 px-0 pb-24 sm:pb-20 z-10 w-full print:p-0 print:pb-0 print:pt-0">
+      <main className="relative flex-grow flex flex-col items-center justify-start pt-20 px-0 pb-10 z-10 w-full print:p-0 print:pb-0 print:pt-0">
         {/* Download Button — bottom-center on mobile, top-right on desktop */}
-        <div className="fixed bottom-5 left-1/2 -translate-x-1/2 sm:bottom-auto sm:top-24 sm:right-8 sm:left-auto sm:translate-x-0 z-50 print:hidden">
+        <div className="fixed bottom-5 left-1/2 -translate-x-1/2 md:bottom-auto md:top-24 md:right-8 md:left-auto md:translate-x-0 z-50 print:hidden">
           <button
             onClick={handleDownload}
             disabled={isGenerating}
-            className={`flex items-center gap-2 text-white px-5 py-2.5 sm:px-6 sm:py-3 rounded-full shadow-lg transition-all font-semibold text-sm sm:text-base ${
+            className={`flex items-center gap-2 text-white px-5 py-2.5 md:px-6 md:py-3 rounded-full shadow-lg transition-all font-semibold text-sm md:text-base ${
               isGenerating
                 ? "bg-blue-600/60 cursor-wait"
                 : "bg-blue-600 hover:bg-blue-700 active:scale-95"
@@ -258,7 +259,7 @@ function init_protocol() {
                     <p className="text-xs font-semibold uppercase tracking-[0.6em] text-blue-400/80">
                       Silence Internship Program
                     </p>
-                    <h1 className="text-6xl md:text-7xl font-sans font-bold tracking-tight text-white mb-1 drop-shadow-md pb-1">
+                    <h1 className="text-7xl font-sans font-bold tracking-tight text-white mb-1 drop-shadow-md pb-1">
                       Certificate of Completion
                     </h1>
                     <div className="flex items-center justify-center gap-4 w-full opacity-100 mt-2">
@@ -277,7 +278,7 @@ function init_protocol() {
                   <div className="relative z-10 mt-2 mb-6">
                     <div className="absolute -inset-8 bg-blue-500/10 blur-2xl rounded-full opacity-80" />
                     <h2
-                      className="relative text-7xl md:text-8xl font-bold text-center text-white tracking-tight"
+                      className="relative text-8xl font-bold text-center text-white tracking-tight"
                       style={{ textShadow: "0 4px 20px rgba(0,0,0,0.5)" }}
                     >
                       {name}
