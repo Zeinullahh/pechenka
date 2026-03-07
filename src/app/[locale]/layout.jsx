@@ -1,19 +1,8 @@
 import { NextIntlClientProvider } from "next-intl";
-import { Geist, Geist_Mono } from "next/font/google";
 import { supportedLocales } from "@/i18n/locales.mjs";
 import "../globals.css";
 import LayoutWrapper from "@/components/LayoutWrapper";
 import { setRequestLocale } from 'next-intl/server';
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 const BRAND_REPLACEMENTS = [
   [/\bSilence AI LLC\b/g, "Silence"],
@@ -55,101 +44,15 @@ function transformBranding(value, pathSegments = []) {
   return value;
 }
 
-export const metadata = {
-  metadataBase: new URL('https://silence.codes'),
-  title: {
-    default: "Silence",
-    template: "%s | Silence"
-  },
-  description: "Silence provides AI security and sealed development cloud solutions that keep code, prompts, and builds inside your network.",
-  keywords: [
-    "Silence",
-    "Silence cybersecurity",
-    "AI security",
-    "secure development cloud",
-    "AI-SOC",
-    "SLNC-env",
-  ],
-  applicationName: "Silence",
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-      "max-video-preview": -1,
-    },
-  },
-  icons: {
-    icon: '/logo.png',
-  },
-  openGraph: {
-    title: 'Silence',
-    description: 'Silence provides AI security and sealed development cloud solutions that keep code, prompts, and builds inside your network.',
-    url: 'https://silence.codes',
-    siteName: 'Silence',
-    locale: 'en_US',
-    type: 'website',
-    images: [
-      {
-        url: '/supreme_dashboard.jpeg',
-        width: 1200,
-        height: 630,
-        alt: 'Silence Dashboard',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Silence',
-    description: 'Silence provides AI security and sealed development cloud solutions that keep code, prompts, and builds inside your network.',
-    images: ['/supreme_dashboard.jpeg'],
-  },
-  alternates: {
-    canonical: '/',
-    languages: {
-      'en': '/en',
-      'ja': '/ja',
-      'zh': '/zh',
-      'ko': '/ko',
-      'fr': '/fr',
-      'de': '/de',
-      'ru': '/ru',
-      'ar': '/ar',
-      'tr': '/tr',
-    },
-  },
-  other: {
-    verification: 'bms90c794rpwp6mwhst',
-  },
-};
-
-export const viewport = {
-  width: 'device-width',
-  initialScale: 1,
-  maximumScale: 5,
-  userScalable: true,
-};
-
 export function generateStaticParams() {
   return supportedLocales.map((locale) => ({ locale }));
 }
 
-const organizationStructuredData = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "Silence",
-  url: "https://silence.codes",
-};
-
-export default async function RootLayout(props) {
+export default async function LocaleLayout(props) {
   const params = await props.params;
   const { locale } = params;
 
   // Validate that the incoming `locale` parameter is valid
-  // (this should be ensured by `generateStaticParams` but good for safety)
   if (!supportedLocales.includes(locale)) {
     return null; // Or notFound()
   }
@@ -161,19 +64,8 @@ export default async function RootLayout(props) {
   const messages = transformBranding(localeMessages);
 
   return (
-    <html lang={locale}>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
-        style={{ backgroundColor: "#01091C" }}
-      >
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationStructuredData) }}
-        />
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          <LayoutWrapper initialLanguage={locale}>{props.children}</LayoutWrapper>
-        </NextIntlClientProvider>
-      </body>
-    </html>
+    <NextIntlClientProvider locale={locale} messages={messages}>
+      <LayoutWrapper initialLanguage={locale}>{props.children}</LayoutWrapper>
+    </NextIntlClientProvider>
   );
 }
