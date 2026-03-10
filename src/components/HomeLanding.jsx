@@ -148,7 +148,7 @@ export default function HomeLanding() {
   const closeModal = () => setIsModalOpen(false);
 
   return (
-    <div className="min-h-screen bg-[#01091C] text-white overflow-hidden">
+    <div className="min-h-screen bg-[#01091C] text-white overflow-x-hidden">
       <Header onOpenModal={openModal} />
 
       <main className="relative mx-auto flex flex-col gap-0 pb-16 z-10">

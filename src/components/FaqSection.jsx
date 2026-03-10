@@ -3,92 +3,46 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
-
-const faqItems = [
-    {
-        question: 'Is AI-SOC just a security engine or a full email platform?',
-        response:
-            `AI-SOC can be used in two different ways, depending on how your organization manages email.
-
-1️⃣ As a standalone secure email platform
-
-AI-SOC can operate as your organization’s primary email system, similar to Gmail or Outlook.
-It includes its own mail server infrastructure, secure webmail interface, and administrative console for managing corporate accounts.
-In this mode, organizations use AI-SOC as their main email platform while benefiting from built-in AI-driven security protection.
-
-2️⃣ As an AI security layer for existing email systems
-
-AI-SOC can also work alongside existing Gmail or Outlook environments as an additional security layer.
-In this setup, users keep their current email provider while AI-SOC analyzes email traffic and protects against phishing, spoofing, malicious links, and other threats without requiring migration.`
-    },
-    {
-        question: 'Can AI-SOC be used alongside existing Gmail or Outlook environments?',
-        response:
-            `AI-SOC can be used in two different ways, depending on how your organization manages email.
-
-1️⃣ As a standalone secure email platform
-
-AI-SOC can operate as your organization’s primary email system, similar to Gmail or Outlook.
-It includes its own mail server infrastructure, secure webmail interface, and administrative console for managing corporate accounts.
-In this mode, organizations use AI-SOC as their main email platform while benefiting from built-in AI-driven security protection.
-
-2️⃣ As an AI security layer for existing email systems
-
-AI-SOC can also work alongside existing Gmail or Outlook environments as an additional security layer.
-In this setup, users keep their current email provider while AI-SOC analyzes email traffic and protects against phishing, spoofing, malicious links, and other threats without requiring migration.`
-    },
-    {
-        question: 'What happens when AI-SOC operates as the primary email infrastructure?',
-        response:
-            `AI-SOC can be used in two different ways, depending on how your organization manages email.
-
-1️⃣ As a standalone secure email platform
-
-AI-SOC can operate as your organization’s primary email system, similar to Gmail or Outlook.
-It includes its own mail server infrastructure, secure webmail interface, and administrative console for managing corporate accounts.
-In this mode, organizations use AI-SOC as their main email platform while benefiting from built-in AI-driven security protection.
-
-2️⃣ As an AI security layer for existing email systems
-
-AI-SOC can also work alongside existing Gmail or Outlook environments as an additional security layer.
-In this setup, users keep their current email provider while AI-SOC analyzes email traffic and protects against phishing, spoofing, malicious links, and other threats without requiring migration.`
-    },
-    {
-        question: 'Can administrators create and control corporate email accounts?',
-        response:
-            'Administrators can view all corporate email accounts that send and receive emails within the domain. They can monitor email activity across the corporate domain. Administrators also have the ability to delete emails from corporate user accounts when necessary.'
-    },
-    {
-        question: 'Can existing corporate email accounts be connected to AI-SOC?',
-        response:
-            'Existing Gmail or Outlook-based corporate accounts can be connected to AI-SOC. This allows organizations to maintain their current provider while leveraging SilenceAI as an additional structured protection layer.'
-    },
-    {
-        question: 'Is security pre-configured or does it require manual setup?',
-        response:
-            `AI-SOC is a pre-configured, AI-powered system that provides built-in security without requiring additional installations, except for the setup steps described in the instructions page:
-https://silence.codes/en/instructions/ai-soc/
-
-Protection mechanisms are embedded directly into the email flow and enforced automatically.`
-    },
-    {
-        question: 'Beyond email and web filtering, what advanced threats are detected?',
-        response:
-            `Currently AI-SOC 1 only secures the email accounts and the websites/APIs, so it fully secures the email network, and all the incoming requests to the web server of a user through the https protocol.
-
-We built the most advanced email protection system to this date. AI checks the entire email and all the links. If it is a login page on an unpopular domain, it considers that as a potential threat. Then it reads the content of the email itself, and if it contains phishing context where the user is encouraged to enter that link, then the threat is confirmed and the email is stored in the phishing folder.`
-    },
-    {
-        question: 'Does AI-SOC use threat intelligence to prevent attacks in advance?',
-        response:
-            `Yes, Silence team have implemented a lot of Threat Intelligence platforms, that allows us to detect the threat before it reaches AI-SOC’s reverse proxy.
-
-For example if there is a group of IP addresses that recently conducted a DDoS attack, that group is being added into the list of blacklisted IPs, so if their next target is the website protected by AI-SOC, the attack will not be successful, because all the requests will be dropped.`
-    }
-];
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const FaqSection = () => {
+    const { t } = useLanguage();
     const [openIndex, setOpenIndex] = useState(null);
+
+    const faqItems = [
+        {
+            question: t('aiSocFaq.items.0.question', 'Is AI-SOC just a security engine or a full email platform?'),
+            response: t('aiSocFaq.items.0.response', 'AI-SOC can be used in two different ways, depending on how your organization manages email.\n\n1️⃣ As a standalone secure email platform\n\nAI-SOC can operate as your organization’s primary email system, similar to Gmail or Outlook.\nIt includes its own mail server infrastructure, secure webmail interface, and administrative console for managing corporate accounts.\nIn this mode, organizations use AI-SOC as their main email platform while benefiting from built-in AI-driven security protection.\n\n2️⃣ As an AI security layer for existing email systems\n\nAI-SOC can also work alongside existing Gmail or Outlook environments as an additional security layer.\nIn this setup, users keep their current email provider while AI-SOC analyzes email traffic and protects against phishing, spoofing, malicious links, and other threats without requiring migration.'),
+        },
+        {
+            question: t('aiSocFaq.items.1.question', 'Can AI-SOC be used alongside existing Gmail or Outlook environments?'),
+            response: t('aiSocFaq.items.1.response', 'Yes. AI-SOC can run as an additional security layer while you keep Gmail or Outlook as your primary provider.'),
+        },
+        {
+            question: t('aiSocFaq.items.2.question', 'What happens when AI-SOC operates as the primary email infrastructure?'),
+            response: t('aiSocFaq.items.2.response', 'When AI-SOC is your main platform, it provides secure webmail, domain-level admin controls, and built-in threat protection inside the full email workflow.'),
+        },
+        {
+            question: t('aiSocFaq.items.3.question', 'Can administrators create and control corporate email accounts?'),
+            response: t('aiSocFaq.items.3.response', 'Yes. Administrators can create and manage accounts, monitor domain-wide email activity, and delete messages from user accounts when necessary.'),
+        },
+        {
+            question: t('aiSocFaq.items.4.question', 'Can existing corporate email accounts be connected to AI-SOC?'),
+            response: t('aiSocFaq.items.4.response', 'Yes. Existing Gmail or Outlook-based corporate accounts can be connected to AI-SOC, adding structured protection without replacing your current provider.'),
+        },
+        {
+            question: t('aiSocFaq.items.5.question', 'Is security pre-configured or does it require manual setup?'),
+            response: t('aiSocFaq.items.5.response', 'AI-SOC is pre-configured and AI-powered. It provides built-in protection with minimal setup based on the instructions page.'),
+        },
+        {
+            question: t('aiSocFaq.items.6.question', 'Beyond email and web filtering, what advanced threats are detected?'),
+            response: t('aiSocFaq.items.6.response', 'AI-SOC detects phishing context, spoofing patterns, malicious links, malware attachments, and suspicious behaviors across email and web traffic.'),
+        },
+        {
+            question: t('aiSocFaq.items.7.question', 'Does AI-SOC use threat intelligence to prevent attacks in advance?'),
+            response: t('aiSocFaq.items.7.response', 'Yes. AI-SOC uses threat intelligence feeds to block known malicious infrastructure before attacks reach protected systems.'),
+        },
+    ];
 
     const handleToggle = (index) => {
         setOpenIndex((prev) => (prev === index ? null : index));
@@ -105,7 +59,7 @@ const FaqSection = () => {
                 {/* Header */}
                 <div className="text-center mb-12">
                     <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                        Frequently Asked Questions
+                        {t('aiSocFaq.title', 'Frequently Asked Questions')}
                     </h2>
                 </div>
 

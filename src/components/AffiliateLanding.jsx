@@ -400,6 +400,9 @@ const AffiliateLanding = () => {
               <h1 className="text-4xl font-bold text-white sm:text-5xl lg:text-6xl lg:whitespace-nowrap">
                 {t("affiliate.hero.title", "Turn invitations into income.")}
               </h1>
+              <p className="max-w-xl text-lg text-white/70">
+                {t("affiliate.hero.subtitle", "We offer 10% reward for all the spendings of the invited clients for 6 months.")}
+              </p>
               <div className="flex flex-wrap items-center gap-4">
                 <GlowButton onClick={openModal}>
                   {t("affiliate.hero.cta", "Join partnership program")}

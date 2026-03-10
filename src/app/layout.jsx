@@ -2,7 +2,6 @@ import { NextIntlClientProvider } from "next-intl";
 import { Geist, Geist_Mono } from "next/font/google";
 import { supportedLocales } from "@/i18n/locales.mjs";
 import "./globals.css";
-import LayoutWrapper from "@/components/LayoutWrapper";
 import { setRequestLocale } from 'next-intl/server';
 
 const geistSans = Geist({
@@ -161,7 +160,7 @@ export default async function RootLayout(props) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationStructuredData) }}
         />
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <LayoutWrapper initialLanguage={locale}>{props.children}</LayoutWrapper>
+          {props.children}
         </NextIntlClientProvider>
       </body>
     </html>

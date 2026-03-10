@@ -24,17 +24,39 @@
     "statusLabel": "Uyumlu",
     "supremeOnly": "Yalnızca Supreme",
     "cards": {
-      "gdpr": { "desc": "Tüm AB sakinlerinin kişisel verilerini düzenleyen, dünyanın en katı gizlilik ve güvenlik yasası. Dünya genelinde veri koruma için küresel referans noktasını belirler." },
-      "ukGdpr": { "desc": "Brexit sonrası iç hukuka dahil edilen AB GDPR'ının İngiltere eşdeğeri. Kapsam ve yükümlülükler bakımından özünde aynıdır — AB GDPR uyumluluğu UK GDPR'a da uzanır." },
-      "ccpa": { "desc": "Kayıt, ad, e-posta ve Google Kimliği gibi profil verilerini sunucularımıza ileten Google OAuth kullanır — bunlar CCPA kapsamında kişisel veridir. Kullanıcılar hesap verilerini istedikleri zaman öğrenme, erişme ve silme hakkına sahiptir." },
-      "pipeda": { "desc": "Şirketin bulunduğu yerden bağımsız olarak Kanada'da ikamet edenlerin verilerini işleyen her ticari kuruluşa uygulanır. Küresel büyüme sürecimizde Kanadalı kullanıcıların verileri aynı minimum veri toplama standartlarına göre işlenmektedir." },
-      "ksaPdpl": { "desc": "SDAIA tarafından uygulanan Suudi Arabistan Kişisel Veri Koruma Kanunu. Kişisel verilerin toplanmasını, işlenmesini ve sınır ötesi aktarımını düzenler." },
-      "uaePdpl": { "desc": "DIFC ve ADGM dahil ana kara ve serbest bölgeler genelinde kişisel veri işlenmesini düzenleyen BAE Federal Kişisel Veri Koruma Kanunu." },
-      "qatarPdpl": { "desc": "Ulaştırma ve İletişim Bakanlığı tarafından yönetilen Katar Kişisel Veri Gizliliği Koruma Kanunu." },
-      "bahrainPdpl": { "desc": "PDPA tarafından düzenlenen ve uluslararası standartlarla uyumlu Bahreyn Kişisel Veri Koruma Kanunu." },
-      "kuwaitDp": { "desc": "Elektronik hizmet sağlayıcıları için veri koruma yükümlülükleri belirleyen Kuveyt Elektronik İletişim ve İşlemler Kanunu." },
-      "omanPdpl": { "desc": "Veri sahipleri için kapsamlı haklar ile veri sorumluları ve işleyicileri için yükümlülükler belirleyen Umman Kişisel Veri Koruma Kanunu." },
-      "privacyByDesign": { "desc": "Supreme'in kod taraması tamamen yerel makinenizde çalışır — hiçbir kaynak kod asla dışarıya iletilmez veya harici olarak işlenmez. Hesap verileri (Google OAuth profili) gizlilik politikamız kapsamında ayrıca yönetilmektedir." }
+      "gdpr": {
+        "desc": "Tüm AB sakinlerinin kişisel verilerini düzenleyen, dünyanın en katı gizlilik ve güvenlik yasası. Dünya genelinde veri koruma için küresel referans noktasını belirler."
+      },
+      "ukGdpr": {
+        "desc": "Brexit sonrası iç hukuka dahil edilen AB GDPR'ının İngiltere eşdeğeri. Kapsam ve yükümlülükler bakımından özünde aynıdır — AB GDPR uyumluluğu UK GDPR'a da uzanır."
+      },
+      "ccpa": {
+        "desc": "Kayıt, ad, e-posta ve Google Kimliği gibi profil verilerini sunucularımıza ileten Google OAuth kullanır — bunlar CCPA kapsamında kişisel veridir. Kullanıcılar hesap verilerini istedikleri zaman öğrenme, erişme ve silme hakkına sahiptir."
+      },
+      "pipeda": {
+        "desc": "Şirketin bulunduğu yerden bağımsız olarak Kanada'da ikamet edenlerin verilerini işleyen her ticari kuruluşa uygulanır. Küresel büyüme sürecimizde Kanadalı kullanıcıların verileri aynı minimum veri toplama standartlarına göre işlenmektedir."
+      },
+      "ksaPdpl": {
+        "desc": "SDAIA tarafından uygulanan Suudi Arabistan Kişisel Veri Koruma Kanunu. Kişisel verilerin toplanmasını, işlenmesini ve sınır ötesi aktarımını düzenler."
+      },
+      "uaePdpl": {
+        "desc": "DIFC ve ADGM dahil ana kara ve serbest bölgeler genelinde kişisel veri işlenmesini düzenleyen BAE Federal Kişisel Veri Koruma Kanunu."
+      },
+      "qatarPdpl": {
+        "desc": "Ulaştırma ve İletişim Bakanlığı tarafından yönetilen Katar Kişisel Veri Gizliliği Koruma Kanunu."
+      },
+      "bahrainPdpl": {
+        "desc": "PDPA tarafından düzenlenen ve uluslararası standartlarla uyumlu Bahreyn Kişisel Veri Koruma Kanunu."
+      },
+      "kuwaitDp": {
+        "desc": "Elektronik hizmet sağlayıcıları için veri koruma yükümlülükleri belirleyen Kuveyt Elektronik İletişim ve İşlemler Kanunu."
+      },
+      "omanPdpl": {
+        "desc": "Veri sahipleri için kapsamlı haklar ile veri sorumluları ve işleyicileri için yükümlülükler belirleyen Umman Kişisel Veri Koruma Kanunu."
+      },
+      "privacyByDesign": {
+        "desc": "Supreme'in kod taraması tamamen yerel makinenizde çalışır — hiçbir kaynak kod asla dışarıya iletilmez veya harici olarak işlenmez. Hesap verileri (Google OAuth profili) gizlilik politikamız kapsamında ayrıca yönetilmektedir."
+      }
     }
   },
   "homePartners": {
@@ -94,6 +116,7 @@
     "hero": {
       "tagline": "Silence AI ortaklık programına katılın",
       "title": "Daveti gelire dönüştürün.",
+      "subtitle": "Davet edilen müşterilerin tüm harcamalarından 6 ay boyunca %10 ödül sunuyoruz.",
       "cta": "Ortaklık programına katıl",
       "earnings": "$2,940.00",
       "growth": "+18% geçen aya göre",
@@ -2303,5 +2326,153 @@
       "back": "Geri",
       "gotIt": "Anladım!"
     }
+  },
+  "aiSocComparison": {
+    "sectionTitle": "Rekabet Avantajları",
+    "common": {
+      "features": "Özellikler"
+    },
+    "web": {
+      "title": "AI-SOC Web vs Geleneksel WAF Çözümleri",
+      "columns": {
+        "aiSoc": "AI-SOC Web (kullandıkça öde)",
+        "cloudflare": "Cloudflare WAF + Anti-DDoS ($20/ay)",
+        "aws": "AWS WAF (kullandıkça öde)"
+      },
+      "rows": {
+        "complexWaf": {
+          "feature": "Karmaşık saldırıları tespit eden WAF"
+        },
+        "ddos": {
+          "feature": "DDoS saldırılarına karşı koruma",
+          "cloudflare": "Bu fiyat planında zayıf"
+        },
+        "proactive": {
+          "feature": "Proaktif 7/24 koruma"
+        },
+        "monitoring": {
+          "feature": "Canlı kullanıcı, RPS ve ülkeye göre bant genişliği izleme — tam geçmiş takibiyle"
+        },
+        "setup": {
+          "feature": "Kurulum süresi",
+          "aiSoc": "2 dk (siber güvenlik bilgisi gerekmez)",
+          "cloudflare": "2 dk (siber güvenlik bilgisi gerekmez)",
+          "aws": "1 gün (siber güvenlik uzmanı gerekir)"
+        }
+      }
+    },
+    "email": {
+      "title": "AI-SOC Email vs Geleneksel E-posta Güvenliği",
+      "columns": {
+        "aiSoc": "AI-SOC Email",
+        "outlook": "Outlook/Gmail",
+        "kaspersky": "Kaspersky (bir e-posta sağlayıcısına bağlı)"
+      },
+      "rows": {
+        "viewAll": {
+          "feature": "Alan adındaki tüm e-postaları görüntüleme"
+        },
+        "delete": {
+          "feature": "E-postaları silme yeteneği"
+        },
+        "activeProtection": {
+          "feature": "Tüm e-posta saldırı türlerine karşı aktif koruma"
+        },
+        "aiManual": {
+          "feature": "E-postaları manuel olarak kontrol eden yapay zeka"
+        },
+        "setup": {
+          "feature": "Güvenli kurulum tamamlama süresi",
+          "aiSoc": "2 dk, siber güvenlik bilgisi gerekmez",
+          "outlook": "Tam güvenlik yok",
+          "kaspersky": "1-3 gün (e-posta sağlayıcısına bağlama, yalnızca siber güvenlik uzmanı yapabilir)"
+        }
+      }
+    }
+  },
+  "aiSocValueSection": {
+    "title": "Neden AI-SOC",
+    "subtitle": "AI-SOC, kurumsal düzey siber güvenliği her şirket için erişilebilir hale getirir. Korumanızı dakikalar içinde devreye alın ve web ile e-posta güvenliğini tek bir platformdan yönetin.",
+    "features": {
+      "deploy": {
+        "title": "Dakikalar içinde kurulum",
+        "description": "Karmaşık yapılandırma olmadan web ve e-posta korumasını 4 dakikadan kısa sürede kurun."
+      },
+      "ai": {
+        "title": "Yapay zeka destekli analiz",
+        "description": "Gelişmiş yapay zeka, trafiği, e-postaları ve tehditleri gerçek zamanlı olarak sürekli analiz eder."
+      },
+      "visualization": {
+        "title": "Gelişmiş görselleştirme",
+        "description": "Web trafiğini ve e-posta akışlarını gelişmiş bir görsel arayüzle izleyin."
+      },
+      "affordable": {
+        "title": "Uygun maliyetli güvenlik",
+        "description": "Geleneksel siber güvenlik sistemlerinin maliyeti olmadan kurumsal düzeyde koruma."
+      }
+    }
+  },
+  "aiSocInsights": {
+    "title": "GÜNÜMÜZDE SİBER GÜVENLİK SORUNU",
+    "subtitle": "Modern siber tehditler, çoğu şirketin yanıt verebileceğinden daha hızlı büyüyor.",
+    "items": [
+      {
+        "stat": "Her 39 saniyede",
+        "suffix": "bir hacker saldırısı gerçekleşiyor",
+        "description": "Küresel siber saldırılar her yıl artıyor ve her ölçekteki işletmeyi hedef alıyor."
+      },
+      {
+        "stat": "20,5 milyon",
+        "suffix": "Q1 2025’te DDoS saldırısı",
+        "description": "Büyük trafik seli, web sitelerini ve API’leri dakikalar içinde çevrimdışı bırakabilir."
+      },
+      {
+        "stat": "30.000",
+        "suffix": "web sitesi her gün hackleniyor",
+        "description": "Startup’lardan büyük işletmelere kadar web altyapısı sürekli bir hedef olmaya devam ediyor."
+      }
+    ]
+  },
+  "aiSocPricing": {
+    "intro": "AI-SOC, bağımsız siber güvenlik sistemlerinden oluşan bir seridir",
+    "emailDescription": "Email Security, kurumsal iletişiminiz için koruyucu bir kalkan görevi görür. Gelen ve giden mesajları filtreleyerek phishing girişimlerini, spoofing saldırılarını ve kötü amaçlı bağlantıları kullanıcılarınıza ulaşmadan etkisiz hale getirir; böylece iş yazışmalarınızın bütünlüğünü korur.",
+    "webDescription": "Web Security, trafik desenlerini gerçek zamanlı analiz ederek dijital altyapınızı korur. Web sitelerini ve API’leri yaygın güvenlik açıklarına, DDoS saldırılarına ve yetkisiz erişime karşı savunur; performansı etkilemeden ağ etkinliğine derin görünürlük sağlar."
+  },
+  "aiSocFaq": {
+    "title": "Sık Sorulan Sorular",
+    "items": [
+      {
+        "question": "AI-SOC yalnızca bir güvenlik motoru mu, yoksa tam bir e-posta platformu mu?",
+        "response": "AI-SOC, kuruluşunuzun e-posta yönetimine bağlı olarak iki şekilde kullanılabilir.\n\n1️⃣ Bağımsız güvenli e-posta platformu olarak\n\nAI-SOC, Gmail veya Outlook benzeri birincil e-posta sistemi olarak çalışabilir; kendi posta sunucusu altyapısı, güvenli webmail arayüzü ve yönetim konsolunu içerir.\n\n2️⃣ Mevcut e-posta sistemleri için AI güvenlik katmanı olarak\n\nAI-SOC, mevcut Gmail/Outlook ortamlarının yanında ek güvenlik katmanı olarak da çalışır. Mevcut sağlayıcı korunurken AI-SOC trafik analiz ederek phishing, spoofing, kötü amaçlı bağlantılar ve diğer tehditlere karşı korur."
+      },
+      {
+        "question": "Mevcut Gmail veya Outlook ortamlarıyla birlikte kullanılabilir mi?",
+        "response": "Evet. Gmail veya Outlook’u ana sağlayıcı olarak kullanmaya devam ederken AI-SOC’u ek güvenlik katmanı olarak çalıştırabilirsiniz."
+      },
+      {
+        "question": "AI-SOC birincil e-posta altyapısı olarak çalıştığında ne olur?",
+        "response": "Bu modda AI-SOC, güvenli webmail, alan adı düzeyinde yönetim kontrolleri ve tam e-posta akışına gömülü tehdit koruması sunar."
+      },
+      {
+        "question": "Yöneticiler kurumsal e-posta hesaplarını oluşturup yönetebilir mi?",
+        "response": "Evet. Yöneticiler hesap oluşturup yönetebilir, alan adı genelinde e-posta etkinliğini izleyebilir ve gerektiğinde e-postaları silebilir."
+      },
+      {
+        "question": "Mevcut kurumsal e-posta hesapları AI-SOC’a bağlanabilir mi?",
+        "response": "Evet. Mevcut Gmail/Outlook kurumsal hesapları AI-SOC’a bağlanabilir; böylece sağlayıcıyı değiştirmeden koruma katmanı eklenir."
+      },
+      {
+        "question": "Güvenlik önceden yapılandırılmış mı, yoksa manuel kurulum gerekir mi?",
+        "response": "AI-SOC önceden yapılandırılmış, AI destekli bir sistemdir. Talimatlar sayfasına göre minimum kurulumla yerleşik koruma sağlar."
+      },
+      {
+        "question": "E-posta ve web filtrelemenin ötesinde hangi gelişmiş tehditler tespit edilir?",
+        "response": "AI-SOC, phishing bağlamı, spoofing desenleri, kötü amaçlı bağlantılar, zararlı ekler ve e-posta/web trafiğindeki şüpheli davranışları tespit eder."
+      },
+      {
+        "question": "AI-SOC saldırıları önceden engellemek için tehdit istihbaratı kullanıyor mu?",
+        "response": "Evet. AI-SOC, bilinen kötü amaçlı altyapıyı korunan sistemlere ulaşmadan engellemek için tehdit istihbaratı akışlarını kullanır."
+      }
+    ]
   }
 }

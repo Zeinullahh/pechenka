@@ -1371,6 +1371,7 @@
     "hero": {
       "tagline": "Join the Silence AI Partner Program",
       "title": "Turn your invitations into revenue.",
+      "subtitle": "We offer 10% reward for all the spendings of the invited clients for 6 months.",
       "cta": "Join the partner program",
       "earnings": "$2,940.00",
       "growth": "+18% compared to last month",
@@ -2315,5 +2316,153 @@
       "back": "Back",
       "gotIt": "Got it!"
     }
+  },
+  "aiSocComparison": {
+    "sectionTitle": "Competitive Advantages",
+    "common": {
+      "features": "Features"
+    },
+    "web": {
+      "title": "AI-SOC Web vs Traditional WAF Solutions",
+      "columns": {
+        "aiSoc": "AI-SOC Web (pay-as-you-go)",
+        "cloudflare": "Cloudflare WAF + Anti-DDoS ($20/mo)",
+        "aws": "AWS WAF (pay-as-you-go)"
+      },
+      "rows": {
+        "complexWaf": {
+          "feature": "WAF with detection of complex attacks"
+        },
+        "ddos": {
+          "feature": "Protection against DDoS attacks",
+          "cloudflare": "Weak at this pricing plan"
+        },
+        "proactive": {
+          "feature": "Proactive 24/7 protection"
+        },
+        "monitoring": {
+          "feature": "Monitor live users, RPS, and bandwidth by country — with full historical tracking"
+        },
+        "setup": {
+          "feature": "Setup time",
+          "aiSoc": "2 mins (no cybersec knowledge needed)",
+          "cloudflare": "2 mins (no cybersec knowledge needed)",
+          "aws": "1 day (cybersec specialist needed)"
+        }
+      }
+    },
+    "email": {
+      "title": "AI-SOC Email vs Traditional Email Security",
+      "columns": {
+        "aiSoc": "AI-SOC Email",
+        "outlook": "Outlook/Gmail",
+        "kaspersky": "Kaspersky (connected to an email provider)"
+      },
+      "rows": {
+        "viewAll": {
+          "feature": "View on all emails across the domain"
+        },
+        "delete": {
+          "feature": "Ability to delete emails"
+        },
+        "activeProtection": {
+          "feature": "Active Protection against all types of email attacks"
+        },
+        "aiManual": {
+          "feature": "AI that manually checks the emails"
+        },
+        "setup": {
+          "feature": "Secure setup completion time",
+          "aiSoc": "2 mins No cybersec. knowledge needed",
+          "outlook": "No-full security",
+          "kaspersky": "1-3 days (connecting to an email provider, can only be done by a cybersec. specialist)"
+        }
+      }
+    }
+  },
+  "aiSocValueSection": {
+    "title": "Why AI-SOC",
+    "subtitle": "AI-SOC makes enterprise-level cybersecurity accessible to any company. Deploy protection in minutes and manage web and email security from one unified platform.",
+    "features": {
+      "deploy": {
+        "title": "Deploy in minutes",
+        "description": "Set up web and email protection in under 4 minutes without complex configuration."
+      },
+      "ai": {
+        "title": "AI-powered analysis",
+        "description": "Advanced AI continuously analyzes traffic, emails, and threats in real time."
+      },
+      "visualization": {
+        "title": "Advanced visualization",
+        "description": "Monitor web traffic and email flows through an advanced visual interface."
+      },
+      "affordable": {
+        "title": "Affordable security",
+        "description": "Enterprise-level protection without the cost of traditional cybersecurity systems."
+      }
+    }
+  },
+  "aiSocInsights": {
+    "title": "THE CYBERSECURITY PROBLEM TODAY",
+    "subtitle": "Modern cyber threats are growing faster than most companies can respond.",
+    "items": [
+      {
+        "stat": "Every 39 seconds",
+        "suffix": "a hacker attack occurs",
+        "description": "Global cyberattacks are increasing every year, targeting businesses of all sizes."
+      },
+      {
+        "stat": "20.5 million",
+        "suffix": "DDoS attacks in Q1 2025",
+        "description": "Massive traffic floods can take websites and APIs offline within minutes."
+      },
+      {
+        "stat": "30,000",
+        "suffix": "websites are hacked every day",
+        "description": "From startups to enterprise platforms, web infrastructure remains a constant target."
+      }
+    ]
+  },
+  "aiSocPricing": {
+    "intro": "AI-SOC is a lineup of standalone cybersecurity systems",
+    "emailDescription": "Email Security acts as a protective shield for your corporate communications. It filters incoming and outgoing messages to neutralize phishing attempts, spoofing attacks, and malicious links before they reach your users, ensuring the integrity of your business correspondence.",
+    "webDescription": "Web Security safeguards your digital infrastructure by analyzing traffic patterns in real-time. It defends websites and APIs against common vulnerabilities, DDoS attacks, and unauthorized access, providing deep visibility into network activity without impacting performance."
+  },
+  "aiSocFaq": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "question": "Is AI-SOC just a security engine or a full email platform?",
+        "response": "AI-SOC can be used in two different ways, depending on how your organization manages email.\n\n1️⃣ As a standalone secure email platform\n\nAI-SOC can operate as your organization’s primary email system, similar to Gmail or Outlook. It includes its own mail server infrastructure, secure webmail interface, and administrative console for managing corporate accounts. In this mode, organizations use AI-SOC as their main email platform while benefiting from built-in AI-driven security protection.\n\n2️⃣ As an AI security layer for existing email systems\n\nAI-SOC can also work alongside existing Gmail or Outlook environments as an additional security layer. In this setup, users keep their current email provider while AI-SOC analyzes email traffic and protects against phishing, spoofing, malicious links, and other threats without requiring migration."
+      },
+      {
+        "question": "Can AI-SOC be used alongside existing Gmail or Outlook environments?",
+        "response": "Yes. AI-SOC can run as an additional security layer while you keep Gmail or Outlook as your primary provider."
+      },
+      {
+        "question": "What happens when AI-SOC operates as the primary email infrastructure?",
+        "response": "When AI-SOC is your main platform, it provides secure webmail, domain-level admin controls, and built-in threat protection inside the full email workflow."
+      },
+      {
+        "question": "Can administrators create and control corporate email accounts?",
+        "response": "Yes. Administrators can create and manage accounts, monitor domain-wide email activity, and delete messages from user accounts when necessary."
+      },
+      {
+        "question": "Can existing corporate email accounts be connected to AI-SOC?",
+        "response": "Yes. Existing Gmail or Outlook-based corporate accounts can be connected to AI-SOC, adding structured protection without replacing your current provider."
+      },
+      {
+        "question": "Is security pre-configured or does it require manual setup?",
+        "response": "AI-SOC is pre-configured and AI-powered. It provides built-in protection with minimal setup based on the instructions page."
+      },
+      {
+        "question": "Beyond email and web filtering, what advanced threats are detected?",
+        "response": "AI-SOC detects phishing context, spoofing patterns, malicious links, malware attachments, and suspicious behaviors across email and web traffic."
+      },
+      {
+        "question": "Does AI-SOC use threat intelligence to prevent attacks in advance?",
+        "response": "Yes. AI-SOC uses threat intelligence feeds to block known malicious infrastructure before attacks reach protected systems."
+      }
+    ]
   }
 }

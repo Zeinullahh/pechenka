@@ -275,7 +275,7 @@ const Pricing = ({ onOpenModal }) => {
         <div className="relative z-10 flex flex-col items-center justify-center mb-16 sm:mb-24">
           {/* Top Text */}
           <p className="text-purple-200/80 text-xs sm:text-sm uppercase tracking-[0.2em] mb-8 font-medium text-center">
-            AI-SOC is a lineup of standalone cybersecurity systems
+            {t("aiSocPricing.intro", "AI-SOC is a lineup of standalone cybersecurity systems")}
           </p>
 
           {/* Triangle Diagram */}
@@ -384,10 +384,10 @@ const Pricing = ({ onOpenModal }) => {
             }`}>
             <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-purple-500 shadow-[0_0_8px_#a855f7]"></span>
-              Email Security
+              {t("pricing.aiSoc.tabs.email", "Email Security")}
             </h3>
             <p className="text-sm text-gray-400 leading-relaxed flex-grow">
-              Email Security acts as a protective shield for your corporate communications. It filters incoming and outgoing messages to neutralize phishing attempts, spoofing attacks, and malicious links before they reach your users, ensuring the integrity of your business correspondence.
+              {t("aiSocPricing.emailDescription", "Email Security acts as a protective shield for your corporate communications. It filters incoming and outgoing messages to neutralize phishing attempts, spoofing attacks, and malicious links before they reach your users, ensuring the integrity of your business correspondence.")}
             </p>
           </div>
 
@@ -396,10 +396,10 @@ const Pricing = ({ onOpenModal }) => {
             }`}>
             <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-cyan-400 shadow-[0_0_8px_#22d3ee]"></span>
-              Web Security
+              {t("pricing.aiSoc.tabs.web", "Web Security")}
             </h3>
             <p className="text-sm text-gray-400 leading-relaxed flex-grow">
-              Web Security safeguards your digital infrastructure by analyzing traffic patterns in real-time. It defends websites and APIs against common vulnerabilities, DDoS attacks, and unauthorized access, providing deep visibility into network activity without impacting performance.
+              {t("aiSocPricing.webDescription", "Web Security safeguards your digital infrastructure by analyzing traffic patterns in real-time. It defends websites and APIs against common vulnerabilities, DDoS attacks, and unauthorized access, providing deep visibility into network activity without impacting performance.")}
             </p>
           </div>
         </div>

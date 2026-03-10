@@ -24,17 +24,39 @@
     "statusLabel": "Konform",
     "supremeOnly": "Nur für Supreme",
     "cards": {
-      "gdpr": { "desc": "Das weltweit strengste Datenschutz- und Sicherheitsgesetz, das die personenbezogenen Daten aller EU-Bürger regelt. Setzt den globalen Maßstab für den Datenschutz weltweit." },
-      "ukGdpr": { "desc": "Post-Brexit-Äquivalent der EU-DSGVO im britischen Recht. Inhaltlich identisch in Umfang und Pflichten — EU-DSGVO-Konformität erstreckt sich auch auf die UK-DSGVO." },
-      "ccpa": { "desc": "Die Registrierung nutzt Google OAuth, das Profildaten (Name, E-Mail, Google-ID) an unsere Server überträgt. Diese sind personenbezogene Daten gemäß CCPA. Nutzer haben das vollständige Recht, ihre Kontodaten jederzeit einzusehen, darauf zuzugreifen und sie zu löschen." },
-      "pipeda": { "desc": "Gilt für jede Handelsorganisation, die Daten kanadischer Einwohner verarbeitet, unabhängig vom Unternehmenssitz. Personenbezogene Daten kanadischer Nutzer werden nach denselben Minimalprinzipien behandelt." },
-      "ksaPdpl": { "desc": "Das saudi-arabische Datenschutzgesetz, durchgesetzt von der SDAIA. Regelt Erhebung, Verarbeitung und grenzüberschreitenden Transfer personenbezogener Daten." },
-      "uaePdpl": { "desc": "Das VAE-Datenschutzgesetz, das die Verarbeitung personenbezogener Daten im Festland und in Freizonen, einschließlich DIFC und ADGM, reguliert." },
-      "qatarPdpl": { "desc": "Katars Datenschutzgesetz, verwaltet vom Ministerium für Verkehr und Kommunikation." },
-      "bahrainPdpl": { "desc": "Bahrains Datenschutzgesetz, reguliert von der PDPA und an internationalen Standards ausgerichtet." },
-      "kuwaitDp": { "desc": "Kuwaits Gesetz über elektronische Kommunikation und Transaktionen, das Datenschutzpflichten für elektronische Dienstleister festlegt." },
-      "omanPdpl": { "desc": "Omans Datenschutzgesetz, das umfassende Rechte für Betroffene sowie Pflichten für Verantwortliche und Auftragsverarbeiter begründet." },
-      "privacyByDesign": { "desc": "Supremes Code-Scanning läuft vollständig lokal auf Ihrem Gerät — kein Quellcode wird jemals extern übertragen oder verarbeitet. Kontodaten (Google-OAuth-Profil) werden separat gemäß unserer Datenschutzrichtlinie verwaltet." }
+      "gdpr": {
+        "desc": "Das weltweit strengste Datenschutz- und Sicherheitsgesetz, das die personenbezogenen Daten aller EU-Bürger regelt. Setzt den globalen Maßstab für den Datenschutz weltweit."
+      },
+      "ukGdpr": {
+        "desc": "Post-Brexit-Äquivalent der EU-DSGVO im britischen Recht. Inhaltlich identisch in Umfang und Pflichten — EU-DSGVO-Konformität erstreckt sich auch auf die UK-DSGVO."
+      },
+      "ccpa": {
+        "desc": "Die Registrierung nutzt Google OAuth, das Profildaten (Name, E-Mail, Google-ID) an unsere Server überträgt. Diese sind personenbezogene Daten gemäß CCPA. Nutzer haben das vollständige Recht, ihre Kontodaten jederzeit einzusehen, darauf zuzugreifen und sie zu löschen."
+      },
+      "pipeda": {
+        "desc": "Gilt für jede Handelsorganisation, die Daten kanadischer Einwohner verarbeitet, unabhängig vom Unternehmenssitz. Personenbezogene Daten kanadischer Nutzer werden nach denselben Minimalprinzipien behandelt."
+      },
+      "ksaPdpl": {
+        "desc": "Das saudi-arabische Datenschutzgesetz, durchgesetzt von der SDAIA. Regelt Erhebung, Verarbeitung und grenzüberschreitenden Transfer personenbezogener Daten."
+      },
+      "uaePdpl": {
+        "desc": "Das VAE-Datenschutzgesetz, das die Verarbeitung personenbezogener Daten im Festland und in Freizonen, einschließlich DIFC und ADGM, reguliert."
+      },
+      "qatarPdpl": {
+        "desc": "Katars Datenschutzgesetz, verwaltet vom Ministerium für Verkehr und Kommunikation."
+      },
+      "bahrainPdpl": {
+        "desc": "Bahrains Datenschutzgesetz, reguliert von der PDPA und an internationalen Standards ausgerichtet."
+      },
+      "kuwaitDp": {
+        "desc": "Kuwaits Gesetz über elektronische Kommunikation und Transaktionen, das Datenschutzpflichten für elektronische Dienstleister festlegt."
+      },
+      "omanPdpl": {
+        "desc": "Omans Datenschutzgesetz, das umfassende Rechte für Betroffene sowie Pflichten für Verantwortliche und Auftragsverarbeiter begründet."
+      },
+      "privacyByDesign": {
+        "desc": "Supremes Code-Scanning läuft vollständig lokal auf Ihrem Gerät — kein Quellcode wird jemals extern übertragen oder verarbeitet. Kontodaten (Google-OAuth-Profil) werden separat gemäß unserer Datenschutzrichtlinie verwaltet."
+      }
     }
   },
   "homePartners": {
@@ -94,6 +116,7 @@
     "hero": {
       "tagline": "Treten Sie dem Silence AI Partnerprogramm bei",
       "title": "Verwandeln Sie Einladungen in Einnahmen.",
+      "subtitle": "Wir bieten eine Belohnung von 10 % auf alle Ausgaben der eingeladenen Kunden für 6 Monate.",
       "cta": "Partnerprogramm beitreten",
       "earnings": "$2,940.00",
       "growth": "+18 % im Vergleich zum Vormonat",
@@ -2303,5 +2326,153 @@
       "back": "Zurück",
       "gotIt": "Verstanden!"
     }
+  },
+  "aiSocComparison": {
+    "sectionTitle": "Wettbewerbsvorteile",
+    "common": {
+      "features": "Funktionen"
+    },
+    "web": {
+      "title": "AI-SOC Web vs traditionelle WAF-Lösungen",
+      "columns": {
+        "aiSoc": "AI-SOC Web (Pay-as-you-go)",
+        "cloudflare": "Cloudflare WAF + Anti-DDoS (20 $/Monat)",
+        "aws": "AWS WAF (Pay-as-you-go)"
+      },
+      "rows": {
+        "complexWaf": {
+          "feature": "WAF mit Erkennung komplexer Angriffe"
+        },
+        "ddos": {
+          "feature": "Schutz vor DDoS-Angriffen",
+          "cloudflare": "Schwach bei diesem Tarif"
+        },
+        "proactive": {
+          "feature": "Proaktiver 24/7-Schutz"
+        },
+        "monitoring": {
+          "feature": "Live-Überwachung von Nutzern, RPS und Bandbreite nach Land — mit vollständiger Historie"
+        },
+        "setup": {
+          "feature": "Einrichtungszeit",
+          "aiSoc": "2 Min. (keine Cybersecurity-Kenntnisse nötig)",
+          "cloudflare": "2 Min. (keine Cybersecurity-Kenntnisse nötig)",
+          "aws": "1 Tag (Cybersecurity-Spezialist erforderlich)"
+        }
+      }
+    },
+    "email": {
+      "title": "AI-SOC Email vs traditionelle E-Mail-Sicherheit",
+      "columns": {
+        "aiSoc": "AI-SOC Email",
+        "outlook": "Outlook/Gmail",
+        "kaspersky": "Kaspersky (mit einem E-Mail-Anbieter verbunden)"
+      },
+      "rows": {
+        "viewAll": {
+          "feature": "Einblick in alle E-Mails der Domain"
+        },
+        "delete": {
+          "feature": "Möglichkeit, E-Mails zu löschen"
+        },
+        "activeProtection": {
+          "feature": "Aktiver Schutz gegen alle Arten von E-Mail-Angriffen"
+        },
+        "aiManual": {
+          "feature": "KI, die E-Mails manuell prüft"
+        },
+        "setup": {
+          "feature": "Dauer der sicheren Einrichtung",
+          "aiSoc": "2 Min., keine Cybersec.-Kenntnisse nötig",
+          "outlook": "Kein vollständiger Schutz",
+          "kaspersky": "1–3 Tage (Verbindung mit einem E-Mail-Anbieter, nur durch Cybersec.-Spezialist möglich)"
+        }
+      }
+    }
+  },
+  "aiSocValueSection": {
+    "title": "Warum AI-SOC",
+    "subtitle": "AI-SOC macht Cybersicherheit auf Enterprise-Niveau für jedes Unternehmen zugänglich. Aktivieren Sie Schutz in wenigen Minuten und verwalten Sie Web- und E-Mail-Sicherheit auf einer einheitlichen Plattform.",
+    "features": {
+      "deploy": {
+        "title": "In Minuten bereit",
+        "description": "Web- und E-Mail-Schutz in unter 4 Minuten ohne komplexe Konfiguration einrichten."
+      },
+      "ai": {
+        "title": "KI-gestützte Analyse",
+        "description": "Fortschrittliche KI analysiert kontinuierlich Traffic, E-Mails und Bedrohungen in Echtzeit."
+      },
+      "visualization": {
+        "title": "Erweiterte Visualisierung",
+        "description": "Überwachen Sie Web-Traffic und E-Mail-Flüsse über eine fortschrittliche Visualisierungsoberfläche."
+      },
+      "affordable": {
+        "title": "Bezahlbare Sicherheit",
+        "description": "Schutz auf Enterprise-Niveau ohne die Kosten klassischer Cybersecurity-Systeme."
+      }
+    }
+  },
+  "aiSocInsights": {
+    "title": "DAS CYBERSICHERHEITS-PROBLEM VON HEUTE",
+    "subtitle": "Moderne Cyberbedrohungen wachsen schneller, als die meisten Unternehmen reagieren können.",
+    "items": [
+      {
+        "stat": "Alle 39 Sekunden",
+        "suffix": "findet ein Hackerangriff statt",
+        "description": "Globale Cyberangriffe nehmen jedes Jahr zu und treffen Unternehmen jeder Größe."
+      },
+      {
+        "stat": "20,5 Millionen",
+        "suffix": "DDoS-Angriffe in Q1 2025",
+        "description": "Massive Traffic-Wellen können Websites und APIs innerhalb von Minuten offline bringen."
+      },
+      {
+        "stat": "30.000",
+        "suffix": "Websites werden täglich gehackt",
+        "description": "Von Startups bis zu Konzernen bleibt Web-Infrastruktur ein dauerhaftes Ziel."
+      }
+    ]
+  },
+  "aiSocPricing": {
+    "intro": "AI-SOC ist eine Reihe eigenständiger Cybersicherheits-Systeme",
+    "emailDescription": "Email Security dient als Schutzschild für Ihre Unternehmenskommunikation. Eingehende und ausgehende Nachrichten werden gefiltert, um Phishing-Versuche, Spoofing-Angriffe und schädliche Links zu neutralisieren, bevor sie Ihre Nutzer erreichen — so bleibt die Integrität Ihrer Geschäftskorrespondenz erhalten.",
+    "webDescription": "Web Security schützt Ihre digitale Infrastruktur durch Echtzeit-Analyse von Traffic-Mustern. Es verteidigt Websites und APIs gegen typische Schwachstellen, DDoS-Angriffe und unbefugte Zugriffe und bietet tiefe Transparenz über die Netzwerkaktivität ohne Leistungseinbußen."
+  },
+  "aiSocFaq": {
+    "title": "Häufig gestellte Fragen",
+    "items": [
+      {
+        "question": "Ist AI-SOC nur eine Security-Engine oder eine vollständige E-Mail-Plattform?",
+        "response": "AI-SOC kann je nach E-Mail-Betrieb Ihrer Organisation auf zwei Arten genutzt werden.\n\n1️⃣ Als eigenständige sichere E-Mail-Plattform\n\nAI-SOC kann als primäres E-Mail-System betrieben werden, inklusive eigener Mail-Server-Infrastruktur, sicherem Webmail und Admin-Konsole.\n\n2️⃣ Als KI-Sicherheitslayer für bestehende Systeme\n\nAI-SOC kann zusätzlich zu bestehenden Gmail/Outlook-Umgebungen eingesetzt werden. Der bestehende Anbieter bleibt erhalten, während AI-SOC den Mailverkehr analysiert und vor Phishing, Spoofing, bösartigen Links und weiteren Bedrohungen schützt."
+      },
+      {
+        "question": "Kann AI-SOC mit bestehenden Gmail- oder Outlook-Umgebungen genutzt werden?",
+        "response": "Ja. AI-SOC kann als zusätzliche Sicherheitsschicht eingesetzt werden, während Gmail oder Outlook Ihr Hauptanbieter bleibt."
+      },
+      {
+        "question": "Was passiert, wenn AI-SOC als primäre E-Mail-Infrastruktur betrieben wird?",
+        "response": "Dann bietet AI-SOC sicheres Webmail, domänenweite Admin-Steuerung und integrierten Bedrohungsschutz über den gesamten E-Mail-Workflow."
+      },
+      {
+        "question": "Können Administratoren Firmen-E-Mail-Konten erstellen und steuern?",
+        "response": "Ja. Administratoren können Konten erstellen und verwalten, die domänenweite Aktivität überwachen und bei Bedarf E-Mails löschen."
+      },
+      {
+        "question": "Können bestehende Firmen-E-Mail-Konten mit AI-SOC verbunden werden?",
+        "response": "Ja. Bestehende Gmail-/Outlook-Firmenkonten können mit AI-SOC verbunden werden, um Schutz hinzuzufügen, ohne den Anbieter zu ersetzen."
+      },
+      {
+        "question": "Ist die Sicherheit vorkonfiguriert oder ist manuelle Einrichtung nötig?",
+        "response": "AI-SOC ist vorkonfiguriert und KI-basiert. Es bietet integrierten Schutz mit minimalem Setup gemäß der Anleitungsseite."
+      },
+      {
+        "question": "Welche erweiterten Bedrohungen werden über E-Mail- und Web-Filter hinaus erkannt?",
+        "response": "AI-SOC erkennt Phishing-Kontexte, Spoofing-Muster, bösartige Links, Malware-Anhänge und verdächtiges Verhalten im E-Mail- und Web-Traffic."
+      },
+      {
+        "question": "Nutzt AI-SOC Threat Intelligence, um Angriffe im Voraus zu verhindern?",
+        "response": "Ja. AI-SOC verwendet Threat-Intelligence-Feeds, um bekannte bösartige Infrastruktur zu blockieren, bevor sie geschützte Systeme erreicht."
+      }
+    ]
   }
 }

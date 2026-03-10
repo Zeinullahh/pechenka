@@ -21,7 +21,7 @@ const NotFound = () => {
   }, []);
 
   return (
-    <main className="relative min-h-screen overflow-hidden bg-[#01091C] px-6 py-20 text-white sm:px-8">
+    <main className="relative min-h-screen overflow-x-hidden bg-[#01091C] px-6 py-20 text-white sm:px-8">
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_18%_18%,rgba(255,0,183,0.12),transparent_42%),radial-gradient(circle_at_82%_14%,rgba(88,116,255,0.14),transparent_44%),radial-gradient(circle_at_50%_96%,rgba(0,0,0,0.32),transparent_56%)]" />
 
       <div className="mx-auto flex max-w-3xl flex-col items-center text-center">

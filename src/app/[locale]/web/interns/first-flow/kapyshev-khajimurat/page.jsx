@@ -49,8 +49,8 @@ export default function CertificatePage() {
   const closeModal = () => setIsModalOpen(false);
 
   return (
-    <div className="min-h-screen bg-[#01091C] text-white overflow-hidden font-sans selection:bg-blue-500/30">
-        
+    <div className="min-h-screen bg-[#01091C] text-white overflow-x-hidden font-sans selection:bg-blue-500/30">
+      
        {/* Background Elements */}
         <div className="fixed inset-0 pointer-events-none">
              <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] bg-blue-600/10 rounded-full blur-[120px]" />

@@ -24,17 +24,39 @@
     "statusLabel": "已合规",
     "supremeOnly": "仅限 Supreme",
     "cards": {
-      "gdpr": { "desc": "世界上最严格的隐私和安全法律，规范所有欧盟居民的个人数据。为全球数据保护设立了国际标杆。" },
-      "ukGdpr": { "desc": "英国脱欧后保留于国内法的EU GDPR对等法规，在范围和义务上实质相同——EU GDPR合规同样适用于UK GDPR。" },
-      "ccpa": { "desc": "注册使用Google OAuth，会将个人资料（姓名、电子邮件、Google ID）传输至我们的服务器——这属于CCPA下的个人数据。用户随时享有查询、访问和删除账户数据的完整权利。" },
-      "pipeda": { "desc": "无论公司注册地在哪里，凡处理加拿大居民数据的商业组织均须遵守。随着我们全球扩张，加拿大用户的个人数据均按照最小化收集标准处理。" },
-      "ksaPdpl": { "desc": "由SDAIA执行的沙特个人数据保护法，规范个人数据的收集、处理及跨境传输。" },
-      "uaePdpl": { "desc": "规范阿联酋本土及自由区（包括DIFC和ADGM）个人数据处理的联邦数据保护法。" },
-      "qatarPdpl": { "desc": "由卡塔尔交通通信部管理的个人数据隐私保护法。" },
-      "bahrainPdpl": { "desc": "由PDPA监管、符合国际标准的巴林个人数据保护法。" },
-      "kuwaitDp": { "desc": "科威特电子通信与交易法，为电子服务提供商确立数据保护义务。" },
-      "omanPdpl": { "desc": "阿曼个人数据保护法，为数据主体确立全面权利，并为控制者和处理者规定相应义务。" },
-      "privacyByDesign": { "desc": "Supreme的代码扫描完全在本地机器上运行——源代码不会被发送或在外部处理。账户数据（Google OAuth资料）依据我们的隐私政策单独处理。" }
+      "gdpr": {
+        "desc": "世界上最严格的隐私和安全法律，规范所有欧盟居民的个人数据。为全球数据保护设立了国际标杆。"
+      },
+      "ukGdpr": {
+        "desc": "英国脱欧后保留于国内法的EU GDPR对等法规，在范围和义务上实质相同——EU GDPR合规同样适用于UK GDPR。"
+      },
+      "ccpa": {
+        "desc": "注册使用Google OAuth，会将个人资料（姓名、电子邮件、Google ID）传输至我们的服务器——这属于CCPA下的个人数据。用户随时享有查询、访问和删除账户数据的完整权利。"
+      },
+      "pipeda": {
+        "desc": "无论公司注册地在哪里，凡处理加拿大居民数据的商业组织均须遵守。随着我们全球扩张，加拿大用户的个人数据均按照最小化收集标准处理。"
+      },
+      "ksaPdpl": {
+        "desc": "由SDAIA执行的沙特个人数据保护法，规范个人数据的收集、处理及跨境传输。"
+      },
+      "uaePdpl": {
+        "desc": "规范阿联酋本土及自由区（包括DIFC和ADGM）个人数据处理的联邦数据保护法。"
+      },
+      "qatarPdpl": {
+        "desc": "由卡塔尔交通通信部管理的个人数据隐私保护法。"
+      },
+      "bahrainPdpl": {
+        "desc": "由PDPA监管、符合国际标准的巴林个人数据保护法。"
+      },
+      "kuwaitDp": {
+        "desc": "科威特电子通信与交易法，为电子服务提供商确立数据保护义务。"
+      },
+      "omanPdpl": {
+        "desc": "阿曼个人数据保护法，为数据主体确立全面权利，并为控制者和处理者规定相应义务。"
+      },
+      "privacyByDesign": {
+        "desc": "Supreme的代码扫描完全在本地机器上运行——源代码不会被发送或在外部处理。账户数据（Google OAuth资料）依据我们的隐私政策单独处理。"
+      }
     }
   },
   "homePartners": {
@@ -461,6 +483,7 @@
     "hero": {
       "tagline": "加入 Silence AI 联盟计划",
       "title": "让邀请转化为收入。",
+      "subtitle": "我们在6个月内为受邀客户的所有支出提供10%的奖励。",
       "cta": "加入合作伙伴计划",
       "snapshot": {
         "label": "实时快照",
@@ -2272,5 +2295,153 @@
       "back": "返回",
       "gotIt": "我知道了！"
     }
+  },
+  "aiSocComparison": {
+    "sectionTitle": "竞争优势",
+    "common": {
+      "features": "功能"
+    },
+    "web": {
+      "title": "AI-SOC Web 与传统 WAF 方案对比",
+      "columns": {
+        "aiSoc": "AI-SOC Web（按量付费）",
+        "cloudflare": "Cloudflare WAF + Anti-DDoS（$20/月）",
+        "aws": "AWS WAF（按量付费）"
+      },
+      "rows": {
+        "complexWaf": {
+          "feature": "可检测复杂攻击的 WAF"
+        },
+        "ddos": {
+          "feature": "防护 DDoS 攻击",
+          "cloudflare": "在该价格方案下较弱"
+        },
+        "proactive": {
+          "feature": "7x24 主动防护"
+        },
+        "monitoring": {
+          "feature": "按国家监控实时用户、RPS 与带宽 — 并提供完整历史追踪"
+        },
+        "setup": {
+          "feature": "部署时间",
+          "aiSoc": "2 分钟（无需网络安全知识）",
+          "cloudflare": "2 分钟（无需网络安全知识）",
+          "aws": "1 天（需要网络安全专家）"
+        }
+      }
+    },
+    "email": {
+      "title": "AI-SOC Email 与传统邮件安全对比",
+      "columns": {
+        "aiSoc": "AI-SOC Email",
+        "outlook": "Outlook/Gmail",
+        "kaspersky": "Kaspersky（连接到邮件服务提供商）"
+      },
+      "rows": {
+        "viewAll": {
+          "feature": "查看整个域名下的所有邮件"
+        },
+        "delete": {
+          "feature": "可删除邮件"
+        },
+        "activeProtection": {
+          "feature": "针对所有类型邮件攻击的主动防护"
+        },
+        "aiManual": {
+          "feature": "AI 人工检查邮件"
+        },
+        "setup": {
+          "feature": "安全部署完成时间",
+          "aiSoc": "2 分钟，无需网络安全知识",
+          "outlook": "非完整安全",
+          "kaspersky": "1-3 天（需连接邮件服务提供商，只能由网络安全专家完成）"
+        }
+      }
+    }
+  },
+  "aiSocValueSection": {
+    "title": "为什么选择 AI-SOC",
+    "subtitle": "AI-SOC 让企业级网络安全对任何公司都可用。几分钟即可部署防护，并在统一平台中管理 Web 与邮件安全。",
+    "features": {
+      "deploy": {
+        "title": "分钟级部署",
+        "description": "无需复杂配置，4 分钟内即可完成 Web 与邮件防护部署。"
+      },
+      "ai": {
+        "title": "AI 驱动分析",
+        "description": "高级 AI 持续实时分析流量、邮件与威胁。"
+      },
+      "visualization": {
+        "title": "高级可视化",
+        "description": "通过高级可视化界面监控 Web 流量与邮件流。"
+      },
+      "affordable": {
+        "title": "高性价比安全",
+        "description": "无需传统网络安全系统的高成本，也能获得企业级防护。"
+      }
+    }
+  },
+  "aiSocInsights": {
+    "title": "当今网络安全问题",
+    "subtitle": "现代网络威胁增长速度，已超过多数企业的响应能力。",
+    "items": [
+      {
+        "stat": "每 39 秒",
+        "suffix": "就会发生一次黑客攻击",
+        "description": "全球网络攻击每年持续增长，目标覆盖各类规模企业。"
+      },
+      {
+        "stat": "2050 万",
+        "suffix": "2025 年 Q1 的 DDoS 攻击",
+        "description": "大规模流量洪泛可在几分钟内让网站和 API 离线。"
+      },
+      {
+        "stat": "30,000",
+        "suffix": "个网站每天被攻击",
+        "description": "从初创公司到大型平台，Web 基础设施始终是攻击目标。"
+      }
+    ]
+  },
+  "aiSocPricing": {
+    "intro": "AI-SOC 是一套独立的网络安全系统组合",
+    "emailDescription": "Email Security 是企业通信的防护盾。它会过滤收发邮件，在威胁到达用户前中和钓鱼尝试、伪造攻击和恶意链接，从而保障企业通信的完整性。",
+    "webDescription": "Web Security 通过实时分析流量模式来保护您的数字基础设施。它可防御常见漏洞、DDoS 攻击和未授权访问，并在不影响性能的前提下提供深度网络可视化。"
+  },
+  "aiSocFaq": {
+    "title": "常见问题",
+    "items": [
+      {
+        "question": "AI-SOC 只是安全引擎，还是完整的邮件平台？",
+        "response": "AI-SOC 可根据企业邮件管理方式以两种模式使用。\n\n1️⃣ 作为独立安全邮件平台\n\nAI-SOC 可作为企业主邮件系统运行，具备自有邮件服务器基础设施、安全 Webmail 和管理控制台。\n\n2️⃣ 作为现有邮件系统的 AI 安全层\n\nAI-SOC 也可叠加在 Gmail/Outlook 之上使用。您可保留现有服务商，同时由 AI-SOC 分析邮件流量并防护钓鱼、伪造、恶意链接等威胁。"
+      },
+      {
+        "question": "AI-SOC 可以与现有 Gmail 或 Outlook 环境一起使用吗？",
+        "response": "可以。AI-SOC 可作为额外安全层部署，同时保留 Gmail 或 Outlook 作为主要服务商。"
+      },
+      {
+        "question": "当 AI-SOC 作为主邮件基础设施运行时会怎样？",
+        "response": "在该模式下，AI-SOC 提供安全 Webmail、域级管理控制，以及贯穿完整邮件流程的内置威胁防护。"
+      },
+      {
+        "question": "管理员可以创建并控制企业邮件账号吗？",
+        "response": "可以。管理员可创建和管理账号、监控全域邮件活动，并在必要时删除用户邮件。"
+      },
+      {
+        "question": "现有企业邮箱账号可以连接到 AI-SOC 吗？",
+        "response": "可以。现有 Gmail/Outlook 企业账号可接入 AI-SOC，在不替换服务商的前提下增加结构化防护。"
+      },
+      {
+        "question": "安全能力是预配置的吗？还是需要手动配置？",
+        "response": "AI-SOC 是预配置的 AI 系统。按照说明页完成最少步骤即可启用内置防护。"
+      },
+      {
+        "question": "除了邮件和 Web 过滤外，还能检测哪些高级威胁？",
+        "response": "AI-SOC 可检测钓鱼上下文、伪造模式、恶意链接、恶意附件，以及邮件与 Web 流量中的可疑行为。"
+      },
+      {
+        "question": "AI-SOC 会使用威胁情报提前阻止攻击吗？",
+        "response": "会。AI-SOC 使用威胁情报数据流，在已知恶意基础设施到达受保护系统前进行阻断。"
+      }
+    ]
   }
 }

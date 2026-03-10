@@ -434,7 +434,7 @@ export default function SupremeLanding() {
   };
 
   return (
-    <div className="min-h-screen overflow-hidden bg-[#01091C] font-sans text-slate-200 selection:bg-violet-400/25">
+    <div className="min-h-screen overflow-x-hidden bg-[#01091C] font-sans text-slate-200 selection:bg-violet-400/25">
       <div className="fixed inset-0 z-0 pointer-events-none">
         <BackgroundBeams className="opacity-50" />
       </div>

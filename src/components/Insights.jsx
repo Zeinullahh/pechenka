@@ -8,21 +8,21 @@ const Insights = () => {
   const items = [
     {
       icon: <ShieldAlert className="w-10 h-10 text-pink-500 mx-auto" />,
-      stat: t("insights.items.0.stat", "Every 39 seconds"),
-      suffix: t("insights.items.0.suffix", "a hacker attack occurs"),
-      description: t("insights.items.0.description", "Global cyberattacks are increasing every year, targeting businesses of all sizes."),
+      stat: t("aiSocInsights.items.0.stat", "Every 39 seconds"),
+      suffix: t("aiSocInsights.items.0.suffix", "a hacker attack occurs"),
+      description: t("aiSocInsights.items.0.description", "Global cyberattacks are increasing every year, targeting businesses of all sizes."),
     },
     {
       icon: <Zap className="w-10 h-10 text-cyan-400 mx-auto" />,
-      stat: t("insights.items.1.stat", "20.5 million"),
-      suffix: t("insights.items.1.suffix", "DDoS attacks in Q1 2025"),
-      description: t("insights.items.1.description", "Massive traffic floods can take websites and APIs offline within minutes."),
+      stat: t("aiSocInsights.items.1.stat", "20.5 million"),
+      suffix: t("aiSocInsights.items.1.suffix", "DDoS attacks in Q1 2025"),
+      description: t("aiSocInsights.items.1.description", "Massive traffic floods can take websites and APIs offline within minutes."),
     },
     {
       icon: <Globe className="w-10 h-10 text-purple-500 mx-auto" />,
-      stat: t("insights.items.2.stat", "30,000"),
-      suffix: t("insights.items.2.suffix", "websites are hacked every day"),
-      description: t("insights.items.2.description", "From startups to enterprise platforms, web infrastructure remains a constant target."),
+      stat: t("aiSocInsights.items.2.stat", "30,000"),
+      suffix: t("aiSocInsights.items.2.suffix", "websites are hacked every day"),
+      description: t("aiSocInsights.items.2.description", "From startups to enterprise platforms, web infrastructure remains a constant target."),
     },
   ];
 
@@ -30,10 +30,10 @@ const Insights = () => {
     <div className="pb-16 pt-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white mb-6 uppercase">
-          {t("insights.title", "THE CYBERSECURITY PROBLEM TODAY")}
+          {t("aiSocInsights.title", "THE CYBERSECURITY PROBLEM TODAY")}
         </h2>
         <p className="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto font-medium">
-          {t("insights.subtitle", "Modern cyber threats are growing faster than most companies can respond.")}
+          {t("aiSocInsights.subtitle", "Modern cyber threats are growing faster than most companies can respond.")}
         </p>
       </div>
 

@@ -32,14 +32,12 @@ export default function PoliciesLayout({ children }) {
   const locale = 'en';
 
   return (
-    <html lang={locale}>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-white`}>
-        <NextIntlClientProvider locale={locale} messages={enMessages}>
-          <LayoutWrapper initialLanguage={locale}>
-            {children}
-          </LayoutWrapper>
-        </NextIntlClientProvider>
-      </body>
-    </html>
+    <NextIntlClientProvider locale={locale} messages={enMessages}>
+      <LayoutWrapper initialLanguage={locale}>
+        <div className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-white`}>
+          {children}
+        </div>
+      </LayoutWrapper>
+    </NextIntlClientProvider>
   );
 }

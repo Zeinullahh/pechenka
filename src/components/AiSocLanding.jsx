@@ -23,9 +23,9 @@ const AiSocLanding = () => {
   const { t } = useLanguage();
   const valueFeatures = [
     {
-      title: t('valueSection.features.deploy.title', 'Deploy in minutes'),
+      title: t('aiSocValueSection.features.deploy.title', 'Deploy in minutes'),
       description: t(
-        'valueSection.features.deploy.description',
+        'aiSocValueSection.features.deploy.description',
         'Set up web and email protection in under 4 minutes without complex configuration.'
       ),
       icon: <Rocket className="w-11 h-11 text-purple-200 drop-shadow-[0_0_18px_rgba(168,85,247,0.35)]" />,
@@ -33,9 +33,9 @@ const AiSocLanding = () => {
       glowColor: 'rgba(168,85,247,0.8)',
     },
     {
-      title: t('valueSection.features.ai.title', 'AI-powered analysis'),
+      title: t('aiSocValueSection.features.ai.title', 'AI-powered analysis'),
       description: t(
-        'valueSection.features.ai.description',
+        'aiSocValueSection.features.ai.description',
         'Advanced AI continuously analyzes traffic, emails, and threats in real time.'
       ),
       icon: <BrainCircuit className="w-11 h-11 text-cyan-200 drop-shadow-[0_0_18px_rgba(34,211,238,0.35)]" />,
@@ -43,9 +43,9 @@ const AiSocLanding = () => {
       glowColor: 'rgba(34,211,238,0.8)',
     },
     {
-      title: t('valueSection.features.visualization.title', 'Advanced visualization'),
+      title: t('aiSocValueSection.features.visualization.title', 'Advanced visualization'),
       description: t(
-        'valueSection.features.visualization.description',
+        'aiSocValueSection.features.visualization.description',
         'Monitor web traffic and email flows through an advanced visual interface.'
       ),
       icon: <Radar className="w-11 h-11 text-indigo-200 drop-shadow-[0_0_18px_rgba(99,102,241,0.32)]" />,
@@ -53,9 +53,9 @@ const AiSocLanding = () => {
       glowColor: 'rgba(99,102,241,0.8)',
     },
     {
-      title: t('valueSection.features.affordable.title', 'Affordable security'),
+      title: t('aiSocValueSection.features.affordable.title', 'Affordable security'),
       description: t(
-        'valueSection.features.affordable.description',
+        'aiSocValueSection.features.affordable.description',
         'Enterprise-level protection without the cost of traditional cybersecurity systems.'
       ),
       icon: <ShieldCheck className="w-11 h-11 text-blue-200 drop-shadow-[0_0_18px_rgba(59,130,246,0.32)]" />,
@@ -66,11 +66,16 @@ const AiSocLanding = () => {
 
   const comparisonTables = [
     {
-      title: 'AI-SOC Web vs Traditional WAF Solutions',
-      columns: ['Features', 'AI-SOC Web', 'Cloudflare WAF + Anti-DDoS', 'AWS WAF'],
+      title: t('aiSocComparison.web.title', 'AI-SOC Web vs Traditional WAF Solutions'),
+      columns: [
+        t('aiSocComparison.common.features', 'Features'),
+        t('aiSocComparison.web.columns.aiSoc', 'AI-SOC Web (pay-as-you-go)'),
+        t('aiSocComparison.web.columns.cloudflare', 'Cloudflare WAF + Anti-DDoS ($20/mo)'),
+        t('aiSocComparison.web.columns.aws', 'AWS WAF (pay-as-you-go)'),
+      ],
       rows: [
         {
-          feature: 'WAF with detection of complex attacks',
+          feature: t('aiSocComparison.web.rows.complexWaf.feature', 'WAF with detection of complex attacks'),
           values: [
             { type: 'icon', value: true },
             { type: 'icon', value: false },
@@ -78,15 +83,15 @@ const AiSocLanding = () => {
           ],
         },
         {
-          feature: 'Protection against DDoS attacks',
+          feature: t('aiSocComparison.web.rows.ddos.feature', 'Protection against DDoS attacks'),
           values: [
             { type: 'icon', value: true },
-            { type: 'icon', value: true },
+            { type: 'text', value: t('aiSocComparison.web.rows.ddos.cloudflare', 'Weak at this pricing plan'), tone: 'neutral' },
             { type: 'icon', value: false },
           ],
         },
         {
-          feature: 'Monitor live users, RPS, and bandwidth by country — with full historical tracking',
+          feature: t('aiSocComparison.web.rows.proactive.feature', 'Proactive 24/7 protection'),
           values: [
             { type: 'icon', value: true },
             { type: 'icon', value: false },
@@ -94,21 +99,37 @@ const AiSocLanding = () => {
           ],
         },
         {
-          feature: 'Setup time',
+          feature: t(
+            'aiSocComparison.web.rows.monitoring.feature',
+            'Monitor live users, RPS, and bandwidth by country — with full historical tracking'
+          ),
           values: [
-            { type: 'text', value: '2 mins (no cybersecurity knowledge needed)', tone: 'good' },
-            { type: 'text', value: '2 mins (no cybersecurity knowledge needed)', tone: 'good' },
-            { type: 'text', value: '1 day (cybersecurity specialist needed)', tone: 'bad' },
+            { type: 'icon', value: true },
+            { type: 'icon', value: false },
+            { type: 'icon', value: false },
+          ],
+        },
+        {
+          feature: t('aiSocComparison.web.rows.setup.feature', 'Setup time'),
+          values: [
+            { type: 'text', value: t('aiSocComparison.web.rows.setup.aiSoc', '2 mins (no cybersec knowledge needed)'), tone: 'good' },
+            { type: 'text', value: t('aiSocComparison.web.rows.setup.cloudflare', '2 mins (no cybersec knowledge needed)'), tone: 'good' },
+            { type: 'text', value: t('aiSocComparison.web.rows.setup.aws', '1 day (cybersec specialist needed)'), tone: 'bad' },
           ],
         },
       ],
     },
     {
-      title: 'AI-SOC Email vs Traditional Email Security',
-      columns: ['Features', 'AI-SOC Email', 'Outlook/Gmail', 'Kaspersky (connected to an email provider)'],
+      title: t('aiSocComparison.email.title', 'AI-SOC Email vs Traditional Email Security'),
+      columns: [
+        t('aiSocComparison.common.features', 'Features'),
+        t('aiSocComparison.email.columns.aiSoc', 'AI-SOC Email'),
+        t('aiSocComparison.email.columns.outlook', 'Outlook/Gmail'),
+        t('aiSocComparison.email.columns.kaspersky', 'Kaspersky (connected to an email provider)'),
+      ],
       rows: [
         {
-          feature: 'View on all emails across the domain',
+          feature: t('aiSocComparison.email.rows.viewAll.feature', 'View on all emails across the domain'),
           values: [
             { type: 'icon', value: true },
             { type: 'icon', value: false },
@@ -116,7 +137,7 @@ const AiSocLanding = () => {
           ],
         },
         {
-          feature: 'Ability to delete emails',
+          feature: t('aiSocComparison.email.rows.delete.feature', 'Ability to delete emails'),
           values: [
             { type: 'icon', value: true },
             { type: 'icon', value: false },
@@ -124,7 +145,7 @@ const AiSocLanding = () => {
           ],
         },
         {
-          feature: 'Active protection against all types of email attacks',
+          feature: t('aiSocComparison.email.rows.activeProtection.feature', 'Active Protection against all types of email attacks'),
           values: [
             { type: 'icon', value: true },
             { type: 'icon', value: false },
@@ -132,13 +153,21 @@ const AiSocLanding = () => {
           ],
         },
         {
-          feature: 'Secure setup completion time',
+          feature: t('aiSocComparison.email.rows.aiManual.feature', 'AI that manually checks the emails'),
           values: [
-            { type: 'text', value: '2 mins — No cybersecurity knowledge needed', tone: 'good' },
-            { type: 'text', value: 'No full security', tone: 'neutral' },
+            { type: 'icon', value: true },
+            { type: 'icon', value: false },
+            { type: 'icon', value: false },
+          ],
+        },
+        {
+          feature: t('aiSocComparison.email.rows.setup.feature', 'Secure setup completion time'),
+          values: [
+            { type: 'text', value: t('aiSocComparison.email.rows.setup.aiSoc', '2 mins No cybersec. knowledge needed'), tone: 'good' },
+            { type: 'text', value: t('aiSocComparison.email.rows.setup.outlook', 'No-full security'), tone: 'bad' },
             {
               type: 'text',
-              value: '1-3 days (connecting to an email provider, requires cybersecurity specialist)',
+              value: t('aiSocComparison.email.rows.setup.kaspersky', '1-3 days (connecting to an email provider, can only be done by a cybersec. specialist)'),
               tone: 'bad',
             },
           ],
@@ -193,11 +222,11 @@ const AiSocLanding = () => {
         <div className="w-full max-w-7xl mx-auto mt-20 px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white">
-              {t('valueSection.title', 'Why AI-SOC')}
+              {t('aiSocValueSection.title', 'Why AI-SOC')}
             </h2>
             <p className="text-lg sm:text-xl text-slate-200 max-w-3xl mx-auto mt-4">
               {t(
-                'valueSection.subtitle',
+                'aiSocValueSection.subtitle',
                 'AI-SOC makes enterprise-level cybersecurity accessible to any company. Deploy protection in minutes and manage web and email security from one unified platform.'
               )}
             </p>
@@ -244,7 +273,7 @@ const AiSocLanding = () => {
             <div className="relative z-10">
               <div className="text-center">
                 <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white">
-                  Competitive Advantages
+                  {t('aiSocComparison.sectionTitle', 'Competitive Advantages')}
                 </h2>
               </div>
               <div className="mt-8 space-y-10">
