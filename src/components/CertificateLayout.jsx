@@ -130,7 +130,8 @@ export default function CertificateLayout({ name, certId, role }) {
               {/* The Certificate Card */}
               <div
                 ref={certRef}
-                className="relative overflow-hidden shadow-[0_30px_80px_-20px_rgba(0,0,0,0.8)] text-slate-900 certificate-card flex flex-col mx-auto"
+                className="relative overflow-hidden shadow-[0_30px_80px_-20px_rgba(0,0,0,0.8)] text-slate-900 certificate-card flex flex-col mx-auto font-sans"
+                suppressHydrationWarning
                 style={{
                   width: `${CERT_WIDTH}px`,
                   height: `${CERT_HEIGHT}px`,
@@ -297,14 +298,15 @@ function init_protocol() {
                   <div className="relative z-10 mt-2 mb-6">
                     <div className="absolute -inset-8 bg-blue-500/10 blur-2xl rounded-full opacity-80" />
                     <h2
-                      className="relative text-8xl font-bold text-center text-white tracking-tight"
-                      style={{ textShadow: "0 4px 20px rgba(0,0,0,0.5)" }}
+                      suppressHydrationWarning
+                      className="relative text-8xl font-bold text-center text-white tracking-tight whitespace-nowrap leading-[1.05]"
+                      style={{ textShadow: "0 4px 20px rgba(0,0,0,0.5)", fontWeight: 700 }}
                     >
                       {name}
                     </h2>
                   </div>
                   <div className="max-w-3xl text-center space-y-6 relative z-10 flex flex-col items-center">
-                    <p className="text-3xl text-white/90 font-light leading-relaxed">
+                    <p suppressHydrationWarning className="text-3xl text-white/90 font-light leading-relaxed whitespace-nowrap">
                       Has successfully completed{" "}
                       <span className="font-medium text-blue-300 border-b border-blue-400/30 pb-1">
                         Internship Flow 1

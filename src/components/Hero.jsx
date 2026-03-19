@@ -8,6 +8,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 const Hero = ({ onOpenModal }) => {
   const [activeTooltip, setActiveTooltip] = useState(null);
   const [headingFontSize, setHeadingFontSize] = useState(72);
+  const [isCompactViewport, setIsCompactViewport] = useState(false);
   const playgroundRef = useRef(null);
   const playgroundHeadingRef = useRef(null);
   const { t } = useLanguage();
@@ -51,11 +52,33 @@ const Hero = ({ onOpenModal }) => {
     const MAX_FONT_SIZE = 320;
     const MIN_FONT_SIZE = 24;
 
+    if (isCompactViewport) {
+      headingEl.style.whiteSpace = "normal";
+      headingEl.style.maxWidth = "100%";
+      headingEl.style.width = "100%";
+      headingEl.style.marginInline = "auto";
+      headingEl.style.overflowWrap = "anywhere";
+      headingEl.style.wordBreak = "break-word";
+      headingEl.style.lineHeight = "1.15";
+      headingEl.style.paddingInline = "0.5rem";
+      headingEl.style.boxSizing = "border-box";
+      headingEl.style.fontSize = "";
+      return;
+    }
+
     let low = MIN_FONT_SIZE;
     let high = MAX_FONT_SIZE;
     let best = MIN_FONT_SIZE;
 
     headingEl.style.whiteSpace = "nowrap";
+    headingEl.style.maxWidth = "100%";
+    headingEl.style.width = "100%";
+    headingEl.style.marginInline = "0";
+    headingEl.style.overflowWrap = "normal";
+    headingEl.style.wordBreak = "normal";
+    headingEl.style.lineHeight = "1";
+    headingEl.style.paddingInline = "0";
+    headingEl.style.boxSizing = "content-box";
 
     for (let i = 0; i < 25; i += 1) {
       const mid = (low + high) / 2;
@@ -71,7 +94,40 @@ const Hero = ({ onOpenModal }) => {
 
     headingEl.style.fontSize = `${best}px`;
     setHeadingFontSize((prev) => (prev !== best ? best : prev));
+  }, [isCompactViewport]);
+
+  useEffect(() => {
+    if (typeof window === "undefined" || typeof window.matchMedia !== "function") return;
+
+    const mediaQuery = window.matchMedia("(max-width: 1023px)");
+    const updateViewport = () => setIsCompactViewport(mediaQuery.matches);
+
+    updateViewport();
+
+    if (typeof mediaQuery.addEventListener === "function") {
+      mediaQuery.addEventListener("change", updateViewport);
+      return () => mediaQuery.removeEventListener("change", updateViewport);
+    }
+
+    mediaQuery.addListener(updateViewport);
+    return () => mediaQuery.removeListener(updateViewport);
   }, []);
+
+  const compactPlaygroundHeading =
+    isCompactViewport && typeof playgroundHeading === "string"
+      ? (() => {
+          const words = playgroundHeading.trim().split(/\s+/);
+          if (words.length < 4) return playgroundHeading;
+          const midpoint = Math.ceil(words.length / 2);
+          return (
+            <>
+              {words.slice(0, midpoint).join(" ")}
+              <br />
+              {words.slice(midpoint).join(" ")}
+            </>
+          );
+        })()
+      : playgroundHeading;
 
   useEffect(() => {
     adjustPlaygroundHeadingSize();
@@ -87,7 +143,7 @@ const Hero = ({ onOpenModal }) => {
         window.removeEventListener("resize", handleResize);
       }
     };
-  }, [adjustPlaygroundHeadingSize, playgroundHeading]);
+  }, [adjustPlaygroundHeadingSize, compactPlaygroundHeading]);
 
   useEffect(() => {
     if (typeof ResizeObserver === "undefined") return;
@@ -106,7 +162,7 @@ const Hero = ({ onOpenModal }) => {
   return (
     <div className="container mx-auto flex flex-col lg:flex-row items-start gap-14 px-4 py-10 sm:px-6 lg:px-8">
       <div className="w-full lg:w-1/2 text-white lg:mt-0">
-        <h1 className="text-3xl sm:text-4xl font-bold mb-6 sm:mb-8 leading-tight">
+        <h1 className="text-3xl sm:text-4xl font-bold mb-6 sm:mb-8 leading-tight text-white">
           {fullText}
         </h1>
         <p className="font-bold mb-4 text-base sm:text-lg">
@@ -162,13 +218,13 @@ const Hero = ({ onOpenModal }) => {
           <div className="absolute inset-0 z-0">
             <StickyScrollAnimation />
           </div>
-          <div ref={playgroundRef} className="relative z-10 w-full px-4">
+          <div ref={playgroundRef} className="relative z-10 w-full px-3 sm:px-4 overflow-visible">
             <h2
               ref={playgroundHeadingRef}
-              className="block w-full font-bold text-white text-center leading-none whitespace-nowrap drop-shadow-2xl"
-              style={{ fontSize: `${headingFontSize}px`, textShadow: '0 4px 24px rgba(0,0,0,0.5)' }}
+              className="block w-full max-w-full font-bold text-white text-center leading-tight whitespace-normal break-words text-[clamp(1.75rem,8.5vw,2.6rem)] sm:text-[clamp(2rem,7vw,3rem)] lg:whitespace-nowrap drop-shadow-2xl px-2 sm:px-0"
+              style={{ fontSize: isCompactViewport ? undefined : `${headingFontSize}px`, textShadow: '0 4px 24px rgba(0,0,0,0.5)' }}
             >
-              {playgroundHeading}
+              {compactPlaygroundHeading}
             </h2>
           </div>
         </div>

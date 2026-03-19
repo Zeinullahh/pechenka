@@ -1,11 +1,10 @@
 "use client";
-import React, { useState } from 'react';
+import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const AiSocGetModal = ({ isOpen, onClose }) => {
     const { t } = useLanguage();
-    const [showDevNotice, setShowDevNotice] = useState(false);
 
     if (!isOpen) return null;
 
@@ -13,13 +12,8 @@ const AiSocGetModal = ({ isOpen, onClose }) => {
         onClose();
     };
 
-    const handleComingSoonClick = (e) => {
-        e.preventDefault();
-        setShowDevNotice(true);
-    };
-
-    const handleDevNoticeClose = () => {
-        setShowDevNotice(false);
+    const handleRedirect = (url) => {
+        window.location.href = url;
     };
 
     return (
@@ -56,14 +50,14 @@ const AiSocGetModal = ({ isOpen, onClose }) => {
 
                             <div className="flex flex-col gap-6">
                                 <button
-                                    onClick={handleComingSoonClick}
+                                    onClick={() => handleRedirect('https://email-soc.silence.codes')}
                                     className="w-full py-4 px-6 bg-gradient-to-r from-purple-600/20 to-indigo-600/20 hover:from-purple-600/30 hover:to-indigo-600/30 border border-purple-500/30 rounded-xl font-semibold transition-all text-center"
                                 >
                                     {t("aiSocModal.emailSecurity", "Login/Register to Email security")}
                                 </button>
 
                                 <button
-                                    onClick={handleComingSoonClick}
+                                    onClick={() => handleRedirect('https://web-soc.silence.codes')}
                                     className="w-full py-4 px-6 bg-gradient-to-r from-pink-600/20 to-purple-600/20 hover:from-pink-600/30 hover:to-purple-600/30 border border-pink-500/30 rounded-xl font-semibold transition-all text-center"
                                 >
                                     {t("aiSocModal.webSecurity", "Login/Register to Web security")}
@@ -75,9 +69,24 @@ const AiSocGetModal = ({ isOpen, onClose }) => {
                                     href="https://www.onlyoffice.com/download-desktop"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="w-full py-3 px-6 text-gray-400 hover:text-white transition-all text-center text-sm font-medium"
+                                    className="group relative w-full py-4 px-6 bg-gradient-to-r from-slate-600/20 to-slate-500/20 hover:from-slate-600/30 hover:to-slate-500/30 border border-white/20 rounded-xl font-semibold transition-all"
                                 >
-                                    {t("aiSocModal.getOnlyOffice", "Get OnlyOffice")}
+                                    <div className="flex items-center justify-between">
+                                        <div className="flex flex-col items-start text-left translate-x-0 group-hover:translate-x-1 transition-transform">
+                                            <span className="text-base text-white">
+                                                {t("aiSocModal.getOnlyOffice", "Download OnlyOffice")}
+                                            </span>
+                                            <span className="text-xs text-gray-300 font-normal">
+                                                {t(
+                                                    "aiSocModal.onlyOfficeRedirectNote",
+                                                    "You will be redirected to the official OnlyOffice website to download it (a strong alternative to Microsoft Excel, Word, and PowerPoint)."
+                                                )}
+                                            </span>
+                                        </div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-300 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                        </svg>
+                                    </div>
                                 </a>
                             </div>
                         </motion.div>
@@ -85,48 +94,6 @@ const AiSocGetModal = ({ isOpen, onClose }) => {
                 )}
             </AnimatePresence>
 
-            {/* Development Notice Modal */}
-            <AnimatePresence>
-                {showDevNotice && (
-                    <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        className="fixed inset-0 z-[10001] flex items-center justify-center backdrop-blur-md bg-black/40"
-                        onClick={handleDevNoticeClose}
-                    >
-                        <motion.div
-                            initial={{ scale: 0.9, opacity: 0 }}
-                            animate={{ scale: 1, opacity: 1 }}
-                            exit={{ scale: 0.9, opacity: 0 }}
-                            transition={{ duration: 0.2 }}
-                            className="relative bg-[#050b1a]/90 backdrop-blur-2xl text-white rounded-2xl border border-blue-500/20 shadow-[0_0_50px_rgba(59,130,246,0.15)] p-8 w-full max-w-md mx-4"
-                            onClick={(e) => e.stopPropagation()}
-                        >
-                            <button
-                                onClick={handleDevNoticeClose}
-                                className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors"
-                            >
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                                </svg>
-                            </button>
-
-                            <div className="text-center">
-                                <div className="mb-4 flex justify-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                    </svg>
-                                </div>
-                                <h3 className="text-xl font-bold mb-4 text-white">{t("aiSocModal.comingSoonTitle", "Coming soon")}</h3>
-                                <p className="text-gray-300 leading-relaxed">
-                                    {t("aiSocModal.comingSoonMessage", "Silence team is working on easing access to the system.")}
-                                </p>
-                            </div>
-                        </motion.div>
-                    </motion.div>
-                )}
-            </AnimatePresence>
         </>
     );
 };

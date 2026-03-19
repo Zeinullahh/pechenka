@@ -510,14 +510,42 @@ export default function SupremeLanding() {
                <div className="mt-8 flex flex-col w-full sm:w-auto items-center gap-4">
                 <MaxUpgradeButton
                   onClick={goToMax}
-                  className="w-full sm:w-[320px] justify-center text-center whitespace-nowrap"
+                    className="w-full sm:w-[320px] justify-center text-center whitespace-normal sm:whitespace-nowrap"
                 >
                   {t("supreme.landing.hero.ctaMax", "Upgrade to Supreme 2 MAX")}
                 </MaxUpgradeButton>
-                <button onClick={goToPricing} className="w-full sm:w-[320px] whitespace-nowrap rounded-full border border-violet-300/25 bg-gradient-to-r from-slate-900/85 via-slate-800/70 to-slate-900/85 px-8 py-4 text-base sm:text-lg font-medium text-slate-100 transition hover:border-fuchsia-300/50 hover:text-white justify-center text-center">
+                  <button onClick={goToPricing} className="w-full sm:w-[320px] whitespace-normal sm:whitespace-nowrap rounded-full border border-violet-300/25 bg-gradient-to-r from-slate-900/85 via-slate-800/70 to-slate-900/85 px-8 py-4 text-base sm:text-lg font-medium text-slate-100 transition hover:border-fuchsia-300/50 hover:text-white justify-center text-center">
                   {t("supreme.landing.hero.ctaFree", "Start Free with Supreme 2 Light")}
                 </button>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-6xl px-4 pb-24 sm:px-6 lg:px-8">
+          <h2 className="text-center text-2xl font-bold text-white sm:text-3xl break-words">
+            Trailer of Supreme
+          </h2>
+          <div className="mx-auto mt-8 w-full max-w-4xl">
+            <div className="relative aspect-video overflow-hidden rounded-2xl border border-white/10 bg-black shadow-2xl">
+              <iframe
+                className="h-full w-full"
+                src="https://www.youtube.com/embed/Q38_3yNTFTc"
+                title="Trailer of Supreme"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+            </div>
+            <div className="mt-3 text-center">
+              <a
+                href="https://youtu.be/Q38_3yNTFTc?si=a0dmjRyncD7eUOBw"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-purple-200/90 underline decoration-purple-300/70 underline-offset-4 hover:text-purple-100"
+              >
+                Open video on YouTube
+              </a>
             </div>
           </div>
         </section>
@@ -578,7 +606,7 @@ export default function SupremeLanding() {
         </section>
 
         <section className="mx-auto max-w-6xl px-4 pb-24 sm:px-6 lg:px-8">
-          <h2 className="text-center text-2xl font-bold text-white sm:text-3xl">
+          <h2 className="text-center text-2xl font-bold text-white sm:text-3xl break-words">
             <span className="bg-gradient-to-r from-fuchsia-200 via-violet-100 to-cyan-200 bg-clip-text font-extrabold uppercase tracking-[0.08em] text-transparent">
               Comparative Analysis of Free Code Security Scanners
             </span>{" "}

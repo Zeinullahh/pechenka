@@ -60,7 +60,7 @@ const EmailSecurityModal = ({ isOpen, onClose }) => {
                             </a>
 
                             <a
-                                href="https://email.ai-soc1.silence.codes/"
+                                href="https://email-soc.silence.codes/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="group relative w-full py-5 px-6 bg-gradient-to-r from-purple-600/20 to-indigo-600/20 hover:from-purple-600/30 hover:to-indigo-600/30 border border-purple-500/30 rounded-xl font-semibold transition-all"

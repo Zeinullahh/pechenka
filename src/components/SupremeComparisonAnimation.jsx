@@ -93,7 +93,7 @@ export const SupremeComparisonAnimation = () => {
                <motion.div 
                  animate={{ y: [2, -2, 2] }}
                  transition={{ duration: 3, repeat: Infinity }}
-                 className="absolute -top-3 left-1/2 -translate-x-1/2 bg-violet-500/20 border border-violet-400/30 px-1.5 py-0.5 rounded text-[8px] text-violet-200 whitespace-nowrap"
+                 className="absolute -top-3 left-1/2 -translate-x-1/2 bg-violet-500/20 border border-violet-400/30 px-1.5 py-0.5 rounded text-[8px] text-violet-200 whitespace-normal text-center"
                >
                  JSON Output
                </motion.div>
