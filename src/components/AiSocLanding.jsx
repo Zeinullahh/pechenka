@@ -110,6 +110,14 @@ const AiSocLanding = () => {
           ],
         },
         {
+          feature: t('aiSocComparison.web.rows.countryBlocking.feature', 'Country blocking'),
+          values: [
+            { type: 'icon', value: true },
+            { type: 'text', value: t('aiSocComparison.web.rows.countryBlocking.cloudflare', 'Requires Cybersec knowledge'), tone: 'neutral' },
+            { type: 'text', value: t('aiSocComparison.web.rows.countryBlocking.aws', 'Requires Cybersec knowledge'), tone: 'neutral' },
+          ],
+        },
+        {
           feature: t('aiSocComparison.web.rows.setup.feature', 'Setup time'),
           values: [
             { type: 'text', value: t('aiSocComparison.web.rows.setup.aiSoc', '2 mins (no cybersec knowledge needed)'), tone: 'good' },

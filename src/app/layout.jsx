@@ -122,7 +122,7 @@ export const metadata = {
   },
   other: {
     verification: 'bms90c794rpwp6mwhst',
-    'websoc-verification': 'cmmy1fvax0003ui25hnt2fajr',
+    'websoc-verification': 'cmmypvbe60001v125r8irpcpj',
   },
 };
 
