@@ -299,6 +299,7 @@ const Header = ({ onOpenModal, hideCta = false }) => {
                   alt="Company Logo"
                   width={100}
                   height={50}
+                  priority
                   style={{ height: "auto", width: "clamp(78px, 24vw, 120px)", maxWidth: "120px" }}
                 />
               </Link>
