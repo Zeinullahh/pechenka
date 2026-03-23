@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import Header from '@/components/Header.jsx';
 import Hero from '@/components/Hero.jsx';
 import Pricing from '@/components/Pricing.jsx';
+import { CybersecurityLamp } from '@/components/CybersecurityLamp';
 import { StickyScrollSolution } from '@/components/StickyScrollSolution.jsx';
 import Insights from '@/components/Insights.jsx';
 import AiSocGetModal from '@/components/AiSocGetModal.jsx';
@@ -238,6 +239,27 @@ const AiSocLanding = () => {
             </div>
           </section>
           <Pricing onOpenModal={openModal} />
+          {/* Video below pricing */}
+          <div className="w-full flex justify-center px-4 py-12">
+            <div className="w-full max-w-2xl rounded-2xl overflow-hidden border border-purple-500/20 shadow-[0_0_40px_-10px_rgba(168,85,247,0.3)] bg-black">
+              <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
+                <iframe
+                  src="https://www.youtube.com/embed/3lW9az21aDk"
+                  title="AI-SOC Email Security"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+                />
+              </div>
+            </div>
+          </div>
+          {/* Lamp below video */}
+          <div className="relative left-1/2 -translate-x-1/2 w-[100vw] h-[220px] pointer-events-none max-w-none overflow-visible z-0">
+            <CybersecurityLamp
+              containerClassName="w-full h-full min-h-0 bg-transparent"
+              headingClassName="hidden"
+            />
+          </div>
         </div>
         <div className="w-full max-w-7xl mx-auto">
           <Insights />

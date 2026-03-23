@@ -552,13 +552,6 @@ const Pricing = ({ onOpenModal }) => {
       </div>
 
 
-      {/* Lamp element below cards - breaking out of container */}
-      <div className="relative left-1/2 -translate-x-1/2 mt-10 w-[100vw] h-[220px] pointer-events-none max-w-none overflow-visible z-0">
-        <CybersecurityLamp
-          containerClassName="w-full h-full min-h-0 bg-transparent"
-          headingClassName="hidden"
-        />
-      </div>
     </section>
   );
 };
