@@ -151,7 +151,7 @@
   "footer": {
     "copyright": "© {year} Silence AI. Все права защищены.",
     "contactLabel": "Контакт:",
-    "contactValue": "info@silenceai.net",
+    "contactValue": "support@silence.codes",
     "addressLabel": "Адрес:",
     "addressValue": "Алматы, Казахстан",
     "links": {
@@ -577,7 +577,7 @@
       },
       "analyzer": {
         "title": "Analyseur de sécurité",
-        "tag": "Moteur local d’analyse de code"
+        "tag": "Moteur local d'analyse de code"
       },
       "vulnDb": {
         "title": "Base de vulnérabilités",
@@ -630,7 +630,7 @@
         "changes": {
           "title": "8. Changes & Contact",
           "body1": "Silence AI may update these affiliate terms to reflect changes in the program or applicable law. Updated versions take effect upon publication on this page.",
-          "body2": "Questions about the affiliate program can be sent to info@silenceai.net."
+          "body2": "Questions about the affiliate program can be sent to support@silence.codes."
         }
       }
     }
@@ -2445,3 +2445,4 @@
     ]
   }
 }
+

@@ -13,7 +13,7 @@ export const solutionContent = [
   },
   {
     id: "aiEmailProtection",
-    imagePath: "/solution/page4.png",
+    imagePath: "/solution/page4.jpg",
   },
   {
     id: "emailVisualization",

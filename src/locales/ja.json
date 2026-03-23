@@ -41,7 +41,7 @@
         "desc": "EU GDPRに相当する、Brexit後に国内法として維持された英国法。範囲と義務は実質的に同一であり、EU GDPRへの準拠はUK GDPRにも適用されます。"
       },
       "ccpa": {
-        "desc": "登録にはGoogle OAuthを使用しており、プロフィールデータ（氏名、メールアドレス、Google ID）がサーバーに送信されます。これはCCPAに基づく個人データです。ユーザーはアカウントデータをいつでも確認、アクセス、および削除する権利を有します。"
+        "desc": "登録にはGoogle OAuthを使用しており、プロフィールデータ(氏名、メールアドレス、Google ID)がサーバーに送信されます。これはCCPAに基づく個人データです。ユーザーはアカウントデータをいつでも確認、アクセス、および削除する権利を有します。"
       },
       "pipeda": {
         "desc": "企業の所在地に関わらず、カナダ居住者のデータを扱うすべての商業組織に適用されます。グローバルに拡大するにあたり、カナダユーザーの個人データも同様の最小収集基準で管理されます。"
@@ -65,7 +65,7 @@
         "desc": "データ主体の包括的な権利と、コントローラー及びプロセッサーの義務を規定するオマーンの個人データ保護法。"
       },
       "privacyByDesign": {
-        "desc": "Supremeのコードスキャンはすべてローカルマシン上で実行され、ソースコードが外部に送信または処理されることはありません。アカウントデータ（Google OAuthプロフィール）はプライバシーポリシーに従って別途管理されます。"
+        "desc": "Supremeのコードスキャンはすべてローカルマシン上で実行され、ソースコードが外部に送信または処理されることはありません。アカウントデータ(Google OAuthプロフィール)はプライバシーポリシーに従って別途管理されます。"
       }
     }
   },
@@ -112,7 +112,7 @@
       "subtitle": "招待された顧客のすべての支出に対して、6か月間10%の報酬を提供します。",
       "cta": "パートナープログラムに参加する",
       "earnings": "$2,940.00",
-      "growth": "+18%（前月比）",
+      "growth": "+18%(前月比)",
       "snapshot": {
         "label": "ライブスナップショット",
         "caption": "パフォーマンスは60秒ごとに更新され、確定した支払いは即座に同期されます。"
@@ -179,15 +179,15 @@
     "faq": {
       "title": "よくある質問",
       "payments": {
-        "question": "支払いはどのように受け取りますか？",
+        "question": "支払いはどのように受け取りますか?",
         "answer": "プロフィールに VISA または Mastercard の番号を登録すると、指定カードへ直接出金できます。"
       },
       "discounts": {
-        "question": "紹介された顧客に割引はありますか？",
+        "question": "紹介された顧客に割引はありますか?",
         "answer": "いいえ。紹介された顧客に割引はなく、成功した紹介のコミッションはパートナーのみが受け取ります。"
       },
       "statistics": {
-        "question": "紹介統計はいつ確認できますか？",
+        "question": "紹介統計はいつ確認できますか?",
         "answer": "ユーザーがプロモコードや紹介リンクで登録すると、そのメールアドレスとリワードがダッシュボードに表示されます。"
       }
     },
@@ -253,7 +253,7 @@
         "changes": {
           "title": "8. Changes & Contact",
           "body1": "Silence AI may update these affiliate terms to reflect changes in the program or applicable law. Updated versions take effect upon publication on this page.",
-          "body2": "Questions about the affiliate program can be sent to info@silenceai.net."
+          "body2": "Questions about the affiliate program can be sent to support@silence.codes."
         }
       }
     },
@@ -262,8 +262,8 @@
     }
   },
   "hero": {
-    "headline": "AI-SOC 1：サイバーセキュリティはもはや高価でも複雑でもない",
-    "subheading": "統合されたAIサイバーセキュリティプラットフォームが提供するもの：",
+    "headline": "AI-SOC 1:サイバーセキュリティはもはや高価でも複雑でもない",
+    "subheading": "統合されたAIサイバーセキュリティプラットフォームが提供するもの:",
     "playgroundHeading": "AI搭載セキュリティオペレーションセンター",
     "bullets": {
       "web": "リアルタイムのWeb攻撃防御",
@@ -277,7 +277,7 @@
     "tooltips": {
       "web": {
         "title": "Web攻撃防御",
-        "content": "本システムはDDoSやSQLiなどのあらゆるWeb攻撃から保護します（ビジネスロジックの脆弱性を除く）。"
+        "content": "本システムはDDoSやSQLiなどのあらゆるWeb攻撃から保護します(ビジネスロジックの脆弱性を除く)。"
       },
       "email": {
         "title": "メール攻撃防御",
@@ -307,7 +307,7 @@
     "tooltips": {
       "cmcGlobal": {
         "title": "グローバルトラフィック監視付きCMC",
-        "content": "集中管理コンソール（CMC）は他のセキュリティシステムとシームレスに連携し、Global ShieldやSecurity Testerと同じドメインとインターフェイスを共有します。ここから国別ブロックやポート遮断などを実行できます"
+        "content": "集中管理コンソール(CMC)は他のセキュリティシステムとシームレスに連携し、Global ShieldやSecurity Testerと同じドメインとインターフェイスを共有します。ここから国別ブロックやポート遮断などを実行できます"
       },
       "countryBlacklisting": {
         "title": "国別ブロック",
@@ -315,7 +315,7 @@
       },
       "portManagement": {
         "title": "ポート管理",
-        "content": "未使用ポートを閉じて攻撃面を減らします。例：SSHが不要な場合はポート22を無効化する"
+        "content": "未使用ポートを閉じて攻撃面を減らします。例:SSHが不要な場合はポート22を無効化する"
       },
       "cmcEmail": {
         "title": "高度なメールフロー可視化付きCMC",
@@ -331,7 +331,7 @@
       },
       "intelligenceReport": {
         "title": "インテリジェンスレポート",
-        "content": "対象について詳細な洞察を提供：開いているポート、稼働中のサービス、サブドメインなど"
+        "content": "対象について詳細な洞察を提供:開いているポート、稼働中のサービス、サブドメインなど"
       },
       "fullVulnerability": {
         "title": "完全な脆弱性チェック",
@@ -357,11 +357,11 @@
       "features": {
         "common": {
           "customDomainEmail": "独自ドメインの法人メール (you@yourcompany.com)",
-          "officeSuite": "デスクトップ/モバイル対応のオフィススイート：文書・表計算・プレゼン・メール",
+          "officeSuite": "デスクトップ/モバイル対応のオフィススイート:文書・表計算・プレゼン・メール",
           "adminConsole": "ドメイン全体のメールを管理し一括操作できる管理コンソール",
           "dnsSecuritySetup": "管理コンソールでのDNSベースのメール保護設定 (SPF・DKIM・DMARC)",
           "emailMigration": "メール移行サポート",
-          "aiThreatProtection": "AIによる5層防御と自動分類（安全・スパム・危険リンク・フィッシング・スプーフィング）",
+          "aiThreatProtection": "AIによる5層防御と自動分類(安全・スパム・危険リンク・フィッシング・スプーフィング)",
           "emailFlowVisualization": "管理コンソールでのドメイン全体のメールフロー可視化と高度なフィルター",
           "domainWideDeletion": "管理者がドメイン内の全ユーザーからメールを一括削除可能"
         },
@@ -371,19 +371,19 @@
         "premium": {
           "userLimit": "最大100ユーザー",
           "adminLimit": "最大5名の管理者",
-          "aiAnalysis": "ユーザーあたり月60件までの詳細AIフィッシング分析（第5レイヤー防御）",
+          "aiAnalysis": "ユーザーあたり月60件までの詳細AIフィッシング分析(第5レイヤー防御)",
           "storage": "ユーザーあたり最大50GB"
         },
         "max": {
           "userLimit": "最大300ユーザー",
           "adminLimit": "最大10名の管理者",
-          "aiAnalysis": "ユーザーあたり月100件までの詳細AIフィッシング分析（第5レイヤー防御）",
+          "aiAnalysis": "ユーザーあたり月100件までの詳細AIフィッシング分析(第5レイヤー防御)",
           "storage": "ユーザーあたり最大200GB"
         },
         "standard": {
           "userLimit": "最大10ユーザー",
           "adminLimit": "管理者1名まで",
-          "aiAnalysis": "ユーザーあたり月10件までの詳細AIフィッシング分析（第5レイヤー防御）",
+          "aiAnalysis": "ユーザーあたり月10件までの詳細AIフィッシング分析(第5レイヤー防御)",
           "storage": "ユーザーあたり最大8GB"
         }
       }
@@ -433,7 +433,7 @@
       "basic": {
         "name": "ベーシック",
         "features": {
-          "fix": "重大バグ修正（48時間SLA）",
+          "fix": "重大バグ修正(48時間SLA)",
           "updates": "月次アップデート",
           "audit": "四半期セキュリティ監査",
           "manager": "専任マネージャー"
@@ -443,7 +443,7 @@
         "name": "プロ",
         "badge": "最も人気",
         "features": {
-          "fix": "重大バグ修正（24時間SLA）",
+          "fix": "重大バグ修正(24時間SLA)",
           "updates": "月10時間のアップデート",
           "audit": "月次セキュリティ監査",
           "manager": "専任マネージャー"
@@ -453,7 +453,7 @@
         "name": "エンタープライズ",
         "badge": "ベストバリュー",
         "features": {
-          "fix": "緊急バグ修正（4時間SLA）",
+          "fix": "緊急バグ修正(4時間SLA)",
           "updates": "無制限アップデート + ロードマップ",
           "audit": "週次監査 + バックアップ",
           "manager": "専任マネージャー"
@@ -463,11 +463,11 @@
     "subtitle": "モバイルファーストのプランは、あなたの製品とともに拡張するように構築されています...",
     "percentMaintenance": "{percent}% 年間メンテナンス",
     "planEstimate": "${value}",
-    "perYear": "年あたり（概算）",
+    "perYear": "年あたり(概算)",
     "calculator": {
       "title": "プロジェクト費用計算",
       "subtitle": "スライドして年間メンテナンスを確認",
-      "projectCost": "プロジェクト費用：",
+      "projectCost": "プロジェクト費用:",
       "projectValue": "${value}"
     }
   },
@@ -479,7 +479,7 @@
         "title": "Global Shield - CIAレベルのトラフィック監視",
         "description": "インタラクティブな3Dグローブが、秒間リクエスト数、アクティブユーザー数、バイト量を鮮明に表示します。",
         "bullets": {
-          "one": "設定は簡単：IPとドメインを指定するだけ。",
+          "one": "設定は簡単:IPとドメインを指定するだけ。",
           "two": "DNSに追加するエージェントIPを受け取る。",
           "three": "ポートを閉じて露出をゼロに。"
         }
@@ -495,7 +495,7 @@
       },
       "securityTester": {
         "title": "Security Tester - 次世代の脆弱性テスト",
-        "description": "システムはワンタイムトークン（OTT）を発行し、ブラウザまたはVS Code拡張からフルカバレッジのチェックを実施できます。",
+        "description": "システムはワンタイムトークン(OTT)を発行し、ブラウザまたはVS Code拡張からフルカバレッジのチェックを実施できます。",
         "bullets": {
           "one": "CMCでスコープとターゲットを設定。",
           "two": "OTTを貼り付けてチェック開始。",
@@ -504,14 +504,14 @@
       }
     },
     "cmc": {
-      "title": "集中管理コンソール（CMC）",
+      "title": "集中管理コンソール(CMC)",
       "description": "3つのコンポーネントを統合コンソールで管理し、集中可視化・容易な設定と監視・包括的なセキュリティレポートを提供します。"
     }
   },
   "insights": {
     "items": [
       {
-        "title": "39秒",
+        "title": "39ç§'",
         "description": "39秒ごとにハッカー攻撃が発生"
       },
       {
@@ -537,7 +537,7 @@
   },
   "stickySolution": {
     "webSecurity": {
-      "title": "Webセキュリティシステム：サイト/APIは2分で接続",
+      "title": "Webセキュリティシステム:サイト/APIは2分で接続",
       "description": "DDoSやSQLiなどのWeb攻撃から保護。不要な場合はポート22を閉じるのが良い実践です。"
     },
     "ciaMonitoring": {
@@ -549,8 +549,8 @@
       "description": "ユーザー数の変化履歴を確認"
     },
     "aiEmailProtection": {
-      "title": "AIによるメール保護：2分でネットワーク接続",
-      "description": "CMCが送受信メールを全面可視化し、自動で脅威分類（なりすまし、スパム、フィッシング、危険リンク、マルウェア）します。"
+      "title": "AIによるメール保護:2分でネットワーク接続",
+      "description": "CMCが送受信メールを全面可視化し、自動で脅威分類(なりすまし、スパム、フィッシング、危険リンク、マルウェア)します。"
     },
     "emailVisualization": {
       "title": "送受信メールの可視化",
@@ -562,9 +562,9 @@
     }
   },
   "footer": {
-    "contactLabel": "連絡先：",
-    "contactValue": "info@silenceai.net",
-    "addressLabel": "住所：",
+    "contactLabel": "連絡先:",
+    "contactValue": "support@silence.codes",
+    "addressLabel": "住所:",
     "addressValue": "Media City Free Zone, Al Messaned, Sharjah, UAE",
     "links": {
       "termsUse": "利用規約",
@@ -770,7 +770,7 @@
       "subtitle": "シンプルで透明な価格設定",
       "title": "プランを選ぶ",
       "limitedOffer": "期間限定オファー",
-      "priceIncreaseNotice": "現在の価格をロックしてください！6ヶ月後、価格は30%上昇します",
+      "priceIncreaseNotice": "現在の価格をロックしてください!6ヶ月後、価格は30%上昇します",
       "monthlyPlan": "月次",
       "monthlyDesc": "柔軟な請求",
       "yearlyPlan": "年次",
@@ -869,7 +869,7 @@
       "company": "Acme株式会社"
     },
     "submit": "依頼を送信",
-    "successTitle": "ありがとうございます！",
+    "successTitle": "ありがとうございます!",
     "successBody": "デモ日程のご案内のため、追ってご連絡します。",
     "close": "閉じる"
   },
@@ -884,7 +884,7 @@
       "company": "Acme株式会社"
     },
     "submit": "ダウンロード",
-    "successTitle": "送信しました！",
+    "successTitle": "送信しました!",
     "successBody": "ありがとうございます。システムのダウンロード手順をメールでお送りします。",
     "close": "閉じる"
   },
@@ -896,7 +896,7 @@
   "whyChooseUs": {
     "badge": "結果重視のエンジニアリング",
     "title": "選ばれる理由",
-    "subtitle": "信頼されるチーム：",
+    "subtitle": "信頼されるチーム:",
     "subtitleHighlight": "数十億ドル規模の企業",
     "subtitleTail": "— そしてスタートアップのスピードで出荷します。",
     "learnMore": "詳細を見る",
@@ -960,8 +960,8 @@
     "badge": "実証されたインパクト",
     "title": "導入事例",
     "subtitle": "機能を出荷するのではなく、成果を出荷します。",
-    "problem": "課題：",
-    "solution": "解決策：",
+    "problem": "課題:",
+    "solution": "解決策:",
     "liveImpact": "実際の効果",
     "before": "導入前",
     "after": "導入後",
@@ -1037,7 +1037,7 @@
     "calculator": {
       "title": "プロジェクトコスト計算",
       "subtitle": "スライドして年間保守費用を確認",
-      "projectCost": "プロジェクト費用：",
+      "projectCost": "プロジェクト費用:",
       "projectValue": "${value}"
     },
     "plans": {
@@ -1161,7 +1161,7 @@
                     "Google または Microsoft の OAuth を使って admin.silenceai.net の CMC 管理コンソールにサインインします。",
                     "自社ドメインを登録します。",
                     "DNS を使ってドメイン所有権を確認します。",
-                    "セキュリティ用 DNS レコード（SPF・DKIM・DMARC）を設定します。",
+                    "セキュリティ用 DNS レコード(SPF・DKIM・DMARC)を設定します。",
                     "従業員用のメールアカウントを作成します。"
                   ]
                 },
@@ -1207,7 +1207,7 @@
                   "items": [
                     "CMC 管理コンソールを開きます。",
                     "「Add Domain」をクリックします。",
-                    "www を付けずにドメイン名を入力します（例: company.com）。",
+                    "www を付けずにドメイン名を入力します(例: company.com)。",
                     "「Add」をクリックします。"
                   ]
                 },
@@ -1239,12 +1239,12 @@
                   "type": "orderedList",
                   "items": [
                     "このレコードをドメインの DNS 設定に追加します。",
-                    "自動チェック（5 分ごと）を待つか、「Check Now」をクリックして即時確認します。"
+                    "自動チェック(5 分ごと)を待つか、「Check Now」をクリックして即時確認します。"
                   ]
                 },
                 {
                   "type": "paragraph",
-                  "content": "検証には最大 48 時間かかる場合があります。成功すると、ドメインのステータスが Verified（検証済み）になります。"
+                  "content": "検証には最大 48 時間かかる場合があります。成功すると、ドメインのステータスが Verified(検証済み)になります。"
                 }
               ]
             },
@@ -1277,7 +1277,7 @@
                 },
                 {
                   "type": "paragraph",
-                  "content": "既に SPF レコードが存在する場合（例: Gmail 用）、最後の -all の前に当社の include を追加してください。"
+                  "content": "既に SPF レコードが存在する場合(例: Gmail 用)、最後の -all の前に当社の include を追加してください。"
                 }
               ]
             },
@@ -1294,7 +1294,7 @@
                   "items": [
                     "CMC で「DNS Configuration」→「DKIM」を開きます。",
                     "「Generate DKIM Keys」をクリックします。",
-                    "システムが鍵ペアを生成します（秘密鍵はサーバーに保持され、公開鍵のみ DNS に公開されます）。",
+                    "システムが鍵ペアを生成します(秘密鍵はサーバーに保持され、公開鍵のみ DNS に公開されます)。",
                     "表示された DNS レコードをコピーします。"
                   ]
                 },
@@ -1329,7 +1329,7 @@
                 {
                   "type": "list",
                   "items": [
-                    "quarantine — スパムフォルダへ移動（推奨）",
+                    "quarantine — スパムフォルダへ移動(推奨)",
                     "reject — メールを拒否"
                   ]
                 },
@@ -1380,8 +1380,8 @@
                   "type": "list",
                   "items": [
                     "Email: john.doe@company.com",
-                    "氏名（名・姓）",
-                    "パスワード（8 文字以上で英大文字・英小文字・数字・記号を含める）",
+                    "氏名(名・姓)",
+                    "パスワード(8 文字以上で英大文字・英小文字・数字・記号を含める)",
                     "ストレージクォータ: メールボックス容量を選択"
                   ]
                 },
@@ -1411,7 +1411,7 @@
                 {
                   "type": "list",
                   "items": [
-                    "Suspend — アクセスを一時停止（ユーザーはサインインできなくなります）",
+                    "Suspend — アクセスを一時停止(ユーザーはサインインできなくなります)",
                     "Activate — アクセスを再有効化"
                   ]
                 },
@@ -1485,13 +1485,13 @@
                   "items": [
                     "To: 受信者アドレス",
                     "Subject: 件名",
-                    "Body: 本文（リッチテキスト形式も利用可能）"
+                    "Body: 本文(リッチテキスト形式も利用可能)"
                   ]
                 },
                 {
                   "type": "orderedList",
                   "items": [
-                    "必要に応じてファイルを添付します（1 ファイルあたり最大 25 MB）。",
+                    "必要に応じてファイルを添付します(1 ファイルあたり最大 25 MB)。",
                     "「Send」をクリックします。"
                   ]
                 },
@@ -1513,7 +1513,7 @@
                   "type": "orderedList",
                   "items": [
                     "サイドバーで「Create Folder」をクリックします。",
-                    "フォルダ名を入力します（例: Clients）。",
+                    "フォルダ名を入力します(例: Clients)。",
                     "「Add Rules」をクリックします。",
                     "ルール内容を設定します。"
                   ]
@@ -1595,7 +1595,7 @@
             },
             {
               "id": "vacation-responder",
-              "title": "自動返信（不在返信）を設定する",
+              "title": "自動返信(不在返信)を設定する",
               "body": [
                 {
                   "type": "orderedList",
@@ -1661,7 +1661,7 @@
                   "type": "list",
                   "items": [
                     "ユーザー別",
-                    "フォルダ別（Secure、Spam、Phishing など）",
+                    "フォルダ別(Secure、Spam、Phishing など)",
                     "日付別",
                     "脅威タイプ別"
                   ]
@@ -1761,7 +1761,7 @@
                 {
                   "type": "list",
                   "items": [
-                    "Unfiltered — まだ処理されていない新着メール（一時フォルダ）",
+                    "Unfiltered — まだ処理されていない新着メール(一時フォルダ)",
                     "Secure — すべてのチェックを通過した安全なメール",
                     "Possibly Spoofed — 差出人の正当性が疑わしいメール",
                     "SPAM — スパムと判定されたメール",
@@ -1773,7 +1773,7 @@
                 },
                 {
                   "type": "paragraph",
-                  "content": "1 通のメールが複数のフォルダに表示される場合もあります（例: SPAM と Possibly Spoofed の両方）。"
+                  "content": "1 通のメールが複数のフォルダに表示される場合もあります(例: SPAM と Possibly Spoofed の両方)。"
                 }
               ]
             },
@@ -1799,10 +1799,10 @@
                   "type": "list",
                   "title": "マッチ条件:",
                   "items": [
-                    "Contains（含む）",
-                    "Equals（完全一致）",
-                    "Starts with（前方一致）",
-                    "Ends with（後方一致）"
+                    "Contains(含む)",
+                    "Equals(完全一致)",
+                    "Starts with(前方一致)",
+                    "Ends with(後方一致)"
                   ]
                 },
                 {
@@ -1813,7 +1813,7 @@
             },
             {
               "id": "spf",
-              "title": "SPF（Sender Policy Framework）",
+              "title": "SPF(Sender Policy Framework)",
               "body": [
                 {
                   "type": "paragraph",
@@ -1845,7 +1845,7 @@
             },
             {
               "id": "dkim",
-              "title": "DKIM（DomainKeys Identified Mail）",
+              "title": "DKIM(DomainKeys Identified Mail)",
               "body": [
                 {
                   "type": "paragraph",
@@ -1878,7 +1878,7 @@
             },
             {
               "id": "dmarc",
-              "title": "DMARC（Domain-based Message Authentication）",
+              "title": "DMARC(Domain-based Message Authentication)",
               "body": [
                 {
                   "type": "paragraph",
@@ -1898,7 +1898,7 @@
                   "items": [
                     "p=quarantine — スパムフォルダへ配信",
                     "p=reject — メールを拒否",
-                    "p=none — モニタリングのみ（動作は変更しない）",
+                    "p=none — モニタリングのみ(動作は変更しない)",
                     "rua= — 集計レポート送信先アドレス"
                   ]
                 },
@@ -1998,7 +1998,7 @@
                 {
                   "type": "list",
                   "items": [
-                    "OAuth 2.0: Google または Microsoft のサインイン（PKCE によりセキュリティを強化）",
+                    "OAuth 2.0: Google または Microsoft のサインイン(PKCE によりセキュリティを強化)",
                     "メール / パスワード: 管理者が CMC で発行する認証情報",
                     "JWT トークン: アクセストークンは 7 日間有効で httpOnly Cookie に保存",
                     "トークンリフレッシュ: アクセストークンはリフレッシュトークン経由で自動更新され、リフレッシュトークンが期限切れになると再サインインが必要"
@@ -2131,9 +2131,9 @@
       "description": "外部サーバーに送信せずにローカルでコードをスキャン。エディタ内で高速かつ包括的に脆弱性を検出します。"
     },
     "video": {
-      "title": "インストール＆使用方法チュートリアル（5分）",
+      "title": "インストール&使用方法チュートリアル(5分)",
       "cardTitle": "Supreme の使い方",
-      "cardSubtitle": "インストール＆セットアップガイド"
+      "cardSubtitle": "インストール&セットアップガイド"
     },
     "pricing": {
       "title": "シンプルな料金",
@@ -2149,7 +2149,7 @@
         "title": "年額",
         "description": "最高の価値"
       },
-      "year": "年",
+      "year": "å¹´",
       "perMonthApprox": "月あたり約{value}"
     },
     "languages": {
@@ -2202,7 +2202,7 @@
           "全プロジェクトスキャン",
           "74以上のスキャナー",
           "総合レポート",
-          "レポートのみワークフロー（自動修正なし）"
+          "レポートのみワークフロー(自動修正なし)"
         ],
         "cta": "Supreme 2 Lightを入手"
       },
@@ -2254,7 +2254,7 @@
       },
       "comparison": {
         "title": "Supreme 2 Light vs Supreme 2 MAX",
-        "maxAdvantage": "MAXの利点：詳細な脅威インテリジェンスを含み、LLMが使用するMCPサーバーとして動作します。"
+        "maxAdvantage": "MAXの利点:詳細な脅威インテリジェンスを含み、LLMが使用するMCPサーバーとして動作します。"
       },
       "whyLeads": {
         "title": "Supreme が市場をリードする理由"
@@ -2279,23 +2279,23 @@
       },
       "faq": {
         "title": "よくある質問",
-        "q1": "Supreme 2 はどのプログラミング言語をサポートしていますか？",
+        "q1": "Supreme 2 はどのプログラミング言語をサポートしていますか?",
         "a1": "Supreme 2はバックエンド、フロントエンド、クラウド、スクリプト、ドキュメントワークフロー全般にわたる主要な現代言語、設定フォーマット、インフラファイルをサポートしています。",
         "a1Coverage": "41種類のスキャナータイプで100以上のファイル拡張子をカバーしています。",
-        "q2": "詳細にどのスキャナータイプとファイル形式がカバーされていますか？",
+        "q2": "詳細にどのスキャナータイプとファイル形式がカバーされていますか?",
         "a2Intro": "Supreme 2はすべての主要なプログラミング言語とファイル形式をカバーする41種類のスキャナータイプをサポートしています。",
-        "a2Total": "合計：41種類のスキャナータイプで100以上のファイル拡張子をカバー。",
-        "q3": "MCPとは何ですか？なぜ重要なのですか？",
+        "a2Total": "合計:41種類のスキャナータイプで100以上のファイル拡張子をカバー。",
+        "q3": "MCPとは何ですか?なぜ重要なのですか?",
         "a3": "MCPにより、Supreme 2 MAXは構造化されたセキュリティサーバーとして動作します。生テキストではなく、自動修正、AI駆動の修正、プログラム的解釈、継続的改善ワークフローのためのカテゴリ化されたJSON脆弱性レポートを返します。",
-        "q4": "Supreme 2はコードを保存しますか？",
+        "q4": "Supreme 2はコードを保存しますか?",
         "a4": "Supreme 2はあなたの環境でローカルにスキャンします。コードはスキャナーが動作するコンピュータから一切外に出ることはありません。GitHubでSupreme 2 Lightのソースコードを確認したり、コードスキャン中のネットワーク活動を監視することもできます。",
-        "q5": "インストール前の要件は何ですか？",
+        "q5": "インストール前の要件は何ですか?",
         "a5Prefix": "Supreme 2を実行するには、",
         "a5Python": "Python 3.0以上",
         "a5Suffix": "がマシンにインストールされている必要があります。さらに、Supreme本体のインストール前に",
         "a5Pip": "pip",
         "a5End": "がインストールされていることを確認する必要があります。",
-        "q6": "Supreme 2はスタートアップに適していますか？",
+        "q6": "Supreme 2はスタートアップに適していますか?",
         "a6": "はい。特にLLM生成コードで素早くリリースするAIファーストのスタートアップチームに効果的で、リポジトリ全体のセキュリティ分析なしでは見逃しやすいファイル横断のリスクが容易に見つかります。",
         "a1ScannerTypes": "種類のスキャナー",
         "a1Across": "にわたる",
@@ -2317,12 +2317,12 @@
     "noResults": "国が見つかりません",
     "continue": "続ける",
     "comingSoon": {
-      "title": "もうすぐ準備完了！",
+      "title": "もうすぐ準備完了!",
       "message": "サブスクリプション管理の管理パネルがあと以下の時間で準備できます",
       "hours": "時間",
-      "notification": "利用可能になったらお知らせします！",
+      "notification": "利用可能になったらお知らせします!",
       "back": "戻る",
-      "gotIt": "わかりました！"
+      "gotIt": "わかりました!"
     }
   },
   "aiSocComparison": {
@@ -2333,9 +2333,9 @@
     "web": {
       "title": "AI-SOC Web と従来型WAFソリューションの比較",
       "columns": {
-        "aiSoc": "AI-SOC Web（従量課金）",
-        "cloudflare": "Cloudflare WAF + Anti-DDoS（$20/月）",
-        "aws": "AWS WAF（従量課金）"
+        "aiSoc": "AI-SOC Web(従量課金)",
+        "cloudflare": "Cloudflare WAF + Anti-DDoS($20/月)",
+        "aws": "AWS WAF(従量課金)"
       },
       "rows": {
         "complexWaf": {
@@ -2353,9 +2353,9 @@
         },
         "setup": {
           "feature": "セットアップ時間",
-          "aiSoc": "2分（サイバーセキュリティ知識不要）",
-          "cloudflare": "2分（サイバーセキュリティ知識不要）",
-          "aws": "1日（サイバーセキュリティ専門家が必要）"
+          "aiSoc": "2分(サイバーセキュリティ知識不要)",
+          "cloudflare": "2分(サイバーセキュリティ知識不要)",
+          "aws": "1日(サイバーセキュリティ専門家が必要)"
         }
       }
     },
@@ -2364,7 +2364,7 @@
       "columns": {
         "aiSoc": "AI-SOC Email",
         "outlook": "Outlook/Gmail",
-        "kaspersky": "Kaspersky（メールプロバイダー接続型）"
+        "kaspersky": "Kaspersky(メールプロバイダー接続型)"
       },
       "rows": {
         "viewAll": {
@@ -2383,7 +2383,7 @@
           "feature": "安全なセットアップ完了時間",
           "aiSoc": "2分 サイバーセキュリティ知識不要",
           "outlook": "完全なセキュリティなし",
-          "kaspersky": "1〜3日（メールプロバイダー接続、サイバーセキュリティ専門家のみ実施可能）"
+          "kaspersky": "1〜3日(メールプロバイダー接続、サイバーセキュリティ専門家のみ実施可能)"
         }
       }
     }
@@ -2440,37 +2440,38 @@
     "title": "よくある質問",
     "items": [
       {
-        "question": "AI-SOCは単なるセキュリティエンジンですか、それとも完全なメールプラットフォームですか？",
+        "question": "AI-SOCは単なるセキュリティエンジンですか、それとも完全なメールプラットフォームですか?",
         "response": "AI-SOC は、組織のメール運用に応じて2つの使い方が可能です。\n\n1️⃣ 単体のセキュアメールプラットフォームとして\n\nAI-SOC は Gmail や Outlook のように、組織の主要メール基盤として運用できます。独自のメールサーバー基盤、安全なWebメール、企業アカウント管理用の管理コンソールを備えています。\n\n2️⃣ 既存メール環境向けのAIセキュリティレイヤーとして\n\n既存の Gmail / Outlook 環境に追加のセキュリティ層として導入できます。現在のメールプロバイダーを維持したまま、AI-SOC がメールトラフィックを解析し、フィッシング・なりすまし・悪意あるリンクなどの脅威から保護します。"
       },
       {
-        "question": "既存のGmailやOutlook環境と併用できますか？",
+        "question": "既存のGmailやOutlook環境と併用できますか?",
         "response": "はい。Gmail や Outlook をメインに使いながら、追加のセキュリティレイヤーとして AI-SOC を導入できます。"
       },
       {
-        "question": "AI-SOCを主要メール基盤として使うとどうなりますか？",
+        "question": "AI-SOCを主要メール基盤として使うとどうなりますか?",
         "response": "AI-SOC を主要基盤として使う場合、安全なWebメール、ドメイン単位の管理機能、組み込み脅威防御を一体的に利用できます。"
       },
       {
-        "question": "管理者は企業メールアカウントを作成・管理できますか？",
+        "question": "管理者は企業メールアカウントを作成・管理できますか?",
         "response": "はい。管理者はアカウント作成と管理、ドメイン全体のメール監視、必要時のメール削除を行えます。"
       },
       {
-        "question": "既存の企業メールアカウントをAI-SOCに接続できますか？",
+        "question": "既存の企業メールアカウントをAI-SOCに接続できますか?",
         "response": "はい。既存の Gmail / Outlook ベースの企業アカウントを AI-SOC に接続し、現在のプロバイダーを維持したまま保護を強化できます。"
       },
       {
-        "question": "セキュリティは事前設定済みですか？手動設定が必要ですか？",
+        "question": "セキュリティは事前設定済みですか?手動設定が必要ですか?",
         "response": "AI-SOC は事前設定済みの AI 駆動システムです。案内ページに沿った最小限の設定で組み込み保護を利用できます。"
       },
       {
-        "question": "メール/Webフィルタリング以外に、どんな高度な脅威を検知できますか？",
+        "question": "メール/Webフィルタリング以外に、どんな高度な脅威を検知できますか?",
         "response": "AI-SOC はフィッシング文脈、なりすましパターン、悪性リンク、マルウェア添付、メール・Webトラフィック上の不審挙動を検知します。"
       },
       {
-        "question": "AI-SOCは攻撃を事前に防ぐために脅威インテリジェンスを使っていますか？",
+        "question": "AI-SOCは攻撃を事前に防ぐために脅威インテリジェンスを使っていますか?",
         "response": "はい。脅威インテリジェンスフィードを活用し、既知の悪性インフラを保護対象へ到達する前にブロックします。"
       }
     ]
   }
 }
+

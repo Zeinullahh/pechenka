@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import Image from 'next/image';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Link as LocalizedLink } from '@/i18n/navigation';
@@ -7,7 +7,7 @@ import Link from 'next/link';
 const Footer = () => {
   const { t } = useLanguage();
   const year = new Date().getFullYear();
-  const copyright = t("footer.copyright", `© ${year} Silence AI. All rights reserved.`, { year });
+  const copyright = t("footer.copyright", `Â© ${year} Silence AI. All rights reserved.`, { year });
 
   return (
     <footer className="bg-transparent text-white pt-52 pb-20 sm:pt-72 sm:pb-24 lg:pb-12 lg:pt-60">
@@ -20,7 +20,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-12 items-center text-gray-400 text-center md:text-left text-sm md:text-base">
             <div className="flex flex-col sm:flex-row items-center sm:space-x-2">
               <span className="font-semibold text-white">{t("footer.contactLabel", "Contact:")}</span>
-              <span>{t("footer.contactValue", "info@silenceai.net")}</span>
+              <span>{t("footer.contactValue", "support@silence.codes")}</span>
             </div>
             <div className="flex flex-col sm:flex-row items-center sm:space-x-2">
               <span className="font-semibold text-white">{t("footer.addressLabel", "Address:")}</span>
@@ -78,3 +78,4 @@ const Footer = () => {
 };
 
 export default Footer;
+

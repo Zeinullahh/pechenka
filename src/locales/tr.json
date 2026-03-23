@@ -10,7 +10,7 @@
     "subtitle": "Hesabınıza nasıl erişmek istediğinizi seçin",
     "webmail": {
       "title": "Webmail",
-      "desc": "Gelen kutunuza doğrudan erişin"
+      "desc": "Gelen kutunuza doÄŸrudan eriÅŸin"
     },
     "admin": {
       "title": "Yönetici Konsolu",
@@ -62,7 +62,7 @@
   "homePartners": {
     "title": "Müşteriler ve İş Ortakları",
     "subtitle": "Burada öne çıkanlar lider müşterilerimiz ve iş ortaklarımızdan bazılarıdır; bu tam liste değildir.",
-    "marketCap": "Piyasa Değeri",
+    "marketCap": "Piyasa DeÄŸeri",
     "billion": "Milyar",
     "million": "Milyon"
   },
@@ -92,7 +92,7 @@
       "instructions": "Talimatlar",
       "product": "AI-SOC",
       "secureDevelopment": "SLNC-env",
-      "developerServices": "Geliştirici Hizmetleri",
+      "developerServices": "GeliÅŸtirici Hizmetleri",
       "home": "Ana sayfa",
       "systems": "Sistemler",
       "systemsAiSoc": "AI-SOC",
@@ -104,7 +104,7 @@
       "instructionsSupreme": "Supreme",
       "instructionsSithub": "Sithub"
     },
-    "login": "Giriş yap",
+    "login": "GiriÅŸ yap",
     "cta": {
       "contact": "İletişim",
       "download": "İndir",
@@ -260,7 +260,7 @@
         "changes": {
           "title": "8. Değişiklikler ve İletişim",
           "body1": "Silence AI, programdaki veya yürürlükteki hukuktaki değişiklikleri yansıtmak için bu şartları güncelleyebilir. Yayınlandığında yürürlüğe girer.",
-          "body2": "Ortaklık programı soruları için info@silenceai.net adresine yazabilirsiniz."
+          "body2": "Ortaklık programı soruları için support@silence.codes adresine yazabilirsiniz."
         }
       }
     },
@@ -430,7 +430,7 @@
         "title": "Güvenlik Açığı Bulucu",
         "price": "$25/ay",
         "description": "Ayda 50 TAM güvenlik açığı kontrolüne kadar\nEk TAM kontroller: her biri $0.5",
-        "button": "Testi Başlat",
+        "button": "Testi BaÅŸlat",
         "features": {
           "dynamic": "Dinamik güvenlik açığı bulucu",
           "codeAnalyzer": "Kod analizcisi",
@@ -538,7 +538,7 @@
   },
   "footer": {
     "contactLabel": "İletişim:",
-    "contactValue": "info@silenceai.net",
+    "contactValue": "support@silence.codes",
     "addressLabel": "Adres:",
     "addressValue": "Media City Free Zone, Al Messaned, Sharjah, BAE",
     "links": {
@@ -600,14 +600,14 @@
       "stuxnet": {
         "year": "2010",
         "attack": "Stuxnet",
-        "target": "Natanz zenginleştirme tesisi",
+        "target": "Natanz zenginleÅŸtirme tesisi",
         "impact": "~1.000 santrifüj imha edildi",
         "severity": "Kritik"
       },
       "blackEnergy": {
         "year": "2015",
         "attack": "BlackEnergy",
-        "target": "Ukrayna enerji şebekesi",
+        "target": "Ukrayna enerji ÅŸebekesi",
         "impact": "230 bin müşteri elektriksiz kaldı",
         "severity": "Yüksek"
       },
@@ -719,7 +719,7 @@
       "monthlyPlan": "Aylık",
       "monthlyDesc": "Esnek faturalama",
       "yearlyPlan": "Yıllık",
-      "yearlyDesc": "En iyi değer",
+      "yearlyDesc": "En iyi deÄŸer",
       "month": "ay",
       "billedAnnually": "Yıllık faturalandırılır",
       "doubleSavings": "2x TASARRUF",
@@ -811,7 +811,7 @@
     "placeholders": {
       "name": "Ahmet Yılmaz",
       "email": "ahmet@sirket.com",
-      "company": "Acme A.Ş."
+      "company": "Acme A.Åž."
     },
     "submit": "Talep Gönder",
     "successTitle": "Teşekkürler!",
@@ -849,7 +849,7 @@
     "description": "{country} ve {market} için üretime hazır yapay zeka ajanları ve özel yazılımlar geliştiriyoruz.",
     "country": "Kazakistan",
     "market": "küresel pazar",
-    "startProject": "Proje Başlat",
+    "startProject": "Proje BaÅŸlat",
     "liveDemo": "Canlı Demo — YZ Ajanı",
     "live": "Canlı",
     "aiAgent": "YZ Ajanı v2.1",
@@ -860,7 +860,7 @@
     "tasks": {
       "dataCollection": "Veri Toplama",
       "aiAnalysis": "YZ Analizi",
-      "reportGeneration": "Rapor Oluşturma"
+      "reportGeneration": "Rapor OluÅŸturma"
     },
     "stats": {
       "tasks": "Görevler",
@@ -971,7 +971,7 @@
     "subtitle": "Ultra hızlı teslimat süreci — hız için optimize edilmiştir.",
     "steps": {
       "discovery": {
-        "title": "Keşif",
+        "title": "KeÅŸif",
         "desc": "Gereksinimler, paydaşlar, başarı ölçütleri."
       },
       "design": {
@@ -1112,7 +1112,7 @@
       "title": "AI-SOC ve SLNC-env'i birleştirmeye hazır mısınız?",
       "subtitle": "Bize güvenlik ve teslimat hedeflerinizi söyleyin — doğru sistem ve hizmetleri hizalayalım.",
       "cta": "Demo iste",
-      "ctaSecondary": "Hizmet ekibiyle konuş"
+      "ctaSecondary": "Hizmet ekibiyle konuÅŸ"
     },
     "resources": {
       "title": "Öne çıkan yazılar",
@@ -1145,8 +1145,8 @@
       "chapters": [
         {
           "id": "getting-started",
-          "title": "Başlarken",
-          "label": "Başlarken",
+          "title": "BaÅŸlarken",
+          "label": "BaÅŸlarken",
           "description": "CMC Yönetici Paneli'nde ilk onboarding adımları ile etki alanı ve DNS yapılandırması.",
           "sections": [
             {
@@ -1435,7 +1435,7 @@
                     "Listede kullanıcıyı bulun.",
                     "Eylemler menüsünden \"Kotayı Düzenle\"yi seçin.",
                     "Yeni depolama boyutunu seçin.",
-                    "Değişiklikleri kaydedin."
+                    "DeÄŸiÅŸiklikleri kaydedin."
                   ]
                 },
                 {
@@ -1467,8 +1467,8 @@
         },
         {
           "id": "mail-operations",
-          "title": "E-posta işlemleri",
-          "label": "E-posta işlemleri",
+          "title": "E-posta iÅŸlemleri",
+          "label": "E-posta iÅŸlemleri",
           "description": "Webmail istemcisindeki günlük işlemler.",
           "sections": [
             {
@@ -1525,7 +1525,7 @@
                   "items": [
                     "Filtre: Gönderen Etki Alanı",
                     "Eşleştirme modu: İçerir",
-                    "Değer: client.com"
+                    "DeÄŸer: client.com"
                   ]
                 },
                 {
@@ -1718,7 +1718,7 @@
                 },
                 {
                   "type": "list",
-                  "title": "Bileşenler:",
+                  "title": "BileÅŸenler:",
                   "items": [
                     "CMC Yönetici Paneli — etki alanları, kullanıcılar ve DNS ayarları için yönetici konsolu.",
                     "Webmail İstemcisi — otomatik tehdit korumasına sahip çalışan posta kutusu.",
@@ -1802,7 +1802,7 @@
                   "title": "Eşleşme modları:",
                   "items": [
                     "İçerir",
-                    "Eşittir",
+                    "EÅŸittir",
                     "İle başlar",
                     "İle biter"
                   ]
@@ -1952,7 +1952,7 @@
                     "Etki alanı ve DNS yönetimi",
                     "Kullanıcı oluşturma ve yönetme",
                     "Etki alanındaki tüm e-postaları görüntüleme",
-                    "Toplu e-posta işlemleri yapma"
+                    "Toplu e-posta iÅŸlemleri yapma"
                   ]
                 },
                 {
@@ -1968,7 +1968,7 @@
                   "type": "list",
                   "title": "Kullanıcı",
                   "items": [
-                    "Webmail istemcisine erişim",
+                    "Webmail istemcisine eriÅŸim",
                     "Kendi e-postasıyla çalışma",
                     "Kişisel ayarları yapılandırma"
                   ]
@@ -1995,7 +1995,7 @@
             },
             {
               "id": "authentication",
-              "title": "Kimlik doğrulama",
+              "title": "Kimlik doÄŸrulama",
               "body": [
                 {
                   "type": "list",
@@ -2115,7 +2115,7 @@
         "storage5tb": "Kullanıcı başına 5 TB güvenli posta depolaması",
         "storage10tb": "Kullanıcı başına 10 TB güvenli posta depolaması",
         "multiAccountSupport": "Birden fazla hesabı destekler (Gmail/Outlook entegrasyonu)",
-        "support247": "7/24 e-posta ve web desteği",
+        "support247": "7/24 e-posta ve web desteÄŸi",
         "fullTextSearch": "Tam metin yeteneklerine sahip e-posta araması",
         "aiAssistedCategorization": "E-postaların güvenlik klasörlerine YZ destekli ayrılması",
         "basicFiltering": "Temel otomatik filtre kurallı özel klasörler",
@@ -2142,14 +2142,14 @@
       "subtitle": "Size en uygun planı seçin",
       "monthly": {
         "title": "Aylık",
-        "description": "Esnek, istediğiniz zaman iptal"
+        "description": "Esnek, istediÄŸiniz zaman iptal"
       },
       "month": "ay",
-      "subscribe": "Şimdi abone ol",
+      "subscribe": "Åžimdi abone ol",
       "saveBadge": "%30 tasarruf",
       "yearly": {
         "title": "Yıllık",
-        "description": "En iyi değer"
+        "description": "En iyi deÄŸer"
       },
       "year": "yıl",
       "perMonthApprox": "Ayda ~{value}"
@@ -2296,7 +2296,7 @@
         "a5Python": "Python 3.0 veya üzeri",
         "a5Suffix": "kurulu olmalıdır. Ayrıca Supreme'in kurulumundan önce",
         "a5Pip": "pip",
-        "a5End": "kurulu olduğundan emin olmak gerekir.",
+        "a5End": "kurulu olduÄŸundan emin olmak gerekir.",
         "q6": "Supreme 2 başlangıç şirketleri için uygun mudur?",
         "a6": "Evet. LLM tarafından üretilen kodla hızlı teslimat yapan yapay zeka öncelikli başlangıç ekipleri için özellikle etkilidir; depo genelinde güvenlik analizi olmadan dosyalar arası saklı riskler kolayca gözden kaçabilir.",
         "a1ScannerTypes": "farklı tarayıcı türü",
@@ -2423,20 +2423,20 @@
       },
       {
         "stat": "20,5 milyon",
-        "suffix": "Q1 2025’te DDoS saldırısı",
-        "description": "Büyük trafik seli, web sitelerini ve API’leri dakikalar içinde çevrimdışı bırakabilir."
+        "suffix": "Q1 2025'te DDoS saldırısı",
+        "description": "Büyük trafik seli, web sitelerini ve API'leri dakikalar içinde çevrimdışı bırakabilir."
       },
       {
         "stat": "30.000",
         "suffix": "web sitesi her gün hackleniyor",
-        "description": "Startup’lardan büyük işletmelere kadar web altyapısı sürekli bir hedef olmaya devam ediyor."
+        "description": "Startup'lardan büyük işletmelere kadar web altyapısı sürekli bir hedef olmaya devam ediyor."
       }
     ]
   },
   "aiSocPricing": {
     "intro": "AI-SOC, bağımsız siber güvenlik sistemlerinden oluşan bir seridir",
     "emailDescription": "Email Security, kurumsal iletişiminiz için koruyucu bir kalkan görevi görür. Gelen ve giden mesajları filtreleyerek phishing girişimlerini, spoofing saldırılarını ve kötü amaçlı bağlantıları kullanıcılarınıza ulaşmadan etkisiz hale getirir; böylece iş yazışmalarınızın bütünlüğünü korur.",
-    "webDescription": "Web Security, trafik desenlerini gerçek zamanlı analiz ederek dijital altyapınızı korur. Web sitelerini ve API’leri yaygın güvenlik açıklarına, DDoS saldırılarına ve yetkisiz erişime karşı savunur; performansı etkilemeden ağ etkinliğine derin görünürlük sağlar."
+    "webDescription": "Web Security, trafik desenlerini gerçek zamanlı analiz ederek dijital altyapınızı korur. Web sitelerini ve API'leri yaygın güvenlik açıklarına, DDoS saldırılarına ve yetkisiz erişime karşı savunur; performansı etkilemeden ağ etkinliğine derin görünürlük sağlar."
   },
   "aiSocFaq": {
     "title": "Sık Sorulan Sorular",
@@ -2447,7 +2447,7 @@
       },
       {
         "question": "Mevcut Gmail veya Outlook ortamlarıyla birlikte kullanılabilir mi?",
-        "response": "Evet. Gmail veya Outlook’u ana sağlayıcı olarak kullanmaya devam ederken AI-SOC’u ek güvenlik katmanı olarak çalıştırabilirsiniz."
+        "response": "Evet. Gmail veya Outlook'u ana sağlayıcı olarak kullanmaya devam ederken AI-SOC'u ek güvenlik katmanı olarak çalıştırabilirsiniz."
       },
       {
         "question": "AI-SOC birincil e-posta altyapısı olarak çalıştığında ne olur?",
@@ -2458,8 +2458,8 @@
         "response": "Evet. Yöneticiler hesap oluşturup yönetebilir, alan adı genelinde e-posta etkinliğini izleyebilir ve gerektiğinde e-postaları silebilir."
       },
       {
-        "question": "Mevcut kurumsal e-posta hesapları AI-SOC’a bağlanabilir mi?",
-        "response": "Evet. Mevcut Gmail/Outlook kurumsal hesapları AI-SOC’a bağlanabilir; böylece sağlayıcıyı değiştirmeden koruma katmanı eklenir."
+        "question": "Mevcut kurumsal e-posta hesapları AI-SOC'a bağlanabilir mi?",
+        "response": "Evet. Mevcut Gmail/Outlook kurumsal hesapları AI-SOC'a bağlanabilir; böylece sağlayıcıyı değiştirmeden koruma katmanı eklenir."
       },
       {
         "question": "Güvenlik önceden yapılandırılmış mı, yoksa manuel kurulum gerekir mi?",
@@ -2476,3 +2476,4 @@
     ]
   }
 }
+

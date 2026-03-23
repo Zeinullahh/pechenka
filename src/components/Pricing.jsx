@@ -389,6 +389,17 @@ const Pricing = ({ onOpenModal }) => {
             <p className="text-sm text-gray-400 leading-relaxed flex-grow">
               {t("aiSocPricing.emailDescription", "Email Security acts as a protective shield for your corporate communications. It filters incoming and outgoing messages to neutralize phishing attempts, spoofing attacks, and malicious links before they reach your users, ensuring the integrity of your business correspondence.")}
             </p>
+            <div className="mt-6 rounded-xl overflow-hidden border border-purple-500/20 shadow-[0_0_30px_-5px_rgba(168,85,247,0.25)] bg-black max-w-sm mx-auto">
+              <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
+                <iframe
+                  src="https://www.youtube.com/embed/3lW9az21aDk"
+                  title="AI-SOC Email Security"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full"
+                />
+              </div>
+            </div>
           </div>
 
           {/* Web Security Card */}
@@ -520,6 +531,24 @@ const Pricing = ({ onOpenModal }) => {
             </>
           )}
         </div>
+
+        {productType === "web" && (
+          <div className="mt-10 sm:mt-12 px-2 sm:px-0">
+            <div className="mx-auto max-w-5xl overflow-hidden rounded-3xl border border-cyan-400/25 bg-slate-950/70 shadow-[0_20px_60px_-20px_rgba(34,211,238,0.45)]">
+              <div className="aspect-video w-full">
+                <iframe
+                  className="h-full w-full"
+                  src="https://www.youtube.com/embed/BXWdaovJCjw"
+                  title="Web Security Instructions Video"
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+          </div>
+        )}
       </div>
 
 

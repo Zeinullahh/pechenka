@@ -47,7 +47,7 @@ const SlncEnvHeader = ({ onOpenAdminModal }) => {
     });
 
   const widthTarget = "100%";
-  const condensedShift = isCondensed ? (isDesktop ? 24 : 16) : 0;
+  const condensedShift = isCondensed && isDesktop ? 24 : 0;
 
 
   const systemsItems = [
@@ -177,7 +177,7 @@ const SlncEnvHeader = ({ onOpenAdminModal }) => {
       </AnimatePresence>
 
       <motion.header
-        className="fixed left-0 top-2 z-50 w-full px-4"
+        className="fixed left-0 top-2 z-50 w-full px-3 sm:px-4"
         initial={{ opacity: 0, y: -16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.35, ease: "easeOut" }}
@@ -201,21 +201,21 @@ const SlncEnvHeader = ({ onOpenAdminModal }) => {
           style={{ minWidth: isDesktop || isCondensed ? undefined : "100%" }}
         >
           <motion.div
-            className="flex items-center justify-between px-5 py-3 sm:px-7 lg:px-9"
+            className="flex items-center justify-between px-3 py-2 sm:px-7 sm:py-3 lg:px-9"
             transition={{ duration: 0.3, ease: "easeOut" }}
           >
             <motion.div
-              className="flex items-center"
+              className="flex shrink-0 items-center"
               animate={{ x: condensedShift }}
               transition={{ duration: 0.3, ease: "easeOut" }}
             >
-              <Link href="/" className="flex items-center">
+              <Link href="/" className="flex shrink-0 items-center">
                 <Image
                   src="/logo.svg"
                   alt="Company Logo"
                   width={100}
                   height={50}
-                  style={{ height: "auto", maxWidth: "120px" }}
+                  style={{ height: "auto", width: "clamp(78px, 24vw, 120px)", maxWidth: "120px" }}
                 />
               </Link>
             </motion.div>

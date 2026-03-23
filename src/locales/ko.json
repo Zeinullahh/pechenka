@@ -63,7 +63,7 @@
     "title": "고객 및 파트너",
     "subtitle": "여기에는 주요 고객 및 파트너 일부만 소개되어 있으며 전체 목록은 아닙니다.",
     "marketCap": "시가총액",
-    "billion": "십억",
+    "billion": "ì‹­ì–µ",
     "million": "백만"
   },
   "supremeInstructions": {
@@ -178,7 +178,7 @@
   "footer": {
     "copyright": "© {year} Silence AI. 모든 권리 보유.",
     "contactLabel": "연락처:",
-    "contactValue": "info@silenceai.net",
+    "contactValue": "support@silence.codes",
     "addressLabel": "주소:",
     "addressValue": "카자흐스탄 알마티",
     "links": {
@@ -192,7 +192,7 @@
   "cookie": {
     "title": "쿠키를 사용합니다",
     "description": "더 나은 경험과 트래픽 분석을 위해 쿠키를 사용합니다.",
-    "more": "“동의”를 누르면 쿠키 사용에 동의하게 됩니다.",
+    "more": "\u201c동의\u201d를 누르면 쿠키 사용에 동의하게 됩니다.",
     "link": "자세히 보기",
     "ok": "동의"
   },
@@ -290,7 +290,7 @@
   "insights": {
     "items": {
       "0": {
-        "title": "39초",
+        "title": "39ì´ˆ",
         "description": "해킹 공격은 39초마다 발생합니다"
       },
       "1": {
@@ -489,7 +489,7 @@
           "fix": "치명적 수정 (SLA 48시간)",
           "updates": "매달 업데이트",
           "audit": "분기별 보안 점검",
-          "manager": "전담 PM"
+          "manager": "젔ë‹´ PM"
         }
       },
       "pro": {
@@ -499,7 +499,7 @@
           "fix": "치명적 수정 (SLA 24시간)",
           "updates": "월 10시간 업데이트",
           "audit": "월간 보안 점검",
-          "manager": "전담 PM"
+          "manager": "젔ë‹´ PM"
         }
       },
       "enterprise": {
@@ -509,7 +509,7 @@
           "fix": "치명적 수정 (SLA 4시간)",
           "updates": "무제한 업데이트 및 로드맵",
           "audit": "주간 점검 및 백업",
-          "manager": "전담 PM"
+          "manager": "젔ë‹´ PM"
         }
       }
     },
@@ -651,7 +651,7 @@
       "sections": {
         "overview": {
           "title": "1. 프로그램 개요",
-          "body1": "1.1 계약 범위: 본 제휴 서비스 약관(“약관”)은 Silence AI LLC(“Silence AI”, “당사”)가 운영하는 제휴 프로그램 참여를 규율합니다. 이 약관은 제휴 파트너로 등록하는 개인 또는 단체(“귀하”)와 귀하가 대표하는 고용주·원청·조직에 적용됩니다.",
+          "body1": "1.1 계약 범위: 본 제휴 서비스 약관(\"약관\")은 Silence AI LLC(\"Silence AI\", \"당사\")가 운영하는 제휴 프로그램 참여를 규율합니다. 이 약관은 제휴 파트너로 등록하는 개인 또는 단체(\"귀하\")와 귀하가 대표하는 고용주·원청·조직에 적용됩니다.",
           "body2": "1.2 프로그램 요약: 자격을 갖춘 파트너는 추천 고객이 AI-SOC 1 상품을 구매하거나 잔액을 충전하면 커미션 기반 보상을 받습니다. 제휴 프로그램 참여 시 Silence AI 일반 서비스 약관 준수가 필요합니다."
         },
         "eligibility": {
@@ -689,7 +689,7 @@
         "changes": {
           "title": "8. 변경 및 문의",
           "body1": "Silence AI는 프로그램이나 관련 법 변경을 반영하기 위해 제휴 약관을 갱신할 수 있으며, 게시 즉시 효력이 발생합니다.",
-          "body2": "제휴 프로그램 관련 질문은 info@silenceai.net으로 보내주세요."
+          "body2": "제휴 프로그램 관련 질문은 support@silence.codes으로 보내주세요."
         }
       }
     }
@@ -788,7 +788,7 @@
     "subtitle": "기능이 아니라 결과를 제공합니다.",
     "caseStudy": "케이스",
     "problem": "문제:",
-    "solution": "해결:",
+    "solution": "í•´ê²°:",
     "liveImpact": "실시간 임팩트",
     "before": "이전",
     "after": "이후",
@@ -866,7 +866,7 @@
       "monthlyPlan": "월간",
       "monthlyDesc": "유연한 결제",
       "month": "월",
-      "yearlyPlan": "연간",
+      "yearlyPlan": "ì—°갔",
       "yearlyDesc": "최저가",
       "billedAnnually": "연 1회 청구",
       "doubleSavings": "2배 절약",
@@ -1028,7 +1028,7 @@
         "description": "ICS, OT, 로보틱스"
       },
       "government": {
-        "title": "정부",
+        "title": "ì •ë¶€",
         "description": "부처, 국방, 핵심 기관"
       }
     },
@@ -1056,11 +1056,11 @@
         "description": "유연하며 언제든 해지"
       },
       "yearly": {
-        "title": "연간",
+        "title": "ì—°갔",
         "description": "최저가"
       },
       "month": "월",
-      "year": "년",
+      "year": "녔",
       "saveBadge": "30% 절약",
       "subscribe": "구독하기",
       "perMonthApprox": "월 약 {value}"
@@ -1251,7 +1251,7 @@
       "enterprise": "Enterprise",
       "withoutTeams": "Teams 미포함 플랜",
       "withTeams": "Teams 포함 플랜",
-      "yearly": "연간",
+      "yearly": "ì—°갔",
       "monthly": "월간",
       "planHighlights": "플랜 하이라이트",
       "userMonth": "사용자/월",
@@ -1346,7 +1346,7 @@
                   "items": [
                     "관리자로부터 자격 증명을 받습니다.",
                     "mail.silenceai.net에 이메일/비밀번호 또는 OAuth로 로그인합니다.",
-                    "“작성” 버튼으로 첫 메시지를 보냅니다.",
+                    "\"작성\" 버튼으로 첫 메시지를 보냅니다.",
                     "보안 수준별로 자동 분류되는 시스템 폴더를 확인합니다."
                   ]
                 },
@@ -1368,9 +1368,9 @@
                   "type": "orderedList",
                   "items": [
                     "CMC 관리자 패널을 엽니다.",
-                    "“도메인 추가”를 클릭합니다.",
+                    "\"도메인 추가\"를 클릭합니다.",
                     "www 없이 도메인 이름을 입력합니다(예: company.com).",
-                    "“추가”를 클릭합니다."
+                    "\"추가\"를 클릭합니다."
                   ]
                 },
                 {
@@ -1401,12 +1401,12 @@
                   "type": "orderedList",
                   "items": [
                     "DNS 설정에 레코드를 추가합니다.",
-                    "자동 확인(5분 간격)을 기다리거나 “지금 확인”을 클릭합니다."
+                    "자동 확인(5분 간격)을 기다리거나 \"지금 확인\"을 클릭합니다."
                   ]
                 },
                 {
                   "type": "paragraph",
-                  "content": "확인은 최대 48시간 걸릴 수 있습니다. 성공 시 상태가 ‘확인됨’으로 변경됩니다."
+                  "content": "확인은 최대 48시간 걸릴 수 있습니다. 성공 시 상태가 '확인됨'으로 변경됩니다."
                 }
               ]
             },
@@ -1421,9 +1421,9 @@
                 {
                   "type": "orderedList",
                   "items": [
-                    "CMC 관리자 패널에서 “DNS 설정” → “SPF”로 이동합니다.",
-                    "“현재 SPF 확인”을 눌러 기존 레코드를 봅니다.",
-                    "“SPF 레코드 생성”을 클릭합니다.",
+                    "CMC 관리자 패널에서 \"DNS 설정\" → \"SPF\"로 이동합니다.",
+                    "\"현재 SPF 확인\"을 눌러 기존 레코드를 봅니다.",
+                    "\"SPF 레코드 생성\"을 클릭합니다.",
                     "제안된 레코드를 복사합니다:"
                   ]
                 },
@@ -1454,8 +1454,8 @@
                 {
                   "type": "orderedList",
                   "items": [
-                    "CMC 관리자 패널에서 “DNS 설정” → “DKIM”으로 이동합니다.",
-                    "“DKIM 키 생성”을 클릭합니다.",
+                    "CMC 관리자 패널에서 \"DNS 설정\" → \"DKIM\"으로 이동합니다.",
+                    "\"DKIM 키 생성\"을 클릭합니다.",
                     "시스템이 키 쌍을 생성하며, 프라이빗 키는 서버에 남고 퍼블릭 키는 DNS용입니다.",
                     "DNS 레코드를 복사합니다:"
                   ]
@@ -1468,7 +1468,7 @@
                   "type": "orderedList",
                   "items": [
                     "DNS에 레코드를 추가합니다.",
-                    "“DKIM 확인”을 눌러 검증합니다."
+                    "\"DKIM 확인\"을 눌러 검증합니다."
                   ]
                 }
               ]
@@ -1484,7 +1484,7 @@
                 {
                   "type": "orderedList",
                   "items": [
-                    "CMC 관리자 패널에서 “DNS 설정” → “DMARC”를 엽니다.",
+                    "CMC 관리자 패널에서 \"DNS 설정\" → \"DMARC\"를 엽니다.",
                     "정책을 선택합니다:"
                   ]
                 },
@@ -1498,7 +1498,7 @@
                 {
                   "type": "orderedList",
                   "items": [
-                    "“DMARC 레코드 생성”을 클릭합니다.",
+                    "\"DMARC 레코드 생성\"을 클릭합니다.",
                     "레코드를 복사합니다:"
                   ]
                 },
@@ -1533,8 +1533,8 @@
                 {
                   "type": "orderedList",
                   "items": [
-                    "CMC에서 “이메일 계정” 섹션을 엽니다.",
-                    "“계정 생성”을 클릭합니다.",
+                    "CMC에서 \"이메일 계정\" 섹션을 엽니다.",
+                    "\"계정 생성\"을 클릭합니다.",
                     "필드를 채웁니다:"
                   ]
                 },
@@ -1550,7 +1550,7 @@
                 {
                   "type": "orderedList",
                   "items": [
-                    "“생성”을 클릭합니다."
+                    "\"생성\"을 클릭합니다."
                   ]
                 },
                 {
@@ -1566,7 +1566,7 @@
                 {
                   "type": "orderedList",
                   "items": [
-                    "“이메일 계정”에서 사용자를 찾습니다.",
+                    "\"이메일 계정\"에서 사용자를 찾습니다.",
                     "작업 메뉴에서 선택합니다:"
                   ]
                 },
@@ -1593,7 +1593,7 @@
                   "type": "orderedList",
                   "items": [
                     "목록에서 사용자를 찾습니다.",
-                    "작업 메뉴에서 “할당량 변경”을 선택합니다.",
+                    "작업 메뉴에서 \"할당량 변경\"을 선택합니다.",
                     "새 용량을 선택합니다.",
                     "변경 사항을 저장합니다."
                   ]
@@ -1612,7 +1612,7 @@
                   "type": "orderedList",
                   "items": [
                     "목록에서 사용자를 찾습니다.",
-                    "작업 메뉴에서 “삭제”를 선택합니다.",
+                    "작업 메뉴에서 \"삭제\"를 선택합니다.",
                     "삭제를 확인합니다."
                   ]
                 },
@@ -1638,7 +1638,7 @@
                 {
                   "type": "orderedList",
                   "items": [
-                    "웹메일에서 “작성”을 클릭합니다.",
+                    "웹메일에서 \"작성\"을 클릭합니다.",
                     "다음을 입력합니다:"
                   ]
                 },
@@ -1654,7 +1654,7 @@
                   "type": "orderedList",
                   "items": [
                     "필요 시 최대 25MB 첨부파일을 추가합니다.",
-                    "“보내기”를 누릅니다."
+                    "\"보내기\"를 누릅니다."
                   ]
                 },
                 {
@@ -1674,9 +1674,9 @@
                 {
                   "type": "orderedList",
                   "items": [
-                    "사이드바에서 “폴더 만들기”를 클릭합니다.",
-                    "폴더 이름을 입력합니다(예: “고객”).",
-                    "“규칙 추가”를 클릭합니다.",
+                    "사이드바에서 \"폴더 만들기\"를 클릭합니다.",
+                    "폴더 이름을 입력합니다(예: \"고객\").",
+                    "\"규칙 추가\"를 클릭합니다.",
                     "규칙을 설정합니다:"
                   ]
                 },
@@ -1691,13 +1691,13 @@
                 {
                   "type": "orderedList",
                   "items": [
-                    "“기존 메일에 적용”을 선택하면 과거 메일에도 적용됩니다.",
-                    "“생성”을 클릭합니다."
+                    "\"기존 메일에 적용\"을 선택하면 과거 메일에도 적용됩니다.",
+                    "\"생성\"을 클릭합니다."
                   ]
                 },
                 {
                   "type": "paragraph",
-                  "content": "이후 *@client.com 메일은 자동으로 “Clients” 폴더로 이동합니다."
+                  "content": "이후 *@client.com 메일은 자동으로 \"Clients\" 폴더로 이동합니다."
                 }
               ]
             },
@@ -1713,7 +1713,7 @@
                   "type": "orderedList",
                   "items": [
                     "SPAM 폴더에서 메일을 엽니다.",
-                    "“Not Spam” → “Whitelist에 추가”를 클릭합니다.",
+                    "\"Not Spam\" → \"Whitelist에 추가\"를 클릭합니다.",
                     "다음을 선택합니다:"
                   ]
                 },
@@ -1743,10 +1743,10 @@
                 {
                   "type": "orderedList",
                   "items": [
-                    "설정 → “Email Signature”를 엽니다.",
-                    "“Enable signature”를 켭니다.",
+                    "설정 → \"Email Signature\"를 엽니다.",
+                    "\"Enable signature\"를 켭니다.",
                     "에디터에 서명을 입력합니다.",
-                    "“Save”를 클릭합니다."
+                    "\"Save\"를 클릭합니다."
                   ]
                 },
                 {
@@ -1762,12 +1762,12 @@
                 {
                   "type": "orderedList",
                   "items": [
-                    "설정 → “Vacation Responder”를 엽니다.",
-                    "“Enable vacation responder”를 켭니다.",
+                    "설정 → \"Vacation Responder\"를 엽니다.",
+                    "\"Enable vacation responder\"를 켭니다.",
                     "시작·종료 날짜를 지정합니다.",
                     "응답 메시지를 입력합니다.",
-                    "“Reply once per sender”를 선택해 발신자당 1회만 응답하도록 합니다.",
-                    "“Save”를 클릭합니다."
+                    "\"Reply once per sender\"를 선택해 발신자당 1회만 응답하도록 합니다.",
+                    "\"Save\"를 클릭합니다."
                   ]
                 },
                 {
@@ -1783,11 +1783,11 @@
                 {
                   "type": "orderedList",
                   "items": [
-                    "설정 → “Email Forwarding”을 엽니다.",
-                    "“Add Forwarding Address”를 클릭합니다.",
+                    "설정 → \"Email Forwarding\"을 엽니다.",
+                    "\"Add Forwarding Address\"를 클릭합니다.",
                     "전달할 이메일을 입력합니다.",
-                    "사본을 보관하려면 “Keep copy in inbox”를 켭니다.",
-                    "“Save”를 클릭합니다."
+                    "사본을 보관하려면 \"Keep copy in inbox\"를 켭니다.",
+                    "\"Save\"를 클릭합니다."
                   ]
                 },
                 {
@@ -1815,7 +1815,7 @@
                 {
                   "type": "orderedList",
                   "items": [
-                    "CMC → “Email Activity”를 엽니다.",
+                    "CMC → \"Email Activity\"를 엽니다.",
                     "다음 필터를 사용합니다:"
                   ]
                 },
@@ -1847,10 +1847,10 @@
                 {
                   "type": "orderedList",
                   "items": [
-                    "“Email Activity”를 엽니다.",
+                    "\"Email Activity\"를 엽니다.",
                     "필터 또는 검색으로 메시지를 찾습니다.",
                     "삭제할 메시지를 선택합니다.",
-                    "“Delete Selected”를 클릭합니다.",
+                    "\"Delete Selected\"를 클릭합니다.",
                     "대량 삭제를 확인합니다."
                   ]
                 },
@@ -2137,7 +2137,7 @@
             },
             {
               "id": "role-assignment",
-              "title": "역할 배정",
+              "title": "ì—­í•  ë°°ì •",
               "body": [
                 {
                   "type": "paragraph",
@@ -2145,11 +2145,11 @@
                 },
                 {
                   "type": "paragraph",
-                  "content": "부관리자 생성: 관리자는 CMC “사용자 관리”에서 부관리자 계정을 추가합니다."
+                  "content": "부관리자 생성: 관리자는 CMC \"사용자 관리\"에서 부관리자 계정을 추가합니다."
                 },
                 {
                   "type": "paragraph",
-                  "content": "일반 사용자 생성: 관리자는 “이메일 계정”에서 메일박스를 만들며 자동으로 ‘사용자’ 역할이 부여됩니다."
+                  "content": "일반 사용자 생성: 관리자는 \"이메일 계정\"에서 메일박스를 만들며 자동으로 '사용자' 역할이 부여됩니다."
                 }
               ]
             },
@@ -2508,3 +2508,4 @@
     ]
   }
 }
+

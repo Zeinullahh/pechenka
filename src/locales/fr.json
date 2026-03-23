@@ -61,7 +61,7 @@
   },
   "homePartners": {
     "title": "Clients et partenaires",
-    "subtitle": "Voici quelques-uns de nos principaux clients et partenaires ; cette liste n’est pas exhaustive.",
+    "subtitle": "Voici quelques-uns de nos principaux clients et partenaires ; cette liste n'est pas exhaustive.",
     "marketCap": "Capitalisation boursière",
     "billion": "Milliard",
     "million": "Million"
@@ -208,7 +208,7 @@
       },
       "analyzer": {
         "title": "Analyseur de sécurité",
-        "tag": "Moteur local d’analyse de code"
+        "tag": "Moteur local d'analyse de code"
       },
       "vulnDb": {
         "title": "Base de vulnérabilités",
@@ -261,7 +261,7 @@
         "changes": {
           "title": "8. Changes & Contact",
           "body1": "Silence AI may update these affiliate terms to reflect changes in the program or applicable law. Updated versions take effect upon publication on this page.",
-          "body2": "Questions about the affiliate program can be sent to info@silenceai.net."
+          "body2": "Questions about the affiliate program can be sent to support@silence.codes."
         }
       }
     },
@@ -285,11 +285,11 @@
     "tooltips": {
       "web": {
         "title": "Protection contre les attaques web",
-        "content": "Le système protège contre TOUS les types d’attaques web (DDoS, SQLi, etc.), sauf les vulnérabilités de logique métier."
+        "content": "Le système protège contre TOUS les types d'attaques web (DDoS, SQLi, etc.), sauf les vulnérabilités de logique métier."
       },
       "email": {
         "title": "Protection contre les attaques par e-mail",
-        "content": "Le système protège contre TOUS les types d’attaques par e-mail : phishing, pièces jointes malveillantes, liens dangereux, etc."
+        "content": "Le système protège contre TOUS les types d'attaques par e-mail : phishing, pièces jointes malveillantes, liens dangereux, etc."
       },
       "vulnerability": {
         "title": "Détection des vulnérabilités",
@@ -539,7 +539,7 @@
   },
   "footer": {
     "contactLabel": "Contact :",
-    "contactValue": "info@silenceai.net",
+    "contactValue": "support@silence.codes",
     "addressLabel": "Adresse :",
     "addressValue": "Media City Free Zone, Al Messaned, Sharjah, ÉAU",
     "links": {
@@ -1115,13 +1115,13 @@
     "emailSecurity": {
       "title": "Système de sécurité des e-mails",
       "subtitle": "Documentation | Version 1.0",
-      "description": "Comment configurer et exploiter la plateforme de sécurité des e-mails de l’entreprise.",
+      "description": "Comment configurer et exploiter la plateforme de sécurité des e-mails de l'entreprise.",
       "chapters": [
         {
           "id": "getting-started",
           "title": "Prise en main",
           "label": "Prise en main",
-          "description": "Étapes d’onboarding initial et configuration du domaine et du DNS dans le panneau d’administration CMC.",
+          "description": "Étapes d'onboarding initial et configuration du domaine et du DNS dans le panneau d'administration CMC.",
           "sections": [
             {
               "id": "admin-setup",
@@ -1134,7 +1134,7 @@
                 {
                   "type": "orderedList",
                   "items": [
-                    "Connectez-vous au panneau d’administration CMC sur admin.silenceai.net avec Google ou Microsoft OAuth.",
+                    "Connectez-vous au panneau d'administration CMC sur admin.silenceai.net avec Google ou Microsoft OAuth.",
                     "Enregistrez le domaine de votre entreprise.",
                     "Vérifiez la propriété du domaine via le DNS.",
                     "Configurez les enregistrements de sécurité (SPF, DKIM, DMARC).",
@@ -1158,7 +1158,7 @@
                 {
                   "type": "orderedList",
                   "items": [
-                    "Récupérez vos identifiants auprès de l’administrateur.",
+                    "Récupérez vos identifiants auprès de l'administrateur.",
                     "Connectez-vous à mail.silenceai.net avec votre e-mail/mot de passe ou via OAuth.",
                     "Envoyez votre premier message en cliquant sur le bouton \"Nouveau message\".",
                     "Consultez les dossiers système qui classent automatiquement les messages par niveau de sécurité."
@@ -1176,12 +1176,12 @@
               "body": [
                 {
                   "type": "paragraph",
-                  "content": "La gestion des domaines s’effectue dans le panneau d’administration CMC."
+                  "content": "La gestion des domaines s'effectue dans le panneau d'administration CMC."
                 },
                 {
                   "type": "orderedList",
                   "items": [
-                    "Ouvrez le panneau d’administration CMC.",
+                    "Ouvrez le panneau d'administration CMC.",
                     "Cliquez sur \"Ajouter un domaine\".",
                     "Saisissez le nom de domaine sans www (par exemple company.com).",
                     "Cliquez sur \"Ajouter\"."
@@ -1199,12 +1199,12 @@
               "body": [
                 {
                   "type": "paragraph",
-                  "content": "Après avoir ajouté un domaine, vous devez prouver qu’il vous appartient."
+                  "content": "Après avoir ajouté un domaine, vous devez prouver qu'il vous appartient."
                 },
                 {
                   "type": "orderedList",
                   "items": [
-                    "Copiez l’enregistrement TXT fourni dans le CMC :"
+                    "Copiez l'enregistrement TXT fourni dans le CMC :"
                   ]
                 },
                 {
@@ -1220,13 +1220,13 @@
                 },
                 {
                   "type": "paragraph",
-                  "content": "La vérification peut prendre jusqu’à 48 heures. Une fois terminée avec succès, le statut du domaine passe à \"vérifié\"."
+                  "content": "La vérification peut prendre jusqu'à 48 heures. Une fois terminée avec succès, le statut du domaine passe à \"vérifié\"."
                 }
               ]
             },
             {
               "id": "configure-spf",
-              "title": "Configurer l’enregistrement SPF",
+              "title": "Configurer l'enregistrement SPF",
               "body": [
                 {
                   "type": "paragraph",
@@ -1237,8 +1237,8 @@
                   "items": [
                     "Dans le CMC, ouvrez \"Configuration DNS\" → \"SPF\".",
                     "Cliquez sur \"Vérifier le SPF actuel\" pour voir les enregistrements existants.",
-                    "Cliquez sur \"Générer l’enregistrement SPF\".",
-                    "Copiez l’enregistrement proposé :"
+                    "Cliquez sur \"Générer l'enregistrement SPF\".",
+                    "Copiez l'enregistrement proposé :"
                   ]
                 },
                 {
@@ -1271,7 +1271,7 @@
                     "Dans le CMC, ouvrez \"Configuration DNS\" → \"DKIM\".",
                     "Cliquez sur \"Générer les clés DKIM\".",
                     "Le système crée une paire de clés (la clé privée reste sur le serveur, la clé publique est publiée dans le DNS).",
-                    "Copiez l’enregistrement DNS :"
+                    "Copiez l'enregistrement DNS :"
                   ]
                 },
                 {
@@ -1312,8 +1312,8 @@
                 {
                   "type": "orderedList",
                   "items": [
-                    "Cliquez sur \"Générer l’enregistrement DMARC\".",
-                    "Copiez l’enregistrement :"
+                    "Cliquez sur \"Générer l'enregistrement DMARC\".",
+                    "Copiez l'enregistrement :"
                   ]
                 },
                 {
@@ -1369,7 +1369,7 @@
                 },
                 {
                   "type": "paragraph",
-                  "content": "L’utilisateur peut se connecter immédiatement au webmail."
+                  "content": "L'utilisateur peut se connecter immédiatement au webmail."
                 }
               ]
             },
@@ -1380,21 +1380,21 @@
                 {
                   "type": "orderedList",
                   "items": [
-                    "Trouvez l’utilisateur dans la liste des \"Comptes e-mail\".",
+                    "Trouvez l'utilisateur dans la liste des \"Comptes e-mail\".",
                     "Dans le menu Actions, choisissez :"
                   ]
                 },
                 {
                   "type": "list",
                   "items": [
-                    "Suspend — suspendre l’accès (l’utilisateur ne peut plus se connecter)",
-                    "Activate — rétablir l’accès"
+                    "Suspend — suspendre l'accès (l'utilisateur ne peut plus se connecter)",
+                    "Activate — rétablir l'accès"
                   ]
                 },
                 {
                   "type": "orderedList",
                   "items": [
-                    "Confirmez l’action."
+                    "Confirmez l'action."
                   ]
                 }
               ]
@@ -1406,7 +1406,7 @@
                 {
                   "type": "orderedList",
                   "items": [
-                    "Recherchez l’utilisateur dans la liste.",
+                    "Recherchez l'utilisateur dans la liste.",
                     "Dans le menu Actions, choisissez \"Modifier le quota\".",
                     "Sélectionnez une nouvelle taille de stockage.",
                     "Enregistrez les modifications."
@@ -1425,7 +1425,7 @@
                 {
                   "type": "orderedList",
                   "items": [
-                    "Recherchez l’utilisateur dans la liste.",
+                    "Recherchez l'utilisateur dans la liste.",
                     "Dans le menu Actions, choisissez \"Supprimer\".",
                     "Confirmez la suppression."
                   ]
@@ -1433,7 +1433,7 @@
                 {
                   "type": "callout",
                   "intent": "warning",
-                  "content": "Avertissement : toutes les données de l’utilisateur seront définitivement supprimées."
+                  "content": "Avertissement : toutes les données de l'utilisateur seront définitivement supprimées."
                 }
               ]
             }
@@ -1460,14 +1460,14 @@
                   "type": "list",
                   "items": [
                     "À : adresse du destinataire",
-                    "Objet : sujet de l’e-mail",
+                    "Objet : sujet de l'e-mail",
                     "Corps : texte du message (mise en forme enrichie disponible)"
                   ]
                 },
                 {
                   "type": "orderedList",
                   "items": [
-                    "Ajoutez des pièces jointes si nécessaire (jusqu’à 25 Mo par fichier).",
+                    "Ajoutez des pièces jointes si nécessaire (jusqu'à 25 Mo par fichier).",
                     "Cliquez sur \"Envoyer\"."
                   ]
                 },
@@ -1497,7 +1497,7 @@
                 {
                   "type": "list",
                   "items": [
-                    "Champ de filtrage : domaine de l’expéditeur",
+                    "Champ de filtrage : domaine de l'expéditeur",
                     "Mode de correspondance : Contient",
                     "Valeur : client.com"
                   ]
@@ -1526,7 +1526,7 @@
                 {
                   "type": "orderedList",
                   "items": [
-                    "Ouvrez l’e-mail dans le dossier SPAM.",
+                    "Ouvrez l'e-mail dans le dossier SPAM.",
                     "Cliquez sur \"Pas un spam\" → \"Ajouter à la liste blanche\".",
                     "Choisissez :"
                   ]
@@ -1534,14 +1534,14 @@
                 {
                   "type": "list",
                   "items": [
-                    "Ajouter l’adresse e-mail de l’expéditeur à la liste blanche",
-                    "Ajouter le domaine de l’expéditeur à la liste blanche"
+                    "Ajouter l'adresse e-mail de l'expéditeur à la liste blanche",
+                    "Ajouter le domaine de l'expéditeur à la liste blanche"
                   ]
                 },
                 {
                   "type": "orderedList",
                   "items": [
-                    "Confirmez l’action."
+                    "Confirmez l'action."
                   ]
                 },
                 {
@@ -1559,7 +1559,7 @@
                   "items": [
                     "Ouvrez Paramètres → \"Signature e-mail\".",
                     "Activez \"Activer la signature\".",
-                    "Saisissez le texte de la signature dans l’éditeur.",
+                    "Saisissez le texte de la signature dans l'éditeur.",
                     "Cliquez sur \"Enregistrer\"."
                   ]
                 },
@@ -1597,16 +1597,16 @@
                 {
                   "type": "orderedList",
                   "items": [
-                    "Ouvrez Paramètres → \"Transfert d’e-mails\".",
+                    "Ouvrez Paramètres → \"Transfert d'e-mails\".",
                     "Cliquez sur \"Ajouter une adresse de transfert\".",
-                    "Saisissez l’adresse e-mail de transfert.",
+                    "Saisissez l'adresse e-mail de transfert.",
                     "Activez \"Conserver une copie dans la boîte de réception\" si vous souhaitez garder un doublon.",
                     "Cliquez sur \"Enregistrer\"."
                   ]
                 },
                 {
                   "type": "paragraph",
-                  "content": "Tous les e-mails entrants seront transférés vers l’adresse indiquée."
+                  "content": "Tous les e-mails entrants seront transférés vers l'adresse indiquée."
                 }
               ]
             }
@@ -1620,7 +1620,7 @@
           "sections": [
             {
               "id": "view-activity",
-              "title": "Analyser l’activité de messagerie du domaine",
+              "title": "Analyser l'activité de messagerie du domaine",
               "body": [
                 {
                   "type": "paragraph",
@@ -1684,19 +1684,19 @@
           "sections": [
             {
               "id": "system-overview",
-              "title": "Vue d’ensemble du système",
+              "title": "Vue d'ensemble du système",
               "body": [
                 {
                   "type": "paragraph",
-                  "content": "Email Security System est une plateforme qui protège les e-mails d’entreprise contre les menaces cyber."
+                  "content": "Email Security System est une plateforme qui protège les e-mails d'entreprise contre les menaces cyber."
                 },
                 {
                   "type": "list",
                   "title": "Composants :",
                   "items": [
-                    "Panneau d’administration CMC — console d’administration pour les domaines, les utilisateurs et la configuration DNS.",
+                    "Panneau d'administration CMC — console d'administration pour les domaines, les utilisateurs et la configuration DNS.",
                     "Client webmail — boîte aux lettres des employés avec protection automatique contre les menaces.",
-                    "Services d’infrastructure — serveur SMTP et pipeline de sécurité pour le traitement des messages."
+                    "Services d'infrastructure — serveur SMTP et pipeline de sécurité pour le traitement des messages."
                   ]
                 }
               ]
@@ -1712,17 +1712,17 @@
                 {
                   "type": "orderedList",
                   "items": [
-                    "Couche 0 : vérification de domaine de phishing — évalue les domaines d’expéditeur à partir de bases connues de phishing.",
-                    "Couche 1 : détection de spoofing — valide l’alignement SPF, DKIM et DMARC.",
+                    "Couche 0 : vérification de domaine de phishing — évalue les domaines d'expéditeur à partir de bases connues de phishing.",
+                    "Couche 1 : détection de spoofing — valide l'alignement SPF, DKIM et DMARC.",
                     "Couche 2 : détection de spam — analyse le contenu avec RSPAMD pour détecter les caractéristiques de spam.",
                     "Couche 3 : analyse des liens — scanne les URL avec URLScan.io pour détecter les liens malveillants.",
                     "Couche 4 : antivirus — inspecte les pièces jointes avec Bitdefender.",
-                    "Couche 5 : détection de phishing par IA — analyse le contenu du message avec l’IA pour identifier des signaux de phishing."
+                    "Couche 5 : détection de phishing par IA — analyse le contenu du message avec l'IA pour identifier des signaux de phishing."
                   ]
                 },
                 {
                   "type": "paragraph",
-                  "content": "Si une menace est détectée, le traitement s’arrête et le message est placé dans le dossier approprié."
+                  "content": "Si une menace est détectée, le traitement s'arrête et le message est placé dans le dossier approprié."
                 }
               ]
             },
@@ -1732,14 +1732,14 @@
               "body": [
                 {
                   "type": "paragraph",
-                  "content": "Les messages sont orientés vers des dossiers en fonction des résultats de l’analyse :"
+                  "content": "Les messages sont orientés vers des dossiers en fonction des résultats de l'analyse :"
                 },
                 {
                   "type": "list",
                   "items": [
                     "Unfiltered — nouveau courrier avant traitement (temporaire).",
                     "Secure — messages ayant passé tous les contrôles.",
-                    "Possibly Spoofed — authenticité de l’expéditeur suspecte.",
+                    "Possibly Spoofed — authenticité de l'expéditeur suspecte.",
                     "SPAM — messages considérés comme indésirables.",
                     "Dangerous Links — messages contenant des URL malveillantes.",
                     "Malware — messages avec pièces jointes infectées.",
@@ -1765,10 +1765,10 @@
                   "type": "list",
                   "title": "Règles de filtrage :",
                   "items": [
-                    "Par domaine d’expéditeur",
-                    "Par adresse e-mail d’expéditeur",
+                    "Par domaine d'expéditeur",
+                    "Par adresse e-mail d'expéditeur",
                     "Par objet",
-                    "Par nom d’expéditeur"
+                    "Par nom d'expéditeur"
                   ]
                 },
                 {
@@ -1815,7 +1815,7 @@
                 },
                 {
                   "type": "paragraph",
-                  "content": "Contrôle SPF : le destinataire vérifie que l’adresse IP de l’expéditeur est autorisée dans l’enregistrement SPF du domaine. En cas d’échec, le message est marqué comme suspect."
+                  "content": "Contrôle SPF : le destinataire vérifie que l'adresse IP de l'expéditeur est autorisée dans l'enregistrement SPF du domaine. En cas d'échec, le message est marqué comme suspect."
                 }
               ]
             },
@@ -1825,7 +1825,7 @@
               "body": [
                 {
                   "type": "paragraph",
-                  "content": "DKIM ajoute une signature cryptographique pour confirmer que le message a été envoyé par le propriétaire du domaine et n’a pas été modifié en transit."
+                  "content": "DKIM ajoute une signature cryptographique pour confirmer que le message a été envoyé par le propriétaire du domaine et n'a pas été modifié en transit."
                 },
                 {
                   "type": "paragraph",
@@ -1834,7 +1834,7 @@
                 {
                   "type": "list",
                   "items": [
-                    "Lors de l’envoi, le serveur signe le message avec une clé privée et ajoute l’en-tête DKIM-Signature.",
+                    "Lors de l'envoi, le serveur signe le message avec une clé privée et ajoute l'en-tête DKIM-Signature.",
                     "Le destinataire récupère la clé publique dans le DNS et vérifie la signature."
                   ]
                 },
@@ -1848,7 +1848,7 @@
                 },
                 {
                   "type": "paragraph",
-                  "content": "La clé privée est stockée sur le serveur sous forme chiffrée et n’est jamais partagée avec les clients."
+                  "content": "La clé privée est stockée sur le serveur sous forme chiffrée et n'est jamais partagée avec les clients."
                 }
               ]
             },
@@ -1892,7 +1892,7 @@
                   "type": "list",
                   "title": "Restrictions :",
                   "items": [
-                    "Taille maximale d’un fichier : 25 Mo",
+                    "Taille maximale d'un fichier : 25 Mo",
                     "Tous les types de fichiers courants sont pris en charge"
                   ]
                 },
@@ -1910,8 +1910,8 @@
         },
         {
           "id": "access-control",
-          "title": "Contrôle d’accès",
-          "label": "Contrôle d’accès",
+          "title": "Contrôle d'accès",
+          "label": "Contrôle d'accès",
           "description": "Rôles utilisateur et protection des accès.",
           "sections": [
             {
@@ -1922,11 +1922,11 @@
                   "type": "list",
                   "title": "Admin",
                   "items": [
-                    "Accès complet au panneau d’administration CMC",
+                    "Accès complet au panneau d'administration CMC",
                     "Gestion des domaines et du DNS",
                     "Création et gestion des utilisateurs",
                     "Consultation de tous les e-mails du domaine",
-                    "Exécution d’opérations de messagerie en masse"
+                    "Exécution d'opérations de messagerie en masse"
                   ]
                 },
                 {
@@ -1959,7 +1959,7 @@
                 },
                 {
                   "type": "paragraph",
-                  "content": "Création d’utilisateurs Subordinate : les administrateurs ajoutent ces comptes dans le CMC via la section \"Gestion des utilisateurs\"."
+                  "content": "Création d'utilisateurs Subordinate : les administrateurs ajoutent ces comptes dans le CMC via la section \"Gestion des utilisateurs\"."
                 },
                 {
                   "type": "paragraph",
@@ -1975,9 +1975,9 @@
                   "type": "list",
                   "items": [
                     "OAuth 2.0 : connexion via Google ou Microsoft avec PKCE pour renforcer la sécurité.",
-                    "E-mail/mot de passe : identifiants émis par l’administrateur dans le CMC.",
-                    "Jetons JWT : les jetons d’accès sont valables 7 jours et stockés dans des cookies httpOnly.",
-                    "Renouvellement de jeton : les jetons d’accès sont renouvelés automatiquement via des refresh tokens ; une fois le refresh token expiré, une nouvelle connexion est requise."
+                    "E-mail/mot de passe : identifiants émis par l'administrateur dans le CMC.",
+                    "Jetons JWT : les jetons d'accès sont valables 7 jours et stockés dans des cookies httpOnly.",
+                    "Renouvellement de jeton : les jetons d'accès sont renouvelés automatiquement via des refresh tokens ; une fois le refresh token expiré, une nouvelle connexion est requise."
                   ]
                 }
               ]
@@ -1991,7 +1991,7 @@
                   "items": [
                     "Limitation de débit : au maximum 5 tentatives de connexion par tranche de 15 minutes depuis une même adresse IP.",
                     "Gestion des sessions : les sessions actives sont stockées en base de données et vérifiées à chaque requête.",
-                    "Journalisation d’audit : les actions critiques des administrateurs et des utilisateurs sont enregistrées."
+                    "Journalisation d'audit : les actions critiques des administrateurs et des utilisateurs sont enregistrées."
                   ]
                 }
               ]
@@ -2002,7 +2002,7 @@
           "id": "quotas-limits",
           "title": "Quotas et limites",
           "label": "Quotas et limites",
-          "description": "Quotas liés au stockage, à l’envoi et au nombre d’utilisateurs.",
+          "description": "Quotas liés au stockage, à l'envoi et au nombre d'utilisateurs.",
           "sections": [
             {
               "id": "storage-quota",
@@ -2010,13 +2010,13 @@
               "body": [
                 {
                   "type": "paragraph",
-                  "content": "Chaque utilisateur dispose d’un quota de boîte aux lettres. À 100 % d’utilisation, il ne peut plus envoyer ni recevoir de messages."
+                  "content": "Chaque utilisateur dispose d'un quota de boîte aux lettres. À 100 % d'utilisation, il ne peut plus envoyer ni recevoir de messages."
                 }
               ]
             },
             {
               "id": "sending-limits",
-              "title": "Limites d’envoi",
+              "title": "Limites d'envoi",
               "body": [
                 {
                   "type": "list",
@@ -2031,13 +2031,13 @@
             },
             {
               "id": "user-limit",
-              "title": "Limite d’utilisateurs",
+              "title": "Limite d'utilisateurs",
               "body": [
                 {
                   "type": "list",
                   "items": [
-                    "Offres Business : jusqu’à 300 utilisateurs",
-                    "Offres Enterprise : nombre d’utilisateurs illimité"
+                    "Offres Business : jusqu'à 300 utilisateurs",
+                    "Offres Enterprise : nombre d'utilisateurs illimité"
                   ]
                 }
               ]
@@ -2107,19 +2107,19 @@
       "description": "Scannez votre code en local sans l'exposer à des serveurs externes. Détection rapide et complète des vulnérabilités directement dans votre éditeur."
     },
     "video": {
-      "title": "Tutoriel d’installation et d’utilisation (5 minutes)",
+      "title": "Tutoriel d'installation et d'utilisation (5 minutes)",
       "cardTitle": "Comment utiliser Supreme",
-      "cardSubtitle": "Guide d’installation et de configuration"
+      "cardSubtitle": "Guide d'installation et de configuration"
     },
     "pricing": {
       "title": "Tarification simple",
-      "subtitle": "Choisissez l’offre qui vous convient le mieux",
+      "subtitle": "Choisissez l'offre qui vous convient le mieux",
       "monthly": {
         "title": "Mensuel",
         "description": "Flexible, annulable à tout moment"
       },
       "month": "mois",
-      "subscribe": "S’abonner maintenant",
+      "subscribe": "S'abonner maintenant",
       "saveBadge": "Économisez 30 %",
       "yearly": {
         "title": "Annuel",
@@ -2140,7 +2140,7 @@
       "title": "Fonctionnalités puissantes",
       "subtitle": "Tout ce dont vous avez besoin pour un développement sécurisé",
       "items": [
-        "L’analyseur de code s’exécute localement, le code n’est pas exposé à des serveurs externes",
+        "L'analyseur de code s'exécute localement, le code n'est pas exposé à des serveurs externes",
         "Détecte les dépendances vulnérables du projet",
         "Détecte les mauvaises configurations et les secrets",
         "Peut analyser les mauvaises configurations et vulnérabilités CI/CD"
@@ -2159,13 +2159,13 @@
     ],
     "lightbox": {
       "close": "Fermer",
-      "alt": "Capture d’écran"
+      "alt": "Capture d'écran"
     },
     "landing": {
       "hero": {
         "headline": "Développez vite. Livrez en sécurité.",
-        "subheadline": "L’IA écrit le code. Supreme 2 le sécurise.",
-        "tagline": "74+ scanners intelligents. Analyse en profondeur au niveau de l’architecture. Le premier scanner de code MCP au monde.",
+        "subheadline": "L'IA écrit le code. Supreme 2 le sécurise.",
+        "tagline": "74+ scanners intelligents. Analyse en profondeur au niveau de l'architecture. Le premier scanner de code MCP au monde.",
         "ctaMax": "Passer à Supreme 2 MAX",
         "ctaFree": "Commencer gratuitement avec Supreme 2 Light"
       },
@@ -2206,8 +2206,8 @@
           "Voient uniquement les extraits collés",
           "Ratent les fichiers cachés",
           "Ignorent les chaînes de dépendances",
-          "Ne scannent pas l’architecture",
-          "N’auditent pas systématiquement les configs"
+          "Ne scannent pas l'architecture",
+          "N'auditent pas systématiquement les configs"
         ],
         "supremeTitle": "Supreme 2 = scan complet du dépôt",
         "diagramRepo": "Dépôt",
@@ -2219,14 +2219,14 @@
         "features": [
           "74+ scanners",
           "Support multi-langages approfondi",
-          "Analyse sensible à l’architecture",
+          "Analyse sensible à l'architecture",
           "Moteur de scan parallèle",
           "Détection intelligente des vulnérabilités"
         ]
       },
       "mcp": {
         "title": "Le premier scanner de code MCP au monde",
-        "subtitle": "Supreme 2 MAX s’exécute en tant que serveur MCP afin que votre LLM puisse déclencher des scans complets, consommer du JSON structuré, comprendre les vulnérabilités catégorisées, refactoriser en toute sécurité et revalider les corrections."
+        "subtitle": "Supreme 2 MAX s'exécute en tant que serveur MCP afin que votre LLM puisse déclencher des scans complets, consommer du JSON structuré, comprendre les vulnérabilités catégorisées, refactoriser en toute sécurité et revalider les corrections."
       },
       "comparison": {
         "title": "Supreme 2 Light vs Supreme 2 MAX",
@@ -2250,29 +2250,29 @@
           "Analyse les configs",
           "Vérifie les arbres de dépendances",
           "Détecte les patterns inter-fichiers",
-          "Effectue une analyse d’architecture"
+          "Effectue une analyse d'architecture"
         ]
       },
       "faq": {
         "title": "Questions fréquentes",
         "q1": "Quels langages de programmation Supreme 2 supporte-t-il ?",
-        "a1": "Supreme 2 supporte les principaux langages modernes, formats de configuration et fichiers d’infrastructure couvrant les workflows backend, frontend, cloud, script et documentation.",
+        "a1": "Supreme 2 supporte les principaux langages modernes, formats de configuration et fichiers d'infrastructure couvrant les workflows backend, frontend, cloud, script et documentation.",
         "a1Coverage": "Couverture de 41 types de scanners différents pour plus de 100 extensions de fichiers.",
         "q2": "Quels types de scanners et formats de fichiers sont couverts en détail ?",
         "a2Intro": "Supreme 2 supporte 41 types de scanners couvrant tous les principaux langages de programmation et formats de fichiers.",
         "a2Total": "Total : 41 types de scanners couvrant plus de 100 extensions de fichiers.",
-        "q3": "Qu’est-ce que MCP et pourquoi est-ce important ?",
-        "a3": "MCP permet à Supreme 2 MAX de fonctionner comme un serveur de sécurité structuré. Au lieu de texte brut, il renvoie des rapports de vulnérabilités JSON catégorisés pour la remédiation automatisée, la correction par IA, l’interprétation programmatique et les workflows d’amélioration continue.",
+        "q3": "Qu'est-ce que MCP et pourquoi est-ce important ?",
+        "a3": "MCP permet à Supreme 2 MAX de fonctionner comme un serveur de sécurité structuré. Au lieu de texte brut, il renvoie des rapports de vulnérabilités JSON catégorisés pour la remédiation automatisée, la correction par IA, l'interprétation programmatique et les workflows d'amélioration continue.",
         "q4": "Supreme 2 stocke-t-il mon code ?",
-        "a4": "Supreme 2 scanne localement dans votre environnement. Votre code ne quitte jamais l’ordinateur sur lequel le scanner fonctionne. Vous pouvez consulter le code source de Supreme 2 Light sur GitHub et surveiller l’activité réseau durant le scan.",
-        "q5": "Quels sont les prérequis d’installation ?",
+        "a4": "Supreme 2 scanne localement dans votre environnement. Votre code ne quitte jamais l'ordinateur sur lequel le scanner fonctionne. Vous pouvez consulter le code source de Supreme 2 Light sur GitHub et surveiller l'activité réseau durant le scan.",
+        "q5": "Quels sont les prérequis d'installation ?",
         "a5Prefix": "Pour exécuter Supreme 2, vous devez avoir",
         "a5Python": "Python 3.0 ou supérieur",
         "a5Suffix": "installé sur votre machine. De plus, vous devez vous assurer que",
         "a5Pip": "pip",
-        "a5End": "est installé avant l’installation de Supreme lui-même.",
+        "a5End": "est installé avant l'installation de Supreme lui-même.",
         "q6": "Supreme 2 convient-il aux startups ?",
-        "a6": "Oui. Il est particulièrement efficace pour les équipes de startups AI-first qui livrent rapidement avec du code généré par LLM, où les risques inter-fichiers cachés sont facilement omis sans analyse de sécurité à l’échelle du dépôt.",
+        "a6": "Oui. Il est particulièrement efficace pour les équipes de startups AI-first qui livrent rapidement avec du code généré par LLM, où les risques inter-fichiers cachés sont facilement omis sans analyse de sécurité à l'échelle du dépôt.",
         "a1ScannerTypes": "types de scanners différents",
         "a1Across": "couvrant",
         "a1Extensions": "extensions de fichiers",
@@ -2308,9 +2308,9 @@
     "web": {
       "title": "AI-SOC Web vs solutions WAF traditionnelles",
       "columns": {
-        "aiSoc": "AI-SOC Web (paiement à l’usage)",
+        "aiSoc": "AI-SOC Web (paiement à l'usage)",
         "cloudflare": "Cloudflare WAF + Anti-DDoS (20 $/mois)",
-        "aws": "AWS WAF (paiement à l’usage)"
+        "aws": "AWS WAF (paiement à l'usage)"
       },
       "rows": {
         "complexWaf": {
@@ -2339,7 +2339,7 @@
       "columns": {
         "aiSoc": "AI-SOC Email",
         "outlook": "Outlook/Gmail",
-        "kaspersky": "Kaspersky (connecté à un fournisseur d’e-mail)"
+        "kaspersky": "Kaspersky (connecté à un fournisseur d'e-mail)"
       },
       "rows": {
         "viewAll": {
@@ -2349,7 +2349,7 @@
           "feature": "Possibilité de supprimer des e-mails"
         },
         "activeProtection": {
-          "feature": "Protection active contre tous les types d’attaques e-mail"
+          "feature": "Protection active contre tous les types d'attaques e-mail"
         },
         "aiManual": {
           "feature": "IA qui vérifie manuellement les e-mails"
@@ -2358,7 +2358,7 @@
           "feature": "Temps de mise en place sécurisée",
           "aiSoc": "2 min, aucune connaissance cyber requise",
           "outlook": "Sécurité non complète",
-          "kaspersky": "1 à 3 jours (connexion à un fournisseur d’e-mail, nécessite un spécialiste cybersécurité)"
+          "kaspersky": "1 à 3 jours (connexion à un fournisseur d'e-mail, nécessite un spécialiste cybersécurité)"
         }
       }
     }
@@ -2386,7 +2386,7 @@
     }
   },
   "aiSocInsights": {
-    "title": "LE PROBLÈME CYBERSÉCURITÉ D’AUJOURD’HUI",
+    "title": "LE PROBLÈME CYBERSÉCURITÉ D'AUJOURD'HUI",
     "subtitle": "Les cybermenaces modernes progressent plus vite que la capacité de réaction de la plupart des entreprises.",
     "items": [
       {
@@ -2396,47 +2396,47 @@
       },
       {
         "stat": "20,5 millions",
-        "suffix": "d’attaques DDoS au T1 2025",
+        "suffix": "d'attaques DDoS au T1 2025",
         "description": "Des vagues massives de trafic peuvent mettre hors ligne des sites web et des API en quelques minutes."
       },
       {
         "stat": "30 000",
         "suffix": "sites web piratés chaque jour",
-        "description": "Des startups aux grandes entreprises, l’infrastructure web reste une cible permanente."
+        "description": "Des startups aux grandes entreprises, l'infrastructure web reste une cible permanente."
       }
     ]
   },
   "aiSocPricing": {
     "intro": "AI-SOC est une gamme de systèmes de cybersécurité autonomes",
-    "emailDescription": "Email Security agit comme un bouclier protecteur pour vos communications d’entreprise. Il filtre les messages entrants et sortants afin de neutraliser les tentatives de phishing, le spoofing et les liens malveillants avant qu’ils n’atteignent vos utilisateurs, en garantissant l’intégrité de vos échanges professionnels.",
-    "webDescription": "Web Security protège votre infrastructure numérique en analysant les schémas de trafic en temps réel. Il défend les sites web et les API contre les vulnérabilités courantes, les attaques DDoS et les accès non autorisés, tout en offrant une visibilité approfondie sur l’activité réseau sans impact sur les performances."
+    "emailDescription": "Email Security agit comme un bouclier protecteur pour vos communications d'entreprise. Il filtre les messages entrants et sortants afin de neutraliser les tentatives de phishing, le spoofing et les liens malveillants avant qu'ils n'atteignent vos utilisateurs, en garantissant l'intégrité de vos échanges professionnels.",
+    "webDescription": "Web Security protège votre infrastructure numérique en analysant les schémas de trafic en temps réel. Il défend les sites web et les API contre les vulnérabilités courantes, les attaques DDoS et les accès non autorisés, tout en offrant une visibilité approfondie sur l'activité réseau sans impact sur les performances."
   },
   "aiSocFaq": {
     "title": "Questions fréquentes",
     "items": [
       {
         "question": "AI-SOC est-il seulement un moteur de sécurité ou une plateforme e-mail complète ?",
-        "response": "AI-SOC peut être utilisé de deux façons selon l’organisation de votre messagerie.\n\n1️⃣ Comme plateforme e-mail sécurisée autonome\n\nAI-SOC peut fonctionner comme système e-mail principal de votre entreprise, avec infrastructure serveur, webmail sécurisé et console d’administration.\n\n2️⃣ Comme couche de sécurité IA pour les systèmes existants\n\nAI-SOC peut aussi être ajouté à Gmail/Outlook existants. Vos utilisateurs gardent leur fournisseur actuel pendant que AI-SOC analyse le trafic e-mail et bloque phishing, spoofing, liens malveillants et autres menaces."
+        "response": "AI-SOC peut être utilisé de deux façons selon l'organisation de votre messagerie.\n\n1️⃣ Comme plateforme e-mail sécurisée autonome\n\nAI-SOC peut fonctionner comme système e-mail principal de votre entreprise, avec infrastructure serveur, webmail sécurisé et console d'administration.\n\n2️⃣ Comme couche de sécurité IA pour les systèmes existants\n\nAI-SOC peut aussi être ajouté à Gmail/Outlook existants. Vos utilisateurs gardent leur fournisseur actuel pendant que AI-SOC analyse le trafic e-mail et bloque phishing, spoofing, liens malveillants et autres menaces."
       },
       {
         "question": "AI-SOC peut-il fonctionner avec Gmail ou Outlook existants ?",
         "response": "Oui. AI-SOC peut être déployé comme couche de sécurité supplémentaire tout en conservant Gmail ou Outlook comme fournisseur principal."
       },
       {
-        "question": "Que se passe-t-il lorsque AI-SOC est l’infrastructure e-mail principale ?",
-        "response": "Dans ce mode, AI-SOC fournit un webmail sécurisé, des contrôles d’administration au niveau du domaine et une protection des menaces intégrée au flux e-mail complet."
+        "question": "Que se passe-t-il lorsque AI-SOC est l'infrastructure e-mail principale ?",
+        "response": "Dans ce mode, AI-SOC fournit un webmail sécurisé, des contrôles d'administration au niveau du domaine et une protection des menaces intégrée au flux e-mail complet."
       },
       {
-        "question": "Les administrateurs peuvent-ils créer et contrôler les comptes e-mail d’entreprise ?",
-        "response": "Oui. Les administrateurs peuvent créer et gérer les comptes, surveiller l’activité e-mail du domaine et supprimer des messages si nécessaire."
+        "question": "Les administrateurs peuvent-ils créer et contrôler les comptes e-mail d'entreprise ?",
+        "response": "Oui. Les administrateurs peuvent créer et gérer les comptes, surveiller l'activité e-mail du domaine et supprimer des messages si nécessaire."
       },
       {
-        "question": "Peut-on connecter des comptes e-mail d’entreprise existants à AI-SOC ?",
-        "response": "Oui. Les comptes d’entreprise Gmail/Outlook existants peuvent être connectés à AI-SOC pour ajouter une couche de protection structurée sans changer de fournisseur."
+        "question": "Peut-on connecter des comptes e-mail d'entreprise existants à AI-SOC ?",
+        "response": "Oui. Les comptes d'entreprise Gmail/Outlook existants peuvent être connectés à AI-SOC pour ajouter une couche de protection structurée sans changer de fournisseur."
       },
       {
         "question": "La sécurité est-elle préconfigurée ou faut-il une configuration manuelle ?",
-        "response": "AI-SOC est préconfiguré et propulsé par l’IA. Il fournit une protection intégrée avec une configuration minimale selon la page d’instructions."
+        "response": "AI-SOC est préconfiguré et propulsé par l'IA. Il fournit une protection intégrée avec une configuration minimale selon la page d'instructions."
       },
       {
         "question": "Au-delà du filtrage e-mail et web, quelles menaces avancées sont détectées ?",
@@ -2444,8 +2444,9 @@
       },
       {
         "question": "AI-SOC utilise-t-il la threat intelligence pour prévenir les attaques en amont ?",
-        "response": "Oui. AI-SOC utilise des flux de threat intelligence pour bloquer les infrastructures malveillantes connues avant qu’elles n’atteignent les systèmes protégés."
+        "response": "Oui. AI-SOC utilise des flux de threat intelligence pour bloquer les infrastructures malveillantes connues avant qu'elles n'atteignent les systèmes protégés."
       }
     ]
   }
 }
+

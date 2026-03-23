@@ -1350,7 +1350,7 @@
   "footer": {
     "copyright": "© 2026 Silence AI. All rights reserved.",
     "contactLabel": "Contact",
-    "contactValue": "team@silence.codes",
+    "contactValue": "support@silence.codes",
     "addressLabel": "Address",
     "addressValue": "Astana, Kazakhstan",
     "links": {
@@ -1515,7 +1515,7 @@
         "changes": {
           "title": "8. Changes & Contact",
           "body1": "Silence AI may update these affiliate terms to reflect changes in the program or applicable law. Updated versions take effect upon publication on this page.",
-          "body2": "Questions about the affiliate program can be sent to info@silenceai.net."
+          "body2": "Questions about the affiliate program can be sent to support@silence.codes."
         }
       }
     },
@@ -2433,7 +2433,7 @@
     "items": [
       {
         "question": "Is AI-SOC just a security engine or a full email platform?",
-        "response": "AI-SOC can be used in two different ways, depending on how your organization manages email.\n\n1️⃣ As a standalone secure email platform\n\nAI-SOC can operate as your organization’s primary email system, similar to Gmail or Outlook. It includes its own mail server infrastructure, secure webmail interface, and administrative console for managing corporate accounts. In this mode, organizations use AI-SOC as their main email platform while benefiting from built-in AI-driven security protection.\n\n2️⃣ As an AI security layer for existing email systems\n\nAI-SOC can also work alongside existing Gmail or Outlook environments as an additional security layer. In this setup, users keep their current email provider while AI-SOC analyzes email traffic and protects against phishing, spoofing, malicious links, and other threats without requiring migration."
+        "response": "AI-SOC can be used in two different ways, depending on how your organization manages email.\n\n1️⃣ As a standalone secure email platform\n\nAI-SOC can operate as your organization's primary email system, similar to Gmail or Outlook. It includes its own mail server infrastructure, secure webmail interface, and administrative console for managing corporate accounts. In this mode, organizations use AI-SOC as their main email platform while benefiting from built-in AI-driven security protection.\n\n2️⃣ As an AI security layer for existing email systems\n\nAI-SOC can also work alongside existing Gmail or Outlook environments as an additional security layer. In this setup, users keep their current email provider while AI-SOC analyzes email traffic and protects against phishing, spoofing, malicious links, and other threats without requiring migration."
       },
       {
         "question": "Can AI-SOC be used alongside existing Gmail or Outlook environments?",
@@ -2466,3 +2466,4 @@
     ]
   }
 }
+

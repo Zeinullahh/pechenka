@@ -1,48 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Root -->
   <url>
     <loc>https://silence.codes/</loc>
   </url>
-  <url>
-    <loc>https://silence.codes/slnc-env/</loc>
-  </url>
-  <url>
-    <loc>https://silence.codes/affiliate/</loc>
-  </url>
-  <url>
-    <loc>https://silence.codes/affiliate/terms-of-service-affiliate/</loc>
-  </url>
-  <url>
-    <loc>https://silence.codes/ai-soc/</loc>
-  </url>
-  <url>
-    <loc>https://silence.codes/en/ai-soc/</loc>
-  </url>
-  <url>
-    <loc>https://silence.codes/en/supreme/</loc>
-  </url>
-  <url>
-    <loc>https://silence.codes/services/</loc>
-  </url>
-  <url>
-    <loc>https://silence.codes/policies/cookies/</loc>
-  </url>
-  <url>
-    <loc>https://silence.codes/policies/cookies_email/</loc>
-  </url>
-  <url>
-    <loc>https://silence.codes/policies/privacy/</loc>
-  </url>
-  <url>
-    <loc>https://silence.codes/policies/privacy_email/</loc>
-  </url>
-  <url>
-    <loc>https://silence.codes/policies/terms_of_service/</loc>
-  </url>
-  <url>
-    <loc>https://silence.codes/policies/terms_of_use/</loc>
-  </url>
-  <url>
-    <loc>https://silence.codes/policies/terms_of_use_email/</loc>
-  </url>
+
+  <!-- Home (all locales) -->
+  <url><loc>https://silence.codes/en/</loc></url>
+  <url><loc>https://silence.codes/ja/</loc></url>
+  <url><loc>https://silence.codes/zh/</loc></url>
+  <url><loc>https://silence.codes/ko/</loc></url>
+  <url><loc>https://silence.codes/fr/</loc></url>
+  <url><loc>https://silence.codes/de/</loc></url>
+  <url><loc>https://silence.codes/ru/</loc></url>
+  <url><loc>https://silence.codes/ar/</loc></url>
+  <url><loc>https://silence.codes/tr/</loc></url>
+
+  <!-- AI SOC (all locales) -->
+  <url><loc>https://silence.codes/en/ai-soc/</loc></url>
+  <url><loc>https://silence.codes/ja/ai-soc/</loc></url>
+  <url><loc>https://silence.codes/zh/ai-soc/</loc></url>
+  <url><loc>https://silence.codes/ko/ai-soc/</loc></url>
+  <url><loc>https://silence.codes/fr/ai-soc/</loc></url>
+  <url><loc>https://silence.codes/de/ai-soc/</loc></url>
+  <url><loc>https://silence.codes/ru/ai-soc/</loc></url>
+  <url><loc>https://silence.codes/ar/ai-soc/</loc></url>
+  <url><loc>https://silence.codes/tr/ai-soc/</loc></url>
+
+  <!-- Supreme (all locales) -->
+  <url><loc>https://silence.codes/en/supreme/</loc></url>
+  <url><loc>https://silence.codes/ja/supreme/</loc></url>
+  <url><loc>https://silence.codes/zh/supreme/</loc></url>
+  <url><loc>https://silence.codes/ko/supreme/</loc></url>
+  <url><loc>https://silence.codes/fr/supreme/</loc></url>
+  <url><loc>https://silence.codes/de/supreme/</loc></url>
+  <url><loc>https://silence.codes/ru/supreme/</loc></url>
+  <url><loc>https://silence.codes/ar/supreme/</loc></url>
+  <url><loc>https://silence.codes/tr/supreme/</loc></url>
+
+  <!-- Affiliate (all locales) -->
+  <url><loc>https://silence.codes/en/affiliate/</loc></url>
+  <url><loc>https://silence.codes/ja/affiliate/</loc></url>
+  <url><loc>https://silence.codes/zh/affiliate/</loc></url>
+  <url><loc>https://silence.codes/ko/affiliate/</loc></url>
+  <url><loc>https://silence.codes/fr/affiliate/</loc></url>
+  <url><loc>https://silence.codes/de/affiliate/</loc></url>
+  <url><loc>https://silence.codes/ru/affiliate/</loc></url>
+  <url><loc>https://silence.codes/ar/affiliate/</loc></url>
+  <url><loc>https://silence.codes/tr/affiliate/</loc></url>
+
+  <!-- Affiliate Terms of Service (all locales) -->
+  <url><loc>https://silence.codes/en/affiliate/terms-of-service-affiliate/</loc></url>
+  <url><loc>https://silence.codes/ja/affiliate/terms-of-service-affiliate/</loc></url>
+  <url><loc>https://silence.codes/zh/affiliate/terms-of-service-affiliate/</loc></url>
+  <url><loc>https://silence.codes/ko/affiliate/terms-of-service-affiliate/</loc></url>
+  <url><loc>https://silence.codes/fr/affiliate/terms-of-service-affiliate/</loc></url>
+  <url><loc>https://silence.codes/de/affiliate/terms-of-service-affiliate/</loc></url>
+  <url><loc>https://silence.codes/ru/affiliate/terms-of-service-affiliate/</loc></url>
+  <url><loc>https://silence.codes/ar/affiliate/terms-of-service-affiliate/</loc></url>
+  <url><loc>https://silence.codes/tr/affiliate/terms-of-service-affiliate/</loc></url>
+
+  <!-- General Policies -->
+  <url><loc>https://silence.codes/policies/cookies/</loc></url>
+  <url><loc>https://silence.codes/policies/privacy/</loc></url>
+  <url><loc>https://silence.codes/policies/privacy_email/</loc></url>
+  <url><loc>https://silence.codes/policies/terms_of_service/</loc></url>
+  <url><loc>https://silence.codes/policies/terms_of_use/</loc></url>
+
+  <!-- Supreme Policies -->
+  <url><loc>https://silence.codes/policies/supreme/privacy/</loc></url>
+  <url><loc>https://silence.codes/policies/supreme/terms_of_service/</loc></url>
+  <url><loc>https://silence.codes/policies/supreme/terms_of_use/</loc></url>
+
+  <!-- AI SOC Policies -->
+  <url><loc>https://silence.codes/policies/ai-soc1/cookies/</loc></url>
+  <url><loc>https://silence.codes/policies/ai-soc1/cookies_email/</loc></url>
+  <url><loc>https://silence.codes/policies/ai-soc1/privacy/</loc></url>
+  <url><loc>https://silence.codes/policies/ai-soc1/privacy_email/</loc></url>
+  <url><loc>https://silence.codes/policies/ai-soc1/terms_of_service/</loc></url>
+  <url><loc>https://silence.codes/policies/ai-soc1/terms_of_use/</loc></url>
+  <url><loc>https://silence.codes/policies/ai-soc1/terms_of_use_email/</loc></url>
+
+  <!-- Sithub Policies -->
+  <url><loc>https://silence.codes/policies/sithub/privacy/</loc></url>
+  <url><loc>https://silence.codes/policies/sithub/terms_of_service/</loc></url>
+  <url><loc>https://silence.codes/policies/sithub/terms_of_use/</loc></url>
+
 </urlset>

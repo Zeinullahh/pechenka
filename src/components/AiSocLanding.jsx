@@ -222,6 +222,21 @@ const AiSocLanding = () => {
         <div className="w-full max-w-7xl mx-auto">
           <Header onOpenModal={openModal} />
           <Hero onOpenModal={openModal} />
+          <section className="mt-8 px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-5xl overflow-hidden rounded-3xl border border-white/10 bg-slate-950/70 shadow-[0_20px_60px_-20px_rgba(14,165,233,0.45)]">
+              <div className="aspect-video w-full">
+                <iframe
+                  className="h-full w-full"
+                  src="https://www.youtube.com/embed/bkWexp4vku8"
+                  title="AI-SOC Video"
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+          </section>
           <Pricing onOpenModal={openModal} />
         </div>
         <div className="w-full max-w-7xl mx-auto">

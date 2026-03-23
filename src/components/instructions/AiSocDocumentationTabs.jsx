@@ -119,22 +119,25 @@ function WebSecurityPlaceholder({ badge, title, description }) {
                             >
                                 {badge}
                             </motion.span>
-                            <motion.h2
-                                initial={{ opacity: 0, y: 10 }}
+
+                            <motion.div
+                                initial={{ opacity: 0, y: 14 }}
                                 animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.4, ease: "easeOut", delay: 0.15 }}
-                                className="bg-gradient-to-r from-white via-purple-100 to-violet-200 bg-clip-text text-3xl font-semibold text-transparent sm:text-4xl"
+                                transition={{ duration: 0.4, ease: "easeOut", delay: 0.25 }}
+                                className="mt-4 w-full max-w-4xl overflow-hidden rounded-2xl border border-white/10 bg-slate-950/70 shadow-[0_20px_60px_-20px_rgba(34,211,238,0.45)]"
                             >
-                                {title}
-                            </motion.h2>
-                            <motion.p
-                                initial={{ opacity: 0, y: 12 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.4, ease: "easeOut", delay: 0.2 }}
-                                className="max-w-lg text-base text-slate-300/80"
-                            >
-                                {description}
-                            </motion.p>
+                                <div className="aspect-video w-full">
+                                    <iframe
+                                        className="h-full w-full"
+                                        src="https://www.youtube.com/embed/BXWdaovJCjw"
+                                        title="Web Security Instructions Video"
+                                        loading="lazy"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerPolicy="strict-origin-when-cross-origin"
+                                        allowFullScreen
+                                    />
+                                </div>
+                            </motion.div>
                         </div>
                     </Card>
                 </div>

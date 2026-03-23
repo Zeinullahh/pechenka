@@ -373,6 +373,21 @@ const EmailSecurityDocumentation = () => {
                     </motion.div>
                 </div>
 
+                {/* VIDEO EMBED */}
+                <div className="w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 pb-8">
+                    <div className="relative w-full max-w-2xl mx-auto rounded-2xl overflow-hidden border border-purple-500/20 shadow-[0_0_40px_-10px_rgba(168,85,247,0.3)] bg-black">
+                        <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
+                            <iframe
+                                src="https://www.youtube.com/embed/3lW9az21aDk"
+                                title="AI-SOC Email Security"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen
+                                className="absolute inset-0 w-full h-full"
+                            />
+                        </div>
+                    </div>
+                </div>
+
                 {/* MOBILE CONTROLS */}
                 <div className="lg:hidden w-full px-4 mb-8 flex gap-3 sticky top-4 z-40">
                     <button
