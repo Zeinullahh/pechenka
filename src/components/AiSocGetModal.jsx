@@ -71,19 +71,27 @@ const AiSocGetModal = ({ isOpen, onClose }) => {
                                     rel="noopener noreferrer"
                                     className="group relative w-full py-4 px-6 bg-gradient-to-r from-slate-600/20 to-slate-500/20 hover:from-slate-600/30 hover:to-slate-500/30 border border-white/20 rounded-xl font-semibold transition-all"
                                 >
-                                    <div className="flex items-center justify-between">
-                                        <div className="flex flex-col items-start text-left translate-x-0 group-hover:translate-x-1 transition-transform">
-                                            <span className="text-base text-white">
-                                                {t("aiSocModal.getOnlyOffice", "Download OnlyOffice")}
-                                            </span>
-                                            <span className="text-xs text-gray-300 font-normal">
-                                                {t(
-                                                    "aiSocModal.onlyOfficeRedirectNote",
-                                                    "You will be redirected to the official OnlyOffice website to download it (a strong alternative to Microsoft Excel, Word, and PowerPoint)."
-                                                )}
-                                            </span>
+                                    <div className="flex items-center justify-between gap-4">
+                                        <div className="flex items-center gap-4 translate-x-0 group-hover:translate-x-1 transition-transform text-left">
+                                            {/* OnlyOffice Logo */}
+                                            <svg className="w-10 h-10 shrink-0 drop-shadow-[0_2px_4px_rgba(0,0,0,0.4)]" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M16 3L29 9L16 15L3 9L16 3Z" fill="#3AA9E1" stroke="#3AA9E1" strokeWidth="2" strokeLinejoin="round"/>
+                                                <path d="M16 10.5L29 16.5L16 22.5L3 16.5L16 10.5Z" fill="#8EBE3E" stroke="#8EBE3E" strokeWidth="2" strokeLinejoin="round"/>
+                                                <path d="M16 18L29 24L16 30L3 24L16 18Z" fill="#F06F4D" stroke="#F06F4D" strokeWidth="2" strokeLinejoin="round"/>
+                                            </svg>
+                                            <div className="flex flex-col items-start gap-1">
+                                                <span className="text-base text-white font-semibold">
+                                                    {t("aiSocModal.getOnlyOffice", "Download OnlyOffice")}
+                                                </span>
+                                                <span className="text-xs text-gray-300 font-normal leading-snug">
+                                                    {t(
+                                                        "aiSocModal.onlyOfficeRedirectNote",
+                                                        "You will be redirected to the official OnlyOffice website to download it (a strong alternative to Microsoft Excel, Word, and PowerPoint)."
+                                                    )}
+                                                </span>
+                                            </div>
                                         </div>
-                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-300 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-300 group-hover:translate-x-1 transition-transform shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                         </svg>
                                     </div>
