@@ -552,15 +552,28 @@ const Pricing = ({ onOpenModal }) => {
         {productType === "email" && (
           <>
             <div className="w-full flex justify-center px-4 py-12">
-              <div className="w-full max-w-2xl rounded-2xl overflow-hidden border border-purple-500/20 shadow-[0_0_40px_-10px_rgba(168,85,247,0.3)] bg-black">
-                <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
-                  <iframe
-                    src="https://www.youtube.com/embed/3lW9az21aDk"
-                    title="AI-SOC Email Security"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                    className="absolute inset-0 w-full h-full"
-                  />
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl">
+                <div className="w-full rounded-2xl overflow-hidden border border-purple-500/20 shadow-[0_0_40px_-10px_rgba(168,85,247,0.3)] bg-black">
+                  <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
+                    <iframe
+                      src="https://www.youtube.com/embed/3lW9az21aDk"
+                      title="AI-SOC Email Security"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                      className="absolute inset-0 w-full h-full"
+                    />
+                  </div>
+                </div>
+                <div className="w-full rounded-2xl overflow-hidden border border-purple-500/20 shadow-[0_0_40px_-10px_rgba(168,85,247,0.3)] bg-black">
+                  <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
+                    <iframe
+                      src="https://www.youtube.com/embed/HGhDQ3bhk6o"
+                      title="AI-SOC Email Security Additional Info"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                      className="absolute inset-0 w-full h-full"
+                    />
+                  </div>
                 </div>
               </div>
             </div>

@@ -33,7 +33,7 @@ export function FloatingText({ className }) {
       icon: (
         <IconBrandInstagram className="h-full w-full text-[#E4405F]" />
       ),
-      href: "https://www.instagram.com/silence.codes/",
+      href: "https://www.instagram.com/silence.eng/",
     },
   ];
   const text1 = t("floatingText.headline", "Learn how hackers think");

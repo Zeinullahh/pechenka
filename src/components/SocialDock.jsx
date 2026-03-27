@@ -24,7 +24,7 @@ const SOCIAL_LINKS = [
   },
   {
     title: "Instagram",
-    href: "https://www.instagram.com/silence.codes/",
+    href: "https://www.instagram.com/silence.eng/",
     icon: <IconBrandInstagram className="h-full w-full text-[#E4405F]" />,
   },
 ];
