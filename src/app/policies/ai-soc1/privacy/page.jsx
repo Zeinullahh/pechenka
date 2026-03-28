@@ -24,6 +24,7 @@ const PrivacyPolicy = () => {
     { id: 'legal-basis', title: '10. Legal Basis for Processing' },
     { id: 'data-breach', title: '11. Data Breach Notification' },
     { id: 'childrens-privacy', title: '12. Children\'s Privacy' },
+    { id: 'human-access-prohibition', title: '12.4 Prohibition on Human Access' },
     { id: 'changes', title: '13. Changes to This Privacy Policy' },
     { id: 'contact', title: '14. Contact Information' },
     { id: 'governing-law', title: '15. Governing Law' },
@@ -125,6 +126,12 @@ const PrivacyPolicy = () => {
               <p className="mb-4">The classification process is automated and sequential. If an email matches the criteria for any security risk category during the validation sequence, it is immediately routed to the corresponding folder. Only emails that successfully pass all five validation layers are classified as "Secure."</p>
               <p><strong>12.3 Administrator Access and Data Privacy:</strong> Email content may be accessible to the organization administrator that created or manages the user account within the Centralized Management Console (CMC). Silence AI does not access or view email content except as required to provide the security-scanning functionality or where legally required.</p>
             </section>
+            <section id="human-access-prohibition">
+              <h2 className="text-2xl font-semibold mb-4">12.4 Prohibition on Human Access to User Email Content</h2>
+              <p className="mb-4">Silence AI LLC strictly prohibits any and all human personnel — including, without limitation, employees, contractors, founders, engineers, support staff, security analysts, and any other human team members of Silence AI — from reading, accessing, reviewing, copying, or otherwise inspecting the content of any user email, whether in transit or at rest, for any purpose whatsoever.</p>
+              <p className="mb-4">All email scanning, classification, and threat-detection operations performed by the Email Protector service are carried out exclusively by automated, AI-powered systems and programmatic pipelines, with no human involvement in the processing or review of email content.</p>
+              <p>The only exceptions to this prohibition are: (a) where Silence AI is compelled by a valid and binding legal order, court order, or mandatory regulatory requirement under applicable law, in which case Silence AI will, to the extent permitted by law, notify the affected user prior to disclosure; or (b) where the user has given explicit, specific, and informed written consent for a defined and limited purpose. Any access under these exceptions will be strictly minimized to what is legally required, logged, and subject to internal audit. This prohibition is a binding, contractual commitment to all users of the AI-SOC 1 platform.</p>
+            </section>
             <section id="changes">
               <h2 className="text-2xl font-semibold mb-4">13. Changes to This Privacy Policy</h2>
               <p>We may update this Privacy Policy from time to time. Material changes will be communicated through: Email notification to registered users, Platform notifications, Updates posted on our website. Continued use of our services after changes become effective constitutes acceptance of the updated Privacy Policy.</p>
@@ -139,7 +146,7 @@ const PrivacyPolicy = () => {
               <p>This Privacy Policy is governed by the laws of the United Arab Emirates. Any disputes relating to privacy matters will be subject to the jurisdiction of the courts located in Sharjah, United Arab Emirates.</p>
             </section>
           </div>
-          <p className="mt-8 text-sm text-gray-400">Last Updated: 22.09.2025</p>
+          <p className="mt-8 text-sm text-gray-400">Last Updated: 28.03.2026</p>
         </main>
       </div>
       <BackToTopButton />
