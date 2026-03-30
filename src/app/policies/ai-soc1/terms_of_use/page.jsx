@@ -20,6 +20,7 @@ const TermsOfUse = () => {
     { id: 'service-activation', title: '6. Service Activation and Free Trials' },
     { id: 'ip-rights', title: '7. Intellectual Property Rights' },
     { id: 'privacy', title: '8. Privacy and Data Protection' },
+    { id: 'email-access', title: '8.3 Staff Access to Client Emails' },
     { id: 'liability', title: '9. Limitation of Liability' },
     { id: 'updates', title: '10. Version Updates and Support' },
     { id: 'termination', title: '11. Termination' },
@@ -93,6 +94,7 @@ const TermsOfUse = () => {
               <h2 className="text-2xl font-semibold mb-4">8. Privacy and Data Protection</h2>
               <p className="mb-4"><strong>8.1 Privacy Policy:</strong> Our collection, use, and protection of your personal information is governed by our Privacy Policy, which is incorporated into these Terms by reference and available at https://silenceai.net/policies/privacy/.</p>
               <p><strong>8.2 Data Security:</strong> We implement industry-standard security measures to protect your data and maintain the confidentiality of your information.</p>
+              <p id="email-access" className="mb-4"><strong>8.3 Prohibition on Unauthorized Staff Access to Client Email Data:</strong> Silence AI personnel — including employees, contractors, officers, directors, and any other human agents acting on behalf of Silence AI LLC — are strictly prohibited from reading, accessing, copying, or otherwise reviewing the content of any email messages, email attachments, or email metadata belonging to or associated with a client's mailboxes, without the <strong>prior, explicit, and documented written consent</strong> of the relevant client organization. This prohibition applies regardless of whether such email data is technically accessible via internal systems, administrative tooling, or third-party API integrations used to provide the Email Security &amp; Visualization component of the Service. Client email data is processed exclusively by automated systems for the sole purpose of delivering the contracted security-scanning and visualization services. Any deviation from this rule, including access for debugging, support, or audit purposes, must be preceded by a written authorization request submitted to, and approved in writing by, an authorized representative of the client. Unauthorized access to client email data by any Silence AI personnel constitutes a material breach of this Agreement and may result in disciplinary action, termination of employment or engagement, and civil or criminal liability under applicable law. Silence AI maintains internal access-control policies and audit logs to enforce and evidence compliance with this provision.</p>
             </section>
             <section id="liability">
               <h2 className="text-2xl font-semibold mb-4">9. Limitation of Liability</h2>
@@ -138,7 +140,7 @@ const TermsOfUse = () => {
               <p><strong>16.3 Assignment:</strong> We may assign these Terms or our rights hereunder without your consent. You may not assign these Terms without our prior written consent.</p>
             </section>
           </div>
-          <p className="mt-8 text-sm text-gray-400">Last Updated: 22.09.2025</p>
+          <p className="mt-8 text-sm text-gray-400">Last Updated: 30.03.2026</p>
         </main>
       </div>
       <BackToTopButton />
