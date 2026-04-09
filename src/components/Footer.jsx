@@ -20,7 +20,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-12 items-center text-gray-400 text-center md:text-left text-sm md:text-base">
             <div className="flex flex-col sm:flex-row items-center sm:space-x-2">
               <span className="font-semibold text-white">{t("footer.contactLabel", "Contact:")}</span>
-              <span>{t("footer.contactValue", "support@silence.codes")}</span>
+              <span>{t("footer.contactValue", "support@silenceai.net")}</span>
             </div>
             <div className="flex flex-col sm:flex-row items-center sm:space-x-2">
               <span className="font-semibold text-white">{t("footer.addressLabel", "Address:")}</span>

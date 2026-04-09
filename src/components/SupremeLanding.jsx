@@ -59,11 +59,10 @@ function PricingCard({
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
-      className={`relative rounded-2xl border p-7 md:p-8 backdrop-blur-xl ${
-        emphasized
+      className={`relative rounded-2xl border p-7 md:p-8 backdrop-blur-xl ${emphasized
           ? "md:-translate-y-2 border-violet-400/40 bg-gradient-to-b from-violet-500/14 via-fuchsia-500/12 to-blue-500/8 shadow-[0_0_55px_rgba(168,85,247,0.2)]"
           : "border-white/10 bg-white/5"
-      }`}
+        }`}
     >
       {badge ? (
         <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-violet-400 via-fuchsia-400 to-blue-400 px-3 py-1 text-xs font-semibold text-slate-950">
@@ -125,11 +124,10 @@ function FaqItem({ question, answer, open, onToggle }) {
     <motion.div
       layout
       transition={{ duration: 0.28, ease: "easeOut" }}
-      className={`overflow-hidden rounded-xl border transition-all duration-300 ${
-        open
+      className={`overflow-hidden rounded-xl border transition-all duration-300 ${open
           ? "border-violet-300/45 bg-gradient-to-r from-violet-500/18 via-fuchsia-500/16 to-blue-500/14 shadow-[0_16px_48px_rgba(168,85,247,0.24)]"
           : "border-violet-300/22 bg-gradient-to-r from-violet-500/10 via-fuchsia-500/9 to-blue-500/9 hover:border-fuchsia-300/40 hover:shadow-[0_12px_34px_rgba(217,70,239,0.22)]"
-      }`}
+        }`}
     >
       <button
         onClick={onToggle}
@@ -137,9 +135,8 @@ function FaqItem({ question, answer, open, onToggle }) {
       >
         <span className="font-semibold text-white">{question}</span>
         <ChevronDown
-          className={`h-5 w-5 text-violet-100 transition-transform duration-300 ${
-            open ? "rotate-180" : ""
-          }`}
+          className={`h-5 w-5 text-violet-100 transition-transform duration-300 ${open ? "rotate-180" : ""
+            }`}
         />
       </button>
       <AnimatePresence initial={false}>
@@ -164,7 +161,7 @@ function MaxUpgradeButton({ onClick, className = "", children }) {
     <motion.button
       type="button"
       onClick={onClick}
-      animate={{ 
+      animate={{
         backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
         boxShadow: [
           "0 0 25px rgba(167, 139, 250, 0.6), 0 0 10px rgba(255, 255, 255, 0.3)",
@@ -202,7 +199,7 @@ function MaxUpgradeButton({ onClick, className = "", children }) {
 export default function SupremeLanding() {
   const { t } = useLanguage();
   const [openFaq, setOpenFaq] = useState(null);
-  const maxUrl = "https://supreme.silence.codes/";
+  const maxUrl = "https://supreme.silenceai.net/";
   const lightVideoUrl = "https://youtu.be/k282t3QKG2w?si=tsrRlgiktFE2buFG";
 
   const goToMax = () => {
@@ -446,17 +443,17 @@ export default function SupremeLanding() {
         <section className="relative mx-auto w-full px-4 pb-24 pt-8 sm:px-6 lg:px-8 max-w-[90rem]">
           <Spotlights />
 
-          
-           {/* Code Snippets - Floating Background Elements */}
+
+          {/* Code Snippets - Floating Background Elements */}
           <div className="pointer-events-none absolute inset-0 overflow-hidden z-0">
             <motion.div
-              animate={{ 
-                opacity: [0.1, 0.25, 0.1], 
+              animate={{
+                opacity: [0.1, 0.25, 0.1],
                 y: [0, -15, 0],
                 rotate: [0, 2, 0]
               }}
-              transition={{ 
-                duration: 8, 
+              transition={{
+                duration: 8,
                 repeat: Infinity,
                 ease: "easeInOut"
               }}
@@ -465,16 +462,16 @@ export default function SupremeLanding() {
               scan.repos({`{"depth":"full"}`})
             </motion.div>
             <motion.div
-              animate={{ 
-                opacity: [0.08, 0.2, 0.08], 
+              animate={{
+                opacity: [0.08, 0.2, 0.08],
                 y: [0, 20, 0],
                 rotate: [0, -3, 0]
               }}
-              transition={{ 
-                duration: 10, 
-                repeat: Infinity, 
+              transition={{
+                duration: 10,
+                repeat: Infinity,
                 delay: 0.5,
-                ease: "easeInOut" 
+                ease: "easeInOut"
               }}
               className="absolute right-[8%] bottom-32 lg:right-[10%] lg:bottom-48 rounded-lg border border-fuchsia-400/10 bg-fuchsia-500/5 p-3 px-4 font-mono text-xs text-fuchsia-200/50 hidden sm:block backdrop-blur-[1px]"
             >
@@ -502,19 +499,19 @@ export default function SupremeLanding() {
 
             {/* Right Column: 3D Cube Animation + Buttons Below */}
             <div className="flex flex-col items-center justify-center w-full pr-4 lg:pr-12 md:-mt-12">
-               <div className="relative flex items-center justify-center w-full h-[320px] lg:h-[400px]">
-                 <SupremeHeroBox />
-               </div>
-               
-               {/* Buttons moved here, below animation */}
-               <div className="mt-8 flex flex-col w-full sm:w-auto items-center gap-4">
+              <div className="relative flex items-center justify-center w-full h-[320px] lg:h-[400px]">
+                <SupremeHeroBox />
+              </div>
+
+              {/* Buttons moved here, below animation */}
+              <div className="mt-8 flex flex-col w-full sm:w-auto items-center gap-4">
                 <MaxUpgradeButton
                   onClick={goToMax}
-                    className="w-full sm:w-[320px] justify-center text-center whitespace-normal sm:whitespace-nowrap"
+                  className="w-full sm:w-[320px] justify-center text-center whitespace-normal sm:whitespace-nowrap"
                 >
                   {t("supreme.landing.hero.ctaMax", "Upgrade to Supreme 2 MAX")}
                 </MaxUpgradeButton>
-                  <button onClick={goToPricing} className="w-full sm:w-[320px] whitespace-normal sm:whitespace-nowrap rounded-full border border-violet-300/25 bg-gradient-to-r from-slate-900/85 via-slate-800/70 to-slate-900/85 px-8 py-4 text-base sm:text-lg font-medium text-slate-100 transition hover:border-fuchsia-300/50 hover:text-white justify-center text-center">
+                <button onClick={goToPricing} className="w-full sm:w-[320px] whitespace-normal sm:whitespace-nowrap rounded-full border border-violet-300/25 bg-gradient-to-r from-slate-900/85 via-slate-800/70 to-slate-900/85 px-8 py-4 text-base sm:text-lg font-medium text-slate-100 transition hover:border-fuchsia-300/50 hover:text-white justify-center text-center">
                   {t("supreme.landing.hero.ctaFree", "Start Free with Supreme 2 Light")}
                 </button>
               </div>
@@ -724,7 +721,7 @@ export default function SupremeLanding() {
           <div className="rounded-2xl border border-violet-300/25 bg-gradient-to-b from-violet-500/12 via-fuchsia-500/8 to-blue-500/8 p-6 md:p-8">
             <h2 className="mb-8 text-center text-2xl font-bold text-white sm:text-3xl">{t("supreme.landing.comparison.title", "Supreme 2 Light vs Supreme 2 MAX")}</h2>
             <SupremeComparisonAnimation />
-             <div className="mt-8 text-center">
+            <div className="mt-8 text-center">
               <p className="mx-auto max-w-3xl text-sm text-slate-300">
                 <span className="font-semibold text-fuchsia-300">MAX Advantage:</span> {t("supreme.landing.comparison.maxAdvantage", "Includes detailed Threat Intelligence and runs as an MCP Server meant to be used by LLMs.")}
               </p>

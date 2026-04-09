@@ -50,14 +50,14 @@ const AiSocGetModal = ({ isOpen, onClose }) => {
 
                             <div className="flex flex-col gap-6">
                                 <button
-                                    onClick={() => handleRedirect('https://email-soc.silence.codes')}
+                                    onClick={() => handleRedirect('https://email-soc.silenceai.net')}
                                     className="w-full py-4 px-6 bg-gradient-to-r from-purple-600/20 to-indigo-600/20 hover:from-purple-600/30 hover:to-indigo-600/30 border border-purple-500/30 rounded-xl font-semibold transition-all text-center"
                                 >
                                     {t("aiSocModal.emailSecurity", "Login/Register to Email security")}
                                 </button>
 
                                 <button
-                                    onClick={() => handleRedirect('https://web-soc.silence.codes')}
+                                    onClick={() => handleRedirect('https://web-soc.silenceai.net')}
                                     className="w-full py-4 px-6 bg-gradient-to-r from-pink-600/20 to-purple-600/20 hover:from-pink-600/30 hover:to-purple-600/30 border border-pink-500/30 rounded-xl font-semibold transition-all text-center"
                                 >
                                     {t("aiSocModal.webSecurity", "Login/Register to Web security")}
@@ -75,9 +75,9 @@ const AiSocGetModal = ({ isOpen, onClose }) => {
                                         <div className="flex items-center gap-4 translate-x-0 group-hover:translate-x-1 transition-transform text-left">
                                             {/* OnlyOffice Logo */}
                                             <svg className="w-10 h-10 shrink-0 drop-shadow-[0_2px_4px_rgba(0,0,0,0.4)]" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M16 3L29 9L16 15L3 9L16 3Z" fill="#3AA9E1" stroke="#3AA9E1" strokeWidth="2" strokeLinejoin="round"/>
-                                                <path d="M16 10.5L29 16.5L16 22.5L3 16.5L16 10.5Z" fill="#8EBE3E" stroke="#8EBE3E" strokeWidth="2" strokeLinejoin="round"/>
-                                                <path d="M16 18L29 24L16 30L3 24L16 18Z" fill="#F06F4D" stroke="#F06F4D" strokeWidth="2" strokeLinejoin="round"/>
+                                                <path d="M16 3L29 9L16 15L3 9L16 3Z" fill="#3AA9E1" stroke="#3AA9E1" strokeWidth="2" strokeLinejoin="round" />
+                                                <path d="M16 10.5L29 16.5L16 22.5L3 16.5L16 10.5Z" fill="#8EBE3E" stroke="#8EBE3E" strokeWidth="2" strokeLinejoin="round" />
+                                                <path d="M16 18L29 24L16 30L3 24L16 18Z" fill="#F06F4D" stroke="#F06F4D" strokeWidth="2" strokeLinejoin="round" />
                                             </svg>
                                             <div className="flex flex-col items-start gap-1">
                                                 <span className="text-base text-white font-semibold">

@@ -55,7 +55,7 @@ function transformBranding(value, pathSegments = []) {
 }
 
 export const metadata = {
-  metadataBase: new URL('https://silence.codes'),
+  metadataBase: new URL('https://silenceai.net'),
   title: {
     default: "Silence",
     template: "%s | Silence"
@@ -87,7 +87,7 @@ export const metadata = {
   openGraph: {
     title: 'Silence',
     description: 'Silence provides AI security and sealed development cloud solutions that keep code, prompts, and builds inside your network.',
-    url: 'https://silence.codes',
+    url: 'https://silenceai.net',
     siteName: 'Silence',
     locale: 'en_US',
     type: 'website',
@@ -141,7 +141,7 @@ const organizationStructuredData = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Silence",
-  url: "https://silence.codes",
+  url: "https://silenceai.net",
 };
 
 export default async function RootLayout(props) {

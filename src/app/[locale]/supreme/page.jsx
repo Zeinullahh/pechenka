@@ -23,7 +23,7 @@ export async function generateMetadata({ params }) {
       title: 'MCP-Based Security Scanner | Supreme by Silence',
       description:
         'Supreme by Silence is an MCP-based security scanner for codebases with full-repository scanning, multi-language coverage, and automated remediation workflows.',
-      url: `https://silence.codes${path}`,
+      url: `https://silenceai.net${path}`,
       siteName: 'Silence',
       type: 'website',
     },

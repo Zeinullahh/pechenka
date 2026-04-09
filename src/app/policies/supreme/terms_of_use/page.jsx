@@ -66,7 +66,7 @@ const SupremeTermsOfUse = () => {
 
             <section id="pricing">
               <h2 className="text-2xl font-semibold mb-4">4. Pricing and Subscriptions</h2>
-              <p className="mb-4"><strong>4.1 Pricing Information:</strong> Pricing for Supreme subscriptions and Database updates is available on our official website. All current pricing, subscription tiers, billing cycles, and terms are listed at https://silence.codes/supreme</p>
+              <p className="mb-4"><strong>4.1 Pricing Information:</strong> Pricing for Supreme subscriptions and Database updates is available on our official website. All current pricing, subscription tiers, billing cycles, and terms are listed at https://silenceai.net/supreme</p>
               <p className="mb-4"><strong>4.2 Pricing Changes:</strong> We reserve the right to modify pricing at any time. Price changes will be communicated on our website with reasonable notice and will take effect for new billing cycles after the notification period. Continued use of Supreme after a price change constitutes acceptance of the new pricing.</p>
               <p className="mb-4"><strong>4.3 License Verification:</strong> When you attempt to download an updated Database, your license status will be verified against our servers. If your subscription is active, the Database download will proceed. If your subscription is inactive or expired, Database download will be restricted.</p>
               <p className="mb-4"><strong>4.4 No Refunds for Updates:</strong> Updates and refreshes to the Database are included as part of your subscription. We do not provide refunds for Database refreshes or updates that are part of your active subscription period.</p>

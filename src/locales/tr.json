@@ -260,7 +260,7 @@
         "changes": {
           "title": "8. Değişiklikler ve İletişim",
           "body1": "Silence AI, programdaki veya yürürlükteki hukuktaki değişiklikleri yansıtmak için bu şartları güncelleyebilir. Yayınlandığında yürürlüğe girer.",
-          "body2": "Ortaklık programı soruları için support@silence.codes adresine yazabilirsiniz."
+          "body2": "Ortaklık programı soruları için support@silenceai.net adresine yazabilirsiniz."
         }
       }
     },
@@ -538,7 +538,7 @@
   },
   "footer": {
     "contactLabel": "İletişim:",
-    "contactValue": "support@silence.codes",
+    "contactValue": "support@silenceai.net",
     "addressLabel": "Adres:",
     "addressValue": "Media City Free Zone, Al Messaned, Sharjah, BAE",
     "links": {
@@ -2476,4 +2476,3 @@
     ]
   }
 }
-

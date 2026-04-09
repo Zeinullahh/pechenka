@@ -23,7 +23,7 @@ export async function generateMetadata({ params }) {
       title: 'AI-Powered Security Operations Center (AI-SOC) | Silence',
       description:
         'AI-SOC by Silence is an AI-powered security operations center for web and email threat detection, response automation, and managed protection.',
-      url: `https://silence.codes${path}`,
+      url: `https://silenceai.net${path}`,
       siteName: 'Silence',
       type: 'website',
     },

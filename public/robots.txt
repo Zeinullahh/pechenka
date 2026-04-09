@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://silence.codes/sitemap.xml
+Sitemap: https://silenceai.net/sitemap.xml

@@ -1,4 +1,4 @@
-silence.codes, www.silence.codes {
+silenceai.net, www.silenceai.net {
     # internal path to the build output
     root * /home/ubuntu/pechenka/out
 

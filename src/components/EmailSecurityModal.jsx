@@ -43,7 +43,7 @@ const EmailSecurityModal = ({ isOpen, onClose }) => {
 
                         <div className="flex flex-col gap-4">
                             <a
-                                href="https://mail.silence.codes/"
+                                href="https://mail.silenceai.net/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="group relative w-full py-5 px-6 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 hover:from-blue-600/30 hover:to-cyan-600/30 border border-blue-500/30 rounded-xl font-semibold transition-all"
@@ -60,7 +60,7 @@ const EmailSecurityModal = ({ isOpen, onClose }) => {
                             </a>
 
                             <a
-                                href="https://email-soc.silence.codes/"
+                                href="https://email-soc.silenceai.net/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="group relative w-full py-5 px-6 bg-gradient-to-r from-purple-600/20 to-indigo-600/20 hover:from-purple-600/30 hover:to-indigo-600/30 border border-purple-500/30 rounded-xl font-semibold transition-all"

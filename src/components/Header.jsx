@@ -243,14 +243,14 @@ const Header = ({ onOpenModal, hideCta = false }) => {
                     <GlowButton
                       onClick={() => {
                         if (isSupremePage) {
-                          window.location.href = "https://supreme.silence.codes/";
+                          window.location.href = "https://supreme.silenceai.net/";
                         } else {
                           onOpenModal?.();
                         }
                         setIsMobileMenuOpen(false);
                       }}
                     >
-                        {isSupremePage ? "Get MAX" : pathname === "/ai-soc" || pathname === "/ai-soc/" ? t("header.cta.get", "Get") : t("header.cta.contact", "Contact")}
+                      {isSupremePage ? "Get MAX" : pathname === "/ai-soc" || pathname === "/ai-soc/" ? t("header.cta.get", "Get") : t("header.cta.contact", "Contact")}
                     </GlowButton>
                   )}
                 </div>
@@ -428,7 +428,7 @@ const Header = ({ onOpenModal, hideCta = false }) => {
                 {isDesktop && isSupremePage && !hideCta && (
                   <GlowButton
                     onClick={() => {
-                      window.location.href = "https://supreme.silence.codes/";
+                      window.location.href = "https://supreme.silenceai.net/";
                     }}
                   >
                     Get MAX

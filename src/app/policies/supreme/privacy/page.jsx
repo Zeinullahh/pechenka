@@ -198,7 +198,7 @@ const SupremePrivacyPolicy = () => {
               <p className="mb-4">For questions about this Privacy Policy, data processing, or to exercise your rights, contact us at:</p>
               <p className="mb-2">Silence AI</p>
               <p className="mb-2">Email: info@silenceai.net</p>
-              <p className="mb-4">Website: https://silence.codes/</p>
+              <p className="mb-4">Website: https://silenceai.net/</p>
             </section>
 
             <section id="governing-law">

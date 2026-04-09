@@ -78,10 +78,10 @@ const RequestDemoModal = ({ isOpen, onClose }) => {
                     {t("requestDemoModal.contactInfo", "You can contact us through this email")}
                     <br />
                     <a
-                      href="mailto:info@silence.codes"
+                      href="mailto:info@silenceai.net"
                       className="text-blue-400 font-bold hover:text-blue-300 transition-colors text-xl mt-2 inline-block"
                     >
-                      info@silence.codes
+                      info@silenceai.net
                     </a>
                     <br />
                     {t("requestDemoModal.contactSuffix", "to reach us out")}

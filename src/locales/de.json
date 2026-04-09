@@ -248,7 +248,7 @@
         "changes": {
           "title": "8. Änderungen & Kontakt",
           "body1": "Silence AI kann diese Partnerbedingungen bei Programm- oder Gesetzesänderungen aktualisieren. Änderungen gelten ab Veröffentlichung auf dieser Seite.",
-          "body2": "Fragen zum Partnerprogramm an support@silence.codes."
+          "body2": "Fragen zum Partnerprogramm an support@silenceai.net."
         }
       },
       "gitServer": {
@@ -538,7 +538,7 @@
   },
   "footer": {
     "contactLabel": "Kontakt:",
-    "contactValue": "support@silence.codes",
+    "contactValue": "support@silenceai.net",
     "addressLabel": "Adresse:",
     "addressValue": "Almaty, Kasachstan",
     "links": {
@@ -2476,4 +2476,3 @@
     ]
   }
 }
-

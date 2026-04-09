@@ -261,7 +261,7 @@
         "changes": {
           "title": "8. Changes & Contact",
           "body1": "Silence AI may update these affiliate terms to reflect changes in the program or applicable law. Updated versions take effect upon publication on this page.",
-          "body2": "Questions about the affiliate program can be sent to support@silence.codes."
+          "body2": "Questions about the affiliate program can be sent to support@silenceai.net."
         }
       }
     },
@@ -539,7 +539,7 @@
   },
   "footer": {
     "contactLabel": "Contact :",
-    "contactValue": "support@silence.codes",
+    "contactValue": "support@silenceai.net",
     "addressLabel": "Adresse :",
     "addressValue": "Media City Free Zone, Al Messaned, Sharjah, ÉAU",
     "links": {
@@ -2449,4 +2449,3 @@
     ]
   }
 }
-

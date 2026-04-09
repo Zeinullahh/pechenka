@@ -151,7 +151,7 @@
   "footer": {
     "copyright": "© {year} Silence AI。保留所有权利。",
     "contactLabel": "联系方式:",
-    "contactValue": "support@silence.codes",
+    "contactValue": "support@silenceai.net",
     "addressLabel": "地址:",
     "addressValue": "Media City Free Zone, Al Messaned, Sharjah, UAE",
     "links": {
@@ -630,7 +630,7 @@
         "changes": {
           "title": "8. 变更与联系",
           "body1": "Silence AI 可能因计划或法律变化更新本联盟条款,更新内容在本页发布后立即生效。",
-          "body2": "关于联盟计划的问题可发送至 support@silence.codes。"
+          "body2": "关于联盟计划的问题可发送至 support@silenceai.net。"
         }
       }
     }
@@ -2445,4 +2445,3 @@
     ]
   }
 }
-

@@ -3,88 +3,88 @@
 
   <!-- Root -->
   <url>
-    <loc>https://silence.codes/</loc>
+    <loc>https://silenceai.net/</loc>
   </url>
 
   <!-- Home (all locales) -->
-  <url><loc>https://silence.codes/en/</loc></url>
-  <url><loc>https://silence.codes/ja/</loc></url>
-  <url><loc>https://silence.codes/zh/</loc></url>
-  <url><loc>https://silence.codes/ko/</loc></url>
-  <url><loc>https://silence.codes/fr/</loc></url>
-  <url><loc>https://silence.codes/de/</loc></url>
-  <url><loc>https://silence.codes/ru/</loc></url>
-  <url><loc>https://silence.codes/ar/</loc></url>
-  <url><loc>https://silence.codes/tr/</loc></url>
+  <url><loc>https://silenceai.net/en/</loc></url>
+  <url><loc>https://silenceai.net/ja/</loc></url>
+  <url><loc>https://silenceai.net/zh/</loc></url>
+  <url><loc>https://silenceai.net/ko/</loc></url>
+  <url><loc>https://silenceai.net/fr/</loc></url>
+  <url><loc>https://silenceai.net/de/</loc></url>
+  <url><loc>https://silenceai.net/ru/</loc></url>
+  <url><loc>https://silenceai.net/ar/</loc></url>
+  <url><loc>https://silenceai.net/tr/</loc></url>
 
   <!-- AI SOC (all locales) -->
-  <url><loc>https://silence.codes/en/ai-soc/</loc></url>
-  <url><loc>https://silence.codes/ja/ai-soc/</loc></url>
-  <url><loc>https://silence.codes/zh/ai-soc/</loc></url>
-  <url><loc>https://silence.codes/ko/ai-soc/</loc></url>
-  <url><loc>https://silence.codes/fr/ai-soc/</loc></url>
-  <url><loc>https://silence.codes/de/ai-soc/</loc></url>
-  <url><loc>https://silence.codes/ru/ai-soc/</loc></url>
-  <url><loc>https://silence.codes/ar/ai-soc/</loc></url>
-  <url><loc>https://silence.codes/tr/ai-soc/</loc></url>
+  <url><loc>https://silenceai.net/en/ai-soc/</loc></url>
+  <url><loc>https://silenceai.net/ja/ai-soc/</loc></url>
+  <url><loc>https://silenceai.net/zh/ai-soc/</loc></url>
+  <url><loc>https://silenceai.net/ko/ai-soc/</loc></url>
+  <url><loc>https://silenceai.net/fr/ai-soc/</loc></url>
+  <url><loc>https://silenceai.net/de/ai-soc/</loc></url>
+  <url><loc>https://silenceai.net/ru/ai-soc/</loc></url>
+  <url><loc>https://silenceai.net/ar/ai-soc/</loc></url>
+  <url><loc>https://silenceai.net/tr/ai-soc/</loc></url>
 
   <!-- Supreme (all locales) -->
-  <url><loc>https://silence.codes/en/supreme/</loc></url>
-  <url><loc>https://silence.codes/ja/supreme/</loc></url>
-  <url><loc>https://silence.codes/zh/supreme/</loc></url>
-  <url><loc>https://silence.codes/ko/supreme/</loc></url>
-  <url><loc>https://silence.codes/fr/supreme/</loc></url>
-  <url><loc>https://silence.codes/de/supreme/</loc></url>
-  <url><loc>https://silence.codes/ru/supreme/</loc></url>
-  <url><loc>https://silence.codes/ar/supreme/</loc></url>
-  <url><loc>https://silence.codes/tr/supreme/</loc></url>
+  <url><loc>https://silenceai.net/en/supreme/</loc></url>
+  <url><loc>https://silenceai.net/ja/supreme/</loc></url>
+  <url><loc>https://silenceai.net/zh/supreme/</loc></url>
+  <url><loc>https://silenceai.net/ko/supreme/</loc></url>
+  <url><loc>https://silenceai.net/fr/supreme/</loc></url>
+  <url><loc>https://silenceai.net/de/supreme/</loc></url>
+  <url><loc>https://silenceai.net/ru/supreme/</loc></url>
+  <url><loc>https://silenceai.net/ar/supreme/</loc></url>
+  <url><loc>https://silenceai.net/tr/supreme/</loc></url>
 
   <!-- Affiliate (all locales) -->
-  <url><loc>https://silence.codes/en/affiliate/</loc></url>
-  <url><loc>https://silence.codes/ja/affiliate/</loc></url>
-  <url><loc>https://silence.codes/zh/affiliate/</loc></url>
-  <url><loc>https://silence.codes/ko/affiliate/</loc></url>
-  <url><loc>https://silence.codes/fr/affiliate/</loc></url>
-  <url><loc>https://silence.codes/de/affiliate/</loc></url>
-  <url><loc>https://silence.codes/ru/affiliate/</loc></url>
-  <url><loc>https://silence.codes/ar/affiliate/</loc></url>
-  <url><loc>https://silence.codes/tr/affiliate/</loc></url>
+  <url><loc>https://silenceai.net/en/affiliate/</loc></url>
+  <url><loc>https://silenceai.net/ja/affiliate/</loc></url>
+  <url><loc>https://silenceai.net/zh/affiliate/</loc></url>
+  <url><loc>https://silenceai.net/ko/affiliate/</loc></url>
+  <url><loc>https://silenceai.net/fr/affiliate/</loc></url>
+  <url><loc>https://silenceai.net/de/affiliate/</loc></url>
+  <url><loc>https://silenceai.net/ru/affiliate/</loc></url>
+  <url><loc>https://silenceai.net/ar/affiliate/</loc></url>
+  <url><loc>https://silenceai.net/tr/affiliate/</loc></url>
 
   <!-- Affiliate Terms of Service (all locales) -->
-  <url><loc>https://silence.codes/en/affiliate/terms-of-service-affiliate/</loc></url>
-  <url><loc>https://silence.codes/ja/affiliate/terms-of-service-affiliate/</loc></url>
-  <url><loc>https://silence.codes/zh/affiliate/terms-of-service-affiliate/</loc></url>
-  <url><loc>https://silence.codes/ko/affiliate/terms-of-service-affiliate/</loc></url>
-  <url><loc>https://silence.codes/fr/affiliate/terms-of-service-affiliate/</loc></url>
-  <url><loc>https://silence.codes/de/affiliate/terms-of-service-affiliate/</loc></url>
-  <url><loc>https://silence.codes/ru/affiliate/terms-of-service-affiliate/</loc></url>
-  <url><loc>https://silence.codes/ar/affiliate/terms-of-service-affiliate/</loc></url>
-  <url><loc>https://silence.codes/tr/affiliate/terms-of-service-affiliate/</loc></url>
+  <url><loc>https://silenceai.net/en/affiliate/terms-of-service-affiliate/</loc></url>
+  <url><loc>https://silenceai.net/ja/affiliate/terms-of-service-affiliate/</loc></url>
+  <url><loc>https://silenceai.net/zh/affiliate/terms-of-service-affiliate/</loc></url>
+  <url><loc>https://silenceai.net/ko/affiliate/terms-of-service-affiliate/</loc></url>
+  <url><loc>https://silenceai.net/fr/affiliate/terms-of-service-affiliate/</loc></url>
+  <url><loc>https://silenceai.net/de/affiliate/terms-of-service-affiliate/</loc></url>
+  <url><loc>https://silenceai.net/ru/affiliate/terms-of-service-affiliate/</loc></url>
+  <url><loc>https://silenceai.net/ar/affiliate/terms-of-service-affiliate/</loc></url>
+  <url><loc>https://silenceai.net/tr/affiliate/terms-of-service-affiliate/</loc></url>
 
   <!-- General Policies -->
-  <url><loc>https://silence.codes/policies/cookies/</loc></url>
-  <url><loc>https://silence.codes/policies/privacy/</loc></url>
-  <url><loc>https://silence.codes/policies/privacy_email/</loc></url>
-  <url><loc>https://silence.codes/policies/terms_of_service/</loc></url>
-  <url><loc>https://silence.codes/policies/terms_of_use/</loc></url>
+  <url><loc>https://silenceai.net/policies/cookies/</loc></url>
+  <url><loc>https://silenceai.net/policies/privacy/</loc></url>
+  <url><loc>https://silenceai.net/policies/privacy_email/</loc></url>
+  <url><loc>https://silenceai.net/policies/terms_of_service/</loc></url>
+  <url><loc>https://silenceai.net/policies/terms_of_use/</loc></url>
 
   <!-- Supreme Policies -->
-  <url><loc>https://silence.codes/policies/supreme/privacy/</loc></url>
-  <url><loc>https://silence.codes/policies/supreme/terms_of_service/</loc></url>
-  <url><loc>https://silence.codes/policies/supreme/terms_of_use/</loc></url>
+  <url><loc>https://silenceai.net/policies/supreme/privacy/</loc></url>
+  <url><loc>https://silenceai.net/policies/supreme/terms_of_service/</loc></url>
+  <url><loc>https://silenceai.net/policies/supreme/terms_of_use/</loc></url>
 
   <!-- AI SOC Policies -->
-  <url><loc>https://silence.codes/policies/ai-soc1/cookies/</loc></url>
-  <url><loc>https://silence.codes/policies/ai-soc1/cookies_email/</loc></url>
-  <url><loc>https://silence.codes/policies/ai-soc1/privacy/</loc></url>
-  <url><loc>https://silence.codes/policies/ai-soc1/privacy_email/</loc></url>
-  <url><loc>https://silence.codes/policies/ai-soc1/terms_of_service/</loc></url>
-  <url><loc>https://silence.codes/policies/ai-soc1/terms_of_use/</loc></url>
-  <url><loc>https://silence.codes/policies/ai-soc1/terms_of_use_email/</loc></url>
+  <url><loc>https://silenceai.net/policies/ai-soc1/cookies/</loc></url>
+  <url><loc>https://silenceai.net/policies/ai-soc1/cookies_email/</loc></url>
+  <url><loc>https://silenceai.net/policies/ai-soc1/privacy/</loc></url>
+  <url><loc>https://silenceai.net/policies/ai-soc1/privacy_email/</loc></url>
+  <url><loc>https://silenceai.net/policies/ai-soc1/terms_of_service/</loc></url>
+  <url><loc>https://silenceai.net/policies/ai-soc1/terms_of_use/</loc></url>
+  <url><loc>https://silenceai.net/policies/ai-soc1/terms_of_use_email/</loc></url>
 
   <!-- Sithub Policies -->
-  <url><loc>https://silence.codes/policies/sithub/privacy/</loc></url>
-  <url><loc>https://silence.codes/policies/sithub/terms_of_service/</loc></url>
-  <url><loc>https://silence.codes/policies/sithub/terms_of_use/</loc></url>
+  <url><loc>https://silenceai.net/policies/sithub/privacy/</loc></url>
+  <url><loc>https://silenceai.net/policies/sithub/terms_of_service/</loc></url>
+  <url><loc>https://silenceai.net/policies/sithub/terms_of_use/</loc></url>
 
 </urlset>
