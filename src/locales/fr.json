@@ -2346,7 +2346,7 @@
           "feature": "Vue sur tous les e-mails du domaine"
         },
         "delete": {
-          "feature": "Possibilité de supprimer des e-mails"
+          "feature": "L'administrateur peut supprimer les e-mails des employés"
         },
         "activeProtection": {
           "feature": "Protection active contre tous les types d'attaques e-mail"

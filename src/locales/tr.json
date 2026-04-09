@@ -2373,7 +2373,7 @@
           "feature": "Alan adındaki tüm e-postaları görüntüleme"
         },
         "delete": {
-          "feature": "E-postaları silme yeteneği"
+          "feature": "Yönetici çalışanların e-postalarını silebilir"
         },
         "activeProtection": {
           "feature": "Tüm e-posta saldırı türlerine karşı aktif koruma"

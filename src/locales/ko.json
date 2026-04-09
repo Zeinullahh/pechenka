@@ -2405,7 +2405,7 @@
           "feature": "도메인 전체 이메일 조회"
         },
         "delete": {
-          "feature": "이메일 삭제 기능"
+          "feature": "관리자가 직원의 이메일을 삭제할 수 있음"
         },
         "activeProtection": {
           "feature": "모든 유형의 이메일 공격에 대한 능동 보호"

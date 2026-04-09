@@ -2371,7 +2371,7 @@
           "feature": "ドメイン全体のメールを閲覧"
         },
         "delete": {
-          "feature": "メール削除機能"
+          "feature": "管理者が従業員のメールを削除可能"
         },
         "activeProtection": {
           "feature": "あらゆるメール攻撃に対するアクティブ保護"

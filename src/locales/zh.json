@@ -2342,7 +2342,7 @@
           "feature": "查看整个域名下的所有邮件"
         },
         "delete": {
-          "feature": "可删除邮件"
+          "feature": "管理员可以删除员工的邮件"
         },
         "activeProtection": {
           "feature": "针对所有类型邮件攻击的主动防护"

@@ -2363,7 +2363,7 @@
           "feature": "View on all emails across the domain"
         },
         "delete": {
-          "feature": "Ability to delete emails"
+          "feature": "Admin can delete employee's emails"
         },
         "activeProtection": {
           "feature": "Active Protection against all types of email attacks"

@@ -2373,7 +2373,7 @@
           "feature": "Einblick in alle E-Mails der Domain"
         },
         "delete": {
-          "feature": "Möglichkeit, E-Mails zu löschen"
+          "feature": "Admin kann E-Mails von Mitarbeitern löschen"
         },
         "activeProtection": {
           "feature": "Aktiver Schutz gegen alle Arten von E-Mail-Angriffen"
