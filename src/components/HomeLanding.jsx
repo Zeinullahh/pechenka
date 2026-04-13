@@ -420,10 +420,16 @@ export default function HomeLanding() {
               logo: "/partners/nur-astana-kurylys.png",
             },
             {
-              name: "KazMunayGas",
-              capAmount: "$25",
+              name: "Kazatomprom",
+              capAmount: "$20.774",
               capUnit: "billion",
-              logo: "/partners/kazmunaygas.png",
+              logo: "/partners/kazatomprom.png",
+            },
+            {
+              name: "Alibaba",
+              capAmount: "$283.4",
+              capUnit: "billion",
+              logo: "/partners/alibaba.png",
             },
             {
               name: "QazCloud",

@@ -70,11 +70,6 @@ const WhyChooseUs = () => {
   const logos = useMemo(
     () => [
       {
-        src: "/kmg-logo.png",
-        alt: t("whyChooseUs.logos.kmg", "KazMunayGas"),
-        fallbackIcon: Building2,
-      },
-      {
         src: "/nak-logo.png",
         alt: t("whyChooseUs.logos.nak", "Nur Astana Kurylys"),
         fallbackIcon: Sparkles,
