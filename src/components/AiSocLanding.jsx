@@ -4,7 +4,6 @@ import React, { useEffect, useRef, useState } from 'react';
 import Header from '@/components/Header.jsx';
 import Hero from '@/components/Hero.jsx';
 import Pricing from '@/components/Pricing.jsx';
-import { CybersecurityLamp } from '@/components/CybersecurityLamp';
 import { StickyScrollSolution } from '@/components/StickyScrollSolution.jsx';
 import Insights from '@/components/Insights.jsx';
 import AiSocGetModal from '@/components/AiSocGetModal.jsx';
@@ -223,13 +222,16 @@ const AiSocLanding = () => {
         <div className="w-full max-w-7xl mx-auto">
           <Header onOpenModal={openModal} />
           <Hero onOpenModal={openModal} />
-          <section className="mt-8 px-4 sm:px-6 lg:px-8">
+          <section className="mt-16 px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white text-center mb-10">
+              {t('aiSocLanding.vsCloudflareTitle', 'AI-SOC vs Cloudflare + Outlook')}
+            </h2>
             <div className="mx-auto max-w-5xl overflow-hidden rounded-3xl border border-white/10 bg-slate-950/70 shadow-[0_20px_60px_-20px_rgba(14,165,233,0.45)]">
               <div className="aspect-video w-full">
                 <iframe
                   className="h-full w-full"
-                  src="https://www.youtube.com/embed/bkWexp4vku8"
-                  title="AI-SOC Video"
+                  src="https://www.youtube.com/embed/vRUnXsQ0i9I?si=qhMYst6vEXN5KaTf"
+                  title="AI-SOC vs Cloudflare + Outlook"
                   loading="lazy"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   referrerPolicy="strict-origin-when-cross-origin"

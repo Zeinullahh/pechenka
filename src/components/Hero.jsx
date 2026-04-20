@@ -1,19 +1,13 @@
 "use client";
-import React, { useCallback, useEffect, useRef, useState } from 'react';
-import { StickyScrollAnimation } from '@/components/StickyScrollAnimation.jsx';
+import React, { useState } from 'react';
 import GlowButton from './GlowButton.jsx';
 import TooltipCard from './TooltipCard';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const Hero = ({ onOpenModal }) => {
   const [activeTooltip, setActiveTooltip] = useState(null);
-  const [headingFontSize, setHeadingFontSize] = useState(72);
-  const [isCompactViewport, setIsCompactViewport] = useState(false);
-  const playgroundRef = useRef(null);
-  const playgroundHeadingRef = useRef(null);
   const { t } = useLanguage();
   const fullText = t("hero.headline", "AI-SOC — AI-Powered Security Operations Center");
-  const playgroundHeading = t("hero.playgroundHeading", <>AI powered<br />Security Operations Center</>);
 
   const tooltipContent = {
     "web-attack-protection": {
@@ -39,133 +33,14 @@ const Hero = ({ onOpenModal }) => {
     },
   };
 
-  const adjustPlaygroundHeadingSize = useCallback(() => {
-    const headingEl = playgroundHeadingRef.current;
-    const containerEl = playgroundRef.current;
-    if (!headingEl || !containerEl) return;
-
-    const containerWidth = containerEl.getBoundingClientRect().width;
-    if (!containerWidth) return;
-
-    const targetWidth = Math.max(containerWidth, 0);
-
-    const MAX_FONT_SIZE = 320;
-    const MIN_FONT_SIZE = 24;
-
-    if (isCompactViewport) {
-      headingEl.style.whiteSpace = "normal";
-      headingEl.style.maxWidth = "100%";
-      headingEl.style.width = "100%";
-      headingEl.style.marginInline = "auto";
-      headingEl.style.overflowWrap = "anywhere";
-      headingEl.style.wordBreak = "break-word";
-      headingEl.style.lineHeight = "1.15";
-      headingEl.style.paddingInline = "0.5rem";
-      headingEl.style.boxSizing = "border-box";
-      headingEl.style.fontSize = "";
-      return;
-    }
-
-    let low = MIN_FONT_SIZE;
-    let high = MAX_FONT_SIZE;
-    let best = MIN_FONT_SIZE;
-
-    headingEl.style.whiteSpace = "nowrap";
-    headingEl.style.maxWidth = "100%";
-    headingEl.style.width = "100%";
-    headingEl.style.marginInline = "0";
-    headingEl.style.overflowWrap = "normal";
-    headingEl.style.wordBreak = "normal";
-    headingEl.style.lineHeight = "1";
-    headingEl.style.paddingInline = "0";
-    headingEl.style.boxSizing = "content-box";
-
-    for (let i = 0; i < 25; i += 1) {
-      const mid = (low + high) / 2;
-      headingEl.style.fontSize = `${mid}px`;
-      const width = headingEl.scrollWidth;
-      if (width <= targetWidth) {
-        best = mid;
-        low = mid;
-      } else {
-        high = mid;
-      }
-    }
-
-    headingEl.style.fontSize = `${best}px`;
-    setHeadingFontSize((prev) => (prev !== best ? best : prev));
-  }, [isCompactViewport]);
-
-  useEffect(() => {
-    if (typeof window === "undefined" || typeof window.matchMedia !== "function") return;
-
-    const mediaQuery = window.matchMedia("(max-width: 1023px)");
-    const updateViewport = () => setIsCompactViewport(mediaQuery.matches);
-
-    updateViewport();
-
-    if (typeof mediaQuery.addEventListener === "function") {
-      mediaQuery.addEventListener("change", updateViewport);
-      return () => mediaQuery.removeEventListener("change", updateViewport);
-    }
-
-    mediaQuery.addListener(updateViewport);
-    return () => mediaQuery.removeListener(updateViewport);
-  }, []);
-
-  const compactPlaygroundHeading =
-    isCompactViewport && typeof playgroundHeading === "string"
-      ? (() => {
-          const words = playgroundHeading.trim().split(/\s+/);
-          if (words.length < 4) return playgroundHeading;
-          const midpoint = Math.ceil(words.length / 2);
-          return (
-            <>
-              {words.slice(0, midpoint).join(" ")}
-              <br />
-              {words.slice(midpoint).join(" ")}
-            </>
-          );
-        })()
-      : playgroundHeading;
-
-  useEffect(() => {
-    adjustPlaygroundHeadingSize();
-
-    let handleResize;
-    if (typeof window !== "undefined") {
-      handleResize = () => adjustPlaygroundHeadingSize();
-      window.addEventListener("resize", handleResize);
-    }
-
-    return () => {
-      if (handleResize) {
-        window.removeEventListener("resize", handleResize);
-      }
-    };
-  }, [adjustPlaygroundHeadingSize, compactPlaygroundHeading]);
-
-  useEffect(() => {
-    if (typeof ResizeObserver === "undefined") return;
-
-    const observer = new ResizeObserver(() => adjustPlaygroundHeadingSize());
-
-    if (playgroundRef.current) {
-      observer.observe(playgroundRef.current);
-    }
-
-    return () => {
-      observer.disconnect();
-    };
-  }, [adjustPlaygroundHeadingSize]);
-
   return (
-    <div className="container mx-auto flex flex-col lg:flex-row items-start gap-14 px-4 py-10 sm:px-6 lg:px-8">
-      <div className="w-full lg:w-1/2 text-white lg:mt-0">
-        <h1 className="text-3xl sm:text-4xl font-bold mb-6 sm:mb-8 leading-tight text-white">
-          {fullText}
-        </h1>
-        <p className="font-bold mb-4 text-base sm:text-lg">
+    <div className="container mx-auto px-4 py-10 sm:px-6 lg:px-8">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-10 sm:mb-14 leading-tight text-white text-center">
+        {fullText}
+      </h1>
+      <div className="flex flex-col lg:flex-row items-center gap-14">
+        <div className="w-full lg:w-1/2 text-white lg:mt-0">
+          <p className="font-bold mb-4 text-base sm:text-lg">
           {t(
             "hero.subheading",
             "A unified AI cybersecurity platform that combines Web Security and Email Security in a single control center."
@@ -213,21 +88,21 @@ const Hero = ({ onOpenModal }) => {
           </GlowButton>
         </div>
       </div>
-      <div className="w-full lg:w-1/2 mt-6 sm:mt-8 lg:-mt-8 relative flex justify-center lg:justify-end pt-0">
-        <div className="relative z-10 w-full max-w-2xl min-h-[400px] flex items-center justify-center">
-          <div className="absolute inset-0 z-0">
-            <StickyScrollAnimation />
-          </div>
-          <div ref={playgroundRef} className="relative z-10 w-full px-3 sm:px-4 overflow-visible">
-            <h2
-              ref={playgroundHeadingRef}
-              className="block w-full max-w-full font-bold text-white text-center leading-tight whitespace-normal break-words text-[clamp(1.75rem,8.5vw,2.6rem)] sm:text-[clamp(2rem,7vw,3rem)] lg:whitespace-nowrap drop-shadow-2xl px-2 sm:px-0"
-              style={{ fontSize: isCompactViewport ? undefined : `${headingFontSize}px`, textShadow: '0 4px 24px rgba(0,0,0,0.5)' }}
-            >
-              {compactPlaygroundHeading}
-            </h2>
+      <div className="w-full lg:w-1/2 mt-8 lg:mt-0 relative flex justify-center lg:justify-end">
+        <div className="w-full max-w-2xl overflow-hidden rounded-3xl border border-white/10 bg-slate-950/70 shadow-[0_20px_60px_-20px_rgba(14,165,233,0.45)]">
+          <div className="aspect-video w-full">
+            <iframe
+              className="h-full w-full"
+              src="https://www.youtube.com/embed/bkWexp4vku8"
+              title="AI-SOC Video"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            />
           </div>
         </div>
+      </div>
       </div>
     </div>
   );
