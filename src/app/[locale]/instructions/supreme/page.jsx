@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import SupremeInstructions from "@/components/instructions/SupremeInstructions";
 
 export const metadata = {
-    title: "Supreme Instructions - Silence",
+    title: "Supreme Instructions - Silence AI",
 };
 
 export default function Page() {

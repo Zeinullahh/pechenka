@@ -57,19 +57,23 @@ function transformBranding(value, pathSegments = []) {
 export const metadata = {
   metadataBase: new URL('https://silenceai.net'),
   title: {
-    default: "Silence",
-    template: "%s | Silence"
+    default: "Silence AI - Secure Development & AI-SOC",
+    template: "%s | Silence AI"
   },
-  description: "Silence provides AI security and sealed development cloud solutions that keep code, prompts, and builds inside your network.",
+  description: "Silence AI provides cutting-edge AI cybersecurity, sealed development cloud solutions, and AI-SOC. Keep code, prompts, and builds entirely within your secure network.",
   keywords: [
-    "Silence",
+    "Silence AI",
+    "Silence AI LLC",
+    "Silence AI cybersecurity",
     "Silence cybersecurity",
     "AI security",
     "secure development cloud",
+    "private AI cloud",
     "AI-SOC",
+    "AI driven SOC",
     "SLNC-env",
   ],
-  applicationName: "Silence",
+  applicationName: "Silence AI",
   robots: {
     index: true,
     follow: true,
@@ -85,10 +89,10 @@ export const metadata = {
     icon: '/logo.png',
   },
   openGraph: {
-    title: 'Silence',
-    description: 'Silence provides AI security and sealed development cloud solutions that keep code, prompts, and builds inside your network.',
+    title: 'Silence AI - Secure Development Cloud & AI-SOC',
+    description: 'Silence AI provides cutting-edge AI cybersecurity, sealed development cloud solutions, and AI-SOC. Keep code, prompts, and builds entirely within your secure network.',
     url: 'https://silenceai.net',
-    siteName: 'Silence',
+    siteName: 'Silence AI',
     locale: 'en_US',
     type: 'website',
     images: [
@@ -96,14 +100,14 @@ export const metadata = {
         url: '/supreme_dashboard.jpeg',
         width: 1200,
         height: 630,
-        alt: 'Silence Dashboard',
+        alt: 'Silence AI Dashboard',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Silence',
-    description: 'Silence provides AI security and sealed development cloud solutions that keep code, prompts, and builds inside your network.',
+    title: 'Silence AI - Secure Development Cloud & AI-SOC',
+    description: 'Silence AI provides cutting-edge AI cybersecurity, sealed development cloud solutions, and AI-SOC. Keep code, prompts, and builds entirely within your secure network.',
     images: ['/supreme_dashboard.jpeg'],
   },
   alternates: {
@@ -140,8 +144,11 @@ export function generateStaticParams() {
 const organizationStructuredData = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "Silence",
+  name: "Silence AI",
+  legalName: "Silence AI LLC",
   url: "https://silenceai.net",
+  logo: "https://silenceai.net/logo.png",
+  description: "Silence AI creates sealed development cloud environments and AI-SOC solutions for ultimate corporate data security.",
 };
 
 export default async function RootLayout(props) {
