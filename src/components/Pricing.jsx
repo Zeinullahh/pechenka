@@ -47,19 +47,16 @@ const PLAN_SPECIFIC_FEATURE_KEYS = {
   premium: [
     "pricing.aiSoc.features.premium.userLimit",
     "pricing.aiSoc.features.premium.adminLimit",
-    "pricing.aiSoc.features.shared.unlimitedSecurity",
     "pricing.aiSoc.features.premium.storage",
   ],
   max: [
     "pricing.aiSoc.features.max.userLimit",
     "pricing.aiSoc.features.max.adminLimit",
-    "pricing.aiSoc.features.shared.unlimitedSecurity",
     "pricing.aiSoc.features.max.storage",
   ],
   standard: [
     "pricing.aiSoc.features.standard.userLimit",
     "pricing.aiSoc.features.standard.adminLimit",
-    "pricing.aiSoc.features.shared.unlimitedSecurity",
     "pricing.aiSoc.features.standard.storage",
   ],
 };
@@ -74,7 +71,6 @@ const FEATURE_FALLBACKS = {
   "pricing.aiSoc.features.common.aiThreatProtection": "5 layered, AI-powered threat protection with automatic email categorization (Secure, Spam, Dangerous Links, Phishing, Spoofed)",
   "pricing.aiSoc.features.common.emailFlowVisualization": "Advanced email flow visualization across entire domain with comprehensive filters on the Admin Console",
   "pricing.aiSoc.features.common.domainWideDeletion": "Ability for admin to delete emails across all users in domain",
-  "pricing.aiSoc.features.shared.unlimitedSecurity": "Unlimited 4-layer email security",
   "pricing.aiSoc.features.premium.userLimit": "For enterprises with 15-300 employees",
   "pricing.aiSoc.features.premium.adminLimit": "Up to 5 administrators",
   "pricing.aiSoc.features.premium.storage": "Up to 50GB storage per user",
@@ -797,7 +793,7 @@ const PricingCard = ({
             {/* Middle block: Features (only for horizontal) */}
             {isHorizontal && (
               <div className={`flex-1 flex-grow`}>
-                <ul className={`${isHorizontal ? "columns-1 sm:columns-2 gap-6" : "space-y-4"}`}>
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
                   {plan.features.map((feature, i) => {
                     {/* Simplified mapping for strings */ }
                     const label = feature;
@@ -806,7 +802,7 @@ const PricingCard = ({
 
 
                     return (
-                      <li key={i} className="break-inside-avoid mb-4 flex items-start gap-2 text-white text-sm">
+                      <li key={`${plan.id}-${label}`} className="flex items-start gap-2 text-white text-sm">
                         <svg
                           className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5"
                           fill="none"
