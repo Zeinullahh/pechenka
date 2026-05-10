@@ -13,18 +13,18 @@ const PRICING_DATA = {
   // Business plans
   business: {
     standard: {
-      yearly: 8.10,
-      monthly: 9.70,
+      yearly: 7.30,
+      monthly: 8.60,
       unit: "/user/month",
     },
     premium: { // Premium 100
-      yearly: 15.40,
-      monthly: 18.60,
+      yearly: 12.00,
+      monthly: 13.45,
       unit: "/user/month",
     },
-    max: { // Business MAX
-      yearly: 18.79,
-      monthly: 22.55,
+    max: { // Business MAX 100
+      yearly: 25.00,
+      monthly: 25.00,
       unit: "/user/month",
     },
   },
@@ -48,21 +48,18 @@ const PLAN_SPECIFIC_FEATURE_KEYS = {
     "pricing.aiSoc.features.premium.userLimit",
     "pricing.aiSoc.features.premium.adminLimit",
     "pricing.aiSoc.features.shared.unlimitedSecurity",
-    "pricing.aiSoc.features.premium.aiAnalysis",
     "pricing.aiSoc.features.premium.storage",
   ],
   max: [
     "pricing.aiSoc.features.max.userLimit",
     "pricing.aiSoc.features.max.adminLimit",
     "pricing.aiSoc.features.shared.unlimitedSecurity",
-    "pricing.aiSoc.features.max.aiAnalysis",
     "pricing.aiSoc.features.max.storage",
   ],
   standard: [
     "pricing.aiSoc.features.standard.userLimit",
     "pricing.aiSoc.features.standard.adminLimit",
     "pricing.aiSoc.features.shared.unlimitedSecurity",
-    "pricing.aiSoc.features.standard.aiAnalysis",
     "pricing.aiSoc.features.standard.storage",
   ],
 };
@@ -78,17 +75,14 @@ const FEATURE_FALLBACKS = {
   "pricing.aiSoc.features.common.emailFlowVisualization": "Advanced email flow visualization across entire domain with comprehensive filters on the Admin Console",
   "pricing.aiSoc.features.common.domainWideDeletion": "Ability for admin to delete emails across all users in domain",
   "pricing.aiSoc.features.shared.unlimitedSecurity": "Unlimited 4-layer email security",
-  "pricing.aiSoc.features.premium.userLimit": "Up to 100 users",
+  "pricing.aiSoc.features.premium.userLimit": "For enterprises with 15-300 employees",
   "pricing.aiSoc.features.premium.adminLimit": "Up to 5 administrators",
-  "pricing.aiSoc.features.premium.aiAnalysis": "Includes up to 60 deep AI phishing context analyses per user / month (5th-layer advanced analysis)",
   "pricing.aiSoc.features.premium.storage": "Up to 50GB storage per user",
-  "pricing.aiSoc.features.max.userLimit": "Up to 300 users",
+  "pricing.aiSoc.features.max.userLimit": "Unlimited number of users",
   "pricing.aiSoc.features.max.adminLimit": "Up to 10 administrators",
-  "pricing.aiSoc.features.max.aiAnalysis": "Includes up to 100 deep AI phishing context analyses per user / month (5th-layer advanced analysis)",
   "pricing.aiSoc.features.max.storage": "Up to 200GB storage per user",
-  "pricing.aiSoc.features.standard.userLimit": "Up to 10 users",
+  "pricing.aiSoc.features.standard.userLimit": "For enterprises with 1-15 employees",
   "pricing.aiSoc.features.standard.adminLimit": "Up to 1 administrator",
-  "pricing.aiSoc.features.standard.aiAnalysis": "Includes up to 10 deep AI phishing context analyses per user / month (5th-layer advanced analysis)",
   "pricing.aiSoc.features.standard.storage": "Up to 8GB storage per user",
 };
 
@@ -105,7 +99,7 @@ const BUSINESS_PLAN_CONFIG = [
     id: "max",
     segment: "business",
     titleKey: "pricing.aiSoc.planTitles.max",
-    titleFallback: "Business MAX",
+    titleFallback: "Business MAX 100",
     featureKeys: [...COMMON_FEATURE_KEYS, ...PLAN_SPECIFIC_FEATURE_KEYS.max],
   },
   {
@@ -464,10 +458,22 @@ const Pricing = ({ onOpenModal }) => {
                     plan={plan}
                     price={
                       <div className="flex flex-col">
-                        <span>$0.18 per GB</span>
-                        <div className="flex flex-col mt-2">
-                          <span className="text-xl sm:text-2xl text-purple-200">$1.20 per 1M requests</span>
-                          <span className="text-xs sm:text-sm font-normal text-gray-400 mt-0.5">Usage-based pricing</span>
+                        <div className="flex items-baseline gap-2 mb-2">
+                          <span className="text-3xl sm:text-4xl font-bold text-white">$20</span>
+                          <span className="text-lg text-gray-400 font-normal">/month</span>
+                        </div>
+                        <div className="flex flex-col pt-2 border-t border-white/10">
+                          <span className="text-xs uppercase tracking-wider text-purple-300 font-semibold mb-2">Plus Pay-as-you-go</span>
+                          <div className="flex gap-6">
+                            <div className="flex flex-col">
+                              <span className="text-lg text-white font-semibold">$0.18</span>
+                              <span className="text-[10px] text-gray-400 uppercase tracking-tight">per GB</span>
+                            </div>
+                            <div className="flex flex-col">
+                              <span className="text-lg text-white font-semibold">$1.20</span>
+                              <span className="text-[10px] text-gray-400 uppercase tracking-tight">per 1M requests</span>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     }

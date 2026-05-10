@@ -380,21 +380,18 @@
           "unlimitedSecurity": "Protection e-mail illimitée à quatre couches"
         },
         "premium": {
-          "userLimit": "Jusqu'à 100 utilisateurs",
+          "userLimit": "Pour les entreprises de 15 à 300 employés",
           "adminLimit": "Jusqu'à 5 administrateurs",
-          "aiAnalysis": "Jusqu'à 60 analyses IA approfondies de phishing par utilisateur et par mois (5e couche de protection)",
           "storage": "Jusqu'à 50 Go par utilisateur"
         },
         "max": {
-          "userLimit": "Jusqu'à 300 utilisateurs",
+          "userLimit": "Nombre illimité d'utilisateurs",
           "adminLimit": "Jusqu'à 10 administrateurs",
-          "aiAnalysis": "Jusqu'à 100 analyses IA approfondies de phishing par utilisateur et par mois (5e couche de protection)",
           "storage": "Jusqu'à 200 Go par utilisateur"
         },
         "standard": {
-          "userLimit": "Jusqu'à 10 utilisateurs",
+          "userLimit": "Pour les entreprises de 15 employés ou moins",
           "adminLimit": "Jusqu'à 1 administrateur",
-          "aiAnalysis": "Jusqu'à 10 analyses IA approfondies de phishing par utilisateur et par mois (5e couche de protection)",
           "storage": "Jusqu'à 8 Go par utilisateur"
         }
       }
@@ -2075,7 +2072,7 @@
         }
       },
       "features": {
-        "secureAccess300": "Secure access for up to 300 users",
+        "secureAccess300": "Nombre illimité d'utilisateurs (selon la taille de l'organisation)",
         "customDomainEmail": "Custom company email on your own domain (you@yourcompany.com)",
         "adminConsole": "Admin console with domain-wide email management and bulk operations",
         "aiThreatDetection": "AI-powered threat detection with automatic email categorization",

@@ -448,15 +448,14 @@ export default function EmailSecurityDoc() {
                                 <Paragraph>При достижении 100% квоты пользователь не сможет отправлять и получать письма.</Paragraph>
                                 <Paragraph className="font-medium text-white/80">Лимиты отправки:</Paragraph>
                                 <List>
-                                    <li>Business Basic: 500 писем в день</li>
                                     <li>Business Standard: 1000 писем в день</li>
                                     <li>Business Premium: 2000 писем в день</li>
                                     <li>Enterprise: 10000 писем в день</li>
                                 </List>
                                 <Paragraph className="font-medium text-white/80">Лимит пользователей:</Paragraph>
                                 <List>
-                                    <li>Business планы: до 300 пользователей</li>
-                                    <li>Enterprise планы: без ограничений</li>
+                                     <li>Business планы: неограниченное количество пользователей (в зависимости от количества сотрудников)</li>
+                                     <li>Enterprise планы: без ограничений</li>
                                 </List>
                             </Subsection>
                         </Section>
@@ -516,76 +515,61 @@ export default function EmailSecurityDoc() {
                         <Separator className="bg-white/5" />
 
                         <Section title="Правила тарификации">
-                            <Subsection title="Business планы">
-                                <Paragraph>Для компаний до 300 пользователей.</Paragraph>
+                             <Subsection title="Business планы">
+                                <Paragraph>Для компаний с разным количеством сотрудников.</Paragraph>
                                 <div className="space-y-6">
                                     <div className="space-y-3">
-                                        <h5 className="text-base font-semibold text-white">Business Basic — $4.40/пользователь/месяц</h5>
-                                        <Paragraph>Для кого: Малый бизнес, стартапы.</Paragraph>
+                                        <h5 className="text-base font-semibold text-white">Business Standard — $7.30/пользователь/месяц</h5>
+                                        <Paragraph>Для кого: Предприятия с 15 или менее сотрудниками.</Paragraph>
                                         <Paragraph className="font-medium text-white/80">Основные возможности:</Paragraph>
                                         <List>
-                                            <li>Secure access for up to 300 users with centralized control</li>
-                                            <li>Custom company email on your own domain</li>
-                                            <li>AI-assisted email categorization</li>
-                                            <li>Custom folders with basic filtering rules</li>
-                                            <li>10 GB хранения на пользователя</li>
-                                            <li>Multi-account support with Gmail and Outlook</li>
-                                            <li>Email search and organization tools</li>
-                                            <li>24/7 email and web support</li>
-                                        </List>
-                                        <Paragraph>Оплата: Monthly $5.50/user | Yearly $4.40/user (экономия 20%).</Paragraph>
-                                    </div>
-
-                                    <div className="space-y-3">
-                                        <h5 className="text-base font-semibold text-white">Business Standard — $9.29/пользователь/месяц</h5>
-                                        <Paragraph>Для кого: Средний бизнес, растущие компании.</Paragraph>
-                                        <Paragraph className="font-medium text-white/80">Основные возможности:</Paragraph>
-                                        <List>
-                                            <li>Secure access for up to 300 users</li>
+                                            <li>For enterprises with 15 or less employees</li>
                                             <li>Custom company email on your own domain</li>
                                             <li>AI-powered threat detection</li>
                                             <li>Multi-layered email security pipeline</li>
                                             <li>Automatic email sorting into security folders</li>
                                             <li>Custom folders with auto-filtering rules</li>
-                                            <li>10 GB хранения на пользователя</li>
+                                            <li>8 GB хранения на пользователя</li>
                                             <li>Full-text email search</li>
                                             <li>24/7 email and web support</li>
                                         </List>
-                                        <Paragraph>Оплата: Monthly $11.60/user | Yearly $9.29/user (экономия 20%).</Paragraph>
+                                         <Paragraph>Оплата: Monthly $8.60/user | Yearly $7.30/user.</Paragraph>
                                     </div>
 
                                     <div className="space-y-3">
-                                        <h5 className="text-base font-semibold text-white">Business Premium — $18.79/пользователь/месяц</h5>
-                                        <Paragraph>Для кого: Компании с высокими требованиями к безопасности.</Paragraph>
+                                        <h5 className="text-base font-semibold text-white">Business Premium 100 — $12.00/пользователь/месяц</h5>
+                                        <Paragraph>Для кого: Предприятия с 15-300 сотрудниками.</Paragraph>
                                         <Paragraph className="font-medium text-white/80">Основные возможности:</Paragraph>
                                         <List>
-                                            <li>Secure access for up to 300 users with centralized control</li>
+                                            <li>For enterprises with 15-300 employees</li>
                                             <li>Admin console for domain-wide management</li>
                                             <li>AI-powered threat detection и многоуровневая защита</li>
                                             <li>Advanced link scanning и антивирусная защита вложений</li>
                                             <li>Email flow visualization и массовое управление письмами</li>
                                             <li>Custom folders with auto-filtering rules</li>
-                                            <li>10 GB хранения на пользователя</li>
+                                            <li>50 GB хранения на пользователя</li>
                                             <li>Multi-account support with Gmail and Outlook</li>
                                             <li>24/7 email and web support</li>
                                         </List>
-                                        <Paragraph>Оплата: Monthly $23.50/user | Yearly $18.79/user (экономия 20%).</Paragraph>
+                                         <Paragraph>Оплата: Monthly $13.45/user | Yearly $12.00/user.</Paragraph>
                                     </div>
 
                                     <div className="space-y-3">
-                                        <h5 className="text-base font-semibold text-white">Webmail client for Business — $8.25/пользователь/месяц</h5>
-                                        <Paragraph>Для компаний которым нужен только webmail client.</Paragraph>
+                                        <h5 className="text-base font-semibold text-white">Business MAX 100 — $25.00/пользователь/месяц</h5>
+                                        <Paragraph>Для кого: Предприятия с более чем 300 сотрудниками.</Paragraph>
                                         <Paragraph className="font-medium text-white/80">Основные возможности:</Paragraph>
                                         <List>
-                                            <li>Secure access for up to 300 users</li>
-                                            <li>AI-powered email categorization</li>
-                                            <li>Custom folder organization</li>
-                                            <li>10 GB хранения на пользователя</li>
-                                            <li>Multi-account support</li>
-                                            <li>Advanced email search capabilities</li>
-                                            <li>24/7 email and web support</li>
+                                            <li>Unlimited number of users</li>
+                                            <li>Advanced Admin console for enterprise-wide management</li>
+                                            <li>AI-powered threat detection и многоуровневая защита</li>
+                                            <li>Advanced link scanning и антивирусная защита вложений</li>
+                                            <li>Email flow visualization и массовое управление письмами</li>
+                                            <li>Custom folders with auto-filtering rules</li>
+                                            <li>200 GB хранения на пользователя</li>
+                                            <li>Multi-account support with Gmail and Outlook</li>
+                                            <li>24/7 priority email and web support</li>
                                         </List>
-                                        <Paragraph>Оплата: Monthly $10.30/user | Yearly $8.25/user (экономия 20%).</Paragraph>
+                                         <Paragraph>Оплата: $25.00/user/month</Paragraph>
                                     </div>
                                 </div>
                             </Subsection>

@@ -355,21 +355,18 @@
           "unlimitedSecurity": "Безлимитная четырёхуровневая защита почты"
         },
         "premium": {
-          "userLimit": "До 100 пользователей",
+          "userLimit": "Для предприятий с 15-300 сотрудниками",
           "adminLimit": "До 5 администраторов",
-          "aiAnalysis": "До 60 углублённых AI-анализов фишинга на пользователя в месяц (5-й уровень защиты)",
           "storage": "До 50 ГБ на пользователя"
         },
         "max": {
-          "userLimit": "До 300 пользователей",
+          "userLimit": "Неограниченное количество пользователей",
           "adminLimit": "До 10 администраторов",
-          "aiAnalysis": "До 100 углублённых AI-анализов фишинга на пользователя в месяц (5-й уровень защиты)",
           "storage": "До 200 ГБ на пользователя"
         },
         "standard": {
-          "userLimit": "До 10 пользователей",
+          "userLimit": "Для предприятий с 15 или менее сотрудниками",
           "adminLimit": "До 1 администратора",
-          "aiAnalysis": "До 10 углублённых AI-анализов фишинга на пользователя в месяц (5-й уровень защиты)",
           "storage": "До 8 ГБ на пользователя"
         }
       }
@@ -1212,7 +1209,7 @@
         }
       },
       "features": {
-        "secureAccess300": "Secure access for up to 300 users",
+        "secureAccess300": "Неограниченное количество пользователей (в зависимости от размера организации)",
         "customDomainEmail": "Custom company email on your own domain (you@yourcompany.com)",
         "adminConsole": "Admin console with domain-wide email management and bulk operations",
         "aiThreatDetection": "AI-powered threat detection with automatic email categorization",

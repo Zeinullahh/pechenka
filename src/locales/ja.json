@@ -369,21 +369,18 @@
           "unlimitedSecurity": "無制限の4層メール防御"
         },
         "premium": {
-          "userLimit": "最大100ユーザー",
+          "userLimit": "従業員15〜300名の企業向け",
           "adminLimit": "最大5名の管理者",
-          "aiAnalysis": "ユーザーあたり月60件までの詳細AIフィッシング分析(第5レイヤー防御)",
           "storage": "ユーザーあたり最大50GB"
         },
         "max": {
-          "userLimit": "最大300ユーザー",
+          "userLimit": "ユーザー数無制限",
           "adminLimit": "最大10名の管理者",
-          "aiAnalysis": "ユーザーあたり月100件までの詳細AIフィッシング分析(第5レイヤー防御)",
           "storage": "ユーザーあたり最大200GB"
         },
         "standard": {
-          "userLimit": "最大10ユーザー",
+          "userLimit": "従業員15名以下の企業向け",
           "adminLimit": "管理者1名まで",
-          "aiAnalysis": "ユーザーあたり月10件までの詳細AIフィッシング分析(第5レイヤー防御)",
           "storage": "ユーザーあたり最大8GB"
         }
       }
@@ -2099,7 +2096,7 @@
         }
       },
       "features": {
-        "secureAccess300": "Secure access for up to 300 users",
+        "secureAccess300": "ユーザー数無制限（組織の規模に基づく）",
         "customDomainEmail": "Custom company email on your own domain (you@yourcompany.com)",
         "adminConsole": "Admin console with domain-wide email management and bulk operations",
         "aiThreatDetection": "AI-powered threat detection with automatic email categorization",

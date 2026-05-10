@@ -377,21 +377,18 @@
           "unlimitedSecurity": "Sınırsız dört katmanlı e-posta güvenliği"
         },
         "premium": {
-          "userLimit": "En fazla 100 kullanıcı",
+          "userLimit": "15-300 çalışanı olan işletmeler için",
           "adminLimit": "En fazla 5 yönetici",
-          "aiAnalysis": "Kullanıcı başına ayda 60'a kadar derin YZ kimlik avı bağlam analizi içerir (5. katman gelişmiş analiz)",
           "storage": "Kullanıcı başına 50 GB depolama"
         },
         "max": {
-          "userLimit": "En fazla 300 kullanıcı",
+          "userLimit": "Sınırsız sayıda kullanıcı",
           "adminLimit": "En fazla 10 yönetici",
-          "aiAnalysis": "Kullanıcı başına ayda 100'e kadar derin YZ kimlik avı bağlam analizi içerir (5. katman gelişmiş analiz)",
           "storage": "Kullanıcı başına 200 GB depolama"
         },
         "standard": {
-          "userLimit": "En fazla 10 kullanıcı",
+          "userLimit": "15 veya daha az çalışanı olan işletmeler için",
           "adminLimit": "En fazla 1 yönetici",
-          "aiAnalysis": "Kullanıcı başına ayda 10'a kadar derin YZ kimlik avı bağlam analizi içerir (5. katman gelişmiş analiz)",
           "storage": "Kullanıcı başına 8 GB depolama"
         }
       }
@@ -2101,7 +2098,7 @@
         }
       },
       "features": {
-        "secureAccess300": "300 kullanıcıya kadar güvenli erişim",
+        "secureAccess300": "Sınırsız sayıda kullanıcı (kuruluş boyutuna bağlı olarak)",
         "customDomainEmail": "Kendi alan adınızda özel şirket e-postası (you@yourcompany.com)",
         "adminConsole": "Alan genelinde e-posta yönetimi ve toplu işlemler için yönetici konsolu",
         "aiThreatDetection": "Otomatik e-posta sınıflandırmasıyla YZ destekli tehdit algılama",

@@ -169,7 +169,7 @@
         }
       },
       "features": {
-        "secureAccess300": "Secure access for up to 300 users",
+        "secureAccess300": "Unlimited number of users (based on organization size)",
         "customDomainEmail": "Custom company email on your own domain (you@yourcompany.com)",
         "adminConsole": "Admin console with domain-wide email management and bulk operations",
         "aiThreatDetection": "AI-powered threat detection with automatic email categorization",
@@ -1116,7 +1116,7 @@
                 {
                   "type": "list",
                   "items": [
-                    "Business plans: up to 300 users",
+                    "Business plans: based on organization size",
                     "Enterprise plans: unlimited users"
                   ]
                 }
@@ -1639,21 +1639,18 @@
           "unlimitedSecurity": "Unlimited 4-layer email security"
         },
         "premium": {
-          "userLimit": "Up to 100 users",
+          "userLimit": "For enterprises with 15-300 employees",
           "adminLimit": "Up to 5 administrators",
-          "aiAnalysis": "Includes up to 60 deep AI phishing context analyses per user / month (5th-layer advanced analysis)",
           "storage": "Up to 50GB storage per user"
         },
         "max": {
-          "userLimit": "Up to 300 users",
+          "userLimit": "Unlimited number of users",
           "adminLimit": "Up to 10 administrators",
-          "aiAnalysis": "Includes up to 100 deep AI phishing context analyses per user / month (5th-layer advanced analysis)",
           "storage": "Up to 200GB storage per user"
         },
         "standard": {
-          "userLimit": "Up to 10 users",
+          "userLimit": "For enterprises with 15 or less employees",
           "adminLimit": "Up to 1 administrator",
-          "aiAnalysis": "Includes up to 10 deep AI phishing context analyses per user / month (5th-layer advanced analysis)",
           "storage": "Up to 8GB storage per user"
         }
       }

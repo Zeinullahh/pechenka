@@ -192,7 +192,7 @@
   "cookie": {
     "title": "쿠키를 사용합니다",
     "description": "더 나은 경험과 트래픽 분석을 위해 쿠키를 사용합니다.",
-    "more": "\u201c동의\u201d를 누르면 쿠키 사용에 동의하게 됩니다.",
+    "more": "“동의”를 누르면 쿠키 사용에 동의하게 됩니다.",
     "link": "자세히 보기",
     "ok": "동의"
   },
@@ -385,21 +385,18 @@
           "unlimitedSecurity": "무제한 4중 이메일 보호"
         },
         "premium": {
-          "userLimit": "최대 100명 사용자",
+          "userLimit": "15-300명 기업용",
           "adminLimit": "최대 5명 관리자",
-          "aiAnalysis": "사용자당 월 60회의 심층 AI 피싱 분석(5단계 보호)",
           "storage": "사용자당 최대 50GB"
         },
         "max": {
-          "userLimit": "최대 300명 사용자",
+          "userLimit": "사용자 수 무제한",
           "adminLimit": "최대 10명 관리자",
-          "aiAnalysis": "사용자당 월 100회의 심층 AI 피싱 분석(5단계 보호)",
           "storage": "사용자당 최대 200GB"
         },
         "standard": {
-          "userLimit": "최대 10명 사용자",
+          "userLimit": "15명 이하 기업용",
           "adminLimit": "최대 1명 관리자",
-          "aiAnalysis": "사용자당 월 10회의 심층 AI 피싱 분석(5단계 보호)",
           "storage": "사용자당 최대 8GB"
         }
       }
@@ -1275,7 +1272,7 @@
         }
       },
       "features": {
-        "secureAccess300": "최대 300명 사용자 보안 액세스",
+        "secureAccess300": "사용자 수 무제한 (조직 규모 기준)",
         "customDomainEmail": "자체 도메인 기업 이메일(you@yourcompany.com)",
         "adminConsole": "도메인 전체 이메일 관리 및 대량 작업이 가능한 관리자 콘솔",
         "aiThreatDetection": "자동 이메일 분류가 포함된 AI 위협 탐지",

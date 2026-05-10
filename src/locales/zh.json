@@ -355,21 +355,18 @@
           "unlimitedSecurity": "无限四层邮箱安全防护"
         },
         "premium": {
-          "userLimit": "最多 100 名用户",
+          "userLimit": "适用于 15-300 名员工的企业",
           "adminLimit": "最多 5 名管理员",
-          "aiAnalysis": "每位用户每月最多 60 次深度 AI 钓鱼分析(第 5 级防护)",
           "storage": "每位用户最多 50 GB 存储空间"
         },
         "max": {
-          "userLimit": "最多 300 名用户",
+          "userLimit": "用户数量不限",
           "adminLimit": "最多 10 名管理员",
-          "aiAnalysis": "每位用户每月最多 100 次深度 AI 钓鱼分析(第 5 级防护)",
           "storage": "每位用户最多 200 GB 存储空间"
         },
         "standard": {
-          "userLimit": "最多 10 名用户",
+          "userLimit": "适用于 15 名或更少员工的企业",
           "adminLimit": "最多 1 名管理员",
-          "aiAnalysis": "每位用户每月最多 10 次深度 AI 钓鱼分析(第 5 级防护)",
           "storage": "每位用户最多 8 GB 存储空间"
         }
       }
@@ -1212,7 +1209,7 @@
         }
       },
       "features": {
-        "secureAccess300": "Secure access for up to 300 users",
+        "secureAccess300": "用户数量不限（根据公司规模而定）",
         "customDomainEmail": "Custom company email on your own domain (you@yourcompany.com)",
         "adminConsole": "Admin console with domain-wide email management and bulk operations",
         "aiThreatDetection": "AI-powered threat detection with automatic email categorization",

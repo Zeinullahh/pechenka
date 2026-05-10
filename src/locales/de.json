@@ -380,21 +380,18 @@
           "unlimitedSecurity": "Unbegrenzter vierstufiger Mail-Schutz"
         },
         "premium": {
-          "userLimit": "Bis zu 100 Nutzer",
+          "userLimit": "Für Unternehmen mit 15-300 Mitarbeitern",
           "adminLimit": "Bis zu 5 Administratoren",
-          "aiAnalysis": "Bis zu 60 tiefgehende KI-Phishing-Analysen pro Nutzer/Monat (Schutzstufe 5)",
           "storage": "Bis zu 50 GB pro Nutzer"
         },
         "max": {
-          "userLimit": "Bis zu 300 Nutzer",
+          "userLimit": "Unbegrenzte Anzahl von Benutzern",
           "adminLimit": "Bis zu 10 Administratoren",
-          "aiAnalysis": "Bis zu 100 tiefgehende KI-Phishing-Analysen pro Nutzer/Monat (Schutzstufe 5)",
           "storage": "Bis zu 200 GB pro Nutzer"
         },
         "standard": {
-          "userLimit": "Bis zu 10 Nutzer",
+          "userLimit": "Für Unternehmen mit 15 oder weniger Mitarbeitern",
           "adminLimit": "Bis zu 1 Administrator",
-          "aiAnalysis": "Bis zu 10 tiefgehende KI-Phishing-Analysen pro Nutzer/Monat (Schutzstufe 5)",
           "storage": "Bis zu 8 GB pro Nutzer"
         }
       }
@@ -2101,7 +2098,7 @@
         }
       },
       "features": {
-        "secureAccess300": "Secure access for up to 300 users",
+        "secureAccess300": "Unbegrenzte Anzahl von Benutzern (je nach Unternehmensgröße)",
         "customDomainEmail": "Custom company email on your own domain (you@yourcompany.com)",
         "adminConsole": "Admin console with domain-wide email management and bulk operations",
         "aiThreatDetection": "AI-powered threat detection with automatic email categorization",
