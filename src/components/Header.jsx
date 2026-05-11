@@ -19,6 +19,7 @@ const Header = ({ onOpenModal, hideCta = false }) => {
   const pathname = usePathname();
   const isMainPage = pathname === "/";
   const isSupremePage = pathname === "/supreme" || pathname === "/supreme/";
+  const isAffiliatePage = pathname === "/affiliate" || pathname === "/affiliate/";
   const isPolicyPage = pathname?.startsWith("/policies");
   const [isCondensed, setIsCondensed] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
@@ -47,6 +48,10 @@ const Header = ({ onOpenModal, hideCta = false }) => {
       // On other pages, try to scroll to contact form
       scrollToContact();
     }
+  };
+
+  const handleAffiliateLogin = () => {
+    window.location.href = "https://partners.silenceai.net";
   };
 
   const handleContactLink = (e) => {
@@ -244,13 +249,21 @@ const Header = ({ onOpenModal, hideCta = false }) => {
                       onClick={() => {
                         if (isSupremePage) {
                           window.location.href = "https://supreme.silenceai.net/";
+                        } else if (isAffiliatePage) {
+                          handleAffiliateLogin();
                         } else {
                           onOpenModal?.();
                         }
                         setIsMobileMenuOpen(false);
                       }}
                     >
-                      {isSupremePage ? "Get MAX" : pathname === "/ai-soc" || pathname === "/ai-soc/" ? t("header.cta.get", "Get") : t("header.cta.contact", "Contact")}
+                      {isSupremePage
+                        ? "Get MAX"
+                        : isAffiliatePage
+                          ? t("header.login", "Login")
+                          : pathname === "/ai-soc" || pathname === "/ai-soc/"
+                            ? t("header.cta.get", "Get")
+                            : t("header.cta.contact", "Contact")}
                     </GlowButton>
                   )}
                 </div>
@@ -435,8 +448,12 @@ const Header = ({ onOpenModal, hideCta = false }) => {
                   </GlowButton>
                 )}
                 {isDesktop && !isMainPage && !isPolicyPage && !isSupremePage && !hideCta && (
-                  <GlowButton onClick={onOpenModal}>
-                    {pathname === "/ai-soc" || pathname === "/ai-soc/" ? t("header.cta.get", "Get") : t("header.cta.contact", "Contact")}
+                  <GlowButton onClick={isAffiliatePage ? handleAffiliateLogin : onOpenModal}>
+                    {isAffiliatePage
+                      ? t("header.login", "Login")
+                      : pathname === "/ai-soc" || pathname === "/ai-soc/"
+                        ? t("header.cta.get", "Get")
+                        : t("header.cta.contact", "Contact")}
                   </GlowButton>
                 )}
               </motion.div>

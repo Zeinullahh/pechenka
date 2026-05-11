@@ -404,7 +404,7 @@ const AffiliateLanding = () => {
                 {t("affiliate.hero.subtitle", "We offer 10% reward for all the spendings of the invited clients for 6 months.")}
               </p>
               <div className="flex flex-wrap items-center gap-4">
-                <GlowButton onClick={openModal}>
+                <GlowButton onClick={() => window.location.href = "https://partners.silenceai.net"}>
                   {t("affiliate.hero.cta", "Join partnership program")}
                 </GlowButton>
               </div>
