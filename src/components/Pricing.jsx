@@ -405,9 +405,8 @@ const Pricing = ({ onOpenModal }) => {
           </div>
         </div>
 
-        {/* Controls: Billing Only for Email Security */}
-        {productType === "email" && (
-          <div className="flex justify-center items-center mb-12 relative z-20">
+        {/* Controls: Billing Toggle */}
+        <div className="flex justify-center items-center mb-12 relative z-20">
             <div className="flex items-center gap-12">
               <button
                 onClick={() => setBilling("yearly")}
@@ -440,7 +439,6 @@ const Pricing = ({ onOpenModal }) => {
               </button>
             </div>
           </div>
-        )}
 
 
         {/* Pricing Cards */}
@@ -455,8 +453,8 @@ const Pricing = ({ onOpenModal }) => {
                     price={
                       <div className="flex flex-col">
                         <div className="flex items-baseline gap-2 mb-2">
-                          <span className="text-3xl sm:text-4xl font-bold text-white">$20</span>
-                          <span className="text-lg text-gray-400 font-normal">/month</span>
+                          <span className="text-3xl sm:text-4xl font-bold text-white">${billing === "yearly" ? "220" : "20"}</span>
+                          <span className="text-lg text-gray-400 font-normal">/{billing === "yearly" ? "year" : "month"}</span>
                         </div>
                         <div className="flex flex-col pt-2 border-t border-white/10">
                           <span className="text-xs uppercase tracking-wider text-purple-300 font-semibold mb-2">Plus Pay-as-you-go</span>
