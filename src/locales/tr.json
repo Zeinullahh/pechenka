@@ -260,7 +260,7 @@
         "changes": {
           "title": "8. Değişiklikler ve İletişim",
           "body1": "Silence AI, programdaki veya yürürlükteki hukuktaki değişiklikleri yansıtmak için bu şartları güncelleyebilir. Yayınlandığında yürürlüğe girer.",
-          "body2": "Ortaklık programı soruları için support@silenceai.net adresine yazabilirsiniz."
+          "body2": "Ortaklık programı soruları için info@silenceai.net adresine yazabilirsiniz."
         }
       }
     },
@@ -535,7 +535,7 @@
   },
   "footer": {
     "contactLabel": "İletişim:",
-    "contactValue": "support@silenceai.net",
+    "contactValue": "info@silenceai.net",
     "addressLabel": "Adres:",
     "addressValue": "Dubai, Birleşik Arap Emirlikleri",
     "links": {

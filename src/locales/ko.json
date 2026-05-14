@@ -178,7 +178,7 @@
   "footer": {
     "copyright": "© {year} Silence AI. 모든 권리 보유.",
     "contactLabel": "연락처:",
-    "contactValue": "support@silenceai.net",
+    "contactValue": "info@silenceai.net",
     "addressLabel": "주소:",
     "addressValue": "두바이, 아랍에미리트",
     "links": {
@@ -686,7 +686,7 @@
         "changes": {
           "title": "8. 변경 및 문의",
           "body1": "Silence AI는 프로그램이나 관련 법 변경을 반영하기 위해 제휴 약관을 갱신할 수 있으며, 게시 즉시 효력이 발생합니다.",
-          "body2": "제휴 프로그램 관련 질문은 support@silenceai.net으로 보내주세요."
+          "body2": "제휴 프로그램 관련 질문은 info@silenceai.net으로 보내주세요."
         }
       }
     }

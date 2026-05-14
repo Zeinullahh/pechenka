@@ -248,7 +248,7 @@
         "changes": {
           "title": "8. Änderungen & Kontakt",
           "body1": "Silence AI kann diese Partnerbedingungen bei Programm- oder Gesetzesänderungen aktualisieren. Änderungen gelten ab Veröffentlichung auf dieser Seite.",
-          "body2": "Fragen zum Partnerprogramm an support@silenceai.net."
+          "body2": "Fragen zum Partnerprogramm an info@silenceai.net."
         }
       },
       "gitServer": {
@@ -535,7 +535,7 @@
   },
   "footer": {
     "contactLabel": "Kontakt:",
-    "contactValue": "support@silenceai.net",
+    "contactValue": "info@silenceai.net",
     "addressLabel": "Adresse:",
     "addressValue": "Dubai, Vereinigte Arabische Emirate",
     "links": {
