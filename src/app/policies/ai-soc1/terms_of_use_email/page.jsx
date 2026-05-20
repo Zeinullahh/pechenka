@@ -40,6 +40,7 @@ const TermsOfUseEmail = () => {
             <section id="service-description">
               <h2 className="text-2xl font-semibold mb-4">1. Service Description</h2>
               <p>The Webmail Client enables secure access to your email mailbox connected through authorized third-party providers (such as Gmail or Outlook). The system classifies and filters incoming email for security purposes, including detecting phishing, spoofing, spam, malware and suspicious links.</p>
+              <p>During mailbox migration from existing Gmail or Outlook accounts, the system does not scan or classify email content. Once the migration is complete and you actively use the Webmail Client, all incoming emails are automatically scanned and classified for security purposes.</p>
             </section>
             <section id="account-provisioning">
               <h2 className="text-2xl font-semibold mb-4">2. Account Provisioning</h2>

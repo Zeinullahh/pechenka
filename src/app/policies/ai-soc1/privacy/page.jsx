@@ -107,6 +107,7 @@ const PrivacyPolicy = () => {
             <section id="webmail-notice">
               <h2 className="text-2xl font-semibold mb-4">12. Webmail Client / Email Protector Additional Notice</h2>
               <p className="mb-4">The Email Protector service includes a secure webmail client that classifies messages by security risk category. Emails are scanned and analyzed solely for security purposes, including anti-phishing, malware and threat detection.</p>
+              <p className="mb-4">During mailbox migration from existing Gmail or Outlook accounts, the system does not scan or classify email content. After migration, when the Webmail Client is in active use, all incoming emails are automatically scanned and classified for security purposes.</p>
               <p className="mb-4"><strong>12.1 Five-Layer Email Security Validation Process:</strong> Each incoming email is subjected to a sequential five-layer security validation process designed to identify and classify potential security threats. The validation sequence operates as follows:</p>
               <div className="pl-6 space-y-2 mb-4">
                 <p><strong>Layer 1 — Sender Authentication Verification:</strong> The system verifies the authenticity of the email sender by analyzing email headers, SPF (Sender Policy Framework), DKIM (DomainKeys Identified Mail), and DMARC (Domain-based Message Authentication, Reporting, and Conformance) records to detect potential email spoofing.</p>
