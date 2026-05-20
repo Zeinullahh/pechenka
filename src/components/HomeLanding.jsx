@@ -443,6 +443,12 @@ export default function HomeLanding() {
               capUnit: "million",
               logo: "/partners/kazakhcinema.png",
             },
+            {
+              name: "Neuro Force",
+              capAmount: "$8",
+              capUnit: "million",
+              logo: "/partners/neuroforce.png",
+            },
           ];
 
           const allPartners = [...partners, ...partners, ...partners, ...partners]; // 4x for smooth density and reset logic compatibility

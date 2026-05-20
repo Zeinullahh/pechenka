@@ -22,10 +22,6 @@ const Footer = () => {
               <span className="font-semibold text-white">{t("footer.contactLabel", "Contact:")}</span>
               <span>{t("footer.contactValue", "info@silenceai.net")}</span>
             </div>
-            <div className="flex flex-col sm:flex-row items-center sm:space-x-2">
-              <span className="font-semibold text-white">{t("footer.addressLabel", "Address:")}</span>
-              <span>{t("footer.addressValue", "Almaty, Kazakhstan")}</span>
-            </div>
           </div>
         </div>
         <div className="mt-8 sm:mt-12 border-t border-gray-800 pt-8 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
@@ -67,6 +63,20 @@ const Footer = () => {
                 <Link href="/policies/supreme/privacy" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
                   {t("footer.links.privacy", "Privacy Policy")}
                 </Link>
+              </div>
+
+              {/* Affiliate */}
+              <div className="text-gray-500 text-xs uppercase tracking-wider font-semibold text-center sm:text-right mt-2 sm:mt-0">Affiliate:</div>
+              <div className="flex flex-wrap justify-center sm:justify-end gap-3 sm:contents">
+                <LocalizedLink href="/affiliate/terms-of-service-affiliate" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
+                  {t("footer.links.termsService", "Terms of Service")}
+                </LocalizedLink>
+                <LocalizedLink href="/affiliate/terms-of-use" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
+                  {t("footer.links.termsUse", "Terms of Use")}
+                </LocalizedLink>
+                <LocalizedLink href="/affiliate/privacy-policy" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
+                  {t("footer.links.privacy", "Privacy Policy")}
+                </LocalizedLink>
               </div>
             </div>
           </div>

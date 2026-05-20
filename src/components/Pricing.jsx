@@ -379,6 +379,17 @@ const Pricing = ({ onOpenModal }) => {
             <p className="text-sm text-gray-400 leading-relaxed flex-grow">
               {t("aiSocPricing.emailDescription", "Email Security acts as a protective shield for your corporate communications. It filters incoming and outgoing messages to neutralize phishing attempts, spoofing attacks, and malicious links before they reach your users, ensuring the integrity of your business correspondence.")}
             </p>
+            <div className="mt-4 inline-flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-xs sm:text-sm text-slate-200">
+              <img
+                src="/partners/calendly.png"
+                alt="Calendly"
+                className="h-14 w-14 object-contain"
+                loading="lazy"
+              />
+              <span>
+                {t("aiSocPricing.calendlyIntegration", "Supports integration with Calendly")}
+              </span>
+            </div>
             <div className="mt-6 rounded-xl overflow-hidden border border-purple-500/20 shadow-[0_0_30px_-5px_rgba(168,85,247,0.25)] bg-black max-w-sm mx-auto">
               <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
                 <iframe
