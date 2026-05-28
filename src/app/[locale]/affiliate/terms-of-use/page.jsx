@@ -145,6 +145,12 @@ const AffiliateTermsOfUsePage = () => {
                     "By accessing or using the affiliate program pages, you agree to these Terms of Use and any related policies posted on the site."
                   )}
                 </p>
+                <p className="text-white">
+                  {t(
+                    "affiliate.termsUse.sections.acceptance.body2",
+                    "You must be at least 13 years old to use the affiliate program pages or tools. By accessing or using them, you represent that you are 13 years of age or older."
+                  )}
+                </p>
               </section>
 
               <section id="program" className="space-y-4">

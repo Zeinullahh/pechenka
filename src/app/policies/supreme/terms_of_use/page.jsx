@@ -45,6 +45,7 @@ const SupremeTermsOfUse = () => {
               <h2 className="text-2xl font-semibold mb-4">1. About These Terms</h2>
               <p className="mb-4"><strong>1.1 Agreement Scope:</strong> These Terms of Use ("Terms") govern your access to and use of the Supreme extension for Visual Studio Code and related services provided by Silence AI LLC ("we," "us," "our," or "Company"). These Terms apply to you, the individual or entity accessing our services ("you" or "your"), and your employer or principal if you are acting on their behalf.</p>
               <p className="mb-4"><strong>1.2 Authority and Acceptance:</strong> If you are entering into these Terms on behalf of a company, organization, or other entity, you represent that you have the authority to bind such entity to these Terms. By installing, accessing, or using Supreme, you agree to be bound by these Terms. If you do not agree with these Terms, you must uninstall the extension and discontinue use immediately.</p>
+              <p className="mb-4"><strong>1.3 Age Requirement:</strong> Supreme is intended for users who are at least 13 years old. By installing or using Supreme, you represent and warrant that you are 13 years of age or older. If you are under 13, you must not install or use Supreme.</p>
             </section>
 
             <section id="service-description">
