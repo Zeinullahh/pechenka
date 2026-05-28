@@ -150,7 +150,7 @@ const TermsOfUse = () => {
               <p>Silence AI LLC</p>
               <p>Email: info@silenceai.net</p>
               <p>Website: silenceai.net</p>
-              <p>Business registration location: Media City Free Zone, Al Messaned, Sharjah, UAE</p>
+              <p>Business registration location: Shams Business Center, Sharjah Media City Free Zone, Al Messaned, Sharjah, UAE</p>
             </section>
             <section id="misc">
               <h2 className="text-2xl font-semibold mb-4">16. Miscellaneous</h2>

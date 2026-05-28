@@ -141,7 +141,7 @@ const SupremeTermsOfUse = () => {
               <p className="mb-2">Silence AI LLC</p>
               <p className="mb-2">Email: info@silenceai.net</p>
               <p className="mb-2">Website: silenceai.net</p>
-              <p className="mb-4">Business registration location: Media City Free Zone, Al Messaned, Sharjah, UAE</p>
+              <p className="mb-4">Business registration location: Shams Business Center, Sharjah Media City Free Zone, Al Messaned, Sharjah, UAE</p>
             </section>
 
             <section id="miscellaneous">

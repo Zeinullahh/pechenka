@@ -188,7 +188,8 @@ const SupremeTermsOfService = () => {
               <p className="mb-4">For questions, concerns, or disputes regarding these Terms or Supreme, please contact us at:</p>
               <p className="mb-2">Silence AI</p>
               <p className="mb-2">Email: info@silenceai.net</p>
-              <p className="mb-4">Website: https://silenceai.net/</p>
+              <p className="mb-2">Website: https://silenceai.net/</p>
+              <p className="mb-4">Address: Shams Business Center, Sharjah Media City Free Zone, Al Messaned, Sharjah, UAE</p>
             </section>
           </div>
           <p className="mt-8 text-sm text-gray-400">Last Updated: January 2026</p>

@@ -297,7 +297,7 @@ const AffiliateTermsOfServicePage = () => {
                 <p className="text-white">
                   {t(
                     "affiliate.termsAff.sections.changes.body2",
-                    "Questions about the affiliate program can be sent to info@silenceai.net."
+                    "Questions about the affiliate program can be sent to info@silenceai.net. Our physical address: Shams Business Center, Sharjah Media City Free Zone, Al Messaned, Sharjah, UAE."
                   )}
                 </p>
               </section>

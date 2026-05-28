@@ -198,7 +198,8 @@ const SupremePrivacyPolicy = () => {
               <p className="mb-4">For questions about this Privacy Policy, data processing, or to exercise your rights, contact us at:</p>
               <p className="mb-2">Silence AI</p>
               <p className="mb-2">Email: info@silenceai.net</p>
-              <p className="mb-4">Website: https://silenceai.net/</p>
+              <p className="mb-2">Website: https://silenceai.net/</p>
+              <p className="mb-4">Address: Shams Business Center, Sharjah Media City Free Zone, Al Messaned, Sharjah, UAE</p>
             </section>
 
             <section id="governing-law">

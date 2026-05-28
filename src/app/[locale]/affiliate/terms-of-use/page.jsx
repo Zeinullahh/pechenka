@@ -321,7 +321,7 @@ const AffiliateTermsOfUsePage = () => {
                 <p className="text-white">
                   {t(
                     "affiliate.termsUse.sections.changes.body2",
-                    "Questions about these Terms of Use can be sent to info@silenceai.net."
+                    "Questions about these Terms of Use can be sent to info@silenceai.net. Our physical address: Shams Business Center, Sharjah Media City Free Zone, Al Messaned, Sharjah, UAE."
                   )}
                 </p>
               </section>

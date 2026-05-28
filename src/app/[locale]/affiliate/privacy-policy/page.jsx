@@ -333,7 +333,7 @@ const AffiliatePrivacyPolicyPage = () => {
                 <p className="text-white">
                   {t(
                     "affiliate.privacy.sections.changes.body2",
-                    "Questions about this policy can be sent to info@silenceai.net."
+                    "Questions about this policy can be sent to info@silenceai.net. Our physical address: Shams Business Center, Sharjah Media City Free Zone, Al Messaned, Sharjah, UAE."
                   )}
                 </p>
               </section>

@@ -139,7 +139,7 @@ const PrivacyPolicy = () => {
             </section>
             <section id="contact">
               <h2 className="text-2xl font-semibold mb-4">14. Contact Information</h2>
-              <p className="mb-4"><strong>14.1 Data Protection Inquiries:</strong> For questions about this Privacy Policy, data processing, or to exercise your rights, contact us at: Silence AI LLC, Email: info@silenceai.net, Website: https://silenceai.net, Address: Media City Free Zone, Al Messaned, Sharjah, UAE.</p>
+              <p className="mb-4"><strong>14.1 Data Protection Inquiries:</strong> For questions about this Privacy Policy, data processing, or to exercise your rights, contact us at: Silence AI LLC, Email: info@silenceai.net, Website: https://silenceai.net, Address: Shams Business Center, Sharjah Media City Free Zone, Al Messaned, Sharjah, UAE.</p>
               <p><strong>14.2 Data Subject Requests:</strong> To make a data subject request (access, rectification, deletion, etc.), please contact us using the information above. We will respond to your request within the timeframes required by applicable law.</p>
             </section>
             <section id="governing-law">
