@@ -248,7 +248,7 @@ const Header = ({ onOpenModal, hideCta = false }) => {
                     <GlowButton
                       onClick={() => {
                         if (isSupremePage) {
-                          window.location.href = "https://supreme.silenceai.net/";
+                          setComingSoonOpen(true);
                         } else if (isAffiliatePage) {
                           handleAffiliateLogin();
                         } else {
@@ -441,7 +441,7 @@ const Header = ({ onOpenModal, hideCta = false }) => {
                 {isDesktop && isSupremePage && !hideCta && (
                   <GlowButton
                     onClick={() => {
-                      window.location.href = "https://supreme.silenceai.net/";
+                      setComingSoonOpen(true);
                     }}
                   >
                     Get MAX
@@ -482,7 +482,12 @@ const Header = ({ onOpenModal, hideCta = false }) => {
           </motion.div>
         </motion.div>
       </motion.header>
-      <ComingSoonModal isOpen={comingSoonOpen} onClose={() => setComingSoonOpen(false)} />
+      <ComingSoonModal
+        isOpen={comingSoonOpen}
+        onClose={() => setComingSoonOpen(false)}
+        title="Updates in Progress"
+        message="We are currently updating Supreme. Please check back shortly."
+      />
       <CountrySelectModal isOpen={countrySelectOpen} onClose={() => setCountrySelectOpen(false)} />
       <EmailSecurityModal isOpen={emailSecurityOpen} onClose={() => setEmailSecurityOpen(false)} />
     </>

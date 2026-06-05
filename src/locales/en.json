@@ -1350,9 +1350,9 @@
   "footer": {
     "copyright": "© 2026 Silence AI. All rights reserved.",
     "contactLabel": "Contact",
-    "contactValue": "info@silenceai.net",
+    "contactValue": "support@silenceai.net",
     "addressLabel": "Address",
-    "addressValue": "Dubai, United Arab Emirates",
+    "addressValue": "Astana, Kazakhstan",
     "links": {
       "cookies": "Cookie Policy",
       "termsUse": "Terms of Use",
@@ -1515,7 +1515,7 @@
         "changes": {
           "title": "8. Changes & Contact",
           "body1": "Silence AI may update these affiliate terms to reflect changes in the program or applicable law. Updated versions take effect upon publication on this page.",
-          "body2": "Questions about the affiliate program can be sent to info@silenceai.net."
+          "body2": "Questions about the affiliate program can be sent to support@silenceai.net."
         }
       }
     },

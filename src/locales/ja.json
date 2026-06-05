@@ -253,7 +253,7 @@
         "changes": {
           "title": "8. Changes & Contact",
           "body1": "Silence AI may update these affiliate terms to reflect changes in the program or applicable law. Updated versions take effect upon publication on this page.",
-          "body2": "Questions about the affiliate program can be sent to info@silenceai.net."
+          "body2": "Questions about the affiliate program can be sent to support@silence.codes."
         }
       }
     },
@@ -369,18 +369,21 @@
           "unlimitedSecurity": "無制限の4層メール防御"
         },
         "premium": {
-          "userLimit": "従業員15〜300名の企業向け",
+          "userLimit": "最大100ユーザー",
           "adminLimit": "最大5名の管理者",
+          "aiAnalysis": "ユーザーあたり月60件までの詳細AIフィッシング分析(第5レイヤー防御)",
           "storage": "ユーザーあたり最大50GB"
         },
         "max": {
-          "userLimit": "ユーザー数無制限",
+          "userLimit": "最大300ユーザー",
           "adminLimit": "最大10名の管理者",
+          "aiAnalysis": "ユーザーあたり月100件までの詳細AIフィッシング分析(第5レイヤー防御)",
           "storage": "ユーザーあたり最大200GB"
         },
         "standard": {
-          "userLimit": "従業員15名以下の企業向け",
+          "userLimit": "最大10ユーザー",
           "adminLimit": "管理者1名まで",
+          "aiAnalysis": "ユーザーあたり月10件までの詳細AIフィッシング分析(第5レイヤー防御)",
           "storage": "ユーザーあたり最大8GB"
         }
       }
@@ -560,9 +563,9 @@
   },
   "footer": {
     "contactLabel": "連絡先:",
-    "contactValue": "info@silenceai.net",
+    "contactValue": "support@silence.codes",
     "addressLabel": "住所:",
-    "addressValue": "Dubai, アラブ首長国連邦",
+    "addressValue": "Media City Free Zone, Al Messaned, Sharjah, UAE",
     "links": {
       "termsUse": "利用規約",
       "termsService": "サービス利用規約",
@@ -2096,7 +2099,7 @@
         }
       },
       "features": {
-        "secureAccess300": "ユーザー数無制限（組織の規模に基づく）",
+        "secureAccess300": "Secure access for up to 300 users",
         "customDomainEmail": "Custom company email on your own domain (you@yourcompany.com)",
         "adminConsole": "Admin console with domain-wide email management and bulk operations",
         "aiThreatDetection": "AI-powered threat detection with automatic email categorization",
@@ -2368,7 +2371,7 @@
           "feature": "ドメイン全体のメールを閲覧"
         },
         "delete": {
-          "feature": "管理者が従業員のメールを削除可能"
+          "feature": "メール削除機能"
         },
         "activeProtection": {
           "feature": "あらゆるメール攻撃に対するアクティブ保護"
@@ -2471,3 +2474,4 @@
     ]
   }
 }
+

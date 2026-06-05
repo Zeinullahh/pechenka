@@ -244,7 +244,7 @@
         "changes": {
           "title": "8. التغييرات والتواصل",
           "body1": "قد تُحدَّث شروط الشركاء لتعكس تغييرات البرنامج أو القوانين. يسري الإصدار المحدث عند نشره في هذه الصفحة.",
-          "body2": "للاستفسارات حول برنامج الشركاء يمكن المراسلة على info@silenceai.net."
+          "body2": "للاستفسارات حول برنامج الشركاء يمكن المراسلة على support@silenceai.net."
         }
       }
     }
@@ -467,9 +467,9 @@
   },
   "footer": {
     "contactLabel": "جهة الاتصال:",
-    "contactValue": "info@silenceai.net",
+    "contactValue": "support@silenceai.net",
     "addressLabel": "العنوان:",
-    "addressValue": "دبي، الإمارات العربية المتحدة",
+    "addressValue": "Media City Free Zone, Al Messaned, Sharjah, الإمارات",
     "links": {
       "termsUse": "شروط الاستخدام",
       "termsService": "شروط الخدمة",

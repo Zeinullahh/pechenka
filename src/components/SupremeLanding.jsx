@@ -39,6 +39,7 @@ import {
   SiYaml,
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
+import ComingSoonModal from "@/components/ComingSoonModal";
 
 function PricingCard({
   name,
@@ -199,11 +200,11 @@ function MaxUpgradeButton({ onClick, className = "", children }) {
 export default function SupremeLanding() {
   const { t } = useLanguage();
   const [openFaq, setOpenFaq] = useState(null);
-  const maxUrl = "https://supreme.silenceai.net/";
+  const [maxModalOpen, setMaxModalOpen] = useState(false);
   const lightVideoUrl = "https://youtu.be/k282t3QKG2w?si=tsrRlgiktFE2buFG";
 
   const goToMax = () => {
-    window.location.href = maxUrl;
+    setMaxModalOpen(true);
   };
 
   const goToPricing = () => {
@@ -793,6 +794,12 @@ export default function SupremeLanding() {
         </div>
       </main>
 
+      <ComingSoonModal
+        isOpen={maxModalOpen}
+        onClose={() => setMaxModalOpen(false)}
+        title="Updates in Progress"
+        message="We are currently updating Supreme. Please check back shortly."
+      />
     </div>
   );
 }
