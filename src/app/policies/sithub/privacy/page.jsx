@@ -4,8 +4,6 @@ import Header from '@/components/Header';
 import PolicySidebar from '@/components/PolicySidebar';
 import BackToTopButton from '@/components/BackToTopButton';
 import Modal from '@/components/Modal';
-import PolicyNotice from '@/components/PolicyNotice';
-
 const SithubPrivacyPolicy = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -39,7 +37,6 @@ const SithubPrivacyPolicy = () => {
           <PolicySidebar sections={sections} />
         </div>
         <main className="flex-grow">
-          <PolicyNotice />
           <h1 className="text-4xl font-bold mb-2">Sithub Platform</h1>
           <h2 className="text-2xl text-gray-400 mb-8">Privacy Policy</h2>
 

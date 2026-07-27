@@ -4,8 +4,6 @@ import Header from '@/components/Header';
 import PolicySidebar from '@/components/PolicySidebar';
 import BackToTopButton from '@/components/BackToTopButton';
 import Modal from '@/components/Modal';
-import PolicyNotice from '@/components/PolicyNotice';
-
 const CookiesEmailPolicy = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -36,7 +34,6 @@ const CookiesEmailPolicy = () => {
           <PolicySidebar sections={sections} />
         </div>
         <main className="flex-grow">
-          <PolicyNotice />
           <h1 className="text-4xl font-bold mb-8">Cookie Policy - Email Component</h1>
           <div className="space-y-8">
             <section id="about">

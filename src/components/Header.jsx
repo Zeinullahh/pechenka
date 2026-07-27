@@ -7,7 +7,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import clsx from "clsx";
 import GlowButton from "./GlowButton";
 import LanguageSelector from "./LanguageSelector";
-import ComingSoonModal from "./ComingSoonModal";
 import CountrySelectModal from "./CountrySelectModal";
 import EmailSecurityModal from "./EmailSecurityModal";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -18,13 +17,11 @@ const DESKTOP_WIDTH = 1130;
 const Header = ({ onOpenModal, hideCta = false }) => {
   const pathname = usePathname();
   const isMainPage = pathname === "/";
-  const isSupremePage = pathname === "/supreme" || pathname === "/supreme/";
   const isAffiliatePage = pathname === "/affiliate" || pathname === "/affiliate/";
   const isPolicyPage = pathname?.startsWith("/policies");
   const [isCondensed, setIsCondensed] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [comingSoonOpen, setComingSoonOpen] = useState(false);
   const [countrySelectOpen, setCountrySelectOpen] = useState(false);
   const [emailSecurityOpen, setEmailSecurityOpen] = useState(false);
   const [openDesktopDropdown, setOpenDesktopDropdown] = useState(null);
@@ -103,7 +100,6 @@ const Header = ({ onOpenModal, hideCta = false }) => {
 
   const systemsItems = [
     { key: "ai-soc", label: t("header.nav.systemsAiSoc", "AI-SOC"), href: "/ai-soc" },
-    { key: "supreme", label: t("header.nav.systemsSupreme", "Supreme"), href: "/supreme" },
   ];
 
   const instructionsItems = [
@@ -233,7 +229,7 @@ const Header = ({ onOpenModal, hideCta = false }) => {
                   );
                 })}
                 <div className="pt-4 flex flex-col gap-4 w-full items-center">
-                  {!isPolicyPage && <LanguageSelector align="left" />}
+                  <LanguageSelector align="left" allowedLocales={isPolicyPage ? ["en", "ru"] : undefined} />
                   {!hideCta && isMainPage && (
                     <GlowButton
                       onClick={() => {
@@ -247,9 +243,7 @@ const Header = ({ onOpenModal, hideCta = false }) => {
                   {!hideCta && !isMainPage && !isPolicyPage && (
                     <GlowButton
                       onClick={() => {
-                        if (isSupremePage) {
-                          setComingSoonOpen(true);
-                        } else if (isAffiliatePage) {
+                        if (isAffiliatePage) {
                           handleAffiliateLogin();
                         } else {
                           onOpenModal?.();
@@ -257,13 +251,11 @@ const Header = ({ onOpenModal, hideCta = false }) => {
                         setIsMobileMenuOpen(false);
                       }}
                     >
-                      {isSupremePage
-                        ? "Get MAX"
-                        : isAffiliatePage
-                          ? t("header.login", "Login")
-                          : pathname === "/ai-soc" || pathname === "/ai-soc/"
-                            ? t("header.cta.get", "Get")
-                            : t("header.cta.contact", "Contact")}
+                      {isAffiliatePage
+                        ? t("header.login", "Login")
+                        : pathname === "/ai-soc" || pathname === "/ai-soc/"
+                          ? t("header.cta.get", "Get")
+                          : t("header.cta.contact", "Contact")}
                     </GlowButton>
                   )}
                 </div>
@@ -430,24 +422,14 @@ const Header = ({ onOpenModal, hideCta = false }) => {
                       : undefined
                   }
                 >
-                  {!isPolicyPage && <LanguageSelector align={isDesktop ? "right" : "center"} />}
+                  <LanguageSelector align={isDesktop ? "right" : "center"} allowedLocales={isPolicyPage ? ["en", "ru"] : undefined} />
                 </div>
                 {isDesktop && isMainPage && !hideCta && (
                   <GlowButton onClick={handleContactClick}>
                     {t("header.cta.contact", "Contact")}
                   </GlowButton>
                 )}
-                {/* Get button for /supreme - desktop only */}
-                {isDesktop && isSupremePage && !hideCta && (
-                  <GlowButton
-                    onClick={() => {
-                      setComingSoonOpen(true);
-                    }}
-                  >
-                    Get MAX
-                  </GlowButton>
-                )}
-                {isDesktop && !isMainPage && !isPolicyPage && !isSupremePage && !hideCta && (
+                {isDesktop && !isMainPage && !isPolicyPage && !hideCta && (
                   <GlowButton onClick={isAffiliatePage ? handleAffiliateLogin : onOpenModal}>
                     {isAffiliatePage
                       ? t("header.login", "Login")
@@ -482,12 +464,6 @@ const Header = ({ onOpenModal, hideCta = false }) => {
           </motion.div>
         </motion.div>
       </motion.header>
-      <ComingSoonModal
-        isOpen={comingSoonOpen}
-        onClose={() => setComingSoonOpen(false)}
-        title="Updates in Progress"
-        message="We are currently updating Supreme. Please check back shortly."
-      />
       <CountrySelectModal isOpen={countrySelectOpen} onClose={() => setCountrySelectOpen(false)} />
       <EmailSecurityModal isOpen={emailSecurityOpen} onClose={() => setEmailSecurityOpen(false)} />
     </>

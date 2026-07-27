@@ -5,6 +5,7 @@ import React, { useState, useMemo } from "react";
 import TooltipCard from "./TooltipCard";
 import { CybersecurityLamp } from "./CybersecurityLamp";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { formatKzt } from "@/lib/kzt";
 import { motion } from "framer-motion";
 
 
@@ -241,7 +242,14 @@ const Pricing = ({ onOpenModal }) => {
     const price = billing === "yearly" ? priceData.yearly : priceData.monthly;
 
 
-    return `$${price.toFixed(2)}${priceData.unit}`;
+    return (
+      <span className="flex flex-col">
+        <span>{`$${price.toFixed(2)}${priceData.unit}`}</span>
+        <span className="text-sm text-gray-400 font-normal">
+          {formatKzt(price)}{priceData.unit}
+        </span>
+      </span>
+    );
   };
 
 
@@ -467,16 +475,19 @@ const Pricing = ({ onOpenModal }) => {
                           <span className="text-3xl sm:text-4xl font-bold text-white">${billing === "yearly" ? "220" : "20"}</span>
                           <span className="text-lg text-gray-400 font-normal">/{billing === "yearly" ? "year" : "month"}</span>
                         </div>
+                        <span className="text-sm text-gray-400 -mt-1 mb-2">
+                          {formatKzt(billing === "yearly" ? 220 : 20)}/{billing === "yearly" ? "year" : "month"}
+                        </span>
                         <div className="flex flex-col pt-2 border-t border-white/10">
                           <span className="text-xs uppercase tracking-wider text-purple-300 font-semibold mb-2">Plus Pay-as-you-go</span>
                           <div className="flex gap-6">
                             <div className="flex flex-col">
                               <span className="text-lg text-white font-semibold">$0.18</span>
-                              <span className="text-[10px] text-gray-400 uppercase tracking-tight">per GB</span>
+                              <span className="text-[10px] text-gray-400 uppercase tracking-tight">per GB · {formatKzt(0.18)}</span>
                             </div>
                             <div className="flex flex-col">
                               <span className="text-lg text-white font-semibold">$1.20</span>
-                              <span className="text-[10px] text-gray-400 uppercase tracking-tight">per 1M requests</span>
+                              <span className="text-[10px] text-gray-400 uppercase tracking-tight">per 1M requests · {formatKzt(1.2)}</span>
                             </div>
                           </div>
                         </div>

@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from "react";
 import EdgeGlowCard from "./EdgeGlowCard";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { formatKzt } from "@/lib/kzt";
 
 const PricingSection = () => {
   const { t } = useLanguage();
@@ -8,7 +9,7 @@ const PricingSection = () => {
   const [currency] = useState("USD");
 
   const formatCurrencyValue = (value) => {
-    return `$${value.toLocaleString()}`;
+    return `$${value.toLocaleString()} (${formatKzt(value)})`;
   };
 
   const getSliderMax = () => {

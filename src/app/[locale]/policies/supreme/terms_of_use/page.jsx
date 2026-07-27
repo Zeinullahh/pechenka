@@ -1,7 +1,7 @@
-"use client";
+import EnPage from "@/app/policies/supreme/terms_of_use/page.jsx";
+import RuPage from "@/components/policies/ru/supreme/TermsOfUse.jsx";
 
-import SupremeTermsOfUse from "@/app/policies/supreme/terms_of_use/page.jsx";
-
-export default function SupremeTermsOfUseLocalizedPage() {
-  return <SupremeTermsOfUse />;
+export default async function LocalizedPage({ params }) {
+  const { locale } = await params;
+  return locale === "ru" ? <RuPage /> : <EnPage />;
 }

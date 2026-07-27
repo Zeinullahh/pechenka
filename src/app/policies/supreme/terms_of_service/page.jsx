@@ -4,8 +4,6 @@ import Header from '@/components/Header';
 import PolicySidebar from '@/components/PolicySidebar';
 import BackToTopButton from '@/components/BackToTopButton';
 import Modal from '@/components/Modal';
-import PolicyNotice from '@/components/PolicyNotice';
-
 const SupremeTermsOfService = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -37,7 +35,6 @@ const SupremeTermsOfService = () => {
           <PolicySidebar sections={sections} />
         </div>
         <main className="flex-grow">
-          <PolicyNotice />
           <h1 className="text-4xl font-bold mb-2">Supreme Extension for VSCode</h1>
           <h2 className="text-2xl text-gray-400 mb-8">Terms of Service</h2>
 

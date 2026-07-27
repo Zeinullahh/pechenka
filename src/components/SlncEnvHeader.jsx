@@ -52,11 +52,6 @@ const SlncEnvHeader = ({ onOpenAdminModal }) => {
 
   const systemsItems = [
     { key: "ai-soc", label: t("header.nav.systemsAiSoc", "AI-SOC"), href: "/ai-soc" },
-    {
-      key: "supreme",
-      label: t("header.nav.systemsSupreme", "Supreme"),
-      href: "/supreme",
-    },
   ];
 
   const navItems = [

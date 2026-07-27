@@ -42,13 +42,20 @@ const LANGUAGE_OPTIONS = [
   { code: "tr", label: "TR", name: "Türkçe", englishName: "Turkish", flag: "TR" },
 ];
 
-export default function LanguageSelector({ align = "right" }) {
+export default function LanguageSelector({ align = "right", allowedLocales }) {
   const { language } = useLanguage();
   const router = useRouter();
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const containerRef = useRef(null);
+
+  const options = useMemo(() => {
+    if (!allowedLocales) return LANGUAGE_OPTIONS;
+    return LANGUAGE_OPTIONS.filter((item) => allowedLocales.includes(item.code));
+  }, [allowedLocales]);
+
+  const showSearch = options.length > 3;
 
   const active = useMemo(() => {
     return LANGUAGE_OPTIONS.find((item) => item.code === language) ?? LANGUAGE_OPTIONS[0];
@@ -76,14 +83,14 @@ export default function LanguageSelector({ align = "right" }) {
 
   const filteredOptions = useMemo(() => {
     const query = searchTerm.trim().toLocaleLowerCase();
-    if (!query) return LANGUAGE_OPTIONS;
+    if (!query) return options;
 
-    return LANGUAGE_OPTIONS.filter((item) =>
+    return options.filter((item) =>
       [item.name, item.label, item.code].some((value) =>
         value.toLocaleLowerCase().includes(query)
       )
     );
-  }, [searchTerm]);
+  }, [searchTerm, options]);
 
   const handleSelect = (code) => {
     setIsOpen(false);
@@ -145,34 +152,36 @@ export default function LanguageSelector({ align = "right" }) {
             align === "right" && "sm:left-auto sm:right-0 sm:translate-x-0"
           )}
         >
-          <div className="mb-2">
-            <label htmlFor="language-search" className="sr-only">
-              Search languages
-            </label>
-            <div className="relative">
-              <input
-                id="language-search"
-                type="search"
-                value={searchTerm}
-                onChange={(event) => setSearchTerm(event.target.value)}
-                placeholder="Search languages"
-                autoComplete="off"
-                className="w-full rounded-xl border border-white/15 bg-black/55 px-3 py-2 pr-9 text-sm text-white placeholder:text-white/40 focus:border-white/40 focus:outline-none focus:ring-2 focus:ring-white/30"
-              />
-              <svg
-                className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-white/60"
-                viewBox="0 0 20 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-              >
-                <path
-                  d="M8.5 3a5.5 5.5 0 014.388 8.795l3.159 3.158a1 1 0 01-1.414 1.414l-3.158-3.159A5.5 5.5 0 118.5 3zm0 2a3.5 3.5 0 100 7 3.5 3.5 0 000-7z"
-                  fill="currentColor"
+          {showSearch && (
+            <div className="mb-2">
+              <label htmlFor="language-search" className="sr-only">
+                Search languages
+              </label>
+              <div className="relative">
+                <input
+                  id="language-search"
+                  type="search"
+                  value={searchTerm}
+                  onChange={(event) => setSearchTerm(event.target.value)}
+                  placeholder="Search languages"
+                  autoComplete="off"
+                  className="w-full rounded-xl border border-white/15 bg-black/55 px-3 py-2 pr-9 text-sm text-white placeholder:text-white/40 focus:border-white/40 focus:outline-none focus:ring-2 focus:ring-white/30"
                 />
-              </svg>
+                <svg
+                  className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-white/60"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M8.5 3a5.5 5.5 0 014.388 8.795l3.159 3.158a1 1 0 01-1.414 1.414l-3.158-3.159A5.5 5.5 0 118.5 3zm0 2a3.5 3.5 0 100 7 3.5 3.5 0 000-7z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
             </div>
-          </div>
+          )}
 
           <div className="max-h-72 space-y-1 overflow-y-auto pr-1">
             {filteredOptions.length === 0 && (

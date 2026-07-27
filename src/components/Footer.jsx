@@ -2,7 +2,6 @@ import React from 'react';
 import Image from 'next/image';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Link as LocalizedLink } from '@/i18n/navigation';
-import Link from 'next/link';
 
 const Footer = () => {
   const { t } = useLanguage();
@@ -29,9 +28,9 @@ const Footer = () => {
 
           <div className="w-full lg:w-auto order-1 lg:order-2">
             <div className="flex justify-center lg:justify-end mb-4">
-              <a href="/policies/cookies" className="text-gray-400 hover:text-white transition-colors duration-300 text-sm">
+              <LocalizedLink href="/policies/cookies" className="text-gray-400 hover:text-white transition-colors duration-300 text-sm">
                 {t("footer.links.cookies", "Cookies Policy")}
-              </a>
+              </LocalizedLink>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-[100px_repeat(3,auto)] gap-y-3 gap-x-2 sm:gap-x-6 items-center text-sm md:text-right">
@@ -39,30 +38,30 @@ const Footer = () => {
               {/* AI-SOC 1 */}
               <div className="text-gray-500 text-xs uppercase tracking-wider font-semibold text-center sm:text-right">AI-SOC 1:</div>
               <div className="flex flex-wrap justify-center sm:justify-end gap-3 sm:contents">
-                <Link href="/policies/terms_of_use" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
+                <LocalizedLink href="/policies/terms_of_use" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
                   {t("footer.links.termsUse", "Terms of Use")}
-                </Link>
-                <Link href="/policies/terms_of_service" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
+                </LocalizedLink>
+                <LocalizedLink href="/policies/terms_of_service" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
                   {t("footer.links.termsService", "Terms of Service")}
-                </Link>
-                <Link href="/policies/privacy" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
+                </LocalizedLink>
+                <LocalizedLink href="/policies/privacy" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
                   {t("footer.links.privacy", "Privacy Policy")}
-                </Link>
+                </LocalizedLink>
               </div>
 
 
               {/* SUPREME */}
               <div className="text-gray-500 text-xs uppercase tracking-wider font-semibold text-center sm:text-right mt-2 sm:mt-0">Supreme:</div>
               <div className="flex flex-wrap justify-center sm:justify-end gap-3 sm:contents">
-                <Link href="/policies/supreme/terms_of_use" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
+                <LocalizedLink href="/policies/supreme/terms_of_use" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
                   {t("footer.links.termsUse", "Terms of Use")}
-                </Link>
-                <Link href="/policies/supreme/terms_of_service" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
+                </LocalizedLink>
+                <LocalizedLink href="/policies/supreme/terms_of_service" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
                   {t("footer.links.termsService", "Terms of Service")}
-                </Link>
-                <Link href="/policies/supreme/privacy" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
+                </LocalizedLink>
+                <LocalizedLink href="/policies/supreme/privacy" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
                   {t("footer.links.privacy", "Privacy Policy")}
-                </Link>
+                </LocalizedLink>
               </div>
 
               {/* Affiliate */}

@@ -4,8 +4,6 @@ import Header from '@/components/Header';
 import PolicySidebar from '@/components/PolicySidebar';
 import BackToTopButton from '@/components/BackToTopButton';
 import Modal from '@/components/Modal';
-import PolicyNotice from '@/components/PolicyNotice';
-
 const TermsOfUseEmail = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -34,7 +32,6 @@ const TermsOfUseEmail = () => {
           <PolicySidebar sections={sections} />
         </div>
         <main className="flex-grow">
-          <PolicyNotice />
           <h1 className="text-4xl font-bold mb-8">Webmail Client Terms of Use</h1>
           <div className="space-y-8">
             <section id="service-description">

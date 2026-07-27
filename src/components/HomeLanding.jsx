@@ -132,16 +132,6 @@ export default function HomeLanding() {
       href: "/ai-soc",
       badge: t("home.systems.aiSoc.badge", "Subscription"),
     },
-    {
-      key: "supreme",
-      title: t("home.systems.supreme.title", "Supreme"),
-      desc: t(
-        "home.systems.supreme.desc",
-        "Local code vulnerability scanner for VSCode. Analyze your code for security vulnerabilities without exposing it to external servers."
-      ),
-      href: "/supreme",
-      badge: t("home.systems.supreme.badge", "Extension"),
-    },
   ];
 
   const openModal = () => setIsModalOpen(true);

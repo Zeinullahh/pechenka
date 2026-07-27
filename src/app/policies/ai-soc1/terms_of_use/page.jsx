@@ -4,8 +4,6 @@ import Header from '@/components/Header';
 import PolicySidebar from '@/components/PolicySidebar';
 import BackToTopButton from '@/components/BackToTopButton';
 import Modal from '@/components/Modal';
-import PolicyNotice from '@/components/PolicyNotice';
-
 const TermsOfUse = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -40,7 +38,6 @@ const TermsOfUse = () => {
           <PolicySidebar sections={sections} />
         </div>
         <main className="flex-grow">
-          <PolicyNotice />
           <h1 className="text-4xl font-bold mb-2">AI-SOC 1 Policy</h1>
           <h2 className="text-2xl text-gray-400 mb-8">Terms of Use</h2>
           <div className="space-y-8">

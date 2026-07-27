@@ -9,7 +9,9 @@ import BackToTopButton from "@/components/BackToTopButton";
 
 export default function LayoutWrapper({ children, initialLanguage }) {
   const pathname = usePathname();
-  const isPolicyPage = pathname.startsWith('/policies');
+  // Strip the locale prefix (e.g. "/en/...") so route checks work on localized URLs
+  const routePath = pathname.replace(/^\/[a-z]{2}(?=\/|$)/, "");
+  const isPolicyPage = routePath.startsWith('/policies');
   const isAffiliatePage = pathname.startsWith('/affiliate');
   const isServicesPage = pathname.startsWith('/services') || pathname.startsWith('/developer-services');
   // Old homepage content is now moved to /ai-soc

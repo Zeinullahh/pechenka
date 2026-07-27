@@ -117,6 +117,9 @@
       "title": "Избранные статьи",
       "subtitle": "Silence AI — одна из немногих частных компаний с разведывательными возможностями уровня государства.",
       "viewAll": "Смотреть все статьи"
+    },
+    "compliance": {
+      "title": "Создано в соответствии с мировыми стандартами"
     }
   },
   "header": {
@@ -131,11 +134,11 @@
       "systemsSupreme": "Supreme",
       "instructionsAiSoc": "AI-SOC",
       "instructionsSupreme": "Supreme",
-      "main": "Main",
-      "mail": "Mail",
+      "main": "Главная",
+      "mail": "Почта",
       "product": "AI-SOC",
       "secureDevelopment": "SLNC-env",
-      "developerServices": "Developer Services",
+      "developerServices": "Сервисы для разработчиков",
       "systemsSlncEnv": "SLNC-env",
       "instructionsSithub": "Sithub"
     },
@@ -143,9 +146,9 @@
       "contact": "Контакты",
       "requestDemo": "Запросить демо",
       "get": "Получить",
-      "download": "Download"
+      "download": "Скачать"
     },
-    "andManyMore": "And many more...",
+    "andManyMore": "И многое другое...",
     "login": "Войти"
   },
   "footer": {
@@ -159,7 +162,7 @@
       "termsUse": "Условия использования",
       "termsService": "Условия обслуживания",
       "privacy": "Политика конфиденциальности",
-      "affiliateTerms": "Affiliate Terms of Service"
+      "affiliateTerms": "Условия партнёрской программы"
     }
   },
   "cookie": {
@@ -182,19 +185,24 @@
         "content": "Система защищает от всех типов почтовых атак: фишинг, вредоносные вложения, опасные ссылки и т.д."
       },
       "vulnerability": {
-        "title": "Détection des vulnérabilités",
-        "content": "Le système identifie les failles dans le code de l'application et via une interaction dynamique avec votre site web/API, y compris grâce au moteur d'intelligence"
+        "title": "Обнаружение уязвимостей",
+        "content": "Система выявляет уязвимости в коде приложения и путём динамического взаимодействия с вашим сайтом/API, в том числе с помощью модуля разведки."
+      },
+      "unified": {
+        "title": "Единый мониторинг безопасности и обнаружение угроз",
+        "content": "AI-SOC обеспечивает централизованный мониторинг веб-инфраструктуры и электронной переписки в рамках единой платформы безопасности."
       }
     },
     "subheading": "Единая AI‑платформа кибербезопасности, которая объединяет:",
     "bullets": {
       "web": "Защита от веб‑атак в реальном времени",
       "email": "Защита от почтовых атак",
-      "vulnerability": "Détection des vulnérabilités"
+      "vulnerability": "Обнаружение уязвимостей",
+      "unified": "Единый мониторинг безопасности и обнаружение угроз"
     },
     "buttons": {
       "connect": "Подключить за 4 минуты",
-      "tour": "Voir la démo de 90 s"
+      "tour": "Смотреть демо за 90 секунд"
     }
   },
   "solution": {
@@ -202,36 +210,36 @@
     "sectionSubtitle": "Готово за 4 минуты и подходит любому ИТ‑специалисту — навыки кибербезопасности не требуются. Мы предлагаем продвинутую визуализацию и доступную стоимость.",
     "cards": {
       "globalShield": {
-        "title": "Global Shield - supervision du trafic de niveau CIA",
-        "description": "Notre globe 3D interactif offre une visualisation impressionnante du trafic : requêtes par seconde, utilisateurs actifs et volume en octets.",
+        "title": "Global Shield — мониторинг трафика уровня ЦРУ",
+        "description": "Наш интерактивный 3D-глобус обеспечивает впечатляющую визуализацию трафика: запросы в секунду, активные пользователи и объём в байтах.",
         "bullets": {
-          "one": "Configuration simple : indiquez votre IP et votre domaine.",
-          "two": "Recevez une IP d'agent à ajouter à votre DNS.",
-          "three": "Fermeture des ports pour une surface d'exposition nulle."
+          "one": "Простая настройка: укажите ваш IP и домен.",
+          "two": "Получите IP агента для добавления в ваш DNS.",
+          "three": "Закрытие портов для нулевой поверхности атаки."
         }
       },
       "emailProtector": {
-        "title": "Email Protector - première protection e-mail IA au monde",
-        "description": "Le premier système commercial de protection e-mail basé sur l'IA. Notre vue vectorielle facilite le suivi des flux au fil du temps et la détection des menaces.",
+        "title": "Email Protector — первая в мире защита почты на базе ИИ",
+        "description": "Первая коммерческая система защиты электронной почты на базе ИИ. Наш векторный вид упрощает отслеживание потоков во времени и обнаружение угроз.",
         "bullets": {
-          "one": "Détecte spoofing, spam, phishing et malware.",
-          "two": "L'admin peut ajouter des comptes e-mail à protéger.",
-          "three": "Visualiseur de flux e-mail commercial le plus avancé."
+          "one": "Обнаруживает спуфинг, спам, фишинг и вредоносное ПО.",
+          "two": "Администратор может добавлять почтовые аккаунты для защиты.",
+          "three": "Самый продвинутый коммерческий визуализатор почтовых потоков."
         }
       },
       "securityTester": {
-        "title": "Security Tester - tests de vulnérabilités nouvelle génération",
-        "description": "Notre système fournit un One-Time-Token (OTT) pour des audits complets. Connectez-vous via notre navigateur ou l'extension VS Code.",
+        "title": "Security Tester — тестирование уязвимостей нового поколения",
+        "description": "Наша система предоставляет One-Time-Token (OTT) для комплексного аудита. Подключайтесь через наш браузер или расширение для VS Code.",
         "bullets": {
-          "one": "Définissez le périmètre et la cible dans la CMC.",
-          "two": "Collez l'OTT et lancez le contrôle.",
-          "three": "Informations sur les risques pilotées par l'intelligence."
+          "one": "Задайте область и цель проверки в CMC.",
+          "two": "Вставьте OTT и запустите проверку.",
+          "three": "Анализ рисков на основе разведданных."
         }
       }
     },
     "cmc": {
-      "title": "Console de gestion centralisée (CMC)",
-      "description": "Les trois composants sont pilotés via une console unifiée offrant visualisation centralisée, configuration et suivi aisés et rapports de sécurité complets."
+      "title": "Центральная консоль управления (CMC)",
+      "description": "Все три компонента управляются через единую консоль, обеспечивающую централизованную визуализацию, удобную настройку и мониторинг, а также подробные отчёты о безопасности."
     }
   },
   "stickySolution": {
@@ -261,20 +269,20 @@
     }
   },
   "insights": {
-    "items": {
-      "0": {
+    "items": [
+      {
         "title": "39 секунд",
         "description": "Хакерская атака происходит каждые 39 секунд"
       },
-      "1": {
-        "title": "20 миллионов DDoS‑атак",
-        "description": "Только за Q1 2025 произошло 20,5 млн DDoS‑атак"
+      {
+        "title": "20 миллионов DDoS-атак",
+        "description": "Только за Q1 2025 произошло 20,5 млн DDoS-атак"
       },
-      "2": {
+      {
         "title": "Каждый день",
-        "description": "Ежедневно взламывают 30 000 сайтов"
+        "description": "Ежедневно взламывают 30 000 сайтов"
       }
-    }
+    ]
   },
   "floatingText": {
     "headline": "Узнайте, как мыслят хакеры",
@@ -308,20 +316,20 @@
         "content": "CMC интегрирована с другими системами безопасности и позволяет мониторить почтовые потоки и просматривать письма всех добавленных корпоративных пользователей."
       },
       "dynamicVulnerability": {
-        "title": "Recherche dynamique de vulnérabilités",
-        "content": "Détecte les vulnérabilités en interagissant avec votre site web, y compris la méthode de recherche de vulnérabilités via le système d'intelligence."
+        "title": "Динамический поиск уязвимостей",
+        "content": "Обнаруживает уязвимости, взаимодействуя с вашим сайтом, включая метод поиска уязвимостей через разведывательную систему."
       },
       "codeAnalyzer": {
-        "title": "Analyseur de code",
-        "content": "Identifie les problèmes de sécurité directement dans votre base de code via un plugin VS Code, vous aidant à résoudre les problèmes avant le déploiement."
+        "title": "Анализатор кода",
+        "content": "Выявляет проблемы безопасности непосредственно в вашей кодовой базе через плагин VS Code, помогая устранить их до развёртывания."
       },
       "intelligenceReport": {
-        "title": "Rapport de renseignement",
-        "content": "Génère des informations détaillées sur votre cible, y compris les ports ouverts, les services en cours d'exécution, les sous-domaines et d'autres informations sensibles pouvant nécessiter une action."
+        "title": "Отчёт по разведданным",
+        "content": "Формирует детальную информацию о вашей цели, включая открытые порты, работающие сервисы, поддомены и другие чувствительные данные, которые могут потребовать действий."
       },
       "fullVulnerability": {
-        "title": "Vérification COMPLÈTE de vulnérabilités",
-        "content": "Une vérification COMPLÈTE de vulnérabilités comprend à la fois une analyse dynamique des vulnérabilités et une analyse des vulnérabilités du code source."
+        "title": "ПОЛНАЯ проверка уязвимостей",
+        "content": "ПОЛНАЯ проверка уязвимостей включает как динамический анализ уязвимостей, так и анализ уязвимостей исходного кода."
       }
     },
     "aiSoc": {
@@ -374,48 +382,48 @@
     "planEstimate": "${value}",
     "plans": {
       "globalShield": {
-        "title": "Sécurité Web et Gestion du Trafic",
-        "price": "$0.06/Go",
-        "description": "Aucune limite\nPas de frais supplémentaires",
-        "button": "Sécuriser l'application web et les API",
+        "title": "Веб-безопасность и управление трафиком",
+        "price": "$0.06/ГБ",
+        "description": "Без ограничений\nБез дополнительных сборов",
+        "button": "Защитить веб-приложение и API",
         "features": {
-          "webProtection": "Protection contre tous les types d'attaques web, sauf l'exploitation de vulnérabilités de logique métier",
-          "ddosProtection": "Protection DDoS en temps réel",
-          "cmc": "CMC avec système de surveillance globale du trafic",
-          "country": "Fonctionnalité de liste noire de pays",
-          "port": "Fonctionnalité de fermeture de ports"
+          "webProtection": "Защита от всех типов веб-атак, кроме эксплуатации бизнес-логики",
+          "ddosProtection": "Защита от DDoS в реальном времени",
+          "cmc": "CMC с глобальным мониторингом трафика:",
+          "country": "Блокировка стран:",
+          "port": "Закрытие портов:"
         }
       },
       "emailProtector": {
-        "title": "Sécurité des E-mails et Visualisation",
-        "price": "$10/mois/compte",
-        "description": "Jusqu'à 10 e-mails par jour\nE-mails supplémentaires: $0.035 chaque e-mail",
-        "button": "Sécuriser l'E-mail",
+        "title": "Защита электронной почты и визуализация",
+        "price": "$10/мес/аккаунт",
+        "description": "До 10 писем в день\nДополнительные письма: $0.035 за каждое",
+        "button": "Защитить почту",
         "features": {
-          "cmcEmail": "CMC avec le visualiseur de flux d'e-mails le plus avancé",
-          "visibility": "Visibilité complète des e-mails envoyés et reçus de tous les comptes e-mail, dans la CMC, avec catégorisation automatique des menaces",
-          "webClient": "Client WebMail sécurisé",
-          "phishing": "Protection contre le phishing",
-          "malware": "Analyse des pièces jointes malveillantes",
-          "links": "Détection de liens dangereux",
+          "cmcEmail": "CMC с самым продвинутым визуализатором потоков электронной почты",
+          "visibility": "Полная видимость отправленных и полученных писем со всех почтовых аккаунтов в CMC, с автоматической категоризацией угроз",
+          "webClient": "Защищённый клиент WebMail",
+          "phishing": "Защита от фишинга",
+          "malware": "Проверка вредоносных вложений",
+          "links": "Обнаружение опасных ссылок",
           "spam": "Filtrage anti-spam",
-          "fakeSender": "Protection contre les expéditeurs falsifiés"
+          "fakeSender": "Защита от поддельных отправителей"
         }
       },
       "securityTester": {
-        "title": "Recherche de Vulnérabilités",
-        "price": "$25/mois",
-        "description": "Jusqu'à 50 vérifications COMPLÈTES de vulnérabilités par mois\nVérifications COMPLÈTES supplémentaires: $0.5 chacune",
-        "button": "Commencer les tests",
+        "title": "Поиск уязвимостей",
+        "price": "$25/мес",
+        "description": "До 50 ПОЛНЫХ проверок уязвимостей в месяц\nДополнительные ПОЛНЫЕ проверки: $0.5 за каждую",
+        "button": "Начать тестирование",
         "features": {
-          "dynamic": "Recherche dynamique de vulnérabilités",
+          "dynamic": "Динамический поиск уязвимостей",
           "codeAnalyzer": "Analyseur de code",
-          "reports": "Rapports d'évaluation de sécurité faciles à comprendre",
+          "reports": "Понятные отчёты об оценке безопасности",
           "intelligence": "Rapport de renseignement"
         }
       }
     },
-    "perYear": "par an (est.)"
+    "perYear": "в год (оцен.)"
   },
   "pricingCustom": {
     "title": "Прозрачное ценообразование",
@@ -454,10 +462,10 @@
     "calculator": {
       "title": "Калькулятор бюджета проекта",
       "projectCost": "Бюджет проекта:",
-      "subtitle": "Faites glisser pour voir votre maintenance annuelle",
+      "subtitle": "Перетащите, чтобы увидеть годовую стоимость обслуживания",
       "projectValue": "${value}"
     },
-    "subtitle": "Plans adaptés aux mobiles conçus pour évoluer avec votre produit.",
+    "subtitle": "Удобные для мобильных устройств тарифы, которые масштабируются вместе с вашим продуктом.",
     "percentMaintenance": "{percent}% maintenance annuelle",
     "planEstimate": "${value}"
   },
@@ -474,7 +482,9 @@
       "name": "Ваше имя",
       "email": "you@email.com",
       "company": "Ваша компания"
-    }
+    },
+    "contactInfo": "Вы можете связаться с нами по электронной почте",
+    "contactSuffix": "— и мы вам ответим"
   },
   "affiliate": {
     "hero": {
@@ -548,7 +558,7 @@
         "topupHigher": "$1,000 пополнение → $100 вознаграждение"
       },
       "note": "Комиссия рассчитывается от чистой суммы пополнения после комиссии платёжной системы.",
-      "heading": "Récompenses de solde"
+      "heading": "Вознаграждения на баланс"
     },
     "faq": {
       "title": "Вопросы и ответы",
@@ -566,68 +576,67 @@
       }
     },
     "termsAff": {
-      "label": "Affiliate Program",
-      "title": "Affiliate Terms of Service",
+      "label": "Партнёрская программа",
+      "title": "Условия партнёрской программы",
       "gitServer": {
-        "title": "Serveur de dépôts Git",
-        "tag": "Gestion de versions auto-hébergée"
+        "title": "Сервер Git-репозиториев",
+        "tag": "Контроль версий на своей площадке"
       },
       "analyzer": {
-        "title": "Analyseur de sécurité",
-        "tag": "Moteur local d'analyse de code"
+        "title": "Анализатор безопасности",
+        "tag": "Локальный движок сканирования кода"
       },
       "vulnDb": {
-        "title": "Base de vulnérabilités",
-        "tag": "Correctifs de sécurité téléchargés"
+        "title": "База уязвимостей",
+        "tag": "Загруженные исправления безопасности"
       },
-      "notice": "This policy is available only in English",
-      "intro": "These terms describe how rewards are issued and paid to partners participating in the Silence AI affiliate program.",
+      "intro": "Настоящие условия описывают, как вознаграждения начисляются и выплачиваются партнёрам, участвующим в партнёрской программе Silence AI.",
       "meta": {
-        "effective": "Effective date: 10 November 2024",
-        "lastUpdated": "Last updated: 10 November 2024"
+        "effective": "Дата вступления в силу: 10 ноября 2024 г.",
+        "lastUpdated": "Последнее обновление: 10 ноября 2024 г."
       },
       "sections": {
         "overview": {
-          "title": "1. Program Overview",
-          "body1": "1.1 Agreement Scope: These Affiliate Terms of Service (\"Terms\") govern your participation in the Silence AI affiliate program operated by Silence AI LLC (\"Silence AI,\" \"we,\" \"us,\" or \"our\"). These Terms apply to you, the individual or entity enrolling as an affiliate partner (\"you\" or \"your\"), and, where applicable, your employer, principal, or organization if you act on their behalf.",
-          "body2": "1.2 Program Summary: Under this program, qualified partners earn commission-based rewards when referred customers purchase or top up the AI-SOC 1 product. Participation in the affiliate program also requires compliance with the general Silence AI Terms of Service."
+          "title": "1. Обзор программы",
+          "body1": "1.1 Предмет соглашения: настоящие Условия партнёрской программы («Условия») регулируют ваше участие в партнёрской программе Silence AI, которую осуществляет Silence AI LLC («Silence AI», «мы», «нас» или «наш»). Настоящие Условия применяются к вам — физическому или юридическому лицу, регистрирующемуся в качестве партнёра («вы» или «ваш»), а также, где это применимо, к вашему работодателю, принципалу или организации, если вы действуете от их имени.",
+          "body2": "1.2 Суть программы: в рамках программы квалифицированные партнёры получают вознаграждение в виде комиссии, когда привлечённые ими клиенты покупают продукт AI-SOC 1 или пополняют баланс. Участие в партнёрской программе также требует соблюдения общих Условий использования Silence AI."
         },
         "eligibility": {
-          "title": "2. Partner Eligibility",
-          "item1": "You must maintain an active Silence AI affiliate account with accurate business and payment details.",
-          "item2": "Referrals must complete registration through your issued link or promo code.",
-          "item3": "Accounts found to be fraudulent, self-referred, or in breach of applicable law are not eligible for rewards."
+          "title": "2. Требования к партнёрам",
+          "item1": "У вас должна быть активная партнёрская учётная запись Silence AI с актуальными данными о компании и платёжными реквизитами.",
+          "item2": "Привлечённые клиенты должны завершить регистрацию по вашей ссылке или промокоду.",
+          "item3": "Учётные записи, признанные мошенническими, созданными для самоприглашения или нарушающими применимое законодательство, не имеют права на вознаграждения."
         },
         "commission": {
-          "title": "3. Commission Structure",
-          "body1": "You earn a 10% reward on every balance top-up completed by an account registered through your invitation.",
-          "body2": "Commission is calculated from the net top-up amount after payment processing fees are deducted."
+          "title": "3. Структура комиссии",
+          "body1": "Вы получаете вознаграждение в размере 10% с каждого пополнения баланса, выполненного учётной записью, зарегистрированной по вашему приглашению.",
+          "body2": "Комиссия рассчитывается от чистой суммы пополнения после вычета комиссий платёжных систем."
         },
         "rewardPosting": {
-          "title": "4. Reward Posting",
-          "body1": "Rewards post to your partner balance within one minute after the transaction successfully clears. There is no manual approval queue.",
-          "body2": "Notifications appear in your affiliate dashboard alongside the customer identifier and top-up amount."
+          "title": "4. Начисление вознаграждений",
+          "body1": "Вознаграждения поступают на ваш партнёрский баланс в течение одной минуты после успешного завершения транзакции. Ручное одобрение не требуется.",
+          "body2": "Уведомления отображаются в партнёрской панели вместе с идентификатором клиента и суммой пополнения."
         },
         "withdrawals": {
-          "title": "5. Withdrawals",
-          "body1": "Withdrawal requests are processed within two business days and paid out using the settlement method on file.",
-          "body2": "Minimum withdrawal thresholds and supported payout networks are published inside the affiliate dashboard."
+          "title": "5. Вывод средств",
+          "body1": "Заявки на вывод средств обрабатываются в течение двух рабочих дней и выплачиваются способом расчёта, указанным в учётной записи.",
+          "body2": "Минимальные пороги вывода и поддерживаемые платёжные сети опубликованы в партнёрской панели."
         },
         "productScope": {
-          "title": "6. Product Scope",
-          "body1": "Rewards are only provided for the AI-SOC 1 product. Other Silence AI services are excluded from the affiliate program unless explicitly stated otherwise in writing.",
-          "body2": "If additional products become eligible, Silence AI will publish an updated list inside these terms."
+          "title": "6. Продуктовый охват",
+          "body1": "Вознаграждения начисляются только за продукт AI-SOC 1. Другие сервисы Silence AI исключены из партнёрской программы, если иное прямо не указано в письменной форме.",
+          "body2": "Если в программу будут включены дополнительные продукты, Silence AI опубликует обновлённый список в настоящих условиях."
         },
         "compliance": {
-          "title": "7. Partner Conduct & Compliance",
-          "item1": "Partners must represent Silence AI accurately and avoid misleading claims about features or pricing.",
-          "item2": "Marketing communications must comply with applicable anti-spam, privacy, and advertising regulations.",
-          "item3": "Silence AI may suspend or terminate accounts that violate these obligations or harm the brand."
+          "title": "7. Поведение партнёров и соответствие требованиям",
+          "item1": "Партнёры обязаны достоверно представлять Silence AI и избегать вводящих в заблуждение заявлений о функциях или ценах.",
+          "item2": "Маркетинговые коммуникации должны соответствовать применимым антиспамовым нормам, а также требованиям к конфиденциальности и рекламе.",
+          "item3": "Silence AI вправе приостановить или прекратить действие учётных записей, нарушающих эти обязательства или наносящих ущерб бренду."
         },
         "changes": {
-          "title": "8. Changes & Contact",
-          "body1": "Silence AI may update these affiliate terms to reflect changes in the program or applicable law. Updated versions take effect upon publication on this page.",
-          "body2": "Questions about the affiliate program can be sent to support@silenceai.net."
+          "title": "8. Изменения и контакты",
+          "body1": "Silence AI может обновлять настоящие партнёрские условия, чтобы отразить изменения в программе или применимом законодательстве. Обновлённые версии вступают в силу с момента публикации на этой странице.",
+          "body2": "Вопросы о партнёрской программе можно направлять на support@silenceai.net."
         }
       }
     }
@@ -767,7 +776,7 @@
         "desc": "UX, архитектура, прототип."
       },
       "poc": {
-        "title": "Proof of Concept",
+        "title": "Проверка концепции",
         "desc": "Быстрая проверка с измеримыми KPI."
       },
       "build": {
@@ -783,18 +792,19 @@
         "desc": "Поддержка, roadmap, непрерывное улучшение."
       }
     },
-    "subtitle": "Pipeline de livraison ultra-rapide — optimisé pour la vélocité."
+    "subtitle": "Сверхбыстрый конвейер поставки — оптимизирован для скорости."
   },
   "technologyStack": {
     "title": "Технологический стек",
-    "subtitle": "Une stack de production soigneusement sélectionnée, conçue pour la vitesse, l'évolutivité et de belles expériences utilisateur."
+    "subtitle": "Тщательно подобранный production-стек, созданный для скорости, масштабируемости и прекрасного пользовательского опыта.",
+    "categories": []
   },
   "secureDevelopment": {
     "hero": {
       "badge": "Sithub · Самостоятельно размещаемая платформа разработки",
       "title": "GitHub на вашем сервере. Код не покидает вашу сеть.",
       "description": "Самостоятельно размещаемая альтернатива GitHub со встроенным сканированием безопасности. Вся функциональность остаётся внутри вашей инфраструктуры — репозитории, анализатор кода и отчёты об уязвимостях работают локально.",
-      "requestSystem": "Demander le système"
+      "requestSystem": "Запросить систему"
     },
     "pricing": {
       "subtitle": "Простое и прозрачное ценообразование",
@@ -835,17 +845,17 @@
       "onPremNotice": "Остаётся on‑prem. Без внешнего трафика.",
       "sithub": {
         "title": "Serveur Sithub",
-        "tag": "Contrôle de version local"
+        "tag": "Локальный контроль версий"
       },
       "llm": {
         "title": "Serveur LLM (Qwen-Code)",
-        "tag": "Intelligence sur site"
+        "tag": "Локальный интеллект"
       },
       "ide": {
-        "title": "IDE avec Copilot local",
-        "tag": "Expérience de niveau Cursor"
+        "title": "IDE с локальным Copilot",
+        "tag": "Опыт уровня Cursor"
       },
-      "staysOnPrem": "Reste sur site. Pas de sortie."
+      "staysOnPrem": "Остаётся в контуре. Без исходящего трафика."
     },
     "timeline": {
       "subtitle": "Недавние тревожные сигналы",
@@ -973,7 +983,8 @@
     "comingSoon": {
       "title": "Админ‑панель",
       "message": "Админ‑панель сейчас в разработке и будет доступна к концу следующей недели."
-    }
+    },
+    "requestSystem": "Запросить систему"
   },
   "supreme": {
     "hero": {
@@ -1010,24 +1021,24 @@
     "features": {
       "title": "Мощные возможности",
       "subtitle": "Всё, что нужно для безопасной разработки кода",
-      "items": {
-        "0": "Анализатор кода работает локально, код не передаётся на внешние серверы",
-        "1": "Находит уязвимые пакеты в проекте",
-        "2": "Находит неправильные конфигурации и секреты",
-        "3": "Сканирует CI/CD на неправильные конфигурации и уязвимости"
-      }
+      "items": [
+        "Анализатор кода работает локально, код не передаётся на внешние серверы",
+        "Находит уязвимые пакеты в проекте",
+        "Находит неправильные конфигурации и секреты",
+        "Сканирует CI/CD на неправильные конфигурации и уязвимости"
+      ]
     },
-    "screenshots": {
-      "0": {
+    "screenshots": [
+      {
         "title": "Очень понятный интерфейс"
       },
-      "1": {
+      {
         "title": "Хорошо структурированные отчёты по безопасности"
       },
-      "2": {
+      {
         "title": "История сканирований"
       }
-    },
+    ],
     "lightbox": {
       "close": "Закрыть предпросмотр",
       "alt": "Скриншот"
@@ -1150,17 +1161,21 @@
         "a1Extensions": "расширений файлов",
         "a2Covering": "охватывая все основные языки программирования и форматы файлов."
       }
+    },
+    "cicd": {
+      "title": "Сканирование CI/CD и контейнеров",
+      "subtitle": "Обнаруживайте уязвимости в конвейерах CI/CD и конфигурациях контейнеров Docker"
     }
   },
   "languageSelector": {
-    "triggerLabel": "Select language",
-    "menuLabel": "Choose language",
-    "searchLabel": "Search languages",
-    "searchPlaceholder": "Search by name or native script",
-    "searchResults": "Search results",
-    "noMatches": "No languages match your search.",
-    "popular": "Most popular",
-    "allLanguages": "All languages"
+    "triggerLabel": "Выбрать язык",
+    "menuLabel": "Выберите язык",
+    "searchLabel": "Поиск языков",
+    "searchPlaceholder": "Поиск по названию или оригинальному написанию",
+    "searchResults": "Результаты поиска",
+    "noMatches": "По вашему запросу языки не найдены.",
+    "popular": "Самые популярные",
+    "allLanguages": "Все языки"
   },
   "documentation": {
     "tabs": {
@@ -2168,50 +2183,50 @@
     }
   },
   "policySidebar": {
-    "tableOfContents": "Table of Contents",
-    "close": "Close",
-    "topics": "Topics"
+    "tableOfContents": "Оглавление",
+    "close": "Закрыть",
+    "topics": "Разделы"
   },
-  "andManyMore": "Et bien plus encore...",
+  "andManyMore": "И многое другое...",
   "playground": {
     "options": {
-      "globeShield": "Sécurité web et gestion du trafic",
-      "emailSecurity": "Sécurité des e-mails et visualisation"
+      "globeShield": "Веб-безопасность и управление трафиком",
+      "emailSecurity": "Безопасность электронной почты и визуализация"
     }
   },
   "modal": {
-    "title": "En cours de développement",
-    "body": "Le système devrait être lancé le 10 octobre"
+    "title": "В разработке",
+    "body": "Запуск системы ожидается 10 октября"
   },
   "notFound": {
-    "title": "Page non trouvée",
-    "description": "Nous avons cherché partout mais n'avons pas trouvé cette page.",
-    "cta": "Retour à l'accueil"
+    "title": "Страница не найдена",
+    "description": "Мы искали везде, но не смогли найти эту страницу.",
+    "cta": "Вернуться на главную"
   },
   "pricingCta": {
-    "requestSystem": "Demander le système"
+    "requestSystem": "Запросить систему"
   },
   "contactForm": {
-    "title": "Contact Us",
-    "success": "Thanks! Your message has been sent. We will contact you shortly.",
-    "errorRequired": "Please fill in your name, email and a short message.",
-    "errorSend": "Unable to send message. Please try again later.",
+    "title": "Свяжитесь с нами",
+    "success": "Спасибо! Ваше сообщение отправлено. Мы свяжемся с вами в ближайшее время.",
+    "errorRequired": "Пожалуйста, укажите ваше имя, электронную почту и короткое сообщение.",
+    "errorSend": "Не удалось отправить сообщение. Пожалуйста, попробуйте позже.",
     "placeholders": {
-      "name": "Your name",
-      "email": "Email",
-      "type": "Project Type (optional)",
-      "budget": "Budget (optional)",
-      "message": "Tell us about your project..."
+      "name": "Ваше имя",
+      "email": "Электронная почта",
+      "type": "Тип проекта (необязательно)",
+      "budget": "Бюджет (необязательно)",
+      "message": "Расскажите нам о вашем проекте..."
     },
     "submit": {
-      "idle": "Send Message",
-      "loading": "Sending…"
+      "idle": "Отправить сообщение",
+      "loading": "Отправка..."
     }
   },
   "consulting": {
-    "title": "Consulting Questionnaire",
-    "searchPlaceholder": "Search questions...",
-    "noResults": "No questions found.",
+    "title": "Анкета для консультации",
+    "searchPlaceholder": "Поиск вопросов...",
+    "noResults": "Вопросы не найдены.",
     "questions": [
       {
         "question": "What is your company's core value proposition beyond competitive pricing?",
@@ -2256,27 +2271,27 @@
     ]
   },
   "requestSystemModal": {
-    "title": "Demander le système",
-    "name": "Nom",
-    "email": "E-mail professionnel",
-    "company": "Nom de l'entreprise",
+    "title": "Запросить систему",
+    "name": "Имя",
+    "email": "Электронная почта",
+    "company": "Название компании",
     "placeholders": {
-      "name": "Jean Dupont",
-      "email": "jean@entreprise.com",
-      "company": "Acme SAS"
+      "name": "Иван Иванов",
+      "email": "ivan@company.ru",
+      "company": "ООО «Компания»"
     },
-    "submit": "Télécharger",
-    "successTitle": "Demande envoyée !",
-    "successBody": "Merci. Les instructions de téléchargement du système seront envoyées à votre e-mail.",
-    "close": "Fermer"
+    "submit": "Скачать",
+    "successTitle": "Запрос отправлен!",
+    "successBody": "Спасибо. Инструкции по загрузке системы будут отправлены на вашу электронную почту.",
+    "close": "Закрыть"
   },
   "backToTop": {
-    "label": "Haut de page"
+    "label": "Наверх"
   },
   "badRequest": {
     "title": "Неверный запрос",
     "cta": "Вернуться на главную",
-    "description": "The page you are looking for could not be found or the request was invalid."
+    "description": "Запрашиваемая страница не найдена или запрос был некорректным."
   },
   "countrySelect": {
     "title": "Выберите страну",
@@ -2301,9 +2316,9 @@
     "web": {
       "title": "AI-SOC Web vs традиционные WAF-решения",
       "columns": {
-        "aiSoc": "AI-SOC Web (pay-as-you-go)",
+        "aiSoc": "AI-SOC Web (с оплатой по факту использования)",
         "cloudflare": "Cloudflare WAF + Anti-DDoS ($20/мес)",
-        "aws": "AWS WAF (pay-as-you-go)"
+        "aws": "AWS WAF (с оплатой по факту использования)"
       },
       "rows": {
         "complexWaf": {
@@ -2440,5 +2455,27 @@
         "response": "Да. AI-SOC использует фиды Threat Intelligence, чтобы блокировать известную вредоносную инфраструктуру до того, как она достигнет защищённых систем."
       }
     ]
+  },
+  "valueSection": {
+    "title": "Почему AI-SOC",
+    "subtitle": "AI-SOC делает кибербезопасность корпоративного уровня доступной любой компании. Разверните защиту за считаные минуты и управляйте безопасностью веба и электронной почты с единой платформы.",
+    "features": {
+      "affordable": {
+        "title": "Доступная безопасность",
+        "description": "Защита корпоративного уровня без затрат на традиционные системы кибербезопасности."
+      },
+      "ai": {
+        "title": "Анализ на базе ИИ",
+        "description": "Продвинутый ИИ непрерывно анализирует трафик, электронные письма и угрозы в реальном времени."
+      },
+      "deploy": {
+        "title": "Развёртывание за минуты",
+        "description": "Настройте защиту веба и электронной почты менее чем за 4 минуты без сложной конфигурации."
+      },
+      "visualization": {
+        "title": "Продвинутая визуализация",
+        "description": "Отслеживайте веб-трафик и потоки электронной почты через продвинутый визуальный интерфейс."
+      }
+    }
   }
 }
