@@ -15,9 +15,11 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { solutionContent } from '@/lib/solutionContent';
 import EdgeGlowCard from '@/components/EdgeGlowCard.jsx';
 import { Rocket, BrainCircuit, Radar, ShieldCheck } from 'lucide-react';
+import { DEFAULT_CURRENCY } from '@/lib/currency';
 
 const AiSocLanding = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currency, setCurrency] = useState(DEFAULT_CURRENCY);
   const [isComparisonVisible, setIsComparisonVisible] = useState(false);
   const comparisonRef = useRef(null);
   const { t } = useLanguage();
@@ -240,7 +242,11 @@ const AiSocLanding = () => {
               </div>
             </div>
           </section>
-          <Pricing onOpenModal={openModal} />
+          <Pricing
+            currency={currency}
+            onCurrencyChange={setCurrency}
+            onOpenModal={openModal}
+          />
         </div>
         <div className="w-full max-w-7xl mx-auto">
           <Insights />
