@@ -1,7 +1,7 @@
 "use client";
 
-import TermsOfUseEn from "@/components/policies/ai-soc1/TermsOfUseEn";
+import TermsOfUseWithEntity from "@/components/policies/ai-soc1/TermsOfUseWithEntity";
 
 export default function TermsOfUse() {
-  return <TermsOfUseEn />;
+  return <TermsOfUseWithEntity locale="en" />;
 }

@@ -7,10 +7,10 @@ const ENTITIES = [
   { code: "KZ", label: "Kazakhstan" },
 ];
 
-const LegalEntitySelector = ({ entity, onEntityChange }) => {
+const LegalEntitySelector = ({ entity, onEntityChange, label = "Contracting entity:" }) => {
   return (
     <div className="mb-8 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
-      <span className="text-sm text-gray-400">Contracting entity:</span>
+      <span className="text-sm text-gray-400">{label}</span>
       <div className="inline-flex rounded-full border border-white/15 bg-black/40 p-1">
         {ENTITIES.map((e) => (
           <button
