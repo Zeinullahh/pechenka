@@ -1,7 +1,10 @@
-// KZT conversion helper. Update KZT_RATE here to change it site-wide.
-export const KZT_RATE = 500; // 1 USD = 500 KZT
+// Deprecated: prefer `src/lib/currency.js`.
+// Kept as a thin shim so existing PricingSection imports keep working.
+import { convertPrice, formatPrice } from "./currency";
+
+export const KZT_RATE = 500;
 
 export const formatKzt = (usdAmount) => {
-  const kzt = Math.round(usdAmount * KZT_RATE);
-  return `${kzt.toLocaleString("ru-RU")} ₸`;
+  const kzt = convertPrice(usdAmount, "KZT");
+  return formatPrice(kzt, "KZT");
 };
