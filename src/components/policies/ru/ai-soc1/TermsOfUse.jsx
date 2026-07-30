@@ -4,7 +4,7 @@ import Header from '@/components/Header';
 import PolicySidebar from '@/components/PolicySidebar';
 import BackToTopButton from '@/components/BackToTopButton';
 import Modal from '@/components/Modal';
-const RuAiSocTermsOfUse = () => {
+const RuAiSocTermsOfUse = ({ selector }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => setIsModalOpen(true);
@@ -40,6 +40,7 @@ const RuAiSocTermsOfUse = () => {
         <main className="flex-grow">
           <h1 className="text-4xl font-bold mb-2">Политика AI-SOC 1</h1>
           <h2 className="text-2xl text-gray-400 mb-8">Условия использования</h2>
+          {selector}
           <div className="space-y-8">
             <section id="about">
               <h2 className="text-2xl font-semibold mb-4">1. О настоящих Условиях</h2>
