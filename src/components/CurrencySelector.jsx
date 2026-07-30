@@ -3,22 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import clsx from "clsx";
 import * as Flags from "country-flag-icons/react/3x2";
-
-const CURRENCIES = [
-  { code: "USD", symbol: "$", label: "USD", flagCode: "US" },
-];
-
-export const convertPrice = (priceInUSD, currency) => {
-  return priceInUSD;
-};
-
-export const formatPrice = (price, currency) => {
-  const curr = CURRENCIES.find((c) => c.code === currency) || CURRENCIES[0];
-  if (currency === "KZT") {
-    return `${price.toLocaleString()} ${curr.symbol}`;
-  }
-  return `${curr.symbol}${price.toLocaleString()}`;
-};
+import { CURRENCIES } from "@/lib/currency";
 
 const CurrencySelector = ({ currency, onCurrencyChange, align = "right" }) => {
   const [isOpen, setIsOpen] = useState(false);
