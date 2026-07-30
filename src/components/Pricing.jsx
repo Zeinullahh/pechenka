@@ -5,7 +5,8 @@ import React, { useState, useMemo } from "react";
 import TooltipCard from "./TooltipCard";
 import { CybersecurityLamp } from "./CybersecurityLamp";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { formatKzt } from "@/lib/kzt";
+import { convertPrice, formatPrice } from "@/lib/currency";
+import CurrencySelector from "./CurrencySelector";
 import { motion } from "framer-motion";
 
 
@@ -117,7 +118,7 @@ const TOOLTIP_KEYS = [
 ];
 
 
-const Pricing = ({ onOpenModal }) => {
+const Pricing = ({ currency, onCurrencyChange, onOpenModal }) => {
   const { t } = useLanguage();
   const [activeTooltip, setActiveTooltip] = useState(null);
   const [activeCardIndex, setActiveCardIndex] = useState(null);
@@ -240,14 +241,12 @@ const Pricing = ({ onOpenModal }) => {
 
 
     const price = billing === "yearly" ? priceData.yearly : priceData.monthly;
+    const converted = convertPrice(price, currency);
 
 
     return (
-      <span className="flex flex-col">
-        <span>{`$${price.toFixed(2)}${priceData.unit}`}</span>
-        <span className="text-sm text-gray-400 font-normal">
-          {formatKzt(price)}{priceData.unit}
-        </span>
+      <span>
+        {formatPrice(converted, currency)}{priceData.unit}
       </span>
     );
   };
@@ -425,7 +424,7 @@ const Pricing = ({ onOpenModal }) => {
         </div>
 
         {/* Controls: Billing Toggle */}
-        <div className="flex justify-center items-center mb-12 relative z-20">
+        <div className="flex justify-center items-center gap-4 sm:gap-6 mb-12 relative z-20">
             <div className="flex items-center gap-12">
               <button
                 onClick={() => setBilling("yearly")}
@@ -457,6 +456,11 @@ const Pricing = ({ onOpenModal }) => {
                 )}
               </button>
             </div>
+            <CurrencySelector
+              currency={currency}
+              onCurrencyChange={onCurrencyChange}
+              align="right"
+            />
           </div>
 
 
@@ -471,23 +475,29 @@ const Pricing = ({ onOpenModal }) => {
                     plan={plan}
                     price={
                       <div className="flex flex-col">
-                        <div className="flex items-baseline gap-2 mb-2">
-                          <span className="text-3xl sm:text-4xl font-bold text-white">${billing === "yearly" ? "220" : "20"}</span>
-                          <span className="text-lg text-gray-400 font-normal">/{billing === "yearly" ? "year" : "month"}</span>
-                        </div>
-                        <span className="text-sm text-gray-400 -mt-1 mb-2">
-                          {formatKzt(billing === "yearly" ? 220 : 20)}/{billing === "yearly" ? "year" : "month"}
-                        </span>
+                        {(() => {
+                          const webBasePrice = billing === "yearly" ? 220 : 20;
+                          return (
+                            <>
+                              <div className="flex items-baseline gap-2 mb-2">
+                                <span className="text-3xl sm:text-4xl font-bold text-white">
+                                  {formatPrice(convertPrice(webBasePrice, currency), currency)}
+                                </span>
+                                <span className="text-lg text-gray-400 font-normal">/{billing === "yearly" ? "year" : "month"}</span>
+                              </div>
+                            </>
+                          );
+                        })()}
                         <div className="flex flex-col pt-2 border-t border-white/10">
                           <span className="text-xs uppercase tracking-wider text-purple-300 font-semibold mb-2">Plus Pay-as-you-go</span>
                           <div className="flex gap-6">
                             <div className="flex flex-col">
-                              <span className="text-lg text-white font-semibold">$0.18</span>
-                              <span className="text-[10px] text-gray-400 uppercase tracking-tight">per GB · {formatKzt(0.18)}</span>
+                              <span className="text-lg text-white font-semibold">{formatPrice(convertPrice(0.18, currency), currency)}</span>
+                              <span className="text-[10px] text-gray-400 uppercase tracking-tight">per GB</span>
                             </div>
                             <div className="flex flex-col">
-                              <span className="text-lg text-white font-semibold">$1.20</span>
-                              <span className="text-[10px] text-gray-400 uppercase tracking-tight">per 1M requests · {formatKzt(1.2)}</span>
+                              <span className="text-lg text-white font-semibold">{formatPrice(convertPrice(1.2, currency), currency)}</span>
+                              <span className="text-[10px] text-gray-400 uppercase tracking-tight">per 1M requests</span>
                             </div>
                           </div>
                         </div>
