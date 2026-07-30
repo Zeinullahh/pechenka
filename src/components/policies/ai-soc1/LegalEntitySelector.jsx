@@ -16,6 +16,7 @@ const LegalEntitySelector = ({ entity, onEntityChange, label = "Contracting enti
           <button
             key={e.code}
             type="button"
+            aria-pressed={entity === e.code}
             onClick={() => onEntityChange(e.code)}
             className={`rounded-full px-4 py-1.5 text-sm font-semibold transition ${
               entity === e.code
