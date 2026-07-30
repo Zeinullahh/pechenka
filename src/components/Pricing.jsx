@@ -252,6 +252,9 @@ const Pricing = ({ currency, onCurrencyChange, onOpenModal }) => {
   };
 
 
+  const webBasePrice = billing === "yearly" ? 220 : 20;
+
+
   return (
     <section className="w-full pt-12 sm:pt-16 relative px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto max-w-7xl">
@@ -459,7 +462,6 @@ const Pricing = ({ currency, onCurrencyChange, onOpenModal }) => {
             <CurrencySelector
               currency={currency}
               onCurrencyChange={onCurrencyChange}
-              align="right"
             />
           </div>
 
@@ -475,19 +477,12 @@ const Pricing = ({ currency, onCurrencyChange, onOpenModal }) => {
                     plan={plan}
                     price={
                       <div className="flex flex-col">
-                        {(() => {
-                          const webBasePrice = billing === "yearly" ? 220 : 20;
-                          return (
-                            <>
-                              <div className="flex items-baseline gap-2 mb-2">
-                                <span className="text-3xl sm:text-4xl font-bold text-white">
-                                  {formatPrice(convertPrice(webBasePrice, currency), currency)}
-                                </span>
-                                <span className="text-lg text-gray-400 font-normal">/{billing === "yearly" ? "year" : "month"}</span>
-                              </div>
-                            </>
-                          );
-                        })()}
+                        <div className="flex items-baseline gap-2 mb-2">
+                          <span className="text-3xl sm:text-4xl font-bold text-white">
+                            {formatPrice(convertPrice(webBasePrice, currency), currency)}
+                          </span>
+                          <span className="text-lg text-gray-400 font-normal">/{billing === "yearly" ? "year" : "month"}</span>
+                        </div>
                         <div className="flex flex-col pt-2 border-t border-white/10">
                           <span className="text-xs uppercase tracking-wider text-purple-300 font-semibold mb-2">Plus Pay-as-you-go</span>
                           <div className="flex gap-6">
