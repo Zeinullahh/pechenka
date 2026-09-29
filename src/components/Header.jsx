@@ -9,6 +9,7 @@ import GlowButton from "./GlowButton";
 import LanguageSelector from "./LanguageSelector";
 import CountrySelectModal from "./CountrySelectModal";
 import EmailSecurityModal from "./EmailSecurityModal";
+import RequestAccessModal from "./RequestAccessModal";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const SCROLL_THRESHOLD = 10;
@@ -24,6 +25,7 @@ const Header = ({ onOpenModal, hideCta = false }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [countrySelectOpen, setCountrySelectOpen] = useState(false);
   const [emailSecurityOpen, setEmailSecurityOpen] = useState(false);
+  const [isAccessRequestOpen, setIsAccessRequestOpen] = useState(false);
   const [openDesktopDropdown, setOpenDesktopDropdown] = useState(null);
   const [openMobileDropdown, setOpenMobileDropdown] = useState(null);
   const { t } = useLanguage();
@@ -48,7 +50,7 @@ const Header = ({ onOpenModal, hideCta = false }) => {
   };
 
   const handleAffiliateLogin = () => {
-    window.location.href = "https://partners.silenceai.net";
+    setIsAccessRequestOpen(true);
   };
 
   const handleContactLink = (e) => {
@@ -466,6 +468,7 @@ const Header = ({ onOpenModal, hideCta = false }) => {
       </motion.header>
       <CountrySelectModal isOpen={countrySelectOpen} onClose={() => setCountrySelectOpen(false)} />
       <EmailSecurityModal isOpen={emailSecurityOpen} onClose={() => setEmailSecurityOpen(false)} />
+      <RequestAccessModal isOpen={isAccessRequestOpen} onClose={() => setIsAccessRequestOpen(false)} />
     </>
   );
 };

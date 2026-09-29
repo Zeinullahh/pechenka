@@ -1,15 +1,16 @@
 "use client";
-import React from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from "@/contexts/LanguageContext";
+import RequestAccessModal from "@/components/RequestAccessModal";
 
 const EmailSecurityModal = ({ isOpen, onClose }) => {
     const { t } = useLanguage();
-    if (!isOpen) return null;
-
+    const [isAccessRequestOpen, setIsAccessRequestOpen] = useState(false);
     return (
-        <AnimatePresence>
-            {isOpen && (
+        <>
+            <AnimatePresence>
+                {isOpen && (
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -43,9 +44,7 @@ const EmailSecurityModal = ({ isOpen, onClose }) => {
 
                         <div className="flex flex-col gap-4">
                             <a
-                                href="https://mail.silenceai.net/"
-                                target="_blank"
-                                rel="noopener noreferrer"
+                                href="https://kz.mail.silenceai.net"
                                 className="group relative w-full py-5 px-6 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 hover:from-blue-600/30 hover:to-cyan-600/30 border border-blue-500/30 rounded-xl font-semibold transition-all"
                             >
                                 <div className="flex items-center justify-between">
@@ -59,10 +58,12 @@ const EmailSecurityModal = ({ isOpen, onClose }) => {
                                 </div>
                             </a>
 
-                            <a
-                                href="https://email-soc.silenceai.net/"
-                                target="_blank"
-                                rel="noopener noreferrer"
+                            <button
+                                type="button"
+                                onClick={() => {
+                                    onClose();
+                                    setIsAccessRequestOpen(true);
+                                }}
                                 className="group relative w-full py-5 px-6 bg-gradient-to-r from-purple-600/20 to-indigo-600/20 hover:from-purple-600/30 hover:to-indigo-600/30 border border-purple-500/30 rounded-xl font-semibold transition-all"
                             >
                                 <div className="flex items-center justify-between">
@@ -74,12 +75,14 @@ const EmailSecurityModal = ({ isOpen, onClose }) => {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                     </svg>
                                 </div>
-                            </a>
+                            </button>
                         </div>
                     </motion.div>
                 </motion.div>
-            )}
-        </AnimatePresence>
+                )}
+            </AnimatePresence>
+            <RequestAccessModal isOpen={isAccessRequestOpen} onClose={() => setIsAccessRequestOpen(false)} />
+        </>
     );
 };
 

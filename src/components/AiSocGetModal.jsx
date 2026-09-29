@@ -1,19 +1,20 @@
 "use client";
-import React from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from "@/contexts/LanguageContext";
+import RequestAccessModal from "@/components/RequestAccessModal";
 
 const AiSocGetModal = ({ isOpen, onClose }) => {
     const { t } = useLanguage();
-
-    if (!isOpen) return null;
+    const [isAccessRequestOpen, setIsAccessRequestOpen] = useState(false);
 
     const handleClose = () => {
         onClose();
     };
 
-    const handleRedirect = (url) => {
-        window.location.href = url;
+    const handleAccessRequest = () => {
+        onClose();
+        setIsAccessRequestOpen(true);
     };
 
     return (
@@ -50,14 +51,14 @@ const AiSocGetModal = ({ isOpen, onClose }) => {
 
                             <div className="flex flex-col gap-6">
                                 <button
-                                    onClick={() => handleRedirect('https://email-soc.silenceai.net')}
+                                    onClick={handleAccessRequest}
                                     className="w-full py-4 px-6 bg-gradient-to-r from-purple-600/20 to-indigo-600/20 hover:from-purple-600/30 hover:to-indigo-600/30 border border-purple-500/30 rounded-xl font-semibold transition-all text-center"
                                 >
                                     {t("aiSocModal.emailSecurity", "Login/Register to Email security")}
                                 </button>
 
                                 <button
-                                    onClick={() => handleRedirect('https://web-soc.silenceai.net')}
+                                    onClick={handleAccessRequest}
                                     className="w-full py-4 px-6 bg-gradient-to-r from-pink-600/20 to-purple-600/20 hover:from-pink-600/30 hover:to-purple-600/30 border border-pink-500/30 rounded-xl font-semibold transition-all text-center"
                                 >
                                     {t("aiSocModal.webSecurity", "Login/Register to Web security")}
@@ -101,7 +102,7 @@ const AiSocGetModal = ({ isOpen, onClose }) => {
                     </motion.div>
                 )}
             </AnimatePresence>
-
+            <RequestAccessModal isOpen={isAccessRequestOpen} onClose={() => setIsAccessRequestOpen(false)} />
         </>
     );
 };

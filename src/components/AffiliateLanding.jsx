@@ -3,6 +3,7 @@
 import React, { useMemo, useState } from "react";
 import Header from "@/components/Header";
 import RequestDemoModal from "@/components/RequestDemoModal";
+import RequestAccessModal from "@/components/RequestAccessModal";
 import BackToTopButton from "@/components/BackToTopButton";
 import GlowButton from "@/components/GlowButton";
 import EdgeGlowCard from "@/components/EdgeGlowCard";
@@ -12,6 +13,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 const AffiliateLanding = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isAccessRequestOpen, setIsAccessRequestOpen] = useState(false);
   const [activeFaq, setActiveFaq] = useState(null);
   const { t } = useLanguage();
 
@@ -404,7 +406,7 @@ const AffiliateLanding = () => {
                 {t("affiliate.hero.subtitle", "We offer 10% reward for all the spendings of the invited clients for 6 months.")}
               </p>
               <div className="flex flex-wrap items-center gap-4">
-                <GlowButton onClick={() => window.location.href = "https://partners.silenceai.net"}>
+                <GlowButton onClick={() => setIsAccessRequestOpen(true)}>
                   {t("affiliate.hero.cta", "Join partnership program")}
                 </GlowButton>
               </div>
@@ -774,6 +776,7 @@ const AffiliateLanding = () => {
         </div>
       </main>
       <RequestDemoModal isOpen={isModalOpen} onClose={closeModal} />
+      <RequestAccessModal isOpen={isAccessRequestOpen} onClose={() => setIsAccessRequestOpen(false)} />
       <BackToTopButton />
     </>
   );
