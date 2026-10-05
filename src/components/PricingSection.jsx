@@ -1,5 +1,6 @@
 import React, { useMemo, useState } from "react";
 import EdgeGlowCard from "./EdgeGlowCard";
+import GlassSurface from "./GlassSurface";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { formatKzt } from "@/lib/kzt";
 
@@ -63,7 +64,7 @@ const PricingSection = () => {
   );
 
   return (
-    <section className="relative px-4 sm:px-6 lg:px-10 py-14 space-y-16">
+    <section className="pricing-glass-stage relative px-4 sm:px-6 lg:px-10 py-14 space-y-16">
       {/* Header */}
       <div className="text-center space-y-4">
         <h2 className="text-3xl sm:text-4xl font-bold text-white">
@@ -92,15 +93,23 @@ const PricingSection = () => {
             outerClassName="rounded-[28px] p-[2px]"
             innerClassName="rounded-[26px]"
           >
-            <div
-              className="relative h-full rounded-[22px] border border-white/10 
-                         p-6 sm:p-8 space-y-6 transition-transform duration-500
-                         hover:-translate-y-2"
-              style={{
-                background:
-                  "linear-gradient(160deg, rgba(3,6,16,0.98), rgba(1,2,6,0.98))",
-              }}
+            <GlassSurface
+              width="100%"
+              height="100%"
+              borderRadius={22}
+              backgroundOpacity={0.1}
+              saturation={1.7}
+              blur={24}
+              displace={0.5}
+              distortionScale={-130}
+              greenOffset={8}
+              blueOffset={16}
+              brightness={56}
+              opacity={0.9}
+              mixBlendMode="screen"
+              className="pricing-glass-panel pricing-glass-card"
             >
+              <div className="relative h-full p-6 sm:p-8 space-y-6">
               {/* Badge */}
               {plan.badge && (
                 <div
@@ -161,7 +170,8 @@ const PricingSection = () => {
                   </li>
                 ))}
               </ul>
-            </div>
+              </div>
+            </GlassSurface>
           </EdgeGlowCard>
         ))}
       </div>

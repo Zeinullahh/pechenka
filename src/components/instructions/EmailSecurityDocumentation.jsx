@@ -30,7 +30,7 @@ import {
 
 const calloutClassMap = {
     info: "border border-purple-500/20 bg-purple-500/5 text-purple-200 shadow-[0_0_30px_-5px_rgba(168,85,247,0.15)]",
-    warning: "border border-amber-500/20 bg-amber-500/5 text-amber-200 shadow-[0_0_30px_-5px_rgba(245,158,11,0.15)]",
+    warning: "border border-blue-500/20 bg-blue-500/5 text-blue-200 shadow-[0_0_30px_-5px_rgba(59,130,246,0.15)]",
     success: "border border-emerald-500/20 bg-emerald-500/5 text-emerald-200 shadow-[0_0_30px_-5px_rgba(16,185,129,0.15)]",
 };
 
@@ -380,7 +380,7 @@ const EmailSecurityDocumentation = () => {
                             <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
                                 <iframe
                                     src="https://www.youtube.com/embed/3lW9az21aDk"
-                                    title="AI-SOC Email Security"
+                                    title="AI-CSD Email Security"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                     allowFullScreen
                                     className="absolute inset-0 w-full h-full"
@@ -391,7 +391,7 @@ const EmailSecurityDocumentation = () => {
                             <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
                                 <iframe
                                     src="https://www.youtube.com/embed/HGhDQ3bhk6o"
-                                    title="AI-SOC Email Security Additional Info"
+                                    title="AI-CSD Email Security Additional Info"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                     allowFullScreen
                                     className="absolute inset-0 w-full h-full"

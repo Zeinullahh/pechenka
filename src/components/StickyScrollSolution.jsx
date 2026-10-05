@@ -14,7 +14,7 @@ export function StickyScrollSolution() {
   const fallbackContent = {
     webSecurity: {
       title: "Step 1 · Connect your infrastructure",
-      description: "Add your website domain and server IP address to connect AI-SOC protection."
+      description: "Add your website domain and server IP address to connect AI-CSD protection."
     },
     ciaMonitoring: {
       title: "Step 2 · Real-time traffic monitoring",
@@ -49,7 +49,7 @@ export function StickyScrollSolution() {
       description,
       desktop: (
         <div className="h-full w-full flex items-center justify-center text-white">
-          <div className="w-full aspect-video overflow-hidden rounded-lg">
+          <div className="w-full aspect-video overflow-hidden rounded-2xl">
             <AnimatePresence mode="wait">
               <motion.div
                 key={item.imagePath}
@@ -95,8 +95,8 @@ export function StickyScrollSolution() {
           <EdgeGlowCard
             key={item.id}
             mode="static"
-            outerClassName="rounded-3xl p-[2px]"
-            innerClassName="glass-card p-6 space-y-4 rounded-3xl"
+            outerClassName="rounded-[26px] p-[2px]"
+            innerClassName="glass-card p-6 space-y-4 rounded-[24px]"
             glowColor="#FF00B7"
             secondaryGlowColor="rgba(0,191,255,0.7)"
             topColor="#FF00B7"
@@ -106,7 +106,7 @@ export function StickyScrollSolution() {
           >
             <h3 className="text-2xl font-semibold text-white">{item.title}</h3>
             <p className="text-slate-300 text-sm leading-relaxed">{item.description}</p>
-            <div className="relative w-full aspect-video overflow-hidden rounded-lg border border-white/10 bg-black/60">
+            <div className="relative w-full aspect-video overflow-hidden rounded-2xl border border-white/10 bg-black/60">
               <img
                 src={item.imagePath}
                 className="w-full h-full object-contain"

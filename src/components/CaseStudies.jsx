@@ -136,7 +136,7 @@ const FallbackHero = ({ title, accent, label }) => {
 
       {/* Icon badge */}
       <div
-        className="absolute top-6 left-6 rounded-2xl px-3 py-2 border border-white/12 bg-black/35 backdrop-blur-md"
+        className="absolute top-6 left-6 rounded-2xl px-3 py-2 glass-readable"
         style={{ boxShadow: `0 0 30px ${accent}33` }}
       >
         <div className="flex items-center gap-2">
@@ -188,7 +188,7 @@ const CaseStudyCard = ({ study, glow, t }) => {
         className="relative h-full rounded-[26px] border border-white/12 overflow-hidden transition-transform duration-200"
         style={{
           transformStyle: "preserve-3d",
-          background: "linear-gradient(160deg, rgba(4,7,16,0.96), rgba(1,2,6,0.98))",
+          background: "rgba(8, 8, 14, 0.55)",
           boxShadow: "0 30px 80px rgba(5,12,32,0.65)",
         }}
       >
@@ -356,7 +356,7 @@ const CaseStudies = () => {
       },
       {
         image: null,
-        title: t("caseStudies.items.silence.title", "Silence AI-SOC"),
+        title: t("caseStudies.items.silence.title", "Silence AI-CSD"),
         problem: t("caseStudies.items.silence.problem", "High alert noise"),
         solution: t("caseStudies.items.silence.solution", "AI detection & automated response"),
         result: t("caseStudies.items.silence.result", "−68% false positives"),

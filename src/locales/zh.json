@@ -83,7 +83,7 @@
       "title": "系统",
       "cta": "查看详情",
       "aiSoc": {
-        "title": "AI-SOC",
+        "title": "AI-CSD",
         "desc": "由 AI 驱动并运营的托管式检测与响应系统,用于防止 Web 和邮件攻击。",
         "badge": "订阅"
       },
@@ -126,14 +126,14 @@
       "affiliate": "联盟计划",
       "systems": "系统",
       "instructions": "使用指南",
-      "systemsAiSoc": "AI-SOC",
+      "systemsAiSoc": "AI-CSD",
       "systemsSithub": "Sithub",
       "systemsSupreme": "Supreme",
-      "instructionsAiSoc": "AI-SOC",
+      "instructionsAiSoc": "AI-CSD",
       "instructionsSupreme": "Supreme",
       "main": "首页",
       "mail": "邮件",
-      "product": "AI-SOC",
+      "product": "AI-CSD",
       "secureDevelopment": "SLNC-env",
       "developerServices": "开发者服务",
       "systemsSlncEnv": "SLNC-env",
@@ -170,8 +170,8 @@
     "ok": "好的"
   },
   "hero": {
-    "headline": "AI-SOC 1:网络安全不再昂贵也不再复杂",
-    "playgroundHeading": "AI 驱动的安全运营中心",
+    "headline": "AI-CSD 1:网络安全不再昂贵也不再复杂",
+    "playgroundHeading": "AI 驱动的网络安全部门",
     "tooltips": {
       "web": {
         "title": "Web 攻击防护",
@@ -383,7 +383,9 @@
           "ddosProtection": "实时DDoS保护",
           "cmc": "带有全球流量监控系统的CMC",
           "country": "国家黑名单功能",
-          "port": "关闭端口功能"
+          "port": "关闭端口功能",
+          "aiManager": "AI管理器:显示安全报告并执行您的指令——告诉它将某个IP地址段加入黑名单,它会自行完成添加",
+          "captcha": "行为验证码,比reCAPTCHA优化200倍以上——AI跟踪用户行为,仅在检测到机器人时显示类似Cloudflare Turnstile的验证"
         }
       },
       "emailProtector": {
@@ -589,7 +591,7 @@
         "overview": {
           "title": "1. 计划概述",
           "body1": "1.1 协议范围:本《联盟服务条款》(\"条款\")规范您参与由 Silence AI LLC(\"Silence AI\"\"我们\")运营的 Silence AI 联盟计划。条款适用于报名成为联盟伙伴的个人或机构(\"您\"),若您代表雇主或组织行事,同样适用。",
-          "body2": "1.2 计划摘要:在本计划中,符合条件的伙伴在推荐客户购买或充值 AI-SOC 1 产品时可获得基于佣金的奖励。参与联盟计划还须遵守 Silence AI 通用服务条款。"
+          "body2": "1.2 计划摘要:在本计划中,符合条件的伙伴在推荐客户购买或充值 AI-CSD 1 产品时可获得基于佣金的奖励。参与联盟计划还须遵守 Silence AI 通用服务条款。"
         },
         "eligibility": {
           "title": "2. 伙伴资格",
@@ -614,7 +616,7 @@
         },
         "productScope": {
           "title": "6. 产品范围",
-          "body1": "奖励仅适用于 AI-SOC 1 产品。除非另有书面说明,其他 Silence AI 服务不在联盟计划范围内。",
+          "body1": "奖励仅适用于 AI-CSD 1 产品。除非另有书面说明,其他 Silence AI 服务不在联盟计划范围内。",
           "body2": "若有其他产品纳入范围,Silence AI 将在本条款中发布更新列表。"
         },
         "compliance": {
@@ -746,7 +748,7 @@
         "metricLabel": "转化率增长"
       },
       "silence": {
-        "title": "Silence AI-SOC",
+        "title": "Silence AI-CSD",
         "problem": "高警报噪音",
         "solution": "AI 检测与自动响应",
         "result": "−68% 误报",
@@ -2230,7 +2232,7 @@
       },
       {
         "question": "你们提供哪些具体的软件开发服务?",
-        "answer": "端到端软件开发:定制应用、AI 解决方案、网络安全产品开发(Silence AI-SOC)、系统集成、上云和 DevOps。也提供专属产品开发与团队扩充。"
+        "answer": "端到端软件开发:定制应用、AI 解决方案、网络安全产品开发(Silence AI-CSD)、系统集成、上云和 DevOps。也提供专属产品开发与团队扩充。"
       },
       {
         "question": "你们擅长哪些行业和领域?",
@@ -2238,7 +2240,7 @@
       },
       {
         "question": "团队擅长哪些技术栈和平台?",
-        "answer": "GO、Swift、Flutter,云平台(AWS/Azure/GCP)、Docker/Kubernetes、FastAPI、JavaScript 以及 AI/ML 框架。我们也自研安全工具,如 Silence AI-SOC。"
+        "answer": "GO、Swift、Flutter,云平台(AWS/Azure/GCP)、Docker/Kubernetes、FastAPI、JavaScript 以及 AI/ML 框架。我们也自研安全工具,如 Silence AI-CSD。"
       },
       {
         "question": "你们提供端到端产品开发还是仅提供部分服务?",
@@ -2250,7 +2252,7 @@
       },
       {
         "question": "除开发外,是否提供咨询、架构与顾问服务?",
-        "answer": "是的:提供网络安全咨询、系统架构设计、技术顾问以及基于 Silence AI-SOC 的合规评估。"
+        "answer": "是的:提供网络安全咨询、系统架构设计、技术顾问以及基于 Silence AI-CSD 的合规评估。"
       }
     ]
   },
@@ -2298,9 +2300,9 @@
       "features": "功能"
     },
     "web": {
-      "title": "AI-SOC Web 与传统 WAF 方案对比",
+      "title": "AI-CSD Web 与传统 WAF 方案对比",
       "columns": {
-        "aiSoc": "AI-SOC Web(按量付费)",
+        "aiSoc": "AI-CSD Web(按量付费)",
         "cloudflare": "Cloudflare WAF + Anti-DDoS($20/月)",
         "aws": "AWS WAF(按量付费)"
       },
@@ -2327,9 +2329,9 @@
       }
     },
     "email": {
-      "title": "AI-SOC Email 与传统邮件安全对比",
+      "title": "AI-CSD Email 与传统邮件安全对比",
       "columns": {
-        "aiSoc": "AI-SOC Email",
+        "aiSoc": "AI-CSD Email",
         "outlook": "Outlook/Gmail",
         "kaspersky": "Kaspersky(连接到邮件服务提供商)"
       },
@@ -2356,8 +2358,8 @@
     }
   },
   "aiSocValueSection": {
-    "title": "为什么选择 AI-SOC",
-    "subtitle": "AI-SOC 让企业级网络安全对任何公司都可用。几分钟即可部署防护,并在统一平台中管理 Web 与邮件安全。",
+    "title": "为什么选择 AI-CSD",
+    "subtitle": "AI-CSD 让企业级网络安全对任何公司都可用。几分钟即可部署防护,并在统一平台中管理 Web 与邮件安全。",
     "features": {
       "deploy": {
         "title": "分钟级部署",
@@ -2399,7 +2401,7 @@
     ]
   },
   "aiSocPricing": {
-    "intro": "AI-SOC 是一套独立的网络安全系统组合",
+    "intro": "AI-CSD 是一套独立的网络安全系统组合",
     "emailDescription": "Email Security 是企业通信的防护盾。它会过滤收发邮件,在威胁到达用户前中和钓鱼尝试、伪造攻击和恶意链接,从而保障企业通信的完整性。",
     "webDescription": "Web Security 通过实时分析流量模式来保护您的数字基础设施。它可防御常见漏洞、DDoS 攻击和未授权访问,并在不影响性能的前提下提供深度网络可视化。"
   },
@@ -2407,36 +2409,36 @@
     "title": "常见问题",
     "items": [
       {
-        "question": "AI-SOC 只是安全引擎,还是完整的邮件平台?",
-        "response": "AI-SOC 可根据企业邮件管理方式以两种模式使用。\n\n1️⃣ 作为独立安全邮件平台\n\nAI-SOC 可作为企业主邮件系统运行,具备自有邮件服务器基础设施、安全 Webmail 和管理控制台。\n\n2️⃣ 作为现有邮件系统的 AI 安全层\n\nAI-SOC 也可叠加在 Gmail/Outlook 之上使用。您可保留现有服务商,同时由 AI-SOC 分析邮件流量并防护钓鱼、伪造、恶意链接等威胁。"
+        "question": "AI-CSD 只是安全引擎,还是完整的邮件平台?",
+        "response": "AI-CSD 可根据企业邮件管理方式以两种模式使用。\n\n1️⃣ 作为独立安全邮件平台\n\nAI-CSD 可作为企业主邮件系统运行,具备自有邮件服务器基础设施、安全 Webmail 和管理控制台。\n\n2️⃣ 作为现有邮件系统的 AI 安全层\n\nAI-CSD 也可叠加在 Gmail/Outlook 之上使用。您可保留现有服务商,同时由 AI-CSD 分析邮件流量并防护钓鱼、伪造、恶意链接等威胁。"
       },
       {
-        "question": "AI-SOC 可以与现有 Gmail 或 Outlook 环境一起使用吗?",
-        "response": "可以。AI-SOC 可作为额外安全层部署,同时保留 Gmail 或 Outlook 作为主要服务商。"
+        "question": "AI-CSD 可以与现有 Gmail 或 Outlook 环境一起使用吗?",
+        "response": "可以。AI-CSD 可作为额外安全层部署,同时保留 Gmail 或 Outlook 作为主要服务商。"
       },
       {
-        "question": "当 AI-SOC 作为主邮件基础设施运行时会怎样?",
-        "response": "在该模式下,AI-SOC 提供安全 Webmail、域级管理控制,以及贯穿完整邮件流程的内置威胁防护。"
+        "question": "当 AI-CSD 作为主邮件基础设施运行时会怎样?",
+        "response": "在该模式下,AI-CSD 提供安全 Webmail、域级管理控制,以及贯穿完整邮件流程的内置威胁防护。"
       },
       {
         "question": "管理员可以创建并控制企业邮件账号吗?",
         "response": "可以。管理员可创建和管理账号、监控全域邮件活动,并在必要时删除用户邮件。"
       },
       {
-        "question": "现有企业邮箱账号可以连接到 AI-SOC 吗?",
-        "response": "可以。现有 Gmail/Outlook 企业账号可接入 AI-SOC,在不替换服务商的前提下增加结构化防护。"
+        "question": "现有企业邮箱账号可以连接到 AI-CSD 吗?",
+        "response": "可以。现有 Gmail/Outlook 企业账号可接入 AI-CSD,在不替换服务商的前提下增加结构化防护。"
       },
       {
         "question": "安全能力是预配置的吗?还是需要手动配置?",
-        "response": "AI-SOC 是预配置的 AI 系统。按照说明页完成最少步骤即可启用内置防护。"
+        "response": "AI-CSD 是预配置的 AI 系统。按照说明页完成最少步骤即可启用内置防护。"
       },
       {
         "question": "除了邮件和 Web 过滤外,还能检测哪些高级威胁?",
-        "response": "AI-SOC 可检测钓鱼上下文、伪造模式、恶意链接、恶意附件,以及邮件与 Web 流量中的可疑行为。"
+        "response": "AI-CSD 可检测钓鱼上下文、伪造模式、恶意链接、恶意附件,以及邮件与 Web 流量中的可疑行为。"
       },
       {
-        "question": "AI-SOC 会使用威胁情报提前阻止攻击吗?",
-        "response": "会。AI-SOC 使用威胁情报数据流,在已知恶意基础设施到达受保护系统前进行阻断。"
+        "question": "AI-CSD 会使用威胁情报提前阻止攻击吗?",
+        "response": "会。AI-CSD 使用威胁情报数据流,在已知恶意基础设施到达受保护系统前进行阻断。"
       }
     ]
   }

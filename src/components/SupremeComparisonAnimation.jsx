@@ -9,7 +9,7 @@ export const SupremeComparisonAnimation = () => {
     <div className="w-full">
       <div className="grid gap-6 lg:grid-cols-2">
         {/* LIGHT MODE - Manual Process */}
-        <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-black/20 p-6">
+        <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-black/20 p-6 backdrop-blur-xl">
           <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-50" />
           
           <div className="relative z-10 mb-6 flex items-center justify-between">
@@ -59,7 +59,7 @@ export const SupremeComparisonAnimation = () => {
         </div>
 
         {/* MAX MODE - Automated Loop with Threat Intel & LLM Report */}
-        <div className="relative overflow-hidden rounded-2xl border border-fuchsia-500/30 bg-gradient-to-br from-fuchsia-900/10 to-purple-900/10 p-6">
+        <div className="relative overflow-hidden rounded-2xl border border-fuchsia-500/30 bg-gradient-to-br from-fuchsia-900/10 to-purple-900/10 p-6 backdrop-blur-xl">
           <div className="absolute inset-0 bg-fuchsia-500/5 blur-3xl" />
           
           <div className="relative z-10 mb-6 flex items-center justify-between">

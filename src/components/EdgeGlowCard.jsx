@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import clsx from "clsx";
+import BorderGlow from "./BorderGlow";
 
 const EdgeGlowCard = ({
   children,
@@ -11,18 +12,33 @@ const EdgeGlowCard = ({
   glowColor = "rgba(255,0,183,0.85)",
   secondaryGlowColor,
   mode = "follow",
-  spotlight = false,
+  spotlight: _spotlight,
   topColor,
   rightColor,
   bottomColor,
   leftColor,
   style,
   animateOnView = true,
+  glow = true,
+  glass = true,
+  borderRadius = 26,
+  edgeSensitivity = 22,
+  glowRadius = 52,
+  glowIntensity = 1.2,
+  coneSpread = 38,
+  borderGlowColors = ['#c084fc', '#f472b6', '#38bdf8'],
+  borderGlowColor = '290 85 72',
   ...rest
 }) => {
-  const resolvedSecondary = secondaryGlowColor ?? glowColor;
   const wrapperRef = useRef(null);
   const [isVisible, setIsVisible] = useState(!animateOnView);
+  const [canGlow, setCanGlow] = useState(false);
+
+  useEffect(() => {
+    const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    setCanGlow(finePointer && !reducedMotion);
+  }, []);
 
   useEffect(() => {
     if (!animateOnView) {
@@ -57,82 +73,51 @@ const EdgeGlowCard = ({
   }, [animateOnView]);
 
   const appearClasses = animateOnView ? clsx("card-appear", isVisible && "card-appear--visible") : "";
+  const glowEnabled = glow && canGlow;
 
-  if (mode === "static") {
+  const innerContent = (
+    <div
+      className={clsx("relative z-10 h-full w-full rounded-[inherit]", glass && "glass-readable", innerClassName)}
+      style={innerStyle}
+    >
+      {children}
+    </div>
+  );
+
+  if (glowEnabled) {
     return (
       <div
         {...rest}
         ref={wrapperRef}
-        className={clsx(
-          "edge-glow-static",
-          spotlight && "edge-glow-static-spotlight",
-          appearClasses,
-          outerClassName
-        )}
-        style={{
-          "--edge-glow-color": glowColor,
-          "--edge-glow-secondary": resolvedSecondary,
-          "--edge-glow-top": topColor,
-          "--edge-glow-right": rightColor,
-          "--edge-glow-bottom": bottomColor,
-          "--edge-glow-left": leftColor,
-          ...style,
-        }}
+        className={clsx(appearClasses, outerClassName)}
+        style={style}
       >
-        <div
-          className={clsx("relative z-10 h-full w-full rounded-[inherit]", innerClassName)}
-          style={innerStyle}
+        <BorderGlow
+          borderRadius={borderRadius}
+          backgroundColor="transparent"
+          colors={borderGlowColors}
+          glowColor={borderGlowColor}
+          edgeSensitivity={edgeSensitivity}
+          glowRadius={glowRadius}
+          glowIntensity={glowIntensity}
+          coneSpread={coneSpread}
+          fillOpacity={0}
+          className="overflow-visible"
         >
-          {children}
-        </div>
+          {innerContent}
+        </BorderGlow>
       </div>
     );
   }
 
-  const handleMouseMove = (event) => {
-    const target = event.currentTarget;
-    const rect = target.getBoundingClientRect();
-    const x = event.clientX - rect.left;
-    const y = event.clientY - rect.top;
-    target.style.setProperty("--cursor-x", `${x}px`);
-    target.style.setProperty("--cursor-y", `${y}px`);
-    target.style.setProperty("--glow-opacity", "1");
-  };
-
-  const handleMouseLeave = (event) => {
-    const target = event.currentTarget;
-    target.style.setProperty("--glow-opacity", "0");
-  };
-
   return (
     <div
       {...rest}
-      onMouseEnter={handleMouseMove}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
       ref={wrapperRef}
-      className={clsx(
-        "edge-glow",
-        spotlight && "edge-glow-static-spotlight",
-        appearClasses,
-        outerClassName
-      )}
-      style={{
-        "--edge-glow-color": glowColor,
-        "--glow-opacity": 0,
-        "--edge-glow-top": topColor,
-        "--edge-glow-right": rightColor,
-        "--edge-glow-bottom": bottomColor,
-        "--edge-glow-left": leftColor,
-        ...style,
-      }}
+      className={clsx(appearClasses, outerClassName)}
+      style={style}
     >
-      <div
-        className={clsx("relative z-10 h-full w-full rounded-[inherit]", innerClassName)}
-        style={innerStyle}
-      >
-        {children}
-      </div>
+      {innerContent}
     </div>
   );
 };

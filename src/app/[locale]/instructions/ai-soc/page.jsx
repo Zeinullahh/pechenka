@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import AiSocDocumentationTabs from "@/components/instructions/AiSocDocumentationTabs";
 
 export const metadata = {
-    title: "AI-SOC Instructions - Silence AI",
+    title: "AI-CSD Instructions - Silence AI",
 };
 
 export default function Page() {

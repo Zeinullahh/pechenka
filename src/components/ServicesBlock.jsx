@@ -58,7 +58,7 @@ const ServicesBlock = () => {
           "servicesBlock.services.backend.description",
           "Scalable APIs, CI/CD pipelines, and cloud infrastructure."
         ),
-        accent: "#FFB800",
+        accent: "#3B82F6",
         tag: t("servicesBlock.services.backend.tag", "Scale"),
       },
       {
@@ -91,7 +91,7 @@ const ServicesBlock = () => {
   };
 
   return (
-    <section className="relative overflow-hidden rounded-[38px] border border-white/10 bg-[#050816]/55 p-6 sm:p-10">
+    <section className="relative overflow-hidden rounded-[38px] border border-white/10 glass-readable p-6 sm:p-10">
       {/* Animated Aurora + grid + noise */}
       <div className="pointer-events-none absolute inset-0">
         {/* aurora blobs */}
@@ -248,8 +248,8 @@ function ServiceCard({ service, defaultGlowPalette, itemVariant, t }) {
             style={{
               boxShadow: "0 26px 70px rgba(0,0,0,0.48)",
               background:
-                "linear-gradient(155deg, rgba(14,18,38,0.94), rgba(2,3,10,0.92))",
-              transform: "translateZ(14px)", // makes the inner feel “lifted”
+                "rgba(8, 8, 14, 0.55)",
+              transform: "translateZ(14px)",
             }}
           >
             {/* hover spotlight */}

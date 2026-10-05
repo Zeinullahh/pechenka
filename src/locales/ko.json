@@ -82,13 +82,13 @@
       "ctaPrimary": "데모 요청",
       "ctaSecondary": "시스템 살펴보기",
       "highlights": {
-        "coverage": "24/7 AI 지원 SOC",
+        "coverage": "24/7 AI-CSD 지원",
         "onPrem": "데이터 유출 없는 온프레미스",
         "deploy": "4분 만에 안전 배포"
       },
       "metrics": {
         "title": "규제 대상 팀을 위해 설계",
-        "soc": "AI 지원 SOC 커버리지",
+        "soc": "AI-CSD 지원 커버리지",
         "egress": "모두 온프레미스 — 코드, 프롬프트, 빌드",
         "deployment": "첫 안전 배포까지",
         "locales": "기본 제공 언어"
@@ -98,7 +98,7 @@
       "title": "시스템",
       "cta": "자세히 보기",
       "aiSoc": {
-        "title": "AI-SOC",
+        "title": "AI-CSD",
         "desc": "AI로 구동되는 관리형 위협 탐지 및 대응 시스템. 웹과 이메일 공격을 선제적으로 차단합니다.",
         "badge": "구독"
       },
@@ -112,7 +112,7 @@
         "desc": "VSCode용 로컬 코드 취약성 스캐너. 코드를 외부 서버로 보내지 않고 취약점을 분석합니다.",
         "badge": "확장 프로그램"
       },
-      "subtitle": "적합한 구독 제품을 선택하세요: 탐지를 위한 AI-SOC, 밀폐 개발을 위한 SLNC-env.",
+      "subtitle": "적합한 구독 제품을 선택하세요: 탐지를 위한 AI-CSD, 밀폐 개발을 위한 SLNC-env.",
       "slncEnv": {
         "title": "SLNC-env",
         "desc": "코드, 프롬프트, 빌드를 온프레미스에 유지하는 밀폐형 개발 클라우드.",
@@ -140,7 +140,7 @@
       "viewAll": "모든 글 보기"
     },
     "contact": {
-      "title": "AI-SOC과 SLNC-env를 결합할 준비가 되셨나요?",
+      "title": "AI-CSD과 SLNC-env를 결합할 준비가 되셨나요?",
       "subtitle": "보안 및 딜리버리 목표를 알려주세요 — 적합한 시스템과 서비스를 맞추겠습니다.",
       "cta": "데모 요청",
       "ctaSecondary": "서비스 팀과 상담"
@@ -153,14 +153,14 @@
       "affiliate": "제휴 프로그램",
       "systems": "시스템",
       "instructions": "가이드",
-      "systemsAiSoc": "AI-SOC",
+      "systemsAiSoc": "AI-CSD",
       "systemsSithub": "Sithub",
       "systemsSupreme": "Supreme",
-      "instructionsAiSoc": "AI-SOC",
+      "instructionsAiSoc": "AI-CSD",
       "instructionsSupreme": "Supreme",
       "main": "Main",
       "mail": "Mail",
-      "product": "AI-SOC",
+      "product": "AI-CSD",
       "secureDevelopment": "SLNC-env",
       "developerServices": "Developer Services",
       "systemsSlncEnv": "SLNC-env",
@@ -197,8 +197,8 @@
     "ok": "동의"
   },
   "hero": {
-    "headline": "AI-SOC 1: 사이버 보안은 더 이상 비싸고 복잡하지 않습니다",
-    "playgroundHeading": "AI 보안 운영 센터",
+    "headline": "AI-CSD 1: 사이버 보안은 더 이상 비싸고 복잡하지 않습니다",
+    "playgroundHeading": "AI 기반 사이버보안 부서",
     "tooltips": {
       "web": {
         "title": "웹 공격 방어",
@@ -413,7 +413,9 @@
           "ddosProtection": "실시간 DDoS 방어",
           "cmc": "글로벌 트래픽 모니터링 CMC",
           "country": "국가 차단 기능",
-          "port": "포트 차단 기능"
+          "port": "포트 차단 기능",
+          "aiManager": "AI 매니저: 보안 보고서를 표시하고 명령을 실행합니다 — 특정 IP 주소 범위를 블랙리스트에 추가하라고 하면 스스로 추가합니다",
+          "captcha": "reCAPTCHA보다 200배 더 최적화된 행동 기반 CAPTCHA — AI가 사용자 행동을 추적하고 봇이 감지될 때만 Cloudflare Turnstile 스타일의 확인을 표시합니다"
         }
       },
       "emailProtector": {
@@ -648,7 +650,7 @@
         "overview": {
           "title": "1. 프로그램 개요",
           "body1": "1.1 계약 범위: 본 제휴 서비스 약관(\"약관\")은 Silence AI LLC(\"Silence AI\", \"당사\")가 운영하는 제휴 프로그램 참여를 규율합니다. 이 약관은 제휴 파트너로 등록하는 개인 또는 단체(\"귀하\")와 귀하가 대표하는 고용주·원청·조직에 적용됩니다.",
-          "body2": "1.2 프로그램 요약: 자격을 갖춘 파트너는 추천 고객이 AI-SOC 1 상품을 구매하거나 잔액을 충전하면 커미션 기반 보상을 받습니다. 제휴 프로그램 참여 시 Silence AI 일반 서비스 약관 준수가 필요합니다."
+          "body2": "1.2 프로그램 요약: 자격을 갖춘 파트너는 추천 고객이 AI-CSD 1 상품을 구매하거나 잔액을 충전하면 커미션 기반 보상을 받습니다. 제휴 프로그램 참여 시 Silence AI 일반 서비스 약관 준수가 필요합니다."
         },
         "eligibility": {
           "title": "2. 파트너 자격",
@@ -673,7 +675,7 @@
         },
         "productScope": {
           "title": "6. 제품 범위",
-          "body1": "보상은 AI-SOC 1 제품에만 제공됩니다. 별도 서면 명시 없이는 다른 Silence AI 서비스는 제외됩니다.",
+          "body1": "보상은 AI-CSD 1 제품에만 제공됩니다. 별도 서면 명시 없이는 다른 Silence AI 서비스는 제외됩니다.",
           "body2": "추가 제품이 포함되면 Silence AI가 본 약관에 업데이트 목록을 게시합니다."
         },
         "compliance": {
@@ -805,7 +807,7 @@
         "metricLabel": "전환 상승"
       },
       "silence": {
-        "title": "Silence AI-SOC",
+        "title": "Silence AI-CSD",
         "problem": "높은 오탐율",
         "solution": "AI 탐지 및 자동 대응",
         "result": "오탐 68% 감소",
@@ -2293,7 +2295,7 @@
       },
       {
         "question": "제공하는 구체적 개발 서비스는 무엇인가요?",
-        "answer": "엔드투엔드 개발: 맞춤 애플리케이션, AI 솔루션, 사이버보안 제품(AI-SOC), 시스템 통합, 클라우드 마이그레이션, DevOps, 전담 제품 개발, 스태프 증원까지 제공합니다."
+        "answer": "엔드투엔드 개발: 맞춤 애플리케이션, AI 솔루션, 사이버보안 제품(AI-CSD), 시스템 통합, 클라우드 마이그레이션, DevOps, 전담 제품 개발, 스태프 증원까지 제공합니다."
       },
       {
         "question": "전문 산업 및 도메인은 무엇인가요?",
@@ -2301,7 +2303,7 @@
       },
       {
         "question": "전문 기술 스택과 플랫폼은 무엇인가요?",
-        "answer": "GO, Swift, Flutter, 클라우드(AWS/Azure/GCP), Docker/Kubernetes, FastAPI, JavaScript, AI/ML 프레임워크, 자체 보안 도구 Silence AI-SOC를 다룹니다."
+        "answer": "GO, Swift, Flutter, 클라우드(AWS/Azure/GCP), Docker/Kubernetes, FastAPI, JavaScript, AI/ML 프레임워크, 자체 보안 도구 Silence AI-CSD를 다룹니다."
       },
       {
         "question": "엔드투엔드 제품 개발과 개별 서비스 모두 제공하나요?",
@@ -2313,7 +2315,7 @@
       },
       {
         "question": "개발 외 컨설팅·아키텍처·자문 서비스도 제공하나요?",
-        "answer": "예. Silence AI-SOC를 활용한 사이버보안 컨설팅, 시스템 아키텍처 설계, 기술 자문, 보안 컴플라이언스 평가를 제공합니다."
+        "answer": "예. Silence AI-CSD를 활용한 사이버보안 컨설팅, 시스템 아키텍처 설계, 기술 자문, 보안 컴플라이언스 평가를 제공합니다."
       }
     ]
   },
@@ -2361,9 +2363,9 @@
       "features": "기능"
     },
     "web": {
-      "title": "AI-SOC Web vs 기존 WAF 솔루션",
+      "title": "AI-CSD Web vs 기존 WAF 솔루션",
       "columns": {
-        "aiSoc": "AI-SOC Web(종량제)",
+        "aiSoc": "AI-CSD Web(종량제)",
         "cloudflare": "Cloudflare WAF + Anti-DDoS($20/월)",
         "aws": "AWS WAF(종량제)"
       },
@@ -2390,9 +2392,9 @@
       }
     },
     "email": {
-      "title": "AI-SOC Email vs 기존 이메일 보안",
+      "title": "AI-CSD Email vs 기존 이메일 보안",
       "columns": {
-        "aiSoc": "AI-SOC Email",
+        "aiSoc": "AI-CSD Email",
         "outlook": "Outlook/Gmail",
         "kaspersky": "Kaspersky(이메일 제공업체에 연결)"
       },
@@ -2419,8 +2421,8 @@
     }
   },
   "aiSocValueSection": {
-    "title": "왜 AI-SOC인가",
-    "subtitle": "AI-SOC는 기업급 사이버보안을 모든 기업이 쉽게 도입할 수 있게 합니다. 몇 분 안에 보호를 배포하고, 웹·이메일 보안을 하나의 플랫폼에서 관리하세요.",
+    "title": "왜 AI-CSD인가",
+    "subtitle": "AI-CSD는 기업급 사이버보안을 모든 기업이 쉽게 도입할 수 있게 합니다. 몇 분 안에 보호를 배포하고, 웹·이메일 보안을 하나의 플랫폼에서 관리하세요.",
     "features": {
       "deploy": {
         "title": "몇 분 안에 배포",
@@ -2462,7 +2464,7 @@
     ]
   },
   "aiSocPricing": {
-    "intro": "AI-SOC는 독립형 사이버보안 시스템 라인업입니다",
+    "intro": "AI-CSD는 독립형 사이버보안 시스템 라인업입니다",
     "emailDescription": "Email Security는 기업 커뮤니케이션을 보호하는 방패 역할을 합니다. 수신/발신 메일을 필터링하여 피싱 시도, 스푸핑 공격, 악성 링크를 사용자에게 도달하기 전에 차단해 비즈니스 커뮤니케이션의 무결성을 지킵니다.",
     "webDescription": "Web Security는 실시간 트래픽 패턴 분석으로 디지털 인프라를 보호합니다. 일반 취약점, DDoS 공격, 무단 접근으로부터 웹사이트와 API를 방어하고 성능 저하 없이 네트워크 활동에 대한 깊은 가시성을 제공합니다."
   },
@@ -2470,15 +2472,15 @@
     "title": "자주 묻는 질문",
     "items": [
       {
-        "question": "AI-SOC는 단순 보안 엔진인가요, 아니면 완전한 이메일 플랫폼인가요?",
-        "response": "AI-SOC는 조직의 이메일 운영 방식에 따라 두 가지 방식으로 사용할 수 있습니다.\n\n1️⃣ 독립형 보안 이메일 플랫폼\n\nAI-SOC는 Gmail/Outlook처럼 조직의 기본 이메일 시스템으로 운영할 수 있으며, 자체 메일 서버 인프라, 보안 웹메일, 관리자 콘솔을 제공합니다.\n\n2️⃣ 기존 이메일 시스템용 AI 보안 계층\n\n기존 Gmail/Outlook 환경 위에 추가 보안 계층으로도 동작합니다. 현재 제공자를 유지하면서 AI-SOC가 이메일 트래픽을 분석하고 피싱/스푸핑/악성 링크 등을 방어합니다."
+        "question": "AI-CSD는 단순 보안 엔진인가요, 아니면 완전한 이메일 플랫폼인가요?",
+        "response": "AI-CSD는 조직의 이메일 운영 방식에 따라 두 가지 방식으로 사용할 수 있습니다.\n\n1️⃣ 독립형 보안 이메일 플랫폼\n\nAI-CSD는 Gmail/Outlook처럼 조직의 기본 이메일 시스템으로 운영할 수 있으며, 자체 메일 서버 인프라, 보안 웹메일, 관리자 콘솔을 제공합니다.\n\n2️⃣ 기존 이메일 시스템용 AI 보안 계층\n\n기존 Gmail/Outlook 환경 위에 추가 보안 계층으로도 동작합니다. 현재 제공자를 유지하면서 AI-CSD가 이메일 트래픽을 분석하고 피싱/스푸핑/악성 링크 등을 방어합니다."
       },
       {
         "question": "기존 Gmail 또는 Outlook 환경과 함께 사용할 수 있나요?",
-        "response": "네. Gmail 또는 Outlook을 메인으로 유지하면서 AI-SOC를 추가 보안 계층으로 도입할 수 있습니다."
+        "response": "네. Gmail 또는 Outlook을 메인으로 유지하면서 AI-CSD를 추가 보안 계층으로 도입할 수 있습니다."
       },
       {
-        "question": "AI-SOC를 기본 이메일 인프라로 운영하면 어떻게 되나요?",
+        "question": "AI-CSD를 기본 이메일 인프라로 운영하면 어떻게 되나요?",
         "response": "이 모드에서는 보안 웹메일, 도메인 단위 관리자 제어, 전체 이메일 워크플로에 내장된 위협 방어를 제공합니다."
       },
       {
@@ -2486,20 +2488,20 @@
         "response": "네. 관리자 계정 생성/관리, 도메인 전체 이메일 활동 모니터링, 필요 시 이메일 삭제가 가능합니다."
       },
       {
-        "question": "기존 기업 이메일 계정을 AI-SOC에 연결할 수 있나요?",
-        "response": "네. 기존 Gmail/Outlook 기업 계정을 AI-SOC에 연결해 제공자 변경 없이 보호를 강화할 수 있습니다."
+        "question": "기존 기업 이메일 계정을 AI-CSD에 연결할 수 있나요?",
+        "response": "네. 기존 Gmail/Outlook 기업 계정을 AI-CSD에 연결해 제공자 변경 없이 보호를 강화할 수 있습니다."
       },
       {
         "question": "보안은 사전 구성되어 있나요, 아니면 수동 설정이 필요한가요?",
-        "response": "AI-SOC는 사전 구성된 AI 기반 시스템이며, 안내 페이지 기준 최소 설정으로 내장 보호를 사용할 수 있습니다."
+        "response": "AI-CSD는 사전 구성된 AI 기반 시스템이며, 안내 페이지 기준 최소 설정으로 내장 보호를 사용할 수 있습니다."
       },
       {
         "question": "이메일·웹 필터링 외에 어떤 고급 위협을 탐지하나요?",
-        "response": "AI-SOC는 피싱 맥락, 스푸핑 패턴, 악성 링크, 악성 첨부파일, 이메일/웹 트래픽의 의심 행위를 탐지합니다."
+        "response": "AI-CSD는 피싱 맥락, 스푸핑 패턴, 악성 링크, 악성 첨부파일, 이메일/웹 트래픽의 의심 행위를 탐지합니다."
       },
       {
-        "question": "AI-SOC는 공격 사전 차단을 위해 위협 인텔리전스를 사용하나요?",
-        "response": "네. AI-SOC는 위협 인텔리전스 피드를 활용해 알려진 악성 인프라를 보호 시스템 도달 전에 차단합니다."
+        "question": "AI-CSD는 공격 사전 차단을 위해 위협 인텔리전스를 사용하나요?",
+        "response": "네. AI-CSD는 위협 인텔리전스 피드를 활용해 알려진 악성 인프라를 보호 시스템 도달 전에 차단합니다."
       }
     ]
   }

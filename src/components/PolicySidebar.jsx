@@ -107,7 +107,7 @@ const PolicySidebar = ({ sections }) => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, ease: "easeOut" }}
     >
-      <nav className="flex flex-col h-full space-y-1 p-4 bg-black border border-white/30 rounded-lg backdrop-blur-sm">
+      <nav className="flex flex-col h-full space-y-1 p-4 bg-black/60 border border-white/15 rounded-2xl backdrop-blur-xl">
         <motion.h3 
           className="text-white font-semibold text-base mb-3 border-b border-white/30 pb-2"
           initial={{ opacity: 0 }}

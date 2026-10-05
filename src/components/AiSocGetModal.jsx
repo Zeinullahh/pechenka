@@ -1,76 +1,144 @@
 "use client";
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
+import React, { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import {
+    BriefcaseBusiness,
+    Crosshair,
+    ExternalLink,
+    Globe2,
+    LayoutDashboard,
+    Mail,
+    Server,
+    X,
+} from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import RequestAccessModal from "@/components/RequestAccessModal";
+import GlassSurface from "./GlassSurface";
+
+const PRODUCT_LINKS = {
+    emailWorkspace: "https://kz.mail.silenceai.net",
+    emailAdminPanel: "https://kz.mail.csd.silenceai.net",
+    webSecurity: "https://kz.web.csd.silenceai.net",
+    pentester: "https://kz.pentester.csd.silenceai.net",
+    serverSecurity: "https://kz.server.csd.silenceai.net",
+};
+
+const ACCESS_OPTIONS = [
+    { key: "emailWorkspace", label: "Email Workspace", icon: Mail },
+    { key: "emailAdminPanel", label: "Email Admin Panel", icon: LayoutDashboard },
+    { key: "webSecurity", label: "Web Security", icon: Globe2 },
+    { key: "pentester", label: "Pentester", icon: Crosshair },
+    { key: "serverSecurity", label: "Server Security", icon: Server },
+];
 
 const AiSocGetModal = ({ isOpen, onClose }) => {
     const { t } = useLanguage();
-    const [isAccessRequestOpen, setIsAccessRequestOpen] = useState(false);
     const [selectedSecuritySystem, setSelectedSecuritySystem] = useState(null);
     const [email, setEmail] = useState("");
     const [submitted, setSubmitted] = useState(false);
 
-    const handleClose = () => {
+    useEffect(() => {
+        if (!isOpen) {
+            setSelectedSecuritySystem(null);
+            setEmail("");
+            setSubmitted(false);
+        }
+    }, [isOpen]);
+
+    if (!isOpen) return null;
+
+    const handleRedirect = (url) => {
+        if (url === "#") return;
+        window.open(url, "_blank", "noopener,noreferrer");
+    };
+
+    const handleAccessOption = (key) => {
+        if (["webSecurity", "pentester", "serverSecurity"].includes(key)) {
+            setSelectedSecuritySystem(key);
+            setEmail("");
+            setSubmitted(false);
+            return;
+        }
+
+        handleRedirect(PRODUCT_LINKS[key]);
+    };
+
+    const resetSecurityForm = () => {
         setSelectedSecuritySystem(null);
         setEmail("");
         setSubmitted(false);
-        onClose();
-    };
-
-    const handleSystemSelect = (system) => {
-        setSelectedSecuritySystem(system);
-        setEmail("");
-        setSubmitted(false);
-    };
-
-    const handleEmailAdmin = () => {
-        window.open("https://kz.mail.csd.silenceai.net", "_blank", "noopener,noreferrer");
-    };
-
-    const handleAccessRequest = () => {
-        onClose();
-        setIsAccessRequestOpen(true);
     };
 
     return (
-        <>
-            <AnimatePresence>
-                {isOpen && (
+        <AnimatePresence>
+            {isOpen && (
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.28, ease: "easeOut" }}
+                    className="fixed inset-0 z-[10000] flex items-center justify-center bg-black/65 p-4 backdrop-blur-md"
+                    onClick={onClose}
+                >
                     <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        className="fixed inset-0 z-[10000] flex items-center justify-center backdrop-blur-md bg-black/40"
-                        onClick={handleClose}
+                        initial={{ opacity: 0, y: 28, scale: 0.94, filter: "blur(8px)" }}
+                        animate={{ opacity: 1, y: 0, scale: 1, filter: "blur(0px)" }}
+                        exit={{ opacity: 0, y: 18, scale: 0.96, filter: "blur(6px)" }}
+                        transition={{ type: "spring", stiffness: 260, damping: 24, mass: 0.8 }}
+                        className="w-full max-w-lg"
+                        onClick={(event) => event.stopPropagation()}
                     >
-                        <motion.div
-                            initial={{ scale: 0.9, opacity: 0 }}
-                            animate={{ scale: 1, opacity: 1 }}
-                            exit={{ scale: 0.9, opacity: 0 }}
-                            transition={{ duration: 0.2 }}
-                            className="relative bg-[#050b1a]/90 backdrop-blur-2xl text-white rounded-2xl border border-purple-500/20 shadow-[0_0_50px_rgba(168,85,247,0.15)] p-8 w-full max-w-md mx-4"
-                            onClick={(e) => e.stopPropagation()}
+                        <GlassSurface
+                            width="100%"
+                            height="auto"
+                            borderRadius={28}
+                            backgroundOpacity={0.1}
+                            saturation={1}
+                            blur={24}
+                            displace={0.15}
+                            distortionScale={-70}
+                            brightness={38}
+                            opacity={0.9}
+                            redOffset={0}
+                            greenOffset={0}
+                            blueOffset={0}
+                            mixBlendMode="normal"
+                            className="ai-soc-modal-glass overflow-hidden border border-white/15 shadow-[0_24px_72px_rgba(0,0,0,0.52)]"
                         >
-                            <button
-                                onClick={handleClose}
-                                className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors"
-                            >
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                                </svg>
-                            </button>
+                            <div className="relative max-h-[90vh] overflow-y-auto p-6 text-white sm:p-8">
+                                <button
+                                    onClick={onClose}
+                                    aria-label={t("aiSocModal.close", "Close")}
+                                    className="absolute right-4 top-4 rounded-full p-2 text-white/55 transition-all hover:bg-white/10 hover:text-white"
+                                >
+                                    <X className="h-5 w-5" aria-hidden="true" />
+                                </button>
 
-                            <h2 className="text-2xl font-bold mb-6 text-center text-white/90">
-                                {selectedSecuritySystem
-                                    ? `${selectedSecuritySystem} Login/Register`
-                                    : t("aiSocModal.title", "Admin Console")}
-                            </h2>
+                                <div className="mb-7 pr-8 text-center">
+                                    <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-2xl border border-blue-200/25 bg-blue-400/10 text-blue-200 shadow-[0_0_24px_rgba(96,165,250,0.2)]">
+                                        <BriefcaseBusiness className="h-6 w-6" aria-hidden="true" />
+                                    </div>
+                                    <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
+                                        {selectedSecuritySystem
+                                            ? t(`aiSocModal.${selectedSecuritySystem}`, ACCESS_OPTIONS.find(({ key }) => key === selectedSecuritySystem)?.label ?? "Security")
+                                            : t("aiSocModal.title", "Choose a system to log in to")}
+                                    </h2>
+                                    <p className="mt-2 text-sm leading-relaxed text-white/60">
+                                        {selectedSecuritySystem
+                                            ? t("aiSocModal.emailPrompt", "Enter your email address to check your account.")
+                                            : t("aiSocModal.subtitle", "Select the service you want to access.")}
+                                    </p>
+                                </div>
 
-                            <div className="flex flex-col gap-6">
                                 {selectedSecuritySystem ? (
-                                    <form className="flex flex-col gap-4" onSubmit={(event) => { event.preventDefault(); setSubmitted(true); }}>
-                                        <label htmlFor="security-access-email" className="text-sm text-white/80">
+                                    <form
+                                        className="flex flex-col gap-4"
+                                        onSubmit={(event) => {
+                                            event.preventDefault();
+                                            setSubmitted(true);
+                                        }}
+                                    >
+                                        <label htmlFor="security-access-email" className="text-sm font-medium text-white/80">
                                             {t("aiSocModal.emailLabel", "Email address")}
                                         </label>
                                         <input
@@ -79,64 +147,62 @@ const AiSocGetModal = ({ isOpen, onClose }) => {
                                             required
                                             autoComplete="email"
                                             value={email}
-                                            onChange={(event) => { setEmail(event.target.value); setSubmitted(false); }}
+                                            onChange={(event) => {
+                                                setEmail(event.target.value);
+                                                setSubmitted(false);
+                                            }}
                                             placeholder="you@example.com"
-                                            className="w-full rounded-xl border border-white/20 bg-black/40 px-4 py-3 text-white placeholder:text-white/40 focus:border-purple-400 focus:outline-none"
+                                            className="w-full rounded-xl border border-blue-200/25 bg-black/35 px-4 py-3 text-white outline-none placeholder:text-white/35 focus:border-blue-200/70 focus:ring-2 focus:ring-blue-400/25"
                                         />
-                                        <button type="submit" className="w-full rounded-xl border border-purple-400/40 bg-purple-500/20 px-4 py-3 font-semibold text-white hover:bg-purple-500/30">
+                                        <button type="submit" className="w-full rounded-xl border border-blue-200/35 bg-blue-500/20 px-4 py-3 font-semibold text-white transition-colors hover:bg-blue-500/30 focus:outline-none focus:ring-2 focus:ring-blue-300/60">
                                             {t("aiSocModal.continue", "Continue")}
                                         </button>
                                         {submitted && (
                                             <p role="status" className="rounded-xl border border-amber-200/20 bg-amber-300/10 px-4 py-3 text-sm leading-relaxed text-amber-100">
                                                 {t("aiSocModal.unregistered", "Your account is not registered. Please contact")}{" "}
-                                                <a className="font-semibold underline" href="mailto:support@silenceai.net">support@silenceai.net</a>.
+                                                <a className="font-semibold underline underline-offset-2" href="mailto:support@silenceai.net">support@silenceai.net</a>.
                                             </p>
                                         )}
-                                        <button type="button" onClick={() => setSelectedSecuritySystem(null)} className="self-center px-3 py-2 text-sm text-white/70 hover:text-white">
+                                        <button type="button" onClick={resetSecurityForm} className="self-center rounded-lg px-3 py-2 text-sm text-white/65 transition-colors hover:bg-white/10 hover:text-white">
                                             {t("aiSocModal.backToSystems", "Back to systems")}
                                         </button>
                                     </form>
-                                ) : (
-                                    <div className="flex flex-col gap-3">
-                                        <button onClick={handleAccessRequest} className="w-full rounded-xl border border-purple-500/30 bg-purple-600/20 px-6 py-4 text-center font-semibold transition-all hover:bg-purple-600/30">
-                                            {t("aiSocModal.emailWorkspace", "Email Workspace")}
+                                ) : <div className="flex flex-col gap-3">
+                                    {ACCESS_OPTIONS.map(({ key, label, icon: Icon }) => (
+                                        <button
+                                            key={key}
+                                            type="button"
+                                            onClick={() => handleAccessOption(key)}
+                                            className="group flex w-full items-center gap-4 rounded-2xl border border-blue-200/25 bg-blue-500/10 px-4 py-3.5 text-left font-semibold text-blue-50 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] transition-all duration-300 hover:-translate-y-0.5 hover:border-blue-200/60 hover:bg-blue-500/20 hover:shadow-[0_12px_32px_rgba(37,99,235,0.24)]"
+                                        >
+                                            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-blue-200/25 bg-blue-400/10 text-blue-200 transition-all duration-300 group-hover:border-blue-100/60 group-hover:bg-blue-300/20 group-hover:text-white group-hover:shadow-[0_0_22px_rgba(96,165,250,0.65)]">
+                                                <Icon className="h-5 w-5 transition-transform duration-300 group-hover:scale-110 group-hover:drop-shadow-[0_0_8px_rgba(147,197,253,0.9)]" aria-hidden="true" />
+                                            </span>
+                                            <span className="text-base sm:text-lg">
+                                                {t(`aiSocModal.${key}`, label)}
+                                            </span>
                                         </button>
-                                        <button onClick={handleEmailAdmin} className="w-full rounded-xl border border-indigo-500/30 bg-indigo-600/20 px-6 py-4 text-center font-semibold transition-all hover:bg-indigo-600/30">
-                                            {t("aiSocModal.emailAdminPanel", "Email Admin Panel")}
-                                        </button>
-                                        <button onClick={() => handleSystemSelect("Web Security")} className="w-full rounded-xl border border-pink-500/30 bg-pink-600/20 px-6 py-4 text-center font-semibold transition-all hover:bg-pink-600/30">
-                                            {t("aiSocModal.webSecurity", "Web Security")}
-                                        </button>
-                                        <button onClick={() => handleSystemSelect("Pentester")} className="w-full rounded-xl border border-blue-500/30 bg-blue-600/20 px-6 py-4 text-center font-semibold transition-all hover:bg-blue-600/30">
-                                            {t("aiSocModal.pentester", "Pentester")}
-                                        </button>
-                                        <button onClick={() => handleSystemSelect("Server Security")} className="w-full rounded-xl border border-cyan-500/30 bg-cyan-600/20 px-6 py-4 text-center font-semibold transition-all hover:bg-cyan-600/30">
-                                            {t("aiSocModal.serverSecurity", "Server Security")}
-                                        </button>
-                                    </div>
-                                )}
+                                    ))}
 
-                                <div className="w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent my-2" />
+                                    <div className="my-3 h-px w-full bg-white/10" />
 
-                                <a
-                                    href="https://www.onlyoffice.com/download-desktop"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="group relative w-full py-4 px-6 bg-gradient-to-r from-slate-600/20 to-slate-500/20 hover:from-slate-600/30 hover:to-slate-500/30 border border-white/20 rounded-xl font-semibold transition-all"
-                                >
-                                    <div className="flex items-center justify-between gap-4">
-                                        <div className="flex items-center gap-4 translate-x-0 group-hover:translate-x-1 transition-transform text-left">
-                                            {/* OnlyOffice Logo */}
-                                            <svg className="w-10 h-10 shrink-0 drop-shadow-[0_2px_4px_rgba(0,0,0,0.4)]" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <a
+                                        href="https://www.onlyoffice.com/download-desktop"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="group relative flex w-full items-center justify-between gap-4 rounded-2xl border border-white/10 bg-black/35 px-4 py-3.5 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:border-white/25 hover:bg-black/55"
+                                    >
+                                        <div className="flex items-center gap-4 text-left">
+                                            <svg className="h-10 w-10 shrink-0" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                                 <path d="M16 3L29 9L16 15L3 9L16 3Z" fill="#3AA9E1" stroke="#3AA9E1" strokeWidth="2" strokeLinejoin="round" />
                                                 <path d="M16 10.5L29 16.5L16 22.5L3 16.5L16 10.5Z" fill="#8EBE3E" stroke="#8EBE3E" strokeWidth="2" strokeLinejoin="round" />
                                                 <path d="M16 18L29 24L16 30L3 24L16 18Z" fill="#F06F4D" stroke="#F06F4D" strokeWidth="2" strokeLinejoin="round" />
                                             </svg>
                                             <div className="flex flex-col items-start gap-1">
-                                                <span className="text-base text-white font-semibold">
+                                                <span className="text-base font-semibold text-white">
                                                     {t("aiSocModal.getOnlyOffice", "Download OnlyOffice")}
                                                 </span>
-                                                <span className="text-xs text-gray-300 font-normal leading-snug">
+                                                <span className="text-xs font-normal leading-snug text-gray-300">
                                                     {t(
                                                         "aiSocModal.onlyOfficeRedirectNote",
                                                         "You will be redirected to the official OnlyOffice website to download it (a strong alternative to Microsoft Excel, Word, and PowerPoint)."
@@ -144,18 +210,15 @@ const AiSocGetModal = ({ isOpen, onClose }) => {
                                                 </span>
                                             </div>
                                         </div>
-                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-300 group-hover:translate-x-1 transition-transform shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                        </svg>
-                                    </div>
-                                </a>
+                                        <ExternalLink className="h-5 w-5 shrink-0 text-white/50 transition-all duration-300 group-hover:scale-110 group-hover:text-white" aria-hidden="true" />
+                                    </a>
+                                </div>}
                             </div>
-                        </motion.div>
+                        </GlassSurface>
                     </motion.div>
-                )}
-            </AnimatePresence>
-            <RequestAccessModal isOpen={isAccessRequestOpen} onClose={() => setIsAccessRequestOpen(false)} />
-        </>
+                </motion.div>
+            )}
+        </AnimatePresence>
     );
 };
 

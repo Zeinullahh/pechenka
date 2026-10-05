@@ -56,9 +56,9 @@
     "maxPlaceholder": "Video placeholder — full tutorial will be added soon."
   },
   "aiSocModal": {
-    "title": "Admin Console",
+    "title": "Choose a system to log in to",
     "emailSecurity": "Login/Register to Email security",
-    "webSecurity": "Login/Register to Web security",
+    "webSecurity": "Web Security",
     "getOnlyOffice": "Get OnlyOffice"
   },
   "emailSecurityModal": {
@@ -83,7 +83,7 @@
       "title": "Systems",
       "cta": "View details",
       "aiSoc": {
-        "title": "AI-SOC",
+        "title": "AI-CSD",
         "desc": "Managed detection & response system powered and operated by AI. Used to prevent web and email attacks",
         "badge": "Subscription"
       },
@@ -1322,25 +1322,28 @@
     "andManyMore": "And many more...",
     "nav": {
       "main": "Main",
-      "mail": "Mail",
+      "pricing": "Pricing",
+      "compliance": "Compliance",
+      "partners": "Clients/Partners",
       "affiliate": "Affiliate program",
       "instructions": "Instructions",
-      "product": "AI-SOC",
+      "product": "AI-CSD",
       "secureDevelopment": "SLNC-env",
       "developerServices": "Developer Services",
       "home": "Home",
       "systems": "Systems",
-      "systemsAiSoc": "AI-SOC",
+      "systemsAiSoc": "AI-CSD",
       "systemsSithub": "Sithub",
       "systemsSupreme": "Supreme",
       "systemsSlncEnv": "SLNC-env",
       "services": "Services",
-      "instructionsAiSoc": "AI-SOC",
+      "instructionsAiSoc": "AI-CSD",
       "instructionsSupreme": "Supreme",
       "instructionsSithub": "Sithub"
     },
     "login": "Login",
     "cta": {
+      "loginRegister": "Login/Register",
       "contact": "Contact",
       "download": "Download",
       "requestDemo": "Request Demo",
@@ -1477,7 +1480,7 @@
         "overview": {
           "title": "1. Program Overview",
           "body1": "1.1 Agreement Scope: These Affiliate Terms of Service (\"Terms\") govern your participation in the Silence AI affiliate program operated by Silence AI LLC (\"Silence AI,\" \"we,\" \"us,\" or \"our\"). These Terms apply to you, the individual or entity enrolling as an affiliate partner (\"you\" or \"your\"), and, where applicable, your employer, principal, or organization if you act on their behalf.",
-          "body2": "1.2 Program Summary: Under this program, qualified partners earn commission-based rewards when referred customers purchase or top up the AI-SOC 1 product. Participation in the affiliate program also requires compliance with the general Silence AI Terms of Service."
+          "body2": "1.2 Program Summary: Under this program, qualified partners earn commission-based rewards when referred customers purchase or top up the AI-CSD 1 product. Participation in the affiliate program also requires compliance with the general Silence AI Terms of Service."
         },
         "eligibility": {
           "title": "2. Partner Eligibility",
@@ -1502,7 +1505,7 @@
         },
         "productScope": {
           "title": "6. Product Scope",
-          "body1": "Rewards are only provided for the AI-SOC 1 product. Other Silence AI services are excluded from the affiliate program unless explicitly stated otherwise in writing.",
+          "body1": "Rewards are only provided for the AI-CSD 1 product. Other Silence AI services are excluded from the affiliate program unless explicitly stated otherwise in writing.",
           "body2": "If additional products become eligible, Silence AI will publish an updated list inside these terms."
         },
         "compliance": {
@@ -1523,9 +1526,9 @@
     }
   },
   "hero": {
-    "headline": "AI-SOC — AI-Powered Security Operations Center",
+    "headline": "AI-CSD — AI-Powered Cybersecurity Department",
     "subheading": "A unified AI cybersecurity platform that combines Web Security and Email Security in a single control center.",
-    "playgroundHeading": "AI-powered Security Operations Center",
+    "playgroundHeading": "AI-Powered Cybersecurity Department",
     "bullets": {
       "web": "Real-time protection for web infrastructure and APIs",
       "email": "Advanced protection against phishing, spoofing, and malicious email threats",
@@ -1547,7 +1550,7 @@
       },
       "unified": {
         "title": "Unified security monitoring and threat detection",
-        "content": "AI-SOC provides centralized monitoring of web infrastructure and email communications within a single security platform."
+        "content": "AI-CSD provides centralized monitoring of web infrastructure and email communications within a single security platform."
       },
       "vulnerability": {
         "title": "Vulnerability detection",
@@ -1665,7 +1668,9 @@
           "ddosProtection": "Real-time DDoS protection",
           "cmc": "CMC with global traffic monitoring:",
           "country": "Country blocking:",
-          "port": "Port closing:"
+          "port": "Port closing:",
+          "aiManager": "AI manager: shows security reports and executes your orders — tell it to blacklist a range of IP addresses and it adds them by itself",
+          "captcha": "Behavioral CAPTCHA 200× more optimized than reCAPTCHA — AI tracks user behavior and shows a Cloudflare Turnstile-style check only when a bot is detected"
         }
       },
       "emailProtector": {
@@ -1703,8 +1708,8 @@
     }
   },
   "solution": {
-    "sectionTitle": "AI-SOC Platform Overview",
-    "sectionSubtitle": "AI-SOC provides a unified interface for monitoring and protecting web infrastructure and corporate email in real time.",
+    "sectionTitle": "AI-CSD Platform Overview",
+    "sectionSubtitle": "AI-CSD provides a unified interface for monitoring and protecting web infrastructure and corporate email in real time.",
     "cards": {
       "globalShield": {
         "title": "Global Shield - CIA-level traffic monitoring",
@@ -1740,8 +1745,8 @@
     }
   },
   "valueSection": {
-    "title": "Why AI-SOC",
-    "subtitle": "AI-SOC makes enterprise-level cybersecurity accessible to any company. Deploy protection in minutes and manage web and email security from one unified platform.",
+    "title": "Why AI-CSD",
+    "subtitle": "AI-CSD makes enterprise-level cybersecurity accessible to any company. Deploy protection in minutes and manage web and email security from one unified platform.",
     "features": {
       "deploy": {
         "title": "Deploy in minutes",
@@ -1791,7 +1796,7 @@
   "stickySolution": {
     "webSecurity": {
       "title": "Step 1 · Connect your infrastructure",
-      "description": "Add your website domain and server IP address to connect AI-SOC protection."
+      "description": "Add your website domain and server IP address to connect AI-CSD protection."
     },
     "ciaMonitoring": {
       "title": "Step 2 · Real-time traffic monitoring",
@@ -2074,7 +2079,7 @@
       },
       {
         "question": "What specific software development services do you provide?",
-        "answer": "End-to-end software development: custom applications, AI-powered solutions, cybersecurity product development (Silence AI-SOC), system integration, cloud migration, and DevOps. We also offer dedicated product development and staff augmentation."
+        "answer": "End-to-end software development: custom applications, AI-powered solutions, cybersecurity product development (Silence AI-CSD), system integration, cloud migration, and DevOps. We also offer dedicated product development and staff augmentation."
       },
       {
         "question": "Which industries and domains do you specialize in?",
@@ -2082,7 +2087,7 @@
       },
       {
         "question": "What technology stacks and platforms does your team have expertise in?",
-        "answer": "GO, Swift, Flutter, cloud platforms (AWS/Azure/GCP), Docker/Kubernetes, FastAPI, JavaScript, and AI/ML frameworks. We build proprietary security tools like Silence AI-SOC."
+        "answer": "GO, Swift, Flutter, cloud platforms (AWS/Azure/GCP), Docker/Kubernetes, FastAPI, JavaScript, and AI/ML frameworks. We build proprietary security tools like Silence AI-CSD."
       },
       {
         "question": "Do you offer end-to-end product development or specific services only?",
@@ -2094,7 +2099,7 @@
       },
       {
         "question": "Do you offer consulting, architecture, and advisory services beyond development?",
-        "answer": "Yes: cybersecurity consulting, system architecture design, technology advisory, and security compliance assessments using Silence AI-SOC."
+        "answer": "Yes: cybersecurity consulting, system architecture design, technology advisory, and security compliance assessments using Silence AI-CSD."
       }
     ]
   },
@@ -2203,7 +2208,7 @@
         "metricLabel": "Conversion growth"
       },
       "silence": {
-        "title": "Silence AI-SOC",
+        "title": "Silence AI-CSD",
         "problem": "High false alarm rate",
         "solution": "AI detection and automated response",
         "result": "-68% false positives",
@@ -2319,9 +2324,9 @@
       "features": "Features"
     },
     "web": {
-      "title": "AI-SOC Web vs Traditional WAF Solutions",
+      "title": "AI-CSD Web vs Traditional WAF Solutions",
       "columns": {
-        "aiSoc": "AI-SOC Web (pay-as-you-go)",
+        "aiSoc": "AI-CSD Web (pay-as-you-go)",
         "cloudflare": "Cloudflare WAF + Anti-DDoS ($20/mo)",
         "aws": "AWS WAF (pay-as-you-go)"
       },
@@ -2348,9 +2353,9 @@
       }
     },
     "email": {
-      "title": "AI-SOC Email vs Traditional Email Security",
+      "title": "AI-CSD Email vs Traditional Email Security",
       "columns": {
-        "aiSoc": "AI-SOC Email",
+        "aiSoc": "AI-CSD Email",
         "outlook": "Outlook/Gmail",
         "kaspersky": "Kaspersky (connected to an email provider)"
       },
@@ -2377,8 +2382,8 @@
     }
   },
   "aiSocValueSection": {
-    "title": "Why AI-SOC",
-    "subtitle": "AI-SOC makes enterprise-level cybersecurity accessible to any company. Deploy protection in minutes and manage web and email security from one unified platform.",
+    "title": "Why AI-CSD",
+    "subtitle": "AI-CSD makes enterprise-level cybersecurity accessible to any company. Deploy protection in minutes and manage web and email security from one unified platform.",
     "features": {
       "deploy": {
         "title": "Deploy in minutes",
@@ -2420,7 +2425,7 @@
     ]
   },
   "aiSocPricing": {
-    "intro": "AI-SOC is a lineup of standalone cybersecurity systems",
+    "intro": "AI-CSD is a lineup of standalone cybersecurity systems",
     "emailDescription": "Email Security acts as a protective shield for your corporate communications. It filters incoming and outgoing messages to neutralize phishing attempts, spoofing attacks, and malicious links before they reach your users, ensuring the integrity of your business correspondence.",
     "webDescription": "Web Security safeguards your digital infrastructure by analyzing traffic patterns in real-time. It defends websites and APIs against common vulnerabilities, DDoS attacks, and unauthorized access, providing deep visibility into network activity without impacting performance."
   },
@@ -2428,36 +2433,36 @@
     "title": "Frequently Asked Questions",
     "items": [
       {
-        "question": "Is AI-SOC just a security engine or a full email platform?",
-        "response": "AI-SOC can be used in two different ways, depending on how your organization manages email.\n\n1️⃣ As a standalone secure email platform\n\nAI-SOC can operate as your organization's primary email system, similar to Gmail or Outlook. It includes its own mail server infrastructure, secure webmail interface, and administrative console for managing corporate accounts. In this mode, organizations use AI-SOC as their main email platform while benefiting from built-in AI-driven security protection.\n\n2️⃣ As an AI security layer for existing email systems\n\nAI-SOC can also work alongside existing Gmail or Outlook environments as an additional security layer. In this setup, users keep their current email provider while AI-SOC analyzes email traffic and protects against phishing, spoofing, malicious links, and other threats without requiring migration."
+        "question": "Is AI-CSD just a security engine or a full email platform?",
+        "response": "AI-CSD can be used in two different ways, depending on how your organization manages email.\n\n1️⃣ As a standalone secure email platform\n\nAI-CSD can operate as your organization's primary email system, similar to Gmail or Outlook. It includes its own mail server infrastructure, secure webmail interface, and administrative console for managing corporate accounts. In this mode, organizations use AI-CSD as their main email platform while benefiting from built-in AI-driven security protection.\n\n2️⃣ As an AI security layer for existing email systems\n\nAI-CSD can also work alongside existing Gmail or Outlook environments as an additional security layer. In this setup, users keep their current email provider while AI-CSD analyzes email traffic and protects against phishing, spoofing, malicious links, and other threats without requiring migration."
       },
       {
-        "question": "Can AI-SOC be used alongside existing Gmail or Outlook environments?",
-        "response": "Yes. AI-SOC can run as an additional security layer while you keep Gmail or Outlook as your primary provider."
+        "question": "Can AI-CSD be used alongside existing Gmail or Outlook environments?",
+        "response": "Yes. AI-CSD can run as an additional security layer while you keep Gmail or Outlook as your primary provider."
       },
       {
-        "question": "What happens when AI-SOC operates as the primary email infrastructure?",
-        "response": "When AI-SOC is your main platform, it provides secure webmail, domain-level admin controls, and built-in threat protection inside the full email workflow."
+        "question": "What happens when AI-CSD operates as the primary email infrastructure?",
+        "response": "When AI-CSD is your main platform, it provides secure webmail, domain-level admin controls, and built-in threat protection inside the full email workflow."
       },
       {
         "question": "Can administrators create and control corporate email accounts?",
         "response": "Yes. Administrators can create and manage accounts, monitor domain-wide email activity, and delete messages from user accounts when necessary."
       },
       {
-        "question": "Can existing corporate email accounts be connected to AI-SOC?",
-        "response": "Yes. Existing Gmail or Outlook-based corporate accounts can be connected to AI-SOC, adding structured protection without replacing your current provider."
+        "question": "Can existing corporate email accounts be connected to AI-CSD?",
+        "response": "Yes. Existing Gmail or Outlook-based corporate accounts can be connected to AI-CSD, adding structured protection without replacing your current provider."
       },
       {
         "question": "Is security pre-configured or does it require manual setup?",
-        "response": "AI-SOC is pre-configured and AI-powered. It provides built-in protection with minimal setup based on the instructions page."
+        "response": "AI-CSD is pre-configured and AI-powered. It provides built-in protection with minimal setup based on the instructions page."
       },
       {
         "question": "Beyond email and web filtering, what advanced threats are detected?",
-        "response": "AI-SOC detects phishing context, spoofing patterns, malicious links, malware attachments, and suspicious behaviors across email and web traffic."
+        "response": "AI-CSD detects phishing context, spoofing patterns, malicious links, malware attachments, and suspicious behaviors across email and web traffic."
       },
       {
-        "question": "Does AI-SOC use threat intelligence to prevent attacks in advance?",
-        "response": "Yes. AI-SOC uses threat intelligence feeds to block known malicious infrastructure before attacks reach protected systems."
+        "question": "Does AI-CSD use threat intelligence to prevent attacks in advance?",
+        "response": "Yes. AI-CSD uses threat intelligence feeds to block known malicious infrastructure before attacks reach protected systems."
       }
     ]
   }

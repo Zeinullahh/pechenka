@@ -25,7 +25,7 @@ const FloatingDockMobile = ({ items, className }) => {
           href={item.href}
           target={item.target || "_blank"}
           rel={item.rel || "noreferrer noopener"}
-          className="flex h-20 w-20 items-center justify-center rounded-full bg-white shadow-xl border border-white/30"
+          className="flex h-20 w-20 items-center justify-center rounded-3xl bg-white/95 backdrop-blur-xl border border-white/30"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: idx * 0.05 }}
@@ -48,10 +48,9 @@ const FloatingDockDesktop = ({
       onMouseMove={(e) => mouseX.set(e.pageX)}
       onMouseLeave={() => mouseX.set(Infinity)}
       className={cn(
-        "mx-auto hidden h-16 items-end gap-4 rounded-2xl px-4 md:flex",
+        "mx-auto hidden h-16 items-end gap-4 rounded-full border border-white/20 bg-white/10 px-4 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.37)] md:flex",
         className
       )}
-      style={{ backgroundColor: "#c9c9c9ff" }} // dock background beige
     >
       {items.map((item) => (
         <IconContainer mouseX={mouseX} key={item.title} {...item} />
@@ -113,14 +112,14 @@ function IconContainer({
         style={{ width, height }}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
-        className="relative flex aspect-square items-center justify-center rounded-full bg-white dark:bg-white">
+        className="relative flex aspect-square items-center justify-center rounded-full bg-white/90 dark:bg-white/90">
         <AnimatePresence>
           {hovered && (
             <motion.div
               initial={{ opacity: 0, y: 10, x: "-50%" }}
               animate={{ opacity: 1, y: 0, x: "-50%" }}
               exit={{ opacity: 0, y: 2, x: "-50%" }}
-              className="absolute -top-8 left-1/2 w-fit rounded-md border border-gray-200 bg-gray-100 px-2 py-0.5 text-xs whitespace-pre text-neutral-700 dark:border-neutral-900 dark:bg-neutral-800 dark:text-white">
+              className="absolute -top-8 left-1/2 w-fit rounded-lg border border-white/15 bg-black/80 px-2 py-0.5 text-xs whitespace-pre text-white backdrop-blur-xl">
               {title}
             </motion.div>
           )}

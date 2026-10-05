@@ -19,7 +19,7 @@ const HowWeWork = () => {
       { key: "discovery", title: t("howWeWork.steps.discovery.title", "Discovery"), desc: t("howWeWork.steps.discovery.desc", "Requirements, stakeholders, success metrics."), accent: "#FF00B7" },
       { key: "design", title: t("howWeWork.steps.design.title", "Design"), desc: t("howWeWork.steps.design.desc", "UX, architecture, prototype."), accent: "#00BFFF" },
       { key: "poc", title: t("howWeWork.steps.poc.title", "Proof of Concept"), desc: t("howWeWork.steps.poc.desc", "Rapid validation with measurable KPIs."), accent: "#37FF8B" },
-      { key: "build", title: t("howWeWork.steps.build.title", "Build"), desc: t("howWeWork.steps.build.desc", "Iterative sprints, automated tests."), accent: "#FFB800" },
+      { key: "build", title: t("howWeWork.steps.build.title", "Build"), desc: t("howWeWork.steps.build.desc", "Iterative sprints, automated tests."), accent: "#3B82F6" },
       { key: "deploy", title: t("howWeWork.steps.deploy.title", "Deploy"), desc: t("howWeWork.steps.deploy.desc", "CI/CD, monitoring, security hardening."), accent: "#FF00B7" },
       { key: "support", title: t("howWeWork.steps.support.title", "Support & Scale"), desc: t("howWeWork.steps.support.desc", "Maintenance, roadmap, continuous improvement."), accent: "#00BFFF" },
     ],
@@ -160,7 +160,7 @@ const HowWeWork = () => {
                       className="relative h-full rounded-[22px] border border-white/12 px-4 py-6 text-center transition-all duration-300"
                       style={{
                         background:
-                          "linear-gradient(160deg, rgba(4,7,16,0.96), rgba(1,2,6,0.98))",
+                          "rgba(8, 8, 14, 0.55)",
                         boxShadow: isActive
                           ? `0 30px 80px ${step.accent}55`
                           : "0 22px 60px rgba(5,12,32,0.65)",

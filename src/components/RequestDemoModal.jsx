@@ -28,7 +28,7 @@ const RequestDemoModal = ({ isOpen, onClose }) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-[10000] flex items-center justify-center backdrop-blur-md bg-black/40"
+          className="fixed inset-0 z-[10000] flex items-center justify-center bg-black/40"
           onClick={handleClose}
         >
           <motion.div
@@ -36,7 +36,7 @@ const RequestDemoModal = ({ isOpen, onClose }) => {
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.9, opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="relative bg-black/70 backdrop-blur-xl text-white rounded-xl border border-white/10 shadow-2xl p-8 w-full max-w-md mx-4"
+            className="relative bg-black/70 backdrop-blur-2xl text-white rounded-3xl border border-white/15 p-8 w-full max-w-md mx-4 shadow-[0_8px_32px_rgba(0,0,0,0.37)]"
             onClick={(e) => e.stopPropagation()}
           >
             <button
@@ -56,7 +56,7 @@ const RequestDemoModal = ({ isOpen, onClose }) => {
                 </p>
                 <button
                   onClick={handleClose}
-                  className="px-6 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold rounded-lg transition-all"
+                  className="px-6 py-2 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-full transition-colors"
                 >
                   {t("requestDemoModal.close", "Close")}
                 </button>
@@ -67,7 +67,7 @@ const RequestDemoModal = ({ isOpen, onClose }) => {
 
                 <div className="space-y-6">
                   <div className="flex justify-center mb-4">
-                    <div className="w-16 h-16 bg-blue-500/10 rounded-full flex items-center justify-center border border-blue-500/20">
+                    <div className="w-16 h-16 bg-blue-500/10 rounded-2xl flex items-center justify-center border border-blue-500/20">
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                       </svg>
@@ -90,7 +90,7 @@ const RequestDemoModal = ({ isOpen, onClose }) => {
                   <div className="pt-6">
                     <button
                       onClick={handleClose}
-                      className="w-full py-3 px-4 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold rounded-lg transition-all transform hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-blue-500/25"
+                      className="w-full py-3 px-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-full transition-colors"
                     >
                       {t("requestDemoModal.close", "Close")}
                     </button>

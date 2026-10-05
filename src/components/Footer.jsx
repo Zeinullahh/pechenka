@@ -35,16 +35,30 @@ const Footer = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-[100px_repeat(3,auto)] gap-y-3 gap-x-2 sm:gap-x-6 items-center text-sm md:text-right">
 
-              {/* AI-SOC 1 */}
-              <div className="text-gray-500 text-xs uppercase tracking-wider font-semibold text-center sm:text-right">AI-SOC 1:</div>
+              {/* AI-CSD 1 Web */}
+              <div className="text-gray-500 text-xs uppercase tracking-wider font-semibold text-center sm:text-right">AI-CSD 1 Web:</div>
               <div className="flex flex-wrap justify-center sm:justify-end gap-3 sm:contents">
-                <LocalizedLink href="/policies/terms_of_use" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
+                <LocalizedLink href="/policies/ai-soc1/web/terms_of_use" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
                   {t("footer.links.termsUse", "Terms of Use")}
                 </LocalizedLink>
-                <LocalizedLink href="/policies/terms_of_service" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
+                <LocalizedLink href="/policies/ai-soc1/web/terms_of_service" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
                   {t("footer.links.termsService", "Terms of Service")}
                 </LocalizedLink>
-                <LocalizedLink href="/policies/privacy" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
+                <LocalizedLink href="/policies/ai-soc1/web/privacy" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
+                  {t("footer.links.privacy", "Privacy Policy")}
+                </LocalizedLink>
+              </div>
+
+              {/* AI-CSD 1 Email */}
+              <div className="text-gray-500 text-xs uppercase tracking-wider font-semibold text-center sm:text-right mt-2 sm:mt-0">AI-CSD 1 Email:</div>
+              <div className="flex flex-wrap justify-center sm:justify-end gap-3 sm:contents">
+                <LocalizedLink href="/policies/ai-soc1/email/terms_of_use" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
+                  {t("footer.links.termsUse", "Terms of Use")}
+                </LocalizedLink>
+                <LocalizedLink href="/policies/ai-soc1/email/terms_of_service" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
+                  {t("footer.links.termsService", "Terms of Service")}
+                </LocalizedLink>
+                <LocalizedLink href="/policies/ai-soc1/email/privacy" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
                   {t("footer.links.privacy", "Privacy Policy")}
                 </LocalizedLink>
               </div>
@@ -63,20 +77,6 @@ const Footer = () => {
                   {t("footer.links.privacy", "Privacy Policy")}
                 </LocalizedLink>
               </div>
-
-              {/* Affiliate */}
-              <div className="text-gray-500 text-xs uppercase tracking-wider font-semibold text-center sm:text-right mt-2 sm:mt-0">Affiliate:</div>
-              <div className="flex flex-wrap justify-center sm:justify-end gap-3 sm:contents">
-                <LocalizedLink href="/affiliate/terms-of-service-affiliate" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
-                  {t("footer.links.termsService", "Terms of Service")}
-                </LocalizedLink>
-                <LocalizedLink href="/affiliate/terms-of-use" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
-                  {t("footer.links.termsUse", "Terms of Use")}
-                </LocalizedLink>
-                <LocalizedLink href="/affiliate/privacy-policy" className="text-gray-400 hover:text-white transition-colors whitespace-nowrap">
-                  {t("footer.links.privacy", "Privacy Policy")}
-                </LocalizedLink>
-              </div>
             </div>
           </div>
         </div>
@@ -87,4 +87,3 @@ const Footer = () => {
 };
 
 export default Footer;
-

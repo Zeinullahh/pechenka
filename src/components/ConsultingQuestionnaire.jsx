@@ -17,7 +17,7 @@ const ConsultingQuestionnaire = ({ search, setSearch, openIndex, setOpenIndex })
     { color: "#FF00B7", glow: "rgba(255,0,183,0.35)" },
     { color: "#00BFFF", glow: "rgba(0,191,255,0.32)" },
     { color: "#37FF8B", glow: "rgba(55,255,139,0.28)" },
-    { color: "#FFB800", glow: "rgba(255,184,0,0.35)" },
+    { color: "#3B82F6", glow: "rgba(59,130,246,0.35)" },
   ];
 
   const consultingQuestionsData = t("consulting.questions");
@@ -39,7 +39,7 @@ const ConsultingQuestionnaire = ({ search, setSearch, openIndex, setOpenIndex })
         spotlight
         {...defaultGlowPalette}
         outerClassName="group relative z-10 rounded-[30px] p-[2px] edge-glow-card--default"
-        innerClassName="affiliate-card affiliate-card--default rounded-[26px]"
+        innerClassName="glass-card rounded-[26px]"
       >
         <div
           className="relative flex flex-col gap-6 overflow-hidden rounded-[22px] border border-white/12 p-8"
@@ -67,7 +67,7 @@ const ConsultingQuestionnaire = ({ search, setSearch, openIndex, setOpenIndex })
                   spotlight
                   {...defaultGlowPalette}
                   outerClassName="group relative z-10 rounded-[30px] p-[2px] edge-glow-card--default"
-                  innerClassName="affiliate-card affiliate-card--default rounded-[26px]"
+                  innerClassName="glass-card rounded-[26px]"
                 >
                   <div
                     className="relative overflow-hidden rounded-[22px] border border-white/12 p-6"

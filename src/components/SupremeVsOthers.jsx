@@ -13,7 +13,7 @@ export const SupremeVsOthers = () => {
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="relative overflow-hidden rounded-2xl border border-white/10 bg-black/20 p-8"
+            className="relative overflow-hidden rounded-2xl border border-white/10 bg-black/20 p-8 backdrop-blur-xl"
         >
           <div className="absolute inset-0 bg-gradient-to-br from-red-500/5 to-transparent opacity-30" />
           
@@ -63,7 +63,7 @@ export const SupremeVsOthers = () => {
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="relative overflow-hidden rounded-2xl border border-violet-500/30 bg-gradient-to-br from-violet-900/10 to-transparent p-8"
+            className="relative overflow-hidden rounded-2xl border border-violet-500/30 bg-gradient-to-br from-violet-900/10 to-transparent p-8 backdrop-blur-xl"
         >
           <div className="absolute inset-0 bg-violet-500/5 blur-3xl" />
           

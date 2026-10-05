@@ -90,10 +90,10 @@
       "mail": "メール",
       "affiliate": "アフィリエイト",
       "instructions": "手順",
-      "product": "AI-SOC",
+      "product": "AI-CSD",
       "systemsSithub": "Sithub",
       "systemsSupreme": "Supreme",
-      "instructionsAiSoc": "AI-SOC",
+      "instructionsAiSoc": "AI-CSD",
       "instructionsSupreme": "Supreme",
       "instructionsSithub": "Sithub"
     },
@@ -215,7 +215,7 @@
         "overview": {
           "title": "1. Program Overview",
           "body1": "1.1 Agreement Scope: These Affiliate Terms of Service (\"Terms\") govern your participation in the Silence AI affiliate program operated by Silence AI LLC (\"Silence AI,\" \"we,\" \"us,\" or \"our\"). These Terms apply to you, the individual or entity enrolling as an affiliate partner (\"you\" or \"your\"), and, where applicable, your employer, principal, or organization if you act on their behalf.",
-          "body2": "1.2 Program Summary: Under this program, qualified partners earn commission-based rewards when referred customers purchase or top up the AI-SOC 1 product. Participation in the affiliate program also requires compliance with the general Silence AI Terms of Service."
+          "body2": "1.2 Program Summary: Under this program, qualified partners earn commission-based rewards when referred customers purchase or top up the AI-CSD 1 product. Participation in the affiliate program also requires compliance with the general Silence AI Terms of Service."
         },
         "eligibility": {
           "title": "2. Partner Eligibility",
@@ -240,7 +240,7 @@
         },
         "productScope": {
           "title": "6. Product Scope",
-          "body1": "Rewards are only provided for the AI-SOC 1 product. Other Silence AI services are excluded from the affiliate program unless explicitly stated otherwise in writing.",
+          "body1": "Rewards are only provided for the AI-CSD 1 product. Other Silence AI services are excluded from the affiliate program unless explicitly stated otherwise in writing.",
           "body2": "If additional products become eligible, Silence AI will publish an updated list inside these terms."
         },
         "compliance": {
@@ -261,9 +261,9 @@
     }
   },
   "hero": {
-    "headline": "AI-SOC 1:サイバーセキュリティはもはや高価でも複雑でもない",
+    "headline": "AI-CSD 1:サイバーセキュリティはもはや高価でも複雑でもない",
     "subheading": "統合されたAIサイバーセキュリティプラットフォームが提供するもの:",
-    "playgroundHeading": "AI搭載セキュリティオペレーションセンター",
+    "playgroundHeading": "AI搭載サイバーセキュリティ部門",
     "bullets": {
       "web": "リアルタイムのWeb攻撃防御",
       "email": "メール攻撃防御",
@@ -398,7 +398,9 @@
           "ddosProtection": "リアルタイムDDoS防御",
           "cmc": "グローバルトラフィック監視付きCMC",
           "country": "国別ブロック機能",
-          "port": "ポート遮断機能"
+          "port": "ポート遮断機能",
+          "aiManager": "AIマネージャー:セキュリティレポートを表示し、指示を実行します — IPアドレス範囲のブラックリスト登録を指示すれば、自動で追加します",
+          "captcha": "reCAPTCHAより200倍最適化された行動CAPTCHA — AIがユーザーの行動を追跡し、ボットを検出した場合のみCloudflare Turnstile風のチェックを表示します"
         }
       },
       "emailProtector": {
@@ -833,7 +835,7 @@
       },
       {
         "question": "What specific software development services do you provide?",
-        "answer": "End-to-end software development: custom applications, AI-powered solutions, cybersecurity product development (Silence AI-SOC), system integration, cloud migration, and DevOps. We also offer dedicated product development and staff augmentation."
+        "answer": "End-to-end software development: custom applications, AI-powered solutions, cybersecurity product development (Silence AI-CSD), system integration, cloud migration, and DevOps. We also offer dedicated product development and staff augmentation."
       },
       {
         "question": "Which industries and domains do you specialize in?",
@@ -841,7 +843,7 @@
       },
       {
         "question": "What technology stacks and platforms does your team have expertise in?",
-        "answer": "GO, Swift, Flutter, cloud platforms (AWS/Azure/GCP), Docker/Kubernetes, FastAPI, JavaScript, and AI/ML frameworks. We build proprietary security tools like Silence AI-SOC."
+        "answer": "GO, Swift, Flutter, cloud platforms (AWS/Azure/GCP), Docker/Kubernetes, FastAPI, JavaScript, and AI/ML frameworks. We build proprietary security tools like Silence AI-CSD."
       },
       {
         "question": "Do you offer end-to-end product development or specific services only?",
@@ -853,7 +855,7 @@
       },
       {
         "question": "Do you offer consulting, architecture, and advisory services beyond development?",
-        "answer": "Yes: cybersecurity consulting, system architecture design, technology advisory, and security compliance assessments using Silence AI-SOC."
+        "answer": "Yes: cybersecurity consulting, system architecture design, technology advisory, and security compliance assessments using Silence AI-CSD."
       }
     ]
   },
@@ -982,7 +984,7 @@
         "metricLabel": "コンバージョン率成長"
       },
       "silence": {
-        "title": "Silence AI-SOC",
+        "title": "Silence AI-CSD",
         "problem": "多くのアラートノイズ",
         "solution": "AI検知と自動応答",
         "result": "誤検知 −68%",
@@ -1081,7 +1083,7 @@
       "title": "システム",
       "cta": "詳細を見る",
       "aiSoc": {
-        "title": "AI-SOC",
+        "title": "AI-CSD",
         "desc": "AIによって駆動・運用される管理型検出・対応システム。Webおよびメール攻撃の防止に使用されます",
         "badge": "サブスクリプション"
       },
@@ -2330,9 +2332,9 @@
       "features": "機能"
     },
     "web": {
-      "title": "AI-SOC Web と従来型WAFソリューションの比較",
+      "title": "AI-CSD Web と従来型WAFソリューションの比較",
       "columns": {
-        "aiSoc": "AI-SOC Web(従量課金)",
+        "aiSoc": "AI-CSD Web(従量課金)",
         "cloudflare": "Cloudflare WAF + Anti-DDoS($20/月)",
         "aws": "AWS WAF(従量課金)"
       },
@@ -2359,9 +2361,9 @@
       }
     },
     "email": {
-      "title": "AI-SOC Email と従来型メールセキュリティの比較",
+      "title": "AI-CSD Email と従来型メールセキュリティの比較",
       "columns": {
-        "aiSoc": "AI-SOC Email",
+        "aiSoc": "AI-CSD Email",
         "outlook": "Outlook/Gmail",
         "kaspersky": "Kaspersky(メールプロバイダー接続型)"
       },
@@ -2388,8 +2390,8 @@
     }
   },
   "aiSocValueSection": {
-    "title": "なぜAI-SOCなのか",
-    "subtitle": "AI-SOC は企業レベルのサイバーセキュリティを、あらゆる企業にとって利用しやすくします。数分で保護を導入し、Web とメールのセキュリティを単一プラットフォームで管理できます。",
+    "title": "なぜAI-CSDなのか",
+    "subtitle": "AI-CSD は企業レベルのサイバーセキュリティを、あらゆる企業にとって利用しやすくします。数分で保護を導入し、Web とメールのセキュリティを単一プラットフォームで管理できます。",
     "features": {
       "deploy": {
         "title": "数分で導入",
@@ -2431,7 +2433,7 @@
     ]
   },
   "aiSocPricing": {
-    "intro": "AI-SOC は独立型サイバーセキュリティシステムのラインナップです",
+    "intro": "AI-CSD は独立型サイバーセキュリティシステムのラインナップです",
     "emailDescription": "Email Security は企業コミュニケーションを守る防護シールドとして機能します。受信・送信メールをフィルタリングし、フィッシング、なりすまし、悪意あるリンクをユーザーに届く前に無効化し、業務連絡の信頼性を維持します。",
     "webDescription": "Web Security はリアルタイムのトラフィック分析によってデジタル基盤を保護します。一般的な脆弱性、DDoS攻撃、不正アクセスからWebサイトとAPIを守り、パフォーマンスに影響を与えずにネットワーク活動を高可視化します。"
   },
@@ -2439,35 +2441,35 @@
     "title": "よくある質問",
     "items": [
       {
-        "question": "AI-SOCは単なるセキュリティエンジンですか、それとも完全なメールプラットフォームですか?",
-        "response": "AI-SOC は、組織のメール運用に応じて2つの使い方が可能です。\n\n1️⃣ 単体のセキュアメールプラットフォームとして\n\nAI-SOC は Gmail や Outlook のように、組織の主要メール基盤として運用できます。独自のメールサーバー基盤、安全なWebメール、企業アカウント管理用の管理コンソールを備えています。\n\n2️⃣ 既存メール環境向けのAIセキュリティレイヤーとして\n\n既存の Gmail / Outlook 環境に追加のセキュリティ層として導入できます。現在のメールプロバイダーを維持したまま、AI-SOC がメールトラフィックを解析し、フィッシング・なりすまし・悪意あるリンクなどの脅威から保護します。"
+        "question": "AI-CSDは単なるセキュリティエンジンですか、それとも完全なメールプラットフォームですか?",
+        "response": "AI-CSD は、組織のメール運用に応じて2つの使い方が可能です。\n\n1️⃣ 単体のセキュアメールプラットフォームとして\n\nAI-CSD は Gmail や Outlook のように、組織の主要メール基盤として運用できます。独自のメールサーバー基盤、安全なWebメール、企業アカウント管理用の管理コンソールを備えています。\n\n2️⃣ 既存メール環境向けのAIセキュリティレイヤーとして\n\n既存の Gmail / Outlook 環境に追加のセキュリティ層として導入できます。現在のメールプロバイダーを維持したまま、AI-CSD がメールトラフィックを解析し、フィッシング・なりすまし・悪意あるリンクなどの脅威から保護します。"
       },
       {
         "question": "既存のGmailやOutlook環境と併用できますか?",
-        "response": "はい。Gmail や Outlook をメインに使いながら、追加のセキュリティレイヤーとして AI-SOC を導入できます。"
+        "response": "はい。Gmail や Outlook をメインに使いながら、追加のセキュリティレイヤーとして AI-CSD を導入できます。"
       },
       {
-        "question": "AI-SOCを主要メール基盤として使うとどうなりますか?",
-        "response": "AI-SOC を主要基盤として使う場合、安全なWebメール、ドメイン単位の管理機能、組み込み脅威防御を一体的に利用できます。"
+        "question": "AI-CSDを主要メール基盤として使うとどうなりますか?",
+        "response": "AI-CSD を主要基盤として使う場合、安全なWebメール、ドメイン単位の管理機能、組み込み脅威防御を一体的に利用できます。"
       },
       {
         "question": "管理者は企業メールアカウントを作成・管理できますか?",
         "response": "はい。管理者はアカウント作成と管理、ドメイン全体のメール監視、必要時のメール削除を行えます。"
       },
       {
-        "question": "既存の企業メールアカウントをAI-SOCに接続できますか?",
-        "response": "はい。既存の Gmail / Outlook ベースの企業アカウントを AI-SOC に接続し、現在のプロバイダーを維持したまま保護を強化できます。"
+        "question": "既存の企業メールアカウントをAI-CSDに接続できますか?",
+        "response": "はい。既存の Gmail / Outlook ベースの企業アカウントを AI-CSD に接続し、現在のプロバイダーを維持したまま保護を強化できます。"
       },
       {
         "question": "セキュリティは事前設定済みですか?手動設定が必要ですか?",
-        "response": "AI-SOC は事前設定済みの AI 駆動システムです。案内ページに沿った最小限の設定で組み込み保護を利用できます。"
+        "response": "AI-CSD は事前設定済みの AI 駆動システムです。案内ページに沿った最小限の設定で組み込み保護を利用できます。"
       },
       {
         "question": "メール/Webフィルタリング以外に、どんな高度な脅威を検知できますか?",
-        "response": "AI-SOC はフィッシング文脈、なりすましパターン、悪性リンク、マルウェア添付、メール・Webトラフィック上の不審挙動を検知します。"
+        "response": "AI-CSD はフィッシング文脈、なりすましパターン、悪性リンク、マルウェア添付、メール・Webトラフィック上の不審挙動を検知します。"
       },
       {
-        "question": "AI-SOCは攻撃を事前に防ぐために脅威インテリジェンスを使っていますか?",
+        "question": "AI-CSDは攻撃を事前に防ぐために脅威インテリジェンスを使っていますか?",
         "response": "はい。脅威インテリジェンスフィードを活用し、既知の悪性インフラを保護対象へ到達する前にブロックします。"
       }
     ]

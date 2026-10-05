@@ -31,7 +31,7 @@ const BackToTopButton = () => {
     <AnimatePresence>
       {isVisible && (
         <motion.button
-          className="fixed bottom-8 right-8 z-50 bg-white/60 hover:bg-white/80 text-black p-3 rounded-full shadow-lg transition-all duration-300"
+          className="fixed bottom-8 right-8 z-50 bg-white/10 hover:bg-white/20 text-white border border-white/20 backdrop-blur-xl p-3 rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.37)] transition-all duration-300"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.8 }}

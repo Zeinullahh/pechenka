@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import { Link, usePathname } from "@/i18n/navigation"; // Updated import
 import { motion, AnimatePresence } from "framer-motion";
@@ -8,66 +8,45 @@ import clsx from "clsx";
 import GlowButton from "./GlowButton";
 import LanguageSelector from "./LanguageSelector";
 import CountrySelectModal from "./CountrySelectModal";
-import EmailSecurityModal from "./EmailSecurityModal";
-import RequestAccessModal from "./RequestAccessModal";
+import GlassSurface from "./GlassSurface";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-const SCROLL_THRESHOLD = 10;
+const SCROLL_THRESHOLD = 4;
 const DESKTOP_WIDTH = 1130;
 
-const Header = ({ onOpenModal, hideCta = false }) => {
+const INSTRUCTION_NAV_LABELS = {
+  en: { email: "Email Security", web: "Web Security", pentester: "Pentester", server: "Server Security", instructions: "Instructions" },
+  ja: { email: "メールセキュリティ", web: "Webセキュリティ", pentester: "Pentester", server: "Server Security", instructions: "操作ガイド" },
+  zh: { email: "电子邮件安全", web: "Web 安全", pentester: "Pentester", server: "Server Security", instructions: "操作指南" },
+  ko: { email: "이메일 보안", web: "웹 보안", pentester: "Pentester", server: "Server Security", instructions: "사용 안내서" },
+  fr: { email: "Sécurité des e-mails", web: "Sécurité Web", pentester: "Pentester", server: "Server Security", instructions: "Guides" },
+  de: { email: "E-Mail-Sicherheit", web: "Web-Sicherheit", pentester: "Pentester", server: "Server Security", instructions: "Anleitungen" },
+  ru: { email: "Безопасность почты", web: "Веб-безопасность", pentester: "Pentester", server: "Server Security", instructions: "Инструкции" },
+  ar: { email: "أمان البريد الإلكتروني", web: "أمان الويب", pentester: "Pentester", server: "Server Security", instructions: "الإرشادات" },
+  tr: { email: "E-posta Güvenliği", web: "Web Güvenliği", pentester: "Pentester", server: "Server Security", instructions: "Kılavuzlar" },
+};
+
+const Header = ({ onOpenModal, hideCta = false, allowedLocales }) => {
   const pathname = usePathname();
   const isMainPage = pathname === "/";
-  const isAffiliatePage = pathname === "/affiliate" || pathname === "/affiliate/";
   const isPolicyPage = pathname?.startsWith("/policies");
   const [isCondensed, setIsCondensed] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [countrySelectOpen, setCountrySelectOpen] = useState(false);
-  const [emailSecurityOpen, setEmailSecurityOpen] = useState(false);
-  const [isAccessRequestOpen, setIsAccessRequestOpen] = useState(false);
   const [openDesktopDropdown, setOpenDesktopDropdown] = useState(null);
   const [openMobileDropdown, setOpenMobileDropdown] = useState(null);
-  const { t } = useLanguage();
+  const [activeSectionId, setActiveSectionId] = useState("pricing");
+  const { language, t } = useLanguage();
+  const instructionLabels = INSTRUCTION_NAV_LABELS[language] || INSTRUCTION_NAV_LABELS.en;
 
-  const scrollToContact = () => {
-    const contactSection = document.getElementById("contact-form");
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  const sectionItems = useMemo(() => [
+    { key: "pricing", label: t("header.nav.pricing", "Pricing") },
+    { key: "compliance", label: t("header.nav.compliance", "Compliance") },
+    { key: "resources", label: t("header.nav.partners", "Clients/Partners") },
+  ], [t]);
 
-  const handleContactClick = () => {
-    if (pathname === "/") {
-      // On home page, open the modal
-      if (onOpenModal) {
-        onOpenModal();
-      }
-    } else {
-      // On other pages, try to scroll to contact form
-      scrollToContact();
-    }
-  };
 
-  const handleAffiliateLogin = () => {
-    setIsAccessRequestOpen(true);
-  };
-
-  const handleContactLink = (e) => {
-    <Link
-      href="/#contact-form"
-      onClick={handleContactLink}
-      className="text-sm font-semibold text-white/80 transition hover:text-white"
-    >
-      {t("header.cta.contact", "Contact")}
-    </Link>
-    if (pathname === "/") {
-      e.preventDefault();
-      if (onOpenModal) {
-        onOpenModal();
-      }
-    }
-  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -89,6 +68,42 @@ const Header = ({ onOpenModal, hideCta = false }) => {
     };
   }, []);
 
+  useEffect(() => {
+    if (!isMainPage) return undefined;
+
+    let animationFrame = null;
+    const updateActiveSection = () => {
+      const activationLine = window.innerHeight * 0.35;
+      let nextSection = sectionItems[0].key;
+
+      sectionItems.forEach((item) => {
+        const target = document.getElementById(item.key);
+        if (target && target.getBoundingClientRect().top <= activationLine) {
+          nextSection = item.key;
+        }
+      });
+
+      setActiveSectionId(nextSection);
+      animationFrame = null;
+    };
+
+    const requestUpdate = () => {
+      if (animationFrame === null) {
+        animationFrame = window.requestAnimationFrame(updateActiveSection);
+      }
+    };
+
+    requestUpdate();
+    window.addEventListener("scroll", requestUpdate, { passive: true });
+    window.addEventListener("resize", requestUpdate);
+
+    return () => {
+      if (animationFrame !== null) window.cancelAnimationFrame(animationFrame);
+      window.removeEventListener("scroll", requestUpdate);
+      window.removeEventListener("resize", requestUpdate);
+    };
+  }, [isMainPage, sectionItems]);
+
   const toggleMobileMenu = () =>
     setIsMobileMenuOpen((prev) => {
       const next = !prev;
@@ -96,24 +111,59 @@ const Header = ({ onOpenModal, hideCta = false }) => {
       return next;
     });
 
+  const scrollToSection = (sectionId) => {
+    const target = document.getElementById(sectionId);
+    if (!target) return;
+
+    const headerOffset = 96;
+    const top = window.scrollY + target.getBoundingClientRect().top - headerOffset;
+    window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
+    window.history.replaceState(null, "", `#${sectionId}`);
+    setActiveSectionId(sectionId);
+    setOpenDesktopDropdown(null);
+    setOpenMobileDropdown(null);
+    setIsMobileMenuOpen(false);
+  };
+
   const widthTarget = "100%";
 
   const condensedShift = isCondensed && isDesktop ? 24 : 0;
 
-  const systemsItems = [
-    { key: "ai-soc", label: t("header.nav.systemsAiSoc", "AI-SOC"), href: "/ai-soc" },
-  ];
-
   const instructionsItems = [
-    { key: "instructions-ai-soc", label: t("header.nav.instructionsAiSoc", "AI-SOC"), href: "/instructions/ai-soc" },
-    { key: "instructions-supreme", label: t("header.nav.instructionsSupreme", "Supreme"), href: "/instructions/supreme" },
+    { key: "instructions-email-security", label: t("header.nav.instructionsEmailSecurity", instructionLabels.email), href: "/instructions/email-security", isActive: pathname === "/instructions/email-security" },
+    { key: "instructions-web-security", label: t("header.nav.instructionsWebSecurity", instructionLabels.web) },
+    { key: "instructions-pentester", label: t("header.nav.instructionsPentester", instructionLabels.pentester), href: "/instructions/pentester", isActive: pathname === "/instructions/pentester" },
+    { key: "instructions-server-security", label: t("header.nav.instructionsServerSecurity", instructionLabels.server), href: "/instructions/server", isActive: pathname === "/instructions/server" },
   ];
 
   const navItems = [
-    { key: "affiliate", label: t("header.nav.affiliate", "Affiliate Program"), href: "/affiliate" },
-    { key: "mail", label: t("header.nav.mail", "Mail"), onClick: () => setEmailSecurityOpen(true) },
-    { key: "systems", label: t("header.nav.systems", "Systems"), children: systemsItems },
-    { key: "instructions", label: t("header.nav.instructions", "Instructions"), children: instructionsItems },
+    {
+      key: "pricing",
+      label: t("header.nav.pricing", "Pricing"),
+      onClick: isMainPage ? () => scrollToSection("pricing") : undefined,
+      href: !isMainPage ? "/#pricing" : undefined,
+      isActive: isMainPage && activeSectionId === "pricing",
+    },
+    {
+      key: "compliance",
+      label: t("header.nav.compliance", "Compliance"),
+      onClick: isMainPage ? () => scrollToSection("compliance") : undefined,
+      href: !isMainPage ? "/#compliance" : undefined,
+      isActive: isMainPage && activeSectionId === "compliance",
+    },
+    {
+      key: "resources",
+      label: t("header.nav.partners", "Clients/Partners"),
+      onClick: isMainPage ? () => scrollToSection("resources") : undefined,
+      href: !isMainPage ? "/#resources" : undefined,
+      isActive: isMainPage && activeSectionId === "resources",
+    },
+    {
+      key: "instructions",
+      label: t("header.nav.instructions", instructionLabels.instructions),
+      children: instructionsItems,
+      isActive: instructionsItems.some((item) => item.isActive),
+    },
   ];
 
   return (
@@ -121,7 +171,7 @@ const Header = ({ onOpenModal, hideCta = false }) => {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            className="fixed inset-0 z-40 bg-black/70 backdrop-blur-lg"
+            className="fixed inset-0 z-40 bg-black/70"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -144,7 +194,7 @@ const Header = ({ onOpenModal, hideCta = false }) => {
                       <div key={item.key} className="border-b border-white/20 pb-2 text-white">
                         <button
                           type="button"
-                          className="flex w-full items-center justify-between py-2 text-left"
+                          className={clsx("flex w-full items-center justify-between py-2 text-start", item.isActive && "text-blue-200")}
                           onClick={() => setOpenMobileDropdown(expanded ? null : item.key)}
                           aria-expanded={expanded}
                         >
@@ -168,7 +218,7 @@ const Header = ({ onOpenModal, hideCta = false }) => {
                               initial={{ opacity: 0, y: -6 }}
                               animate={{ opacity: 1, y: 0 }}
                               exit={{ opacity: 0, y: -4 }}
-                              className="mt-2 space-y-2 pl-2"
+                              className="mt-2 space-y-2 ps-2"
                             >
                               {item.children.map((child) => {
                                 if (child.href) {
@@ -176,7 +226,8 @@ const Header = ({ onOpenModal, hideCta = false }) => {
                                     <Link
                                       key={child.key}
                                       href={child.href}
-                                      className="block rounded-lg px-3 py-2 text-white/90 hover:bg-white/10"
+                                      className={clsx("block rounded-lg px-3 py-2 text-white/90 hover:bg-white/10", child.isActive && "bg-blue-500/15 text-blue-200")}
+                                      aria-current={child.isActive ? "page" : undefined}
                                       onClick={() => {
                                         setOpenMobileDropdown(null);
                                         setIsMobileMenuOpen(false);
@@ -187,11 +238,25 @@ const Header = ({ onOpenModal, hideCta = false }) => {
                                   );
                                 }
 
+                                if (child.onClick) {
+                                  return (
+                                    <button
+                                      key={child.key}
+                                      type="button"
+                                      className="block w-full rounded-lg px-3 py-2 text-start text-white/90 hover:bg-white/10"
+                                      onClick={child.onClick}
+                                      aria-current={child.isActive ? "true" : undefined}
+                                    >
+                                      {child.label}
+                                    </button>
+                                  );
+                                }
+
                                 return (
                                   <button
                                     key={child.key}
                                     type="button"
-                                    className="block w-full rounded-lg px-3 py-2 text-left text-white/60 cursor-default"
+                                    className="block w-full rounded-lg px-3 py-2 text-start text-white/60 cursor-default"
                                     onClick={(event) => event.preventDefault()}
                                     aria-disabled
                                   >
@@ -219,7 +284,7 @@ const Header = ({ onOpenModal, hideCta = false }) => {
                     <button
                       key={item.key}
                       type="button"
-                      className="nav-link border-b border-white/20 py-2 text-white text-left bg-transparent appearance-none focus:outline-none"
+                      className="nav-link border-b border-white/20 py-2 text-white text-start bg-transparent appearance-none focus:outline-none"
                       onClick={() => {
                         if (item.onClick) item.onClick();
                         else if (item.opensModal) onOpenModal?.();
@@ -231,33 +296,15 @@ const Header = ({ onOpenModal, hideCta = false }) => {
                   );
                 })}
                 <div className="pt-4 flex flex-col gap-4 w-full items-center">
-                  <LanguageSelector align="left" allowedLocales={isPolicyPage ? ["en", "ru"] : undefined} />
-                  {!hideCta && isMainPage && (
+                  <LanguageSelector align="left" allowedLocales={allowedLocales ?? (isPolicyPage ? ["en", "ru"] : undefined)} />
+                  {!hideCta && !isPolicyPage && (
                     <GlowButton
                       onClick={() => {
                         onOpenModal?.();
                         setIsMobileMenuOpen(false);
                       }}
                     >
-                      {t("header.cta.contact", "Contact")}
-                    </GlowButton>
-                  )}
-                  {!hideCta && !isMainPage && !isPolicyPage && (
-                    <GlowButton
-                      onClick={() => {
-                        if (isAffiliatePage) {
-                          handleAffiliateLogin();
-                        } else {
-                          onOpenModal?.();
-                        }
-                        setIsMobileMenuOpen(false);
-                      }}
-                    >
-                      {isAffiliatePage
-                        ? t("header.login", "Login")
-                        : pathname === "/ai-soc" || pathname === "/ai-soc/"
-                          ? t("header.cta.get", "Get")
-                          : t("header.cta.contact", "Contact")}
+                      {t("header.cta.loginRegister", "Login/Register")}
                     </GlowButton>
                   )}
                 </div>
@@ -274,27 +321,36 @@ const Header = ({ onOpenModal, hideCta = false }) => {
         transition={{ duration: 0.35, ease: "easeOut" }}
       >
         <motion.div
-          className="mx-auto w-full max-w-7xl rounded-full border border-transparent transition-colors"
+          className="mx-auto w-full max-w-7xl"
           animate={{
             width: widthTarget,
-            borderRadius: 9999,
-            backgroundColor: isCondensed ? "rgba(0,0,0,0.55)" : "rgba(0,0,0,0)",
-            borderColor: isCondensed ? "rgba(255,255,255,0.12)" : "rgba(0,0,0,0)",
-            backdropFilter: isCondensed ? "blur(16px)" : "blur(0px)",
           }}
           transition={{
             width: { duration: 0.3, ease: "easeOut" },
-            borderRadius: { duration: 0.3, ease: "easeOut" },
-            backgroundColor: { duration: 0.3, ease: "easeOut" },
-            borderColor: { duration: 0.3, ease: "easeOut" },
-            backdropFilter: { duration: 0.3, ease: "easeOut" },
           }}
           style={{ minWidth: isDesktop || isCondensed ? undefined : "100%" }}
         >
-          <motion.div
-            className="flex items-center justify-between px-3 py-2 sm:px-7 sm:py-3 lg:px-9"
-            transition={{ duration: 0.3, ease: "easeOut" }}
+          <GlassSurface
+            width="100%"
+            height="auto"
+            borderRadius={isCondensed ? 999 : 22}
+            backgroundOpacity={isCondensed ? 0.18 : 0}
+            saturation={1.7}
+            blur={24}
+            displace={0.5}
+            distortionScale={-140}
+            redOffset={0}
+            greenOffset={8}
+            blueOffset={16}
+            brightness={56}
+            opacity={0.9}
+            mixBlendMode="screen"
+            className={clsx("header-glass-surface", isCondensed && "header-glass-surface--condensed")}
           >
+            <motion.div
+              className="flex items-center justify-between px-3 py-2 sm:px-7 sm:py-3 lg:px-9"
+              transition={{ duration: 0.3, ease: "easeOut" }}
+            >
             <motion.div
               className="flex shrink-0 items-center"
               animate={{ x: condensedShift }}
@@ -330,7 +386,7 @@ const Header = ({ onOpenModal, hideCta = false }) => {
                     >
                       <button
                         type="button"
-                        className="nav-link inline-flex items-center gap-1 text-white bg-transparent appearance-none focus:outline-none"
+                        className={clsx("nav-link inline-flex items-center gap-1 bg-transparent text-white appearance-none focus:outline-none", item.isActive && "text-blue-200")}
                         aria-haspopup="true"
                         aria-expanded={expanded}
                         onClick={() => setOpenDesktopDropdown(expanded ? null : item.key)}
@@ -356,7 +412,7 @@ const Header = ({ onOpenModal, hideCta = false }) => {
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: 6 }}
                             transition={{ duration: 0.15, ease: "easeOut" }}
-                            className="absolute left-0 mt-2 w-max min-w-[8rem] overflow-hidden rounded-xl border border-white/10 bg-black/85 p-2 shadow-2xl backdrop-blur-xl"
+                            className="absolute start-0 mt-2 w-max min-w-[11rem] overflow-hidden rounded-lg border border-white/15 bg-black/55 p-2 shadow-[0_18px_45px_rgba(0,0,0,0.45)] backdrop-blur-xl"
                           >
                             {item.children.map((child) => {
                               if (child.href) {
@@ -364,15 +420,30 @@ const Header = ({ onOpenModal, hideCta = false }) => {
                                   <Link
                                     key={child.key}
                                     href={child.href}
-                                    className="block rounded-lg px-3 py-2 text-sm text-white hover:bg-white/10 whitespace-nowrap"
+                                    className={clsx("block rounded-lg px-3 py-2 text-sm text-white hover:bg-white/10 whitespace-nowrap", child.isActive && "bg-blue-500/15 text-blue-200")}
+                                    aria-current={child.isActive ? "page" : undefined}
                                     onClick={() => setOpenDesktopDropdown(null)}
                                   >
                                     {child.label}
                                   </Link>
-                                );
-                              }
+                                  );
+                                }
 
-                              return (
+                                if (child.onClick) {
+                                  return (
+                                    <button
+                                      key={child.key}
+                                      type="button"
+                                      className="block w-full rounded-lg px-3 py-2 text-start text-sm text-white hover:bg-white/10 whitespace-nowrap"
+                                      onClick={child.onClick}
+                                      aria-current={child.isActive ? "true" : undefined}
+                                    >
+                                      {child.label}
+                                    </button>
+                                  );
+                                }
+
+                                return (
                                 <span
                                   key={child.key}
                                   className="block rounded-lg px-3 py-2 text-sm text-white/60 whitespace-nowrap"
@@ -424,20 +495,11 @@ const Header = ({ onOpenModal, hideCta = false }) => {
                       : undefined
                   }
                 >
-                  <LanguageSelector align={isDesktop ? "right" : "center"} allowedLocales={isPolicyPage ? ["en", "ru"] : undefined} />
+                  <LanguageSelector align={isDesktop ? "right" : "center"} allowedLocales={allowedLocales ?? (isPolicyPage ? ["en", "ru"] : undefined)} />
                 </div>
-                {isDesktop && isMainPage && !hideCta && (
-                  <GlowButton onClick={handleContactClick}>
-                    {t("header.cta.contact", "Contact")}
-                  </GlowButton>
-                )}
-                {isDesktop && !isMainPage && !isPolicyPage && !hideCta && (
-                  <GlowButton onClick={isAffiliatePage ? handleAffiliateLogin : onOpenModal}>
-                    {isAffiliatePage
-                      ? t("header.login", "Login")
-                      : pathname === "/ai-soc" || pathname === "/ai-soc/"
-                        ? t("header.cta.get", "Get")
-                        : t("header.cta.contact", "Contact")}
+                {isDesktop && !hideCta && !isPolicyPage && (
+                  <GlowButton onClick={onOpenModal}>
+                    {t("header.cta.loginRegister", "Login/Register")}
                   </GlowButton>
                 )}
               </motion.div>
@@ -463,12 +525,11 @@ const Header = ({ onOpenModal, hideCta = false }) => {
                 </svg>
               </motion.button>
             </div>
-          </motion.div>
+            </motion.div>
+          </GlassSurface>
         </motion.div>
       </motion.header>
       <CountrySelectModal isOpen={countrySelectOpen} onClose={() => setCountrySelectOpen(false)} />
-      <EmailSecurityModal isOpen={emailSecurityOpen} onClose={() => setEmailSecurityOpen(false)} />
-      <RequestAccessModal isOpen={isAccessRequestOpen} onClose={() => setIsAccessRequestOpen(false)} />
     </>
   );
 };

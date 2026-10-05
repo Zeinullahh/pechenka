@@ -75,7 +75,7 @@ const ContactForm = () => {
           spotlight
           {...defaultGlowPalette}
           outerClassName="group relative z-10 rounded-[30px] p-[2px] edge-glow-card--default"
-          innerClassName="affiliate-card affiliate-card--default rounded-[26px]"
+          innerClassName="glass-card rounded-[26px]"
         >
           <form
             onSubmit={handleSubmit}

@@ -14,12 +14,12 @@ export const StickyScroll = ({
   const contentRefs = useRef([]);
 
   const defaultBackgroundColors = [
-    "#01091C",
-    "linear-gradient(to bottom right, #FF00B7, #000000)",
-    "linear-gradient(to bottom right, #FB00FF, #000000)",
     "#000000",
-    "linear-gradient(to bottom right, #15FF00, #000000)",
-    "linear-gradient(to bottom, #FB00FF, #01091C)",
+    "#000000",
+    "#000000",
+    "#000000",
+    "#000000",
+    "#000000",
   ];
 
   const colors = backgroundColors || defaultBackgroundColors;
@@ -105,7 +105,7 @@ export const StickyScroll = ({
           )}
         >
           <div className={cn(
-            "w-full mx-auto overflow-hidden rounded-md",
+            "w-full mx-auto overflow-hidden rounded-[28px]",
             contentClassName
           )}>
             <AnimatePresence mode="wait">

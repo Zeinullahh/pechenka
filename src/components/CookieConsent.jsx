@@ -38,7 +38,7 @@ const CookieConsent = () => {
 
   return (
     <div className="fixed inset-x-0 bottom-0 z-[60] flex justify-center px-4 pb-6 sm:px-6 lg:px-8">
-      <div className="glass-card w-full max-w-4xl bg-[rgba(3,8,23,0.7)] backdrop-blur-2xl border border-white/15 shadow-[0_18px_48px_rgba(0,0,0,0.45)]">
+      <div className="glass-card w-full max-w-4xl rounded-[28px] border border-white/15">
         <div className="flex flex-col gap-6 p-6 sm:p-8 text-white">
           <div className="space-y-2">
             <h2 className="text-lg font-semibold sm:text-xl">

@@ -148,7 +148,7 @@ const TechnologyStack = () => {
                     style={{
                       transformStyle: "preserve-3d",
                       background:
-                        "linear-gradient(160deg, rgba(5,8,18,0.95), rgba(2,3,8,0.98))",
+                        "rgba(8, 8, 14, 0.55)",
                     }}
                   >
                     {/* Glass sweep (background plane) */}

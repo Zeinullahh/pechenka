@@ -7,7 +7,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 const Hero = ({ onOpenModal }) => {
   const [activeTooltip, setActiveTooltip] = useState(null);
   const { t } = useLanguage();
-  const fullText = t("hero.headline", "AI-SOC — AI-Powered Security Operations Center");
+  const fullText = t("hero.headline", "AI-CSD — AI-Powered Cybersecurity Department");
 
   const tooltipContent = {
     "web-attack-protection": {
@@ -28,7 +28,7 @@ const Hero = ({ onOpenModal }) => {
       title: t("hero.tooltips.unified.title", "Unified security monitoring and threat detection"),
       content: t(
         "hero.tooltips.unified.content",
-        "AI-SOC provides centralized monitoring of web infrastructure and email communications within a single security platform."
+        "AI-CSD provides centralized monitoring of web infrastructure and email communications within a single security platform."
       ),
     },
   };
@@ -73,7 +73,7 @@ const Hero = ({ onOpenModal }) => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                 </svg>
                 {activeTooltip === item.key && (
-                  <TooltipCard className="z-[9999] w-72 sm:w-80 max-w-[calc(100vw-3rem)] rounded-lg border border-white/20 bg-black p-4 text-white shadow-2xl">
+                  <TooltipCard className="z-[9999] w-72 sm:w-80 max-w-[calc(100vw-3rem)] rounded-2xl border border-white/20 bg-black/90 backdrop-blur-xl p-4 text-white shadow-2xl">
                     <h4 className="mb-2 font-bold text-white">{tooltipContent[item.key].title}</h4>
                     <p className="text-sm text-gray-200">{tooltipContent[item.key].content}</p>
                   </TooltipCard>
@@ -89,12 +89,12 @@ const Hero = ({ onOpenModal }) => {
         </div>
       </div>
       <div className="w-full lg:w-1/2 mt-8 lg:mt-0 relative flex justify-center lg:justify-end">
-        <div className="w-full max-w-2xl overflow-hidden rounded-3xl border border-white/10 bg-slate-950/70 shadow-[0_20px_60px_-20px_rgba(14,165,233,0.45)]">
+        <div className="w-full max-w-2xl overflow-hidden rounded-3xl border border-white/10 bg-slate-950/70 backdrop-blur-xl shadow-[0_20px_60px_-20px_rgba(14,165,233,0.45)]">
           <div className="aspect-video w-full">
             <iframe
               className="h-full w-full"
               src="https://www.youtube.com/embed/bkWexp4vku8"
-              title="AI-SOC Video"
+              title="AI-CSD Video"
               loading="lazy"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"

@@ -81,9 +81,9 @@ export default function SecureDevelopmentPage() {
     ];
 
     const severityStyles = {
-        Critical: { color: "#f87171", bg: "rgba(248,113,113,0.08)", ring: "0 20px 70px -25px rgba(248,113,113,0.8)" },
-        High: { color: "#fb923c", bg: "rgba(251,146,60,0.07)", ring: "0 18px 60px -28px rgba(251,146,60,0.75)" },
-        Medium: { color: "#fcd34d", bg: "rgba(252,211,77,0.06)", ring: "0 16px 50px -30px rgba(252,211,77,0.7)" },
+        Critical: { color: "#f87171", bg: "rgba(248,113,113,0.08)" },
+        High: { color: "#fb923c", bg: "rgba(251,146,60,0.07)" },
+        Medium: { color: "#fcd34d", bg: "rgba(252,211,77,0.06)" },
     };
 
     const architecture = [
@@ -118,29 +118,19 @@ export default function SecureDevelopmentPage() {
 
     const cardHover = { whileHover: { y: -4, scale: 1.01 }, transition: { duration: 0.25, ease: "easeOut" } };
 
-    const GlowOrb = ({ className = "", color = "rgba(168,85,247,0.25)", size = "28rem", blur = "80px" }) => (
-        <div
-            className={`pointer-events-none absolute rounded-full mix-blend-screen ${className}`}
-            style={{ background: color, width: size, height: size, filter: `blur(${blur})` }}
-            aria-hidden
-        />
-    );
-
     const HoverCard = ({ title, tag, accent }) => {
         const overlay = `${accent}33`;
-        const shadow = `${accent}40`;
 
         return (
             <EdgeGlowCard
                 mode="static"
                 glowColor={accent}
                 secondaryGlowColor="rgba(32,140,255,0.35)"
-                outerClassName="group relative rounded-2xl p-[1px] edge-glow-card--default"
-                innerClassName="rounded-[18px]"
+                outerClassName="group relative rounded-[26px] p-[1px] edge-glow-card--default"
+                innerClassName="rounded-[24px]"
             >
                 <div
-                    className="relative flex h-52 w-full flex-col justify-between overflow-hidden rounded-[16px] border border-white/10 bg-slate-900/60 p-6 backdrop-blur-sm transition-all duration-200 group-hover:-translate-y-0.5 group-hover:border-white/20 group-hover:bg-slate-900/80 group-hover:backdrop-blur-md"
-                    style={{ boxShadow: `0 20px 48px ${shadow}` }}
+                    className="relative flex h-52 w-full flex-col justify-between overflow-hidden rounded-[22px] border border-white/10 glass-readable p-6 transition-colors duration-200 group-hover:border-white/20"
                 >
                     <div className="relative flex flex-col justify-between h-full">
                         <div>
@@ -157,7 +147,7 @@ export default function SecureDevelopmentPage() {
     };
 
     return (
-        <div className="min-h-screen bg-[#01091C] text-slate-200 font-sans selection:bg-pink-500/30 relative overflow-x-hidden">
+        <div className="min-h-screen bg-[#01091C] text-slate-200 font-sans selection:bg-pink-500/30 relative overflow-x-clip">
             <Header />
 
             <main className="relative z-10 pt-20 pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-16">
@@ -173,7 +163,7 @@ export default function SecureDevelopmentPage() {
                         glowColor="#FF00B7"
                         secondaryGlowColor="rgba(55,255,139,0.7)"
                         outerClassName="group relative z-10 rounded-[34px] p-[2px] edge-glow-card--hero"
-                        innerClassName="affiliate-card affiliate-card--hero rounded-[30px]"
+                        innerClassName="glass-card rounded-[30px]"
                     >
                     <div className="relative overflow-hidden rounded-[28px] p-8 sm:p-10">
                         {/* Internal glow effects */}
@@ -249,12 +239,12 @@ export default function SecureDevelopmentPage() {
                         </div> */}
 
                         {/* Limited Time Offer Banner */}
-                        <div className="mb-8 rounded-xl border border-amber-500/30 bg-gradient-to-r from-amber-500/10 via-orange-500/10 to-amber-500/10 p-4 text-center">
+                        <div className="mb-8 rounded-xl border border-blue-500/30 bg-gradient-to-r from-blue-500/10 via-sky-500/10 to-blue-500/10 p-4 text-center backdrop-blur-xl">
                             <div className="flex items-center justify-center gap-2 mb-2">
-                                <svg className="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                                 </svg>
-                                <span className="text-amber-400 font-bold text-sm uppercase tracking-wide">
+                                <span className="text-blue-400 font-bold text-sm uppercase tracking-wide">
                                     {t("secureDevelopment.pricing.limitedOffer", "Limited Time Offer")}
                                 </span>
                             </div>
@@ -273,7 +263,7 @@ export default function SecureDevelopmentPage() {
                                 outerClassName="group relative rounded-2xl p-[1px] edge-glow-card--default h-full"
                                 innerClassName="rounded-[18px] h-full"
                             >
-                                <div className="relative overflow-hidden rounded-[16px] border border-white/10 bg-slate-900/60 p-6 backdrop-blur-sm h-full">
+                                <div className="relative overflow-hidden rounded-[16px] glass-readable p-6 h-full">
                                     <div className="flex flex-col h-full space-y-5">
                                         <div>
                                             <h3 className="text-xl font-bold text-white">{t("secureDevelopment.pricing.monthlyPlan", "Monthly")}</h3>
@@ -334,7 +324,7 @@ export default function SecureDevelopmentPage() {
                                 outerClassName="group relative rounded-2xl p-[1px] edge-glow-card--default h-full"
                                 innerClassName="rounded-[18px] h-full"
                             >
-                                <div className="relative overflow-hidden rounded-[16px] border border-white/10 bg-slate-900/60 p-6 backdrop-blur-sm h-full">
+                                <div className="relative overflow-hidden rounded-[16px] glass-readable p-6 h-full">
                                     {/* Double Savings Badge */}
                                     <div className="absolute -right-8 top-4 rotate-45 bg-gradient-to-r from-emerald-500 to-teal-500 px-10 py-1 text-xs font-bold text-white">
                                         {t("secureDevelopment.pricing.doubleSavings", "2x SAVINGS")}
@@ -400,7 +390,7 @@ export default function SecureDevelopmentPage() {
 
                 {/* Components section */}
                 <section className="relative space-y-6">
-                    <EdgeGlowCard className="relative overflow-hidden">
+                    <EdgeGlowCard outerClassName="relative overflow-hidden rounded-[28px]" innerClassName="rounded-[26px]">
                         <div className="p-8 md:p-10 space-y-5">
                             <div className="flex items-center gap-2 text-sm font-semibold text-blue-300">
                                 <span className="h-2 w-2 rounded-full bg-blue-400 animate-pulse" />
@@ -451,9 +441,9 @@ export default function SecureDevelopmentPage() {
                             </div>
                         </div>
 
-                    <EdgeGlowCard className="relative overflow-hidden" glowColor="#f43f5e" secondaryGlowColor="rgba(248,113,113,0.4)">
-                        <div className="absolute inset-0 bg-gradient-to-r from-rose-500/25 via-fuchsia-600/20 to-amber-500/10" />
-                        <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-rose-400 via-orange-400 to-amber-300" />
+                    <EdgeGlowCard outerClassName="relative overflow-hidden rounded-[28px]" innerClassName="rounded-[26px]" glowColor="#f43f5e" secondaryGlowColor="rgba(248,113,113,0.4)">
+                        <div className="absolute inset-0 bg-gradient-to-r from-rose-500/25 via-fuchsia-600/20 to-blue-500/10" />
+                        <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-rose-400 via-fuchsia-400 to-blue-400" />
                         <div className="relative flex flex-col gap-3 p-6 md:flex-row md:items-center md:justify-between">
                             <div className="space-y-2">
                                 <p className="text-xs uppercase tracking-[0.22em] text-rose-100">{t("secureDevelopment.timeline.incident.title", "Critical incident — leaked code")}</p>
@@ -473,7 +463,7 @@ export default function SecureDevelopmentPage() {
                                 <motion.div
                                     key={item.attack}
                                     {...cardHover}
-                                    className="relative overflow-hidden rounded-2xl border p-5"
+                                    className="relative overflow-hidden rounded-2xl border p-5 backdrop-blur-xl"
                                     style={{
                                         background: tone.bg,
                                         borderColor: `${tone.color}33`,
@@ -542,7 +532,7 @@ export default function SecureDevelopmentPage() {
                         ].map((item, idx) => (
                             <motion.div
                                 key={item.title}
-                                className="group relative overflow-hidden rounded-2xl border border-white/10 bg-slate-900/60 p-5 shadow-xl"
+                                className="group relative overflow-hidden rounded-2xl border border-white/10 bg-slate-900/60 p-5 shadow-xl backdrop-blur-xl"
                                 initial={{ opacity: 0, y: 10 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
@@ -560,7 +550,7 @@ export default function SecureDevelopmentPage() {
                         ))}
                     </div>
 
-                    <EdgeGlowCard className="relative overflow-hidden" glowColor="#38bdf8">
+                    <EdgeGlowCard outerClassName="relative overflow-hidden rounded-[28px]" innerClassName="rounded-[26px]" glowColor="#38bdf8">
                         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-emerald-500/8 to-transparent" />
                         <div className="relative grid gap-4 md:grid-cols-3 p-5">
                             <div className="md:col-span-2 space-y-2">
@@ -580,14 +570,14 @@ export default function SecureDevelopmentPage() {
                                     <p>{t("secureDevelopment.analyzer.beyondCodeQL.points.config", "Spots config drift and privilege creep—beyond static rules.")}</p>
                                 </div>
                                 <div className="flex items-start gap-2">
-                                    <span className="mt-1 h-2 w-2 rounded-full bg-amber-400" />
+                                    <span className="mt-1 h-2 w-2 rounded-full bg-blue-400" />
                                     <p>{t("secureDevelopment.analyzer.beyondCodeQL.points.patches", "Each finding comes with a suggested patch and owner.")}</p>
                                 </div>
                             </div>
                         </div>
                     </EdgeGlowCard>
 
-                    <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-slate-900/80 p-6 shadow-2xl">
+                    <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-slate-900/80 p-6 shadow-2xl backdrop-blur-xl">
                         <GlowOrb className="-left-10 -top-14" color="rgba(236,72,153,0.12)" size="18rem" blur="80px" />
                         <GlowOrb className="right-0 bottom-0" color="rgba(59,130,246,0.1)" size="14rem" blur="70px" />
 
@@ -682,7 +672,7 @@ export default function SecureDevelopmentPage() {
                             }
                         ].map((item) => (
                             <motion.div key={item.title} {...cardHover}>
-                                <EdgeGlowCard className="h-full">
+                                <EdgeGlowCard outerClassName="h-full rounded-[24px]" innerClassName="rounded-[22px] h-full">
                                     <div className="p-6 text-center space-y-2">
                                         <div className="text-3xl">{item.icon}</div>
                                         <h3 className="text-lg font-bold text-white">{item.title}</h3>

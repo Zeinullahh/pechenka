@@ -5,7 +5,12 @@ import clsx from "clsx";
 import * as Flags from "country-flag-icons/react/3x2";
 import { CURRENCIES } from "@/lib/currency";
 
-const CurrencySelector = ({ currency, onCurrencyChange, align = "right" }) => {
+const CurrencySelector = ({
+  currency,
+  onCurrencyChange,
+  align = "right",
+  pricingStyle = false,
+}) => {
   const [isOpen, setIsOpen] = useState(false);
   const containerRef = useRef(null);
 
@@ -43,7 +48,12 @@ const CurrencySelector = ({ currency, onCurrencyChange, align = "right" }) => {
       <button
         type="button"
         onClick={handleToggle}
-        className="flex items-center gap-2 rounded-full border border-white/15 bg-black/40 px-3 py-1.5 text-sm font-semibold text-white transition hover:border-white/30 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40"
+        className={clsx(
+          "flex items-center gap-2 rounded-full px-3 py-1.5 text-sm font-semibold text-white backdrop-blur-xl transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40",
+          pricingStyle
+            ? "pricing-button-invert bg-white/[0.08]"
+            : "border border-white/15 bg-black/40 hover:border-white/30 hover:bg-white/10"
+        )}
         aria-haspopup="listbox"
         aria-expanded={isOpen}
         aria-label="Select currency"
@@ -74,7 +84,8 @@ const CurrencySelector = ({ currency, onCurrencyChange, align = "right" }) => {
       {isOpen && (
         <div
           className={clsx(
-            "absolute z-30 mt-2 min-w-[10rem] rounded-xl border border-white/10 bg-black/85 p-2 shadow-[0_18px_45px_rgba(0,0,0,0.45)] backdrop-blur-xl",
+            "absolute z-30 mt-2 min-w-[10rem] rounded-xl bg-black/85 p-2 shadow-[0_18px_45px_rgba(0,0,0,0.45)] backdrop-blur-xl",
+            pricingStyle ? "pricing-glass-menu" : "border border-white/10",
             align === "left" ? "left-0" : "right-0"
           )}
           role="listbox"
@@ -93,10 +104,11 @@ const CurrencySelector = ({ currency, onCurrencyChange, align = "right" }) => {
                   onClick={() => handleSelect(curr.code)}
                   className={clsx(
                     "flex w-full items-center gap-3 rounded-lg px-3 py-2 text-sm text-white transition",
-                    isActive ? "bg-white/15 font-semibold" : "hover:bg-white/10"
+                    pricingStyle && "pricing-button-invert",
+                    isActive ? "bg-white/15 font-semibold" : !pricingStyle && "hover:bg-white/10"
                   )}
                 >
-                  <span className="h-4 w-6 overflow-hidden rounded-[4px] border border-white/20">
+        <span className="h-4 w-6 overflow-hidden rounded-[4px] border border-white/20">
                     {Flag ? (
                       <Flag className="h-full w-full" />
                     ) : (

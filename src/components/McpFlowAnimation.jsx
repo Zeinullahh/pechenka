@@ -51,9 +51,9 @@ export const McpFlowAnimation = () => {
       label: "LLM Fixes Code",
       subLabel: "Using Report",
       Icon: Wrench,
-      color: "text-amber-400",
-      bg: "bg-amber-500/10",
-      border: "border-amber-500/20",
+      color: "text-blue-400",
+      bg: "bg-blue-500/10",
+      border: "border-blue-500/20",
     },
   ];
 

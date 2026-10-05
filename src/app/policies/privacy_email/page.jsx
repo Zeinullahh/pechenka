@@ -6,7 +6,7 @@ export default function PrivacyEmailRedirect() {
   const router = useRouter();
   
   useEffect(() => {
-    router.replace('/policies/ai-soc1/privacy_email/');
+    router.replace('/policies/ai-soc1/email/privacy/');
   }, [router]);
 
   return (

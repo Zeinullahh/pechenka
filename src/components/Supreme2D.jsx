@@ -109,7 +109,7 @@ const Supreme2D = () => {
         */}
         <div className="face front">
             <div className="flex flex-col items-center justify-center transform translate-z-[1px]">
-              <span className="font-mono text-3xl font-bold text-white tracking-widest drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]">./SLNC</span>
+              <span className="font-mono text-3xl font-bold text-white tracking-widest">./SLNC</span>
               <span className="text-[10px] tracking-[0.4em] text-purple-100 mt-2 font-semibold uppercase opacity-80">Supreme</span>
            </div>
         </div>

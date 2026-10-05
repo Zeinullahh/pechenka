@@ -6,7 +6,7 @@ export const StickyScrollAnimation = () => {
   return (
     <div className="w-full h-full flex items-center justify-center p-10 bg-transparent">
       <motion.div
-        className="w-[30rem] h-[30rem] bg-gradient-to-br from-[#FF00B7]/20 to-[#00BFFF]/20 rounded-full blur-3xl"
+        className="w-[30rem] h-[30rem] bg-gradient-to-br from-[#2563eb]/20 to-[#06b6d4]/20 rounded-full blur-3xl"
         animate={{
           scale: [1, 1.2, 1],
           opacity: [0.3, 0.6, 0.3],
@@ -23,7 +23,7 @@ export const StickyScrollAnimation = () => {
           {[...Array(3)].map((_, i) => (
             <motion.div
               key={i}
-              className="absolute inset-0 border border-[#FF00B7]/30 rounded-full"
+              className="absolute inset-0 border border-[#3b82f6]/30 rounded-full"
               animate={{
                 rotate: 360,
                 scale: [1, 1.1, 1],
@@ -50,7 +50,7 @@ export const StickyScrollAnimation = () => {
             }}
           />
           <motion.div
-            className="absolute bottom-1/3 right-1/4 w-32 h-32 bg-[#FF00B7] rounded-full blur-xl opacity-40"
+            className="absolute bottom-1/3 right-1/4 w-32 h-32 bg-[#2563eb] rounded-full blur-xl opacity-40"
             animate={{
               x: [0, -40, 0],
               y: [0, 40, 0],

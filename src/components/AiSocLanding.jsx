@@ -68,10 +68,10 @@ const AiSocLanding = () => {
 
   const comparisonTables = [
     {
-      title: t('aiSocComparison.web.title', 'AI-SOC Web vs Traditional WAF Solutions'),
+      title: t('aiSocComparison.web.title', 'AI-CSD Web vs Traditional WAF Solutions'),
       columns: [
         t('aiSocComparison.common.features', 'Features'),
-        t('aiSocComparison.web.columns.aiSoc', 'AI-SOC Web (pay-as-you-go)'),
+        t('aiSocComparison.web.columns.aiSoc', 'AI-CSD Web (pay-as-you-go)'),
         t('aiSocComparison.web.columns.cloudflare', 'Cloudflare WAF + Anti-DDoS ($20/mo)'),
         t('aiSocComparison.web.columns.aws', 'AWS WAF (pay-as-you-go)'),
       ],
@@ -130,10 +130,10 @@ const AiSocLanding = () => {
       ],
     },
     {
-      title: t('aiSocComparison.email.title', 'AI-SOC Email vs Traditional Email Security'),
+      title: t('aiSocComparison.email.title', 'AI-CSD Email vs Traditional Email Security'),
       columns: [
         t('aiSocComparison.common.features', 'Features'),
-        t('aiSocComparison.email.columns.aiSoc', 'AI-SOC Email'),
+        t('aiSocComparison.email.columns.aiSoc', 'AI-CSD Email'),
         t('aiSocComparison.email.columns.outlook', 'Outlook/Gmail'),
         t('aiSocComparison.email.columns.kaspersky', 'Kaspersky (connected to an email provider)'),
       ],
@@ -224,24 +224,6 @@ const AiSocLanding = () => {
         <div className="w-full max-w-7xl mx-auto">
           <Header onOpenModal={openModal} />
           <Hero onOpenModal={openModal} />
-          <section className="mt-16 px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white text-center mb-10">
-              {t('aiSocLanding.vsCloudflareTitle', 'AI-SOC vs Cloudflare + Outlook')}
-            </h2>
-            <div className="mx-auto max-w-5xl overflow-hidden rounded-3xl border border-white/10 bg-slate-950/70 shadow-[0_20px_60px_-20px_rgba(14,165,233,0.45)]">
-              <div className="aspect-video w-full">
-                <iframe
-                  className="h-full w-full"
-                  src="https://www.youtube.com/embed/vRUnXsQ0i9I?si=qhMYst6vEXN5KaTf"
-                  title="AI-SOC vs Cloudflare + Outlook"
-                  loading="lazy"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerPolicy="strict-origin-when-cross-origin"
-                  allowFullScreen
-                />
-              </div>
-            </div>
-          </section>
           <Pricing
             currency={currency}
             onCurrencyChange={setCurrency}
@@ -254,27 +236,25 @@ const AiSocLanding = () => {
         <div className="w-full max-w-7xl mx-auto mt-20 px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white">
-              {t('aiSocValueSection.title', 'Why AI-SOC')}
+              {t('aiSocValueSection.title', 'Why AI-CSD')}
             </h2>
             <p className="text-lg sm:text-xl text-slate-200 max-w-3xl mx-auto mt-4">
               {t(
                 'aiSocValueSection.subtitle',
-                'AI-SOC makes enterprise-level cybersecurity accessible to any company. Deploy protection in minutes and manage web and email security from one unified platform.'
+                'AI-CSD makes enterprise-level cybersecurity accessible to any company. Deploy protection in minutes and manage web and email security from one unified platform.'
               )}
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
             {valueFeatures.map((feature) => (
               <div key={feature.title} className="relative group flex">
-                <div
-                  className={`absolute inset-0 rounded-3xl bg-gradient-to-br ${feature.glow} opacity-35 blur-3xl group-hover:opacity-55 transition duration-500`}
-                />
                 <EdgeGlowCard
-                  mode="static"
-                  outerClassName="rounded-3xl p-[1.5px] w-full"
-                  innerClassName="relative rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 h-full p-8 flex flex-col gap-4 shadow-[0_25px_80px_-35px_rgba(126,58,237,0.4)]"
+                  mode="follow"
+                  outerClassName="w-full rounded-[26px] p-[1.5px]"
+                  innerClassName="relative flex h-full flex-col gap-4 overflow-hidden rounded-[24px] border border-white/10 bg-black p-8 shadow-none"
                   glowColor={feature.glowColor}
                   secondaryGlowColor={feature.glowColor}
+                  glass={false}
                 >
                   <div className="flex flex-col gap-4 h-full">
                     <div className="w-14 h-14 rounded-full bg-white/10 border border-white/10 flex items-center justify-center mx-auto shadow-[0_0_35px_-12px_rgba(255,255,255,0.3)] shrink-0">
@@ -297,7 +277,7 @@ const AiSocLanding = () => {
         <section className="w-full max-w-7xl mx-auto mt-20 px-4 sm:px-6 lg:px-8">
           <div
             ref={comparisonRef}
-            className={`relative overflow-hidden rounded-[32px] border border-emerald-400/15 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 px-5 py-10 sm:px-10 shadow-[0_0_40px_rgba(16,185,129,0.12)] transition-[opacity,transform] duration-700 ease-out motion-reduce:transition-none ${isComparisonVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+            className={`relative overflow-hidden rounded-[32px] border border-emerald-400/15 glass-readable px-5 py-10 sm:px-10 shadow-[0_0_40px_rgba(16,185,129,0.12)] transition-[opacity,transform] duration-700 ease-out motion-reduce:transition-none ${isComparisonVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
               }`}
           >
             <div className="absolute -top-24 left-1/2 h-52 w-52 -translate-x-1/2 rounded-full bg-emerald-400/10 blur-[120px]" />
@@ -314,9 +294,9 @@ const AiSocLanding = () => {
                     <h3 className="text-xl sm:text-2xl font-semibold text-white text-center">
                       {table.title}
                     </h3>
-                    <div className="mx-auto w-full max-w-5xl rounded-3xl bg-slate-950/70 shadow-[0_0_25px_rgba(80,150,255,0.2)] overflow-hidden">
-                      <div className="overflow-x-auto">
-                        <div className="min-w-[680px]">
+                    <div className="mx-auto w-[90vw] max-w-none rounded-3xl bg-slate-950/70 backdrop-blur-xl shadow-[0_0_25px_rgba(80,150,255,0.2)] overflow-hidden">
+                      <div className="overflow-hidden">
+                        <div>
                           <div className="grid grid-cols-4 text-[11px] sm:text-sm md:text-[15px] font-semibold text-slate-200">
                             {table.columns.map((column, columnIndex) => (
                               <div
@@ -407,10 +387,10 @@ const AiSocLanding = () => {
         <div className="w-full mt-24 px-4 sm:px-0">
           <div className="text-center">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-white">
-              {t('solution.sectionTitle', 'AI-SOC Platform Overview')}
+              {t('solution.sectionTitle', 'AI-CSD Platform Overview')}
             </h2>
             <p className="mt-4 text-lg text-slate-300">
-              {t('solution.sectionSubtitle', 'AI-SOC provides a unified interface for monitoring and protecting web infrastructure and corporate email in real time.')}
+              {t('solution.sectionSubtitle', 'AI-CSD provides a unified interface for monitoring and protecting web infrastructure and corporate email in real time.')}
             </p>
           </div>
           <StickyScrollSolution />

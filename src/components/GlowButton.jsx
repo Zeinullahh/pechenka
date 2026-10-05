@@ -2,42 +2,46 @@
 
 import React from "react";
 import clsx from "clsx";
+import BorderGlow from "./BorderGlow";
 
 const GlowButton = ({
   children,
   glowColor = "#FF00B7",
   className = "",
   innerClassName = "",
+  type = "button",
+  disabled = false,
+  variant,
   ...props
 }) => {
-  const handleGlowMouseMove = (e) => {
-    const card = e.currentTarget;
-    const rect = card.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    card.style.setProperty("--x", `${x}px`);
-    card.style.setProperty("--y", `${y}px`);
-  };
-
   return (
-    <div
-      onMouseMove={handleGlowMouseMove}
+    <BorderGlow
+      borderRadius={999}
+      backgroundColor="transparent"
+      glowColor="275 85 72"
+      glowRadius={24}
+      glowIntensity={0.9}
+      fillOpacity={0.3}
+      colors={["#c084fc", "#f472b6", "#38bdf8"]}
       className={clsx(
-        "group relative inline-flex rounded-full p-[1.5px] overflow-hidden card-glow cursor-pointer",
+        "group inline-flex cursor-pointer rounded-full",
         className
       )}
-      style={{ "--glow-color": glowColor }}
-      {...props}
     >
-      <div
+      {/* A real <button> is required: BorderGlow renders a div, so props like
+          onClick/type/disabled only work when attached to an interactive element. */}
+      <button
+        type={type}
+        disabled={disabled}
         className={clsx(
-          "relative z-10 flex items-center justify-center whitespace-nowrap rounded-full bg-white px-7 py-3 text-base font-semibold text-black transition-colors hover:bg-gray-100",
+          "relative z-10 flex items-center justify-center whitespace-nowrap rounded-full bg-[#3B82F6] px-6 py-3 text-base font-normal text-white transition-colors hover:bg-[#1D4ED8] disabled:cursor-not-allowed disabled:opacity-60",
           innerClassName
         )}
+        {...props}
       >
         {children}
-      </div>
-    </div>
+      </button>
+    </BorderGlow>
   );
 };
 

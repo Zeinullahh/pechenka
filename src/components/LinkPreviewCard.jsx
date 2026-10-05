@@ -54,7 +54,7 @@ export default function LinkPreviewCard({ url, index = 0 }) {
   // Loading skeleton
   if (loading) {
     return (
-      <div className="group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm h-full">
+      <div className="group relative flex flex-col overflow-hidden rounded-[26px] border border-white/10 bg-white/5 backdrop-blur-xl h-full">
         <div className="relative aspect-[16/9] w-full bg-white/5 animate-pulse" />
         <div className="flex flex-1 flex-col p-5 space-y-3">
           <div className="h-4 bg-white/10 rounded animate-pulse w-3/4" />
@@ -73,9 +73,9 @@ export default function LinkPreviewCard({ url, index = 0 }) {
         href={url}
         target="_blank"
         rel="noopener noreferrer"
-        className="group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm transition-all duration-300 hover:border-white/20 hover:bg-white/10 h-full"
+        className="group relative flex flex-col overflow-hidden rounded-[26px] border border-white/10 bg-white/5 backdrop-blur-xl transition-colors duration-300 hover:border-white/20 hover:bg-white/10 h-full"
       >
-        <div className="relative aspect-[16/9] w-full bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center">
+        <div className="relative aspect-[16/9] w-full bg-[#202020] flex items-center justify-center">
           <svg className="w-12 h-12 text-white/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
           </svg>
@@ -99,20 +99,20 @@ export default function LinkPreviewCard({ url, index = 0 }) {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="group relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm transition-all duration-300 hover:border-white/20 hover:bg-white/10 hover:-translate-y-1 h-full"
+      className="group relative flex flex-col overflow-hidden rounded-[26px] border border-white/10 bg-white/5 backdrop-blur-xl transition-colors duration-300 hover:border-white/20 hover:bg-white/10 h-full"
     >
       {/* Image */}
-      <div className="relative aspect-[16/9] w-full overflow-hidden bg-gradient-to-br from-blue-500/20 to-purple-500/20">
+      <div className="relative aspect-[16/9] w-full overflow-hidden bg-[#202020]">
         {displayImage && !imageError ? (
           <img
             src={displayImage}
             alt={title || 'Article preview'}
-            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            className="h-full w-full object-cover"
             onError={() => setImageError(true)}
             referrerPolicy="no-referrer"
           />
         ) : (
-          <div className="h-full w-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900">
+          <div className="h-full w-full flex items-center justify-center bg-[#202020]">
             {/* Decorative pattern for missing image */}
             <div className="absolute inset-0 opacity-20">
               <div className="absolute top-4 left-4 w-20 h-20 border border-white/20 rounded-lg rotate-12" />
@@ -130,12 +130,9 @@ export default function LinkPreviewCard({ url, index = 0 }) {
           </div>
         )}
         
-        {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-        
         {/* Source badge */}
         {siteName && displayImage && !imageError && (
-          <div className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-black/50 backdrop-blur-sm border border-white/10">
+          <div className="absolute top-3 left-3 px-2.5 py-1 rounded-lg bg-black/70 border border-white/10">
             <span className="text-xs font-medium text-white/90">{siteName}</span>
           </div>
         )}
@@ -168,7 +165,7 @@ export default function LinkPreviewCard({ url, index = 0 }) {
         <div className="mt-4 flex items-center gap-2 text-sm font-medium text-blue-400 group-hover:text-blue-300 transition-colors">
           <span>Read article</span>
           <svg 
-            className="w-4 h-4 transition-transform group-hover:translate-x-1" 
+            className="w-4 h-4" 
             fill="none" 
             stroke="currentColor" 
             viewBox="0 0 24 24"

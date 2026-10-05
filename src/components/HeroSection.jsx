@@ -168,7 +168,7 @@ const HeroSection = ({ onOpenModal }) => {
                 className="relative h-full min-h-[420px] rounded-[26px] border border-white/12 overflow-hidden transition-transform duration-200"
                 style={{
                   background:
-                    "linear-gradient(160deg, rgba(4,7,16,0.96), rgba(1,2,6,0.98))",
+                    "rgba(8, 8, 14, 0.55)",
                   boxShadow: "0 30px 80px rgba(5,12,32,0.65)",
                 }}
               >

@@ -219,11 +219,11 @@ function FeatureCard({ feature, defaultGlowPalette, itemVariant, t }) {
           className="relative flex h-full flex-col overflow-hidden rounded-[26px] border border-white/12 p-8"
           style={{
             boxShadow: "0 26px 70px rgba(0,0,0,0.48)",
-            background:
-              "linear-gradient(155deg, rgba(14,18,38,0.92), rgba(2,3,10,0.92))",
-          }}
-        >
-          {/* Cursor spotlight */}
+              background:
+                "rgba(8, 8, 14, 0.55)",
+            }}
+          >
+            {/* Cursor spotlight */}
           <div
             className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
             style={{

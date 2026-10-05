@@ -1,0 +1,97 @@
+export const competitiveComparisons = {
+  web: {
+    title: "AI-CSD Web vs. traditional alternatives",
+    columns: [
+      { label: "Feature" },
+      { label: "AI-CSD Web", sublabel: "$350/mo annually" },
+      { label: "Cloudflare Business", sublabel: "$200/mo annually" },
+      { label: "AWS WAF", sublabel: "Usage based" },
+      { label: "Check Point WAFaaS", sublabel: "Advanced / PAYG" },
+    ],
+    rows: [
+      ["Full WAF protection", [true, true, true, true]],
+      ["Dedicated Web IPS layer", [true, "Not a separate IPS", "Not a separate IPS", true]],
+      ["Behavioral / AI-based web attack analysis", [true, "Managed / ML protections", "Managed rules & controls", true]],
+      ["Behavioral CAPTCHA / bot challenge", [{ type: "check", comment: "Triggered when bot behavior is detected" }, { type: "check", comment: "Turnstile / Super Bot Fight Mode" }, { type: "check", comment: "CAPTCHA / Challenge" }, { type: "check", comment: "Bot protection" }]],
+      ["Integrated Web Threat SIEM", [true, "Security analytics / logs", "CloudWatch / external tooling", "Security logs"]],
+      ["AI security manager that can execute security actions", [{ type: "check", comment: "Can act on detected threats" }, false, false, "Automated protection"]],
+      ["Automatic IP / subnet blocking", [true, "Via security rules", "Via WAF rules", true]],
+      ["Country blocking", [{ type: "check", comment: "Built in" }, { type: "check", comment: "Via WAF rules" }, { type: "check", comment: "Geo match rules" }, true]],
+      ["DDoS protection", [true, { type: "check", comment: "Unmetered DDoS protection" }, "Available via AWS WAF / Shield", true]],
+      ["Blocked malicious requests billed as traffic", [{ type: "check", comment: "$0 — never billed" }, "Not request-metered like PAYG WAF", "Request-based billing", "All processed requests metered"]],
+      ["Predictable integrated pricing", [{ type: "check", comment: "Platform + simple usage" }, "Plan + optional products", "ACL + rules + requests + add-ons", "Request based"]],
+      ["Entry pricing / commercial model", [{ value: "$350/mo", comment: "billed annually" }, { value: "$200/mo", comment: "billed annually" }, "Usage based", { value: "$1,500", comment: "first 10M requests / PAYG" }]],
+      ["Web security stack in one dashboard", [{ type: "check", comment: "WAF + IPS + CAPTCHA + SIEM + AI" }, "Multiple security capabilities", "Requires AWS services / integrations", "Integrated app security"]],
+      ["Setup / management approach", [{ value: "≈ 5 min", comment: "Designed for no security expertise" }, "DNS + dashboard configuration", "AWS configuration", { value: "< 15 min", comment: "DNS-based deployment" }]],
+    ],
+  },
+  email: {
+    title: "AI-CSD Email vs. alternatives",
+    columns: ["Feature", "AI-CSD Email", "Microsoft 365 / Outlook", "Gmail", "FortiMail"],
+    rows: [
+      [
+        "View all emails across the domain from an Admin Console",
+        [true, "Additional paid system required", "Additional paid system required", true],
+      ],
+      ["Admin can delete employees' emails", [true, false, false, false]],
+      ["Active protection against all types of email attacks", [true, false, false, true]],
+      ["AI-powered zero day phishing email detection", [true, "Weak", "Weak", true]],
+      ["Guided anti-impersonation setup", [true, false, false, false]],
+      ["AI forwards emails, sends them to specific folder, replies/makes response-draft to emails", [true, false, false, false]],
+      [
+        "Ability to run local mail server",
+        [
+          true,
+          { type: "check", comment: "Available, but in much higher pricing option" },
+          false,
+          true,
+        ],
+      ],
+      ["Secure setup completion time", ["5 min", "5 min", "5 min", "1–3 days"]],
+    ],
+  },
+  pentester: {
+    eyebrow: "COMPARE THE MODEL",
+    title: "A different approach to penetration testing.",
+    description:
+      "Compare how Silence AI combines source-code analysis, live application testing and business-logic pentesting in one autonomous workflow.",
+    columns: [
+      { label: "Feature" },
+      { label: "Silence AI", sublabel: "Autonomous Pentester" },
+      { label: "Snyk" },
+      { label: "NodeZero" },
+      { label: "Detectify" },
+      { label: "Intruder AI Pentest" },
+    ],
+    rows: [
+      ["Source-code security testing (SAST)", [true, true, false, false, true]],
+      ["Live website testing (DAST)", [true, true, true, true, true]],
+      ["API security testing", [true, true, true, true, true]],
+      ["Business-logic testing", [true, true, true, false, true]],
+      ["Persistent source-code security graph", [true, false, false, false, false]],
+      ["Authenticated testing", [true, true, true, true, true]],
+      ["Multi-step attack paths", [true, true, true, false, true]],
+      ["Source code + live app in one assessment", [true, "Separate modules", false, false, true]],
+      ["Automatic PR with fixed code", [true, true, false, false, false]],
+      ["Setup by general IT specialist", ["~5 min", "~30 min", "~15 min", "~10 min", "~10 min"]],
+      [
+        {
+          label: "Full security assessment",
+          sublabel: "Notion-class app · ~2M LOC",
+          icon: "/notion-logo.png",
+          isPricingRow: true,
+        },
+        [
+          { value: "≈ $2.7K–$3.2K", highlight: true, note: "Full assessment" },
+          { value: "≈ $22K–$41K / yr", comment: "EST." },
+          { value: "From ≈ $15K/yr", comment: "EST." },
+          { value: "≈ $20K–$35K", comment: "Native ≈ $5.35K/yr · EST." },
+          { value: "≈ $3.5K/test", comment: "EST." },
+        ],
+      ],
+    ],
+    footnote:
+      "*Example pricing uses a hypothetical Notion-class SaaS application with approximately 2M lines of first-party code. It does not represent Notion's actual private codebase. Competitor pricing may vary by contract, scope, targets and product configuration. Estimated figures are based on publicly available pricing and researched market assumptions.*",
+  },
+};
+

@@ -90,17 +90,17 @@
       "mail": "E-posta",
       "affiliate": "Ortaklık programı",
       "instructions": "Talimatlar",
-      "product": "AI-SOC",
+      "product": "AI-CSD",
       "secureDevelopment": "SLNC-env",
       "developerServices": "GeliÅŸtirici Hizmetleri",
       "home": "Ana sayfa",
       "systems": "Sistemler",
-      "systemsAiSoc": "AI-SOC",
+      "systemsAiSoc": "AI-CSD",
       "systemsSlncEnv": "SLNC-env",
       "services": "Hizmetler",
       "systemsSithub": "Sithub",
       "systemsSupreme": "Supreme",
-      "instructionsAiSoc": "AI-SOC",
+      "instructionsAiSoc": "AI-CSD",
       "instructionsSupreme": "Supreme",
       "instructionsSithub": "Sithub"
     },
@@ -222,7 +222,7 @@
         "overview": {
           "title": "1. Program Özeti",
           "body1": "1.1 Sözleşmenin Kapsamı: Bu Ortaklık Hizmet Şartları (\"Şartlar\"), Silence AI LLC tarafından yürütülen Silence AI ortaklık programına katılımınızı düzenler. Bu Şartlar, ortak olarak kaydolan gerçek veya tüzel kişiyi ve gerekiyorsa onun adına hareket ediyorsanız işvereninizi/organizasyonunuzu kapsar.",
-          "body2": "1.2 Program Özeti: Bu programda, yönlendirdiğiniz müşteriler AI-SOC 1 ürününü satın aldığında veya bakiyelerini doldurduğunda komisyon bazlı ödül kazanırsınız. Ortaklık programı katılımı, genel Silence AI Hizmet Şartlarına uyumu da gerektirir."
+          "body2": "1.2 Program Özeti: Bu programda, yönlendirdiğiniz müşteriler AI-CSD 1 ürününü satın aldığında veya bakiyelerini doldurduğunda komisyon bazlı ödül kazanırsınız. Ortaklık programı katılımı, genel Silence AI Hizmet Şartlarına uyumu da gerektirir."
         },
         "eligibility": {
           "title": "2. İş Ortağı Uygunluğu",
@@ -247,7 +247,7 @@
         },
         "productScope": {
           "title": "6. Ürün Kapsamı",
-          "body1": "Ödüller yalnızca AI-SOC 1 ürünü için verilir. Yazılı olarak belirtilmedikçe diğer Silence AI hizmetleri hariçtir.",
+          "body1": "Ödüller yalnızca AI-CSD 1 ürünü için verilir. Yazılı olarak belirtilmedikçe diğer Silence AI hizmetleri hariçtir.",
           "body2": "Yeni ürünler eklendiğinde Silence AI bu Şartlarda güncel listeyi yayımlar."
         },
         "compliance": {
@@ -268,9 +268,9 @@
     }
   },
   "hero": {
-    "headline": "AI-SOC 1: siber güvenlik artık pahalı ve karmaşık değil",
+    "headline": "AI-CSD 1: siber güvenlik artık pahalı ve karmaşık değil",
     "subheading": "Birleşik bir yapay zekâ siber güvenlik platformu şunları bir araya getirir:",
-    "playgroundHeading": "Yapay zekâ destekli Güvenlik Operasyon Merkezi",
+    "playgroundHeading": "Yapay zekâ destekli Siber Güvenlik Departmanı",
     "bullets": {
       "web": "Gerçek zamanlı web saldırı koruması",
       "email": "E-posta saldırı koruması",
@@ -403,7 +403,9 @@
           "ddosProtection": "Gerçek zamanlı DDoS koruması",
           "cmc": "Küresel trafik izleme sistemli CMC",
           "country": "Ülke kara listeye alma özelliği",
-          "port": "Port kapatma özelliği"
+          "port": "Port kapatma özelliği",
+          "aiManager": "AI yöneticisi: güvenlik raporlarını gösterir ve talimatlarınızı yerine getirir — bir IP adresi aralığını kara listeye almasını söyleyin, kendisi ekler",
+          "captcha": "reCAPTCHA'dan 200 kat daha optimize davranışsal CAPTCHA — AI kullanıcı davranışını izler ve yalnızca bot algılandığında Cloudflare Turnstile benzeri bir doğrulama gösterir"
         }
       },
       "emailProtector": {
@@ -775,7 +777,7 @@
       },
       {
         "question": "Hangi yazılım geliştirme hizmetlerini sağlıyorsunuz?",
-        "answer": "Uçtan uca geliştirme: özel uygulamalar, yapay zeka çözümleri, siber güvenlik ürün geliştirme (Silence AI-SOC), sistem entegrasyonu, buluta geçiş ve DevOps. Ayrıca özel ürün geliştirme ve ekip genişletme sunuyoruz."
+        "answer": "Uçtan uca geliştirme: özel uygulamalar, yapay zeka çözümleri, siber güvenlik ürün geliştirme (Silence AI-CSD), sistem entegrasyonu, buluta geçiş ve DevOps. Ayrıca özel ürün geliştirme ve ekip genişletme sunuyoruz."
       },
       {
         "question": "Hangi sektör ve alanlarda uzmanlaştınız?",
@@ -783,7 +785,7 @@
       },
       {
         "question": "Hangi teknoloji yığınları ve platformlarda uzmansınız?",
-        "answer": "GO, Swift, Flutter, bulut (AWS/Azure/GCP), Docker/Kubernetes, FastAPI, JavaScript ve AI/ML çerçeveleri. Silence AI-SOC gibi kendi güvenlik araçlarımızı geliştiriyoruz."
+        "answer": "GO, Swift, Flutter, bulut (AWS/Azure/GCP), Docker/Kubernetes, FastAPI, JavaScript ve AI/ML çerçeveleri. Silence AI-CSD gibi kendi güvenlik araçlarımızı geliştiriyoruz."
       },
       {
         "question": "Uçtan uca ürün geliştirme mi yoksa belirli hizmetler mi sunuyorsunuz?",
@@ -795,7 +797,7 @@
       },
       {
         "question": "Geliştirme dışında danışmanlık, mimari ve tavsiye hizmetleri sağlıyor musunuz?",
-        "answer": "Evet: siber güvenlik danışmanlığı, sistem mimarisi tasarımı, teknoloji danışmanlığı ve Silence AI-SOC ile güvenlik uyumluluk değerlendirmeleri."
+        "answer": "Evet: siber güvenlik danışmanlığı, sistem mimarisi tasarımı, teknoloji danışmanlığı ve Silence AI-CSD ile güvenlik uyumluluk değerlendirmeleri."
       }
     ]
   },
@@ -954,7 +956,7 @@
         "metricLabel": "Dönüşüm Oranı Artışı"
       },
       "silence": {
-        "title": "Silence AI-SOC",
+        "title": "Silence AI-CSD",
         "problem": "Yüksek alarm gürültüsü",
         "solution": "YZ tespiti ve otomatik yanıt",
         "result": "−%68 yanlış pozitif",
@@ -1051,13 +1053,13 @@
       "ctaPrimary": "Demo iste",
       "ctaSecondary": "Sistemlere göz at",
       "highlights": {
-        "coverage": "7/24 YZ destekli SOC",
+        "coverage": "7/24 YZ destekli AI-CSD",
         "onPrem": "On-prem, sıfır veri çıkışı",
         "deploy": "4 dakikada güvenli dağıtım"
       },
       "metrics": {
         "title": "Uyumlu ekipler için üretildi",
-        "soc": "YZ destekli SOC kapsamı",
+        "soc": "YZ destekli AI-CSD kapsamı",
         "egress": "Tamamı on-prem — kod, prompt, build",
         "deployment": "ilk güvenli dağıtıma kadar",
         "locales": "hazır dil desteği"
@@ -1066,10 +1068,10 @@
     },
     "systems": {
       "title": "Sistemler",
-      "subtitle": "Uygun aboneliği seçin: tespit için AI-SOC, kapalı geliştirme için SLNC-env.",
+      "subtitle": "Uygun aboneliği seçin: tespit için AI-CSD, kapalı geliştirme için SLNC-env.",
       "cta": "Detayları gör",
       "aiSoc": {
-        "title": "AI-SOC",
+        "title": "AI-CSD",
         "desc": "YZ tarafından güçlendirilen ve işletilen yönetilen tespit ve müdahale sistemi. Web ve e-posta saldırılarını önlemek için kullanılır.",
         "badge": "Abonelik"
       },
@@ -1105,7 +1107,7 @@
       }
     },
     "contact": {
-      "title": "AI-SOC ve SLNC-env'i birleştirmeye hazır mısınız?",
+      "title": "AI-CSD ve SLNC-env'i birleştirmeye hazır mısınız?",
       "subtitle": "Bize güvenlik ve teslimat hedeflerinizi söyleyin — doğru sistem ve hizmetleri hizalayalım.",
       "cta": "Demo iste",
       "ctaSecondary": "Hizmet ekibiyle konuÅŸ"
@@ -2329,9 +2331,9 @@
       "features": "Özellikler"
     },
     "web": {
-      "title": "AI-SOC Web vs Geleneksel WAF Çözümleri",
+      "title": "AI-CSD Web vs Geleneksel WAF Çözümleri",
       "columns": {
-        "aiSoc": "AI-SOC Web (kullandıkça öde)",
+        "aiSoc": "AI-CSD Web (kullandıkça öde)",
         "cloudflare": "Cloudflare WAF + Anti-DDoS ($20/ay)",
         "aws": "AWS WAF (kullandıkça öde)"
       },
@@ -2358,9 +2360,9 @@
       }
     },
     "email": {
-      "title": "AI-SOC Email vs Geleneksel E-posta Güvenliği",
+      "title": "AI-CSD Email vs Geleneksel E-posta Güvenliği",
       "columns": {
-        "aiSoc": "AI-SOC Email",
+        "aiSoc": "AI-CSD Email",
         "outlook": "Outlook/Gmail",
         "kaspersky": "Kaspersky (bir e-posta sağlayıcısına bağlı)"
       },
@@ -2387,8 +2389,8 @@
     }
   },
   "aiSocValueSection": {
-    "title": "Neden AI-SOC",
-    "subtitle": "AI-SOC, kurumsal düzey siber güvenliği her şirket için erişilebilir hale getirir. Korumanızı dakikalar içinde devreye alın ve web ile e-posta güvenliğini tek bir platformdan yönetin.",
+    "title": "Neden AI-CSD",
+    "subtitle": "AI-CSD, kurumsal düzey siber güvenliği her şirket için erişilebilir hale getirir. Korumanızı dakikalar içinde devreye alın ve web ile e-posta güvenliğini tek bir platformdan yönetin.",
     "features": {
       "deploy": {
         "title": "Dakikalar içinde kurulum",
@@ -2430,7 +2432,7 @@
     ]
   },
   "aiSocPricing": {
-    "intro": "AI-SOC, bağımsız siber güvenlik sistemlerinden oluşan bir seridir",
+    "intro": "AI-CSD, bağımsız siber güvenlik sistemlerinden oluşan bir seridir",
     "emailDescription": "Email Security, kurumsal iletişiminiz için koruyucu bir kalkan görevi görür. Gelen ve giden mesajları filtreleyerek phishing girişimlerini, spoofing saldırılarını ve kötü amaçlı bağlantıları kullanıcılarınıza ulaşmadan etkisiz hale getirir; böylece iş yazışmalarınızın bütünlüğünü korur.",
     "webDescription": "Web Security, trafik desenlerini gerçek zamanlı analiz ederek dijital altyapınızı korur. Web sitelerini ve API'leri yaygın güvenlik açıklarına, DDoS saldırılarına ve yetkisiz erişime karşı savunur; performansı etkilemeden ağ etkinliğine derin görünürlük sağlar."
   },
@@ -2438,36 +2440,36 @@
     "title": "Sık Sorulan Sorular",
     "items": [
       {
-        "question": "AI-SOC yalnızca bir güvenlik motoru mu, yoksa tam bir e-posta platformu mu?",
-        "response": "AI-SOC, kuruluşunuzun e-posta yönetimine bağlı olarak iki şekilde kullanılabilir.\n\n1️⃣ Bağımsız güvenli e-posta platformu olarak\n\nAI-SOC, Gmail veya Outlook benzeri birincil e-posta sistemi olarak çalışabilir; kendi posta sunucusu altyapısı, güvenli webmail arayüzü ve yönetim konsolunu içerir.\n\n2️⃣ Mevcut e-posta sistemleri için AI güvenlik katmanı olarak\n\nAI-SOC, mevcut Gmail/Outlook ortamlarının yanında ek güvenlik katmanı olarak da çalışır. Mevcut sağlayıcı korunurken AI-SOC trafik analiz ederek phishing, spoofing, kötü amaçlı bağlantılar ve diğer tehditlere karşı korur."
+        "question": "AI-CSD yalnızca bir güvenlik motoru mu, yoksa tam bir e-posta platformu mu?",
+        "response": "AI-CSD, kuruluşunuzun e-posta yönetimine bağlı olarak iki şekilde kullanılabilir.\n\n1️⃣ Bağımsız güvenli e-posta platformu olarak\n\nAI-CSD, Gmail veya Outlook benzeri birincil e-posta sistemi olarak çalışabilir; kendi posta sunucusu altyapısı, güvenli webmail arayüzü ve yönetim konsolunu içerir.\n\n2️⃣ Mevcut e-posta sistemleri için AI güvenlik katmanı olarak\n\nAI-CSD, mevcut Gmail/Outlook ortamlarının yanında ek güvenlik katmanı olarak da çalışır. Mevcut sağlayıcı korunurken AI-CSD trafik analiz ederek phishing, spoofing, kötü amaçlı bağlantılar ve diğer tehditlere karşı korur."
       },
       {
         "question": "Mevcut Gmail veya Outlook ortamlarıyla birlikte kullanılabilir mi?",
-        "response": "Evet. Gmail veya Outlook'u ana sağlayıcı olarak kullanmaya devam ederken AI-SOC'u ek güvenlik katmanı olarak çalıştırabilirsiniz."
+        "response": "Evet. Gmail veya Outlook'u ana sağlayıcı olarak kullanmaya devam ederken AI-CSD'u ek güvenlik katmanı olarak çalıştırabilirsiniz."
       },
       {
-        "question": "AI-SOC birincil e-posta altyapısı olarak çalıştığında ne olur?",
-        "response": "Bu modda AI-SOC, güvenli webmail, alan adı düzeyinde yönetim kontrolleri ve tam e-posta akışına gömülü tehdit koruması sunar."
+        "question": "AI-CSD birincil e-posta altyapısı olarak çalıştığında ne olur?",
+        "response": "Bu modda AI-CSD, güvenli webmail, alan adı düzeyinde yönetim kontrolleri ve tam e-posta akışına gömülü tehdit koruması sunar."
       },
       {
         "question": "Yöneticiler kurumsal e-posta hesaplarını oluşturup yönetebilir mi?",
         "response": "Evet. Yöneticiler hesap oluşturup yönetebilir, alan adı genelinde e-posta etkinliğini izleyebilir ve gerektiğinde e-postaları silebilir."
       },
       {
-        "question": "Mevcut kurumsal e-posta hesapları AI-SOC'a bağlanabilir mi?",
-        "response": "Evet. Mevcut Gmail/Outlook kurumsal hesapları AI-SOC'a bağlanabilir; böylece sağlayıcıyı değiştirmeden koruma katmanı eklenir."
+        "question": "Mevcut kurumsal e-posta hesapları AI-CSD'a bağlanabilir mi?",
+        "response": "Evet. Mevcut Gmail/Outlook kurumsal hesapları AI-CSD'a bağlanabilir; böylece sağlayıcıyı değiştirmeden koruma katmanı eklenir."
       },
       {
         "question": "Güvenlik önceden yapılandırılmış mı, yoksa manuel kurulum gerekir mi?",
-        "response": "AI-SOC önceden yapılandırılmış, AI destekli bir sistemdir. Talimatlar sayfasına göre minimum kurulumla yerleşik koruma sağlar."
+        "response": "AI-CSD önceden yapılandırılmış, AI destekli bir sistemdir. Talimatlar sayfasına göre minimum kurulumla yerleşik koruma sağlar."
       },
       {
         "question": "E-posta ve web filtrelemenin ötesinde hangi gelişmiş tehditler tespit edilir?",
-        "response": "AI-SOC, phishing bağlamı, spoofing desenleri, kötü amaçlı bağlantılar, zararlı ekler ve e-posta/web trafiğindeki şüpheli davranışları tespit eder."
+        "response": "AI-CSD, phishing bağlamı, spoofing desenleri, kötü amaçlı bağlantılar, zararlı ekler ve e-posta/web trafiğindeki şüpheli davranışları tespit eder."
       },
       {
-        "question": "AI-SOC saldırıları önceden engellemek için tehdit istihbaratı kullanıyor mu?",
-        "response": "Evet. AI-SOC, bilinen kötü amaçlı altyapıyı korunan sistemlere ulaşmadan engellemek için tehdit istihbaratı akışlarını kullanır."
+        "question": "AI-CSD saldırıları önceden engellemek için tehdit istihbaratı kullanıyor mu?",
+        "response": "Evet. AI-CSD, bilinen kötü amaçlı altyapıyı korunan sistemlere ulaşmadan engellemek için tehdit istihbaratı akışlarını kullanır."
       }
     ]
   }

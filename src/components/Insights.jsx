@@ -41,26 +41,18 @@ const Insights = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {items.map((insight, index) => (
             <div key={index} className="relative group">
-              <div
-                className={`absolute -inset-1 bg-gradient-to-r rounded-2xl blur-xl opacity-20 group-hover:opacity-40 transition duration-500 ${index === 0 ? "from-pink-500 to-purple-600" :
-                  index === 1 ? "from-cyan-500 to-blue-500" :
-                    "from-purple-600 to-pink-500"
-                  }`}
-              />
               <EdgeGlowCard
-                outerClassName={`relative z-10 rounded-2xl p-[1px] bg-gradient-to-b from-white/10 to-transparent transition-all duration-500 hover:shadow-[0_0_30px_-10px_${index === 0 ? "rgba(236,72,153,0.3)" :
-                  index === 1 ? "rgba(34,211,238,0.3)" :
-                    "rgba(168,85,247,0.3)"
-                  }]`}
-                innerClassName="bg-black/20 backdrop-blur-md p-6 text-center rounded-2xl h-full flex flex-col justify-start border border-white/10 hover:bg-white/5 transition-colors duration-300"
-                spotlight
+                mode="follow"
+                outerClassName="relative z-10 h-full rounded-[26px] p-[1px]"
+                innerClassName="flex h-full flex-col justify-start overflow-hidden rounded-[24px] border border-white/10 bg-black p-6 text-center"
                 glowColor={index === 0 ? "#ec4899" : index === 1 ? "#22d3ee" : "#a855f7"}
+                glass={false}
               >
-                <div className="mb-4 opacity-90 drop-shadow-[0_0_15px_rgba(255,255,255,0.3)] transform transition-transform duration-500 group-hover:scale-110">
+                <div className="mb-4 opacity-90">
                   {insight.icon}
                 </div>
                 <h3 className="text-white mb-2 leading-tight">
-                  <span className="block text-2xl sm:text-3xl font-bold bg-gradient-to-r from-white to-white/70 bg-clip-text text-transparent mb-1">
+                  <span className="block text-2xl sm:text-3xl font-bold text-white mb-1">
                     {insight.stat}
                   </span>
                   <span className="block text-sm font-medium text-slate-300">

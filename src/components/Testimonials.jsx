@@ -191,14 +191,14 @@ function FeaturedCard({ item, palette }) {
       spotlight
       {...palette}
       outerClassName="group relative z-10 rounded-[34px] p-[2px] edge-glow-card--default"
-      innerClassName="affiliate-card affiliate-card--default rounded-[30px]"
+      innerClassName="glass-card rounded-[30px]"
     >
       <div
         className="relative rounded-[28px] border border-white/12 p-7 sm:p-8 t-feature"
         style={{
           boxShadow: "0 18px 45px rgba(5,12,32,0.55)",
           background:
-            "linear-gradient(150deg, rgba(2,5,12,0.97), rgba(0,1,4,0.98))",
+            "rgba(8, 8, 14, 0.55)",
         }}
       >
         {/* cinematic shine */}
@@ -282,7 +282,7 @@ function FeaturedImageContent({ i }) {
       </div>
 
       <div className="mt-5 flex items-center justify-center">
-        <span className="text-yellow-400 text-lg leading-none">★★★★★</span>
+        <span className="text-blue-400 text-lg leading-none">★★★★★</span>
         <span className="ml-2 text-white/80 text-sm">4.{8 + (i % 2)}</span>
       </div>
 
@@ -330,7 +330,7 @@ function FeaturedVideoContent() {
         </div>
 
         <div className="mt-5 flex items-center justify-center">
-          <span className="text-yellow-400 text-lg leading-none">★★★★★</span>
+          <span className="text-blue-400 text-lg leading-none">★★★★★</span>
           <span className="ml-2 text-white/80 text-sm">4.9</span>
         </div>
 
@@ -389,8 +389,8 @@ function MarqueeRow({ items, palette, reverse = false }) {
         ))}
       </div>
 
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#01091C] to-transparent" />
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[#01091C] to-transparent" />
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#000000] to-transparent" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[#000000] to-transparent" />
 
       <style jsx>{`
         .t-marquee {
@@ -434,14 +434,14 @@ function CompactCard({ item, palette }) {
       spotlight
       {...palette}
       outerClassName="group relative z-10 rounded-[30px] p-[2px] edge-glow-card--default flex-shrink-0"
-      innerClassName="affiliate-card affiliate-card--default rounded-[26px]"
+      innerClassName="glass-card rounded-[26px]"
     >
       <div
         className="relative w-80 rounded-[22px] border border-white/12 p-6"
         style={{
           boxShadow: "0 18px 45px rgba(5,12,32,0.55)",
           background:
-            "linear-gradient(150deg, rgba(2,5,12,0.97), rgba(0,1,4,0.98))",
+            "rgba(8, 8, 14, 0.55)",
         }}
       >
         <div className="pointer-events-none absolute inset-0 overflow-hidden rounded-[22px]">
@@ -469,7 +469,7 @@ function CompactCard({ item, palette }) {
             </div>
 
             <div className="mt-4 flex items-center justify-center relative z-10">
-              <span className="text-yellow-400">★★★★★</span>
+              <span className="text-blue-400">★★★★★</span>
               <span className="ml-2 text-white/80">4.{8 + (i % 2)}</span>
             </div>
 
@@ -506,7 +506,7 @@ function CompactCard({ item, palette }) {
             </div>
 
             <div className="mt-4 flex items-center justify-center relative z-10">
-              <span className="text-yellow-400">★★★★★</span>
+              <span className="text-blue-400">★★★★★</span>
               <span className="ml-2 text-white/80">4.9</span>
             </div>
 

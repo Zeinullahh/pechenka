@@ -51,12 +51,11 @@ const SlncEnvHeader = ({ onOpenAdminModal }) => {
 
 
   const systemsItems = [
-    { key: "ai-soc", label: t("header.nav.systemsAiSoc", "AI-SOC"), href: "/ai-soc" },
+    { key: "ai-soc", label: t("header.nav.systemsAiSoc", "AI-CSD"), href: "/ai-soc" },
   ];
 
   const navItems = [
     { key: "home", label: t("header.nav.home", "Home"), href: "/" },
-    { key: "affiliate", label: t("header.nav.affiliate", "Affiliate Program"), href: "/affiliate" },
     { key: "systems", label: t("header.nav.systems", "Systems"), children: systemsItems },
   ];
 
