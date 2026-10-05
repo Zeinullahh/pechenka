@@ -1,6 +1,18 @@
 import { NextIntlClientProvider } from "next-intl";
-import Preloader from "@/components/Preloader";
+import { Geist, Geist_Mono } from "next/font/google";
+import { supportedLocales } from "@/i18n/locales.mjs";
 import "./globals.css";
+import { setRequestLocale } from 'next-intl/server';
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
 
 const BRAND_REPLACEMENTS = [
   [/\bSilence AI LLC\b/g, "Silence"],
@@ -45,10 +57,10 @@ function transformBranding(value, pathSegments = []) {
 export const metadata = {
   metadataBase: new URL('https://silenceai.net'),
   title: {
-    default: "Silence AI - Secure Development & AI-CSD",
+    default: "Silence AI - Secure Development & AI-SOC",
     template: "%s | Silence AI"
   },
-  description: "Silence AI provides cutting-edge AI cybersecurity, sealed development cloud solutions, and AI-CSD. Keep code, prompts, and builds entirely within your secure network.",
+  description: "Silence AI provides cutting-edge AI cybersecurity, sealed development cloud solutions, and AI-SOC. Keep code, prompts, and builds entirely within your secure network.",
   keywords: [
     "Silence AI",
     "Silence AI LLC",
@@ -57,7 +69,7 @@ export const metadata = {
     "AI security",
     "secure development cloud",
     "private AI cloud",
-    "AI-CSD",
+    "AI-SOC",
     "AI driven SOC",
     "SLNC-env",
   ],
@@ -77,8 +89,8 @@ export const metadata = {
     icon: '/logo.png',
   },
   openGraph: {
-    title: 'Silence AI - Secure Development Cloud & AI-CSD',
-    description: 'Silence AI provides cutting-edge AI cybersecurity, sealed development cloud solutions, and AI-CSD. Keep code, prompts, and builds entirely within your secure network.',
+    title: 'Silence AI - Secure Development Cloud & AI-SOC',
+    description: 'Silence AI provides cutting-edge AI cybersecurity, sealed development cloud solutions, and AI-SOC. Keep code, prompts, and builds entirely within your secure network.',
     url: 'https://silenceai.net',
     siteName: 'Silence AI',
     locale: 'en_US',
@@ -94,8 +106,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Silence AI - Secure Development Cloud & AI-CSD',
-    description: 'Silence AI provides cutting-edge AI cybersecurity, sealed development cloud solutions, and AI-CSD. Keep code, prompts, and builds entirely within your secure network.',
+    title: 'Silence AI - Secure Development Cloud & AI-SOC',
+    description: 'Silence AI provides cutting-edge AI cybersecurity, sealed development cloud solutions, and AI-SOC. Keep code, prompts, and builds entirely within your secure network.',
     images: ['/supreme_dashboard.jpeg'],
   },
   alternates: {
@@ -125,6 +137,10 @@ export const viewport = {
   userScalable: true,
 };
 
+export function generateStaticParams() {
+  return supportedLocales.map((locale) => ({ locale }));
+}
+
 const organizationStructuredData = {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -132,7 +148,7 @@ const organizationStructuredData = {
   legalName: "Silence AI LLC",
   url: "https://silenceai.net",
   logo: "https://silenceai.net/logo.png",
-  description: "Silence AI creates sealed development cloud environments and AI-CSD solutions for ultimate corporate data security.",
+  description: "Silence AI creates sealed development cloud environments and AI-SOC solutions for ultimate corporate data security.",
 };
 
 export default async function RootLayout(props) {
@@ -142,16 +158,15 @@ export default async function RootLayout(props) {
   const messages = transformBranding(localeMessages);
 
   return (
-    <html lang={locale} suppressHydrationWarning>
+    <html lang={locale}>
       <body
-        className="antialiased relative"
-        style={{ backgroundColor: "#000000" }}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
+        style={{ backgroundColor: "#01091C" }}
       >
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationStructuredData) }}
         />
-        <Preloader />
         <NextIntlClientProvider locale={locale} messages={messages}>
           {props.children}
         </NextIntlClientProvider>
