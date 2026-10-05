@@ -140,15 +140,15 @@ export function ProjectsPage({ openId }: { openId?: string }) {
 
       <div className="vs-grid">
         {visible.map((project) => (
-          <button
-            key={project.id}
-            type="button"
-            className="vs-project"
-            onClick={() => {
-              setSelectedId(project.id);
-              setView("detail");
-            }}
-          >
+          <article key={project.id} className="vs-project">
+            <button
+              type="button"
+              className="vs-project-main"
+              onClick={() => {
+                setSelectedId(project.id);
+                setView("detail");
+              }}
+            >
             <div className="vs-project-top">
               <div className="vs-project-id">
                 <span className="vs-project-kind" aria-hidden="true">
@@ -190,6 +190,7 @@ export function ProjectsPage({ openId }: { openId?: string }) {
                 <p className="vs-stat-label">Other</p>
               </div>
             </div>
+            </button>
             <div className="vs-project-foot">
               <span>
                 {project.lastScannedAt
@@ -219,7 +220,7 @@ export function ProjectsPage({ openId }: { openId?: string }) {
             >
               ×
             </button>
-          </button>
+          </article>
         ))}
       </div>
     </div>

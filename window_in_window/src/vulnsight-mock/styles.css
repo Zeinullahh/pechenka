@@ -204,7 +204,23 @@ a { color: inherit; }
   background: var(--surface-1);
   color: inherit;
   text-align: left;
+}
+
+.vs-project-main {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-align: left;
   cursor: pointer;
+}
+
+.vs-project-main:focus-visible,
+.vs-icon-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
 }
 
 .vs-project:hover { border-color: var(--hairline-strong); background: var(--surface-2); }
